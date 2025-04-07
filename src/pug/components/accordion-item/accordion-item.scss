@@ -1,0 +1,109 @@
+@use "src/scss/common/files/mixins" as *;
+
+.accordion-item.active {
+  &.nested-inner,
+  &.nested {
+    & > .accordion-title {
+      svg {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
+.accordion-item {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: var(--trs-cubic-600);
+  &.nested-inner {
+    & > .accordion-title {
+      justify-content: flex-start;
+      // @include padding(0);
+
+      .title {
+        @include body-xl;
+      }
+      .icon {
+        @include s(width, 28);
+        @include s(height, 28);
+        border: 1px solid var(--line-color);
+        @include borr(6);
+        svg {
+          @include s(width, 12);
+          @include s(height, 6);
+        }
+      }
+    }
+  }
+  &.nested {
+    & > .accordion-title {
+      justify-content: flex-start;
+      @include padding(36, 0);
+
+      .title {
+        @include h6;
+        text-transform: uppercase;
+      }
+      .icon {
+        @include s(width, 28);
+        @include s(height, 28);
+        border: 1px solid var(--line-color);
+        @include borr(6);
+        svg {
+          @include s(width, 12);
+          @include s(height, 6);
+        }
+      }
+    }
+  }
+  .title-wrapper {
+    display: flex;
+    align-items: center;
+    @include s(gap, 12);
+    pointer-events: none;
+    img {
+      @include s(width, 18);
+      @include s(height, 18);
+    }
+  }
+  .accordion-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include s(gap, 20);
+    transition: var(--trs-cubic-600);
+    @include padding(19, 0);
+
+    .title {
+      @include body-lb;
+    }
+    .icon {
+      transition: var(--trs-cubic-600);
+      pointer-events: none;
+      @include s(width, 8);
+      @include s(height, 4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      svg {
+        @include s(width, 8);
+        @include s(height, 4);
+      }
+    }
+  }
+  .collapse {
+    transition: var(--trs-cubic-600);
+    display: flex;
+    align-items: flex-start;
+    @include s(padding-left, 30);
+    @include s(padding-bottom, 30);
+    .links {
+      display: flex;
+      flex-direction: column;
+      @include s(gap, 16);
+      a {
+        @include body-m;
+      }
+    }
+  }
+}

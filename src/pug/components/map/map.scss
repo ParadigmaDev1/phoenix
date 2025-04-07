@@ -1,0 +1,7 @@
+@use "src/scss/common/files/mixins" as *;
+
+#map {
+  @include s(height, 500);
+  @include borr(12);
+  overflow: hidden;
+}

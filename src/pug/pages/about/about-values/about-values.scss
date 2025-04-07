@@ -1,0 +1,11 @@
+@use "src/scss/common/files/mixins" as *;
+
+.about-values {
+  @include s(margin-top, 116);
+  .about-values-inner {
+    h3 {
+      text-align: center;
+      @include h2;
+    }
+  }
+}

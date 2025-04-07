@@ -1,0 +1,20 @@
+extends ./pug/templates/template.pug
+
+block head 
+  +head(["header"])
+block header 
+block content
+  .container(style='display: flex; flex-direction: column; gap: 20px;')
+    a(href="home.html" style="color: #000") Главная 
+    a(href="about.html" style="color: #000") О компании 
+    a(href="career.html" style="color: #000") Карьера 
+    a(href="buy-info.html" style="color: #000") Где купить 
+    a(href="stock.html" style="color: #000") Акции 
+    a(href="collections.html" style="color: #000") Коллекции 
+    a(href="promotional.html" style="color: #000") рекламные материалы 
+    a(href="press-center.html" style="color: #000") Пресс-центр 
+    a(href="documents.html" style="color: #000") нормативные документы 
+    a(href="contacts.html" style="color: #000") Контакты 
+    
+block footer 
+    

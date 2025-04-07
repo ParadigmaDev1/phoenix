@@ -1,0 +1,42 @@
+.custom-checkbox-wrapper {
+  display: flex;
+  align-items: center;
+  @include s(gap, 12);
+  cursor: pointer;
+  p {
+    @include body-m;
+    color: var(--white-color);
+  }
+}
+
+.custom-checkbox {
+  appearance: none;
+  @include s(min-width, 20);
+  @include s(min-height, 20);
+  @include s(max-width, 20);
+  @include s(max-height, 20);
+  @include borr(4);
+  background: var(--white-color);
+  position: relative;
+  transition: var(--trs-cubic-300);
+  border: 1px solid var(--line-color);
+  cursor: pointer;
+  &:checked {
+    border-color: var(--accent-color);
+    background: rgba(0, 0, 0, 0);
+    &::before {
+      opacity: 1;
+    }
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    background-image: url("../img/icons/checkbox.svg");
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    transition: var(--trs-cubic-300);
+    opacity: 0;
+  }
+}

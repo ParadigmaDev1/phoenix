@@ -1,0 +1,80 @@
+@use "src/scss/common/files/mixins" as *;
+
+.about-figures {
+  @include s(margin-top, 116);
+  overflow: hidden;
+  .about-figures-inner {
+    h3 {
+      @include h2;
+    }
+    .double-swiper {
+      @include s(margin-top, 36);
+      position: relative;
+      .swiper-slide {
+        display: flex;
+        @include s(gap, 24);
+        opacity: 0;
+        transition: opacity var(--trs-cubic-300);
+        &.visible-slide {
+          opacity: 1;
+        }
+        &:hover {
+          .content {
+            border-color: var(--violet-color);
+            .post {
+              color: var(--gray-color);
+            }
+            .name {
+              color: var(--violet-color);
+            }
+          }
+        }
+        .image-wrapper {
+          @include s(width, 320);
+          @include s(height, 320);
+          @include borr(20);
+          position: relative;
+          overflow: hidden;
+          img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+        .content {
+          @include s(width, 318);
+          @include s(padding-top, 28);
+          border-top: 1px solid var(--line-color);
+          transition: var(--trs-cubic-300);
+
+          .post {
+            @include descr-m;
+            color: var(--gray-light-color);
+            transition: var(--trs-cubic-300);
+          }
+          .name {
+            @include s(margin-top, 20);
+            @include h6;
+            text-transform: uppercase;
+            transition: var(--trs-cubic-300);
+          }
+          .descr {
+            @include s(margin-top, 16);
+            @include body-m;
+          }
+        }
+      }
+      .navigation {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        @include s(left, -23);
+        @include s(right, -23);
+        justify-content: space-between;
+        z-index: 2;
+      }
+    }
+  }
+}

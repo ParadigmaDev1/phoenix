@@ -1,0 +1,33 @@
+extends ./pug/templates/template.pug
+
+block head 
+  +head(["header", "content-hero", "about-features", "content-info", "about-values", "about-figures", "about-brands", "about-groups", "about-partner", "image-block", "about-geography", "alert-block", "about-map", "about-charity", "about-press", "about-gallery", "brands-list", "values-block", "crumbs", "selector", "footer-alert", "footer", "mobile-menu", "accordion-item", "catalog-menu", "map"])
+block header 
+  +header().dark
+  +mobile-menu()
+  +catalog-menu()
+block content
+  +crumbs({items: [{title: 'О компании', href: '#'}]})
+  +about-hero()
+  +about-features()
+  +about-info()
+  +alert-block({title: 'Наша миссия ', descr: 'Создавать качественные и доступные решения для бизнеса и образовательного сектора, обеспечивая клиентов товарами, которые делают их работу более продуктивной и эффективной. Мы стремимся быть надёжным партнёром для наших дистрибьюторов, розничных клиентов и корпоративных заказчиков, предлагая только проверенные продукты и высокие стандарты обслуживания.'})
+  +about-values()
+  +about-figures()
+  +about-brands()
+  +about-groups()
+  +image-block({img:'./img/about/bg.jpg'})
+  +about-partner()
+  +alert-block({descr: 'Сотрудничая с нами, вы получаете доступ к высококачественным товарам без переплат и задержек, что помогает вашему бизнесу стабильно развиваться и приносить прибыль.'}).to-top
+  +about-geography()
+  +about-map()
+  +alert-block({descr: 'Благодаря собственному складскому комплексу, автопарку и широкой сети региональных представительств, «Феникс+» обеспечивает регулярные поставки продукции более чем в 100 городов России и ближнего зарубежья!'}).top-sm
+  +about-charity()
+  +alert-block({title: 'активно участвуем в жизни города', descr: 'Руководство и сотрудники Феникс+ активно участвуют в жизни Краснодара и Краснодарского края.'}).top-sm
+  +about-press()
+  +about-gallery()
+  +footer-alert()
+block footer 
+  +footer()
+block modals 
+  

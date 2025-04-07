@@ -1,0 +1,67 @@
+@use "src/scss/common/files/mixins" as *;
+
+.career-team {
+  @include s(margin-top, 116);
+  .career-team-inner {
+    h3 {
+      @include h2;
+      text-align: center;
+    }
+    .person {
+      @include s(width, 204);
+      @include s(height, 273);
+      @include padding(51, 40, 41);
+      @include s(margin-top, 35);
+
+      margin-right: auto;
+      margin-left: auto;
+      @include borr(12);
+      background: var(--violet-color);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      @include s(gap, 49);
+      .image-wrapper {
+        @include s(width, 96);
+        @include s(height, 96);
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .title {
+        color: var(--white-color);
+        text-align: center;
+        @include descr-m;
+        text-transform: uppercase;
+      }
+    }
+  }
+  .career-team-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    @include s(gap, 253);
+    @include s(margin-top, 133);
+
+    .row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      @include s(gap, 24);
+      //   @include s(max-width, 756);
+      width: fit-content;
+      &:last-child {
+        margin-left: auto;
+      }
+      .image-wrapper {
+        @include s(width, 204);
+        @include s(height, 273);
+        @include borr(12);
+        overflow: hidden;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+}

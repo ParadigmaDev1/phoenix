@@ -1,0 +1,15 @@
+mixin contacts()
+    .contacts.tabs-wrapper
+        .contacts-inner.container
+            h1 контакты
+            .tabs 
+                button.btn.tab.m.active(data-tab='0') Основные
+                button.btn.tab.m(data-tab='1') Отдел продаж
+                button.btn.tab.m(data-tab='2') Производственный отдел
+                button.btn.tab.m(data-tab='3') Иные отделы
+                button.btn.tab.m(data-tab='4') Региональные представители
+                button.btn.tab.m(data-tab='5') Дистрибьюторы
+            .tab-content(data-tab='0')
+                +contacts-main()
+            .tab-content(data-tab='1')
+                +contacts-sallers()

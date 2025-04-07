@@ -1,0 +1,28 @@
+@use "src/scss/common/files/mixins" as *;
+
+.crumbs {
+  display: flex;
+  align-items: center;
+  @include s(gap, 8);
+  @include s(margin-top, 137);
+  @media (max-width: $tab-sm) {
+    @include s(margin-top, 80);
+    flex-wrap: wrap;
+  }
+  &.top-sm {
+    @include s(margin-top, 16);
+  }
+  a {
+    @include body-xs;
+    color: var(--gray-light-color);
+    white-space: nowrap;
+  }
+  img {
+    @include s(width, 10);
+    @include s(height, 5);
+
+    &:last-child {
+      display: none;
+    }
+  }
+}

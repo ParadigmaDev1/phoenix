@@ -1,0 +1,49 @@
+mixin selector(data)
+    if data.isTabsSelector
+        .selector.tabs-selector(class=data.class)&attributes(attributes)
+            button(type='button').selector-btn
+                .selector-title
+                    .text-content
+                        input(type="radio" name=data.name )
+                        p #{data.title}
+                .icon
+                    <svg width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1L10 11L19 1" stroke="#2C2C2C"/>
+                    </svg>
+            .selector-content
+                .selector-list
+                    each item,index in data.items
+                        label.radio-item
+                            input(type='radio' name=data.name value=item.value)
+                            p #{item.title}
+    else if data.isLinkSelector
+        .selector.link-selector(class=data.class)&attributes(attributes)
+            button(type='button').link-selector-btn
+                .selector-title
+                    .text-content
+                        p #{data.title}
+                .icon
+                    <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1L5 5L9 1" stroke="white" stroke-linecap="square" stroke-linejoin="round"/>
+                    </svg>
+            .selector-content
+                .selector-list
+                    each item in data.items
+                        a(href=item.href ? item.href : '#') #{item.title}
+    else 
+        .selector(class=data.class)&attributes(attributes)
+            button(type='button').selector-btn
+                .selector-title
+                    .text-content.default-value
+                        input(type="radio" name=data.name class=data.defaultRequired ? 'req' : '')
+                        p #{data.title}
+                .icon
+                    <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1L5 5L9 1" stroke="#333435" stroke-linecap="square" stroke-linejoin="round"/>
+                    </svg>
+            .selector-content
+                .selector-list
+                    each item in data.items
+                        label.radio-item
+                            input(type="radio" name=data.name value=item.value class=data.required ? 'req' : '')
+                            p #{item.title}

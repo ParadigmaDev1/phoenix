@@ -1,0 +1,28 @@
+@use "src/scss/common/files/mixins" as *;
+
+.home-categories {
+  @include s(padding-top, 80);
+  @media (max-width: $tab-sm) {
+    @include s(padding-top, 64);
+  }
+  .home-categories-inner {
+    h3 {
+      text-transform: uppercase;
+      @include h1;
+    }
+    .categories-list {
+      @include s(margin-top, 24);
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      @include s(gap, 24);
+      @media (max-width: $tab-sm) {
+        @include s(margin-top, 20);
+        @include s(column-gap, 20);
+        @include s(row-gap, 28);
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .category-card {
+      }
+    }
+  }
+}

@@ -1,0 +1,125 @@
+@use "src/scss/common/files/mixins" as *;
+
+.catalog-menu {
+  position: fixed;
+  top: 0;
+  @include s(top, 118);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--white-color);
+  z-index: 100;
+  transform: translateY(-100%);
+  transition: var(--trs-cubic-300);
+  opacity: 0;
+  pointer-events: none;
+  height: calc(100% - calc(118 / var(--screensize) * 100vw));
+
+  &.active {
+    opacity: 1;
+    pointer-events: all;
+    transform: translateY(0);
+  }
+  .catalog-menu-inner {
+    display: grid;
+    @include gtc(328, 320, 320, 264);
+    @include s(gap, 15);
+    height: 100%;
+    .col {
+      overflow-y: auto;
+      overflow-x: hidden;
+      scrollbar-width: thin;
+      scrollbar-color: var(--violet-color) #ffffff;
+      &::-webkit-scrollbar {
+        width: 10px;
+      }
+      &.menu-list {
+        display: flex;
+        flex-direction: column;
+        @include s(gap, 15);
+        @include s(padding-top, 36);
+      }
+      .catalog-menu-list {
+        @include s(padding-top, 36);
+        display: flex;
+        flex-direction: column;
+        @include s(padding-top, 36);
+      }
+      .btn {
+        display: flex;
+        align-items: center;
+        @include s(gap, 16);
+        &:hover {
+          p {
+            color: var(--violet-color);
+          }
+          svg {
+            path {
+              stroke: var(--violet-color);
+            }
+          }
+        }
+        svg {
+          @include s(width, 10);
+          @include s(height, 12);
+        }
+        p {
+          text-align: left;
+          @include s(max-width, 226);
+          @include s(width, 226);
+          transition: var(--trs-cubic-300);
+        }
+        &.active {
+          background: var(--back-color);
+        }
+        &.sub-menu {
+          @include padding(10, 27);
+          @include borr(12);
+          .title-wrapper {
+            position: relative;
+            .badge {
+              position: absolute;
+              top: -20%;
+              right: 2%;
+            }
+          }
+          p {
+            @include body-m;
+          }
+        }
+        &.menu {
+          @include padding(10, 18, 10, 10);
+
+          @include borr(12);
+
+          .image-wrapper {
+            @include s(min-width, 40);
+            @include s(min-height, 40);
+            @include s(max-width, 40);
+            @include s(max-height, 40);
+            @include borr(6);
+            background: var(--back-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img {
+              object-fit: contain;
+              width: 60%;
+              height: 70%;
+            }
+          }
+          .text {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            @include s(gap, 15);
+            p {
+              @include descr-m;
+              text-transform: uppercase;
+            }
+          }
+        }
+      }
+    }
+  }
+}

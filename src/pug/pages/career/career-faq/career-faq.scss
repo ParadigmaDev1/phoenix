@@ -1,0 +1,87 @@
+@use "src/scss/common/files/mixins" as *;
+
+.career-faq {
+  @include s(margin-top, 116);
+  .career-faq-inner {
+    h3 {
+      @include h2;
+    }
+    .career-faq-content {
+      @include s(margin-top, 36);
+      @include s(gap, 48);
+      display: grid;
+      @include gtc(1fr, 407);
+      .accordion {
+        & > .accordion-item.nested {
+          border-bottom: 1px solid var(--line-color);
+          &:first-child {
+            border-top: 1px solid var(--line-color);
+          }
+        }
+      }
+      .career-faq-info {
+        h4 {
+          @include h4;
+          text-transform: uppercase;
+          color: var(--violet-color);
+        }
+        .date {
+          @include s(margin-top, 36);
+          display: flex;
+          align-items: center;
+          @include s(gap, 16);
+          p {
+            @include descr-m;
+            text-transform: uppercase;
+          }
+        }
+        .career-info-contacts {
+          @include s(margin-top, 28);
+          display: flex;
+          flex-direction: column;
+          @include s(gap, 12);
+          .row {
+            display: grid;
+            @include gtc(1fr, 100);
+            @include s(gap, 12);
+            & > a {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              @include s(gap, 16);
+              &:hover {
+                svg {
+                  path {
+                    stroke: var(--white-color);
+                  }
+                }
+              }
+              p {
+                @include body-m;
+              }
+            }
+            .socials {
+              display: flex;
+              align-items: center;
+              @include s(gap, 12);
+              a {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                @include s(width, 44);
+                @include s(height, 44);
+                @include borr(6);
+                &.tg {
+                  background: #528df0;
+                }
+                &.wa {
+                  background: #50b550;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+@use "src/scss/common/files/mixins" as *;
+
+.stock {
+  @include s(margin-top, 28);
+  @include s(padding-bottom, 156);
+  .stock-inner {
+    h1 {
+      @include h1;
+    }
+    .stock-list {
+      @include s(margin-top, 28);
+      display: flex;
+      flex-wrap: wrap;
+      @include s(column-gap, 24);
+      @include s(row-gap, 80);
+      .info-card {
+        &:nth-child(1),
+        &:nth-child(2) {
+          @include s(width, 660);
+        }
+        @include s(width, 432);
+      }
+    }
+  }
+}

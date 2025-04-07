@@ -1,0 +1,24 @@
+@use "src/scss/common/files/mixins" as *;
+
+.promotional {
+  @include s(margin-top, 28);
+  @include s(padding-bottom, 156);
+  .promotional-inner {
+    h1 {
+      @include h1;
+    }
+    .tabs {
+      @include s(margin-top, 28);
+      display: flex;
+      align-items: center;
+      @include s(gap, 4);
+    }
+    .tab-content {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      @include s(column-gap, 24);
+      @include s(row-gap, 80);
+      @include s(margin-top, 28);
+    }
+  }
+}

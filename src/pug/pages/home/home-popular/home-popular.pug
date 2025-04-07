@@ -1,0 +1,164 @@
+mixin home-popular()
+    .product-swiper-wrapper
+        .product-swiper-wrapper-inner.container
+            .top
+                h3 Популярное
+                a(href="#").btn.outline.violet.l
+                    p смотреть все
+                    <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 13L7 7L0.999999 1" stroke="#343176" stroke-linecap="square" stroke-linejoin="round"/>
+                    </svg> 
+            .products-swiper
+                .navigation 
+                    button.btn.circle.l.products-prev
+                        <svg width="10" height="14" viewBox="0 0 10 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 13L1 7L9 1" stroke="white" stroke-linecap="square" stroke-linejoin="round"/>
+                        </svg>
+                    button.btn.circle.l.products-next
+                        <svg width="10" height="14" viewBox="0 0 10 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 13L9 7L0.999999 1" stroke="white" stroke-linecap="square" stroke-linejoin="round"/>
+                        </svg>
+                .swiper-wrapper 
+                    .swiper-slide 
+                        +product-card({
+                            imgs: 
+                            [
+                                './img/products/1.jpg',
+                                './img/products/2.jpg',
+                                './img/products/3.jpg',
+                                './img/products/1.jpg',
+                                './img/products/2.jpg'
+                            ],
+                            art: 'Арт 68012', 
+                            count: 'many', 
+                            price: '116 ₽', 
+                            descr: 'Набор для выращивания кристаллов, Фиолетовая змейка, Змейки, картонная коробка, 10+, Lori', 
+                            badgeTitle: 'хит', 
+                            badgeClass: 'warn'
+                        })
+                    .swiper-slide 
+                        +product-card({
+                            imgs: 
+                            [
+                                './img/products/2.jpg',
+                                './img/products/1.jpg',
+                                './img/products/3.jpg',
+                                './img/products/1.jpg',
+                                './img/products/2.jpg'
+                            ],
+                            art: 'Арт 68012', 
+                            count: 'many', 
+                            price: '985 ₽', 
+                            descr: 'Набор для выращивания кристаллов, Фиолетовая змейка, Змейки, картонная коробка, 10+, Lori', 
+                            badgeTitle: 'хит', 
+                            badgeClass: 'warn'
+                        })
+                    .swiper-slide 
+                        +product-card({
+                            imgs: 
+                            [
+                                './img/products/1.jpg',
+                                './img/products/2.jpg',
+                                './img/products/3.jpg',
+                                './img/products/1.jpg',
+                                './img/products/2.jpg'
+                            ],
+                            art: 'Арт 68012', 
+                            price: '158 ₽', 
+                            descr: 'Набор для выращивания кристаллов, Фиолетовая змейка, Lori', 
+                            badgeTitle: 'хит', 
+                            badgeClass: 'warn'
+                        })
+                    .swiper-slide 
+                        +product-card({
+                            imgs: 
+                            [
+                                './img/products/3.jpg',
+                                './img/products/2.jpg',
+                                './img/products/3.jpg',
+                                './img/products/1.jpg',
+                                './img/products/2.jpg'
+                            ],
+                            art: 'Арт 68012', 
+                            count: 'many', 
+                            price: '582 ₽', 
+                            descr: 'Ежедневник датированный 2025 ESCALADA, #ИЛОН МАСК, формат А6+, 176 л., твёрдый переплёт, запаянный край, искусственная кожа "Тиволи глосс", блинтовое тиснение', 
+                            badgeTitle: 'хит', 
+                            badgeClass: 'warn'
+                        })
+                    .swiper-slide 
+                        +product-card({
+                            imgs: 
+                            [
+                                './img/products/1.jpg',
+                                './img/products/2.jpg',
+                                './img/products/3.jpg',
+                                './img/products/1.jpg',
+                                './img/products/2.jpg'
+                            ],
+                            art: 'Арт 68012', 
+                            count: 'many', 
+                            price: '116 ₽', 
+                            descr: 'Набор для выращивания кристаллов, Фиолетовая змейка, Змейки, картонная коробка, 10+, Lori', 
+                            badgeTitle: 'хит', 
+                            badgeClass: 'warn'
+                        })
+                    .swiper-slide 
+                        +product-card({
+                            imgs: 
+                            [
+                                './img/products/2.jpg',
+                                './img/products/1.jpg',
+                                './img/products/3.jpg',
+                                './img/products/1.jpg',
+                                './img/products/2.jpg'
+                            ],
+                            art: 'Арт 68012', 
+                            count: 'many', 
+                            price: '985 ₽', 
+                            descr: 'Набор для выращивания кристаллов, Фиолетовая змейка, Змейки, картонная коробка, 10+, Lori', 
+                            badgeTitle: 'хит', 
+                            badgeClass: 'warn'
+                        })
+                    .swiper-slide 
+                        +product-card({
+                            imgs: 
+                            [
+                                './img/products/1.jpg',
+                                './img/products/2.jpg',
+                                './img/products/3.jpg',
+                                './img/products/1.jpg',
+                                './img/products/2.jpg'
+                            ],
+                            art: 'Арт 68012', 
+                            price: '158 ₽', 
+                            descr: 'Набор для выращивания кристаллов, Фиолетовая змейка, Lori', 
+                            badgeTitle: 'хит', 
+                            badgeClass: 'warn'
+                        })
+                    .swiper-slide 
+                        +product-card({
+                            imgs: 
+                            [
+                                './img/products/3.jpg',
+                                './img/products/2.jpg',
+                                './img/products/3.jpg',
+                                './img/products/1.jpg',
+                                './img/products/2.jpg'
+                            ],
+                            art: 'Арт 68012', 
+                            count: 'many', 
+                            price: '582 ₽', 
+                            descr: 'Ежедневник датированный 2025 ESCALADA, #ИЛОН МАСК, формат А6+, 176 л., твёрдый переплёт, запаянный край, искусственная кожа "Тиволи глосс", блинтовое тиснение', 
+                            badgeTitle: 'хит', 
+                            badgeClass: 'warn'
+                        })
+                .products-pagination-wrapper 
+                    p.current 01
+                    .products-pagination.pagination-progress
+                    p.total
+            a(href="#").btn.outline.violet.mob.l
+                p смотреть все
+                <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 13L7 7L0.999999 1" stroke="#343176" stroke-linecap="square" stroke-linejoin="round"/>
+                </svg> 

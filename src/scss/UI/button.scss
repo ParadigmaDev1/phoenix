@@ -1,0 +1,186 @@
+button {
+  cursor: pointer;
+  background: none;
+  border: none;
+  outline: none;
+}
+.btn {
+  transition: var(--trs-cubic-600);
+  &:disabled {
+    pointer-events: none;
+    opacity: 0.5;
+  }
+  &.primary {
+    background: var(--grapfit-color);
+    @include borr(6);
+    display: flex;
+    align-items: center;
+    color: var(--white-color);
+    &:hover {
+      background: var(--violet-color);
+    }
+    p {
+      color: var(--white-color);
+      transition: var(--trs-cubic-300);
+    }
+    &.active {
+      background: var(--green-color);
+    }
+    &.m {
+      @include s(height, 44);
+      @media (max-width: $tab-sm) {
+        @include s(height, 36);
+      }
+    }
+    &.l {
+      @include s(height, 48);
+    }
+  }
+  &.outline {
+    @include borr(6);
+    display: flex;
+    align-items: center;
+    color: var(--white-color);
+    border: 1px solid var(--white-color);
+    p {
+      color: var(--white-color);
+      transition: var(--trs-cubic-300);
+    }
+    &:hover {
+      background: var(--violet-color);
+      border-color: var(--violet-color);
+      p {
+        color: var(--white-color) !important;
+      }
+      svg {
+        path {
+          stroke: var(--white-color);
+        }
+      }
+    }
+    &.violet {
+      border-color: var(--violet-color);
+      p {
+        color: var(--violet-color);
+      }
+    }
+    &.gray {
+      border-color: #9b9ab2;
+      color: #9b9ab2;
+      p {
+        color: #9b9ab2;
+      }
+      &:hover {
+        background: var(--violet-color);
+        border-color: var(--violet-color);
+        color: var(--white-color) !important;
+
+        p {
+          color: var(--white-color) !important;
+        }
+      }
+    }
+    &.s {
+      @include s(height, 40);
+      p {
+        text-transform: uppercase;
+        @include descr-xs;
+      }
+    }
+    &.m {
+      @include s(height, 44);
+    }
+    &.l {
+      @include s(height, 48);
+      @media (max-width: $tab-sm) {
+        @include s(height, 36);
+      }
+      p {
+        text-transform: uppercase;
+        @include descr-m;
+      }
+    }
+  }
+  &.outline-fill {
+    @include borr(6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--violet-color);
+    border: 1px solid var(--violet-color);
+    background: var(--white-color);
+
+    p {
+      color: var(--violet-color);
+      transition: var(--trs-cubic-300);
+    }
+    &:hover {
+      background: var(--violet-color);
+      border-color: var(--violet-color);
+      color: var(--white-color) !important;
+
+      p {
+        color: var(--white-color) !important;
+      }
+    }
+    &.violet {
+      border-color: var(--violet-color);
+      p {
+        color: var(--violet-color);
+      }
+    }
+    &.m {
+      @include s(height, 44);
+    }
+    &.l {
+      @include s(height, 48);
+    }
+  }
+  &.circle {
+    background: var(--grapfit-color);
+    @include borr(6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:hover {
+      background: var(--violet-color);
+    }
+    &.violet {
+      background: var(--violet-color);
+    }
+    &.white {
+      background: var(--white-color);
+    }
+    &.s {
+      @include s(height, 36);
+      @include s(width, 36);
+    }
+    &.m {
+      @include s(height, 44);
+      @include s(width, 44);
+    }
+    &.l {
+      @include s(height, 48);
+      @include s(width, 48);
+    }
+  }
+  &.tab {
+    @include padding(0, 20);
+    @include borr(6);
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--line-color);
+    &.active {
+      border-color: var(--violet-color);
+      color: var(--violet-color);
+    }
+
+    &:hover {
+      border-color: var(--violet-color);
+    }
+    &.m {
+      @include s(height, 40);
+      @include body-m;
+    }
+  }
+}

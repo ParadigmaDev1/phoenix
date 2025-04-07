@@ -1,0 +1,74 @@
+mixin buy-info()
+    .buy-info.tabs-wrapper
+        .buy-info-inner.container 
+            h1 Где купить
+            .tabs 
+                button.btn.tab.m.active(data-tab='0') Интернет-магазины
+                button.btn.tab.m(data-tab='1') Розничные магазины
+            .tab-content(data-tab='0')
+                .info-list 
+                    +shop-card({img: './img/shop-card/1.svg'})
+                    +shop-card({img: './img/shop-card/2.svg'})
+                    +shop-card({img: './img/shop-contacts-card/img.png'})
+                    +shop-card({img: './img/shop-card/1.svg'})
+                    +shop-card({img: './img/shop-card/2.svg'})
+                    +shop-card({img: './img/shop-contacts-card/img.png'})
+                    +shop-card({img: './img/shop-card/1.svg'})
+                    +shop-card({img: './img/shop-card/2.svg'})
+                    +shop-card({img: './img/shop-contacts-card/img.png'})
+                    +shop-card({img: './img/shop-card/1.svg'})
+                    +shop-card({img: './img/shop-card/2.svg'})
+                    +shop-card({img: './img/shop-contacts-card/img.png'})
+                    +shop-card({img: './img/shop-card/1.svg'})
+                    +shop-card({img: './img/shop-card/2.svg'})
+                    +shop-card({img: './img/shop-contacts-card/img.png'})
+            .tab-content(data-tab='1')
+                .selector-wrapper 
+                    p.title магазины в вашем городе:
+                    +selector({
+                        title: 'Выберите город', 
+                        items: [
+                            {
+                                title: 'Москва', 
+                                value: 0
+                            },
+                            {
+                                title: 'Питер', 
+                                value: 1
+                            },
+                            {
+                                title: 'Краснодар', 
+                                value: 2
+                            },
+                            {
+                                title: 'Ростов', 
+                                value: 3
+                            },
+                            ],
+                            name: 'city',
+                            required: true,
+                            defaultRequired: true
+                    },)
+                .info-list 
+                    +shop-contacts-card({title: 'читай-город'})
+                    +shop-contacts-card({title: 'канцелярский магазин', img: './img/shop-contacts-card/img.png'})
+                    +shop-contacts-card({title: 'Тц «Успенский» мир тетрадей', img: './img/shop-contacts-card/img.png'})
+                    +shop-contacts-card({title: 'читай-город'})
+                    +shop-contacts-card({title: 'канцелярский магазин', img: './img/shop-contacts-card/img.png'})
+                    +shop-contacts-card({title: 'Тц «Успенский» мир тетрадей', img: './img/shop-contacts-card/img.png'})
+                    +shop-contacts-card({title: 'читай-город'})
+                    +shop-contacts-card({title: 'канцелярский магазин', img: './img/shop-contacts-card/img.png'})
+                    +shop-contacts-card({title: 'Тц «Успенский» мир тетрадей', img: './img/shop-contacts-card/img.png'})
+                    +shop-contacts-card({title: 'читай-город'})
+                    +shop-contacts-card({title: 'канцелярский магазин', img: './img/shop-contacts-card/img.png'})
+                    +shop-contacts-card({title: 'Тц «Успенский» мир тетрадей', img: './img/shop-contacts-card/img.png'})
+                    +shop-contacts-card({title: 'читай-город'})
+                    +shop-contacts-card({title: 'канцелярский магазин', img: './img/shop-contacts-card/img.png'})
+                    +shop-contacts-card({title: 'Тц «Успенский» мир тетрадей', img: './img/shop-contacts-card/img.png'})
+                +pagination()
+                button.btn.outline.l.violet.load-more-btn
+                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0.506836 7.5H14.5068" stroke="#343176"/>
+                        <path d="M7.50684 14.5L7.50684 0.5" stroke="#343176"/>
+                    </svg>
+                    p загрузить ещё

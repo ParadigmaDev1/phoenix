@@ -1,0 +1,18 @@
+@use "src/scss/common/files/mixins" as *;
+
+.documents {
+  @include s(margin-top, 28);
+  @include s(padding-bottom, 156);
+  .documents-inner {
+    h1 {
+      @include h1;
+    }
+
+    .documents-list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      @include s(gap, 24);
+      @include s(margin-top, 28);
+    }
+  }
+}

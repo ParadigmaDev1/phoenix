@@ -1,0 +1,39 @@
+mixin accordion-item(data)
+    .accordion-item(class=data.class)&attributes(attributes)
+        if data.nested || data.class === 'nested-inner'
+            button(type='button').accordion-title 
+                .icon 
+                    <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1L7 7L13 1" stroke="#333435" stroke-linecap="square" stroke-linejoin="round"/>
+                    </svg>
+                .title-wrapper
+                    if data.icon
+                        img(src=data.icon, alt="icon")
+                    p.title #{data.title}
+        else 
+            button(type='button').accordion-title 
+                .title-wrapper
+                    if data.icon
+                        img(src=data.icon, alt="icon")
+                    p.title #{data.title}
+                .icon 
+                    <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1L5 5L9 1" stroke="#333435" stroke-linecap="square" stroke-linejoin="round"/>
+                    </svg>
+       
+
+        .collapse.accordion-body
+            if data.navigation
+                .links
+                    each item in data.links
+                        a(href=item.link) #{item.title}
+            else if data.nested
+                .accordion
+                    each nestedItem in data.nested
+                        +accordion-item(nestedItem)
+            else 
+                .text-wrapper 
+                    span Наш офис находится по адресу:
+                    .text 
+                        p г. Москва, Нижний Сусальный пер., 9 стр. 6. Станция метро Курская.
+                        p Обратите внимание, что въезд на территорию бизнес центра платный - 200 руб./час.

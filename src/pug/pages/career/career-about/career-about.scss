@@ -1,0 +1,25 @@
+@use "src/scss/common/files/mixins" as *;
+
+.career-about {
+  @include s(margin-top, 116);
+  .career-about-inner {
+    .top {
+      h3 {
+        @include h2;
+      }
+      .subtitle {
+        margin-left: auto;
+        @include s(margin-top, 36);
+        @include h5;
+        text-transform: uppercase;
+        @include s(max-width, 888);
+      }
+      .descr {
+        margin-left: auto;
+        @include s(margin-top, 16);
+        @include s(max-width, 888);
+        @include body-l;
+      }
+    }
+  }
+}

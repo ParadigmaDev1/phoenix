@@ -1,0 +1,61 @@
+.modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(238, 238, 238, 0.8);
+  backdrop-filter: blur(15px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+  pointer-events: none;
+  opacity: 0;
+  transition: var(--trs-cubic-300);
+  &.active {
+    pointer-events: all;
+    opacity: 1;
+    .modal-content-wrapper {
+      transform: translateY(0);
+      opacity: 1;
+      pointer-events: all;
+    }
+  }
+  .modal-content-wrapper {
+    overflow: auto;
+    position: relative;
+    transform: perspective(600px) rotateX(10deg) translateY(-50%);
+    // opacity: 0;
+    pointer-events: none;
+    transition: var(--trs-cubic-300);
+    background: var(--white-color);
+    @include padding(48);
+    @include border-radius(20);
+    @include size(height, 500);
+    max-height: calc(100vh - 106px);
+    height: fit-content;
+    @media (max-width: $tab-sm) {
+      @include padding(32, 24);
+    }
+    .close-modal-wrapper {
+      display: flex;
+      justify-content: flex-end;
+      position: sticky;
+      @include size(top, 0);
+      @include size(right, 0);
+      z-index: 10;
+      @media (max-width: $tab-sm) {
+        @include size(top, 34);
+      }
+      .close-modal {
+        padding: 0;
+        @include size(margin-top, -20);
+        @include size(margin-right, -20);
+        @media (max-width: $tab-sm) {
+          @include size(margin-right, 0);
+        }
+      }
+    }
+  }
+}

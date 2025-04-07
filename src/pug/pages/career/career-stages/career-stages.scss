@@ -1,0 +1,87 @@
+@use "src/scss/common/files/mixins" as *;
+
+.career-stages {
+  @include s(margin-top, 116);
+  overflow: hidden;
+  .career-stages-inner {
+    h3 {
+      @include h2;
+      text-align: center;
+    }
+    .career-stages-swiper {
+      @include s(margin-top, 36);
+      position: relative;
+      .swiper-slide {
+        background: var(--violet-back-color);
+        @include borr(12);
+        @include padding(80, 115, 0, 114);
+        position: relative;
+        overflow: hidden;
+        display: grid;
+        @include gtc(432, 550);
+        @include s(gap, 137);
+        opacity: 0;
+        transition: opacity var(--trs-cubic-300);
+        &.visible-slide {
+          opacity: 1;
+        }
+        .content {
+          display: flex;
+          flex-direction: column;
+          position: relative;
+          justify-content: center;
+          align-items: center;
+          @include s(max-width, 432);
+          @include s(padding-bottom, 111);
+          img {
+            position: absolute;
+            @include s(top, -60);
+            @include s(right, -100);
+            @include s(width, 306);
+            @include s(height, 120);
+          }
+          .stage {
+            @include descr-m;
+            color: var(--violet-color);
+            text-transform: uppercase;
+          }
+          .title {
+            @include h5;
+            text-transform: uppercase;
+            @include s(margin-top, 48);
+          }
+          .descr {
+            @include body-l;
+            text-align: center;
+            @include s(margin-top, 12);
+          }
+        }
+        .image-wrapper {
+          @include s(width, 550);
+          @include s(height, 420);
+          position: relative;
+          @include s(margin-bottom, -47);
+
+          z-index: 2;
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+        .rectangle {
+          position: absolute;
+          bottom: 0;
+          right: 0;
+        }
+      }
+      .navigation {
+        position: absolute;
+        @include s(top, 201);
+        @include s(left, -23);
+        @include s(right, -23);
+        justify-content: space-between;
+        z-index: 2;
+      }
+    }
+  }
+}

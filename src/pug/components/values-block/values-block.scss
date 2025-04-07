@@ -1,0 +1,118 @@
+@use "src/scss/common/files/mixins" as *;
+
+.values-block {
+  @include s(margin-top, 35);
+  @include s(gap, 24);
+  display: flex;
+  flex-wrap: wrap;
+  .value-item {
+    position: relative;
+    @include borr(12);
+    overflow: hidden;
+    cursor: pointer;
+    &.active {
+      .bg {
+        opacity: 1;
+      }
+      .content {
+        .text {
+          transform: translateY(0) !important;
+          .title {
+            color: var(--white-color);
+          }
+          .descr {
+            color: var(--white-color);
+            opacity: 1;
+          }
+        }
+        .btn {
+          background: var(--white-color);
+          box-shadow: var(--shadow);
+          svg {
+            transform: rotate(45deg);
+            path {
+              stroke: var(--violet-color);
+            }
+          }
+        }
+      }
+    }
+    &:nth-child(1),
+    &:nth-child(2),
+    &:nth-child(3) {
+      @include s(width, 432);
+      @include s(height, 500);
+      .content {
+        .text {
+          position: absolute;
+        }
+      }
+    }
+    &:nth-child(4),
+    &:nth-child(5) {
+      @include s(width, 660);
+      @include s(height, 350);
+    }
+    .image-wrapper {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+    .bg {
+      z-index: 2;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      @include borr(12);
+      overflow: hidden;
+      transition: var(--trs-cubic-300);
+      opacity: 0;
+      img {
+        width: 100%;
+        height: 100%;
+        object-position: bottom;
+        object-fit: cover;
+      }
+    }
+    .content {
+      position: absolute;
+      @include s(top, 48);
+      @include s(left, 48);
+      @include s(right, 48);
+      @include s(bottom, 48);
+      display: flex;
+      flex-direction: column;
+      z-index: 3;
+      .text {
+        flex: 1;
+        transition: var(--trs-cubic-300);
+        .title {
+          @include h5;
+          text-transform: uppercase;
+          transition: var(--trs-cubic-300);
+        }
+        .descr {
+          @include s(margin-top, 12);
+          transition: var(--trs-cubic-300);
+          opacity: 0;
+        }
+      }
+      .btn {
+        transition: var(--trs-cubic-300);
+        box-shadow: var(--shadow-transparent);
+        z-index: 4;
+        bottom: 0;
+        position: absolute;
+      }
+    }
+  }
+}

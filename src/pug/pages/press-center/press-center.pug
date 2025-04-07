@@ -1,0 +1,37 @@
+mixin press-center()
+    .press-center.tabs-wrapper 
+        .press-center-inner.container 
+            h1 Пресс-центр
+            .tabs 
+                button.btn.tab.m.active(data-tab='0') Новости
+                button.btn.tab.m(data-tab='1') Статьи
+            .tab-content(data-tab='0') 
+                .info-list
+                    +info-card({img: './img/home/ideas/2.jpg', date:'3 января 2025', title: 'ФЕНИКС+ на выставке "СКРЕПКА ЭКСПО 2024"'})
+                    +info-card({img: './img/home/ideas/3.jpg', date:'25 января 2025', title: 'Ранец "Балерина" победил в конкурсе "БИТВА ТЕКСТИЛЯ" в КАНЦКЛУБЕ!'})
+                    +info-card({img: './img/home/ideas/4.jpg', date:'18 февраля 2025', title: '"ЕДИНАЯ РОССИЯ" и "ФЕНИКС+" вручили ранцы и канцтовары будущим первоклассникам!'})
+                    +info-card({img: './img/home/ideas/2.jpg', date:'3 января 2025', title: 'ФЕНИКС+ на выставке "СКРЕПКА ЭКСПО 2024"'})
+                    +info-card({img: './img/home/ideas/3.jpg', date:'25 января 2025', title: 'Ранец "Балерина" победил в конкурсе "БИТВА ТЕКСТИЛЯ" в КАНЦКЛУБЕ!'})
+                    +info-card({img: './img/home/ideas/4.jpg', date:'18 февраля 2025', title: '"ЕДИНАЯ РОССИЯ" и "ФЕНИКС+" вручили ранцы и канцтовары будущим первоклассникам!'})
+                +pagination()
+                button.btn.outline.l.violet.load-more-btn
+                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0.506836 7.5H14.5068" stroke="#343176"/>
+                        <path d="M7.50684 14.5L7.50684 0.5" stroke="#343176"/>
+                    </svg>
+                    p загрузить ещё
+            .tab-content(data-tab='1') 
+                .info-list
+                    +info-card({img: './img/home/ideas/4.jpg', date:'3 января 2025', title: 'ФЕНИКС+ на выставке "СКРЕПКА ЭКСПО 2024"'})
+                    +info-card({img: './img/home/ideas/5.jpg', date:'25 января 2025', title: 'Ранец "Балерина" победил в конкурсе "БИТВА ТЕКСТИЛЯ" в КАНЦКЛУБЕ!'})
+                    +info-card({img: './img/home/ideas/2.jpg', date:'18 февраля 2025', title: '"ЕДИНАЯ РОССИЯ" и "ФЕНИКС+" вручили ранцы и канцтовары будущим первоклассникам!'})
+                    +info-card({img: './img/home/ideas/2.jpg', date:'3 января 2025', title: 'ФЕНИКС+ на выставке "СКРЕПКА ЭКСПО 2024"'})
+                    +info-card({img: './img/home/ideas/3.jpg', date:'25 января 2025', title: 'Ранец "Балерина" победил в конкурсе "БИТВА ТЕКСТИЛЯ" в КАНЦКЛУБЕ!'})
+                    +info-card({img: './img/home/ideas/4.jpg', date:'18 февраля 2025', title: '"ЕДИНАЯ РОССИЯ" и "ФЕНИКС+" вручили ранцы и канцтовары будущим первоклассникам!'})
+                +pagination()
+                button.btn.outline.l.violet.load-more-btn
+                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0.506836 7.5H14.5068" stroke="#343176"/>
+                        <path d="M7.50684 14.5L7.50684 0.5" stroke="#343176"/>
+                    </svg>
+                    p загрузить ещё

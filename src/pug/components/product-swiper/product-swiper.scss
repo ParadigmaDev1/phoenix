@@ -1,0 +1,101 @@
+@use "src/scss/common/files/mixins" as *;
+
+.product-swiper-wrapper {
+  @include s(padding-top, 122);
+  overflow: hidden;
+  @media (max-width: $tab-sm) {
+    @include s(padding-top, 69);
+  }
+  .product-swiper-wrapper-inner {
+    .top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      h3 {
+        @include h1;
+      }
+      .btn {
+        width: fit-content;
+        @include padding(0, 24);
+        @include s(gap, 12);
+        @media (max-width: $tab-sm) {
+          display: none;
+        }
+        &:hover {
+          svg {
+            path {
+              stroke: var(--white-color);
+            }
+          }
+        }
+      }
+    }
+    .products-swiper {
+      @include s(margin-top, 24);
+      position: relative;
+      .navigation {
+        position: absolute;
+        @include s(top, 166);
+        @include s(left, -24);
+        @include s(right, -24);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        z-index: 2;
+        pointer-events: none;
+        .btn {
+          pointer-events: all;
+        }
+      }
+      .swiper-slide {
+        height: auto;
+        opacity: 0;
+        transition: opacity var(--trs-cubic-300);
+        &.visible-slide {
+          opacity: 1;
+        }
+        .product-card {
+          height: 100%;
+        }
+      }
+    }
+    .products-pagination-wrapper {
+      @include s(margin-top, 24);
+      align-items: center;
+      @include s(gap, 17);
+      display: none;
+      @media (max-width: $tab-sm) {
+        display: flex;
+      }
+      .products-pagination {
+        position: relative;
+      }
+      .current,
+      .total {
+        font-weight: 500;
+        @include s(font-size, 10);
+        line-height: 128%;
+      }
+      .total {
+        color: var(--gray-light-color);
+      }
+    }
+
+    .btn.mob {
+      display: none;
+      width: fit-content;
+      @include padding(0, 16);
+      @include s(gap, 12);
+      @include s(margin-top, 36);
+      text-transform: uppercase;
+      @include descr-s;
+      svg {
+        @include s(width, 6);
+        @include s(height, 12);
+      }
+      @media (max-width: $tab-sm) {
+        display: flex;
+      }
+    }
+  }
+}

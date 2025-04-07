@@ -1,0 +1,427 @@
+@use "src/scss/common/files/mixins" as *;
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 105;
+  @include padding(16, 0);
+  box-shadow: var(--shadow-transparent);
+  transition: border-color var(--trs-cubic-300),
+    padding-top var(--trs-cubic-300), padding-bottom var(--trs-cubic-300),
+    background var(--trs-cubic-300), box-shadow var(--trs-cubic-300);
+  @media (max-width: $tab-sm) {
+    @include padding(10, 0, 0);
+  }
+  border-bottom: 1px solid rgba(0, 0, 0, 0);
+  &.dark {
+    background: var(--white-color);
+    .logo-wrapper {
+      .logo {
+        display: block;
+        svg {
+          .letter {
+            fill: var(--gray-color);
+          }
+        }
+      }
+      .burger-btn {
+        p {
+          color: var(--gray-color) !important;
+        }
+        svg {
+          path {
+            stroke: var(--gray-color);
+          }
+        }
+      }
+    }
+
+    .header-content {
+      .header-top {
+        .link-selector {
+          .link-selector-btn {
+            p {
+              color: var(--gray-color);
+            }
+            svg {
+              path {
+                stroke: var(--gray-color);
+              }
+            }
+          }
+        }
+        a {
+          color: var(--gray-color) !important;
+        }
+      }
+      .header-bottom {
+        .search-wrapper {
+          input {
+            background: var(--back-color);
+            color: var(--gray-color);
+            &:placeholder-shown {
+              color: var(--gray-light-color);
+            }
+          }
+        }
+        .outline {
+          border-color: var(--violet-color);
+
+          p {
+            color: var(--violet-color);
+          }
+          svg {
+            path {
+              fill: var(--violet-color);
+            }
+          }
+        }
+        .header-features {
+          svg {
+            path {
+              stroke: var(--violet-color);
+            }
+          }
+          .count {
+            background: var(--violet-color) !important;
+            color: var(--white-color) !important;
+          }
+        }
+      }
+    }
+  }
+  &.catalog-open {
+    border-color: var(--gray-light-color);
+    box-shadow: none !important;
+  }
+  &.active {
+    background: var(--white-color);
+    box-shadow: var(--shadow);
+    @media (max-width: $tab-sm) {
+      @include padding(10, 0);
+    }
+    .logo-wrapper {
+      .logo {
+        display: block;
+        svg {
+          .letter {
+            fill: var(--gray-color);
+          }
+        }
+      }
+      .burger-btn {
+        p {
+          color: var(--gray-color) !important;
+        }
+        svg {
+          path {
+            stroke: var(--gray-color);
+          }
+        }
+      }
+    }
+
+    .header-content {
+      .header-top {
+        .link-selector {
+          .link-selector-btn {
+            p {
+              color: var(--gray-color);
+            }
+            svg {
+              path {
+                stroke: var(--gray-color);
+              }
+            }
+          }
+        }
+        a {
+          color: var(--gray-color) !important;
+        }
+      }
+      .header-bottom {
+        .search-wrapper {
+          input {
+            background: var(--back-color);
+            color: var(--gray-color);
+            &:placeholder-shown {
+              color: var(--gray-light-color);
+            }
+          }
+        }
+        .outline {
+          border-color: var(--violet-color);
+
+          p {
+            color: var(--violet-color);
+          }
+          svg {
+            path {
+              fill: var(--violet-color);
+            }
+          }
+        }
+        .header-features {
+          svg {
+            path {
+              stroke: var(--violet-color);
+            }
+          }
+          .count {
+            background: var(--violet-color) !important;
+            color: var(--white-color) !important;
+          }
+        }
+      }
+    }
+  }
+  .header-inner {
+    display: flex;
+    align-items: center;
+    @include s(gap, 43);
+    @media (max-width: $tab-sm) {
+      flex-direction: column;
+      align-items: flex-start;
+
+      @include s(gap, 10);
+    }
+    .logo-wrapper {
+      display: flex;
+      align-items: center;
+      @media (max-width: $tab-sm) {
+        justify-content: space-between;
+        width: 100%;
+      }
+
+      .logo {
+        @include s(width, 80);
+        @include s(height, 80);
+        @media (max-width: $tab-sm) {
+          @include s(width, 126);
+          @include s(height, 36);
+        }
+        svg {
+          width: 100%;
+          height: 100%;
+          @media (max-width: $tab-sm) {
+            display: none;
+          }
+          &.mob {
+            display: none;
+            @media (max-width: $tab-sm) {
+              display: block;
+            }
+          }
+        }
+      }
+      .burger-btn {
+        display: none;
+        @media (max-width: $tab-sm) {
+          display: flex;
+          align-items: center;
+          @include s(gap, 12);
+        }
+        p {
+          @include descr-s;
+          color: var(--white-color);
+          text-transform: uppercase;
+          transition: var(--trs-cubic-300);
+        }
+        svg {
+          @include s(width, 20);
+          @include s(height, 12);
+        }
+      }
+    }
+
+    .header-content {
+      display: flex;
+      flex-direction: column;
+      @include s(gap, 16);
+      width: 100%;
+      .header-top {
+        display: flex;
+        justify-content: space-between;
+        @media (max-width: $tab-sm) {
+          display: none;
+        }
+        nav {
+          display: flex;
+          align-items: center;
+          @include s(gap, 48);
+        }
+        a {
+          @include body-m;
+          color: var(--white-color);
+          transition: var(--trs-cubic-300);
+        }
+      }
+      .header-bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @include s(gap, 24);
+        @media (max-width: $tab-sm) {
+          @include s(gap, 6);
+        }
+        .catalog-btn {
+          @include padding(0, 59, 0, 24);
+          @include s(gap, 29);
+          .burger {
+            @include s(width, 24);
+            @include s(height, 12);
+            display: flex;
+            position: relative;
+            span {
+              @include s(width, 24);
+              height: 1px;
+              background: var(--white-color);
+              position: absolute;
+              &:nth-child(1) {
+                top: 0;
+              }
+              &:nth-child(2) {
+                top: 0;
+                bottom: 0;
+                margin: auto;
+              }
+              &:nth-child(3) {
+                bottom: 0;
+              }
+            }
+            @media (max-width: $tab-sm) {
+              display: none;
+            }
+          }
+          @media (max-width: $tab-sm) {
+            @include padding(0);
+            @include s(min-width, 44);
+            @include s(min-height, 44);
+            @include s(max-width, 44);
+            @include s(max-height, 44);
+            justify-content: center;
+            align-items: center;
+          }
+          svg {
+            @include s(width, 24);
+            @include s(height, 12);
+            @media (max-width: $tab-sm) {
+              @include s(width, 22);
+              @include s(height, 16);
+              display: none;
+            }
+            &.mob {
+              display: none;
+              @media (max-width: $tab-sm) {
+                display: block;
+              }
+            }
+          }
+          p {
+            @include descr-m;
+            text-transform: uppercase;
+            @media (max-width: $tab-sm) {
+              display: none;
+            }
+          }
+        }
+        .search-wrapper {
+          position: relative;
+          @include s(gap, 29);
+          @include s(height, 48);
+          flex: 1;
+          @media (max-width: $tab-sm) {
+            @include s(height, 44);
+          }
+          .search-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            @include s(width, 48);
+            @include s(height, 48);
+            @include borr(6);
+            background: var(--grapfit-color);
+            @media (max-width: $tab-sm) {
+              background: none;
+              @include s(width, 44);
+              @include s(height, 44);
+            }
+            &:hover {
+              background: var(--violet-color);
+            }
+            svg {
+              @include s(width, 18);
+              @include s(height, 18);
+              @media (max-width: $tab-sm) {
+                @include s(width, 28);
+                @include s(height, 28);
+                circle,
+                path {
+                  stroke: var(--gray-color);
+                }
+              }
+            }
+          }
+        }
+        .account-btn {
+          @include padding(0, 22, 0, 18);
+          @include s(gap, 12);
+          @media (max-width: $tab-sm) {
+            display: none;
+          }
+          svg {
+            @include s(width, 28);
+            @include s(height, 28);
+          }
+          p {
+            @include body-sb;
+          }
+        }
+        .header-features {
+          display: flex;
+          align-items: center;
+          @include s(gap, 36);
+          @media (max-width: $tab-sm) {
+            display: none;
+          }
+          .feature-item {
+            position: relative;
+            @include s(width, 24);
+            @include s(height, 24);
+            .icon {
+              width: 100%;
+              height: 100%;
+              svg {
+                @include s(width, 28);
+                @include s(height, 28);
+              }
+            }
+            .count {
+              position: absolute;
+              @include s(top, -9);
+              @include s(right, -16);
+              @include s(width, 18);
+              @include s(height, 18);
+              background: var(--white-color);
+              border-radius: 999px;
+              color: var(--violet-color);
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              font-weight: 400;
+              @include s(font-size, 8);
+              line-height: 120%;
+              transition: var(--trs-cubic-300);
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,281 @@
+@use "src/scss/common/files/mixins" as *;
+
+.home-collections {
+  @include s(padding-top, 115);
+  overflow: hidden;
+  @media (max-width: $tab-sm) {
+    @include s(padding-top, 64);
+  }
+  .home-collections-inner {
+    .top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      h3 {
+        @include h1;
+      }
+      .btn {
+        width: fit-content;
+        @include padding(0, 24);
+        @include s(gap, 12);
+        @media (max-width: $tab-sm) {
+          display: none;
+        }
+        &:hover {
+          svg {
+            path {
+              stroke: var(--white-color);
+            }
+          }
+        }
+      }
+    }
+    .home-collections-swiper {
+      @include s(margin-top, 33);
+      position: relative;
+      @include s(height, 600);
+      @media (max-width: $tab-sm) {
+        @include s(margin-top, 19);
+        height: auto;
+      }
+      &.active {
+        .navigation {
+          opacity: 0;
+        }
+      }
+      .swiper-wrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        @media (max-width: $tab-sm) {
+          position: relative;
+        }
+      }
+      .navigation {
+        z-index: 2;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        @include s(left, -24);
+        @include s(right, -24);
+        display: flex;
+        justify-content: space-between;
+        pointer-events: none;
+        transition: var(--trs-cubic-300);
+        .btn {
+          pointer-events: all;
+        }
+      }
+      .swiper-slide {
+        @include s(height, 600);
+        @include borr(12);
+        overflow: hidden;
+        position: relative;
+        transition: var(--trs-cubic-300);
+        cursor: pointer;
+        opacity: 0;
+        @media (max-width: $tab-sm) {
+          height: fit-content;
+          cursor: default;
+          @include borr(0);
+        }
+        &.visible-slide {
+          opacity: 1;
+        }
+        &:before {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          left: 0;
+          @include s(height, 170);
+          background: linear-gradient(
+            0deg,
+            rgba(244, 244, 244, 1) 0%,
+            rgba(244, 244, 244, 0) 100%
+          );
+          z-index: 2;
+          @media (max-width: $tab-sm) {
+            display: none;
+          }
+        }
+        &.selected {
+          width: calc(1054 / var(--screensize) * 100vw) !important;
+          cursor: default;
+          .title {
+            opacity: 0;
+          }
+          .hidden-content {
+            opacity: 1;
+            transition-delay: 300ms;
+          }
+          .close-btn {
+            opacity: 1;
+          }
+        }
+        &.compressed {
+          width: calc(91 / var(--screensize) * 100vw) !important;
+          .title {
+            opacity: 0;
+          }
+        }
+        .image-wrapper {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          @media (max-width: $tab-sm) {
+            @include s(height, 320);
+            @include borr(12);
+            overflow: hidden;
+          }
+          img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+        .title {
+          position: absolute;
+          @include s(bottom, 34);
+          @include s(left, 66);
+          @include s(right, 66);
+          @include s(font-size, 16);
+          line-height: 120%;
+          text-transform: uppercase;
+          text-align: center;
+          font-weight: 500;
+          transition: var(--trs-cubic-300);
+          z-index: 3;
+          @media (max-width: $tab-sm) {
+            position: relative;
+            bottom: auto;
+            right: auto;
+            left: auto;
+            @include s(margin-top, 16);
+            @include s(font-size, 14);
+            line-height: 128%;
+            text-align: left;
+          }
+        }
+        .close-btn {
+          position: absolute;
+          @include s(top, 30);
+          @include s(left, 30);
+          opacity: 0;
+          transition: var(--trs-cubic-300);
+          @media (max-width: $tab-sm) {
+            display: none;
+          }
+        }
+        .hidden-content {
+          @include s(width, 336);
+          height: 100%;
+          background: var(--violet-color);
+          @include borr(12);
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          @include padding(40);
+          transition: var(--trs-cubic-300);
+          transition-delay: 0ms;
+          opacity: 0;
+          z-index: 3;
+          @media (max-width: $tab-sm) {
+            display: none;
+          }
+          &:before {
+            content: "";
+            position: absolute;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            @include s(height, 153);
+
+            background: linear-gradient(
+              0deg,
+              rgba(52, 49, 118, 1) 24%,
+              rgba(52, 49, 118, 0) 100%
+            );
+          }
+          .hidden-content-title {
+            color: var(--white-color);
+            text-align: center;
+            font-weight: 500;
+            @include s(font-size, 16);
+            line-height: 120%;
+            text-transform: uppercase;
+          }
+          .hidden-content-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            @include s(gap, 16);
+            @include s(margin-top, 30);
+
+            img {
+              @include s(width, 119);
+              @include s(height, 119);
+              @include borr(6);
+            }
+          }
+          .btn {
+            position: absolute;
+            width: fit-content;
+            left: 0;
+            right: 0;
+            @include s(bottom, 40);
+            margin: auto;
+            @include s(height, 50);
+            @include padding(0, 24);
+            @include s(gap, 24);
+            svg {
+              @include s(height, 12);
+              @include s(width, 6);
+            }
+          }
+        }
+      }
+    }
+    .home-collections-pagination-wrapper {
+      @include s(margin-top, 24);
+      align-items: center;
+      @include s(gap, 17);
+      display: none;
+      @media (max-width: $tab-sm) {
+        display: flex;
+      }
+      .products-pagination {
+        position: relative;
+      }
+      .current,
+      .total {
+        font-weight: 500;
+        @include s(font-size, 10);
+        line-height: 128%;
+      }
+      .total {
+        color: var(--gray-light-color);
+      }
+    }
+
+    .btn.mob {
+      display: none;
+      width: fit-content;
+      @include padding(0, 16);
+      @include s(gap, 12);
+      @include s(margin-top, 32);
+      text-transform: uppercase;
+      @include descr-s;
+      svg {
+        @include s(width, 6);
+        @include s(height, 12);
+      }
+      @media (max-width: $tab-sm) {
+        display: flex;
+      }
+    }
+  }
+}

@@ -1,0 +1,66 @@
+@use "src/scss/common/files/mixins" as *;
+
+.shop-contacts-card {
+  background: var(--back-color);
+  @include borr(12);
+  @include padding(28);
+  display: grid;
+  @include gtc(1fr, 128);
+  @include s(gap, 24);
+  align-items: flex-start;
+  .content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    .main-content {
+      flex: 1;
+    }
+    .title {
+      @include h6;
+      text-transform: uppercase;
+    }
+    svg {
+      @include s(width, 16);
+      @include s(height, 16);
+    }
+    .tel,
+    .address {
+      display: flex;
+      align-items: center;
+      @include s(gap, 16);
+      @include s(margin-top, 16);
+      p {
+        @include body-m;
+      }
+    }
+    .btn {
+      @include s(margin-top, 46);
+      @include s(gap, 12);
+      @include padding(0, 24);
+      justify-content: center;
+      width: fit-content;
+      svg {
+        @include s(width, 6);
+        @include s(height, 12);
+      }
+    }
+  }
+  .image-wrapper {
+    position: relative;
+    background: var(--white-color);
+    @include borr(6);
+    @include s(height, 85);
+    @include s(width, 128);
+    img {
+      position: absolute;
+      width: 80%;
+      height: 50%;
+      object-fit: contain;
+      margin: auto;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+    }
+  }
+}

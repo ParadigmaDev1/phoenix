@@ -1,0 +1,59 @@
+@use "src/scss/common/files/mixins" as *;
+
+.buy-info {
+  @include s(margin-top, 28);
+  @include s(padding-bottom, 156);
+  .buy-info-inner {
+    h1 {
+      @include h1;
+    }
+    .tabs {
+      @include s(margin-top, 28);
+      display: flex;
+      align-items: center;
+      @include s(gap, 4);
+    }
+    .selector-wrapper {
+      @include s(margin-top, 28);
+      display: flex;
+      @include s(gap, 20);
+      align-items: center;
+      .title {
+        @include descr-m;
+        text-transform: uppercase;
+      }
+      .selector {
+        @include s(max-width, 294);
+        width: 100%;
+      }
+    }
+    .info-list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      @include s(gap, 24);
+      @include s(margin-top, 28);
+    }
+    .pagination {
+      margin-top: 48px;
+    }
+    .load-more-btn {
+      margin-left: auto;
+      margin-right: auto;
+      @include padding(0, 24);
+      width: fit-content;
+      @include s(gap, 14);
+      @include s(margin-top, 28);
+      p {
+        text-transform: uppercase;
+        @include descr-m;
+      }
+      &:hover {
+        svg {
+          path {
+            stroke: var(--white-color);
+          }
+        }
+      }
+    }
+  }
+}

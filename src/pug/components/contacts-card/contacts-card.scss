@@ -1,0 +1,30 @@
+@use "src/scss/common/files/mixins" as *;
+
+.contacts-card {
+  background: var(--back-color);
+  @include borr(12);
+  @include padding(28);
+  .name {
+    @include body-xl;
+  }
+  .post {
+    @include s(margin-top, 8);
+    color: var(--gray-light-color);
+    @include body-m;
+  }
+  .info {
+    @include s(margin-top, 28);
+    display: flex;
+    flex-direction: column;
+    @include s(gap, 12);
+    a {
+      @include s(gap, 16);
+      display: flex;
+      align-items: center;
+      p {
+        color: var(--violet-color);
+        @include body-m;
+      }
+    }
+  }
+}

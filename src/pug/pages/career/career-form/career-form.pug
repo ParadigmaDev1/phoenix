@@ -1,0 +1,95 @@
+mixin career-form()
+    .career-form
+        .career-form-inner.container    
+            .content 
+                .top 
+                    h3 Готовы к новым достижениям? <br>Откликайтесь!
+                .bottom 
+                    p.descr Если вы хотите стать частью Феникс+ и развивать свою карьеру в профессиональной среде, заполните форму. Мы рассмотрим вашу заявку и свяжемся с вами для дальнейшего общения.
+            form
+                .inputs 
+                    .inputs-container 
+                        p.title ваши данные
+                        .inputs-wrapper
+                            .row
+                                .input__row
+                                    input(type="text" placeholder="ФИО").custom-input.input.form__input-value.input__valid-name
+                                    .input__item-small
+                                .input__row
+                                    input(type="text" placeholder="Желаемая должность").custom-input.input.form__input-value.input__valid-name
+                                    .input__item-small
+                            .row
+                                +selector({
+                                    title: 'Город', 
+                                    items: [
+                                        {
+                                            title: 'Москва', 
+                                            value: 0
+                                        },
+                                        {
+                                            title: 'Питер', 
+                                            value: 1
+                                        },
+                                        {
+                                            title: 'Краснодар', 
+                                            value: 2
+                                        },
+                                        {
+                                            title: 'Ростов', 
+                                            value: 3
+                                        },
+                                        ],
+                                        name: 'city',
+                                        required: true,
+                                        defaultRequired: true
+                                    },)
+                                +selector({
+                                    title: 'Образование', 
+                                    items: [
+                                        {
+                                            title: 'Бакалавр', 
+                                            value: 0
+                                        },
+                                        {
+                                            title: 'Магистратура', 
+                                            value: 1
+                                        },
+                                        {
+                                            title: 'Среднее', 
+                                            value: 2
+                                        },
+                                        ],
+                                        name: 'education',
+                                        required: true,
+                                        defaultRequired: true
+                                    },)
+                            .row 
+                                .input__row
+                                    input(type="tel" placeholder='+7 (').custom-input.input.form__input-value.input__valid-phone
+                                    .input__item-small
+                                .input__row
+                                    input(type="text" placeholder='E-mail').custom-input.input.form__input-value.input__valid-email
+                                    .input__item-small
+                                .input__row
+                                    input(type="text" placeholder='Телеграм @username').custom-input.input.form__input-value.input__valid-name
+                                    .input__item-small
+                            textarea(placeholder="Расскажи о себе")
+                    .inputs-container 
+                        p.title ваше резюме
+                        .inputs-wrapper
+                            .row.grid
+                                .input__row
+                                    input(type="text" placeholder='Ссылка на резюме').custom-input.input.form__input-value.input__valid-name
+                                    .input__item-small
+                                p или
+                                button(type='button').btn.outline.violet.l.file-btn
+                                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0.506836 7.5H14.5068" stroke="#343176"/>
+                                        <path d="M7.50684 14.5L7.50684 0.5" stroke="#343176"/>
+                                    </svg>
+                                    p прикрепить резюме
+                                    input(type="file")
+                .submit-form 
+                    p.policy Нажимая кнопку, я даю согласие на 
+                        a(href="#" target="_blank") обработку персональных данных в соответствии с Политикой конфиденциальности
+                    button.btn.primary.l отправить

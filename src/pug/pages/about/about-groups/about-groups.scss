@@ -1,0 +1,43 @@
+@use "src/scss/common/files/mixins" as *;
+
+.about-groups {
+  @include s(margin-top, 116);
+  .about-groups-inner {
+    display: grid;
+    @include gtc(408, 1fr);
+    @include s(gap, 48);
+    .title-block {
+      h3 {
+        @include h2;
+      }
+    }
+    .groups-block {
+      display: flex;
+      flex-direction: column;
+      @include s(gap, 6);
+      .group-item {
+        background: var(--back-color);
+        @include padding(24);
+        @include borr(12);
+        display: flex;
+        align-items: center;
+        @include s(gap, 24);
+        img {
+          @include s(width, 80);
+          @include s(height, 80);
+        }
+        .text {
+          display: flex;
+          flex-direction: column;
+          @include s(gap, 8);
+          .title {
+            @include body-xl;
+          }
+          .descr {
+            @include body-m;
+          }
+        }
+      }
+    }
+  }
+}

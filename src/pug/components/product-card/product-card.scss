@@ -1,0 +1,364 @@
+@use "src/scss/common/files/mixins" as *;
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  &.absolute {
+    position: absolute;
+  }
+  &.sm {
+    background: var(--white-color);
+    @include padding(10);
+    @include borr(12);
+    .product-card-swiper-wrapper {
+      @include s(height, 238);
+      @include s(min-height, 238);
+      .hidden-content {
+        .btn {
+          display: none;
+        }
+      }
+    }
+    .product-info {
+      @include padding(0, 12, 12, 12);
+
+      .cart-btn-wrapper {
+        display: none;
+      }
+    }
+  }
+  &.in-cart {
+    .product-info {
+      .cart-btn-wrapper {
+        .counter {
+          width: 50%;
+          @media (max-width: $tab-sm) {
+            width: 100%;
+            z-index: 3;
+          }
+        }
+        .cart-btn {
+          width: 50%;
+          @include s(padding-right, 15);
+          @media (max-width: $tab-sm) {
+            @include s(padding-right, 0);
+          }
+          svg {
+            opacity: 1;
+            @media (max-width: $tab-sm) {
+              opacity: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+  &:hover {
+    .hidden-content {
+      opacity: 1 !important;
+    }
+  }
+  .product-card-swiper-wrapper {
+    @include s(height, 318);
+    @include s(min-height, 318);
+    @include borr(12);
+    background: var(--back-color);
+    position: relative;
+    @media (max-width: $tab-sm) {
+      @include s(height, 150);
+      @include s(min-height, 150);
+    }
+    .product-card-features {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      z-index: 3;
+      position: absolute;
+      @media (max-width: $tab-sm) {
+        bottom: 0;
+        pointer-events: none;
+      }
+      .badge {
+        position: absolute;
+        @include s(top, 18);
+        @include s(left, 20);
+        @media (max-width: $tab-sm) {
+          top: auto;
+          @include s(left, 10);
+          @include s(bottom, 10);
+        }
+      }
+      .features-list {
+        display: flex;
+        align-items: center;
+        @include s(gap, 4);
+        position: absolute;
+        @include s(top, 10);
+        @include s(right, 10);
+        @media (max-width: $tab-sm) {
+          @include s(left, 4);
+          @include s(top, 4);
+          @include s(right, 4);
+          justify-content: space-between;
+        }
+        .btn {
+          @include s(width, 36);
+          @include s(height, 36);
+          padding: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          @media (max-width: $tab-sm) {
+            pointer-events: all;
+          }
+          svg {
+            @include s(width, 19);
+            @include s(height, 19);
+          }
+        }
+      }
+    }
+    .product-swiper {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+
+      .swiper-wrapper {
+        mix-blend-mode: multiply;
+        @media (max-width: $tab-sm) {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+        }
+      }
+      .swiper-slide {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0 !important;
+
+        &.swiper-slide-active {
+          opacity: 1 !important;
+        }
+        img {
+          width: 70%;
+          height: 70%;
+          object-fit: contain;
+        }
+      }
+      .lines {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        z-index: 2;
+        span {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+    .hidden-content {
+      position: absolute;
+      @include s(bottom, 20);
+      @include s(right, 30);
+      @include s(left, 30);
+      z-index: 3;
+      display: flex;
+      flex-direction: column;
+      @include s(gap, 20);
+      opacity: 0;
+      transition: var(--trs-cubic-300);
+      @media (max-width: $tab-sm) {
+        opacity: 1;
+        @include s(bottom, -6);
+        @include s(right, 9);
+        @include s(left, 9);
+      }
+      .btn {
+        text-transform: uppercase;
+        @include descr-m;
+        @media (max-width: $tab-sm) {
+          display: none;
+        }
+      }
+    }
+  }
+  .product-info {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    .main-info {
+      @include s(margin-top, 16);
+      flex: 1;
+      @media (max-width: $tab-sm) {
+        @include s(margin-top, 26);
+      }
+      .top {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        @media (max-width: $tab-sm) {
+          display: none;
+        }
+        .left-block {
+          display: flex;
+          flex-direction: column;
+          p {
+            color: var(--gray-light-color);
+            text-transform: uppercase;
+            @include descr-s;
+          }
+        }
+        .right-block {
+          .count {
+            position: relative;
+            @include descr-s;
+            text-transform: uppercase;
+            color: var(--gray-light-color);
+            @include s(padding-left, 22);
+            @media (max-width: $tab-sm) {
+              display: none;
+            }
+            &:before {
+              content: "";
+              position: absolute;
+              top: 0;
+              bottom: 0;
+              left: 0;
+              border-radius: 999px;
+              @include s(width, 12);
+              @include s(height, 12);
+            }
+            &.many {
+              &:before {
+                background: var(--green-color);
+              }
+            }
+            &.few {
+              &:before {
+                background: var(--warn-color);
+              }
+            }
+          }
+        }
+      }
+      .bottom {
+        @include s(margin-top, 16);
+        @media (max-width: $tab-sm) {
+          margin-top: 0;
+        }
+        .price-wrapper {
+          display: flex;
+          align-items: baseline;
+          @include s(gap, 12);
+          @media (max-width: $tab-sm) {
+            @include s(gap, 8);
+          }
+          .price {
+            @include body-xl;
+            @media (max-width: $tab-sm) {
+              @include body-sb;
+            }
+          }
+          .oldPrice {
+            font-weight: 600;
+            @include s(font-size, 14);
+            line-height: 130%;
+            color: #b2b3ba;
+            text-decoration: line-through;
+          }
+        }
+
+        .descr {
+          @include body-sb;
+          @include s(margin-top, 6);
+          @media (max-width: $tab-sm) {
+            @include s(margin-top, 8);
+
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            text-overflow: ellipsis;
+          }
+        }
+      }
+    }
+    .cart-btn-wrapper {
+      @include s(margin-top, 20);
+      @media (max-width: $tab-sm) {
+        @include s(margin-top, 12);
+      }
+      .counter {
+        width: 20%;
+        background: var(--back-color);
+        @include s(height, 44);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include borr(6);
+        @include padding(0, 10);
+        position: absolute;
+        transition: var(--trs-cubic-600);
+        @media (max-width: $tab-sm) {
+          @include s(height, 36);
+        }
+        .btn {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          @include s(height, 28);
+          @include s(width, 28);
+          padding: 0;
+          &:hover {
+            svg {
+              path {
+                stroke: var(--violet-color);
+              }
+            }
+          }
+        }
+        .current-count {
+          display: flex;
+          align-items: center;
+          @include body-m;
+        }
+      }
+      .cart-btn {
+        width: 100%;
+        justify-content: center;
+        z-index: 2;
+        position: relative;
+        margin-left: auto;
+        p {
+          text-transform: uppercase;
+          @include descr-m;
+          @media (max-width: $tab-sm) {
+            @include descr-s;
+          }
+        }
+        svg {
+          position: absolute;
+          opacity: 0;
+          @include s(right, 26);
+          @include s(width, 8);
+          @include s(height, 16);
+          transition: var(--trs-cubic-300);
+        }
+      }
+    }
+  }
+}

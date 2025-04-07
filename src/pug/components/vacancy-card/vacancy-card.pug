@@ -1,0 +1,12 @@
+mixin vacancy-card(data)
+    a(href="#").vacancy-card&attributes(attributes)
+        .image-wrapper 
+            img(src="./img/career/vacancy/person.svg", alt="person")
+        .content 
+            p.title #{data.title}
+            p.descr #{data.descr}
+        button.btn.circle.s  
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 7H14" stroke="white"/>
+                <path d="M7 14L7 0" stroke="white"/>
+            </svg>  

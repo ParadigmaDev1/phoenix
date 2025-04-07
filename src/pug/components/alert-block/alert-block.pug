@@ -1,0 +1,8 @@
+mixin alert-block(data)
+    .alert-block&attributes(attributes)
+        .alert-block-inner.container 
+            .alert-block-container 
+                img(src="./img/about/features/3.svg", alt="alert")
+                if data.title
+                    p.title #{data.title}
+                p.descr #{data.descr}

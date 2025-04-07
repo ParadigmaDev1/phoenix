@@ -1,0 +1,43 @@
+@use "src/scss/common/files/mixins" as *;
+
+.career-features {
+  @include s(margin-top, 48);
+  .career-features-inner {
+    .features-list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      @include s(gap, 24);
+      .career-feature-item {
+        @include s(height, 318);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: var(--back-color);
+        @include padding(48);
+        @include borr(12);
+        img {
+          @include s(height, 80);
+          @include s(width, 80);
+        }
+        .title {
+          text-align: center;
+          @include s(margin-top, 44);
+          color: var(--violet-color);
+          @include h1;
+        }
+        .descr {
+          @include s(margin-top, 16);
+          @include descr-m;
+          text-align: center;
+          text-transform: uppercase;
+        }
+      }
+    }
+    .alert {
+      @include s(max-width, 888);
+      @include s(margin-top, 48);
+      @include body-l;
+      margin-left: auto;
+    }
+  }
+}

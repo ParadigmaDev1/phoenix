@@ -1,0 +1,50 @@
+@use "src/scss/common/files/mixins" as *;
+
+.category-card {
+  @include borr(12);
+  position: relative;
+  @include s(height, 362);
+  overflow: hidden;
+  @media (max-width: $tab-sm) {
+    height: auto;
+  }
+  .image-wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    @media (max-width: $tab-sm) {
+      position: relative;
+      @include s(height, 150);
+      @include s(width, 150);
+      @include borr(12);
+      overflow: hidden;
+    }
+  }
+  img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .title {
+    position: absolute;
+    @include s(left, 30);
+    @include s(right, 30);
+    @include s(bottom, 27);
+    @include s(font-size, 13);
+    line-height: 120%;
+    text-transform: uppercase;
+    font-weight: 500;
+    z-index: 2;
+    @media (max-width: $tab-sm) {
+      position: relative;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      @include s(font-size, 12);
+      @include s(margin-top, 12);
+      line-height: 128%;
+      text-align: center;
+    }
+  }
+}

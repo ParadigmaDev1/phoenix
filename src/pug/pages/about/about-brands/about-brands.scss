@@ -1,0 +1,26 @@
+@use "src/scss/common/files/mixins" as *;
+
+.about-brands {
+  @include s(margin-top, 116);
+  overflow: hidden;
+
+  .about-brands-inner {
+    .about-brands-inner-top {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+
+      h3 {
+        @include h2;
+        text-align: left;
+        @include s(max-width, 637);
+      }
+      .descr {
+        text-align: left;
+        @include body-l;
+        @include s(max-width, 660);
+        margin-left: auto;
+      }
+    }
+  }
+}

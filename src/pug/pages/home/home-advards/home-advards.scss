@@ -1,0 +1,39 @@
+@use "src/scss/common/files/mixins" as *;
+
+.home-advards {
+  border-bottom: 1px solid var(--line-color);
+
+  .home-advards-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include s(gap, 64);
+    @include s(padding-top, 31);
+    @include s(padding-bottom, 31);
+    @media (max-width: $tab-sm) {
+      @include s(gap, 28);
+      @include s(padding-top, 12);
+      @include s(padding-bottom, 12);
+    }
+    img {
+      @include s(width, 32);
+      @include s(height, 64);
+      @media (max-width: $tab-sm) {
+        @include s(width, 20);
+        @include s(height, 40);
+      }
+    }
+    p {
+      @include h5;
+      text-transform: uppercase;
+      @media (max-width: $tab-sm) {
+        @include descr-s;
+        @include s(max-width, 120);
+
+        &:first-child {
+          text-align: right;
+        }
+      }
+    }
+  }
+}

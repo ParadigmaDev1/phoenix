@@ -1,0 +1,31 @@
+extends ./pug/templates/template.pug
+
+block head 
+  +head(["header", "content-hero", "career-about", "career-features", "alert-block", "career-team", "career-vacancy", "career-stages", "career-form", "career-adaptation", "career-history", "career-work", "vacancy-card", "values-block", "content-info", "career-team-about", "career-faq", "image-block", "crumbs", "selector", "footer-alert", "footer", "mobile-menu", "accordion-item", "catalog-menu"])
+block header 
+  +header().dark
+  +mobile-menu()
+  +catalog-menu()
+block content
+  +crumbs({items: [{title: 'О компании', href: 'about.html'}, {title: 'Карьера', href: '#'}]})
+  +career-hero()
+  +career-features()
+  +career-info()
+  +career-about()
+  +alert-block({title: 'Присоединяйтесь к команде «Феникс+»', descr: 'и начните строить свою карьеру в компании, которая поддерживает ваше развитие и вдохновляет на успех!'}).top-xs
+  +career-team()
+  +career-vacancy()
+  +career-stages()
+  +career-form()
+  +career-adaptation()
+  +alert-block({descr: 'Мы стремимся создать благоприятные условия для каждого нового сотрудника, чтобы они могли максимально раскрыть свой потенциал и внести значимый вклад в развитие нашей компании.'}).top-m
+  +career-history()
+  +career-work()
+  +image-block({img:'./img/career/bg.jpg'})
+  +career-team-about()
+  +career-faq()
+  +footer-alert()
+block footer 
+  +footer()
+block modals 
+  

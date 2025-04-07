@@ -1,0 +1,11 @@
+mixin home-categories()
+    .home-categories
+        .home-categories-inner.container 
+            h3 Категории
+            .categories-list   
+                +category-card({img:'./img/home/categories/1.jpg', title: 'Офисная продукция', haveGrad: true, grad1: 'rgba(227,227,221,0)', grad2:'rgba(227,227,221,1)'})
+                +category-card({img:'./img/home/categories/2.jpg', title: 'Товары для школьников и студентов'})
+                +category-card({img:'./img/home/categories/3.jpg', title: 'Тематическая продукция'})
+                +category-card({img:'./img/home/categories/4.jpg', title: 'Хобби и творчество', haveGrad: true, grad1: 'rgba(187, 185, 182,0)', grad2: 'rgba(187, 185, 182,1)'})
+                +category-card({img:'./img/home/categories/5.jpg', title: 'Развивающая продукция для детей'})
+                +category-card({img:'./img/home/categories/6.jpg', title: 'Пишущие принадлежности'})

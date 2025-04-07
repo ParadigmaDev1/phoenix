@@ -1,0 +1,137 @@
+mixin mobile-menu()
+    .mobile-menu
+        button.close-btn
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5.04883 14.9497L14.9483 5.05021" stroke="#343176"/>
+                <path d="M14.9492 14.9497L5.04972 5.05021" stroke="#343176"/>
+            </svg>
+        .mobile-menu-content 
+            nav.accordion
+                +accordion-item({
+                    navigation: true, 
+                    title: 'О компании', 
+                    icon: './img/mobile-menu/1.svg',
+                    links: [
+                        {
+                            link: '#',
+                            title: 'О компании'
+                        },
+                        {
+                            link: '#',
+                            title: 'Сотрудничество'
+                        },
+                        {
+                            link: '#',
+                            title: 'Истории успеха'
+                        },
+                        {
+                            link: '#',
+                            title: 'Нормативные документы'
+                        },
+                        {
+                            link: '#',
+                            title: 'Бренды'
+                        },
+                        {
+                            link: '#',
+                            title: 'Рекламные материалы'
+                        },
+                        {
+                            link: '#',
+                            title: 'Вакансии'
+                        },
+                        {
+                            link: '#',
+                            title: 'Сертификаты'
+                        },
+                        {
+                            link: '#',
+                            title: 'Отзывы о компании'
+                        },
+                        {
+                            link: '#',
+                            title: 'Реквизиты и адреса'
+                        },
+                        {
+                            link: '#',
+                            title: 'Контакты'
+                        },
+                    ]
+                })
+                +accordion-item({
+                    navigation: true, 
+                    title: 'Спецпредложения', 
+                    icon: './img/mobile-menu/2.svg',
+                    links: [
+                        {
+                            link: '#',
+                            title: 'О компании'
+                        },
+                        {
+                            link: '#',
+                            title: 'Сотрудничество'
+                        },
+                        {
+                            link: '#',
+                            title: 'Истории успеха'
+                        },
+                        {
+                            link: '#',
+                            title: 'Нормативные документы'
+                        },
+                        {
+                            link: '#',
+                            title: 'Бренды'
+                        },
+                        {
+                            link: '#',
+                            title: 'Рекламные материалы'
+                        },
+                        {
+                            link: '#',
+                            title: 'Вакансии'
+                        },
+                        {
+                            link: '#',
+                            title: 'Сертификаты'
+                        },
+                        {
+                            link: '#',
+                            title: 'Отзывы о компании'
+                        },
+                        {
+                            link: '#',
+                            title: 'Реквизиты и адреса'
+                        },
+                        {
+                            link: '#',
+                            title: 'Контакты'
+                        },
+                    ]
+                })
+                +accordion-item({
+                    navigation: true, 
+                    title: 'Клиентам', 
+                    icon: './img/mobile-menu/3.svg',
+                    links: [
+                        {
+                            link: '#',
+                            title: 'О компании'
+                        },
+                        {
+                            link: '#',
+                            title: 'Сотрудничество'
+                        },
+                    ]
+                })
+                a(href="#").link 
+                    img(src="./img/mobile-menu/4.svg", alt="icon")
+                    p Сотрудничество
+                a(href="#").link 
+                    img(src="./img/mobile-menu/5.svg", alt="icon")
+                    p Карьера
+                a(href="#").link 
+                    img(src="./img/mobile-menu/6.svg", alt="icon")
+                    p Контакты
+            .image-wrapper 
+                img(src="./img/mobile-menu/img.jpg", alt="")

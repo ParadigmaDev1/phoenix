@@ -1,0 +1,127 @@
+mixin footer()
+    footer.footer
+        .footer-inner-top
+            .footer-inner-top-content.container 
+                img(src="./img/footer/phone.png", alt="phone")
+                form.form
+                    h6 Узнайте первыми о новинках, акциях и распродажах
+                    .inputs 
+                        .checkboxes 
+                            label.custom-checkbox-wrapper
+                                input(type="checkbox").custom-checkbox
+                                p Получать новинки
+                            label.custom-checkbox-wrapper
+                                input(type="checkbox").custom-checkbox
+                                p Получать акции
+                        .input-container
+                            .row 
+                                .input-wrapper 
+                                    .input__row
+                                        input(type="text" placeholder="Ваш e-mail").custom-input.input.form__input-value.input__valid-email
+                                        .input__item-small
+                                button.btn.outline.gray.l подписаться
+                            p.policy Нажимая кнопку «Подписаться» вы даёте своё согласие с 
+                                a(href="#" target="_blank") правилами обработки персональных данных
+        .footer-inner-center
+            .footer-inner-center-content.container
+                .col 
+                    .info-wrapper 
+                        p Многоканальный
+                        a(href="tel:8 800 000-00-00") 8 800 000-00-00 
+                    .info-wrapper 
+                        p Отдел продаж
+                        .row 
+                            a(href="tel:+7 863 261 89 62") +7 863 261 89 62
+                            .socials 
+                                a(href="#" target="_blank")
+                                    <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M18.0145 1.67152C17.2268 1.89053 8.33064 4.4644 1.08704 6.54534C0.510457 6.72796 0.093898 7.19505 0.0121594 7.70843C-0.0695792 8.22182 0.270902 8.66241 0.729434 8.7914C1.121 8.91113 5.0469 10.0443 5.0469 10.0443L5.16355 16.619L9.22352 14.2273L6.0196 9.52289L14 6.67045L7.28847 11.0101L9.22352 13.9011C9.33702 14.0479 11.7056 17.6548 11.8758 17.875C12.1596 18.2422 12.5931 18.958 12.861 18.9951C13.3297 19.0599 13.9007 18.483 14.2548 17.5481C14.5987 16.6775 16.9291 10.6379 19.9212 2.59103C20.2652 1.72039 19.4559 1.21497 18.0145 1.67152Z" fill="#528DF0"/>
+                                    </svg>
+                                a(href="#" target="_blank")
+                                    <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M10 0.5C4.47271 0.5 0 4.97022 0 10.5C0 12.5854 0.635965 14.5144 1.76563 16.1719C1.80767 16.2342 1.83513 16.3052 1.84595 16.3796C1.85677 16.454 1.85068 16.5299 1.82813 16.6016L0.8125 20L4.14062 18.8516C4.21177 18.8279 4.28732 18.8205 4.3617 18.83C4.43608 18.8394 4.50737 18.8655 4.57031 18.9062C6.1292 19.9177 7.99539 20.5 10 20.5C15.5299 20.5 20 16.0299 20 10.5C20 4.97007 15.5299 0.5 10 0.5ZM5.90625 4.85938L7.72656 7.8672L6.96875 8.6172C6.8916 8.69505 6.84216 8.79608 6.82804 8.90477C6.81393 9.01346 6.83592 9.12378 6.89062 9.21875C8.04708 11.2214 9.4173 12.7794 11.3359 13.625C11.4279 13.6658 11.53 13.678 11.629 13.6599C11.7279 13.6418 11.8191 13.5942 11.8906 13.5235L12.6953 12.7188L15.6328 14.5547C15.3075 15.2868 14.8835 15.7226 14.3984 15.9766C13.8366 16.2708 13.1503 16.3265 12.3672 16.1641C10.8009 15.8393 8.90897 14.6083 7.36719 13.0312C5.82541 11.4542 4.63229 9.53657 4.32812 7.97655C4.17604 7.19655 4.24323 6.5248 4.53125 5.9922C4.77924 5.53363 5.20049 5.14103 5.90625 4.85938Z" fill="#50B550"/>
+                                    </svg>
+                        button.btn.outline.l.call-btn 
+                            <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5.5327 13.1822C9.2006 16.8501 12.0197 17.7708 15.3425 14.448C15.8625 13.914 16.3489 13.2393 15.6588 12.5494L12.9691 10.4926C12.1202 10.0358 11.7887 10.3607 11.3869 10.8089C9.9185 12.448 8.3343 11.904 7.27337 10.8089L5.69116 9.22672C4.59611 8.16568 4.05214 6.58131 5.69116 5.11318C6.1396 4.71142 6.46425 4.37978 6.00754 3.53098L3.95069 0.841257C3.26064 0.151205 2.58593 0.63757 2.05195 1.15763C-1.27069 4.48027 -0.350126 7.29937 3.31778 10.9674L5.5327 13.1822Z" fill="white"/>
+                            </svg>
+                            p заказ звонка
+                    p.time Без выходных с 8 до 22
+                    p.address 344082, г. Ростов-на-Дону, <br>пер. Халтуринский, 80 оф.1
+                    a(href="mailto:secretary@phoenix-plus.ru").mail secretary@phoenix-plus.ru 
+                    button.btn.outline.l.feedback-btn
+                        p обратная связь
+                        <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 13L7 7L0.999999 1" stroke="white" stroke-linecap="square" stroke-linejoin="round"/>
+                        </svg>
+                .col 
+                    h6 Каталог
+                    nav 
+                        a(href="#") Офисная продукция
+                        a(href="#") Товары для школьников и студентов
+                        a(href="#") Хобби и творчество
+                        a(href="#") Развивающая продукция для детей
+                        a(href="#") Тематическая продукция
+                        a(href="#") Пишущие принадлежности
+                .col 
+                    h6 Покупателям
+                    nav 
+                        a(href="#") Доставка и оплата
+                        a(href="#") Правила возврата
+                        a(href="#") Вопросы и ответы
+                        a(href="#") Условия работы
+                        a(href="#") Как купить
+                        a(href="#") Подключить к ЭДО и ЧЗ
+                        a(href="#") Акции
+                        a(href="#") Новости
+                .col 
+                    h6 Компания
+                    nav 
+                        a(href="#") О компании
+                        a(href="#") Сотрудничество
+                        a(href="#") Истории успеха
+                        a(href="#") Нормативные документы
+                        a(href="#") Бренды
+                        a(href="#") Рекламные материалы
+                        a(href="#") Вакансии
+                        a(href="#") Сертификаты
+                        a(href="#") Отзывы о компании
+                        a(href="#") Реквизиты и адреса
+                        a(href="#") Контакты
+        .footer-inner-socials
+            .footer-inner-socials-content.container
+                a(href="#" target="_blank") 
+                    img(src="./img/footer/socials/1.png", alt="social").kanz
+                .socials 
+                    a(href="#" target="_blank")
+                        img(src="./img/footer/socials/2.svg", alt="social")
+                    a(href="#" target="_blank")
+                        img(src="./img/footer/socials/3.svg", alt="social")
+                    a(href="#" target="_blank")
+                        img(src="./img/footer/socials/4.svg", alt="social")
+                    a(href="#" target="_blank")
+                        img(src="./img/footer/socials/5.svg", alt="social")
+                    a(href="#" target="_blank")
+                        img(src="./img/footer/socials/6.svg", alt="social")
+                a(href="#" target="_blank") 
+                    img(src="./img/footer/socials/7.png", alt="social").oboz
+        .footer-inner-bottom
+            .footer-inner-bottom-inner.container
+                .left 
+                    p.copy © 2024 ООО Феникс+  Канцтовары оптом.
+                    a(href="https://paradigma-digital.ru/" target="_blank").paradigma
+                        <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16 5.5L20 9.5V20.5H8V16.5H16V5.5Z" fill="#737373"/>
+                            <path d="M4 15.5L0 11.5V0.5H11L15 4.5L3.96666 4.46667L4 15.5Z" fill="#737373"/>
+                            <path d="M12 8.50002H8.00002V12.5H12V8.50002Z" fill="#737373"/>
+                        </svg>
+                        p Разработка сайта – Paradigma
+                .center 
+                    img(src="./img/footer/yandex.png", alt="yandex")
+                .right 
+                    a(href="#" target="_blank") Политика конфиденциальности 
+                    a(href="#" target="_blank") Пользовательское соглашение 
+                    
+              
+
+                        

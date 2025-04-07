@@ -1,0 +1,21 @@
+@use "src/scss/common/files/mixins" as *;
+
+.contacts {
+  @include s(margin-top, 28);
+  @include s(padding-bottom, 156);
+  .contacts-inner {
+    h1 {
+      @include h1;
+    }
+    .tabs {
+      @include s(margin-top, 28);
+      display: flex;
+      align-items: center;
+      @include s(gap, 4);
+    }
+    .tab-content {
+      display: grid;
+      @include s(margin-top, 28);
+    }
+  }
+}

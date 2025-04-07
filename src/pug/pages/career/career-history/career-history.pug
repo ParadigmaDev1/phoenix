@@ -1,0 +1,55 @@
+mixin career-history()
+    .career-history
+        .career-history-inner.container 
+            h3 Истории успеха
+            .triple-swiper
+                .swiper-wrapper 
+                    .swiper-slide
+                        .image-wrapper 
+                            img(src="./img/about/press/1.jpg", alt="press")
+                        a(href="#").content 
+                            p.title Моя первая команда: <br>как стать лидером и вдохновить других
+                            p.descr Ольга делится опытом, как развивала навыки лидерства и возглавила новый проект.
+                    .swiper-slide
+                        .video-block 
+                            video(src='./files/video.mp4' type='video/mp4' preload="auto" poster="./img/about/press/2.jpg")
+                            button.btn.play-btn 
+                                img(src="./img/icons/play.svg", alt="play") 
+                        a(href="#").content 
+                            p.title От идеи до создания нового бренда: как мы запустили «название»
+                            p.descr Анастасия, маркетолог Феникс+, рассказывает, как вместе с командой прошла путь от идеи до создания нового бренда. 
+                    .swiper-slide
+                        .image-wrapper 
+                            img(src="./img/about/press/3.jpg", alt="press")
+                        a(href="#").content 
+                            p.title От стажера до руководителя: путь к успеху
+                            p.descr Как целеустремленность и поддержка команды помогли Алексею достичь успеха.
+                    .swiper-slide
+                        .image-wrapper 
+                            img(src="./img/about/press/1.jpg", alt="press")
+                        a(href="#") .content 
+                            p.title Моя первая команда: <br>как стать лидером и вдохновить других
+                            p.descr Ольга делится опытом, как развивала навыки лидерства и возглавила новый проект.
+                    .swiper-slide
+                        .video-block 
+                            video(src='./files/video.mp4' type='video/mp4' preload="auto" poster="./img/about/press/2.jpg")
+                            button.btn.play-btn 
+                                img(src="./img/icons/play.svg", alt="play") 
+                        a(href="#").content 
+                            p.title От идеи до создания нового бренда: как мы запустили «название»
+                            p.descr Анастасия, маркетолог Феникс+, рассказывает, как вместе с командой прошла путь от идеи до создания нового бренда. 
+                    .swiper-slide
+                        .image-wrapper 
+                            img(src="./img/about/press/3.jpg", alt="press")
+                        a(href="#").content 
+                            p.title От стажера до руководителя: путь к успеху
+                            p.descr Как целеустремленность и поддержка команды помогли Алексею достичь успеха.
+                .navigation
+                    button.btn.circle.l.triple-swiper-prev
+                        <svg width="10" height="14" viewBox="0 0 10 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 13L1 7L9 1" stroke="white" stroke-linecap="square" stroke-linejoin="round"/>
+                        </svg>
+                    button.btn.circle.l.triple-swiper-next
+                        <svg width="10" height="14" viewBox="0 0 10 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 13L9 7L0.999999 1" stroke="white" stroke-linecap="square" stroke-linejoin="round"/>
+                        </svg>

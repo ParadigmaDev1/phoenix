@@ -1,0 +1,154 @@
+@use "src/scss/common/files/mixins" as *;
+
+.contacts-main-wrapper {
+  .contacts-main {
+    display: grid;
+    @include gtc(318, 1fr);
+    @include s(gap, 24);
+    .content {
+      .phone,
+      .mail,
+      .time,
+      .address {
+        display: grid;
+        @include gtc(16, 1fr);
+        @include s(gap, 16);
+        img {
+          @include s(margin-top, 5);
+        }
+        p {
+          @include body-l;
+        }
+      }
+      .phone,
+      .mail {
+        p {
+          color: var(--violet-color);
+        }
+      }
+      .mail,
+      .time,
+      .phone {
+        @include s(margin-top, 10);
+      }
+      .btns {
+        @include s(margin-top, 28);
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        @include s(gap, 10);
+        .btn {
+          @include s(gap, 12);
+          justify-content: center;
+          svg {
+            @include s(width, 16);
+            @include s(height, 16);
+          }
+        }
+      }
+      .title {
+        text-transform: uppercase;
+        @include descr-m;
+      }
+      .socials-wrapper {
+        @include s(margin-top, 48);
+        .socials {
+          display: flex;
+          align-items: center;
+          @include s(gap, 12);
+          @include s(margin-top, 12);
+
+          a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            @include s(width, 44);
+            @include s(height, 44);
+            @include borr(6);
+            &.tg {
+              background: #528df0;
+            }
+            &.wa {
+              background: #50b550;
+            }
+          }
+        }
+      }
+      .requisites-wrapper {
+        @include s(margin-top, 48);
+        .requisites {
+          list-style: none;
+          display: flex;
+          flex-direction: column;
+          @include s(gap, 8);
+          @include s(margin-top, 12);
+          p {
+            @include body-xs;
+
+            span {
+              text-transform: uppercase;
+              color: var(--gray-light-color);
+              white-space: nowrap;
+            }
+          }
+        }
+      }
+    }
+    .map-wrapper {
+      #map {
+        @include s(height, 600);
+      }
+    }
+  }
+  .managers {
+    @include s(margin-top, 80);
+
+    .title {
+      @include h2;
+    }
+    .managers-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      @include s(gap, 24);
+      @include s(margin-top, 36);
+    }
+    .manager {
+      display: flex;
+      @include s(gap, 24);
+      transition: opacity var(--trs-cubic-300);
+
+      .image-wrapper {
+        @include s(width, 320);
+        @include s(height, 320);
+        @include borr(20);
+        position: relative;
+        overflow: hidden;
+        img {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      .content {
+        @include s(width, 318);
+        @include s(padding-top, 28);
+        border-top: 1px solid var(--line-color);
+        transition: var(--trs-cubic-300);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .post {
+          @include descr-m;
+          color: var(--gray-light-color);
+          transition: var(--trs-cubic-300);
+        }
+        .name {
+          @include s(margin-top, 20);
+          @include h6;
+          text-transform: uppercase;
+          transition: var(--trs-cubic-300);
+        }
+      }
+    }
+  }
+}

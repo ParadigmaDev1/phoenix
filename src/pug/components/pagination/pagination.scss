@@ -1,0 +1,38 @@
+@use "src/scss/common/files/mixins" as *;
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  .pagination-pages {
+    display: flex;
+    align-items: center;
+    @include s(gap, 5);
+    .dots {
+      pointer-events: none;
+    }
+    .dots,
+    button {
+      @include s(width, 48);
+      @include s(height, 48);
+      @include borr(6);
+      background: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--line-color);
+      transition: var(--trs-cubic-300);
+      @include descr-m;
+      &:hover {
+        border-color: rgba(0, 0, 0, 0);
+        background: var(--violet-back-color);
+      }
+      &.active {
+        background: none;
+        border-color: var(--violet-color);
+        color: var(--violet-color);
+      }
+    }
+  }
+}

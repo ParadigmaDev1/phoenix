@@ -1,0 +1,64 @@
+@use "src/scss/common/files/mixins" as *;
+@use "src/scss/common/files/anim" as *;
+
+.home-partners {
+  @include s(margin-top, 115);
+  overflow: hidden;
+  @media (max-width: $tab-sm) {
+    @include s(margin-top, 62);
+  }
+  .home-partners-inner {
+    h3 {
+      @include h1;
+    }
+    .marquee-wrapper {
+      background: var(--white-color);
+      @include s(margin-top, 34);
+      @media (max-width: $tab-sm) {
+        @include s(margin-top, 25);
+      }
+      .marquee {
+        display: flex;
+        @include s(gap, 24);
+        flex-direction: column;
+        position: relative;
+        @include s(height, 296);
+        @media (max-width: $tab-sm) {
+          @include s(height, 134);
+          @include s(gap, 10);
+        }
+        .marquee__group {
+          position: absolute;
+          display: flex;
+          align-items: center;
+          @include s(gap, 24);
+          @include s(height, 136);
+          animation: slide 30s linear infinite;
+          @media (max-width: $tab-sm) {
+            @include s(height, 62);
+            @include s(gap, 10);
+          }
+          &:nth-child(1) {
+            margin: auto;
+            top: 0;
+          }
+          &:nth-child(2) {
+            animation-direction: reverse;
+            margin: auto;
+            bottom: 0;
+          }
+
+          img {
+            @include s(width, 204);
+            @include s(height, 136);
+            position: relative;
+            @media (max-width: $tab-sm) {
+              @include s(width, 94);
+              @include s(height, 62);
+            }
+          }
+        }
+      }
+    }
+  }
+}

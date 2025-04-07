@@ -1,0 +1,50 @@
+:root {
+  --black-color: #000;
+  --white-color: #fff;
+
+  --grapfit-color: #49454c;
+  --gray-color: #333435;
+  --gray-light-color: #a8a9b0;
+  --line-color: #dcdde1;
+  --txt-gray-color: #a0a0a0;
+  --back-color: #f4f4f4;
+  --violet-color: #343176;
+  --violet-back-color: #f1f0fa;
+  --green-color: #5fc0b1;
+  --blue-color: #528df0;
+  --warn-color: #ed9b57;
+  --alert-color: #f77878;
+  --pink-color: #ffe8e8;
+
+  --shadow-transparent: 0px 4px 15px 0px rgba(0, 0, 0, 0);
+  --shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+
+  --trs-300: 300ms ease;
+  --trs-600: 600ms ease;
+  --trs-1200: 1200ms ease;
+  --trs-2000: 2000ms ease;
+  --trs-cubic-800: 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --trs-cubic-600: 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --trs-cubic-300: 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+  --screensize: 1920;
+  @media (max-width: 1440px) {
+    --screensize: 1440;
+  }
+  // @media (max-width: 1024px) {
+  //   --screensize: 1280;
+  // }
+  @media (max-width: 767px) {
+    --screensize: 360;
+  }
+}
+
+$desktop-xl: 2000px;
+$desktop-lg: 1920px;
+$desktop-md: 1440px;
+$desktop-md-2: 1400px;
+$desktop-sm: 1280px;
+$tab: 1024px;
+$tab-sm: 767px;
+$pre-mob: 630px;
+$mob: 500px;

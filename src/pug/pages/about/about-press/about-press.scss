@@ -1,0 +1,79 @@
+@use "src/scss/common/files/mixins" as *;
+
+.about-press {
+  @include s(margin-top, 116);
+  overflow: hidden;
+  .about-press-inner {
+    .top {
+      position: relative;
+      h3 {
+        text-align: center;
+        @include h2;
+      }
+      .btn {
+        position: absolute;
+        top: 0;
+        right: 0;
+        @include padding(0, 24);
+        @include s(gap, 12);
+        p {
+          text-transform: uppercase;
+          @include descr-m;
+        }
+      }
+    }
+    .tabs {
+      @include s(margin-top, 36);
+      display: flex;
+      align-items: center;
+      @include s(gap, 4);
+      justify-content: center;
+    }
+    .tab-content {
+      @include s(margin-top, 28);
+      .triple-swiper {
+        position: relative;
+        .swiper-slide {
+          opacity: 0;
+          transition: opacity var(--trs-cubic-300);
+          &.visible-slide {
+            opacity: 1;
+          }
+          .image-wrapper {
+            @include s(height, 244);
+            @include borr(12);
+            overflow: hidden;
+          }
+          .content {
+            @include s(margin-top, 28);
+            .date {
+              display: flex;
+              align-items: center;
+              @include s(gap, 16);
+              p {
+                @include descr-m;
+                color: var(--gray-light-color);
+                text-transform: uppercase;
+              }
+            }
+            .title {
+              @include s(margin-top, 16);
+              @include h6;
+              text-transform: uppercase;
+            }
+          }
+        }
+        .navigation {
+          position: absolute;
+          top: 0;
+          margin: auto;
+          @include s(left, -23);
+          @include s(top, 98);
+          @include s(right, -23);
+          justify-content: space-between;
+          z-index: 2;
+        }
+      }
+    }
+  }
+}

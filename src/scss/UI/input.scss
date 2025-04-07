@@ -1,0 +1,59 @@
+input {
+  border: none;
+  outline: none;
+  width: 100%;
+  &.transparent {
+    background: rgba(255, 255, 255, 0.5);
+    @include borr(6);
+    @include padding(0, 24);
+    @include s(height, 48);
+    @include body-m;
+    color: var(--white-color);
+    transition: var(--trs-cubic-300);
+    @media (max-width: $tab-sm) {
+      @include s(height, 44);
+      @include padding(0, 16);
+      @include body-s;
+      background: var(--back-color);
+      color: var(--gray-color);
+    }
+    &:placeholder-shown {
+      @include body-m;
+      color: var(--white-color);
+      transition: var(--trs-cubic-300);
+      @media (max-width: $tab-sm) {
+        @include body-s;
+        color: var(--gray-light-color);
+      }
+    }
+  }
+}
+
+.input__row {
+  input {
+    @include s(height, 48);
+    @include borr(6);
+    @include padding(0, 24);
+    @include body-m;
+
+    &::placeholder-shown {
+      @include body-m;
+      color: var(--gray-light-color);
+    }
+  }
+}
+
+textarea {
+  background: var(--back-color);
+  @include borr(12);
+  @include padding(12, 24);
+  resize: none;
+  border: none;
+  outline: none;
+  @include s(height, 81);
+  @include body-m;
+  &::placeholder-shown {
+    @include body-m;
+    color: var(--gray-light-color);
+  }
+}

@@ -1,0 +1,356 @@
+@use "src/scss/common/files/mixins" as *;
+
+.footer {
+  background: #211f21;
+  .footer-inner-top {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    .footer-inner-top-content {
+      display: grid;
+      @include gtc(300, 885);
+      @include s(gap, 159);
+      align-items: center;
+      @media (max-width: $tab-sm) {
+        grid-template-columns: repeat(1, 1fr);
+        @include s(padding-top, 64);
+        @include s(padding-bottom, 64);
+      }
+      img {
+        @include s(width, 300);
+        @include s(height, 328);
+        @include s(margin-top, -40);
+        @media (max-width: $tab-sm) {
+          display: none;
+        }
+      }
+      .form {
+        h6 {
+          @include h6;
+          color: var(--white-color);
+          text-transform: uppercase;
+        }
+        .inputs {
+          display: grid;
+          @include gtc(190, 654);
+          @include s(gap, 60);
+          @include s(margin-top, 33);
+          @media (max-width: $tab-sm) {
+            grid-template-columns: repeat(1, 1fr);
+            @include s(gap, 28);
+            @include s(margin-top, 28);
+          }
+          .checkboxes {
+            display: flex;
+            flex-direction: column;
+            @include s(gap, 12);
+          }
+          .row {
+            display: grid;
+            @include gtc(386, 258);
+            @include s(gap, 10);
+            @media (max-width: $tab-sm) {
+              grid-template-columns: repeat(1, 1fr);
+            }
+            .btn {
+              justify-content: center;
+              text-transform: uppercase;
+              @include descr-m;
+              @media (max-width: $tab-sm) {
+                @include s(height, 48);
+              }
+            }
+          }
+        }
+        .policy {
+          @include s(margin-top, 16);
+          @include body-xs;
+          color: #737373;
+
+          a {
+            text-decoration: underline;
+            color: #737373;
+          }
+        }
+      }
+    }
+  }
+  .footer-inner-center {
+    @include s(margin-top, 94);
+    @include s(padding-bottom, 84);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    @media (max-width: $tab-sm) {
+      @include s(margin-top, 48);
+      @include s(padding-bottom, 56);
+    }
+    .footer-inner-center-content {
+      display: grid;
+      @include gtc(318, 204, 204, 204);
+      @include s(gap, 138);
+      @media (max-width: $tab-sm) {
+        grid-template-columns: repeat(1, 1fr);
+      }
+      .col {
+        @media (max-width: $tab-sm) {
+          display: none;
+          &:first-child {
+            display: block;
+          }
+        }
+        .info-wrapper {
+          @include s(margin-top, 20);
+          &:first-child {
+            margin-top: 0;
+          }
+          p {
+            color: #737373;
+            @include body-sb;
+            @media (max-width: $tab-sm) {
+              @include body-xsb;
+            }
+          }
+          a {
+            @include s(margin-top, 6);
+            color: var(--white-color);
+            @include h4;
+            @media (max-width: $tab-sm) {
+              @include s(margin-top, 4);
+            }
+          }
+          .row {
+            display: flex;
+            align-items: center;
+            @include s(gap, 20);
+            @media (max-width: $tab-sm) {
+              justify-content: space-between;
+            }
+            .socials {
+              display: flex;
+              align-items: center;
+              @include s(gap, 24);
+              svg {
+                @media (max-width: $tab-sm) {
+                  @include s(width, 20);
+                  @include s(height, 17);
+                }
+              }
+            }
+          }
+        }
+        .call-btn {
+          @include s(margin-top, 20);
+          @include padding(0, 20);
+          justify-content: center;
+          @include s(gap, 24);
+          text-transform: uppercase;
+          @media (max-width: $tab-sm) {
+            width: 100%;
+            @include s(margin-top, 16);
+          }
+          p {
+            color: var(--white-color);
+            @include descr-xs;
+          }
+        }
+        .time {
+          @include s(margin-top, 48);
+          @include body-sb;
+          color: #737373;
+          @media (max-width: $tab-sm) {
+            @include s(margin-top, 36);
+            @include body-xsb;
+          }
+        }
+        .address {
+          color: var(--white-color);
+          @include s(margin-top, 16);
+          @include body-xl;
+          @media (max-width: $tab-sm) {
+            @include s(margin-top, 10);
+            @include body-lb;
+          }
+        }
+        .mail {
+          color: var(--white-color);
+          @include s(margin-top, 16);
+          @include body-xl;
+          display: block;
+          text-decoration: underline;
+          @media (max-width: $tab-sm) {
+            @include s(margin-top, 10);
+            @include body-lb;
+          }
+        }
+        .feedback-btn {
+          @include s(margin-top, 20);
+          @include padding(0, 20);
+          justify-content: center;
+          @include s(gap, 24);
+          text-transform: uppercase;
+          @media (max-width: $tab-sm) {
+            justify-content: space-between;
+            width: 100%;
+          }
+          p {
+            color: var(--white-color);
+            @include descr-xs;
+          }
+          svg {
+            @media (max-width: $tab-sm) {
+              @include s(width, 6);
+              @include s(height, 12);
+            }
+          }
+        }
+        h6 {
+          @include h6;
+          color: var(--white-color);
+          text-transform: uppercase;
+        }
+        nav {
+          @include s(margin-top, 24);
+          display: flex;
+          flex-direction: column;
+          @include s(gap, 16);
+          a {
+            @include body-m;
+            color: #737373;
+            transition: var(--trs-cubic-300);
+            &:hover {
+              color: var(--white-color);
+            }
+          }
+        }
+      }
+    }
+  }
+  .footer-inner-socials {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+    .footer-inner-socials-content {
+      @include s(padding-bottom, 56);
+      @include s(padding-top, 56);
+      @include s(gap, 166);
+      display: grid;
+      @include gtc(318, 372, 318);
+      align-items: center;
+      @media (max-width: $tab-sm) {
+        @include s(padding-bottom, 28);
+        @include s(padding-top, 45);
+        grid-template-areas: "socials socials" "kanz oboz";
+        grid-template-columns: repeat(2, 1fr);
+        @include s(gap, 50);
+      }
+      .kanz {
+        @include s(width, 264);
+        @include s(height, 30);
+        @media (max-width: $tab-sm) {
+          grid-area: kanz;
+          @include s(width, 125);
+          @include s(height, 16);
+        }
+      }
+      .oboz {
+        @include s(width, 254);
+        @include s(height, 41);
+        @media (max-width: $tab-sm) {
+          grid-area: oboz;
+          @include s(width, 119);
+          @include s(height, 19);
+        }
+      }
+      .socials {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @media (max-width: $tab-sm) {
+          grid-area: socials;
+          img {
+            @include s(width, 36);
+            @include s(height, 36);
+          }
+        }
+      }
+    }
+  }
+  .footer-inner-bottom {
+    .footer-inner-bottom-inner {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      @include s(padding-top, 39);
+      @include s(padding-bottom, 39);
+      @media (max-width: $tab-sm) {
+        grid-template-columns: repeat(1, 1fr);
+        @include s(padding-top, 28);
+        @include s(padding-bottom, 28);
+        @include s(gap, 12);
+        grid-template-areas: "center" "left" "right";
+        justify-content: flex-start;
+      }
+      .left {
+        display: flex;
+        flex-direction: column;
+        @include s(gap, 6);
+        @media (max-width: $tab-sm) {
+          grid-area: left;
+        }
+        .copy {
+          @include body-sb;
+          color: #737373;
+        }
+        .paradigma {
+          display: flex;
+          align-items: center;
+          @include s(gap, 16);
+
+          &:hover {
+            svg {
+              path {
+                fill: var(--white-color);
+              }
+            }
+            p {
+              color: var(--white-color);
+            }
+          }
+          p {
+            @include body-sb;
+            color: #737373;
+            transition: var(--trs-cubic-300);
+          }
+        }
+      }
+      .center {
+        display: flex;
+        justify-content: center;
+        @media (max-width: $tab-sm) {
+          justify-content: flex-start;
+
+          grid-area: center;
+          @include s(margin-bottom, 12);
+        }
+        img {
+          @include s(width, 241);
+          @include s(height, 70);
+        }
+      }
+      .right {
+        display: flex;
+        flex-direction: column;
+        @include s(gap, 12);
+        align-items: flex-end;
+        @media (max-width: $tab-sm) {
+          grid-area: right;
+          align-items: flex-start;
+        }
+        a {
+          @include body-sb;
+          color: #737373;
+          transition: var(--trs-cubic-300);
+
+          &:hover {
+            color: var(--white-color);
+          }
+        }
+      }
+    }
+  }
+}
