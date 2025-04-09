@@ -1,27 +1,30 @@
 export const accordionFunc = () => {
   const updateMaxHeight = (item) => {
-    const titleHeight = item.querySelector(".accordion-title").scrollHeight;
-    let bodyHeight = 0;
+    if (item) {
+      const titleHeight = item.querySelector(".accordion-title").scrollHeight;
+      let bodyHeight = 0;
 
-    const body = item.querySelector(".accordion-body");
-    if (body) {
-      bodyHeight = body.scrollHeight;
+      const body = item.querySelector(".accordion-body");
+      if (body) {
+        bodyHeight = body.scrollHeight;
 
-      // Учитываем только активные дочерние аккордеоны
-      const nestedItems = body.querySelectorAll(".accordion-item");
-      nestedItems.forEach((nestedItem) => {
-        if (nestedItem.classList.contains("active")) {
-          bodyHeight += nestedItem.scrollHeight;
-        } else {
-          bodyHeight +=
-            nestedItem.querySelector(".accordion-title").scrollHeight;
-        }
-      });
+        // Учитываем только активные дочерние аккордеоны
+        const nestedItems = body.querySelectorAll(".accordion-item");
+        nestedItems.forEach((nestedItem) => {
+          // if (nestedItem.classList.contains("active")) {
+          bodyHeight += nestedItem.scrollHeight + titleHeight;
+          // } else {
+          //   bodyHeight +=
+          //     nestedItem.querySelector(".accordion-title").scrollHeight +
+          //     titleHeight;
+          // }
+        });
+      }
+
+      item.style.maxHeight = item.classList.contains("active")
+        ? `${titleHeight + bodyHeight}px`
+        : `${titleHeight}px`;
     }
-
-    item.style.maxHeight = item.classList.contains("active")
-      ? `${titleHeight + bodyHeight}px`
-      : `${titleHeight}px`;
   };
 
   const closeAllChildren = (parentItem) => {

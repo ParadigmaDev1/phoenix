@@ -1,0 +1,109 @@
+@use "src/scss/common/files/mixins" as *;
+
+.faq {
+  @include s(margin-top, 28);
+  @include s(padding-bottom, 156);
+  .faq-inner {
+    h1 {
+      @include h1;
+    }
+    .tabs {
+      @include s(margin-top, 28);
+      display: flex;
+      align-items: center;
+      @include s(gap, 4);
+    }
+    .faq-inner-content-wrapper {
+      display: grid;
+      @include gtc(1fr, 432);
+      @include s(gap, 48);
+    }
+    .tab-content-wrapper {
+      .tab-content {
+        @include s(margin-top, 28);
+
+        .accordion-item.nested {
+          border-top: 1px solid var(--line-color);
+          &:last-child {
+            border-bottom: 1px solid var(--line-color);
+          }
+          & > .accordion-title {
+            justify-content: flex-start;
+            @include padding(36, 0);
+
+            .title-wrapper {
+              .title {
+                @include body-xl;
+              }
+            }
+          }
+
+          &.active {
+            .accordion-title {
+              svg {
+                transform: rotate(180deg);
+              }
+            }
+            .icon {
+              @include s(width, 28);
+              @include s(height, 28);
+              border: 1px solid var(--line-color);
+              @include borr(6);
+              svg {
+                @include s(width, 12);
+                @include s(height, 6);
+              }
+            }
+            .accordion-body {
+              ul {
+                list-style: none;
+                display: flex;
+                flex-direction: column;
+                @include s(gap, 8);
+                li {
+                  position: relative;
+                  @include s(padding-left, 30);
+                  @include body-l;
+                  &:before {
+                    content: "";
+                    position: absolute;
+                    @include s(width, 6);
+                    @include s(height, 6);
+                    border-radius: 9999px;
+                    background: var(--violet-color);
+                    @include s(top, 10);
+                    left: 0;
+                  }
+                }
+              }
+              .text {
+                @include s(margin-top, 16);
+                display: flex;
+                flex-direction: column;
+                @include s(gap, 10);
+                p {
+                  @include body-l;
+                }
+              }
+              .subtitle {
+                @include body-xl;
+                @include s(margin-top, 16);
+                @include s(margin-bottom, 16);
+              }
+              .btn {
+                @include padding(0, 24);
+                @include s(gap, 4);
+                @include s(margin-top, 24);
+
+                p {
+                  text-transform: uppercase;
+                  @include descr-m;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

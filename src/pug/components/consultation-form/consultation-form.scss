@@ -1,10 +1,14 @@
 @use "src/scss/common/files/mixins" as *;
 
 .consultation-form {
-  @include s(margin-top, 64);
   @include padding(48);
   @include borr(12);
   box-shadow: var(--shadow);
+  h4 {
+    text-transform: uppercase;
+    @include h4;
+    color: var(--violet-color);
+  }
   .inputs {
     display: flex;
     flex-direction: column;
