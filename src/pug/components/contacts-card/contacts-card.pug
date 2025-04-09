@@ -1,12 +1,12 @@
 mixin contacts-card(data)
     .contacts-card
-        p.title #{data.title}
+        p.name #{data.title}
         p.post #{data.post}
         .info 
             each phone in data.phones
-                a(href=`tel:${phone}`) 
+                a(href=`tel:${phone.phone}`) 
                     img(src="./img/icons/phone-violet.svg", alt="phone")
-                    p #{phone} 
+                    p #{phone.title} 
             a(href=`mailto:o.protasova@phoenix-plus.ru `) 
                 img(src="./img/icons/mail.svg", alt="mail")
                 p o.protasova@phoenix-plus.ru  

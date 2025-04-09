@@ -1,0 +1,17 @@
+@use "src/scss/common/files/mixins" as *;
+
+.contacts-distributors-wrapper {
+  .contacts-distributors-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    @include s(column-gap, 24);
+    @include s(row-gap, 80);
+    .person-contacts-card {
+      display: flex;
+      flex-direction: column;
+      .person-contacts-card-content {
+        height: 100%;
+      }
+    }
+  }
+}

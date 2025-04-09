@@ -1,0 +1,28 @@
+mixin contacts-distributors()
+    .contacts-distributors-wrapper
+        .contacts-distributors-list
+            +person-contacts-card({
+                img:'./img/contacts/logo2.png',
+                title: 'республика беларусь',
+                nameInfo: [
+                    {
+                        name: 'Компания "Мелтэк"', 
+                        post: 'официальный дистрибьютор продукции "Феникс+" в Республике Беларусь.',
+                    }
+                ],
+                address: '220020, г. Минск, проспект Победителей, д. 89, корпус 3, офис 8а',
+                phones: [
+                    {
+                        title: '+7 (863) 261-89-62',
+                        phone: '+7 (863) 261-89-62',
+                    },
+                    {
+                        title: '+7 (863) 261-89-63',
+                        phone: '+7 (863) 261-89-63',
+                    },
+                    {
+                        title: '+7 (863) 261-89-64 , доб.140',
+                        phone: '+7 (863) 261-89-64',
+                    },
+                ]
+            }).in-box.with-logo

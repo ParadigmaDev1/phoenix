@@ -1,7 +1,7 @@
 @use "src/scss/common/files/mixins" as *;
 
-.contacts-sallers-wrapper {
-  .contacts-sallers-list {
+.contacts-production-wrapper {
+  .contacts-production-list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     @include s(gap, 24);

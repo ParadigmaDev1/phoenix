@@ -1,0 +1,129 @@
+@use "src/scss/common/files/mixins" as *;
+
+.person-contacts-card {
+  .title {
+    text-transform: uppercase;
+    @include h6;
+  }
+  .person-contacts-card-content {
+    @include s(margin-top, 24);
+    display: grid;
+    @include gtc(203, 429);
+    @include s(gap, 28);
+    .image-wrapper {
+      position: relative;
+      @include s(height, 252);
+      width: 100%;
+      @include borr(12);
+      overflow: hidden;
+      &.empty {
+        background: var(--back-color);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      svg {
+        @include s(width, 51);
+        @include s(height, 48);
+      }
+    }
+    .content {
+      .name-block-wrapper {
+        display: flex;
+        flex-direction: column;
+        @include s(gap, 28);
+        @include s(margin-bottom, 28);
+
+        .name {
+          @include body-xl;
+        }
+        .post {
+          @include s(margin-top, 8);
+          color: var(--gray-light-color);
+          @include body-m;
+        }
+      }
+      .address-block {
+        display: flex;
+        flex-direction: column;
+        @include s(gap, 6);
+        .address {
+          display: flex;
+          align-items: center;
+          @include s(gap, 16);
+          @include body-m;
+          img {
+            @include s(width, 16);
+            @include s(height, 16);
+          }
+        }
+        .routes {
+          display: flex;
+          flex-direction: column;
+          @include s(gap, 6);
+          .route {
+            @include body-xs;
+            @include s(padding-left, 28);
+          }
+        }
+      }
+
+      .info {
+        display: flex;
+        flex-direction: column;
+        @include s(gap, 12);
+        a {
+          @include s(gap, 16);
+          display: flex;
+          align-items: center;
+          p {
+            color: var(--violet-color);
+            @include body-m;
+          }
+        }
+      }
+    }
+  }
+  &.in-box {
+    .person-contacts-card-content {
+      @include padding(20);
+      background: var(--back-color);
+      @include borr(12);
+      .image-wrapper {
+        &.empty {
+          background: var(--white-color);
+          svg {
+            path {
+              fill: var(--back-color);
+            }
+          }
+        }
+      }
+      .content {
+        @include s(margin-top, 8);
+      }
+    }
+  }
+  &.with-logo {
+    .image-wrapper {
+      @include s(height, 184);
+      background: var(--white-color);
+      img {
+        width: 80%;
+        height: 80%;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        margin: auto;
+        object-fit: contain;
+      }
+    }
+  }
+}

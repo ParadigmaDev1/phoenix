@@ -1,14 +1,13 @@
-mixin contacts-sallers()
-    .contacts-sallers-wrapper 
+mixin contacts-production()
+    .contacts-production-wrapper 
         +person-contacts-card({
-            img:'./img/contacts/person.jpg',
-            title: 'руководитель',
+            title: 'руководитель', 
             nameInfo: [
                 {
                     name: 'Батаршина Елена Николаевна', 
                     post: 'Зам.директора по производству',
                 }
-            ], 
+            ],
             phones: [
                 {
                     title: '+7 (863) 261-89-62',
@@ -19,12 +18,12 @@ mixin contacts-sallers()
                     phone: '+7 (863) 261-89-62',
                 },
                 {
-                    title: '+7 (863) 261-89-64 , доб.140',
+                    title: '+7 (863) 261-89-64, доб.140',
                     phone: '+7 (863) 261-89-64',
                 },
             ]
         })
-        .contacts-sallers-list 
+        .contacts-production-list 
             +contacts-card({
                 title: 'Космынина Оксана Вячеславовна', 
                 post: 'Менеджер отдела продаж(сетевой ритейл,интернет-магазины, маркетплэйсы) KAM', 
@@ -38,7 +37,7 @@ mixin contacts-sallers()
                         phone: '+7 (863) 261-89-62',
                     },
                     {
-                        title: '+7 (863) 261-89-64 , доб.140',
+                        title: '+7 (863) 261-89-64, доб.140',
                         phone: '+7 (863) 261-89-64',
                     },
                 ]
@@ -54,7 +53,8 @@ mixin contacts-sallers()
                     {
                         title: '+7 (863) 261-89-62',
                         phone: '+7 (863) 261-89-62',
-                    }
+                    },
+               
                 ]
             })
             +contacts-card({
@@ -64,7 +64,7 @@ mixin contacts-sallers()
                     {
                         title: '+7 (863) 261-89-62',
                         phone: '+7 (863) 261-89-62',
-                    }
+                    },
                 ]
             })
             +contacts-card({
@@ -80,7 +80,7 @@ mixin contacts-sallers()
                         phone: '+7 (863) 261-89-62',
                     },
                     {
-                        title: '+7 (863) 261-89-64 , доб.140',
+                        title: '+7 (863) 261-89-64, доб.140',
                         phone: '+7 (863) 261-89-64',
                     },
                 ]
@@ -88,48 +88,6 @@ mixin contacts-sallers()
             +contacts-card({
                 title: 'Ильичева Юлия Сергеевна', 
                 post: 'Менеджер отдела продаж',
-                phones: [
-                   {
-                        title: '+7 (863) 261-89-62',
-                        phone: '+7 (863) 261-89-62',
-                    },
-                    {
-                        title: '+7 (863) 261-89-62',
-                        phone: '+7 (863) 261-89-62',
-                    },
-                ]
-            })
-            +contacts-card({
-                title: 'Космынина Оксана Вячеславовна', 
-                post: 'Менеджер отдела продаж(сетевой ритейл,интернет-магазины, маркетплэйсы) KAM',
-                phones: [
-                    {
-                        title: '+7 (863) 261-89-62',
-                        phone: '+7 (863) 261-89-62',
-                    },
-                ]
-            })
-            +contacts-card({
-                title: 'Космынина Оксана Вячеславовна',
-                post: 'Менеджер отдела продаж(сетевой ритейл,интернет-магазины, маркетплэйсы) KAM', 
-                phones: [
-                    {
-                        title: '+7 (863) 261-89-62',
-                        phone: '+7 (863) 261-89-62',
-                    },
-                    {
-                        title: '+7 (863) 261-89-62',
-                        phone: '+7 (863) 261-89-62',
-                    },
-                    {
-                        title: '+7 (863) 261-89-64 , доб.140',
-                        phone: '+7 (863) 261-89-64',
-                    },
-                ]
-            })
-            +contacts-card({
-                title: 'Ильичева Юлия Сергеевна', 
-                post: 'Менеджер отдела продаж', 
                 phones: [
                     {
                         title: '+7 (863) 261-89-62',
