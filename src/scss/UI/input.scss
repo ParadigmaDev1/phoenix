@@ -30,6 +30,11 @@ input {
 }
 
 .input__row {
+  &.gray {
+    input {
+      background: var(--back-color);
+    }
+  }
   input {
     @include s(height, 48);
     @include borr(6);
@@ -52,6 +57,7 @@ textarea {
   outline: none;
   @include s(height, 81);
   @include body-m;
+  width: 100%;
   &::placeholder-shown {
     @include body-m;
     color: var(--gray-light-color);

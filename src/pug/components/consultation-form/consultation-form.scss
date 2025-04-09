@@ -1,0 +1,38 @@
+@use "src/scss/common/files/mixins" as *;
+
+.consultation-form {
+  @include s(margin-top, 64);
+  @include padding(48);
+  @include borr(12);
+  box-shadow: var(--shadow);
+  .inputs {
+    display: flex;
+    flex-direction: column;
+    @include s(gap, 20);
+    @include s(margin-top, 28);
+
+    textarea {
+      @include borr(6);
+      @include s(height, 81);
+    }
+  }
+  .policy {
+    @include s(margin-top, 28);
+    color: var(--gray-light-color);
+    @include body-xs;
+    a {
+      text-decoration: underline;
+      color: var(--gray-light-color);
+    }
+  }
+  .btn {
+    width: 100%;
+    justify-content: center;
+    @include s(margin-top, 16);
+
+    p {
+      text-transform: uppercase;
+      @include descr-m;
+    }
+  }
+}

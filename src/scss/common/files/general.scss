@@ -76,8 +76,8 @@ body {
     }
   }
   .input__row.error {
-    input:placeholder-shown {
-      color: #f34040;
+    input {
+      border: 1px solid #f34040;
     }
   }
 }
