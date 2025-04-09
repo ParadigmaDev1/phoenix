@@ -1,0 +1,145 @@
+@use "src/scss/common/files/mixins" as *;
+
+.how-buy {
+  @include s(margin-top, 28);
+  @include s(padding-bottom, 156);
+  .how-buy-inner {
+    h1 {
+      @include h1;
+    }
+    .how-buy-inner-content {
+      display: grid;
+      @include gtc(1fr, 408);
+      @include s(gap, 48);
+      @include s(margin-top, 36);
+      .accordion {
+        .accordion-item {
+          border-top: 1px solid var(--line-color);
+          &:last-child {
+            border-bottom: 1px solid var(--line-color);
+          }
+          .accordion-title {
+            justify-content: flex-start;
+            align-items: flex-start;
+            @include padding(36, 0);
+
+            .title-wrapper {
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start;
+              @include s(gap, 16);
+              .title {
+                @include body-xl;
+              }
+              .descr {
+                text-align: left;
+                @include body-l;
+              }
+            }
+          }
+          &.active {
+            .accordion-title {
+              svg {
+                transform: rotate(180deg);
+              }
+            }
+          }
+          .icon {
+            @include s(min-width, 28);
+            @include s(min-height, 28);
+            @include s(max-width, 28);
+            @include s(max-height, 28);
+            border: 1px solid var(--line-color);
+            @include borr(6);
+            svg {
+              @include s(width, 12);
+              @include s(height, 6);
+            }
+          }
+          .accordion-body {
+            @include s(padding-left, 50);
+            .video-wrapper {
+              @include s(width, 840);
+              @include s(height, 475);
+              @include borr(12);
+              overflow: hidden;
+              position: relative;
+              video {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+              }
+              .play-btn {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+              }
+            }
+          }
+        }
+      }
+      .form-block {
+        h4 {
+          text-transform: uppercase;
+          @include h4;
+          color: var(--violet-color);
+        }
+        .form-info {
+          @include s(margin-top, 16);
+          .socials {
+            display: flex;
+            align-items: center;
+            @include s(gap, 12);
+            a {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              @include s(width, 44);
+              @include s(height, 44);
+              @include borr(6);
+              &.tg {
+                background: #528df0;
+              }
+              &.wa {
+                background: #50b550;
+              }
+            }
+          }
+          .date {
+            display: flex;
+            align-items: center;
+            @include s(gap, 16);
+            p {
+              @include descr-m;
+              text-transform: uppercase;
+            }
+          }
+          .btn-wrapper {
+            display: grid;
+            @include gtc(226, 1fr);
+            @include s(gap, 20);
+            align-items: center;
+            @include s(margin-top, 28);
+
+            .btn {
+              justify-content: center;
+              @include s(gap, 16);
+              p {
+                @include body-m;
+              }
+            }
+          }
+          .descr {
+            @include s(margin-top, 28);
+            @include body-m;
+          }
+        }
+        .form {
+          @include s(margin-top, 64);
+        }
+      }
+    }
+  }
+}

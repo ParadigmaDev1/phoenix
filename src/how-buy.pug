@@ -1,0 +1,15 @@
+extends ./pug/templates/template.pug
+
+block head 
+  +head(["header", "how-buy", "consultation-form", "crumbs", "selector", "footer", "mobile-menu", "accordion-item", "catalog-menu"])
+block header 
+  +header().dark
+  +mobile-menu()
+  +catalog-menu()
+block content
+  +crumbs({items: [{title: 'как купить?', href: '#'}]})
+  +how-buy()
+block footer 
+  +footer()
+block modals 
+  
