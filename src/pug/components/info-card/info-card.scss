@@ -65,4 +65,41 @@
       }
     }
   }
+  &.row {
+    display: grid;
+    @include gtc(164, 1fr);
+    @include s(gap, 24);
+    .image-wrapper {
+      padding-bottom: 0;
+      @include s(height, 93);
+    }
+    .content {
+      margin-top: 0;
+      align-items: flex-start;
+      .date {
+        @include s(gap, 10);
+        @include s(margin-bottom, 12);
+
+        svg {
+          @include s(height, 12);
+          @include s(width, 12);
+
+          rect,
+          path {
+            stroke: var(--gray-light-color);
+          }
+        }
+        p {
+          color: var(--gray-light-color);
+          @include descr-xs;
+          text-transform: uppercase;
+        }
+      }
+      .title {
+        @include body-l;
+        text-align: left;
+        text-transform: none;
+      }
+    }
+  }
 }
