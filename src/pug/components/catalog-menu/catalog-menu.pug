@@ -1,55 +1,69 @@
 mixin catalog-menu() 
     .catalog-menu 
         .catalog-menu-inner.container
-            .col.menu-list 
-                button.btn.menu 
-                    .image-wrapper 
-                        img(src="./img/catalog-menu/1.png", alt="")
-                    .text 
-                        p Товары для офиса
-                        <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1 9L5 5L1 1" stroke="#333435" stroke-linecap="square" stroke-linejoin="round"/>
-                        </svg>
-                button.btn.menu 
-                    .image-wrapper 
-                        img(src="./img/catalog-menu/2.png", alt="")
-                    .text 
-                        p Товары для школьников <br> и студентов
-                        <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1 9L5 5L1 1" stroke="#333435" stroke-linecap="square" stroke-linejoin="round"/>
-                        </svg>
-                button.btn.menu 
-                    .image-wrapper 
-                        img(src="./img/catalog-menu/3.png", alt="")
-                    .text 
-                        p Тематическая <br> продукция
-                        <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1 9L5 5L1 1" stroke="#333435" stroke-linecap="square" stroke-linejoin="round"/>
-                        </svg>
-                button.btn.menu 
-                    .image-wrapper 
-                        img(src="./img/catalog-menu/4.png", alt="")
-                    .text 
-                        p Хобби и творчество
-                        <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1 9L5 5L1 1" stroke="#333435" stroke-linecap="square" stroke-linejoin="round"/>
-                        </svg>
-                button.btn.menu 
-                    .image-wrapper 
-                        img(src="./img/catalog-menu/5.png", alt="")
-                    .text 
-                        p Развивающая <br>продукция для детей
-                        <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1 9L5 5L1 1" stroke="#333435" stroke-linecap="square" stroke-linejoin="round"/>
-                        </svg>
-                button.btn.menu 
-                    .image-wrapper 
-                        img(src="./img/catalog-menu/6.png", alt="")
-                    .text 
-                        p Пишущие <br> принадлежности
-                        <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1 9L5 5L1 1" stroke="#333435" stroke-linecap="square" stroke-linejoin="round"/>
-                        </svg>
+            button.btn.close-catalog-btn
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.05078 14.9497L14.9503 5.05021" stroke="#343176"/>
+                    <path d="M14.9502 14.9497L5.0507 5.05021" stroke="#343176"/>
+                </svg>
+            .col
+                a(href="#").catalog-preorder
+                    img(src="./img/catalog-menu/pre-order.jpg", alt="pre-order")
+                    .content 
+                        p.title каталог предзаказа
+                        button.btn 
+                            <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1.66699 10.6667L6.33366 6.00008L1.66699 1.33341" stroke="#343176" stroke-linecap="square" stroke-linejoin="round"/>
+                            </svg>
+                .menu-list 
+                    button.btn.menu 
+                        .image-wrapper 
+                            img(src="./img/catalog-menu/1.png", alt="")
+                        .text 
+                            p Товары для офиса
+                            <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 9L5 5L1 1" stroke="#333435" stroke-linecap="square" stroke-linejoin="round"/>
+                            </svg>
+                    button.btn.menu 
+                        .image-wrapper 
+                            img(src="./img/catalog-menu/2.png", alt="")
+                        .text 
+                            p Товары для школьников <br> и студентов
+                            <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 9L5 5L1 1" stroke="#333435" stroke-linecap="square" stroke-linejoin="round"/>
+                            </svg>
+                    button.btn.menu 
+                        .image-wrapper 
+                            img(src="./img/catalog-menu/3.png", alt="")
+                        .text 
+                            p Тематическая <br> продукция
+                            <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 9L5 5L1 1" stroke="#333435" stroke-linecap="square" stroke-linejoin="round"/>
+                            </svg>
+                    button.btn.menu 
+                        .image-wrapper 
+                            img(src="./img/catalog-menu/4.png", alt="")
+                        .text 
+                            p Хобби и творчество
+                            <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 9L5 5L1 1" stroke="#333435" stroke-linecap="square" stroke-linejoin="round"/>
+                            </svg>
+                    button.btn.menu 
+                        .image-wrapper 
+                            img(src="./img/catalog-menu/5.png", alt="")
+                        .text 
+                            p Развивающая <br>продукция для детей
+                            <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 9L5 5L1 1" stroke="#333435" stroke-linecap="square" stroke-linejoin="round"/>
+                            </svg>
+                    button.btn.menu 
+                        .image-wrapper 
+                            img(src="./img/catalog-menu/6.png", alt="")
+                        .text 
+                            p Пишущие <br> принадлежности
+                            <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 9L5 5L1 1" stroke="#333435" stroke-linecap="square" stroke-linejoin="round"/>
+                            </svg>
             .col 
                 .catalog-menu-list.hidden 
                     button.btn.sub-menu
@@ -138,3 +152,302 @@ mixin catalog-menu()
                         <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M1 9L5 5L1 1" stroke="#333435" stroke-linecap="square" stroke-linejoin="round"/>
                         </svg>
+                .catalog-menu-list.hidden 
+                    button.btn.sub-menu
+                        .title-wrapper
+                            p Ежедневники 2
+                        <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 9L5 5L1 1" stroke="#333435" stroke-linecap="square" stroke-linejoin="round"/>
+                        </svg>
+                    button.btn.sub-menu 
+                        .title-wrapper
+                            p Ежедневники
+                        <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 9L5 5L1 1" stroke="#333435" stroke-linecap="square" stroke-linejoin="round"/>
+                        </svg>
+                    button.btn.sub-menu 
+                        .title-wrapper
+                            p Планинги
+                        <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 9L5 5L1 1" stroke="#333435" stroke-linecap="square" stroke-linejoin="round"/>
+                        </svg>
+                    button.btn.sub-menu 
+                        .title-wrapper
+                            p Записные книжки
+                            .badge.fill.success новинка
+                        <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 9L5 5L1 1" stroke="#333435" stroke-linecap="square" stroke-linejoin="round"/>
+                        </svg>
+                    button.btn.sub-menu 
+                        .title-wrapper
+                            p Телефонные книги
+                        <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 9L5 5L1 1" stroke="#333435" stroke-linecap="square" stroke-linejoin="round"/>
+                        </svg>
+                    button.btn.sub-menu 
+                        .title-wrapper
+                            p Блокноты
+                        <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 9L5 5L1 1" stroke="#333435" stroke-linecap="square" stroke-linejoin="round"/>
+                        </svg>
+                    button.btn.sub-menu 
+                        .title-wrapper
+                            p Тетради офисные
+                        <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 9L5 5L1 1" stroke="#333435" stroke-linecap="square" stroke-linejoin="round"/>
+                        </svg>
+                    button.btn.sub-menu 
+                        .title-wrapper
+                            p Блокноты
+                        <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 9L5 5L1 1" stroke="#333435" stroke-linecap="square" stroke-linejoin="round"/>
+                        </svg>
+                    button.btn.sub-menu 
+                        .title-wrapper
+                            p Папки для офиса
+                        <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 9L5 5L1 1" stroke="#333435" stroke-linecap="square" stroke-linejoin="round"/>
+                        </svg>
+                    button.btn.sub-menu 
+                        .title-wrapper
+                            p Закладки для книг
+                        <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 9L5 5L1 1" stroke="#333435" stroke-linecap="square" stroke-linejoin="round"/>
+                        </svg>
+                    button.btn.sub-menu 
+                        .title-wrapper
+                            p Панели на монитор для стикеров
+                        <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 9L5 5L1 1" stroke="#333435" stroke-linecap="square" stroke-linejoin="round"/>
+                        </svg>
+                    button.btn.sub-menu 
+                        .title-wrapper
+                            p Блоки и стикеры из бумаги
+                        <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 9L5 5L1 1" stroke="#333435" stroke-linecap="square" stroke-linejoin="round"/>
+                        </svg>
+                    button.btn.sub-menu 
+                        .title-wrapper
+                            p Блоки и стикеры из пластика
+                        <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 9L5 5L1 1" stroke="#333435" stroke-linecap="square" stroke-linejoin="round"/>
+                        </svg>
+                    button.btn.sub-menu
+                        .title-wrapper
+                            p Этикетки и наклейки самоктеящиеся
+                            .badge.fill.warn хит
+                        <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 9L5 5L1 1" stroke="#333435" stroke-linecap="square" stroke-linejoin="round"/>
+                        </svg>
+            .col 
+                .catalog-menu-links-wrapper.hidden 
+                    .catalog-menu-links.hidden 
+                        a(href="#") Ежедневники-органайзеры 
+                            span (8)
+                        a(href="#") Ежедневники 
+                            span (215)
+                        a(href="#") Планинги (еженедельники)  
+                            span (74)
+                        a(href="#") Записные книжки 
+                            span (44)
+                        a(href="#") Визитницы, органайзерфы для документов
+                            span (12)
+                        a(href="#") Папки, папки органайзеры
+                            span (5)
+                        a(href="#") Подарочные наборы
+                            span (6)
+                    .catalog-menu-links.hidden 
+                        a(href="#") Ежедневники-органайзеры 
+                            span (8)
+                        a(href="#") Ежедневники 
+                            span (215)
+                        a(href="#") Планинги (еженедельники)  
+                            span (74)
+                    .catalog-menu-links.hidden 
+                        a(href="#") Ежедневники-органайзеры 
+                            span (8)
+                        a(href="#") Записные книжки 
+                            span (44)
+                        a(href="#") Визитницы, органайзерфы для документов
+                            span (12)
+                        a(href="#") Папки, папки органайзеры
+                            span (5)
+                        a(href="#") Подарочные наборы
+                            span (6)
+                    .catalog-menu-links.hidden 
+                        a(href="#") Ежедневники-органайзеры 
+                            span (8)
+                        a(href="#") Ежедневники 
+                            span (215)
+                        a(href="#") Планинги (еженедельники)  
+                            span (74)
+                        a(href="#") Записные книжки 
+                            span (44)
+                        a(href="#") Визитницы, органайзерфы для документов
+                            span (12)
+                    .catalog-menu-links.hidden 
+                        a(href="#") Ежедневники-органайзеры 
+                            span (8)
+                        a(href="#") Ежедневники 
+                            span (215)
+                        a(href="#") Планинги (еженедельники)  
+                            span (74)
+                        a(href="#") Папки, папки органайзеры
+                            span (5)
+                        a(href="#") Подарочные наборы
+                            span (6)
+                    .catalog-menu-links.hidden 
+                        a(href="#") Ежедневники-органайзеры 
+                            span (8)
+                        a(href="#") Ежедневники 
+                            span (215)
+                        a(href="#") Планинги (еженедельники)  
+                            span (74)
+                        a(href="#") Записные книжки 
+                            span (44)
+                    .catalog-menu-links.hidden 
+                        a(href="#") Ежедневники-органайзеры 
+                            span (8)
+                        a(href="#") Ежедневники 
+                            span (215)
+                        a(href="#") Планинги (еженедельники)  
+                            span (74)
+                        a(href="#") Записные книжки 
+                            span (44)
+                        a(href="#") Папки, папки органайзеры
+                            span (5)
+                        a(href="#") Подарочные наборы
+                            span (6)
+                    .catalog-menu-links.hidden 
+                        a(href="#") Планинги (еженедельники)  
+                            span (74)
+                        a(href="#") Записные книжки 
+                            span (44)
+                        a(href="#") Визитницы, органайзерфы для документов
+                            span (12)
+                        a(href="#") Папки, папки органайзеры
+                            span (5)
+                        a(href="#") Подарочные наборы
+                            span (6)
+                    .catalog-menu-links.hidden 
+                        a(href="#") Ежедневники-органайзеры 
+                            span (8)
+                        a(href="#") Ежедневники 
+                            span (215)
+                        a(href="#") Планинги (еженедельники)  
+                            span (74)
+                        a(href="#") Подарочные наборы
+                            span (6)
+                    .catalog-menu-links.hidden 
+                        a(href="#") Ежедневники-органайзеры 
+                            span (8)
+                        a(href="#") Подарочные наборы
+                            span (6)
+                    .catalog-menu-links.hidden 
+                        a(href="#") Ежедневники-органайзеры 
+                            span (8)
+                    .catalog-menu-links.hidden 
+                        a(href="#") Записные книжки 
+                            span (44)
+                        a(href="#") Визитницы, органайзерфы для документов
+                            span (12)
+                        a(href="#") Папки, папки органайзеры
+                            span (5)
+                        a(href="#") Подарочные наборы
+                            span (6)
+                    .catalog-menu-links.hidden 
+                        a(href="#") Ежедневники-органайзеры 
+                            span (8)
+                        a(href="#") Записные книжки 
+                            span (44)
+                        a(href="#") Визитницы, органайзерфы для документов
+                            span (12)
+                        a(href="#") Папки, папки органайзеры
+                            span (5)
+                        a(href="#") Подарочные наборы
+                            span (6)
+                    .catalog-menu-links.hidden 
+                        a(href="#") Ежедневники-органайзеры 
+                            span (8)
+                        a(href="#") Ежедневники 
+                            span (215)
+                        a(href="#") Планинги (еженедельники)  
+                            span (74)
+                        a(href="#") Записные книжки 
+                            span (44)
+                .catalog-menu-links-wrapper.hidden 
+                    .catalog-menu-links.hidden 
+                        a(href="#") Ежедневники-органайзеры 
+                            span (8)
+                        a(href="#") Ежедневники 
+                            span (215)
+                        a(href="#") Планинги (еженедельники)  
+                            span (74)
+                        a(href="#") Записные книжки 
+                            span (44)
+                        a(href="#") Визитницы, органайзерфы для документов
+                            span (12)
+                        a(href="#") Папки, папки органайзеры
+                            span (5)
+                        a(href="#") Подарочные наборы
+                            span (6)
+                    .catalog-menu-links.hidden 
+                        a(href="#") Ежедневники-органайзеры 
+                            span (8)
+                        a(href="#") Ежедневники 
+                            span (215)
+                        a(href="#") Планинги (еженедельники)  
+                            span (74)
+                    .catalog-menu-links.hidden 
+                        a(href="#") Ежедневники-органайзеры 
+                            span (8)
+                        a(href="#") Ежедневники 
+                            span (215)
+                        a(href="#") Планинги (еженедельники)  
+                            span (74)
+                        a(href="#") Записные книжки 
+                            span (44)
+                        a(href="#") Визитницы, органайзерфы для документов
+                            span (12)
+                        a(href="#") Папки, папки органайзеры
+                            span (5)
+                        a(href="#") Подарочные наборы
+                            span (6)
+                    .catalog-menu-links.hidden 
+                        a(href="#") Ежедневники-органайзеры 
+                            span (8)
+                        a(href="#") Ежедневники 
+                            span (215)
+                        a(href="#") Планинги (еженедельники)  
+                            span (74)
+            .popular 
+                p.title популярные категории
+                .popular-list 
+                    a(href="#").popular-item 
+                        img(src="./img/home/collections/1.jpg", alt="popular")
+                        .content 
+                            p рюкзаки
+                            <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 9L5 5L1 1" stroke="#333435" stroke-linecap="square" stroke-linejoin="round"/>
+                            </svg>
+                    a(href="#").popular-item 
+                        img(src="./img/home/collections/2.jpg", alt="popular")
+                        .content 
+                            p ежедневники
+                            <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 9L5 5L1 1" stroke="#333435" stroke-linecap="square" stroke-linejoin="round"/>
+                            </svg>
+                    a(href="#").popular-item 
+                        img(src="./img/home/collections/3.jpg", alt="popular")
+                        .content 
+                            p записные книжки
+                            <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 9L5 5L1 1" stroke="#333435" stroke-linecap="square" stroke-linejoin="round"/>
+                            </svg>
+                    a(href="#").popular-item  
+                        img(src="./img/home/collections/4.jpg", alt="popular")
+                        .content 
+                            p пишущие принадлежности
+                            <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 9L5 5L1 1" stroke="#333435" stroke-linecap="square" stroke-linejoin="round"/>
+                            </svg>

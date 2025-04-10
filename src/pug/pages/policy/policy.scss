@@ -1,8 +1,8 @@
 @use "src/scss/common/files/mixins" as *;
 
-.policy {
+.policy-page {
   @include s(margin-top, 28);
-  @include s(padding-bottom, 156);
+  @include s(padding-bottom, 142);
   .policy-inner {
     display: grid;
     @include gtc(1fr, 432);
@@ -18,6 +18,8 @@
         @include s(padding-bottom, 24);
         @include s(margin-bottom, 36);
         border-bottom: 1px solid var(--line-color);
+        @include s(margin-top, 36);
+
         .address,
         .date {
           display: flex;

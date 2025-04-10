@@ -25,6 +25,33 @@
     @include gtc(328, 320, 320, 264);
     @include s(gap, 15);
     height: 100%;
+    position: relative;
+    .close-catalog-btn {
+      position: absolute;
+      @include s(top, 19);
+      @include s(right, 0);
+      @include s(width, 36);
+      @include s(height, 36);
+      @include borr(6);
+      border: 1px solid var(--line-color);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: var(--trs-cubic-300);
+      &:hover {
+        background: var(--violet-color);
+        border-color: var(--violet-color);
+        svg {
+          path {
+            stroke: var(--white-color);
+          }
+        }
+      }
+      svg {
+        @include s(width, 18);
+        @include s(height, 18);
+      }
+    }
     .col {
       overflow-y: auto;
       overflow-x: hidden;
@@ -33,7 +60,62 @@
       &::-webkit-scrollbar {
         width: 10px;
       }
-      &.menu-list {
+      .catalog-preorder {
+        @include s(margin-top, 36);
+        @include s(height, 128);
+        width: 100%;
+        @include borr(12);
+        overflow: hidden;
+        position: relative;
+        @include padding(20);
+        display: flex;
+        img {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+        }
+        .content {
+          @include s(max-width, 109);
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          position: relative;
+          z-index: 2;
+          .title {
+            @include descr-m;
+            color: var(--violet-color);
+          }
+          .btn {
+            @include s(width, 28);
+            @include s(height, 28);
+            @include borr(6);
+            border: 1px solid var(--violet-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--trs-cubic-300);
+            &:hover {
+              background: var(--violet-color);
+              border-color: var(--violet-color);
+              svg {
+                path {
+                  stroke: var(--white-color);
+                }
+              }
+            }
+            svg {
+              @include s(width, 5);
+              @include s(height, 9);
+            }
+          }
+        }
+      }
+      .menu-list {
         display: flex;
         flex-direction: column;
         @include s(gap, 15);
@@ -45,10 +127,41 @@
         flex-direction: column;
         @include s(padding-top, 36);
       }
+      .catalog-menu-links-wrapper {
+        @include s(padding-top, 36);
+        .catalog-menu-links {
+          display: flex;
+          flex-direction: column;
+          @include s(gap, 16);
+          a {
+            @include s(padding-left, 24);
+            position: relative;
+            @include body-m;
+            transition: var(--trs-cubic-300);
+            &:hover {
+              color: var(--violet-color);
+            }
+            &:before {
+              content: "";
+              @include s(width, 6);
+              @include s(height, 6);
+              @include s(top, 8);
+              border-radius: 999px;
+              background: var(--violet-color);
+              position: absolute;
+              left: 0;
+            }
+            span {
+              color: var(--gray-light-color);
+            }
+          }
+        }
+      }
       .btn {
         display: flex;
         align-items: center;
         @include s(gap, 16);
+
         &:hover {
           p {
             color: var(--violet-color);
@@ -71,10 +184,13 @@
         }
         &.active {
           background: var(--back-color);
+          .image-wrapper {
+            background: var(--white-color) !important;
+          }
         }
         &.sub-menu {
-          @include padding(10, 27);
-          @include borr(12);
+          @include padding(13, 27);
+          @include borr(6);
           .title-wrapper {
             position: relative;
             .badge {
@@ -102,6 +218,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            transition: var(--trs-cubic-300);
             img {
               object-fit: contain;
               width: 60%;
@@ -116,6 +233,48 @@
             p {
               @include descr-m;
               text-transform: uppercase;
+            }
+          }
+        }
+      }
+    }
+    .popular {
+      @include s(margin-top, 36);
+      .title {
+        color: var(--gray-light-color);
+        text-transform: uppercase;
+        @include descr-xs;
+      }
+      .popular-list {
+        @include s(margin-top, 24);
+        display: flex;
+        flex-direction: column;
+        @include s(gap, 12);
+        .popular-item {
+          display: flex;
+          align-items: center;
+          @include s(gap, 16);
+          width: 100%;
+          img {
+            @include s(width, 64);
+            @include s(height, 64);
+            @include borr(6);
+            object-fit: cover;
+          }
+          .content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            p {
+              text-transform: uppercase;
+              @include descr-m;
+            }
+            svg {
+              @include s(min-width, 8);
+              @include s(min-height, 12);
+              @include s(max-width, 8);
+              @include s(max-height, 12);
             }
           }
         }

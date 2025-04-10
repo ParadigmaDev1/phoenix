@@ -269,6 +269,24 @@
         .catalog-btn {
           @include padding(0, 59, 0, 24);
           @include s(gap, 29);
+          &.open {
+            background: var(--violet-color);
+            .burger {
+              span {
+                &:nth-child(1) {
+                  transform: rotate(25deg);
+                  @include s(top, 5.5);
+                }
+                &:nth-child(2) {
+                  width: 0;
+                }
+                &:nth-child(3) {
+                  transform: rotate(-25deg);
+                  @include s(bottom, 5.5);
+                }
+              }
+            }
+          }
           .burger {
             @include s(width, 24);
             @include s(height, 12);
@@ -279,6 +297,7 @@
               height: 1px;
               background: var(--white-color);
               position: absolute;
+              transition: var(--trs-cubic-300);
               &:nth-child(1) {
                 top: 0;
               }

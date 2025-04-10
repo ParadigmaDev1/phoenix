@@ -151,6 +151,7 @@ button {
     &.white {
       background: var(--white-color);
     }
+
     &.s {
       @include s(height, 36);
       @include s(width, 36);
