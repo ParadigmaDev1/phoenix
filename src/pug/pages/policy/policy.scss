@@ -1,0 +1,78 @@
+@use "src/scss/common/files/mixins" as *;
+
+.policy {
+  @include s(margin-top, 28);
+  @include s(padding-bottom, 156);
+  .policy-inner {
+    display: grid;
+    @include gtc(1fr, 432);
+    @include s(gap, 42);
+    h1 {
+      @include h1;
+    }
+    .policy-content {
+      .policy-info {
+        display: flex;
+        align-items: center;
+        @include s(gap, 48);
+        @include s(padding-bottom, 24);
+        @include s(margin-bottom, 36);
+        border-bottom: 1px solid var(--line-color);
+        .address,
+        .date {
+          display: flex;
+          align-items: center;
+          @include s(gap, 12);
+          color: var(--gray-light-color);
+          @include body-s;
+        }
+      }
+      .descr {
+        @include body-l;
+      }
+      .policy-text {
+        @include s(margin-top, 48);
+        display: flex;
+        flex-direction: column;
+        @include s(gap, 48);
+        .text-wrapper {
+          h5 {
+            @include h5;
+            text-transform: uppercase;
+            @include s(margin-bottom, 16);
+          }
+          ol {
+            display: flex;
+            flex-direction: column;
+            @include s(gap, 8);
+            li {
+              display: flex;
+              @include s(gap, 12);
+              span {
+                color: var(--violet-color);
+                @include body-m;
+                @include s(margin-top, 4);
+              }
+              p {
+                @include body-l;
+              }
+            }
+          }
+        }
+      }
+    }
+    .image-block {
+      .image-wrapper {
+        width: 100%;
+        @include s(height, 324);
+        @include borr(12);
+        overflow: hidden;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}
