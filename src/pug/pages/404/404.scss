@@ -1,0 +1,35 @@
+@use "src/scss/common/files/mixins" as *;
+
+.not-found {
+  @include s(padding-top, 231);
+  @include s(padding-bottom, 142);
+
+  .not-found-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    img {
+      @include s(width, 443);
+      @include s(height, 171);
+    }
+    h1 {
+      @include s(margin-top, 48);
+      text-transform: uppercase;
+      @include h1;
+    }
+    .descr {
+      @include s(margin-top, 10);
+      @include body-l;
+    }
+    .btn {
+      @include s(margin-top, 48);
+      @include s(width, 201);
+      justify-content: center;
+      @include s(gap, 17);
+      p {
+        text-transform: uppercase;
+        @include descr-m;
+      }
+    }
+  }
+}
