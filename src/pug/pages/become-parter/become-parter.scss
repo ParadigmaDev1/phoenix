@@ -1,0 +1,102 @@
+@use "src/scss/common/files/mixins" as *;
+
+.become-parter {
+  @include s(margin-top, 28);
+  @include s(padding-bottom, 156);
+  .become-parter-inner {
+    h1 {
+      @include h1;
+    }
+    .tabs {
+      display: flex;
+      align-items: center;
+      @include s(gap, 4);
+    }
+    .become-parter-inner-content {
+      display: grid;
+      @include gtc(1fr, 408);
+      @include s(gap, 48);
+      @include s(margin-top, 28);
+      .tab-content-wrapper {
+        .tab-content {
+          @include s(margin-top, 36);
+          .become-partners-list-wrapper {
+            @include s(margin-top, 80);
+
+            h3 {
+              text-transform: uppercase;
+              @include h2;
+              @include s(margin-bottom, 36);
+            }
+            .list {
+              @include s(gap, 64);
+              display: flex;
+              flex-direction: column;
+            }
+          }
+        }
+      }
+      .form-block {
+        h4 {
+          text-transform: uppercase;
+          @include h4;
+          color: var(--violet-color);
+        }
+        .form-info {
+          @include s(margin-top, 16);
+
+          .socials {
+            display: flex;
+            align-items: center;
+            @include s(gap, 12);
+            a {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              @include s(width, 44);
+              @include s(height, 44);
+              @include borr(6);
+              &.tg {
+                background: #528df0;
+              }
+              &.wa {
+                background: #50b550;
+              }
+            }
+          }
+
+          .btns {
+            @include s(margin-top, 28);
+
+            display: flex;
+            flex-direction: column;
+            @include s(gap, 12);
+            .btn-wrapper {
+              display: grid;
+              @include gtc(226, 1fr);
+              @include s(gap, 20);
+              align-items: center;
+
+              .btn {
+                justify-content: center;
+                @include s(gap, 16);
+                p {
+                  @include body-m;
+                  text-transform: none;
+                }
+              }
+            }
+          }
+
+          .descr {
+            @include s(margin-top, 16);
+            @include body-m;
+          }
+        }
+        .form {
+          @include s(margin-top, 100);
+        }
+      }
+    }
+  }
+}

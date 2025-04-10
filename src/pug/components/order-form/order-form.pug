@@ -1,0 +1,31 @@
+mixin order-form()
+    form.form.order-form
+        h4 подать заявку
+        .inputs-wrapper 
+            .inputs
+                .input__row.gray
+                    input(type="text" placeholder="Ваше имя").custom-input.input.form__input-value.input__valid-name
+                    .input__item-small
+                .input__row.gray
+                    input(type="tel" placeholder="+7 (").custom-input.input.form__input-value.input__valid-phone
+                    .input__item-small
+                .input__row.gray
+                    input(type="text" placeholder="E-mail").custom-input.input.form__input-value.input__valid-email
+                    .input__item-small
+                textarea(placeholder="Текст")
+            .inputs
+                p.title ваш проект
+                .input__row.gray
+                    input(type="text" placeholder="Ссылка").custom-input.input.form__input-value.input__valid-name
+                    .input__item-small
+                button(type='btn').btn.outline.violet.l.load-file-btn
+                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0.506836 7.5H14.5068" stroke="#343176"/>
+                        <path d="M7.50684 14.5L7.50684 0.5" stroke="#343176"/>
+                    </svg>
+                    p прикрепить проект
+                    input(type="file")
+        p.policy Нажимая кнопку, я даю согласие 
+            a(href="#" target="_blank") на обработку персональных данных в соответствии с Политикой конфиденциальности
+        button.btn.primary.m 
+            p отправить

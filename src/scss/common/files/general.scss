@@ -196,3 +196,22 @@ svg {
     }
   }
 }
+.video-block {
+  @include s(width, 888);
+  @include s(height, 503);
+  @include borr(12);
+  overflow: hidden;
+  position: relative;
+  video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .play-btn {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+}

@@ -7,6 +7,7 @@ import { validateForm } from "./modules/validate.js";
 import { fancy } from "./modules/fancy.js";
 import { marquee } from "./modules/marquee.js";
 import { inputsMask } from "./modules/inputs-mask.js";
+import { video } from "./modules/video.js";
 import IMask from "imask";
 
 accordionFunc();
@@ -19,6 +20,7 @@ validateForm();
 fancy();
 marquee();
 inputsMask();
+video();
 
 import "../pug/components/selector/selector.js";
 import "../pug/components/header/header.js";
