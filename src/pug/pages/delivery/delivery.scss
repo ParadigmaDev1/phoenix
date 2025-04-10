@@ -1,0 +1,75 @@
+@use "src/scss/common/files/mixins" as *;
+
+.delivery {
+  @include s(margin-top, 28);
+  @include s(padding-bottom, 156);
+  .delivery-inner {
+    h1 {
+      @include h1;
+    }
+    .tabs {
+      @include s(margin-top, 36);
+      display: flex;
+      align-items: center;
+      @include s(gap, 4);
+    }
+    .tab-content {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      @include s(margin-top, 36);
+      .delivey-card {
+        &:first-child {
+          @include s(padding-right, 48);
+          border-right: 1px solid var(--line-color);
+        }
+        &:last-child {
+          @include s(padding-left, 48);
+        }
+        .image-wrapper {
+          position: relative;
+          width: 100%;
+          @include borr(12);
+          overflow: hidden;
+          @include s(height, 280);
+          img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            object-fit: cover;
+          }
+        }
+        .content {
+          @include s(margin-top, 36);
+          h3 {
+            @include h2;
+          }
+          .text {
+            @include s(margin-top, 16);
+            display: flex;
+            flex-direction: column;
+            @include s(gap, 10);
+            p {
+              @include body-l;
+            }
+          }
+          .alert {
+            @include s(margin-top, 36);
+            background: var(--back-color);
+            @include padding(24, 28);
+            @include borr(12);
+            .alert-text {
+              text-transform: uppercase;
+              @include descr-m;
+              color: var(--red-color);
+            }
+            .descr {
+              @include s(margin-top, 10);
+              @include body-xl;
+            }
+          }
+        }
+      }
+    }
+  }
+}

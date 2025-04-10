@@ -1,0 +1,15 @@
+extends ./pug/templates/template.pug
+
+block head 
+  +head(["header", "delivery", "crumbs", "selector", "footer", "mobile-menu", "accordion-item", "catalog-menu"])
+block header 
+  +header().dark
+  +mobile-menu()
+  +catalog-menu()
+block content
+  +crumbs({items: [{title: 'доставка и оплата', href: '#'}]})
+  +delivery()
+block footer 
+  +footer()
+block modals 
+  
