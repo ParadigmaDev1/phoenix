@@ -3,6 +3,10 @@
 .promotional {
   @include s(margin-top, 28);
   @include s(padding-bottom, 156);
+  @media (max-width: $tab-sm) {
+    @include s(padding-bottom, 64);
+    @include s(margin-top, 16);
+  }
   .promotional-inner {
     h1 {
       @include h1;
@@ -12,6 +16,18 @@
       display: flex;
       align-items: center;
       @include s(gap, 4);
+      @media (max-width: $tab-sm) {
+        justify-content: flex-start;
+        @include s(margin-top, 20);
+        @include s(margin-left, -20);
+        @include s(margin-right, -20);
+        @include s(padding-left, 20);
+        @include s(padding-right, 20);
+        overflow-x: auto;
+        .tab {
+          white-space: nowrap;
+        }
+      }
     }
     .tab-content {
       display: grid;
@@ -19,6 +35,19 @@
       @include s(column-gap, 24);
       @include s(row-gap, 80);
       @include s(margin-top, 28);
+      @media (max-width: $tab-sm) {
+        grid-template-columns: repeat(1, 1fr);
+        @include s(row-gap, 36);
+        @include s(margin-top, 20);
+      }
+      .info-card {
+        .btn {
+          svg {
+            @include s(width, 15);
+            @include s(height, 15);
+          }
+        }
+      }
     }
   }
 }

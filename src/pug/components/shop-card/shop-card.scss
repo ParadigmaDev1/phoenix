@@ -9,6 +9,10 @@
   align-items: center;
   justify-content: center;
   @include s(gap, 33);
+  @media (max-width: $tab-sm) {
+    @include s(height, 148);
+    @include s(gap, 22);
+  }
   &:hover {
     .btn {
       background: var(--violet-color);
@@ -26,13 +30,24 @@
     @include s(height, 76);
     object-fit: contain;
     width: 30%;
+    @media (max-width: $tab-sm) {
+      @include s(height, 46);
+
+      width: 50%;
+    }
   }
   .btn {
-    @include padding(24);
+    @include padding(0, 24);
     @include s(gap, 12);
+    @media (max-width: $tab-sm) {
+      @include padding(0, 16);
+    }
     p {
       text-transform: uppercase;
       @include descr-m;
+      @media (max-width: $tab-sm) {
+        @include descr-s;
+      }
     }
     &:hover {
       svg {
@@ -40,6 +55,10 @@
           stroke: var(--white-color);
         }
       }
+    }
+    svg {
+      @include s(width, 8);
+      @include s(height, 12);
     }
   }
 }

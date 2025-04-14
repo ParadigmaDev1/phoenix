@@ -10,12 +10,20 @@
     display: grid;
     @include gtc(203, 429);
     @include s(gap, 28);
+    @media (max-width: $tab-sm) {
+      @include gtc(93, 207);
+      @include s(gap, 20);
+      @include s(margin-top, 20);
+    }
     .image-wrapper {
       position: relative;
       @include s(height, 252);
       width: 100%;
       @include borr(12);
       overflow: hidden;
+      @media (max-width: $tab-sm) {
+        @include s(height, 116);
+      }
       &.empty {
         background: var(--back-color);
         display: flex;
@@ -31,6 +39,10 @@
       svg {
         @include s(width, 51);
         @include s(height, 48);
+        @media (max-width: $tab-sm) {
+          @include s(width, 15);
+          @include s(height, 15);
+        }
       }
     }
     .content {
@@ -39,14 +51,22 @@
         flex-direction: column;
         @include s(gap, 28);
         @include s(margin-bottom, 28);
-
+        @media (max-width: $tab-sm) {
+          @include s(margin-bottom, 16);
+        }
         .name {
           @include body-xl;
+          @media (max-width: $tab-sm) {
+            @include body-mb;
+          }
         }
         .post {
           @include s(margin-top, 8);
           color: var(--gray-light-color);
           @include body-m;
+          @media (max-width: $tab-sm) {
+            @include body-s;
+          }
         }
       }
       .address-block {
@@ -78,13 +98,22 @@
         display: flex;
         flex-direction: column;
         @include s(gap, 12);
+        @media (max-width: $tab-sm) {
+          @include s(gap, 10);
+        }
         a {
           @include s(gap, 16);
           display: flex;
           align-items: center;
+          @media (max-width: $tab-sm) {
+            @include s(gap, 10);
+          }
           p {
             color: var(--violet-color);
             @include body-m;
+            @media (max-width: $tab-sm) {
+              @include body-s;
+            }
           }
         }
       }
@@ -95,7 +124,14 @@
       @include padding(20);
       background: var(--back-color);
       @include borr(12);
+
+      @media (max-width: $tab-sm) {
+        @include gtc(56, 208);
+      }
       .image-wrapper {
+        @media (max-width: $tab-sm) {
+          @include s(height, 69);
+        }
         &.empty {
           background: var(--white-color);
           svg {

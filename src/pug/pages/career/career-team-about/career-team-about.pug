@@ -1,13 +1,7 @@
 mixin career-team-about()
     .career-team-about.tabs-wrapper
         .career-team-about-inner.container 
-            .top 
-                h3 чем живет наша команда
-                a(href="#").btn.outline.violet.l
-                    p смотреть все
-                    <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M1 13L7 7L0.999999 1" stroke="#343176" stroke-linecap="square" stroke-linejoin="round"/>
-                    </svg> 
+            h3 чем живет наша команда
             .tabs 
                 button.btn.tab.m.active(data-tab='0') Работа в офисе
                 button.btn.tab.m(data-tab='1') Корпоративы
@@ -32,6 +26,10 @@ mixin career-team-about()
                             <svg width="10" height="14" viewBox="0 0 10 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M1 13L9 7L0.999999 1" stroke="white" stroke-linecap="square" stroke-linejoin="round"/>
                             </svg>
+                    .double-swiper-pagination-wrapper.pagination-progress-wrapper
+                        p.current 01
+                        .double-swiper-pagination.pagination-progress
+                        p.total
             .tab-content(data-tab='1') 
                 .double-swiper 
                     .swiper-wrapper 
@@ -52,6 +50,10 @@ mixin career-team-about()
                             <svg width="10" height="14" viewBox="0 0 10 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M1 13L9 7L0.999999 1" stroke="white" stroke-linecap="square" stroke-linejoin="round"/>
                             </svg>
+                    .double-swiper-pagination-wrapper.pagination-progress-wrapper
+                        p.current 01
+                        .double-swiper-pagination.pagination-progress
+                        p.total
             .tab-content(data-tab='2') 
                 .double-swiper 
                     .swiper-wrapper 
@@ -72,4 +74,8 @@ mixin career-team-about()
                             <svg width="10" height="14" viewBox="0 0 10 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M1 13L9 7L0.999999 1" stroke="white" stroke-linecap="square" stroke-linejoin="round"/>
                             </svg>
+                    .double-swiper-pagination-wrapper.pagination-progress-wrapper
+                        p.current 01
+                        .double-swiper-pagination.pagination-progress
+                        p.total
             

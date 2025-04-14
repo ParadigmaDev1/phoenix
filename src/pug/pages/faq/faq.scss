@@ -3,6 +3,11 @@
 .faq {
   @include s(margin-top, 28);
   @include s(padding-bottom, 156);
+  @media (max-width: $tab-sm) {
+    @include s(padding-bottom, 64);
+    @include s(margin-top, 16);
+    overflow: hidden;
+  }
   .faq-inner {
     h1 {
       @include h1;
@@ -12,16 +17,37 @@
       display: flex;
       align-items: center;
       @include s(gap, 4);
+      @media (max-width: $tab-sm) {
+        justify-content: flex-start;
+        @include s(margin-top, 20);
+        @include s(margin-left, -20);
+        @include s(margin-right, -20);
+        @include s(padding-left, 20);
+        @include s(padding-right, 20);
+        overflow-x: auto;
+        .tab {
+          white-space: nowrap;
+        }
+      }
     }
     .faq-inner-content-wrapper {
       display: grid;
       @include gtc(1fr, 432);
       @include s(gap, 48);
+      @media (max-width: $tab-sm) {
+        grid-template-columns: 1fr;
+        @include s(gap, 64);
+      }
     }
     .tab-content-wrapper {
+      @media (max-width: $tab-sm) {
+        overflow: hidden;
+      }
       .tab-content {
         @include s(margin-top, 28);
-
+        @media (max-width: $tab-sm) {
+          @include s(margin-top, 20);
+        }
         .accordion-item.nested {
           border-top: 1px solid var(--line-color);
           &:last-child {
@@ -30,7 +56,9 @@
           & > .accordion-title {
             justify-content: flex-start;
             @include padding(36, 0);
-
+            @media (max-width: $tab-sm) {
+              @include padding(16, 0);
+            }
             .title-wrapper {
               .title {
                 @include body-xl;
@@ -45,8 +73,10 @@
               }
             }
             .icon {
-              @include s(width, 28);
-              @include s(height, 28);
+              @include s(min-width, 28);
+              @include s(min-height, 28);
+              @include s(max-width, 28);
+              @include s(max-height, 28);
               border: 1px solid var(--line-color);
               @include borr(6);
               svg {
@@ -64,6 +94,9 @@
                   position: relative;
                   @include s(padding-left, 30);
                   @include body-l;
+                  @media (max-width: $tab-sm) {
+                    @include body-m;
+                  }
                   &:before {
                     content: "";
                     position: absolute;
@@ -83,6 +116,9 @@
                 @include s(gap, 10);
                 p {
                   @include body-l;
+                  @media (max-width: $tab-sm) {
+                    @include body-m;
+                  }
                 }
               }
               .subtitle {

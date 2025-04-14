@@ -67,6 +67,11 @@
   font-weight: 400;
   line-height: 128%;
 }
+@mixin body-mb {
+  @include s(font-size, 16);
+  font-weight: 600;
+  line-height: 128%;
+}
 @mixin body-sb {
   @include s(font-size, 14);
   font-weight: 500;
@@ -122,6 +127,10 @@
   line-height: 115%;
   @include s(letter-spacing, 1);
   text-transform: uppercase;
+  @media (max-width: $tab-sm) {
+    @include s(font-size, 26);
+    letter-spacing: 0;
+  }
 }
 @mixin h3 {
   @include s(font-size, 32);
@@ -143,6 +152,10 @@
   @include s(font-size, 24);
   font-weight: 500;
   line-height: 128%;
+  @media (max-width: $tab-sm) {
+    @include s(font-size, 20);
+    line-height: 115%;
+  }
 }
 @mixin h6 {
   @include s(font-size, 20);

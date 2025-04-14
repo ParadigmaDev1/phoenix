@@ -8,6 +8,9 @@
     @include s(height, 503);
     @include borr(12);
     overflow: hidden;
+    @media (max-width: $tab-sm) {
+      @include s(height, 180);
+    }
   }
   .image-wrapper {
     img {
@@ -18,20 +21,37 @@
   }
   .content {
     @include s(margin-top, 36);
+    @media (max-width: $tab-sm) {
+      @include s(margin-top, 20);
+    }
     .title {
       @include body-xl;
+      @media (max-width: $tab-sm) {
+        @include body-lb;
+      }
     }
     .descr {
       @include s(margin-top, 16);
       @include body-l;
+      @media (max-width: $tab-sm) {
+        @include s(margin-top, 8);
+      }
     }
     &.row {
       display: grid;
       @include gtc(1fr, 204);
       @include s(gap, 48);
+      @media (max-width: $tab-sm) {
+        grid-template-columns: 1fr;
+        @include s(gap, 20);
+      }
       .btn {
         justify-content: center;
         @include s(gap, 12);
+        @media (max-width: $tab-sm) {
+          width: fit-content;
+          @include padding(0, 16);
+        }
         p {
           text-transform: uppercase;
           @include descr-m;

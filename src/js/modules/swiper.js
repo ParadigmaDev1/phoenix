@@ -268,11 +268,12 @@ export const swiper = () => {
     on: {
       init(swiper) {
         const total = swiper.el.querySelector(".total");
-
-        total.innerHTML =
-          swiper.slides.length < 10
-            ? `0${swiper.slides.length}`
-            : swiper.slides.length;
+        if (total) {
+          total.innerHTML =
+            swiper.slides.length < 10
+              ? `0${swiper.slides.length}`
+              : swiper.slides.length;
+        }
       },
     },
   });
@@ -289,6 +290,7 @@ export const swiper = () => {
         prevEl: prev,
         nextEl: next,
       },
+
       on: {
         init: function (swiper) {
           updateVisibleSlides(this);
@@ -312,9 +314,21 @@ export const swiper = () => {
       prevEl: ".double-swiper-prev",
       nextEl: ".double-swiper-next",
     },
+    pagination: {
+      el: ".double-swiper-pagination",
+      type: "progressbar",
+    },
     on: {
       init: function (swiper) {
         updateVisibleSlides(this);
+        const total = swiper.el.querySelector(".total");
+
+        if (total) {
+          total.innerHTML =
+            swiper.slides.length < 10
+              ? `0${swiper.slides.length}`
+              : swiper.slides.length;
+        }
       },
       slideChange: function () {
         updateVisibleSlides(this);
@@ -323,7 +337,19 @@ export const swiper = () => {
         updateVisibleSlides(this);
       },
     },
+    breakpoints: {
+      0: {
+        allowTouchMove: true,
+        slidesPerView: 1,
+      },
+      767: {
+        slidesPerView: 2,
+        spaceBetween: 24,
+        allowTouchMove: false,
+      },
+    },
   });
+
   const tripleSwiper = new Swiper(".triple-swiper", {
     modules: [Pagination, Navigation],
     slidesPerView: 3,
@@ -333,15 +359,37 @@ export const swiper = () => {
       prevEl: ".triple-swiper-prev",
       nextEl: ".triple-swiper-next",
     },
+    pagination: {
+      el: ".triple-swiper-pagination",
+      type: "progressbar",
+    },
     on: {
       init: function (swiper) {
         updateVisibleSlides(this);
+        const total = swiper.el.querySelector(".total");
+        if (total) {
+          total.innerHTML =
+            swiper.slides.length < 10
+              ? `0${swiper.slides.length}`
+              : swiper.slides.length;
+        }
       },
       slideChange: function () {
         updateVisibleSlides(this);
       },
       resize: function () {
         updateVisibleSlides(this);
+      },
+    },
+    breakpoints: {
+      0: {
+        allowTouchMove: true,
+        slidesPerView: 1,
+      },
+      767: {
+        slidesPerView: 3,
+        spaceBetween: 24,
+        allowTouchMove: false,
       },
     },
   });
@@ -364,12 +412,39 @@ export const swiper = () => {
     on: {
       init: function (swiper) {
         updateVisibleSlides(this);
+        const total = swiper.el.querySelector(".total");
+
+        if (total) {
+          total.innerHTML =
+            swiper.slides.length < 10
+              ? `0${swiper.slides.length}`
+              : swiper.slides.length;
+        }
       },
       slideChange: function () {
         updateVisibleSlides(this);
       },
       resize: function () {
         updateVisibleSlides(this);
+      },
+    },
+    breakpoints: {
+      0: {
+        pagination: {
+          el: ".career-stages-pagination",
+          type: "progressbar",
+        },
+        allowTouchMove: true,
+      },
+      767: {
+        pagination: {
+          el: ".pagination",
+          clickable: true,
+          renderBullet: function (index, className) {
+            return '<span class="' + className + '">' + (index + 1) + "</span>";
+          },
+        },
+        allowTouchMove: false,
       },
     },
   });
@@ -392,12 +467,38 @@ export const swiper = () => {
     on: {
       init: function (swiper) {
         updateVisibleSlides(this);
+        const total = swiper.el.querySelector(".total");
+        if (total) {
+          total.innerHTML =
+            swiper.slides.length < 10
+              ? `0${swiper.slides.length}`
+              : swiper.slides.length;
+        }
       },
       slideChange: function () {
         updateVisibleSlides(this);
       },
       resize: function () {
         updateVisibleSlides(this);
+      },
+    },
+    breakpoints: {
+      0: {
+        pagination: {
+          el: ".career-adaptation-pagination",
+          type: "progressbar",
+        },
+        allowTouchMove: true,
+      },
+      767: {
+        pagination: {
+          el: ".pagination",
+          clickable: true,
+          renderBullet: function (index, className) {
+            return '<span class="' + className + '">' + (index + 1) + "</span>";
+          },
+        },
+        allowTouchMove: false,
       },
     },
   });
@@ -421,12 +522,42 @@ export const swiper = () => {
     on: {
       init: function (swiper) {
         updateVisibleSlides(this);
+        const total = swiper.el.querySelector(".total");
+        if (total) {
+          total.innerHTML =
+            swiper.slides.length < 10
+              ? `0${swiper.slides.length}`
+              : swiper.slides.length;
+        }
       },
       slideChange: function () {
         updateVisibleSlides(this);
       },
       resize: function () {
         updateVisibleSlides(this);
+      },
+    },
+    breakpoints: {
+      0: {
+        pagination: {
+          el: ".career-work-pagination",
+          type: "progressbar",
+        },
+        allowTouchMove: true,
+        slidesPerView: 1,
+        spaceBetween: 20,
+      },
+      767: {
+        pagination: {
+          el: ".pagination",
+          clickable: true,
+          renderBullet: function (index, className) {
+            return '<span class="' + className + '">' + (index + 1) + "</span>";
+          },
+        },
+        allowTouchMove: false,
+        slidesPerView: 1.7,
+        spaceBetween: 269,
       },
     },
   });

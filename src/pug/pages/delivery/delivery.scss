@@ -3,6 +3,10 @@
 .delivery {
   @include s(margin-top, 28);
   @include s(padding-bottom, 156);
+  @media (max-width: $tab-sm) {
+    @include s(padding-bottom, 64);
+    @include s(margin-top, 16);
+  }
   .delivery-inner {
     h1 {
       @include h1;
@@ -12,18 +16,42 @@
       display: flex;
       align-items: center;
       @include s(gap, 4);
+      @media (max-width: $tab-sm) {
+        justify-content: flex-start;
+        @include s(margin-top, 20);
+        @include s(margin-left, -20);
+        @include s(margin-right, -20);
+        @include s(padding-left, 20);
+        @include s(padding-right, 20);
+        overflow-x: auto;
+        .tab {
+          white-space: nowrap;
+        }
+      }
     }
     .tab-content {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       @include s(margin-top, 36);
+      @media (max-width: $tab-sm) {
+        grid-template-columns: 1fr;
+        @include s(margin-top, 20);
+        @include s(gap, 64);
+      }
       .delivey-card {
         &:first-child {
           @include s(padding-right, 48);
           border-right: 1px solid var(--line-color);
+          @media (max-width: $tab-sm) {
+            padding-right: 0;
+            border-right: none;
+          }
         }
         &:last-child {
           @include s(padding-left, 48);
+          @media (max-width: $tab-sm) {
+            padding-left: 0;
+          }
         }
         .image-wrapper {
           position: relative;
@@ -31,6 +59,9 @@
           @include borr(12);
           overflow: hidden;
           @include s(height, 280);
+          @media (max-width: $tab-sm) {
+            @include s(height, 143);
+          }
           img {
             position: absolute;
             width: 100%;
@@ -41,6 +72,9 @@
         }
         .content {
           @include s(margin-top, 36);
+          @media (max-width: $tab-sm) {
+            @include s(margin-top, 20);
+          }
           h3 {
             @include h2;
           }
@@ -49,6 +83,9 @@
             display: flex;
             flex-direction: column;
             @include s(gap, 10);
+            @media (max-width: $tab-sm) {
+              @include s(margin-top, 8);
+            }
             p {
               @include body-l;
             }
@@ -58,6 +95,10 @@
             background: var(--back-color);
             @include padding(24, 28);
             @include borr(12);
+            @media (max-width: $tab-sm) {
+              @include s(margin-top, 20);
+              @include padding(20);
+            }
             .alert-text {
               text-transform: uppercase;
               @include descr-m;
@@ -66,6 +107,10 @@
             .descr {
               @include s(margin-top, 10);
               @include body-xl;
+              @media (max-width: $tab-sm) {
+                @include body-mb;
+                @include s(margin-top, 6);
+              }
             }
           }
         }

@@ -378,8 +378,8 @@
               @include s(width, 18);
               @include s(height, 18);
               @media (max-width: $tab-sm) {
-                @include s(width, 28);
-                @include s(height, 28);
+                @include s(width, 22);
+                @include s(height, 22);
                 circle,
                 path {
                   stroke: var(--gray-color);

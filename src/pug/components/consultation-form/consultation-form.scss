@@ -4,6 +4,11 @@
   @include padding(48);
   @include borr(12);
   box-shadow: var(--shadow);
+  @media (max-width: $tab-sm) {
+    padding: 0;
+    box-shadow: none;
+    border-radius: 0;
+  }
   h4 {
     text-transform: uppercase;
     @include h4;

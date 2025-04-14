@@ -92,9 +92,7 @@ button {
     }
     &.l {
       @include s(height, 48);
-      @media (max-width: $tab-sm) {
-        @include s(height, 36);
-      }
+
       p {
         text-transform: uppercase;
         @include descr-m;

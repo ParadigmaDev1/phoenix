@@ -5,6 +5,10 @@
     display: grid;
     @include gtc(318, 1fr);
     @include s(gap, 24);
+    @media (max-width: $tab-sm) {
+      grid-template-columns: 1fr;
+      @include s(gap, 28);
+    }
     .content {
       .phone,
       .mail,
@@ -18,6 +22,9 @@
         }
         p {
           @include body-l;
+          @media (max-width: $tab-sm) {
+            @include body-m;
+          }
         }
       }
       .phone,
@@ -51,6 +58,12 @@
       }
       .socials-wrapper {
         @include s(margin-top, 48);
+        @media (max-width: $tab-sm) {
+          display: flex;
+          justify-content: space-between;
+          @include s(margin-top, 20);
+          align-items: center;
+        }
         .socials {
           display: flex;
           align-items: center;
@@ -75,6 +88,9 @@
       }
       .requisites-wrapper {
         @include s(margin-top, 48);
+        @media (max-width: $tab-sm) {
+          @include s(margin-top, 20);
+        }
         .requisites {
           list-style: none;
           display: flex;
@@ -96,12 +112,14 @@
     .map-wrapper {
       #map {
         @include s(height, 600);
+        @media (max-width: $tab-sm) {
+          @include s(height, 320);
+        }
       }
     }
   }
   .managers {
     @include s(margin-top, 80);
-
     .title {
       @include h2;
     }
@@ -110,6 +128,9 @@
       grid-template-columns: repeat(2, 1fr);
       @include s(gap, 24);
       @include s(margin-top, 36);
+      @media (max-width: $tab-sm) {
+        grid-template-columns: repeat(1, 1fr);
+      }
     }
     .manager {
       display: flex;
@@ -122,6 +143,10 @@
         @include borr(20);
         position: relative;
         overflow: hidden;
+        @media (max-width: $tab-sm) {
+          @include s(width, 150);
+          @include s(height, 150);
+        }
         img {
           position: absolute;
           width: 100%;
@@ -137,10 +162,17 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        @media (max-width: $tab-sm) {
+          @include s(width, 150);
+          @include s(padding-top, 20);
+        }
         .post {
           @include descr-m;
           color: var(--gray-light-color);
           transition: var(--trs-cubic-300);
+          @media (max-width: $tab-sm) {
+            @include descr-s;
+          }
         }
         .name {
           @include s(margin-top, 20);

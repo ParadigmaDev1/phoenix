@@ -3,10 +3,19 @@
 .policy-page {
   @include s(margin-top, 28);
   @include s(padding-bottom, 142);
+  @media (max-width: $tab-sm) {
+    @include s(padding-bottom, 64);
+    @include s(margin-top, 16);
+  }
   .policy-inner {
     display: grid;
     @include gtc(1fr, 432);
     @include s(gap, 42);
+    @media (max-width: $tab-sm) {
+      @include s(gap, 42);
+
+      grid-template-columns: 1fr;
+    }
     h1 {
       @include h1;
     }
@@ -19,7 +28,13 @@
         @include s(margin-bottom, 36);
         border-bottom: 1px solid var(--line-color);
         @include s(margin-top, 36);
-
+        @media (max-width: $tab-sm) {
+          @include s(margin-bottom, 20);
+          @include s(padding-bottom, 12);
+          @include s(margin-top, 20);
+          gap: 0;
+          justify-content: space-between;
+        }
         .address,
         .date {
           display: flex;
@@ -37,6 +52,10 @@
         display: flex;
         flex-direction: column;
         @include s(gap, 48);
+        @media (max-width: $tab-sm) {
+          @include s(margin-top, 36);
+          @include s(gap, 36);
+        }
         .text-wrapper {
           h5 {
             @include h5;
@@ -64,6 +83,9 @@
       }
     }
     .image-block {
+      @media (max-width: $tab-sm) {
+        display: none;
+      }
       .image-wrapper {
         width: 100%;
         @include s(height, 324);

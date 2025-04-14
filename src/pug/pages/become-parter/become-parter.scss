@@ -3,6 +3,10 @@
 .become-parter {
   @include s(margin-top, 28);
   @include s(padding-bottom, 156);
+  @media (max-width: $tab-sm) {
+    @include s(padding-bottom, 64);
+    @include s(margin-top, 16);
+  }
   .become-parter-inner {
     h1 {
       @include h1;
@@ -11,22 +15,50 @@
       display: flex;
       align-items: center;
       @include s(gap, 4);
+      @media (max-width: $tab-sm) {
+        justify-content: flex-start;
+        @include s(margin-top, 20);
+        @include s(margin-left, -20);
+        @include s(margin-right, -20);
+        @include s(padding-left, 20);
+        @include s(padding-right, 20);
+        overflow-x: auto;
+        .tab {
+          white-space: nowrap;
+        }
+      }
     }
     .become-parter-inner-content {
       display: grid;
       @include gtc(1fr, 408);
       @include s(gap, 48);
       @include s(margin-top, 28);
+      @media (max-width: $tab-sm) {
+        grid-template-columns: 1fr;
+        @include s(gap, 64);
+        @include s(margin-top, 20);
+      }
       .tab-content-wrapper {
+        @media (max-width: $tab-sm) {
+          overflow: hidden;
+        }
         .tab-content {
           @include s(margin-top, 36);
+          @media (max-width: $tab-sm) {
+            @include s(margin-top, 20);
+          }
           .become-partners-list-wrapper {
             @include s(margin-top, 80);
-
+            @media (max-width: $tab-sm) {
+              @include s(margin-top, 64);
+            }
             h3 {
               text-transform: uppercase;
               @include h2;
               @include s(margin-bottom, 36);
+              @media (max-width: $tab-sm) {
+                @include s(margin-bottom, 20);
+              }
             }
             .list {
               @include s(gap, 64);
@@ -76,7 +108,10 @@
               @include gtc(226, 1fr);
               @include s(gap, 20);
               align-items: center;
-
+              @media (max-width: $tab-sm) {
+                @include s(gap, 12);
+                @include gtc(208, 1fr);
+              }
               .btn {
                 justify-content: center;
                 @include s(gap, 16);
@@ -95,6 +130,9 @@
         }
         .form {
           @include s(margin-top, 100);
+          @media (max-width: $tab-sm) {
+            @include s(margin-top, 64);
+          }
         }
       }
     }

@@ -7,6 +7,11 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  @media (max-width: $tab-sm) {
+    @include padding(20);
+    flex-direction: column;
+    @include s(gap, 10);
+  }
   &:hover {
     .btn {
       background: var(--violet-color);
@@ -16,6 +21,11 @@
     @include s(width, 24);
     @include s(height, 24);
     @include s(margin-right, 20);
+    @media (max-width: $tab-sm) {
+      margin-right: 0;
+      @include s(width, 18);
+      @include s(height, 18);
+    }
     img {
       width: 100%;
       height: 100%;
@@ -26,6 +36,10 @@
     @include gtc(348, 1fr);
     @include s(gap, 24);
     flex: 1;
+    @media (max-width: $tab-sm) {
+      grid-template-columns: 1fr;
+      @include s(gap, 6);
+    }
     .title {
       @include h6;
       text-transform: uppercase;
@@ -34,6 +48,11 @@
     }
     .descr {
       @include s(max-width, 432);
+      @include body-m;
+
+      @media (max-width: $tab-sm) {
+        @include body-s;
+      }
     }
   }
 }

@@ -14,12 +14,13 @@
   }
   &.primary {
     .selector-btn {
-      background: var(--gray-color);
+      background: var(--back-color);
       .selector-title {
-        color: var(--white-color);
+        color: var(--gray-color);
 
         p {
-          color: var(--white-color);
+          color: var(--gray-color);
+          @include body-m;
         }
       }
       .icon {
@@ -29,7 +30,7 @@
           width: 100%;
           height: 100%;
           path {
-            stroke: var(--white-color);
+            stroke: var(--gray-color);
           }
         }
       }
@@ -98,6 +99,7 @@
         text-overflow: ellipsis;
         padding: 0 !important;
         text-align: left;
+        @include body-m;
       }
       .text-content {
         display: flex;

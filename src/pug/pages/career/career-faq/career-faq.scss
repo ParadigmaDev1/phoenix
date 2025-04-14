@@ -2,6 +2,9 @@
 
 .career-faq {
   @include s(margin-top, 116);
+  @media (max-width: $tab-sm) {
+    @include s(margin-top, 64);
+  }
   .career-faq-inner {
     h3 {
       @include h2;
@@ -11,6 +14,10 @@
       @include s(gap, 48);
       display: grid;
       @include gtc(1fr, 407);
+      @media (max-width: $tab-sm) {
+        @include s(margin-top, 20);
+        grid-template-columns: 1fr;
+      }
       .accordion {
         & > .accordion-item.nested {
           border-bottom: 1px solid var(--line-color);
@@ -30,6 +37,9 @@
           display: flex;
           align-items: center;
           @include s(gap, 16);
+          @media (max-width: $tab-sm) {
+            @include s(margin-top, 12);
+          }
           p {
             @include descr-m;
             text-transform: uppercase;
@@ -40,6 +50,9 @@
           display: flex;
           flex-direction: column;
           @include s(gap, 12);
+          @media (max-width: $tab-sm) {
+            @include s(margin-top, 20);
+          }
           .row {
             display: grid;
             @include gtc(1fr, 100);

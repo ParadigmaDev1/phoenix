@@ -31,12 +31,23 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    @media (max-width: $tab-sm) {
+      @include s(margin-top, 20);
+      align-items: flex-start;
+    }
     .date {
       display: flex;
       align-items: center;
       @include s(gap, 16);
       @include s(margin-bottom, 16);
-
+      @media (max-width: $tab-sm) {
+        @include s(gap, 10);
+        @include s(margin-bottom, 10);
+      }
+      svg {
+        @include s(width, 16);
+        @include s(height, 16);
+      }
       p {
         text-transform: uppercase;
         color: var(--violet-color);
@@ -47,11 +58,18 @@
       @include h6;
       text-transform: uppercase;
       text-align: center;
+      @media (max-width: $tab-sm) {
+        text-align: left;
+      }
     }
     .btn {
       @include s(margin-top, 28);
       @include s(gap, 12);
       @include padding(0, 24);
+      @media (max-width: $tab-sm) {
+        @include s(margin-top, 16);
+        @include padding(0, 16);
+      }
       &:hover {
         svg {
           path {
@@ -63,15 +81,26 @@
         @include descr-m;
         text-transform: uppercase;
       }
+      svg {
+        @include s(width, 6);
+        @include s(height, 12);
+      }
     }
   }
   &.row {
     display: grid;
     @include gtc(164, 1fr);
     @include s(gap, 24);
+    @media (max-width: $tab-sm) {
+      @include gtc(93, 1fr);
+      @include s(gap, 20);
+    }
     .image-wrapper {
       padding-bottom: 0;
       @include s(height, 93);
+      @media (max-width: $tab-sm) {
+        @include s(height, 52);
+      }
     }
     .content {
       margin-top: 0;
@@ -99,6 +128,9 @@
         @include body-l;
         text-align: left;
         text-transform: none;
+        @media (max-width: $tab-sm) {
+          @include body-m;
+        }
       }
     }
   }

@@ -7,6 +7,11 @@
   display: grid;
   @include gtc(1fr, 56);
   @include s(gap, 30);
+  @media (max-width: $tab-sm) {
+    @include padding(20);
+    @include gtc(1fr, 48);
+    @include s(gap, 20);
+  }
   &:hover {
     .btn {
       background: var(--violet-color);
@@ -25,6 +30,9 @@
     flex-direction: column;
     @include s(gap, 24);
     justify-content: space-between;
+    @media (max-width: $tab-sm) {
+      @include s(gap, 12);
+    }
     .title {
       text-transform: uppercase;
       @include descr-m;
@@ -33,10 +41,21 @@
       @include padding(0, 24);
       @include s(gap, 12);
       width: fit-content;
+      @media (max-width: $tab-sm) {
+        @include padding(0, 16);
+      }
+      svg {
+        @include s(width, 15);
+        @include s(height, 15);
+      }
     }
   }
   img {
     @include s(width, 56);
     @include s(height, 72);
+    @media (max-width: $tab-sm) {
+      @include s(width, 48);
+      @include s(height, 62);
+    }
   }
 }

@@ -3,10 +3,16 @@
 .career-adaptation {
   @include s(margin-top, 116);
   overflow: hidden;
+  @media (max-width: $tab-sm) {
+    @include s(margin-top, 64);
+  }
   .career-adaptation-inner {
     h3 {
       text-align: center;
       @include h2;
+      @media (max-width: $tab-sm) {
+        text-align: left;
+      }
     }
     & > .descr {
       @include s(max-width, 832);
@@ -15,10 +21,18 @@
       text-align: center;
       margin-left: auto;
       margin-right: auto;
+      @media (max-width: $tab-sm) {
+        @include body-m;
+        @include s(margin-top, 12);
+        text-align: left;
+      }
     }
     .career-adaptation-swiper {
       @include s(margin-top, 48);
       position: relative;
+      @media (max-width: $tab-sm) {
+        @include s(margin-top, 20);
+      }
       .swiper-slide {
         display: grid;
         @include gtc(432, 660);
@@ -27,6 +41,11 @@
         @include padding(0, 114);
         opacity: 0;
         transition: opacity var(--trs-cubic-300);
+        @media (max-width: $tab-sm) {
+          padding: 0;
+          grid-template-columns: 1fr;
+          border-bottom: none;
+        }
         &.visible-slide {
           opacity: 1;
         }
@@ -37,12 +56,19 @@
           justify-content: center;
           align-items: center;
           @include s(max-width, 432);
+          @media (max-width: $tab-sm) {
+            order: 1;
+            align-items: flex-start;
+          }
           img {
             position: absolute;
             @include s(top, 7);
             @include s(right, -147);
             @include s(width, 341);
             @include s(height, 101);
+            @media (max-width: $tab-sm) {
+              display: none;
+            }
           }
           .stage {
             @include descr-m;
@@ -53,22 +79,37 @@
             @include h5;
             text-transform: uppercase;
             @include s(margin-top, 36);
+            @media (max-width: $tab-sm) {
+              @include s(margin-top, 12);
+            }
           }
           .text {
             display: flex;
             flex-direction: column;
             @include s(gap, 10);
             @include s(margin-top, 12);
-
+            text-align: left;
+            @media (max-width: $tab-sm) {
+              @include s(margin-top, 8);
+            }
             p {
               text-align: center;
               @include body-l;
+              @media (max-width: $tab-sm) {
+                @include body-m;
+                text-align: left;
+              }
             }
           }
         }
         .image-wrapper {
           @include s(width, 660);
           @include s(height, 420);
+          @media (max-width: $tab-sm) {
+            @include s(width, 320);
+            @include s(height, 204);
+            order: 0;
+          }
           img {
             width: 100%;
             height: 100%;

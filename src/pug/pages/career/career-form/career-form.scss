@@ -2,21 +2,63 @@
 
 .career-form {
   @include s(margin-top, 116);
-  background-image: url("../img/career/form/bg.webp");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  position: relative;
+  @media (max-width: $tab-sm) {
+    @include s(margin-top, 64);
+    background: var(--back-color);
+  }
+  .bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    @media (max-width: $tab-sm) {
+      @include s(height, 228);
+    }
+    &:before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      @include s(height, 101);
+      background: linear-gradient(
+        0deg,
+        rgba(244, 244, 244, 1) 0%,
+        rgba(244, 244, 244, 0) 100%
+      );
+      display: none;
+      @media (max-width: $tab-sm) {
+        display: block;
+      }
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
   .career-form-inner {
     display: grid;
     @include gtc(408, 1fr);
     @include s(gap, 48);
     @include s(padding-top, 48);
     @include s(padding-bottom, 48);
+    z-index: 2;
+    position: relative;
+    @media (max-width: $tab-sm) {
+      grid-template-columns: 1fr;
+      @include s(padding-top, 231);
+      @include s(padding-bottom, 80);
+    }
     .content {
       display: flex;
       flex-direction: column;
       @include s(padding-top, 48);
       @include s(padding-bottom, 48);
+      @media (max-width: $tab-sm) {
+        padding-top: 0;
+      }
+      padding-bottom: 0;
       .top {
         flex: 1;
         h3 {
@@ -27,8 +69,27 @@
       .bottom {
         @include s(padding-top, 48);
         border-top: 1px solid var(--violet-color);
+        @media (max-width: $tab-sm) {
+          @include s(padding-top, 20);
+          @include s(margin-top, 20);
+        }
         .descr {
           @include body-l;
+          @media (max-width: $tab-sm) {
+            @include body-m;
+          }
+        }
+      }
+    }
+    .resume-btn {
+      display: none;
+      @media (max-width: $tab-sm) {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        p {
+          @include descr-m;
+          text-transform: uppercase;
         }
       }
     }
@@ -36,6 +97,9 @@
       background: var(--white-color);
       @include borr(12);
       @include padding(48);
+      @media (max-width: $tab-sm) {
+        display: none;
+      }
       .input__row {
         width: 100%;
 

@@ -4,8 +4,19 @@
   @include s(margin-top, 64);
 
   .about-map-inner {
+    @media (max-width: $tab-sm) {
+      @include padding(0);
+    }
+    #map {
+      @media (max-width: $tab-sm) {
+        @include s(height, 360);
+      }
+    }
     .content {
       @include s(margin-top, 48);
+      @media (max-width: $tab-sm) {
+        display: none;
+      }
       .top {
         display: grid;
         grid-template-columns: repeat(3, 1fr);

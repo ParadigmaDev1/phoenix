@@ -3,14 +3,23 @@
 .career-stages {
   @include s(margin-top, 116);
   overflow: hidden;
+  @media (max-width: $tab-sm) {
+    @include s(margin-top, 64);
+  }
   .career-stages-inner {
     h3 {
       @include h2;
       text-align: center;
+      @media (max-width: $tab-sm) {
+        text-align: left;
+      }
     }
     .career-stages-swiper {
       @include s(margin-top, 36);
       position: relative;
+      @media (max-width: $tab-sm) {
+        @include s(margin-top, 20);
+      }
       .swiper-slide {
         background: var(--violet-back-color);
         @include borr(12);
@@ -22,6 +31,12 @@
         @include s(gap, 137);
         opacity: 0;
         transition: opacity var(--trs-cubic-300);
+        @media (max-width: $tab-sm) {
+          grid-template-columns: 1fr;
+          background: none;
+          padding: 0;
+          @include s(gap, 24);
+        }
         &.visible-slide {
           opacity: 1;
         }
@@ -33,12 +48,20 @@
           align-items: center;
           @include s(max-width, 432);
           @include s(padding-bottom, 111);
+          @media (max-width: $tab-sm) {
+            order: 1;
+            align-items: flex-start;
+            padding-bottom: 0;
+          }
           img {
             position: absolute;
             @include s(top, -60);
             @include s(right, -100);
             @include s(width, 306);
             @include s(height, 120);
+            @media (max-width: $tab-sm) {
+              display: none;
+            }
           }
           .stage {
             @include descr-m;
@@ -49,11 +72,18 @@
             @include h5;
             text-transform: uppercase;
             @include s(margin-top, 48);
+            @media (max-width: $tab-sm) {
+              @include s(margin-top, 12);
+            }
           }
           .descr {
             @include body-l;
             text-align: center;
             @include s(margin-top, 12);
+            @media (max-width: $tab-sm) {
+              @include s(margin-top, 8);
+              text-align: left;
+            }
           }
         }
         .image-wrapper {
@@ -61,17 +91,51 @@
           @include s(height, 420);
           position: relative;
           @include s(margin-bottom, -47);
+          @include borr(12);
 
           z-index: 2;
+          @media (max-width: $tab-sm) {
+            margin-bottom: 0;
+            width: 100%;
+            @include s(height, 180);
+            background: var(--violet-back-color);
+            overflow: hidden;
+          }
           img {
             width: 100%;
             height: 100%;
+            @media (max-width: $tab-sm) {
+              &:not(.rectangle) {
+                @include s(height, 180);
+                @include s(width, 233);
+                @include s(bottom, -28);
+                position: absolute;
+                right: 0;
+                left: 0;
+                margin: auto;
+                z-index: 2;
+              }
+            }
+          }
+          .rectangle {
+            display: none;
+            @media (max-width: $tab-sm) {
+              position: absolute;
+              bottom: 0;
+              right: 0;
+              display: block;
+              @include s(height, 155);
+              @include s(width, 187);
+            }
           }
         }
         .rectangle {
           position: absolute;
           bottom: 0;
           right: 0;
+          @media (max-width: $tab-sm) {
+            display: none;
+          }
         }
       }
       .navigation {

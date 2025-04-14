@@ -3,6 +3,10 @@
 .stock {
   @include s(margin-top, 28);
   @include s(padding-bottom, 156);
+  @media (max-width: $tab-sm) {
+    @include s(padding-bottom, 64);
+    @include s(margin-top, 16);
+  }
   .stock-inner {
     h1 {
       @include h1;
@@ -13,12 +17,22 @@
       flex-wrap: wrap;
       @include s(column-gap, 24);
       @include s(row-gap, 80);
+      @media (max-width: $tab-sm) {
+        @include s(margin-top, 20);
+        @include s(row-gap, 36);
+      }
       .info-card {
-        &:nth-child(1),
-        &:nth-child(2) {
-          @include s(width, 660);
+        @media (min-width: $tab-sm) {
+          &:nth-child(1),
+          &:nth-child(2) {
+            @include s(width, 660);
+          }
         }
+
         @include s(width, 432);
+        @media (max-width: $tab-sm) {
+          width: 100%;
+        }
       }
     }
   }
