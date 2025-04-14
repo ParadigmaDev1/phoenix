@@ -197,8 +197,6 @@ svg {
   }
 }
 .video-block {
-  @include s(width, 888);
-  @include s(height, 503);
   @include borr(12);
   overflow: hidden;
   position: relative;

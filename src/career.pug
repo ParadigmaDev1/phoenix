@@ -1,7 +1,7 @@
 extends ./pug/templates/template.pug
 
 block head 
-  +head(["header", "content-hero", "career-about", "career-features", "alert-block", "career-team", "career-vacancy", "career-stages", "career-form", "career-adaptation", "career-history", "career-work", "vacancy-card", "values-block", "content-info", "career-team-about", "career-faq", "image-block", "crumbs", "selector", "footer-alert", "footer", "mobile-menu", "accordion-item", "catalog-menu"])
+  +head(["header", "content-hero", "career-about", "career-features", "alert-block", "career-team", "career-vacancy", "career-stages", "career-form", "career-adaptation", "career-history", "career-work", "vacancy-card", "values-block", "content-info", "career-team-about", "career-faq", "image-block", "crumbs", "selector", "footer-alert", "footer", "mobile-menu", "accordion-item", "catalog-menu", "history-modal"])
 block header 
   +header().dark
   +mobile-menu()
@@ -28,4 +28,5 @@ block content
 block footer 
   +footer()
 block modals 
+  +history-modal()
   

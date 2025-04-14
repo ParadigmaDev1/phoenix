@@ -29,7 +29,7 @@
     .close-catalog-btn {
       position: absolute;
       @include s(top, 19);
-      @include s(right, 0);
+      @include s(right, 20);
       @include s(width, 36);
       @include s(height, 36);
       @include borr(6);
@@ -255,6 +255,16 @@
           align-items: center;
           @include s(gap, 16);
           width: 100%;
+          &:hover {
+            p {
+              color: var(--violet-color);
+            }
+            svg {
+              path {
+                stroke: var(--violet-color);
+              }
+            }
+          }
           img {
             @include s(width, 64);
             @include s(height, 64);

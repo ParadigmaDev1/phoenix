@@ -23,6 +23,9 @@
             color: var(--violet-color);
           }
         }
+        .title {
+          cursor: pointer;
+        }
       }
       .video-block {
         @include s(height, 372);

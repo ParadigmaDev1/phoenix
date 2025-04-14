@@ -276,6 +276,33 @@ export const swiper = () => {
       },
     },
   });
+  const singleSwiperWrapper = document.querySelector(".single-swiper-wrapper ");
+  if (singleSwiperWrapper) {
+    const prev = singleSwiperWrapper.querySelector(".single-swiper-prev");
+    const next = singleSwiperWrapper.querySelector(".single-swiper-next");
+    const singleSwiper = new Swiper(".single-swiper", {
+      modules: [Pagination, Navigation],
+      slidesPerView: 1,
+      spaceBetween: 24,
+      allowTouchMove: false,
+      navigation: {
+        prevEl: prev,
+        nextEl: next,
+      },
+      on: {
+        init: function (swiper) {
+          updateVisibleSlides(this);
+        },
+        slideChange: function () {
+          updateVisibleSlides(this);
+        },
+        resize: function () {
+          updateVisibleSlides(this);
+        },
+      },
+    });
+  }
+
   const doubleSwiper = new Swiper(".double-swiper", {
     modules: [Pagination, Navigation],
     slidesPerView: 2,
