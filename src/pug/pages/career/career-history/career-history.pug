@@ -7,7 +7,7 @@ mixin career-history()
                     .swiper-slide
                         .image-wrapper 
                             img(src="./img/about/press/1.jpg", alt="press")
-                        a(href="#").content 
+                        .content(data-modal-target='history-modal') 
                             p.title Моя первая команда: <br>как стать лидером и вдохновить других
                             p.descr Ольга делится опытом, как развивала навыки лидерства и возглавила новый проект.
                     .swiper-slide
@@ -15,19 +15,19 @@ mixin career-history()
                             video(src='./files/video.mp4' type='video/mp4' preload="auto" poster="./img/about/press/2.jpg")
                             button.btn.play-btn 
                                 img(src="./img/icons/play.svg", alt="play") 
-                        a(href="#").content 
+                        .content(data-modal-target='history-modal')
                             p.title От идеи до создания нового бренда: как мы запустили «название»
                             p.descr Анастасия, маркетолог Феникс+, рассказывает, как вместе с командой прошла путь от идеи до создания нового бренда. 
                     .swiper-slide
                         .image-wrapper 
                             img(src="./img/about/press/3.jpg", alt="press")
-                        a(href="#").content 
+                        .content(data-modal-target='history-modal')
                             p.title От стажера до руководителя: путь к успеху
                             p.descr Как целеустремленность и поддержка команды помогли Алексею достичь успеха.
                     .swiper-slide
                         .image-wrapper 
                             img(src="./img/about/press/1.jpg", alt="press")
-                        a(href="#") .content 
+                        .content(data-modal-target='history-modal')
                             p.title Моя первая команда: <br>как стать лидером и вдохновить других
                             p.descr Ольга делится опытом, как развивала навыки лидерства и возглавила новый проект.
                     .swiper-slide
@@ -35,13 +35,13 @@ mixin career-history()
                             video(src='./files/video.mp4' type='video/mp4' preload="auto" poster="./img/about/press/2.jpg")
                             button.btn.play-btn 
                                 img(src="./img/icons/play.svg", alt="play") 
-                        a(href="#").content 
+                        .content(data-modal-target='history-modal')
                             p.title От идеи до создания нового бренда: как мы запустили «название»
                             p.descr Анастасия, маркетолог Феникс+, рассказывает, как вместе с командой прошла путь от идеи до создания нового бренда. 
                     .swiper-slide
                         .image-wrapper 
                             img(src="./img/about/press/3.jpg", alt="press")
-                        a(href="#").content 
+                        .content(data-modal-target='history-modal')
                             p.title От стажера до руководителя: путь к успеху
                             p.descr Как целеустремленность и поддержка команды помогли Алексею достичь успеха.
                 .navigation

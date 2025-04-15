@@ -1,11 +1,12 @@
 extends ./pug/templates/template.pug
 
 block head 
-  +head(["header", "home-hero", "home-advards", "home-categories", "home-collections", "home-brands", "home-ideas", "home-partners", "brands-list", "product-swiper", "product-card", "category-card", "selector", "footer-alert", "footer", "mobile-menu", "accordion-item", "catalog-menu"])
+  +head(["header", "home-hero", "home-advards", "home-categories", "home-collections", "home-brands", "home-ideas", "home-partners", "brands-list", "product-swiper", "product-card", "category-card", "selector", "footer-alert", "footer", "mobile-menu", "accordion-item", "catalog-menu", "mobile-sidebar"])
 block header 
   +header()
   +mobile-menu()
   +catalog-menu()
+  +mobile-sidebar()
 block content
   +home-hero()
   +home-advards()

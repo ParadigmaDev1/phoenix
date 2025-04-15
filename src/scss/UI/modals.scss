@@ -14,7 +14,9 @@
   opacity: 0;
   transition: var(--trs-cubic-300);
   @include padding(20);
-
+  @media (max-width: $tab-sm) {
+    padding: 0;
+  }
   &.active {
     pointer-events: all;
     opacity: 1;
@@ -40,6 +42,10 @@
     width: 100%;
     @media (max-width: $tab-sm) {
       @include padding(32, 24);
+      max-height: 100%;
+      @include padding(20);
+      height: 100%;
+      border-radius: 0;
     }
     .close-modal-wrapper {
       display: flex;
@@ -69,6 +75,8 @@
         transition: var(--trs-cubic-300);
         @media (max-width: $tab-sm) {
           @include s(margin-right, 0);
+          @include s(top, -14);
+          @include s(right, 1);
         }
         &:hover {
           background: var(--violet-color);

@@ -1,11 +1,12 @@
 extends ./pug/templates/template.pug
 
 block head 
-  +head(["header", "documents", "download-card", "crumbs", "selector", "footer", "mobile-menu", "accordion-item", "catalog-menu"])
+  +head(["header", "documents", "download-card", "crumbs", "selector", "footer", "mobile-menu", "accordion-item", "catalog-menu", "mobile-sidebar"])
 block header 
   +header().dark
   +mobile-menu()
   +catalog-menu()
+  +mobile-sidebar()
 block content
   +crumbs({items: [{title: 'Каталог', href: 'about.html'}, {title: 'акции', href: '#'}]})
   +documents()

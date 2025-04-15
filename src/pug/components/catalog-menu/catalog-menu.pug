@@ -1,5 +1,24 @@
 mixin catalog-menu() 
     .catalog-menu 
+        .catalog-top-menu.container 
+            .title-wrapper
+                button.btn.back-btn 
+                    <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6 11L1 6L6 1" stroke="#333435" stroke-linecap="square" stroke-linejoin="round"/>
+                    </svg>
+                p.title Каталог
+                button.btn.close-catalog-btn
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5.05078 14.9497L14.9503 5.05021" stroke="#343176"/>
+                        <path d="M14.9502 14.9497L5.0507 5.05021" stroke="#343176"/>
+                    </svg>
+            .search-wrapper
+                input(type="text" placeholder='Поиск').transparent 
+                button.btn.clear.search-btn 
+                    <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="8.22857" cy="8.22857" r="7.72857" stroke="white"/>
+                        <path d="M13.7148 13.7144L18.0006 18.0001" stroke="white"/>
+                    </svg>
         .catalog-menu-inner.container
             button.btn.close-catalog-btn
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">

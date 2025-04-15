@@ -9,7 +9,10 @@
     display: grid;
     @include gtc(546, 1fr);
     @include s(gap, 48);
-
+    @media (max-width: $tab-sm) {
+      grid-template-columns: 1fr;
+      @include s(gap, 36);
+    }
     .single-swiper-wrapper {
       //   @include s(height, 310);
       position: relative;
@@ -20,7 +23,15 @@
         overflow: hidden;
         @include s(height, 310);
         @include borr(12);
-
+        @media (max-width: $tab-sm) {
+          position: relative;
+          @include s(height, 180);
+          .swiper-wrapper {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+          }
+        }
         img {
           width: 100%;
           height: 100%;
@@ -47,12 +58,19 @@
         flex-direction: column;
         @include s(gap, 64);
         @include s(margin-top, 28);
+        @media (max-width: $tab-sm) {
+          @include s(margin-top, 10);
+          @include s(gap, 36);
+        }
         .text-wrapper {
           h4 {
             @include h3;
           }
           .subtitle {
             @include body-xl;
+            @media (max-width: $tab-sm) {
+              @include body-lb;
+            }
           }
           .text {
             display: flex;
