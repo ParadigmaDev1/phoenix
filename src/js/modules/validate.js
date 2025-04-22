@@ -93,41 +93,43 @@ export function validateForm() {
   //     .forEach((modal) => modal.classList.remove("active"));
   // };
 
-  const passwordInput = document.querySelector(".input__valid-password");
-  if (passwordInput) {
-    const showBtn = passwordInput.parentElement.querySelector(".show-password");
-    const openEye = `<svg width="27" height="16" viewBox="0 0 27 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <mask id="path-1-inside-1_8288_114922" fill="white">
-      <path fill-rule="evenodd" clip-rule="evenodd" d="M13.2306 0C18.8648 0 23.7373 3.26175 26.0627 8C23.7373 12.7382 18.8648 16 13.2306 16C7.59627 16 2.72381 12.7382 0.398438 8C2.72381 3.26175 7.59627 0 13.2306 0Z"/>
-      </mask>
-      <path d="M26.0627 8L26.9604 8.44057L27.1766 8L26.9604 7.55943L26.0627 8ZM0.398438 8L-0.49928 7.55943L-0.715498 8L-0.499281 8.44057L0.398438 8ZM26.9604 7.55943C24.4734 2.4919 19.2607 -1 13.2306 -1V1C18.469 1 23.0012 4.0316 25.165 8.44057L26.9604 7.55943ZM25.165 7.55943C23.0012 11.9684 18.469 15 13.2306 15V17C19.2607 17 24.4734 13.5081 26.9604 8.44057L25.165 7.55943ZM13.2306 15C7.99215 15 3.45993 11.9684 1.29616 7.55943L-0.499281 8.44057C1.9877 13.5081 7.2004 17 13.2306 17V15ZM13.2306 -1C7.2004 -1 1.9877 2.4919 -0.49928 7.55943L1.29616 8.44057C3.45993 4.0316 7.99215 1 13.2306 1V-1Z" fill="#333435" mask="url(#path-1-inside-1_8288_114922)"/>
-      <circle cx="13" cy="8" r="4.5" stroke="#333435"/>
+  const passwordInput = document.querySelectorAll(".input__valid-password");
+  if (passwordInput.length) {
+    passwordInput.forEach((input) => {
+      const showBtn = input.parentElement.querySelector(".show-password");
+      const openEye = `<svg width="27" height="16" viewBox="0 0 27 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <mask id="path-1-inside-1_8288_114922" fill="white">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M13.2306 0C18.8648 0 23.7373 3.26175 26.0627 8C23.7373 12.7382 18.8648 16 13.2306 16C7.59627 16 2.72381 12.7382 0.398438 8C2.72381 3.26175 7.59627 0 13.2306 0Z"/>
+        </mask>
+        <path d="M26.0627 8L26.9604 8.44057L27.1766 8L26.9604 7.55943L26.0627 8ZM0.398438 8L-0.49928 7.55943L-0.715498 8L-0.499281 8.44057L0.398438 8ZM26.9604 7.55943C24.4734 2.4919 19.2607 -1 13.2306 -1V1C18.469 1 23.0012 4.0316 25.165 8.44057L26.9604 7.55943ZM25.165 7.55943C23.0012 11.9684 18.469 15 13.2306 15V17C19.2607 17 24.4734 13.5081 26.9604 8.44057L25.165 7.55943ZM13.2306 15C7.99215 15 3.45993 11.9684 1.29616 7.55943L-0.499281 8.44057C1.9877 13.5081 7.2004 17 13.2306 17V15ZM13.2306 -1C7.2004 -1 1.9877 2.4919 -0.49928 7.55943L1.29616 8.44057C3.45993 4.0316 7.99215 1 13.2306 1V-1Z" fill="#333435" mask="url(#path-1-inside-1_8288_114922)"/>
+        <circle cx="13" cy="8" r="4.5" stroke="#333435"/>
+        </svg>
+      `;
+      const closeEye = `<svg width="31" height="28" viewBox="0 0 31 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g clip-path="url(#clip0_8288_112990)">
+          <path d="M27.8597 11.6917C26.6291 14.0573 24.77 16.0377 22.4868 17.4153C20.2037 18.7928 17.5848 19.5141 14.9183 19.4998C12.2518 19.4855 9.6409 18.7362 7.37264 17.3342C5.10438 15.9323 3.26664 13.932 2.06148 11.5533" stroke="#A8A9B0"/>
+          <path d="M14.9961 19L14.9961 23" stroke="#A8A9B0"/>
+          <path d="M20.7148 18.1152L22.5101 21.6898" stroke="#A8A9B0"/>
+          <path d="M24.875 15.1123L27.6937 17.9505" stroke="#A8A9B0"/>
+          <path d="M4.8125 15.1123L1.99383 17.9505" stroke="#A8A9B0"/>
+          <path d="M9.625 18.1763L7.60472 21.6286" stroke="#A8A9B0"/>
+          </g>
+          <defs>
+          <clipPath id="clip0_8288_112990">
+          <rect width="30.1538" height="28" fill="white" transform="translate(-0.00390625)"/>
+          </clipPath>
+          </defs>
       </svg>
     `;
-    const closeEye = `<svg width="31" height="28" viewBox="0 0 31 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <g clip-path="url(#clip0_8288_112990)">
-        <path d="M27.8597 11.6917C26.6291 14.0573 24.77 16.0377 22.4868 17.4153C20.2037 18.7928 17.5848 19.5141 14.9183 19.4998C12.2518 19.4855 9.6409 18.7362 7.37264 17.3342C5.10438 15.9323 3.26664 13.932 2.06148 11.5533" stroke="#A8A9B0"/>
-        <path d="M14.9961 19L14.9961 23" stroke="#A8A9B0"/>
-        <path d="M20.7148 18.1152L22.5101 21.6898" stroke="#A8A9B0"/>
-        <path d="M24.875 15.1123L27.6937 17.9505" stroke="#A8A9B0"/>
-        <path d="M4.8125 15.1123L1.99383 17.9505" stroke="#A8A9B0"/>
-        <path d="M9.625 18.1763L7.60472 21.6286" stroke="#A8A9B0"/>
-        </g>
-        <defs>
-        <clipPath id="clip0_8288_112990">
-        <rect width="30.1538" height="28" fill="white" transform="translate(-0.00390625)"/>
-        </clipPath>
-        </defs>
-    </svg>
-  `;
-    showBtn.addEventListener("click", () => {
-      if (passwordInput.type === "text") {
-        passwordInput.type = "password";
-        showBtn.innerHTML = closeEye;
-      } else {
-        passwordInput.type = "text";
-        showBtn.innerHTML = openEye;
-      }
+      showBtn.addEventListener("click", () => {
+        if (input.type === "text") {
+          input.type = "password";
+          showBtn.innerHTML = closeEye;
+        } else {
+          input.type = "text";
+          showBtn.innerHTML = openEye;
+        }
+      });
     });
   }
 
