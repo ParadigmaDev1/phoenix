@@ -66,13 +66,13 @@ body {
     display: flex;
     flex-direction: column;
     .input__item-small {
-      color: #f34040;
-      font-family: Inter, sans-serif;
-      font-size: 12px;
-      font-style: normal;
-      font-weight: 300;
-      line-height: 125%; /* 15px */
-      letter-spacing: 0.24px;
+      background: var(--pink-color);
+      color: var(--red-color);
+      @include body-xs;
+      @include padding(8, 12);
+      @include borr(6);
+      @include s(margin-top, 10);
+      display: none;
     }
   }
   .input__row.error {

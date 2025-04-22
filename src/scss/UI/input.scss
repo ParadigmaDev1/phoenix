@@ -63,3 +63,70 @@ textarea {
     color: var(--gray-light-color);
   }
 }
+.password-input-row {
+  position: relative;
+  .show-password {
+    position: absolute;
+    @include s(height, 28);
+    @include s(width, 28);
+    @include s(right, 16);
+    @include s(top, 11);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    svg {
+      @include s(height, 20);
+      @include s(width, 26);
+    }
+  }
+}
+
+input[type="radio"] {
+  appearance: none;
+  @include s(min-width, 20);
+  @include s(min-height, 20);
+  @include s(max-width, 20);
+  @include s(max-height, 20);
+  border-radius: 999px;
+  border: 1px solid var(--line-color);
+  position: relative;
+  transition: var(--trs-cubic-300);
+  cursor: pointer;
+
+  &:checked {
+    // background: var(--gray-color);
+    border-color: var(--violet-color);
+    &:before {
+      box-shadow: inset 0 0 0 calc(4 / var(--screensize) * 100vw)
+        var(--violet-color);
+    }
+    // &:after {
+    //   opacity: 1;
+    // }
+  }
+  &:after {
+    content: "";
+    @include s(width, 20);
+    @include s(height, 20);
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    // background: var(--gray-color);
+    opacity: 0;
+    transition: var(--trs-cubic-300);
+    border-radius: 999px;
+  }
+  &:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    box-shadow: inset 0 0 0 0 var(--violet-color);
+    border-radius: 999px;
+    transition: var(--trs-cubic-300);
+    z-index: 2;
+  }
+}
