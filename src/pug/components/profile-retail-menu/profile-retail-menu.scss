@@ -1,0 +1,29 @@
+@use "src/scss/common/files/mixins" as *;
+
+.profile-retail-menu {
+  background: var(--white-color);
+  @include borr(12);
+  box-shadow: var(--shadow);
+  @include padding(28, 36);
+  display: flex;
+  flex-direction: column;
+  @include s(gap, 12);
+  a {
+    display: flex;
+    align-items: center;
+    @include s(gap, 16);
+    &.active {
+      svg {
+        path {
+          fill: var(--violet-color);
+        }
+      }
+      p {
+        color: var(--violet-color);
+      }
+    }
+    p {
+      @include body-m;
+    }
+  }
+}

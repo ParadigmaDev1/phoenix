@@ -11,6 +11,9 @@ export function validateForm() {
     const feedbackElement = inputRow.querySelector(".input__item-small");
     feedbackElement.style.display = "block";
     feedbackElement.textContent = message;
+    if (!message.length) {
+      feedbackElement.style.display = "none";
+    }
     toggleClass(
       inputRow,
       isValid ? "success" : "error",

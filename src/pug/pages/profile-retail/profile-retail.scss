@@ -1,0 +1,160 @@
+@use "src/scss/common/files/mixins" as *;
+
+.profile-retail {
+  @include s(margin-top, 28);
+  @include s(padding-bottom, 156);
+  @media (max-width: $tab-sm) {
+    @include s(padding-bottom, 64);
+    @include s(margin-top, 16);
+  }
+  .profile-retail-inner {
+    h1 {
+      @include h1;
+    }
+    .content {
+      display: grid;
+      @include gtc(661, 294);
+      @include s(gap, 390);
+      .form {
+        @include s(margin-top, 36);
+        h6 {
+          @include h6;
+          text-transform: uppercase;
+        }
+        .inputs-wrapper {
+          @include s(margin-top, 48);
+        }
+        .address-wrapper {
+          @include s(margin-top, 24);
+          display: grid;
+          @include gtc(205, 1fr);
+          @include s(gap, 24);
+          .address {
+            display: grid;
+            @include gtc(16, 1fr, 20);
+            @include s(gap, 20);
+            @include s(padding-top, 20);
+            @include s(padding-bottom, 20);
+            border-bottom: 1px solid var(--line-color);
+            &:first-child {
+              padding-top: 0;
+            }
+            &:last-child {
+              padding-bottom: 0 !important;
+              border-bottom: none !important;
+            }
+            img {
+              @include s(width, 16);
+              @include s(height, 16);
+              @include s(margin-top, 4);
+            }
+            p {
+              @include body-m;
+            }
+          }
+          .add-btn {
+            @include s(margin-top, 24);
+            @include s(gap, 14);
+            @include padding(0, 24);
+          }
+        }
+        .save-btn {
+          @include padding(0, 48);
+          @include s(margin-top, 48);
+          justify-content: center;
+          p {
+            text-transform: uppercase;
+            @include descr-m;
+          }
+        }
+      }
+      .inputs {
+        display: flex;
+        flex-direction: column;
+        @include s(gap, 24);
+        @include s(margin-top, 24);
+
+        .input-wrapper {
+          display: grid;
+          @include gtc(205, 1fr);
+          align-items: center;
+          @include s(gap, 24);
+          p {
+            font-weight: 400;
+            @include s(font-size, 16);
+            line-height: 120%;
+          }
+        }
+        .submit-btn {
+          @include padding(0, 48);
+          @include s(margin-left, 230);
+          justify-content: center;
+          p {
+            text-transform: uppercase;
+            @include descr-m;
+          }
+        }
+      }
+      .info-block {
+        h4 {
+          @include h6;
+          text-transform: uppercase;
+          color: var(--violet-color);
+        }
+        .form-info {
+          @include s(margin-top, 16);
+          .socials {
+            display: flex;
+            align-items: center;
+            @include s(gap, 12);
+            a {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              @include s(width, 44);
+              @include s(height, 44);
+              @include borr(6);
+              &.tg {
+                background: #528df0;
+              }
+              &.wa {
+                background: #50b550;
+              }
+            }
+          }
+          .date {
+            display: flex;
+            align-items: center;
+            @include s(gap, 16);
+            p {
+              @include descr-m;
+              text-transform: uppercase;
+            }
+          }
+          .btn-wrapper {
+            display: grid;
+            @include gtc(226, 1fr);
+            @include s(gap, 20);
+            align-items: center;
+            @include s(margin-top, 28);
+            @media (max-width: $tab-sm) {
+              @include s(gap, 12);
+              @include gtc(208, 1fr);
+            }
+            .btn {
+              justify-content: center;
+              @include s(gap, 16);
+              p {
+                @include body-m;
+              }
+            }
+          }
+          .descr {
+            @include s(margin-top, 28);
+            @include body-m;
+          }
+        }
+      }
+    }
+  }
+}
