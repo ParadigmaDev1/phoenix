@@ -1,0 +1,60 @@
+@use "src/scss/common/files/mixins" as *;
+
+.cart-item {
+  @include padding(28);
+  border: 1px solid var(--line-color);
+  @include borr(12);
+  display: grid;
+  @include gtc(1fr, 36);
+  @include s(gap, 48);
+  cursor: pointer;
+  transition: var(--trs-cubic-300);
+  &:hover {
+    border-color: var(--violet-color);
+    .btn {
+      background: var(--violet-color) !important;
+      svg {
+        path {
+          stroke: var(--white-color) !important;
+        }
+      }
+    }
+  }
+  .content {
+    .title {
+      text-transform: uppercase;
+      @include descr-m;
+    }
+    .info-list {
+      @include s(margin-top, 12);
+      display: flex;
+      flex-direction: column;
+      @include s(gap, 4);
+      .info-row {
+        display: grid;
+        @include gtc(130, 1fr);
+        @include s(gap, 5);
+        .label {
+          @include body-m;
+          color: var(--gray-light-color);
+        }
+        .value {
+          text-align: right;
+          @include body-m;
+        }
+      }
+      .empty {
+        @include body-m;
+        color: var(--gray-light-color);
+      }
+    }
+  }
+  .btn {
+    background: none !important;
+    border: 1px solid var(--violet-color);
+    svg {
+      @include s(width, 6);
+      @include s(height, 12);
+    }
+  }
+}
