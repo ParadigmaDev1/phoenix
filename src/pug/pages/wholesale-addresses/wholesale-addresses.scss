@@ -1,12 +1,12 @@
 @use "src/scss/common/files/mixins" as *;
 
-.wholesale-legal-entities {
+.wholesale-addresses {
   @include s(padding-bottom, 156);
   @media (max-width: $tab-sm) {
     @include s(padding-bottom, 64);
     @include s(margin-top, 16);
   }
-  .wholesale-legal-entities-inner {
+  .wholesale-addresses-inner {
     display: grid;
     @include gtc(1fr, 294);
     @include s(gap, 48);
@@ -88,11 +88,11 @@
             .title-wrapper {
               .title {
                 @include h6;
-                text-transform: uppercase;
                 text-align: left;
-                @media (max-width: $tab-sm) {
-                  @include body-lb;
-                }
+                text-transform: uppercase;
+                // @media (max-width: $tab-sm) {
+                //   @include body-lb;
+                // }
               }
             }
           }
@@ -131,6 +131,18 @@
                   font-weight: 400;
                   @include s(font-size, 16);
                   line-height: 120%;
+                }
+                .textarea__row {
+                  display: flex;
+                  flex-direction: column;
+                  @include s(gap, 8);
+                  textarea {
+                    @include s(height, 104);
+                  }
+                  .descr {
+                    @include body-s;
+                    color: var(--gray-light-color);
+                  }
                 }
               }
             }

@@ -1,14 +1,9 @@
-mixin wholesale-legal-entities()
-    .wholesale-legal-entities
-        .wholesale-legal-entities-inner.container
+mixin wholesale-addresses()
+    .wholesale-addresses
+        .wholesale-addresses-inner.container
             .content 
                 .top 
-                    .title-wrapper
-                        h1 юридические лица
-                        .hint-wrapper 
-                            .hint-icon
-                                img(src="./img/icons/info-green.svg", alt="info")
-                            p.hint-content Юридическое лицо является грузополучателем <br>при оформлении заказа
+                    h1 адреса доставки
                     a(href="#").btn.outline.violet.m
                         <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M7 13L1 7L7 1" stroke="#343176" stroke-linecap="square" stroke-linejoin="round"/>
@@ -18,7 +13,7 @@ mixin wholesale-legal-entities()
                     .accordion-item
                         button(type='button').accordion-title 
                             .title-wrapper
-                                p.title ИП Винничек Андрей Борисович
+                                p.title Кудринская
                             .icon 
                                 <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M1 1L7 7L13 1" stroke="#333435" stroke-linecap="square" stroke-linejoin="round"/>
@@ -27,25 +22,19 @@ mixin wholesale-legal-entities()
                             form.form
                                 .inputs 
                                     .input-wrapper 
-                                        p Наименование
+                                        p Адрес доставки
                                         .input__row.gray
                                             input(type="text" placeholder="Введите").custom-input
                                     .input-wrapper 
-                                        p Брендовое название 
+                                        p Телефон
                                         .input__row.gray
-                                            input(type="text" placeholder="Введите").custom-input
+                                            input(type="tel" placeholder="+7 (").custom-input
                                     .input-wrapper 
-                                        p ИНН 
-                                        .input__row.gray
-                                            input(type="text" placeholder="Введите").custom-input
-                                    .input-wrapper 
-                                        p КПП  
-                                        .input__row.gray
-                                            input(type="text" placeholder="Введите").custom-input
-                                    .input-wrapper 
-                                        p Юридический адрес  
-                                        .input__row.gray
-                                            input(type="text" placeholder="Введите").custom-input
+                                        p Комментарий 
+                                        .textarea__row.gray
+                                            textarea(placeholder="Введите")
+                                            p.descr Максисмум 300 символов 
+                                    
                                 .btns 
                                     button(type='submit').btn.primary.m
                                         <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -64,7 +53,7 @@ mixin wholesale-legal-entities()
                     .accordion-item
                         button(type='button').accordion-title 
                             .title-wrapper
-                                p.title ИП Константинопольский константин константинович
+                                p.title нарвинская
                             .icon 
                                 <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M1 1L7 7L13 1" stroke="#333435" stroke-linecap="square" stroke-linejoin="round"/>
@@ -73,25 +62,19 @@ mixin wholesale-legal-entities()
                             form.form
                                 .inputs 
                                     .input-wrapper 
-                                        p Наименование
+                                        p Адрес доставки
                                         .input__row.gray
                                             input(type="text" placeholder="Введите").custom-input
                                     .input-wrapper 
-                                        p Брендовое название 
+                                        p Телефон
                                         .input__row.gray
-                                            input(type="text" placeholder="Введите").custom-input
+                                            input(type="tel" placeholder="+7 (").custom-input
                                     .input-wrapper 
-                                        p ИНН 
-                                        .input__row.gray
-                                            input(type="text" placeholder="Введите").custom-input
-                                    .input-wrapper 
-                                        p КПП  
-                                        .input__row.gray
-                                            input(type="text" placeholder="Введите").custom-input
-                                    .input-wrapper 
-                                        p Юридический адрес  
-                                        .input__row.gray
-                                            input(type="text" placeholder="Введите").custom-input
+                                        p Комментарий 
+                                        .textarea__row.gray
+                                            textarea(placeholder="Введите")
+                                            p.descr Максисмум 300 символов 
+                                    
                                 .btns 
                                     button(type='submit').btn.primary.m
                                         <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -110,7 +93,7 @@ mixin wholesale-legal-entities()
                     .accordion-item
                         button(type='button').accordion-title 
                             .title-wrapper
-                                p.title ООО «Вселенная канцтоваров»
+                                p.title пионерская
                             .icon 
                                 <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M1 1L7 7L13 1" stroke="#333435" stroke-linecap="square" stroke-linejoin="round"/>
@@ -119,25 +102,19 @@ mixin wholesale-legal-entities()
                             form.form
                                 .inputs 
                                     .input-wrapper 
-                                        p Наименование
+                                        p Адрес доставки
                                         .input__row.gray
                                             input(type="text" placeholder="Введите").custom-input
                                     .input-wrapper 
-                                        p Брендовое название 
+                                        p Телефон
                                         .input__row.gray
-                                            input(type="text" placeholder="Введите").custom-input
+                                            input(type="tel" placeholder="+7 (").custom-input
                                     .input-wrapper 
-                                        p ИНН 
-                                        .input__row.gray
-                                            input(type="text" placeholder="Введите").custom-input
-                                    .input-wrapper 
-                                        p КПП  
-                                        .input__row.gray
-                                            input(type="text" placeholder="Введите").custom-input
-                                    .input-wrapper 
-                                        p Юридический адрес  
-                                        .input__row.gray
-                                            input(type="text" placeholder="Введите").custom-input
+                                        p Комментарий 
+                                        .textarea__row.gray
+                                            textarea(placeholder="Введите")
+                                            p.descr Максисмум 300 символов 
+                                    
                                 .btns 
                                     button(type='submit').btn.primary.m
                                         <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -158,7 +135,7 @@ mixin wholesale-legal-entities()
                         <path d="M0.506836 7.5H14.5068" stroke="#343176"/>
                         <path d="M7.50684 14.5L7.50684 0.5" stroke="#343176"/>
                     </svg>
-                    p добавить юр. лицо
+                    p добавить адрес
             .menu-block 
                 .sticky-block
                     +profile-wholesale-menu()
