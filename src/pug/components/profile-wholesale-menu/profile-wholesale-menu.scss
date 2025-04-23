@@ -45,6 +45,9 @@
     }
     .content {
       @include s(margin-top, 20);
+      display: flex;
+      flex-direction: column;
+      gap: 0;
       .name {
         @include body-l;
       }
