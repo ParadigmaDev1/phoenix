@@ -13,9 +13,12 @@
     }
     .content {
       @include s(margin-top, 36);
-      display: grid;
-      @include gtc(661, 432);
-      @include s(gap, 252);
+
+      .tab-content {
+        display: grid;
+        @include gtc(661, 432);
+        @include s(gap, 252);
+      }
       .inputs-wrapper {
         .tabs {
           display: flex;
@@ -25,8 +28,11 @@
         h6 {
           @include h6;
           text-transform: uppercase;
-          @include s(margin-top, 28);
+          @include s(margin-top, 48);
           @include s(margin-bottom, 24);
+          &:first-child {
+            @include s(margin-top, 28);
+          }
         }
         label {
           display: flex;

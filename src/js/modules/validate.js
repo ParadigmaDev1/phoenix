@@ -26,6 +26,9 @@ export function validateForm() {
   const validators = {
     name: (value) => /^[А-Яа-яA-Za-zёЁ \-]+$/.test(value),
     phone: (value) => value.length >= 18,
+    password: (value) => value.length > 0,
+    inn: (value) => value.length === 10,
+    organization: (value) => value.length > 0,
     count: (value) => /^[0-9]+$/.test(value),
     time: (value) => /^([0-1]?[0-9]|2[0-3]):[0-5][0-9]$/.test(value),
     date: (value) =>
@@ -45,47 +48,75 @@ export function validateForm() {
 
     const inputs = [
       {
-        input: form.querySelector(".input__valid-name"),
+        inputList: form.querySelectorAll(".input__valid-name"),
         type: "name",
         error: "Введите имя",
       },
       {
-        input: form.querySelector(".input__valid-phone"),
+        inputList: form.querySelectorAll(".input__valid-lastname"),
+        type: "name",
+        error: "Введите фамилию",
+      },
+      {
+        inputList: form.querySelectorAll(".input__valid-phone"),
         type: "phone",
         error: "Введите номер телефона",
       },
       {
-        input: form.querySelector(".input__valid-email"),
+        inputList: form.querySelectorAll(".input__valid-password"),
+        type: "password",
+        error: "Введите пароль",
+      },
+      {
+        inputList: form.querySelectorAll(".input__valid-email"),
         type: "email",
         error: "Заполните поле",
+      },
+      {
+        inputList: form.querySelectorAll(".input__valid-organization"),
+        type: "organization",
+        error: "Введите название организации",
+      },
+      {
+        inputList: form.querySelectorAll(".input__valid-inn"),
+        type: "inn",
+        error: "Введите ИНН",
       },
     ];
 
     if (isExtended) {
       inputs.push(
         {
-          input: form.querySelector(".input__valid-positive-number"),
+          inputList: form.querySelectorAll(".input__valid-positive-number"),
           type: "count",
           error: "Введите положительное число",
         },
         {
-          input: form.querySelector(".input__valid-time"),
+          inputList: form.querySelectorAll(".input__valid-time"),
           type: "time",
           error: "Введите корректное время",
         },
         {
-          input: form.querySelector(".input__valid-date"),
+          inputList: form.querySelectorAll(".input__valid-date"),
           type: "date",
           error: "Введите корректную дату",
         }
       );
     }
-    inputs.forEach(({ input, type, error }) => {
-      if (input && !validateInput(input, type, error)) {
-        isValid = false;
+    // inputs.forEach(({ input, type, error }) => {
+    //   if (input && !validateInput(input, type, error)) {
+    //     isValid = false;
+    //   }
+    // });
+    inputs.forEach(({ inputList, type, error }) => {
+      if (inputList.length) {
+        inputList.forEach((input) => {
+          if (input && !validateInput(input, type, error)) {
+            isValid = false;
+          }
+        });
       }
     });
-
     return isValid;
   };
 
