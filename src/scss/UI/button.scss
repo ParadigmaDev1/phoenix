@@ -6,6 +6,8 @@ button {
 }
 .btn {
   transition: var(--trs-cubic-600);
+  justify-content: center;
+
   &:disabled {
     pointer-events: none;
     opacity: 0.5;
@@ -30,6 +32,10 @@ button {
       @include s(height, 44);
       @media (max-width: $tab-sm) {
         @include s(height, 36);
+      }
+      p {
+        text-transform: uppercase;
+        @include descr-m;
       }
     }
     &.l {
