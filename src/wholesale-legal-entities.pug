@@ -1,7 +1,7 @@
 extends ./pug/templates/template.pug
 
 block head 
-  +head(["header", "wholesale-organization", "profile-wholesale-menu", "crumbs", "selector", "footer", "mobile-menu", "accordion-item", "catalog-menu", "mobile-sidebar", "recover-password-modal"])
+  +head(["header", "wholesale-legal-entities", "profile-wholesale-menu", "crumbs", "selector", "footer", "mobile-menu", "accordion-item", "catalog-menu", "mobile-sidebar", "recover-password-modal"])
 block header 
   +header().dark
   +mobile-menu()
@@ -9,7 +9,7 @@ block header
   +mobile-sidebar()
 block content
   +crumbs({items: [{title: 'Профиль', href: '#'}]})
-  +wholesale-organization()
+  +wholesale-legal-entities()
 block footer 
   +footer()
 block modals 
