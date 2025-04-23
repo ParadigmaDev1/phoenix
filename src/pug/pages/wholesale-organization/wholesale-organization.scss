@@ -1,0 +1,104 @@
+@use "src/scss/common/files/mixins" as *;
+
+.wholesale-organization {
+  @include s(padding-bottom, 156);
+  @media (max-width: $tab-sm) {
+    @include s(padding-bottom, 64);
+    @include s(margin-top, 16);
+  }
+  .wholesale-organization-inner {
+    display: grid;
+    @include gtc(1fr, 294);
+    @include s(gap, 48);
+    @include s(margin-top, 36);
+
+    h1 {
+      @include h1;
+    }
+    .content {
+      h5 {
+        @include h5;
+        text-transform: uppercase;
+      }
+      .top {
+        display: flex;
+        justify-content: space-between;
+        .btn {
+          @include s(gap, 12);
+          @include s(height, 36);
+          @include padding(0, 16);
+          p {
+            text-transform: uppercase;
+            @include descr-s;
+          }
+        }
+      }
+
+      h6 {
+        @include h6;
+        text-transform: uppercase;
+        @include s(margin-top, 48);
+        @include s(margin-bottom, 24);
+        &:first-child {
+          @include s(margin-top, 28);
+        }
+      }
+      .form {
+        @include s(width, 661);
+      }
+      .submit-btn {
+        @include padding(0, 48);
+        justify-content: center;
+        @include s(margin-top, 28);
+
+        p {
+          text-transform: uppercase;
+          @include descr-m;
+        }
+      }
+      .inputs {
+        display: flex;
+        flex-direction: column;
+        @include s(gap, 24);
+
+        .input-wrapper {
+          display: grid;
+          @include gtc(205, 1fr);
+          align-items: center;
+          @include s(gap, 24);
+          p {
+            font-weight: 400;
+            @include s(font-size, 16);
+            line-height: 120%;
+          }
+        }
+        .submit-btn {
+          @include padding(0, 48);
+          @include s(margin-left, 230);
+          justify-content: center;
+          p {
+            text-transform: uppercase;
+            @include descr-m;
+          }
+        }
+        .change-password-btn {
+          display: flex;
+          align-items: center;
+          @include s(gap, 16);
+          @include s(margin-left, 229);
+          width: fit-content;
+          p {
+            @include body-s;
+            color: var(--violet-color);
+          }
+          svg {
+            @include s(width, 16);
+            @include s(height, 16);
+          }
+        }
+      }
+    }
+    .menu-block {
+    }
+  }
+}
