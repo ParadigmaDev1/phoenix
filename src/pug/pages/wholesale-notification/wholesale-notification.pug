@@ -1,0 +1,49 @@
+mixin wholesale-notification()
+    .wholesale-notification
+        .wholesale-notification-inner.container.tabs-wrapper
+            .content 
+                h1 уведомления
+                .tabs-container
+                    .tabs
+                        button.btn.tab.m.active(data-tab='0') Предложения
+                        button.btn.tab.m.notify(data-tab='1') Информирование
+                    button.check-btn
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 9L6.64706 15L17 4" stroke="#343176" stroke-linecap="square" stroke-linejoin="round"/>
+                        </svg>
+                        | Отметить все прочитаными
+                .tab-content(data-tab='0')
+                    .notification-list 
+                        +notification-card().no-check
+                        +notification-card()
+                        +notification-card()
+                        +notification-card()
+                        +notification-card()
+                        +notification-card()
+                        +notification-card()
+                        +notification-card()
+                        +notification-card()
+                        +notification-card()
+                        +notification-card()
+                    +pagination()
+                    a(href="#").btn.outline.violet.m.more-btn
+                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.506836 7.5H14.5068" stroke="#343176"/>
+                            <path d="M7.50684 14.5L7.50684 0.5" stroke="#343176"/>
+                        </svg>
+                        p загрузить ещё
+                .tab-content(data-tab='1')
+                    .notification-list 
+                        +notification-card()
+                        +notification-card()
+                        +notification-card()
+                    +pagination()
+                    a(href="#").btn.outline.violet.m.more-btn
+                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.506836 7.5H14.5068" stroke="#343176"/>
+                            <path d="M7.50684 14.5L7.50684 0.5" stroke="#343176"/>
+                        </svg>
+                        p загрузить ещё
+            .menu-block 
+                .sticky-block
+                    +profile-wholesale-menu()

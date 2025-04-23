@@ -1,0 +1,82 @@
+@use "src/scss/common/files/mixins" as *;
+
+.wholesale-notification {
+  @include s(padding-bottom, 156);
+  @media (max-width: $tab-sm) {
+    @include s(padding-bottom, 64);
+    @include s(margin-top, 16);
+  }
+  .wholesale-notification-inner {
+    display: grid;
+    @include gtc(1fr, 294);
+    @include s(gap, 48);
+    @include s(margin-top, 36);
+
+    h1 {
+      @include h1;
+    }
+    .content {
+      h5 {
+        @include h5;
+        text-transform: uppercase;
+      }
+      .tabs-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @include s(margin-top, 36);
+        .tabs {
+          display: flex;
+          @include s(gap, 4);
+          .tab {
+            position: relative;
+            &.notify {
+              @include s(padding-right, 38);
+              &:before {
+                content: "";
+                position: absolute;
+                @include s(top, 10);
+                @include s(right, 20);
+                background: var(--green-color);
+                @include s(width, 8);
+                @include s(height, 8);
+                border-radius: 999px;
+              }
+            }
+          }
+        }
+        .check-btn {
+          display: flex;
+          align-items: center;
+          @include s(gap, 12);
+          @include body-m;
+          color: var(--violet-color);
+          svg {
+            @include s(width, 18);
+            @include s(height, 13);
+          }
+        }
+      }
+      .notification-list {
+        display: flex;
+        flex-direction: column;
+        @include s(gap, 12);
+        @include s(margin-top, 28);
+        @include s(margin-bottom, 48);
+      }
+      .more-btn {
+        @include s(margin-top, 28);
+        @include s(height, 48);
+        width: fit-content;
+        @include s(gap, 14);
+        @include padding(0, 24);
+        margin-left: auto;
+        margin-right: auto;
+        p {
+          text-transform: uppercase;
+          @include descr-m;
+        }
+      }
+    }
+  }
+}
