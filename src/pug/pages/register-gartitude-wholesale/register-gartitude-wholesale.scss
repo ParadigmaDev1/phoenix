@@ -1,0 +1,140 @@
+@use "src/scss/common/files/mixins" as *;
+
+.register-gartitude-wholesale {
+  @include s(margin-top, 28);
+  @include s(padding-bottom, 156);
+  @media (max-width: $tab-sm) {
+    @include s(padding-bottom, 64);
+    @include s(margin-top, 16);
+  }
+  .register-gartitude-wholesale-inner {
+    h1 {
+      @include h1;
+    }
+    .content {
+      @include s(margin-top, 36);
+      display: grid;
+      @include gtc(661, 636);
+      @include s(gap, 48);
+      .text-block {
+        .alert {
+          background: var(--green-back-color);
+          @include padding(28);
+          display: flex;
+          align-items: center;
+          @include s(gap, 20);
+          @include borr(12);
+          @include s(margin-top, 36);
+
+          img {
+            @include s(width, 56);
+            @include s(height, 56);
+          }
+          p {
+            @include body-l;
+          }
+        }
+        .info-block {
+          @include s(margin-top, 48);
+
+          h4 {
+            @include h6;
+            text-transform: uppercase;
+            color: var(--violet-color);
+          }
+          ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            @include s(gap, 8);
+            @include s(margin-top, 16);
+            @include s(margin-bottom, 48);
+
+            li {
+              position: relative;
+              @include s(padding-left, 30);
+              @include body-l;
+              @media (max-width: $tab-sm) {
+                @include body-m;
+              }
+              &:before {
+                content: "";
+                position: absolute;
+                @include s(width, 6);
+                @include s(height, 6);
+                border-radius: 9999px;
+                background: var(--violet-color);
+                @include s(top, 10);
+                left: 0;
+              }
+            }
+          }
+          .form-info {
+            @include s(margin-top, 16);
+            .socials {
+              display: flex;
+              align-items: center;
+              @include s(gap, 12);
+              a {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                @include s(width, 44);
+                @include s(height, 44);
+                @include borr(6);
+                &.tg {
+                  background: #528df0;
+                }
+                &.wa {
+                  background: #50b550;
+                }
+              }
+            }
+            .date {
+              display: flex;
+              align-items: center;
+              @include s(gap, 16);
+              p {
+                @include descr-m;
+                text-transform: uppercase;
+              }
+            }
+            .btn-wrapper {
+              display: grid;
+              @include gtc(226, 1fr);
+              @include s(gap, 20);
+              align-items: center;
+              @include s(margin-top, 28);
+              @media (max-width: $tab-sm) {
+                @include s(gap, 12);
+                @include gtc(208, 1fr);
+              }
+              .btn {
+                justify-content: center;
+                @include s(gap, 16);
+                p {
+                  @include body-m;
+                }
+              }
+            }
+            .descr {
+              @include s(margin-top, 28);
+              @include body-m;
+            }
+          }
+        }
+      }
+      .image-block {
+        @include borr(12);
+        overflow: hidden;
+        @include s(height, 435);
+
+        img {
+          object-fit: cover;
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+}
