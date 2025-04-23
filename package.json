@@ -44,6 +44,7 @@
   },
   "dependencies": {
     "@fancyapps/ui": "^5.0.22",
+    "air-datepicker": "^3.5.3",
     "gulp-htmlmin": "^5.0.1",
     "gulp-pug": "^5.0.0",
     "gulp-style-aliases": "^1.1.11",
