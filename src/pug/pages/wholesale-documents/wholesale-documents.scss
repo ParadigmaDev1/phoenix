@@ -57,6 +57,7 @@
           display: flex;
           align-items: center;
           @include s(gap, 16);
+          cursor: pointer;
           p {
             @include body-m;
           }

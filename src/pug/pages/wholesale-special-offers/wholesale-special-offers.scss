@@ -1,0 +1,63 @@
+@use "src/scss/common/files/mixins" as *;
+
+.wholesale-special-offers {
+  @include s(padding-bottom, 156);
+  @media (max-width: $tab-sm) {
+    @include s(padding-bottom, 64);
+    @include s(margin-top, 16);
+  }
+  .wholesale-special-offers-inner {
+    display: grid;
+    @include gtc(1fr, 294);
+    @include s(gap, 48);
+    @include s(margin-top, 36);
+
+    h1 {
+      @include h1;
+    }
+    .content {
+      h5 {
+        @include h5;
+        text-transform: uppercase;
+      }
+      .tabs {
+        @include s(margin-top, 36);
+        display: flex;
+        align-items: center;
+        @include s(gap, 4);
+        @media (max-width: $tab-sm) {
+          @include s(margin-top, 28);
+        }
+      }
+      .tab-content {
+        @include s(margin-top, 28);
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        @include s(column-gap, 24);
+        @include s(row-gap, 64);
+        .info-card {
+          .content {
+            align-items: flex-start;
+          }
+          .title {
+            @include descr-m;
+            transition: var(--trs-cubic-300);
+            text-transform: uppercase;
+            text-align: left;
+          }
+          .btn {
+            @include s(height, 36);
+            @include padding(0, 16);
+            @include s(margin-top, 20);
+
+            p {
+              @include descr-s;
+            }
+          }
+        }
+      }
+    }
+    .menu-block {
+    }
+  }
+}
