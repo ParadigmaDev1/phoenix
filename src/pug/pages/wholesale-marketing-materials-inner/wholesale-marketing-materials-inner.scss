@@ -1,0 +1,89 @@
+@use "src/scss/common/files/mixins" as *;
+
+.wholesale-marketing-materials-inner {
+  @include s(padding-bottom, 156);
+  @media (max-width: $tab-sm) {
+    @include s(padding-bottom, 64);
+    @include s(margin-top, 16);
+  }
+  .wholesale-marketing-materials-inner-inner {
+    display: grid;
+    @include gtc(1fr, 294);
+    @include s(gap, 48);
+    @include s(margin-top, 36);
+
+    h1 {
+      @include h1;
+    }
+    .content {
+      .top {
+        display: flex;
+        justify-content: space-between;
+
+        .btn {
+          @include s(gap, 12);
+          @include s(height, 36);
+          @include padding(0, 16);
+          p {
+            text-transform: uppercase;
+            @include descr-s;
+          }
+        }
+      }
+      .marketing-materials-list {
+        @include s(margin-top, 28);
+        display: flex;
+        flex-direction: column;
+        .info-card {
+          display: grid;
+          @include gtc(284, 1fr);
+          @include s(gap, 28);
+          @include s(padding-top, 48);
+          @include s(padding-bottom, 48);
+          border-top: 1px solid var(--line-color);
+          align-items: flex-start;
+          &:last-child {
+            border-bottom: 1px solid var(--line-color);
+          }
+          .content {
+            align-items: flex-start;
+            display: grid;
+            grid-template-areas: "title btn" "descr btn";
+            @include gtc(1fr, 153);
+            @include s(column-gap, 48);
+            align-items: flex-start;
+            margin-top: 0;
+          }
+          .title {
+            @include h3;
+            transition: var(--trs-cubic-300);
+            text-transform: uppercase;
+            text-align: left;
+            grid-area: title;
+          }
+          .descr {
+            @include descr-m;
+            text-transform: uppercase;
+            grid-area: descr;
+            @include s(margin-top, 12);
+          }
+          .btn {
+            @include s(height, 36);
+            @include padding(0, 16);
+            grid-area: btn;
+
+            p {
+              @include descr-s;
+            }
+            svg {
+              @include s(width, 8);
+              @include s(height, 14);
+            }
+          }
+        }
+      }
+    }
+    .menu-block {
+    }
+  }
+}

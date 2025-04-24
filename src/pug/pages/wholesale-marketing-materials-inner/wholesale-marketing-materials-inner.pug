@@ -1,0 +1,20 @@
+mixin wholesale-marketing-materials-inner()
+    .wholesale-marketing-materials-inner
+        .wholesale-marketing-materials-inner-inner.container.tabs-wrapper
+            .content 
+                .top 
+                    h1 баннеры для директа
+                    a(href="#").btn.outline.violet.m
+                        <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 13L1 7L7 1" stroke="#343176" stroke-linecap="square" stroke-linejoin="round"/>
+                        </svg>
+                        p назад
+                .marketing-materials-list 
+                    +info-card({img: './img/home/ideas/2.jpg', descr: 'Программа лояльности также позволяет использовать накопленные баллы для оплаты следующих заказов, делая каждую покупку еще выгоднее.', title: 'скрипты продаж', btnTitle: 'подробнее'})
+                    +info-card({img: './img/home/ideas/2.jpg', descr: 'Программа лояльности также позволяет использовать накопленные баллы для оплаты следующих заказов, делая каждую покупку еще выгоднее.', title: 'презентации', btnTitle: 'подробнее'})
+                    +info-card({img: './img/home/ideas/2.jpg', descr: 'Специальное предложение для оптовых клиентов Феникс+: при заказе на сумму от 100 000 ₽ получите дополнительную скидку до 10% и удвоенные бонусные баллы на всю продукцию! ', title: 'заголовок обучающих материалов', btnTitle: 'подробнее'})
+                    +info-card({img: './img/home/ideas/2.jpg', descr: 'Узнаете на что обращают внимание покупатели', title: 'школа', btnTitle: 'подробнее'})
+                    +info-card({img: './img/home/ideas/2.jpg', descr: 'Особенности продукции бренда', title: 'Гайд по выбору продукции', btnTitle: 'подробнее'})
+            .menu-block 
+                .sticky-block
+                    +profile-wholesale-menu()
