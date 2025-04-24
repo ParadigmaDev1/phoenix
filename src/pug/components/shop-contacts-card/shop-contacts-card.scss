@@ -8,6 +8,7 @@
   @include gtc(1fr, 128);
   @include s(gap, 24);
   align-items: flex-start;
+  position: relative;
   @media (max-width: $tab-sm) {
     @include gtc(1fr, 83);
     @include padding(20);
@@ -77,5 +78,13 @@
       bottom: 0;
       right: 0;
     }
+  }
+  .edit-btn {
+    position: absolute;
+    @include s(bottom, 20);
+    @include s(right, 28);
+    @include s(width, 20);
+    @include s(height, 20);
+    padding: 0;
   }
 }

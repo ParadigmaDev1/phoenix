@@ -1,0 +1,44 @@
+@use "src/scss/common/files/mixins" as *;
+
+.wholesale-shops {
+  @include s(padding-bottom, 156);
+  @media (max-width: $tab-sm) {
+    @include s(padding-bottom, 64);
+    @include s(margin-top, 16);
+  }
+  .wholesale-shops-inner {
+    display: grid;
+    @include gtc(1fr, 294);
+    @include s(gap, 48);
+    @include s(margin-top, 36);
+
+    h1 {
+      @include h1;
+    }
+    .content {
+      .descr {
+        @include s(margin-top, 36);
+        @include body-l;
+      }
+      .add-btn {
+        @include s(margin-top, 36);
+        @include s(height, 48);
+        width: fit-content;
+        @include s(gap, 14);
+        @include padding(0, 24);
+        p {
+          text-transform: uppercase;
+          @include descr-m;
+        }
+      }
+      .wholesale-shops-list {
+        @include s(margin-top, 36);
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        @include s(gap, 24);
+      }
+    }
+    .menu-block {
+    }
+  }
+}

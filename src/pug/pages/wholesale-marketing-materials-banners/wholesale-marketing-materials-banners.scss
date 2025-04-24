@@ -17,6 +17,20 @@
     }
 
     .content {
+      .top {
+        display: flex;
+        justify-content: space-between;
+
+        .btn {
+          @include s(gap, 12);
+          @include s(height, 36);
+          @include padding(0, 16);
+          p {
+            text-transform: uppercase;
+            @include descr-s;
+          }
+        }
+      }
       .btn.primary {
         width: fit-content;
         @include s(margin-top, 28);
