@@ -1,0 +1,96 @@
+@use "src/scss/common/files/mixins" as *;
+
+.wholesale-surveys {
+  @include s(padding-bottom, 156);
+  @media (max-width: $tab-sm) {
+    @include s(padding-bottom, 64);
+    @include s(margin-top, 16);
+  }
+  .wholesale-surveys-inner {
+    display: grid;
+    @include gtc(1fr, 294);
+    @include s(gap, 48);
+    @include s(margin-top, 36);
+
+    h1 {
+      @include h1;
+    }
+    .content {
+      .descr {
+        @include s(margin-top, 36);
+        @include body-l;
+      }
+      .add-btn {
+        @include s(margin-top, 36);
+        @include s(height, 48);
+        width: fit-content;
+        @include s(gap, 14);
+        @include padding(0, 24);
+        p {
+          text-transform: uppercase;
+          @include descr-m;
+        }
+      }
+      .wholesale-surveys-list {
+        display: flex;
+        flex-direction: column;
+        @include s(gap, 12);
+        @include s(margin-top, 28);
+        .wholesale-surveys-item {
+          @include borr(12);
+          @include padding(28);
+          display: grid;
+          @include gtc(1fr, 174);
+          @include s(gap, 56);
+          background: var(--back-color);
+          cursor: pointer;
+          &:hover {
+            .title {
+              color: var(--violet-color);
+            }
+            .btn {
+              background: var(--violet-color);
+              p {
+                color: var(--white-color);
+              }
+              svg {
+                path {
+                  stroke: var(--white-color);
+                }
+              }
+            }
+          }
+          .text {
+            display: flex;
+            flex-direction: column;
+            @include s(gap, 6);
+            .title {
+              @include h5;
+              text-transform: uppercase;
+              transition: var(--trs-cubic-300);
+            }
+            .descr {
+              margin-top: 0;
+              @include body-m;
+            }
+          }
+          .btn {
+            @include padding(0, 16);
+            @include s(gap, 12);
+            @include s(height, 36);
+
+            p {
+              @include descr-s;
+            }
+            svg {
+              @include s(width, 8);
+              @include s(height, 14);
+            }
+          }
+        }
+      }
+    }
+    .menu-block {
+    }
+  }
+}
