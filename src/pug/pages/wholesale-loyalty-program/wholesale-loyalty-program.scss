@@ -1,0 +1,314 @@
+@use "src/scss/common/files/mixins" as *;
+
+.wholesale-loyalty-program {
+  @include s(padding-bottom, 156);
+  @media (max-width: $tab-sm) {
+    @include s(padding-bottom, 64);
+    @include s(margin-top, 16);
+  }
+  .wholesale-loyalty-program-inner {
+    display: grid;
+    @include gtc(1fr, 294);
+    @include s(gap, 48);
+    @include s(margin-top, 36);
+
+    h1 {
+      @include h1;
+    }
+    .content {
+      .loyalty-program-block {
+        @include s(margin-top, 44);
+        .loyalty-program-top {
+          display: flex;
+          justify-content: space-between;
+          .title {
+            text-transform: uppercase;
+            @include descr-m;
+            color: var(--gray-light-color);
+          }
+          .loyalty-program-info {
+            display: flex;
+            align-items: center;
+            @include s(gap, 36);
+            .date {
+              color: var(--gray-light-color);
+            }
+            .conditions {
+              color: var(--violet-color);
+            }
+            .date,
+            .conditions {
+              display: flex;
+              align-items: center;
+              @include s(gap, 10);
+              @include descr-s;
+              text-transform: uppercase;
+              img {
+                @include s(width, 12);
+                @include s(height, 12);
+              }
+            }
+          }
+        }
+        .loyalty-program-list {
+          @include s(margin-top, 12);
+          .loyalty-program-card {
+            border-top: 1px solid var(--line-color);
+            opacity: 0.3;
+            display: grid;
+            @include gtc(90, 294, 1fr, 215);
+            @include s(gap, 24);
+            @include s(padding-top, 20);
+            @include s(padding-bottom, 64);
+            &:last-child {
+              border-bottom: 1px solid var(--line-color);
+            }
+            &.active {
+              opacity: 1;
+              @include s(padding-top, 24);
+
+              .image-wrapper {
+                &:before {
+                  content: "";
+                  background-image: url("../img/icons/check-circle.svg");
+                  background-position: center;
+                  background-repeat: no-repeat;
+                  @include s(width, 24);
+                  @include s(height, 24);
+                  position: absolute;
+                  @include s(top, -7);
+                  @include s(right, -7);
+                }
+              }
+              .title {
+                color: var(--violet-color) !important;
+              }
+              .cashback {
+                color: var(--violet-color) !important;
+                span {
+                  color: var(--violet-color) !important;
+                }
+              }
+            }
+            .image-wrapper {
+              @include s(width, 90);
+              @include s(height, 90);
+              @include borr(12);
+              position: relative;
+              img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+              }
+            }
+            .title-wrapper {
+              display: flex;
+              flex-direction: column;
+              @include s(gap, 23);
+              .title {
+                text-transform: uppercase;
+                @include h5;
+                color: var(--gray-color);
+              }
+              .cashback {
+                color: var(--gray-color);
+                @include h4;
+                text-transform: uppercase;
+                display: flex;
+                align-items: baseline;
+                @include s(gap, 10);
+                span {
+                  @include body-l;
+                  color: var(--gray-color);
+                }
+              }
+            }
+            .loyalty-program-card-info {
+              .info-list {
+                display: flex;
+                flex-direction: column;
+                .info-list-item {
+                  display: grid;
+                  @include gtc(90, 1fr);
+                  @include s(gap, 24);
+                  .label {
+                    color: var(--gray-light-color);
+                    @include body-l;
+                  }
+                  .value {
+                    @include body-l;
+                  }
+                }
+              }
+              .descr {
+                @include body-s;
+                @include s(margin-top, 16);
+                @include s(margin-bottom, 10);
+                color: var(--gray-light-color);
+              }
+            }
+            .loyalty-program-points {
+              @include padding(20, 28);
+              @include borr(12);
+              background: var(--violet-back-color);
+              display: flex;
+              flex-direction: column;
+              .title {
+                @include body-s;
+              }
+              .total-points {
+                @include h4;
+              }
+              .date {
+                @include s(margin-top, 16);
+                @include body-s;
+              }
+              .minus-points {
+                color: var(--red-color);
+                font-weight: 400;
+                @include s(font-size, 16);
+                line-height: 140%;
+              }
+            }
+          }
+        }
+        .link-btn {
+          width: fit-content;
+          @include s(margin-top, 24);
+          @include padding(0, 24);
+          @include s(gap, 12);
+        }
+      }
+      .history-block {
+        @include s(margin-top, 96);
+        h3 {
+          @include h3;
+        }
+        .filters {
+          display: grid;
+          @include gtc(488, 398);
+          @include s(gap, 116);
+          @include s(margin-top, 28);
+          .date {
+            display: flex;
+            @include s(gap, 8);
+            align-items: center;
+            .date-picker-wrapper {
+              position: relative;
+              .date-picker {
+                width: 100%;
+                background: var(--back-color);
+                @include s(height, 48);
+                @include borr(6);
+                color: var(--gray-color);
+                @include padding(0, 24);
+                &:placeholder-shown {
+                  color: var(--gray-light-color);
+                }
+              }
+              img {
+                position: absolute;
+                @include s(width, 18);
+                @include s(height, 18);
+                top: 0;
+                bottom: 0;
+                @include s(right, 20);
+                margin: auto;
+              }
+            }
+          }
+          .selectors {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            @include s(gap, 6);
+            .selector-title {
+              max-width: 100% !important;
+            }
+            .selector-content {
+              min-width: 100%;
+            }
+          }
+        }
+        .history-list-wrapper {
+          @include s(margin-top, 36);
+          .history-list-top {
+            display: grid;
+            @include gtc(90, 1fr, 148, 148);
+            @include s(gap, 24);
+            button {
+              transition: var(--trs-cubic-300);
+              &:hover {
+                color: var(--violet-color);
+                svg {
+                  path {
+                    stroke: var(--violet-color);
+                  }
+                }
+              }
+            }
+            button,
+            p {
+              display: flex;
+              align-items: center;
+              @include s(gap, 12);
+              @include body-sb;
+              color: var(--gray-light-color);
+              svg {
+                @include s(width, 12);
+                @include s(height, 6);
+              }
+            }
+          }
+          .history-list {
+            display: flex;
+            flex-direction: column;
+            @include s(margin-top, 16);
+            @include s(margin-bottom, 38);
+            .history-item {
+              display: grid;
+              @include gtc(90, 1fr, 148, 148);
+              @include s(gap, 24);
+              @include padding(16, 0);
+              border-top: 1px solid var(--line-color);
+              &:last-child {
+                border-bottom: 1px solid var(--line-color);
+              }
+              .date {
+                @include body-m;
+                color: var(--gray-light-color);
+              }
+              .title {
+                @include body-m;
+              }
+              .sum {
+                @include body-mb;
+              }
+              .points {
+                @include body-mb;
+                &.green {
+                  color: var(--green-color);
+                }
+                &.red {
+                  color: var(--red-color);
+                }
+              }
+            }
+          }
+        }
+        .more-btn {
+          @include s(margin-top, 28);
+          @include s(height, 48);
+          width: fit-content;
+          @include s(gap, 14);
+          @include padding(0, 24);
+          margin-left: auto;
+          margin-right: auto;
+          p {
+            text-transform: uppercase;
+            @include descr-m;
+          }
+        }
+      }
+    }
+  }
+}
