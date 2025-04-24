@@ -11,6 +11,8 @@ mixin info-card(data)
                     </svg>
                     p #{data.date}
             p.title #{data.title}
+            if data.descr
+                p.descr #{data.descr}
             if data.btnTitle
                 if data.download
                     button.btn.primary.l 
