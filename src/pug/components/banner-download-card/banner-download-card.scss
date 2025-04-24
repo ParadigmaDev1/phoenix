@@ -1,0 +1,42 @@
+@use "src/scss/common/files/mixins" as *;
+
+.banner-download-card {
+  @include borr(12);
+  border: 1px solid var(--line-color);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 100%;
+  &:hover {
+    .btn {
+      background: var(--violet-color);
+      svg {
+        path {
+          stroke: var(--white-color);
+        }
+      }
+    }
+  }
+  img {
+    object-fit: contain;
+    position: absolute;
+    @include s(bottom, 9);
+    @include s(right, 9);
+    @include s(top, 9);
+    @include s(left, 9);
+    margin: auto;
+    @include borr(6);
+  }
+  .btn {
+    position: absolute;
+    @include s(bottom, 9);
+    @include s(right, 9);
+    background: var(--white-color);
+    border: 1px solid var(--gray-color);
+    svg {
+      @include s(width, 18);
+      @include s(height, 18);
+    }
+  }
+}

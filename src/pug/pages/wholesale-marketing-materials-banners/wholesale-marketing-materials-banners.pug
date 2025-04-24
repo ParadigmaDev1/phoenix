@@ -1,0 +1,23 @@
+mixin wholesale-marketing-materials-banners()
+    .wholesale-marketing-materials-banners
+        .wholesale-marketing-materials-banners-inner.container.tabs-wrapper
+            .content 
+                h1 школьная продукция
+                a(href="#" download).btn.primary.m
+                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 9.46191L1 14.2619M19 9.46191V14.2619M1 13.6619C1 14.1347 1.09312 14.6028 1.27403 15.0396C1.45495 15.4763 1.72012 15.8732 2.05442 16.2075C2.38871 16.5418 2.78557 16.807 3.22234 16.9879C3.65911 17.1688 4.12724 17.2619 4.6 17.2619H15.4C15.8728 17.2619 16.3409 17.1688 16.7777 16.9879C17.2144 16.807 17.6113 16.5418 17.9456 16.2075C18.2799 15.8732 18.5451 15.4763 18.726 15.0396C18.9069 14.6028 19 14.1347 19 13.6619M15.625 6.46191L10 12.4619L4.825 6.46191M10 0.0869141L10 11.8619" stroke="#FFFFFF"/>
+                    </svg>
+                    p скачать архив 
+                .marketing-materials-list 
+                    +banner-download-card({img: './img/wholesale-marketing-materials-banners/1.png'})
+                    +banner-download-card({img: './img/wholesale-marketing-materials-banners/2.png'})
+                    +banner-download-card({img: './img/wholesale-marketing-materials-banners/3.png'})
+                    +banner-download-card({img: './img/wholesale-marketing-materials-banners/4.png'})
+                    +banner-download-card({img: './img/wholesale-marketing-materials-banners/5.png'})
+                    +banner-download-card({img: './img/wholesale-marketing-materials-banners/6.png'})
+                    +banner-download-card({img: './img/wholesale-marketing-materials-banners/7.png'})
+                    +banner-download-card({img: './img/wholesale-marketing-materials-banners/8.png'})
+                    +banner-download-card({img: './img/wholesale-marketing-materials-banners/9.png'})
+            .menu-block 
+                .sticky-block
+                    +profile-wholesale-menu()
