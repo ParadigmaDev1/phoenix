@@ -1,5 +1,7 @@
 mixin info-card(data)
     a(href="#").info-card&attributes(attributes)
+        if data.type
+            p.type #{data.type}
         .image-wrapper 
             img(src=data.img, alt="info")
         .content 
