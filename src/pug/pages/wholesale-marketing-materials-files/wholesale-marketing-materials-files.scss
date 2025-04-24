@@ -1,0 +1,54 @@
+@use "src/scss/common/files/mixins" as *;
+
+.wholesale-marketing-materials-files {
+  @include s(padding-bottom, 156);
+  @media (max-width: $tab-sm) {
+    @include s(padding-bottom, 64);
+    @include s(margin-top, 16);
+  }
+  .wholesale-marketing-materials-files-inner {
+    display: grid;
+    @include gtc(1fr, 294);
+    @include s(gap, 48);
+    @include s(margin-top, 36);
+
+    h1 {
+      @include h1;
+    }
+    .content {
+      .marketing-materials-list {
+        @include s(margin-top, 28);
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        @include s(column-gap, 18);
+        @include s(row-gap, 80);
+        .info-card {
+          .content {
+            align-items: flex-start;
+          }
+          .title {
+            @include h3;
+            transition: var(--trs-cubic-300);
+            text-transform: uppercase;
+            text-align: left;
+          }
+          .descr {
+            @include s(margin-top, 8);
+            @include descr-m;
+          }
+          .btn {
+            @include s(height, 36);
+            @include padding(0, 16);
+            @include s(margin-top, 20);
+
+            p {
+              @include descr-s;
+            }
+          }
+        }
+      }
+    }
+    .menu-block {
+    }
+  }
+}
