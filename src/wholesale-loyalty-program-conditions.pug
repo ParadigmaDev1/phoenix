@@ -1,0 +1,17 @@
+extends ./pug/templates/template.pug
+
+block head 
+  +head(["header", "wholesale-loyalty-program-conditions", "profile-wholesale-menu", "pagination", "crumbs", "selector", "footer", "mobile-menu", "accordion-item", "catalog-menu", "mobile-sidebar", "auth-modal", "recover-password-modal"])
+block header 
+  +header().dark
+  +mobile-menu()
+  +catalog-menu()
+  +mobile-sidebar()
+block content
+  +crumbs({items: [{title: 'Профиль', href: '#'}]})
+  +wholesale-loyalty-program-conditions()
+block footer 
+  +footer()
+block modals 
+  +auth-modal()
+  +recover-password-modal()

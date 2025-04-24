@@ -33,3 +33,4 @@ import "../pug/components/catalog-menu/catalog-menu.js";
 import "../pug/components/values-block/values-block.js";
 import "../pug/pages/home/home-collections/home-collections.js";
 import "../pug/pages/home/home-ideas/home-ideas.js";
+import "../pug/pages/wholesale-loyalty-program-conditions/wholesale-loyalty-program-conditions.js";
