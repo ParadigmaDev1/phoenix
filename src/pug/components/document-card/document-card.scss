@@ -1,0 +1,86 @@
+@use "src/scss/common/files/mixins" as *;
+
+.document-card {
+  display: grid;
+  grid-template-areas: "checkbox title company date comment";
+  @include gtc(20, 270, 90, 110, 1fr);
+  @include s(gap, 24);
+  @include padding(24, 0);
+  border-top: 1px solid var(--line-color);
+  align-items: flex-start;
+  .custom-checkbox {
+    grid-area: checkbox;
+  }
+  .title-wrapper {
+    grid-area: title;
+    display: flex;
+    align-items: flex-start;
+    @include s(gap, 16);
+    img {
+      @include s(width, 24);
+      @include s(height, 24);
+    }
+    .title {
+      @include body-mb;
+    }
+  }
+  .company {
+    grid-area: company;
+    display: flex;
+    align-items: center;
+    @include s(gap, 10);
+    svg {
+      @include s(width, 12);
+      @include s(height, 12);
+    }
+    p {
+      @include body-xs;
+      color: var(--gray-light-color);
+    }
+  }
+  .date {
+    grid-area: date;
+    @include body-xs;
+    color: var(--gray-light-color);
+  }
+  .comment-wrapper {
+    grid-area: comment;
+    .comment {
+      @include body-m;
+    }
+    .add-comment-btn {
+      display: flex;
+      align-items: center;
+      @include s(gap, 15);
+      svg {
+        @include s(width, 14);
+        @include s(height, 14);
+      }
+      p {
+        color: var(--violet-color);
+        @include body-m;
+      }
+    }
+    .textarea-wrapper {
+      textarea {
+        @include s(height, 144);
+        @include borr(6);
+      }
+      .btns {
+        @include s(margin-top, 12);
+        display: flex;
+        align-items: center;
+        @include s(gap, 12);
+        .btn {
+          width: fit-content;
+          @include padding(0, 36);
+          @include s(gap, 10);
+          p {
+            text-transform: uppercase;
+            @include descr-m;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,97 @@
+@use "src/scss/common/files/mixins" as *;
+
+.wholesale-documents {
+  @include s(padding-bottom, 156);
+  @media (max-width: $tab-sm) {
+    @include s(padding-bottom, 64);
+    @include s(margin-top, 16);
+  }
+  .wholesale-documents-inner {
+    display: grid;
+    @include gtc(1fr, 294);
+    @include s(gap, 48);
+    @include s(margin-top, 36);
+
+    h1 {
+      @include h1;
+    }
+    .content {
+      h5 {
+        @include h5;
+        text-transform: uppercase;
+      }
+      .add-btn {
+        @include s(margin-top, 36);
+        @include s(height, 48);
+        width: fit-content;
+        @include s(gap, 14);
+        @include padding(0, 24);
+        p {
+          text-transform: uppercase;
+          @include descr-m;
+        }
+      }
+      .filters {
+        @include s(margin-top, 20);
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        @include s(gap, 6);
+        @include s(width, 696);
+        .selector-title {
+          max-width: 100% !important;
+        }
+        .selector-content {
+          min-width: 100%;
+        }
+      }
+      .filters-features {
+        @include s(margin-top, 20);
+        display: flex;
+        align-items: center;
+        @include s(gap, 48);
+        .total-documents-select {
+          @include body-m;
+          color: var(--gray-light-color);
+        }
+        .select-all {
+          display: flex;
+          align-items: center;
+          @include s(gap, 16);
+          p {
+            @include body-m;
+          }
+        }
+        .remove-all-btn {
+          display: flex;
+          align-items: center;
+          @include s(gap, 12);
+          svg {
+            @include s(width, 14);
+            @include s(height, 14);
+          }
+          p {
+            color: var(--violet-color);
+            @include body-m;
+          }
+        }
+      }
+      .documents-list-wrapper {
+        @include s(margin-top, 28);
+
+        .more-btn {
+          @include s(margin-top, 28);
+          @include s(height, 48);
+          width: fit-content;
+          @include s(gap, 14);
+          @include padding(0, 24);
+          margin-left: auto;
+          margin-right: auto;
+          p {
+            text-transform: uppercase;
+            @include descr-m;
+          }
+        }
+      }
+    }
+  }
+}

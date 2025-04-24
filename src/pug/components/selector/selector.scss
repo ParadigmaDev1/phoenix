@@ -162,6 +162,7 @@
         input {
           display: none;
           &:checked ~ p {
+            color: var(--violet-color);
             // @include body-mb;
           }
         }
