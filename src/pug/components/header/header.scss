@@ -546,8 +546,13 @@
                 align-items: center;
                 @include s(gap, 12);
                 transition: var(--trs-cubic-300);
+                p {
+                  transition: var(--trs-cubic-300);
+                }
                 &:hover {
-                  color: var(--violet-color);
+                  p {
+                    color: var(--violet-color);
+                  }
                   svg {
                     path {
                       fill: var(--violet-color);
@@ -574,7 +579,14 @@
                 @include s(gap, 13);
                 color: var(--gray-light-color);
                 @include s(margin-top, 18);
-
+                &:hover {
+                  color: var(--violet-color);
+                  svg {
+                    path {
+                      stroke: var(--violet-color);
+                    }
+                  }
+                }
                 svg {
                   @include s(width, 18);
                   @include s(height, 18);
