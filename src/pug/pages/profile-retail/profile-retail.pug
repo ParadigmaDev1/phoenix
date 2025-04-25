@@ -64,7 +64,7 @@ mixin profile-retail()
                                 .address 
                                     img(src="./img/icons/pin-dark.svg", alt="pin")
                                     p 111250, г. Москва, Вн. Тер. г. Муниципальный округ Лефортово, дом 13, кв. 147, 1 подъезд, 9 этаж
-                                    button 
+                                    button(type='button' data-modal-target='edit-address-modal')  
                                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <g clip-path="url(#clip0_9012_217630)">
                                             <path d="M14.4297 1.42L18.6513 5.6416L5.18661 19.1063L0.965007 19.1063L0.965006 14.8847L14.4297 1.42Z" stroke="#343176"/>
@@ -80,7 +80,7 @@ mixin profile-retail()
                                 .address 
                                     img(src="./img/icons/pin-dark.svg", alt="pin")
                                     p 111250, г. Москва, Вн. Тер. г. Муниципальный округ Лефортово, дом 13, кв. 147, 1 подъезд, 9 этаж
-                                    button 
+                                    button(type='button' data-modal-target='edit-address-modal')  
                                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <g clip-path="url(#clip0_9012_217630)">
                                             <path d="M14.4297 1.42L18.6513 5.6416L5.18661 19.1063L0.965007 19.1063L0.965006 14.8847L14.4297 1.42Z" stroke="#343176"/>
@@ -93,7 +93,7 @@ mixin profile-retail()
                                             </clipPath>
                                             </defs>
                                         </svg>
-                                button.btn.outline.m.violet.add-btn 
+                                button.btn.outline.m.violet.add-btn(data-modal-target='add-address-modal' type='button') 
                                     <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M0.506836 7.5H14.5068" stroke="#343176"/>
                                         <path d="M7.50684 14.5L7.50684 0.5" stroke="#343176"/>

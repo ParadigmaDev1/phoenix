@@ -18,7 +18,7 @@ mixin shop-contacts-card(data)
         .image-wrapper 
             img(src=data.img || './img/shop-contacts-card/default-img.svg' , alt="contacts-img")
         if data.editBtn
-            button.edit-btn 
+            button.edit-btn(data-modal-target='edit-shop-modal') 
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0_8487_128922)">
                     <path d="M18.6516 5.64192L5.18758 19.106L0.964966 19.1053V14.8847L14.4297 1.42L18.6516 5.64192Z" stroke="#343176"/>

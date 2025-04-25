@@ -27,8 +27,13 @@ export function validateForm() {
     name: (value) => /^[А-Яа-яA-Za-zёЁ \-]+$/.test(value),
     phone: (value) => value.length >= 18,
     password: (value) => value.length > 0,
+    address: (value) => value.length > 0,
+    title: (value) => value.length > 0,
     inn: (value) => value.length === 10,
+    kpp: (value) => value.length === 9,
+    ogrn: (value) => value.length === 13,
     organization: (value) => value.length > 0,
+    number: (value) => /^[0-9]+$/.test(value),
     count: (value) => /^[0-9]+$/.test(value),
     time: (value) => /^([0-1]?[0-9]|2[0-3]):[0-5][0-9]$/.test(value),
     date: (value) =>
@@ -81,6 +86,31 @@ export function validateForm() {
         inputList: form.querySelectorAll(".input__valid-inn"),
         type: "inn",
         error: "Введите ИНН",
+      },
+      {
+        inputList: form.querySelectorAll(".input__valid-kpp"),
+        type: "kpp",
+        error: "Введите КПП",
+      },
+      {
+        inputList: form.querySelectorAll(".input__valid-ogrn"),
+        type: "ogrn",
+        error: "Введите ОГРН",
+      },
+      {
+        inputList: form.querySelectorAll(".input__valid-number"),
+        type: "number",
+        error: "Введите номер",
+      },
+      {
+        inputList: form.querySelectorAll(".input__valid-address"),
+        type: "address",
+        error: "Введите адрес",
+      },
+      {
+        inputList: form.querySelectorAll(".input__valid-title"),
+        type: "title",
+        error: "Введите название",
       },
     ];
 

@@ -3,13 +3,16 @@ const linkSelectors = document.querySelectorAll(".link-selector");
 if (linkSelectors) {
   linkSelectors.forEach((selector) => {
     const selectorTitle = selector.querySelector(".link-selector-btn");
-    selectorTitle.addEventListener("click", () => {
-      if (selector.className.includes("active")) {
-        selector.classList.remove("active");
-      } else {
-        selector.classList.add("active");
-      }
-    });
+    if (selectorTitle) {
+      selectorTitle.addEventListener("click", () => {
+        if (selector.className.includes("active")) {
+          selector.classList.remove("active");
+        } else {
+          selector.classList.add("active");
+        }
+      });
+    }
+
     selector.addEventListener("mouseleave", () => {
       selector.classList.remove("active");
     });
@@ -74,15 +77,17 @@ if (selectors) {
   const checkedSelector = document.querySelector(".custom-checkbox-selector");
   selectors.forEach((selector) => {
     const selectorTitle = selector.querySelector(".selector-title");
-    if (!selector.className.includes("link-selector")) {
-      selectorTitle.style.maxWidth = `${selector.offsetWidth - 100}px`;
-    }
-
-    window.addEventListener("resize", () => {
+    if (selectorTitle) {
       if (!selector.className.includes("link-selector")) {
         selectorTitle.style.maxWidth = `${selector.offsetWidth - 100}px`;
       }
-    });
+
+      window.addEventListener("resize", () => {
+        if (!selector.className.includes("link-selector")) {
+          selectorTitle.style.maxWidth = `${selector.offsetWidth - 100}px`;
+        }
+      });
+    }
   });
   // if (checkedSelector) {
   //   const selectorTitle = checkedSelector.querySelector(".selector-title");

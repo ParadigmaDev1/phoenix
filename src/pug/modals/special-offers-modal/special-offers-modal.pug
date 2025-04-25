@@ -1,0 +1,44 @@
+mixin special-offers-modal()
+    .special-offers-modal.modal
+        .modal-content-wrapper
+            .close-modal-wrapper
+                button.btn.close-modal 
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5.05026 14.9497L14.9498 5.05025" stroke="#343176"/>
+                        <path d="M14.9498 14.9497L5.05026 5.05025" stroke="#343176"/>
+                    </svg>
+            .modal-content 
+                .single-swiper-wrapper 
+                    .sticky-block
+                        .single-swiper 
+                            .swiper-wrapper 
+                                .swiper-slide 
+                                    img(src="./img/about/info/preview.jpg", alt="charity")
+                                .swiper-slide 
+                                    img(src="./img/about/info/preview.jpg", alt="charity")
+                                .swiper-slide 
+                                    img(src="./img/about/info/preview.jpg", alt="charity")
+                                .swiper-slide 
+                                    img(src="./img/about/info/preview.jpg", alt="charity")
+                        .navigation
+                            button.btn.circle.l.single-swiper-prev
+                                <svg width="10" height="14" viewBox="0 0 10 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9 13L1 7L9 1" stroke="white" stroke-linecap="square" stroke-linejoin="round"/>
+                                </svg>
+                            button.btn.circle.l.single-swiper-next
+                                <svg width="10" height="14" viewBox="0 0 10 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 13L9 7L0.999999 1" stroke="white" stroke-linecap="square" stroke-linejoin="round"/>
+                                </svg>
+                .content-wrapper
+                    h3 Поддерживаем благотворительные проекты
+                    .content
+                        .text-wrapper 
+                            p.subtitle 31-я международная мультитематическая выставка «Скрепка Экспо» объединила  более 250 компаний и участников из России, Беларуси, Китая, Индии, Турции и других стран.  
+                            .text 
+                                p Феникс+ — производитель канцелярии с креативным оформлением: карандашей, пеналов, блоков для заметок, линеек и других канцелярских принадлежностей. Решив заказать школьные канцтовары данного бренда, вы получите первоклассные товары по заманчивой стоимости.
+                                p Чтобы оформить заказ, зарегистрируйтесь на сайте, добавьте товары в корзину и завершите покупку. Наши менеджеры свяжутся с вами для подтверждения.
+                        a(href="#").btn.outline.violet.m.link-btn
+                            p смотреть товары 
+                            <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 13L7 7L0.999999 1" stroke="#343176" stroke-linecap="square" stroke-linejoin="round"/>
+                            </svg>

@@ -5,7 +5,7 @@ mixin wholesale-surveys()
                 h1 опросы
                 p.descr Мотивационный текст, почему важно нам и какие бонусы может получить партнер, пройдя опрос (доп. бонусы или др. плюшки)
                 .wholesale-surveys-list 
-                    .wholesale-surveys-item 
+                    .wholesale-surveys-item(data-modal-target='quiz-modal') 
                         .text 
                             p.title NPS
                             p.descr На сколько готовы рекомендовать
@@ -14,7 +14,7 @@ mixin wholesale-surveys()
                             <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M1 13L7 7L0.999999 1" stroke="#343176" stroke-linecap="square" stroke-linejoin="round"/>
                             </svg>
-                    .wholesale-surveys-item 
+                    .wholesale-surveys-item(data-modal-target='quiz-modal')  
                         .text 
                             p.title CSAT
                             p.descr Недавно вы общались с персональным менеджером, оценить удобство взаимодействия
@@ -23,11 +23,11 @@ mixin wholesale-surveys()
                             <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M1 13L7 7L0.999999 1" stroke="#343176" stroke-linecap="square" stroke-linejoin="round"/>
                             </svg>
-                    .wholesale-surveys-item 
+                    .wholesale-surveys-item(data-modal-target='quiz-modal')  
                         .text 
                             p.title NPS
                             p.descr На сколько готовы рекомендовать
-                        button.btn.outline.l.violet 
+                        button.btn.outline.l.violet
                             p пройти опрос
                             <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M1 13L7 7L0.999999 1" stroke="#343176" stroke-linecap="square" stroke-linejoin="round"/>

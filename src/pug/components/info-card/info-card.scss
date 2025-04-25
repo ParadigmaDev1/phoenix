@@ -1,6 +1,7 @@
 @use "src/scss/common/files/mixins" as *;
 
 .info-card {
+  cursor: pointer;
   &:hover {
     .btn {
       background: var(--violet-color);

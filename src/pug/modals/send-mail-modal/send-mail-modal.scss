@@ -1,0 +1,44 @@
+@use "src/scss/common/files/mixins" as *;
+
+.send-mail-modal {
+  //   .close-modal-wrapper {
+  //     .close-modal {
+  //       margin: 0 !important;
+  //       @include s(top, 20);
+  //       @include s(right, 20);
+  //     }
+  //   }
+  .close-modal {
+    margin-top: calc(-50 / var(--screensize) * 100vw) !important;
+    margin-right: calc(-50 / var(--screensize) * 100vw) !important;
+  }
+  .modal-content-wrapper {
+    @include s(max-width, 432);
+    // @include borr(12);
+    @include padding(48);
+    // padding: 0;
+    position: relative;
+    overflow: visible;
+
+    .title {
+      @include h4;
+      color: var(--violet-color);
+      text-transform: uppercase;
+    }
+    .descr {
+      @include body-m;
+      @include s(margin-top, 12);
+      @include s(margin-bottom, 28);
+    }
+    .submit-btn {
+      width: 100%;
+      justify-content: center;
+      @include s(margin-top, 28);
+
+      p {
+        text-transform: uppercase;
+        @include descr-m;
+      }
+    }
+  }
+}

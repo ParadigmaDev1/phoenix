@@ -11,6 +11,21 @@ export const inputsMask = () => {
       mask: "0000000000",
     });
   });
+  document.querySelectorAll(".input__valid-kpp").forEach((el) => {
+    IMask(el, {
+      mask: "000000000",
+    });
+  });
+  document.querySelectorAll(".input__valid-ogrn").forEach((el) => {
+    IMask(el, {
+      mask: "0000000000000",
+    });
+  });
+  document.querySelectorAll(".input__valid-number").forEach((el) => {
+    IMask(el, {
+      mask: "0000000000",
+    });
+  });
   document.querySelectorAll(".date-picker").forEach((input) => {
     new AirDatepicker(input);
     IMask(input, {

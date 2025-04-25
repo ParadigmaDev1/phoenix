@@ -25,6 +25,7 @@ video();
 import "../pug/components/selector/selector.js";
 import "../pug/components/header/header.js";
 import "../pug/components/map/map.js";
+import "../pug/modals/quiz-modal/quiz-modal.js";
 import "../pug/components/document-card/document-card.js";
 import "../pug/components/brands-list/brands-list.js";
 import "../pug/components/mobile-menu/mobile-menu.js";

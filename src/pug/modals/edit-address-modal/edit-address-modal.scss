@@ -1,0 +1,84 @@
+@use "src/scss/common/files/mixins" as *;
+
+.edit-address-modal {
+  //   .close-modal-wrapper {
+  //     .close-modal {
+  //       margin: 0 !important;
+  //       @include s(top, 20);
+  //       @include s(right, 20);
+  //     }
+  //   }
+  .close-modal {
+    margin-top: calc(-50 / var(--screensize) * 100vw) !important;
+    margin-right: calc(-50 / var(--screensize) * 100vw) !important;
+  }
+  .modal-content-wrapper {
+    @include s(max-width, 546);
+    // @include borr(12);
+    @include padding(48);
+    // padding: 0;
+    position: relative;
+    overflow: visible;
+
+    .title {
+      @include h6;
+      text-transform: uppercase;
+    }
+    .form {
+      .inputs {
+        display: flex;
+        flex-direction: column;
+        @include s(gap, 20);
+        @include s(margin-top, 20);
+
+        .input-wrapper {
+          display: flex;
+          flex-direction: column;
+          @include s(gap, 12);
+          p {
+            font-weight: 400;
+            @include s(font-size, 16);
+            line-height: 120%;
+            color: var(--gray-light-color);
+          }
+        }
+        .row {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          @include s(gap, 20);
+        }
+      }
+    }
+    .btns {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      align-items: center;
+      @include s(gap, 12);
+      @include s(margin-top, 28);
+
+      .submit-btn {
+        justify-content: center;
+        @include padding(0, 48);
+
+        p {
+          text-transform: uppercase;
+          @include descr-m;
+        }
+      }
+      .btn {
+        position: relative;
+        margin: 0 !important;
+        @include s(gap, 10);
+        width: 100%;
+        svg {
+          @include s(width, 14);
+          @include s(height, 14);
+        }
+        p {
+          text-transform: uppercase;
+          @include descr-m;
+        }
+      }
+    }
+  }
+}

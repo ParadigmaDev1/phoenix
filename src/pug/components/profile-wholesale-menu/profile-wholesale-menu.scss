@@ -16,6 +16,15 @@
       display: flex;
       align-items: center;
       @include s(gap, 16);
+      transition: var(--trs-cubic-300);
+      &:hover {
+        color: var(--violet-color);
+        svg {
+          path {
+            fill: var(--violet-color);
+          }
+        }
+      }
       &.active {
         svg {
           path {

@@ -1,0 +1,110 @@
+mixin quiz-modal()
+    .quiz-modal.modal
+        .modal-content-wrapper
+            .close-modal-wrapper
+                button.btn.close-modal 
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5.05026 14.9497L14.9498 5.05025" stroke="#343176"/>
+                        <path d="M14.9498 14.9497L5.05026 5.05025" stroke="#343176"/>
+                    </svg>
+            .modal-content 
+                .text-content 
+                    .main-content
+                        h2 оценка качества взаимодействия <br> с персональным менеджером
+                        .image-wrapper 
+                            img(src="./img/quiz-modal/1.jpg", alt="quiz")
+                    .counter 
+                        p.current 1
+                        p.separator /
+                        p.total 4
+                .quiz-step.active(data-step='1')
+                    .quiz-content
+                        p.question вопрос 1
+                        p.title Оцените качество решения вашего вопроса персональным менеджером 
+                        .inputs 
+                            label
+                                input(type="radio" name='manager')
+                                p Менеджер быстро и квалифицированно решил мою проблему
+                            label
+                                input(type="radio" name='manager')
+                                p Менеджер не решил мою проблему
+                            label
+                                input(type="radio" name='manager')
+                                p Менеджер быстро и квалифицированно решил мою проблему, был вежлив
+                            label
+                                input(type="radio" name='manager')
+                                p Менеджер не решил мою проблему и нахамил мне
+                            label
+                                input(type="radio" name='manager')
+                                p Менеджер быстро и квалифицированно решил мою проблему, был вежлив
+                            .input-wrapper 
+                                p Свой вариант
+                                textarea(placeholder="Введите")
+                    .btns 
+                        button(type="button" disabled).btn.outline.violet.m.prev-step
+                            <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7 13L1 7L7 1" stroke="#343176" stroke-linecap="square" stroke-linejoin="round"/>
+                            </svg>
+                            p назад
+                        button(type="button").btn.outline.violet.m.next-step
+                            p далее
+                            <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 13L7 7L0.999999 1" stroke="#343176" stroke-linecap="square" stroke-linejoin="round"/>
+                            </svg>
+                .quiz-step(data-step='2')
+                    .quiz-content
+                        p.question вопрос 2
+                        p.title Оцените качество решения вашего вопроса персональным менеджером 
+                        .inputs 
+                            label
+                                input(type="checkbox").custom-checkbox
+                                p Менеджер быстро и квалифицированно решил мою проблему
+                            label
+                                input(type="checkbox").custom-checkbox
+                                p Менеджер не решил мою проблему
+                            label
+                                input(type="checkbox").custom-checkbox
+                                p Менеджер быстро и квалифицированно решил мою проблему, был вежлив
+                            label
+                                input(type="checkbox").custom-checkbox
+                                p Менеджер не решил мою проблему и нахамил мне
+                            label
+                                input(type="checkbox").custom-checkbox
+                                p Менеджер быстро и квалифицированно решил мою проблему, был вежлив
+                    .btns 
+                        button(type="button" ).btn.outline.violet.m.prev-step
+                            <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7 13L1 7L7 1" stroke="#343176" stroke-linecap="square" stroke-linejoin="round"/>
+                            </svg>
+                            p назад
+                        button(type="button").btn.outline.violet.m.next-step
+                            p далее
+                            <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 13L7 7L0.999999 1" stroke="#343176" stroke-linecap="square" stroke-linejoin="round"/>
+                            </svg>
+                .quiz-step(data-step='3')
+                    .quiz-content
+                        p.question вопрос 3
+                        p.title Оцените качество решения вашего вопроса персональным менеджером 
+                        .inputs 
+                            textarea(placeholder="Введите").l
+                    .btns 
+                        button(type="button" ).btn.outline.violet.m.prev-step
+                            <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7 13L1 7L7 1" stroke="#343176" stroke-linecap="square" stroke-linejoin="round"/>
+                            </svg>
+                            p назад
+                        button(type="button").btn.outline.violet.m.next-step
+                            p далее
+                            <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 13L7 7L0.999999 1" stroke="#343176" stroke-linecap="square" stroke-linejoin="round"/>
+                            </svg>
+                .quiz-step(data-step='4')
+                    .quiz-content
+                        p.question спасибо!
+                        .text 
+                            p.title ваше мнение очень важно для нас, <br>ведь мы стремимся сделать взаимодействие максимально комфортным!
+                            .gift  
+                                span ваш подарок:
+                                p + 500 бонусов
+                    

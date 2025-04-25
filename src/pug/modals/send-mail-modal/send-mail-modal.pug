@@ -1,0 +1,14 @@
+mixin send-mail-modal()
+    .send-mail-modal.modal
+        .modal-content-wrapper
+            .close-modal-wrapper
+                button.btn.close-modal 
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5.05026 14.9497L14.9498 5.05025" stroke="#343176"/>
+                        <path d="M14.9498 14.9497L5.05026 5.05025" stroke="#343176"/>
+                    </svg>
+            .modal-content
+                p.title Письмо отправлено
+                p.descr На m.keyder@gmail.com выслано письмо <br>с инструкцией по восстановления пароля
+                button.btn.primary.m.submit-btn
+                    p выслать письмо повторно

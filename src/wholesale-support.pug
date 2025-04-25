@@ -1,9 +1,9 @@
 extends ./pug/templates/template.pug
 
 block head 
-  +head(["header", "wholesale-support", "profile-wholesale-menu", "crumbs", "selector", "footer", "mobile-menu", "accordion-item", "catalog-menu", "mobile-sidebar", "auth-modal", "recover-password-modal"])
+  +head(["header", "wholesale-support", "profile-wholesale-menu", "crumbs", "selector", "footer", "mobile-menu", "accordion-item", "catalog-menu", "mobile-sidebar", "ask-manager-modal"])
 block header 
-  +header().dark
+  +header({isAuth: true}).dark
   +mobile-menu()
   +catalog-menu()
   +mobile-sidebar()
@@ -13,5 +13,4 @@ block content
 block footer 
   +footer()
 block modals 
-  +auth-modal()
-  +recover-password-modal()
+  +ask-manager-modal()
