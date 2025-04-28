@@ -8,21 +8,24 @@ mixin wholesale-loyalty-program()
                         p.title ваш Текущий статус
                         .loyalty-program-info 
                             p.date 
-                                img(src="./img/icons/clock.svg", alt="clock")
+                                img(load='lazy' src="./img/icons/clock.svg", alt="clock")
                                 | Действителен до 01.01.2025
                             p.conditions 
-                                img(src="./img/icons/question.svg", alt="question")
+                                img(load='lazy' src="./img/icons/question.svg", alt="question")
                                 | Условия сохранения статуса
                     .loyalty-program-list
                         .loyalty-program-card.active 
                             .image-wrapper 
-                                img(src="./img/wholesale-loyalty-program/1.jpg", alt="loyalty")
+                                img(load='lazy' src="./img/wholesale-loyalty-program/1.jpg", alt="loyalty")
                             .title-wrapper 
                                 p.title Бронзовый
                                 p.cashback 3-5%
                                     span кэшбек
                             .loyalty-program-card-info 
                                 .info-list 
+                                    .info-list-item.chash-back
+                                        p.label Кешбек:
+                                        p.value 3-5%
                                     .info-list-item
                                         p.label Оборот:
                                         p.value 353 362 ₽
@@ -44,13 +47,16 @@ mixin wholesale-loyalty-program()
                                 p.minus-points - 406,79    
                         .loyalty-program-card 
                             .image-wrapper 
-                                img(src="./img/wholesale-loyalty-program/2.jpg", alt="loyalty")
+                                img(load='lazy' src="./img/wholesale-loyalty-program/2.jpg", alt="loyalty")
                             .title-wrapper 
                                 p.title Серебряный
                                 p.cashback 0,2-0,5%
                                     span кэшбек
                             .loyalty-program-card-info 
                                 .info-list 
+                                    .info-list-item.chash-back
+                                        p.label Кешбек:
+                                        p.value 3-5%
                                     .info-list-item
                                         p.label Оборот:
                                         p.value от 2 250 000 ₽
@@ -59,13 +65,16 @@ mixin wholesale-loyalty-program()
                                         p.value от 750
                         .loyalty-program-card 
                             .image-wrapper 
-                                img(src="./img/wholesale-loyalty-program/3.jpg", alt="loyalty")
+                                img(load='lazy' src="./img/wholesale-loyalty-program/3.jpg", alt="loyalty")
                             .title-wrapper 
                                 p.title Золотой
                                 p.cashback 0,5-1%
                                     span кэшбек
                             .loyalty-program-card-info 
                                 .info-list 
+                                    .info-list-item.chash-back
+                                        p.label Кешбек:
+                                        p.value 3-5%
                                     .info-list-item
                                         p.label Оборот:
                                         p.value от 6 000 000 ₽
@@ -74,13 +83,16 @@ mixin wholesale-loyalty-program()
                                         p.value 1 200
                         .loyalty-program-card 
                             .image-wrapper 
-                                img(src="./img/wholesale-loyalty-program/4.jpg", alt="loyalty")
+                                img(load='lazy' src="./img/wholesale-loyalty-program/4.jpg", alt="loyalty")
                             .title-wrapper 
                                 p.title VIP
                                 p.cashback 1-3%
                                     span кэшбек
                             .loyalty-program-card-info 
                                 .info-list 
+                                    .info-list-item.chash-back
+                                        p.label Кешбек:
+                                        p.value 3-5%
                                     .info-list-item
                                         p.label Оборот:
                                         p.value от 6 000 000 ₽
@@ -98,11 +110,11 @@ mixin wholesale-loyalty-program()
                         .date 
                             .date-picker-wrapper
                                 input(type="text" placeholder='с   _ _ - _ _ - _ _ _ _').date-picker
-                                img(src="./img/icons/calendar.svg", alt="calendar")
+                                img(load='lazy' src="./img/icons/calendar.svg", alt="calendar")
                             p.separator —
                             .date-picker-wrapper
                                 input(type="text" placeholder='по  _ _ - _ _ - _ _ _ _').date-picker
-                                img(src="./img/icons/calendar.svg", alt="calendar")
+                                img(load='lazy' src="./img/icons/calendar.svg", alt="calendar")
                         .selectors 
                             +selector({title: 'Все операции', name: 'sort-type', items: [{title: 'По дате изменения'},{title: 'По названию'}]})
                             +selector({title: 'Показывать по: 20', name: 'count', items: [{title: 'Показывать по: 20'},{title: 'Показывать по: 10'}]})
@@ -124,63 +136,123 @@ mixin wholesale-loyalty-program()
                             .history-item 
                                 p.date 09.11.24
                                 p.title КНЮГО03231О Реализация товаров и услуг ИП Медведев Андрей Михайлович
-                                p.sum 70 000 ₽
-                                p.points.green +27,45
+                                .info
+                                    .sum
+                                        p.label Сумма
+                                        p.value 70 000 ₽
+                                    .points.green 
+                                        p.label Количесто баллов
+                                        p.value +27,45
                             .history-item 
                                 p.date 08.11.24
                                 p.title КНЮГО03231О Реализация товаров и услуг ИП Медведев Андрей Михайлович
-                                p.sum 149 000 ₽
-                                p.points.green +150,00
+                                .info
+                                    .sum
+                                        p.label Сумма
+                                        p.value 149 000 ₽
+                                    .points.green 
+                                        p.label Количесто баллов
+                                        p.value +150,00
                             .history-item 
                                 p.date 03.11.24
                                 p.title Корректировка (сгорание баллов)
-                                p.sum —
-                                p.points.red -350
+                                .info
+                                    .sum
+                                        p.label Сумма
+                                        p.value —
+                                    .points.red 
+                                        p.label Количесто баллов
+                                        p.value -350
                             .history-item 
                                 p.date 09.11.24
                                 p.title КНЮГО03231О Реализация товаров и услуг ИП Медведев Андрей Михайлович
-                                p.sum 70 000 ₽
-                                p.points.green +27,45
+                                .info
+                                    .sum
+                                        p.label Сумма
+                                        p.value 70 000 ₽
+                                    .points.green 
+                                        p.label Количесто баллов
+                                        p.value +27,45
                             .history-item 
                                 p.date 08.11.24
                                 p.title КНЮГО03231О Реализация товаров и услуг ИП Медведев Андрей Михайлович
-                                p.sum 149 000 ₽
-                                p.points.green +150,00
+                                .info
+                                    .sum
+                                        p.label Сумма
+                                        p.value 149 000 ₽
+                                    .points.green 
+                                        p.label Количесто баллов
+                                        p.value +150,00
                             .history-item 
                                 p.date 03.11.24
                                 p.title Корректировка (сгорание баллов)
-                                p.sum —
-                                p.points.red -350
+                                .info
+                                    .sum
+                                        p.label Сумма
+                                        p.value —
+                                    .points.red 
+                                        p.label Количесто баллов
+                                        p.value -350
                             .history-item 
                                 p.date 09.11.24
                                 p.title КНЮГО03231О Реализация товаров и услуг ИП Медведев Андрей Михайлович
-                                p.sum 70 000 ₽
-                                p.points.green +27,45
+                                .info
+                                    .sum
+                                        p.label Сумма
+                                        p.value 70 000 ₽
+                                    .points.green 
+                                        p.label Количесто баллов
+                                        p.value +27,45
                             .history-item 
                                 p.date 08.11.24
                                 p.title КНЮГО03231О Реализация товаров и услуг ИП Медведев Андрей Михайлович
-                                p.sum 149 000 ₽
-                                p.points.green +150,00
+                                .info
+                                    .sum
+                                        p.label Сумма
+                                        p.value 149 000 ₽
+                                    .points.green 
+                                        p.label Количесто баллов
+                                        p.value +150,00
                             .history-item 
                                 p.date 03.11.24
                                 p.title Корректировка (сгорание баллов)
-                                p.sum —
-                                p.points.red -350
+                                .info
+                                    .sum
+                                        p.label Сумма
+                                        p.value —
+                                    .points.red 
+                                        p.label Количесто баллов
+                                        p.value -350
                             .history-item 
                                 p.date 09.11.24
                                 p.title КНЮГО03231О Реализация товаров и услуг ИП Медведев Андрей Михайлович
-                                p.sum 70 000 ₽
-                                p.points.green +27,45
+                                .info
+                                    .sum
+                                        p.label Сумма
+                                        p.value 70 000 ₽
+                                    .points.green 
+                                        p.label Количесто баллов
+                                        p.value +27,45
                             .history-item 
                                 p.date 08.11.24
                                 p.title КНЮГО03231О Реализация товаров и услуг ИП Медведев Андрей Михайлович
-                                p.sum 149 000 ₽
-                                p.points.green +150,00
+                                .info
+                                    .sum
+                                        p.label Сумма
+                                        p.value 149 000 ₽
+                                    .points.green 
+                                        p.label Количесто баллов
+                                        p.value +150,00
                             .history-item 
                                 p.date 03.11.24
                                 p.title Корректировка (сгорание баллов)
-                                p.sum —
-                                p.points.red -350
+                                .info
+                                    .sum
+                                        p.label Сумма
+                                        p.value —
+                                    .points.red 
+                                        p.label Количесто баллов
+                                        p.value -350
                     +pagination()
                     button.btn.outline.violet.m.more-btn
                         <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">

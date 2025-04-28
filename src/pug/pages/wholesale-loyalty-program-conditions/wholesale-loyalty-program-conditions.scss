@@ -11,7 +11,11 @@
     @include gtc(1fr, 294);
     @include s(gap, 48);
     @include s(margin-top, 36);
-
+    @media (max-width: $tab-sm) {
+      grid-template-columns: 1fr;
+      gap: 0;
+      @include s(margin-top, 22);
+    }
     h1 {
       @include h1;
     }
@@ -21,11 +25,16 @@
         justify-content: space-between;
         @include s(margin-bottom, 36);
         align-items: center;
-
+        @media (max-width: $tab-sm) {
+          @include s(margin-bottom, 20);
+        }
         .btn {
           @include s(gap, 12);
           @include s(height, 36);
           @include padding(0, 16);
+          @media (max-width: $tab-sm) {
+            display: none;
+          }
           p {
             text-transform: uppercase;
             @include descr-s;
@@ -36,14 +45,34 @@
         display: grid;
         @include gtc(294, 1fr);
         @include s(gap, 48);
+        @media (max-width: $tab-sm) {
+          grid-template-columns: 1fr;
+        }
         .navigation-block {
+          @media (max-width: $tab-sm) {
+            position: fixed;
+            @include s(bottom, 59);
+            right: 0;
+            left: 0;
+            background: var(--white-color);
+            z-index: 90;
+            @include padding(12, 20);
+            box-shadow: var(--shadow);
+          }
           .sticky-block {
             @include s(padding-top, 28);
             border-top: 1px solid var(--line-color);
+            @media (max-width: $tab-sm) {
+              padding-top: 0;
+              border-top: none;
+            }
             .nav-list {
               display: flex;
               flex-direction: column;
               @include s(gap, 12);
+              @media (max-width: $tab-sm) {
+                display: none;
+              }
               button {
                 text-align: left;
                 display: flex;
@@ -75,6 +104,13 @@
             .accept-btn {
               width: 100%;
               @include s(margin-top, 28);
+              @media (max-width: $tab-sm) {
+                margin-top: 0;
+                @include s(height, 36);
+                p {
+                  @include descr-s;
+                }
+              }
             }
             .features {
               @include s(margin-top, 28);
@@ -82,6 +118,9 @@
               display: flex;
               align-items: center;
               @include s(gap, 6);
+              @media (max-width: $tab-sm) {
+                display: none;
+              }
               .btn {
                 background: var(--white-color);
                 border: 1px solid var(--gray-color);

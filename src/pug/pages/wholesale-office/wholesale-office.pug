@@ -7,10 +7,10 @@ mixin wholesale-office()
                     h5 График платежей
                     .info
                         p.alert 
-                            img(src="./img/icons/info.svg", alt="info")
+                            img(load='lazy' src="./img/icons/info.svg", alt="info")
                             | У вас имеется просроченный долг на сумму 28 093, 78 ₽
                         p.date 
-                            img(src="./img/icons/clock.svg", alt="info")
+                            img(load='lazy' src="./img/icons/clock.svg", alt="info")
                             | Обновлено 03.11.24 22:32 
                     .paylent-list 
                         +schedule-card({title: 'Текущая задолженность', sum: '145 000 ₽'})
@@ -47,10 +47,10 @@ mixin wholesale-office()
                             <svg width="10" height="14" viewBox="0 0 10 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M1 13L9 7L0.999999 1" stroke="white" stroke-linecap="square" stroke-linejoin="round"/>
                             </svg>
-                        .double-swiper-pagination-wrapper.pagination-progress-wrapper
-                            p.current 01
-                            .double-swiper-pagination.pagination-progress
-                            p.total
+                    .double-swiper-pagination-wrapper.pagination-progress-wrapper
+                        p.current 01
+                        .double-swiper-pagination.pagination-progress
+                        p.total
                 .loyalty-program
                     .loyalty-program-content
                         h5 Программа лояльности
@@ -63,7 +63,7 @@ mixin wholesale-office()
                                 <path d="M1 13L7 7L0.999999 1" stroke="#343176" stroke-linecap="square" stroke-linejoin="round"/>
                             </svg>
                     .image-block 
-                        img(src="./img/wholesale-office/loyalty.jpg", alt="loyalty")
+                        img(load='lazy' src="./img/wholesale-office/loyalty.jpg", alt="loyalty")
             .menu-block 
                 .sticky-block
                     +profile-wholesale-menu()

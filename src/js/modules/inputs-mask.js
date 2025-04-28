@@ -1,4 +1,5 @@
 import AirDatepicker from "air-datepicker";
+import IMask from "imask";
 
 export const inputsMask = () => {
   document.querySelectorAll(".input__valid-phone").forEach((el) => {

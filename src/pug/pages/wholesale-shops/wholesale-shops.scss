@@ -11,7 +11,11 @@
     @include gtc(1fr, 294);
     @include s(gap, 48);
     @include s(margin-top, 36);
-
+    @media (max-width: $tab-sm) {
+      grid-template-columns: 1fr;
+      @include s(margin-top, 20);
+      @include s(row-gap, 36);
+    }
     h1 {
       @include h1;
     }
@@ -19,6 +23,9 @@
       .descr {
         @include s(margin-top, 36);
         @include body-l;
+        @media (max-width: $tab-sm) {
+          @include s(margin-top, 20);
+        }
       }
       .add-btn {
         @include s(margin-top, 36);
@@ -26,6 +33,10 @@
         width: fit-content;
         @include s(gap, 14);
         @include padding(0, 24);
+        @media (max-width: $tab-sm) {
+          @include s(margin-top, 24);
+          width: 100%;
+        }
         p {
           text-transform: uppercase;
           @include descr-m;
@@ -36,6 +47,11 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         @include s(gap, 24);
+        @media (max-width: $tab-sm) {
+          grid-template-columns: 1fr;
+          @include s(gap, 12);
+          @include s(margin-top, 28);
+        }
       }
     }
     .menu-block {

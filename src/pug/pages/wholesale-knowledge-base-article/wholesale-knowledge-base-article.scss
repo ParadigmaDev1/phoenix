@@ -11,7 +11,12 @@
     @include gtc(1fr, 294);
     @include s(gap, 48);
     @include s(margin-top, 36);
-
+    @media (max-width: $tab-sm) {
+      @include s(margin-top, 20);
+      grid-template-columns: 1fr;
+      gap: 0;
+      @include s(margin-top, 22);
+    }
     h1 {
       @include h1;
     }
@@ -21,11 +26,16 @@
         justify-content: space-between;
         @include s(margin-bottom, 36);
         align-items: center;
-
+        @media (max-width: $tab-sm) {
+          @include s(margin-bottom, 20);
+        }
         .btn {
           @include s(gap, 12);
           @include s(height, 36);
           @include padding(0, 16);
+          @media (max-width: $tab-sm) {
+            display: none;
+          }
           p {
             text-transform: uppercase;
             @include descr-s;
@@ -36,7 +46,14 @@
         display: grid;
         @include gtc(294, 1fr);
         @include s(gap, 48);
+        @media (max-width: $tab-sm) {
+          grid-template-columns: 1fr;
+          gap: 0;
+        }
         .navigation-block {
+          @media (max-width: $tab-sm) {
+            display: none;
+          }
           .sticky-block {
             @include s(padding-top, 28);
             border-top: 1px solid var(--line-color);
@@ -186,6 +203,7 @@
           @include s(gap, 12);
           .title {
             @include body-xl;
+            margin-top: 0;
           }
           .text {
             display: flex;

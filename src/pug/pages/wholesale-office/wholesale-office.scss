@@ -11,7 +11,11 @@
     @include gtc(1fr, 294);
     @include s(gap, 48);
     @include s(margin-top, 36);
-
+    @media (max-width: $tab-sm) {
+      grid-template-columns: 1fr;
+      gap: 0;
+      @include s(margin-top, 22);
+    }
     h1 {
       @include h1;
     }
@@ -22,10 +26,18 @@
       }
       .payment-schedule {
         @include s(margin-top, 36);
+        @media (max-width: $tab-sm) {
+          @include s(margin-top, 20);
+        }
         .info {
           display: flex;
           justify-content: space-between;
           @include s(margin-top, 16);
+          @media (max-width: $tab-sm) {
+            flex-direction: column;
+            @include s(margin-top, 20);
+            @include s(gap, 8);
+          }
           .alert,
           .date {
             display: flex;
@@ -49,6 +61,10 @@
           display: grid;
           grid-template-columns: repeat(2, 1fr);
           @include s(gap, 24);
+          @media (max-width: $tab-sm) {
+            grid-template-columns: 1fr;
+            @include s(gap, 12);
+          }
         }
       }
       .carts {
@@ -56,6 +72,10 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         @include s(gap, 24);
+        @media (max-width: $tab-sm) {
+          grid-template-columns: 1fr;
+          @include s(gap, 64);
+        }
         .carts-list {
           @include s(margin-top, 16);
           display: flex;
@@ -83,6 +103,7 @@
 
           @media (max-width: $tab-sm) {
             @include s(margin-top, 28);
+            padding-bottom: 100%;
           }
           .swiper-wrapper {
             position: absolute;
@@ -149,6 +170,11 @@
         grid-template-columns: repeat(2, 1fr);
         @include s(gap, 24);
         align-items: center;
+        @media (max-width: $tab-sm) {
+          grid-template-columns: 1fr;
+          @include padding(28);
+          @include s(gap, 28);
+        }
         .loyalty-program-content {
           ul {
             list-style: none;
@@ -156,6 +182,9 @@
             flex-direction: column;
             @include s(gap, 8);
             @include s(margin-top, 12);
+            @media (max-width: $tab-sm) {
+              @include s(margin-top, 8);
+            }
             li {
               position: relative;
               @include s(padding-left, 30);
@@ -189,6 +218,11 @@
           @include borr(24);
           position: relative;
           overflow: hidden;
+          @media (max-width: $tab-sm) {
+            border-width: 3px;
+            @include s(height, 153);
+            @include borr(12);
+          }
           img {
             position: absolute;
             width: 100%;

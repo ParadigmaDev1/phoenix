@@ -27,6 +27,8 @@
     @include s(left, 9);
     margin: auto;
     @include borr(6);
+    width: 95%;
+    height: 95%;
   }
   .btn {
     position: absolute;

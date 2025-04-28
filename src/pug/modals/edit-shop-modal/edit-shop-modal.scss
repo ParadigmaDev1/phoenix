@@ -1,16 +1,19 @@
 @use "src/scss/common/files/mixins" as *;
 
 .edit-shop-modal {
-  //   .close-modal-wrapper {
-  //     .close-modal {
-  //       margin: 0 !important;
-  //       @include s(top, 20);
-  //       @include s(right, 20);
-  //     }
-  //   }
-  .close-modal {
-    margin-top: calc(-50 / var(--screensize) * 100vw) !important;
-    margin-right: calc(-50 / var(--screensize) * 100vw) !important;
+  .close-modal-wrapper {
+    @media (max-width: $tab-sm) {
+      top: 0 !important;
+    }
+    .close-modal {
+      margin-top: calc(-50 / var(--screensize) * 100vw) !important;
+      margin-right: calc(-50 / var(--screensize) * 100vw) !important;
+      @media (max-width: $tab-sm) {
+        margin: 0 !important;
+        @include s(top, 0);
+        @include s(right, 0);
+      }
+    }
   }
   .modal-content-wrapper {
     @include s(max-width, 546);
@@ -19,7 +22,9 @@
     // padding: 0;
     position: relative;
     overflow: auto;
-
+    @media (max-width: $tab-sm) {
+      @include padding(20);
+    }
     .title {
       @include h6;
       text-transform: uppercase;
@@ -53,6 +58,10 @@
       display: grid;
       @include gtc(128, 1fr);
       @include s(gap, 24);
+      @media (max-width: $tab-sm) {
+        grid-template-columns: 1fr;
+        @include s(gap, 12);
+      }
       .image-wrapper {
         @include s(width, 128);
         @include s(height, 85);
@@ -107,7 +116,10 @@
       align-items: center;
       @include s(gap, 12);
       @include s(margin-top, 20);
-
+      @media (max-width: $tab-sm) {
+        grid-template-columns: 1fr;
+        @include s(gap, 10);
+      }
       .submit-btn {
         justify-content: center;
         @include padding(0, 48);

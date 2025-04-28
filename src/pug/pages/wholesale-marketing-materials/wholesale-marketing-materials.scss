@@ -11,7 +11,11 @@
     @include gtc(1fr, 294);
     @include s(gap, 48);
     @include s(margin-top, 36);
-
+    @media (max-width: $tab-sm) {
+      grid-template-columns: 1fr;
+      gap: 0;
+      @include s(margin-top, 22);
+    }
     h1 {
       @include h1;
     }
@@ -22,6 +26,11 @@
         grid-template-columns: repeat(2, 1fr);
         @include s(column-gap, 24);
         @include s(row-gap, 64);
+        @media (max-width: $tab-sm) {
+          grid-template-columns: 1fr;
+          @include s(margin-top, 20);
+          @include s(row-gap, 36);
+        }
         .info-card {
           .content {
             align-items: flex-start;
@@ -36,12 +45,17 @@
             @include s(margin-top, 8);
             @include descr-m;
             text-transform: uppercase;
+            @media (max-width: $tab-sm) {
+              @include descr-s;
+            }
           }
           .btn {
             @include s(height, 36);
             @include padding(0, 16);
             @include s(margin-top, 20);
-
+            @media (max-width: $tab-sm) {
+              @include s(margin-top, 16);
+            }
             p {
               @include descr-s;
             }

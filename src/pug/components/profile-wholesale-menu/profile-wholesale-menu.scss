@@ -4,6 +4,9 @@
   display: flex;
   flex-direction: column;
   @include s(gap, 48);
+  @media (max-width: $tab-sm) {
+    display: none;
+  }
   .profile-wholesale-menu {
     background: var(--white-color);
     @include borr(12);

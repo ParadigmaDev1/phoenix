@@ -2,12 +2,17 @@
 
 .document-card {
   display: grid;
-  grid-template-areas: "checkbox title company date comment";
-  @include gtc(20, 270, 90, 110, 1fr);
+  grid-template-areas: "checkbox title info comment";
+  @include gtc(20, 270, 224, 1fr);
   @include s(gap, 24);
   @include padding(24, 0);
   border-top: 1px solid var(--line-color);
   align-items: flex-start;
+  @media (max-width: $tab-sm) {
+    @include gtc(20, 1fr);
+    @include s(gap, 12);
+    grid-template-areas: "checkbox title" "checkbox info" "checkbox comment";
+  }
   .custom-checkbox {
     grid-area: checkbox;
   }
@@ -16,6 +21,10 @@
     display: flex;
     align-items: flex-start;
     @include s(gap, 16);
+    @media (max-width: $tab-sm) {
+      flex-direction: column;
+      @include s(gap, 12);
+    }
     img {
       @include s(width, 24);
       @include s(height, 24);
@@ -24,25 +33,31 @@
       @include body-mb;
     }
   }
-  .company {
-    grid-area: company;
-    display: flex;
+  .info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     align-items: center;
-    @include s(gap, 10);
-    svg {
-      @include s(width, 12);
-      @include s(height, 12);
+    @include s(gap, 24);
+    grid-area: info;
+    .company {
+      display: flex;
+      align-items: center;
+      @include s(gap, 10);
+      svg {
+        @include s(width, 12);
+        @include s(height, 12);
+      }
+      p {
+        @include body-xs;
+        color: var(--gray-light-color);
+      }
     }
-    p {
+    .date {
       @include body-xs;
       color: var(--gray-light-color);
     }
   }
-  .date {
-    grid-area: date;
-    @include body-xs;
-    color: var(--gray-light-color);
-  }
+
   .comment-wrapper {
     grid-area: comment;
     .comment {
@@ -71,10 +86,16 @@
         display: flex;
         align-items: center;
         @include s(gap, 12);
+        @media (max-width: $tab-sm) {
+          flex-direction: column;
+        }
         .btn {
           width: fit-content;
           @include padding(0, 36);
           @include s(gap, 10);
+          @media (max-width: $tab-sm) {
+            width: 100%;
+          }
           p {
             text-transform: uppercase;
             @include descr-m;

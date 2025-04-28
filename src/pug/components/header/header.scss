@@ -390,6 +390,9 @@
         }
         .auth-selector {
           @include s(width, 237);
+          @media (max-width: $tab-sm) {
+            display: none;
+          }
           &:hover {
             .selector-btn {
               background: var(--violet-color);

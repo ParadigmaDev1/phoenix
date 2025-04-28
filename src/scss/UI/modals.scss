@@ -26,6 +26,52 @@
       pointer-events: all;
     }
   }
+  .close-modal-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    position: sticky;
+    @include s(top, 0);
+    @include s(right, 0);
+    z-index: 10;
+    @media (max-width: $tab-sm) {
+      @include s(top, 34);
+    }
+    .close-modal {
+      position: absolute;
+      @include s(top, 19);
+      @include s(right, 20);
+      @include s(width, 36);
+      @include s(height, 36);
+      @include borr(6);
+      padding: 0;
+      @include s(margin-top, -20);
+      @include s(margin-right, -20);
+      background: var(--white-color);
+      border: 1px solid var(--line-color);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: var(--trs-cubic-300);
+      @media (max-width: $tab-sm) {
+        @include s(margin-right, 0);
+        @include s(top, -14);
+        @include s(right, 1);
+      }
+      &:hover {
+        background: var(--violet-color);
+        border-color: var(--violet-color);
+        svg {
+          path {
+            stroke: var(--white-color);
+          }
+        }
+      }
+      svg {
+        @include s(width, 18);
+        @include s(height, 18);
+      }
+    }
+  }
   .modal-content-wrapper {
     overflow: auto;
     position: relative;
@@ -46,52 +92,6 @@
       @include padding(20);
       height: 100%;
       border-radius: 0;
-    }
-    .close-modal-wrapper {
-      display: flex;
-      justify-content: flex-end;
-      position: sticky;
-      @include s(top, 0);
-      @include s(right, 0);
-      z-index: 10;
-      @media (max-width: $tab-sm) {
-        @include s(top, 34);
-      }
-      .close-modal {
-        position: absolute;
-        @include s(top, 19);
-        @include s(right, 20);
-        @include s(width, 36);
-        @include s(height, 36);
-        @include borr(6);
-        padding: 0;
-        @include s(margin-top, -20);
-        @include s(margin-right, -20);
-        background: var(--white-color);
-        border: 1px solid var(--line-color);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: var(--trs-cubic-300);
-        @media (max-width: $tab-sm) {
-          @include s(margin-right, 0);
-          @include s(top, -14);
-          @include s(right, 1);
-        }
-        &:hover {
-          background: var(--violet-color);
-          border-color: var(--violet-color);
-          svg {
-            path {
-              stroke: var(--white-color);
-            }
-          }
-        }
-        svg {
-          @include s(width, 18);
-          @include s(height, 18);
-        }
-      }
     }
   }
 }

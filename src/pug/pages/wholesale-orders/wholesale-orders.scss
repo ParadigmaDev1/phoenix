@@ -11,7 +11,11 @@
     @include gtc(1fr, 294);
     @include s(gap, 48);
     @include s(margin-top, 36);
-
+    @media (max-width: $tab-sm) {
+      grid-template-columns: 1fr;
+      gap: 0;
+      @include s(margin-top, 22);
+    }
     h1 {
       @include h1;
     }
@@ -25,6 +29,9 @@
         align-items: center;
         @include s(gap, 4);
         @include s(margin-top, 36);
+        @media (max-width: $tab-sm) {
+          @include s(margin-top, 20);
+        }
         .tab {
           position: relative;
           @include s(gap, 10);
@@ -49,12 +56,29 @@
         @include gtc(488, 432);
         @include s(gap, 82);
         @include s(margin-top, 36);
+        @media (max-width: $tab-sm) {
+          grid-template-columns: 1fr;
+          @include s(gap, 10);
+          @include s(margin-top, 28);
+        }
         .date {
           display: flex;
           @include s(gap, 8);
           align-items: center;
+          @media (max-width: $tab-sm) {
+            flex-direction: column;
+            @include s(gap, 10);
+          }
+          .separator {
+            @media (max-width: $tab-sm) {
+              display: none;
+            }
+          }
           .date-picker-wrapper {
             position: relative;
+            @media (max-width: $tab-sm) {
+              width: 100%;
+            }
             .date-picker {
               width: 100%;
               background: var(--back-color);
@@ -64,6 +88,7 @@
               @include padding(0, 24);
               &:placeholder-shown {
                 color: var(--gray-light-color);
+                @include body-m;
               }
             }
             img {
@@ -90,6 +115,14 @@
             color: var(--gray-color);
             &:placeholder-shown {
               color: var(--gray-light-color);
+              overflow: hidden;
+              display: -webkit-box;
+              -webkit-line-clamp: 1; /* Ограничиваем текст до 3 строк */
+              -webkit-box-orient: vertical;
+              text-overflow: ellipsis;
+              @media (max-width: $tab-sm) {
+                @include s(padding-right, 57);
+              }
             }
           }
           .search-btn {
@@ -130,6 +163,9 @@
         display: flex;
         flex-direction: column;
         @include s(gap, 12);
+        @media (max-width: $tab-sm) {
+          display: none;
+        }
         .accordion-item {
           .accordion-title {
             @include padding(28);
@@ -278,6 +314,102 @@
               flex-direction: column;
               @include s(gap, 28);
               width: 100%;
+            }
+          }
+        }
+      }
+      .orders-list {
+        display: none;
+        @media (max-width: $tab-sm) {
+          display: flex;
+          flex-direction: column;
+          @include s(gap, 12);
+          @include s(margin-top, 28);
+        }
+        .order-item {
+          @include padding(20);
+          @include borr(12);
+          background: var(--back-color);
+          .top {
+            display: grid;
+            @include gtc(232, 1fr);
+            @include s(gap, 20);
+          }
+          .title-wrapper {
+            .title {
+              @include h6;
+            }
+            .date {
+              @include body-xs;
+              color: var(--gray-light-color);
+              @include s(margin-top, 4);
+            }
+          }
+          .status {
+            @include s(height, 19);
+            @include padding(0, 10);
+            @include descr-xs;
+            text-transform: uppercase;
+            width: fit-content;
+            @include borr(4);
+            display: flex;
+            align-items: center;
+            @include s(margin-top, 10);
+
+            &.gray {
+              border: 1px solid var(--gray-light-color);
+              color: var(--gray-light-color);
+            }
+            &.orange {
+              border: 1px solid var(--orange-color);
+              color: var(--orange-color);
+            }
+            &.violet {
+              border: 1px solid var(--violet-color);
+              color: var(--violet-color);
+            }
+            &.green {
+              border: 1px solid var(--green-color);
+              color: var(--green-color);
+            }
+            &.red {
+              border: 1px solid var(--alert-color);
+              color: var(--alert-color);
+            }
+          }
+          .info-list {
+            @include s(margin-top, 16);
+            display: flex;
+            flex-direction: column;
+            @include s(gap, 6);
+
+            .info-item {
+              display: grid;
+              grid-template-columns: repeat(2, 1fr);
+              @include s(gap, 16);
+              .label {
+                @include body-s;
+                color: var(--gray-light-color);
+              }
+              .value {
+                @include body-sb;
+              }
+            }
+          }
+          .icon {
+            @include s(min-width, 28);
+            @include s(min-height, 28);
+            @include s(max-width, 28);
+            @include s(max-height, 28);
+            border: 1px solid var(--line-color);
+            @include borr(6);
+            background: var(--gray-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            svg {
+              @include s(height, 12);
+              @include s(width, 6);
             }
           }
         }

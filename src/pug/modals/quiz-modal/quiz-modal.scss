@@ -1,20 +1,61 @@
 @use "src/scss/common/files/mixins" as *;
 
 .quiz-modal {
+  .close-modal-wrapper {
+    @media (max-width: $tab-sm) {
+      top: 0 !important;
+    }
+    .close-modal {
+      margin-top: calc(-50 / var(--screensize) * 100vw) !important;
+      margin-right: calc(-50 / var(--screensize) * 100vw) !important;
+      @media (max-width: $tab-sm) {
+        margin: 0 !important;
+        @include s(top, 0);
+        @include s(right, 0);
+      }
+    }
+  }
   .modal-content-wrapper {
     height: 100% !important;
     max-height: 100% !important;
     @include padding(48, 142, 40, 28);
+    @media (max-width: $tab-sm) {
+      @include padding(20);
+    }
   }
   .modal-content {
     display: grid;
     @include gtc(432, 1fr);
     @include s(gap, 24);
     height: 100%;
+    @media (max-width: $tab-sm) {
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
+    .counter {
+      display: flex;
+      align-items: baseline;
+      @include s(gap, 5);
+      p {
+        font-weight: 400;
+        @include s(font-size, 36);
+        line-height: 115%;
+        color: var(--gray-light-color);
+        @media (max-width: $tab-sm) {
+          @include h2;
+        }
+      }
+      .current {
+        color: var(--violet-color);
+      }
+    }
     .text-content {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      @media (max-width: $tab-sm) {
+        display: none;
+      }
       .main-content {
         flex: 1;
         h2 {
@@ -33,20 +74,6 @@
           }
         }
       }
-      .counter {
-        display: flex;
-        align-items: baseline;
-        @include s(gap, 5);
-        p {
-          font-weight: 400;
-          @include s(font-size, 36);
-          line-height: 115%;
-          color: var(--gray-light-color);
-        }
-        .current {
-          color: var(--violet-color);
-        }
-      }
     }
     .quiz-step {
       display: none;
@@ -54,6 +81,10 @@
       justify-content: space-between;
       @include s(padding-left, 114);
       border-left: 1px solid var(--line-color);
+      @media (max-width: $tab-sm) {
+        padding-left: 0;
+        border-left: none;
+      }
       &.active {
         display: flex;
       }
@@ -65,17 +96,27 @@
           @include descr-m;
           color: var(--violet-color);
           text-transform: uppercase;
+          @media (max-width: $tab-sm) {
+            @include descr-s;
+          }
         }
         .title {
           @include s(margin-top, 36);
           @include h5;
           text-transform: uppercase;
+          @media (max-width: $tab-sm) {
+            @include s(margin-top, 12);
+            @include s(max-width, 263);
+          }
         }
         .text {
           @include s(margin-top, 181);
           display: flex;
           flex-direction: column;
           @include s(gap, 36);
+          @media (max-width: $tab-sm) {
+            @include s(margin-top, 12);
+          }
           .title {
             @include h5;
           }
@@ -87,6 +128,10 @@
             @include s(gap, 12);
             background: var(--green-back-color);
             width: fit-content;
+            @media (max-width: $tab-sm) {
+              width: 100%;
+              @include padding(20);
+            }
             span {
               text-transform: uppercase;
               @include descr-s;
@@ -103,6 +148,9 @@
           display: flex;
           flex-direction: column;
           @include s(gap, 12);
+          @media (max-width: $tab-sm) {
+            @include s(margin-top, 16);
+          }
           label {
             display: flex;
             align-items: center;
@@ -138,7 +186,15 @@
         display: flex;
         justify-content: space-between;
         @include s(margin-top, 28);
-
+        @media (max-width: $tab-sm) {
+          align-items: center;
+        }
+        .counter {
+          display: none;
+          @media (max-width: $tab-sm) {
+            display: flex;
+          }
+        }
         .btn {
           @include padding(0, 16);
           @include s(gap, 12);

@@ -138,6 +138,10 @@
   line-height: 115%;
   @include s(letter-spacing, 1);
   text-transform: uppercase;
+  @media (max-width: $tab-sm) {
+    @include s(font-size, 24);
+    letter-spacing: 0;
+  }
 }
 @mixin h4 {
   @include s(font-size, 28);

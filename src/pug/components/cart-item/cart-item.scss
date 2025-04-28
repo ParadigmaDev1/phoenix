@@ -9,13 +9,25 @@
   @include s(gap, 48);
   cursor: pointer;
   transition: var(--trs-cubic-300);
+  @media (max-width: $tab-sm) {
+    @include padding(20);
+    @include gtc(1fr, 6);
+    @include s(gap, 31);
+  }
   &:hover {
     border-color: var(--violet-color);
     .btn {
       background: var(--violet-color) !important;
+      @media (max-width: $tab-sm) {
+        background: none !important;
+      }
       svg {
         path {
           stroke: var(--white-color) !important;
+
+          @media (max-width: $tab-sm) {
+            stroke: var(--gray-color) !important;
+          }
         }
       }
     }
@@ -37,10 +49,16 @@
         .label {
           @include body-m;
           color: var(--gray-light-color);
+          @media (max-width: $tab-sm) {
+            @include body-s;
+          }
         }
         .value {
           text-align: right;
           @include body-m;
+          @media (max-width: $tab-sm) {
+            @include body-s;
+          }
         }
       }
       .empty {
@@ -52,6 +70,12 @@
   .btn {
     background: none !important;
     border: 1px solid var(--violet-color);
+    @media (max-width: $tab-sm) {
+      border: none;
+      width: auto !important;
+      height: auto !important;
+      padding: 0;
+    }
     svg {
       @include s(width, 6);
       @include s(height, 12);

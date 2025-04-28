@@ -4,7 +4,7 @@ mixin info-card(data = {})
             if data.type
                 p.type #{data.type}
             .image-wrapper 
-                img(src=data.img, alt="info")
+                img(load='lazy' src=data.img, alt="info")
             .content 
                 if data.date
                     .date 
@@ -34,7 +34,7 @@ mixin info-card(data = {})
             if data.type
                 p.type #{data.type}
             .image-wrapper 
-                img(src=data.img, alt="info")
+                img(load='lazy' src=data.img, alt="info")
             .content 
                 if data.date
                     .date 

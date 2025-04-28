@@ -2,12 +2,12 @@ mixin become-partner-card(data)
     .become-partner-card&attributes(attributes)
         if data.img
             .image-wrapper 
-                img(src=data.img, alt="become-partner")
+                img(load='lazy' src=data.img, alt="become-partner")
         else
             .video-block
                 video(src='./files/video.mp4' type='video/mp4' preload="auto" poster="./img/about/info/preview.jpg")
                 button.btn.play-btn 
-                    img(src="./img/icons/play.svg", alt="play") 
+                    img(load='lazy' src="./img/icons/play.svg", alt="play") 
         .content(class=data.moreBtn ? 'row' : '') 
             .text 
                 p.title #{data.title}

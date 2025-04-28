@@ -349,6 +349,45 @@ export const swiper = () => {
       },
     },
   });
+  const profileMenuSwiper = new Swiper(".profile-menu-swiper", {
+    modules: [Pagination],
+    slidesPerView: 1.2,
+    spaceBetween: 10,
+    allowTouchMove: false,
+    pagination: {
+      el: ".profile-menu-swiper-pagination",
+      type: "progressbar",
+    },
+    on: {
+      init: function (swiper) {
+        updateVisibleSlides(this);
+        const total = swiper.el.parentElement.querySelector(".total");
+        if (total) {
+          total.innerHTML =
+            swiper.slides.length < 10
+              ? `0${swiper.slides.length}`
+              : swiper.slides.length;
+        }
+      },
+      slideChange: function () {
+        updateVisibleSlides(this);
+      },
+      resize: function () {
+        updateVisibleSlides(this);
+      },
+    },
+    breakpoints: {
+      0: {
+        allowTouchMove: true,
+        slidesPerView: 1,
+      },
+      767: {
+        slidesPerView: 2,
+        spaceBetween: 24,
+        allowTouchMove: false,
+      },
+    },
+  });
 
   const tripleSwiper = new Swiper(".triple-swiper", {
     modules: [Pagination, Navigation],

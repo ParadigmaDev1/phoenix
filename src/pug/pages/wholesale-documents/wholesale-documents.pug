@@ -12,7 +12,7 @@ mixin wholesale-documents()
                 .filters 
                     +selector({title: 'Все документы', name: 'doc-type', items: [{title: 'Все документы'},{title: 'Word'},{title: 'Excel'}]})
                     +selector({title: 'По дате изменения', name: 'sort-type', items: [{title: 'По дате изменения'},{title: 'По названию'}]})
-                    +selector({title: 'Показывать по: 20', name: 'count', items: [{title: 'Показывать по: 20'},{title: 'Показывать по: 10'}]})
+                    +selector({title: 'По: 20', name: 'count', items: [{title: 'По: 20'},{title: 'По: 10'}]})
                 .filters-features 
                     p.total-documents-select.hidden Выбрано: 
                     label.select-all

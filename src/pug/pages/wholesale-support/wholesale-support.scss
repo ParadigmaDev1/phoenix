@@ -15,15 +15,21 @@
       @include gtc(1fr, 294);
       @include s(gap, 48);
       @include s(margin-top, 36);
-
+      @media (max-width: $tab-sm) {
+        grid-template-columns: 1fr;
+        gap: 0;
+        @include s(margin-top, 22);
+      }
       .questions {
         h4 {
           @include h4;
           text-transform: uppercase;
-          color: var(--violet-color);
         }
         .descr {
           @include s(margin-top, 36);
+          @media (max-width: $tab-sm) {
+            @include s(margin-top, 20);
+          }
           p {
             @include s(margin-top, 10);
             @include body-m;
@@ -100,6 +106,9 @@
               .title-wrapper {
                 .title {
                   @include body-xl;
+                  @media (max-width: $tab-sm) {
+                    @include h6;
+                  }
                 }
               }
             }
@@ -186,6 +195,15 @@
           box-shadow: var(--shadow);
           @include padding(48);
           @include s(margin-top, 48);
+          h4 {
+            color: var(--violet-color);
+          }
+          @media (max-width: $tab-sm) {
+            padding: 0;
+            box-shadow: none;
+            @include s(margin-top, 64);
+            border-radius: 0;
+          }
           .descr {
             @include s(margin-top, 12);
             @include body-m;

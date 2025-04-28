@@ -21,7 +21,7 @@ mixin product-card(data)
                 .swiper-wrapper 
                     each img,index in data.imgs
                         .swiper-slide 
-                            img(src=img, alt="product")
+                            img(load='lazy' src=img, alt="product")
                 .lines 
             .hidden-content 
                 button.btn.outline-fill.violet.m быстрый просмотр

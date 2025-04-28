@@ -11,7 +11,11 @@
     @include gtc(1fr, 294);
     @include s(gap, 48);
     @include s(margin-top, 36);
-
+    @media (max-width: $tab-sm) {
+      grid-template-columns: 1fr;
+      gap: 0;
+      @include s(margin-top, 22);
+    }
     h1 {
       @include h1;
     }
@@ -19,16 +23,9 @@
       .descr {
         @include s(margin-top, 36);
         @include body-l;
-      }
-      .add-btn {
-        @include s(margin-top, 36);
-        @include s(height, 48);
-        width: fit-content;
-        @include s(gap, 14);
-        @include padding(0, 24);
-        p {
-          text-transform: uppercase;
-          @include descr-m;
+        @media (max-width: $tab-sm) {
+          @include s(margin-top, 20);
+          @include body-m;
         }
       }
       .wholesale-surveys-list {
@@ -36,6 +33,9 @@
         flex-direction: column;
         @include s(gap, 12);
         @include s(margin-top, 28);
+        @media (max-width: $tab-sm) {
+          @include s(margin-top, 20);
+        }
         .wholesale-surveys-item {
           @include borr(12);
           @include padding(28);
@@ -44,6 +44,11 @@
           @include s(gap, 56);
           background: var(--back-color);
           cursor: pointer;
+          @media (max-width: $tab-sm) {
+            grid-template-columns: 1fr;
+            @include padding(20);
+            @include s(gap, 20);
+          }
           &:hover {
             .title {
               color: var(--violet-color);
@@ -72,13 +77,18 @@
             .descr {
               margin-top: 0;
               @include body-m;
+              @media (max-width: $tab-sm) {
+                @include body-s;
+              }
             }
           }
           .btn {
             @include padding(0, 16);
             @include s(gap, 12);
             @include s(height, 36);
-
+            @media (max-width: $tab-sm) {
+              width: fit-content;
+            }
             p {
               @include descr-s;
             }

@@ -1,7 +1,7 @@
 mixin 404()
     .not-found
         .not-found-inner.container
-            img(src="./img/404/404.svg", alt="404")
+            img(load='lazy' src="./img/404/404.svg", alt="404")
             h1 страница не найдена
             p.descr Страница не существует или была удалена
             a(href="home.html").btn.primary.l

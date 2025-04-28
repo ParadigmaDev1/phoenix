@@ -267,16 +267,85 @@ mixin wholesale-orders()
                                     +order-card({img: './img/wholesale-orders/4.png',title: 'Еженедельник датированный 2025 ESCALADA, формат А6+, 96 л., мягкий переплёт, запаянный край, искусственная кожа "Буйвол", тиснение фольгой, блинтовое тиснение'})
                                     +order-card({img: './img/wholesale-orders/5.png',title: 'Ежедневник датированный 2025 ESCALADA, #ИЛОН МАСК'})
                                 +pagination()
+                    .orders-list
+                        .order-item(data-modal-target='order-modal')
+                            .top
+                                .title-wrapper
+                                    p.title Заказ №19060
+                                    p.date от 18.10.2024
+                                    p.status.gray зарезервирован
+                                .icon 
+                                    <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1 13L7 7L0.999999 1" stroke="white" stroke-linecap="square" stroke-linejoin="round"/>
+                                    </svg>
+                            .info-list
+                                .info-item
+                                    p.label Наименований
+                                    p.value 5
+                                .info-item 
+                                    p.label На сумму
+                                    p.value 975 124,87 ₽
+                        .order-item(data-modal-target='order-modal')
+                            .top
+                                .title-wrapper
+                                    p.title Заказ №19060
+                                    p.date от 18.10.2024
+                                    p.status.green зарезервирован
+                                .icon 
+                                    <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1 13L7 7L0.999999 1" stroke="white" stroke-linecap="square" stroke-linejoin="round"/>
+                                    </svg>
+                            .info-list
+                                .info-item
+                                    p.label Наименований
+                                    p.value 5
+                                .info-item 
+                                    p.label На сумму
+                                    p.value 975 124,87 ₽
+                        .order-item(data-modal-target='order-modal')
+                            .top
+                                .title-wrapper
+                                    p.title Заказ №19060
+                                    p.date от 18.10.2024
+                                    p.status.orange зарезервирован
+                                .icon 
+                                    <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1 13L7 7L0.999999 1" stroke="white" stroke-linecap="square" stroke-linejoin="round"/>
+                                    </svg>
+                            .info-list
+                                .info-item
+                                    p.label Наименований
+                                    p.value 5
+                                .info-item 
+                                    p.label На сумму
+                                    p.value 975 124,87 ₽
+                        .order-item(data-modal-target='order-modal')
+                            .top
+                                .title-wrapper
+                                    p.title Заказ №19060
+                                    p.date от 18.10.2024
+                                    p.status.red зарезервирован
+                                .icon 
+                                    <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1 13L7 7L0.999999 1" stroke="white" stroke-linecap="square" stroke-linejoin="round"/>
+                                    </svg>
+                            .info-list
+                                .info-item
+                                    p.label Наименований
+                                    p.value 5
+                                .info-item 
+                                    p.label На сумму
+                                    p.value 975 124,87 ₽
                 .tab-content(data-tab='1')
                     .filters 
                         .date 
                             .date-picker-wrapper
                                 input(type="text" placeholder='с   _ _ - _ _ - _ _ _ _').date-picker
-                                img(src="./img/icons/calendar.svg", alt="calendar")
+                                img(load='lazy' src="./img/icons/calendar.svg", alt="calendar")
                             p.separator —
                             .date-picker-wrapper
                                 input(type="text" placeholder='по  _ _ - _ _ - _ _ _ _').date-picker
-                                img(src="./img/icons/calendar.svg", alt="calendar")
+                                img(load='lazy' src="./img/icons/calendar.svg", alt="calendar")
                         .search-wrapper
                             input(type="text" placeholder='Товар / организация / получатель / артикул').transparent 
                             button.btn.clear.search-btn 
@@ -494,6 +563,75 @@ mixin wholesale-orders()
                                     +order-card({img: './img/wholesale-orders/4.png',title: 'Еженедельник датированный 2025 ESCALADA, формат А6+, 96 л., мягкий переплёт, запаянный край, искусственная кожа "Буйвол", тиснение фольгой, блинтовое тиснение'})
                                     +order-card({img: './img/wholesale-orders/5.png',title: 'Ежедневник датированный 2025 ESCALADA, #ИЛОН МАСК'})
                                 +pagination()
+                    .orders-list
+                        .order-item(data-modal-target='order-modal')
+                            .top
+                                .title-wrapper
+                                    p.title Заказ №19060
+                                    p.date от 18.10.2024
+                                    p.status.gray зарезервирован
+                                .icon 
+                                    <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1 13L7 7L0.999999 1" stroke="white" stroke-linecap="square" stroke-linejoin="round"/>
+                                    </svg>
+                            .info-list
+                                .info-item
+                                    p.label Наименований
+                                    p.value 5
+                                .info-item 
+                                    p.label На сумму
+                                    p.value 975 124,87 ₽
+                        .order-item(data-modal-target='order-modal')
+                            .top
+                                .title-wrapper
+                                    p.title Заказ №19060
+                                    p.date от 18.10.2024
+                                    p.status.green зарезервирован
+                                .icon 
+                                    <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1 13L7 7L0.999999 1" stroke="white" stroke-linecap="square" stroke-linejoin="round"/>
+                                    </svg>
+                            .info-list
+                                .info-item
+                                    p.label Наименований
+                                    p.value 5
+                                .info-item 
+                                    p.label На сумму
+                                    p.value 975 124,87 ₽
+                        .order-item(data-modal-target='order-modal')
+                            .top
+                                .title-wrapper
+                                    p.title Заказ №19060
+                                    p.date от 18.10.2024
+                                    p.status.orange зарезервирован
+                                .icon 
+                                    <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1 13L7 7L0.999999 1" stroke="white" stroke-linecap="square" stroke-linejoin="round"/>
+                                    </svg>
+                            .info-list
+                                .info-item
+                                    p.label Наименований
+                                    p.value 5
+                                .info-item 
+                                    p.label На сумму
+                                    p.value 975 124,87 ₽
+                        .order-item(data-modal-target='order-modal')
+                            .top
+                                .title-wrapper
+                                    p.title Заказ №19060
+                                    p.date от 18.10.2024
+                                    p.status.red зарезервирован
+                                .icon 
+                                    <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1 13L7 7L0.999999 1" stroke="white" stroke-linecap="square" stroke-linejoin="round"/>
+                                    </svg>
+                            .info-list
+                                .info-item
+                                    p.label Наименований
+                                    p.value 5
+                                .info-item 
+                                    p.label На сумму
+                                    p.value 975 124,87 ₽
             .menu-block 
                 .sticky-block
                     +profile-wholesale-menu()

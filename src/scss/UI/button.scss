@@ -30,9 +30,9 @@ button {
     }
     &.m {
       @include s(height, 44);
-      @media (max-width: $tab-sm) {
-        @include s(height, 36);
-      }
+      // @media (max-width: $tab-sm) {
+      //   @include s(height, 36);
+      // }
       p {
         text-transform: uppercase;
         @include descr-m;

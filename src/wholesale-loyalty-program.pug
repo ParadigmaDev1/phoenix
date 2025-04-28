@@ -1,12 +1,13 @@
 extends ./pug/templates/template.pug
 
 block head 
-  +head(["header", "wholesale-loyalty-program", "profile-wholesale-menu", "pagination", "crumbs", "selector", "footer", "mobile-menu", "accordion-item", "catalog-menu", "mobile-sidebar", "ask-manager-modal"])
+  +head(["header", "wholesale-loyalty-program", "profile-wholesale-menu", "pagination", "crumbs", "selector", "footer", "mobile-menu", "accordion-item", "catalog-menu", "mobile-sidebar", "ask-manager-modal", "profile-menu"])
 block header 
   +header({isAuth: true}).dark
   +mobile-menu()
   +catalog-menu()
-  +mobile-sidebar()
+  +mobile-sidebar({isAuth: true})
+  +profile-menu()
 block content
   +crumbs({items: [{title: 'Профиль', href: '#'}]})
   +wholesale-loyalty-program()

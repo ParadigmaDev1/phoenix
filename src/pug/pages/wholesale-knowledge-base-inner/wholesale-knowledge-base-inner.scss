@@ -11,7 +11,12 @@
     @include gtc(1fr, 294);
     @include s(gap, 48);
     @include s(margin-top, 36);
-
+    @media (max-width: $tab-sm) {
+      @include s(margin-top, 20);
+      grid-template-columns: 1fr;
+      gap: 0;
+      @include s(margin-top, 22);
+    }
     h1 {
       @include h1;
     }
@@ -24,6 +29,9 @@
           @include s(gap, 12);
           @include s(height, 36);
           @include padding(0, 16);
+          @media (max-width: $tab-sm) {
+            display: none;
+          }
           p {
             text-transform: uppercase;
             @include descr-s;
@@ -42,6 +50,12 @@
           @include s(padding-bottom, 48);
           border-top: 1px solid var(--line-color);
           align-items: flex-start;
+          @media (max-width: $tab-sm) {
+            grid-template-columns: 1fr;
+            @include s(gap, 16);
+            @include s(padding-top, 28);
+            @include s(padding-bottom, 28);
+          }
           &:last-child {
             border-bottom: 1px solid var(--line-color);
           }
@@ -53,6 +67,10 @@
             @include s(column-gap, 48);
             align-items: flex-start;
             margin-top: 0;
+            @media (max-width: $tab-sm) {
+              grid-template-columns: 1fr;
+              grid-template-areas: "title" "descr" "btn";
+            }
           }
           .title {
             @include h3;
@@ -63,15 +81,18 @@
           }
           .descr {
             @include descr-m;
-            text-transform: uppercase;
+            // text-transform: uppercase;
             grid-area: descr;
             @include s(margin-top, 12);
+            letter-spacing: 0;
           }
           .btn {
             @include s(height, 36);
             @include padding(0, 16);
             grid-area: btn;
-
+            @media (max-width: $tab-sm) {
+              width: fit-content;
+            }
             p {
               @include descr-s;
             }

@@ -1,7 +1,7 @@
 mixin order-card(data)
     .order-card
         .image-wrapper 
-            img(src=data.img, alt="order")
+            img(load='lazy' src=data.img, alt="order")
         .content 
             .title-wrapper 
                 if data.status

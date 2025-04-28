@@ -1,7 +1,22 @@
 @use "src/scss/common/files/mixins" as *;
 
 .auth-modal {
+  @media (max-width: $tab-sm) {
+    align-items: flex-end;
+  }
   .close-modal-wrapper {
+    @media (max-width: $tab-sm) {
+      display: none;
+    }
+    &.mob {
+      display: none;
+      @media (max-width: $tab-sm) {
+        display: flex;
+        position: absolute;
+        top: 0 !important;
+        right: 0 !important;
+      }
+    }
     .close-modal {
       margin: 0 !important;
       @include s(top, 20);
@@ -15,7 +30,11 @@
     padding: 0;
     position: relative;
     overflow: visible;
-
+    @media (max-width: $tab-sm) {
+      width: 100%;
+      height: auto;
+      max-height: auto;
+    }
     .tabs {
       display: grid;
       @include gtc(164, 1fr);
@@ -39,6 +58,10 @@
         @include s(padding-bottom, 20);
         @include s(height, 60);
         transition: var(--trs-cubic-300);
+        @media (max-width: $tab-sm) {
+          @include descr-s;
+          @include s(height, 60);
+        }
         &.active {
           color: var(--violet-color);
           background: var(--white-color);
@@ -51,6 +74,9 @@
       @include padding(48);
       z-index: 2;
       background: var(--white-color);
+      @media (max-width: $tab-sm) {
+        @include padding(43, 20);
+      }
       .title {
         @include h4;
         color: var(--violet-color);
@@ -103,7 +129,9 @@
         width: 100%;
         justify-content: center;
         @include s(margin-top, 28);
-
+        @media (max-width: $tab-sm) {
+          @include s(margin-top, 20);
+        }
         p {
           text-transform: uppercase;
           @include descr-m;

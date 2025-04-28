@@ -12,15 +12,15 @@ mixin ask-manager-modal()
                     p.title вопрос менеджеру
                     .manager 
                         .image-wrapper 
-                            img(src="./img/contacts/person.jpg", alt="person")
+                            img(load='lazy' src="./img/contacts/person.jpg", alt="person")
                         .content 
                             p.name Александра Константинопольская
                             p.post Персональный менеджер
                             p.date
-                                img(src="./img/icons/clock-dark.svg", alt="clock")
+                                img(load='lazy' src="./img/icons/clock-dark.svg", alt="clock")
                                 | ПН-ПТ с 8:00 до 20:00
                             a(href="tel:+7 (863) 261-89-64").tel
-                                img(src="./img/icons/phone-violet.svg", alt="phone")
+                                img(load='lazy' src="./img/icons/phone-violet.svg", alt="phone")
                                 | +7 (863) 261-89-64, доб.140  
                     textarea(placeholder="Ваш вопрос *")
                     button.btn.outline.violet.m(type="button")

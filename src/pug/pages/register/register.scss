@@ -13,25 +13,47 @@
     }
     .content {
       @include s(margin-top, 36);
-
+      @media (max-width: $tab-sm) {
+        @include s(margin-top, 20);
+      }
       .tab-content {
         display: grid;
         @include gtc(661, 432);
         @include s(gap, 252);
+        @media (max-width: $tab-sm) {
+          grid-template-columns: 1fr;
+          @include s(gap, 64);
+        }
       }
       .inputs-wrapper {
         .tabs {
           display: flex;
           align-items: center;
           @include s(gap, 4);
+          @media (max-width: $tab-sm) {
+            overflow: auto;
+            @include s(margin-left, -20);
+            @include s(margin-right, -20);
+            @include padding(0, 20);
+            .tab {
+              white-space: nowrap;
+            }
+          }
         }
         h6 {
           @include h6;
           text-transform: uppercase;
           @include s(margin-top, 48);
           @include s(margin-bottom, 24);
+          @media (max-width: $tab-sm) {
+            @include s(margin-top, 36);
+            @include s(margin-bottom, 20);
+          }
           &:first-child {
             @include s(margin-top, 28);
+            @media (max-width: $tab-sm) {
+              @include s(margin-top, 36);
+            }
           }
         }
         label {
@@ -40,6 +62,9 @@
           @include s(gap, 12);
           @include s(margin-top, 48);
           cursor: pointer;
+          @media (max-width: $tab-sm) {
+            @include s(margin-top, 36);
+          }
           p {
             @include body-xs;
             a {
@@ -61,12 +86,18 @@
           display: flex;
           flex-direction: column;
           @include s(gap, 24);
-
+          @media (max-width: $tab-sm) {
+            @include s(gap, 20);
+          }
           .input-wrapper {
             display: grid;
             @include gtc(205, 1fr);
             align-items: center;
             @include s(gap, 24);
+            @media (max-width: $tab-sm) {
+              @include s(gap, 8);
+              grid-template-columns: 1fr;
+            }
             p {
               font-weight: 400;
               @include s(font-size, 16);
@@ -98,7 +129,10 @@
           @include s(gap, 8);
           @include s(margin-top, 16);
           @include s(margin-bottom, 48);
-
+          @media (max-width: $tab-sm) {
+            @include s(margin-bottom, 36);
+            @include s(margin-top, 12);
+          }
           li {
             position: relative;
             @include s(padding-left, 30);

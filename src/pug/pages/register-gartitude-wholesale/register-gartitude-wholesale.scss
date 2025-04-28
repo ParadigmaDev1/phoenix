@@ -16,6 +16,11 @@
       display: grid;
       @include gtc(661, 636);
       @include s(gap, 48);
+      @media (max-width: $tab-sm) {
+        grid-template-columns: 1fr;
+        @include s(margin-top, 22);
+        @include s(gap, 36);
+      }
       .text-block {
         .alert {
           background: var(--green-back-color);
@@ -25,18 +30,32 @@
           @include s(gap, 20);
           @include borr(12);
           @include s(margin-top, 36);
-
+          @media (max-width: $tab-sm) {
+            @include padding(20);
+            @include s(gap, 16);
+            @include s(margin-top, 16);
+            align-items: flex-start;
+          }
           img {
             @include s(width, 56);
             @include s(height, 56);
+            @media (max-width: $tab-sm) {
+              @include s(width, 36);
+              @include s(height, 36);
+            }
           }
           p {
             @include body-l;
+            @media (max-width: $tab-sm) {
+              @include body-m;
+            }
           }
         }
         .info-block {
           @include s(margin-top, 48);
-
+          @media (max-width: $tab-sm) {
+            @include s(margin-top, 36);
+          }
           h4 {
             @include h6;
             text-transform: uppercase;
@@ -49,7 +68,10 @@
             @include s(gap, 8);
             @include s(margin-top, 16);
             @include s(margin-bottom, 48);
-
+            @media (max-width: $tab-sm) {
+              @include s(margin-top, 12);
+              @include s(margin-bottom, 36);
+            }
             li {
               position: relative;
               @include s(padding-left, 30);
@@ -128,7 +150,9 @@
         @include borr(12);
         overflow: hidden;
         @include s(height, 435);
-
+        @media (max-width: $tab-sm) {
+          @include s(height, 220);
+        }
         img {
           object-fit: cover;
           width: 100%;

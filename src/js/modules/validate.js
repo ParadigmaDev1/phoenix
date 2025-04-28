@@ -28,6 +28,7 @@ export function validateForm() {
     phone: (value) => value.length >= 18,
     password: (value) => value.length > 0,
     address: (value) => value.length > 0,
+    email: (value) => value.length > 0,
     title: (value) => value.length > 0,
     inn: (value) => value.length === 10,
     kpp: (value) => value.length === 9,

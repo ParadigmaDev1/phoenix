@@ -11,7 +11,11 @@
     @include gtc(1fr, 294);
     @include s(gap, 48);
     @include s(margin-top, 36);
-
+    @media (max-width: $tab-sm) {
+      grid-template-columns: 1fr;
+      gap: 0;
+      @include s(margin-top, 22);
+    }
     h1 {
       @include h1;
     }
@@ -27,6 +31,9 @@
           @include s(gap, 12);
           @include s(height, 36);
           @include padding(0, 16);
+          @media (max-width: $tab-sm) {
+            display: none;
+          }
           p {
             text-transform: uppercase;
             @include descr-s;
@@ -39,18 +46,32 @@
         text-transform: uppercase;
         @include s(margin-top, 48);
         @include s(margin-bottom, 24);
+
+        @media (max-width: $tab-sm) {
+          @include s(margin-top, 36);
+          @include s(margin-bottom, 20);
+        }
         &:first-child {
           @include s(margin-top, 28);
+          @media (max-width: $tab-sm) {
+            @include s(margin-top, 36);
+          }
         }
       }
       .form {
         @include s(width, 661);
+        @media (max-width: $tab-sm) {
+          width: 100%;
+        }
       }
       .submit-btn {
         @include padding(0, 48);
         justify-content: center;
-        @include s(margin-top, 28);
-
+        @include s(margin-top, 48);
+        @media (max-width: $tab-sm) {
+          width: 100%;
+          @include s(margin-top, 36);
+        }
         p {
           text-transform: uppercase;
           @include descr-m;
@@ -60,12 +81,18 @@
         display: flex;
         flex-direction: column;
         @include s(gap, 24);
-
+        @media (max-width: $tab-sm) {
+          @include s(gap, 20);
+        }
         .input-wrapper {
           display: grid;
           @include gtc(205, 1fr);
           align-items: center;
           @include s(gap, 24);
+          @media (max-width: $tab-sm) {
+            grid-template-columns: 1fr;
+            @include s(gap, 8);
+          }
           p {
             font-weight: 400;
             @include s(font-size, 16);
@@ -87,6 +114,9 @@
           @include s(gap, 16);
           @include s(margin-left, 229);
           width: fit-content;
+          @media (max-width: $tab-sm) {
+            margin-left: 0;
+          }
           p {
             @include body-s;
             color: var(--violet-color);

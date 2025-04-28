@@ -12,7 +12,7 @@ mixin quiz-modal()
                     .main-content
                         h2 оценка качества взаимодействия <br> с персональным менеджером
                         .image-wrapper 
-                            img(src="./img/quiz-modal/1.jpg", alt="quiz")
+                            img(load='lazy' src="./img/quiz-modal/1.jpg", alt="quiz")
                     .counter 
                         p.current 1
                         p.separator /
@@ -46,6 +46,10 @@ mixin quiz-modal()
                                 <path d="M7 13L1 7L7 1" stroke="#343176" stroke-linecap="square" stroke-linejoin="round"/>
                             </svg>
                             p назад
+                        .counter 
+                            p.current 1
+                            p.separator /
+                            p.total 4
                         button(type="button").btn.outline.violet.m.next-step
                             p далее
                             <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -77,6 +81,10 @@ mixin quiz-modal()
                                 <path d="M7 13L1 7L7 1" stroke="#343176" stroke-linecap="square" stroke-linejoin="round"/>
                             </svg>
                             p назад
+                        .counter 
+                            p.current 1
+                            p.separator /
+                            p.total 4
                         button(type="button").btn.outline.violet.m.next-step
                             p далее
                             <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -94,6 +102,10 @@ mixin quiz-modal()
                                 <path d="M7 13L1 7L7 1" stroke="#343176" stroke-linecap="square" stroke-linejoin="round"/>
                             </svg>
                             p назад
+                        .counter 
+                            p.current 1
+                            p.separator /
+                            p.total 4
                         button(type="button").btn.outline.violet.m.next-step
                             p далее
                             <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">

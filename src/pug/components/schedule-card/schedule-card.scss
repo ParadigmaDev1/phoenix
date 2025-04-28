@@ -7,10 +7,20 @@
   flex-direction: column;
   @include s(gap, 6);
   @include borr(12);
+  @media (max-width: $tab-sm) {
+    @include padding(20);
+    @include s(gap, 4);
+  }
   .title {
     @include body-m;
+    @media (max-width: $tab-sm) {
+      @include body-s;
+    }
   }
   .sum {
     @include body-xl;
+    @media (max-width: $tab-sm) {
+      @include body-lb;
+    }
   }
 }

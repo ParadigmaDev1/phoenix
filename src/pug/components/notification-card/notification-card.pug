@@ -1,10 +1,10 @@
 mixin notification-card(data)
     .notification-card&attributes(attributes)
         .image-wrapper 
-            img(src="./img/home/ideas/1.jpg", alt="notification")
+            img(load='lazy' src="./img/home/ideas/1.jpg", alt="notification")
         .content 
             p.date 
-                img(src="./img/icons/clock-dark.svg", alt="clock")
+                img(load='lazy' src="./img/icons/clock-dark.svg", alt="clock")
                 | 3 января 2025
             p.title Специальное предложение для оптовых клиентов
             p.descr Специальное предложение для оптовых клиентов Феникс+: при заказе на сумму от 100 000 ₽ получите дополнительную скидку до 10% и удвоенные бонусные баллы на всю продукцию!
