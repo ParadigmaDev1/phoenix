@@ -52,6 +52,13 @@
             }
           }
         }
+        .contact-selector {
+          .selector-btn {
+            p {
+              color: var(--gray-color) !important;
+            }
+          }
+        }
         a {
           color: var(--gray-color) !important;
         }
@@ -134,6 +141,13 @@
               path {
                 stroke: var(--gray-color);
               }
+            }
+          }
+        }
+        .contact-selector {
+          .selector-btn {
+            p {
+              color: var(--gray-color) !important;
             }
           }
         }
@@ -256,6 +270,145 @@
           @include body-m;
           color: var(--white-color);
           transition: var(--trs-cubic-300);
+        }
+        .contact-selector {
+          .selector-btn {
+            padding: 0;
+            background: none;
+            height: auto;
+            @include s(gap, 16);
+            p {
+              color: var(--white-color);
+              transition: var(--trs-cubic-300);
+            }
+            .icon {
+              @include s(width, 12);
+              @include s(height, 12);
+              svg {
+                @include s(width, 12);
+                @include s(height, 12);
+              }
+            }
+          }
+          .selector-content {
+            right: 0;
+            @include s(width, 420);
+            max-height: fit-content;
+            height: fit-content;
+            @include padding(48);
+            .close-btn {
+              position: absolute;
+              @include s(top, 12);
+              @include s(right, 12);
+              border: 1px solid var(--line-color);
+              @include borr(6);
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              @include s(width, 36);
+              @include s(height, 36);
+              transition: var(--trs-cubic-300);
+              &:hover {
+                background: var(--violet-color);
+                svg {
+                  path {
+                    stroke: var(--white-color);
+                  }
+                }
+              }
+              svg {
+                @include s(width, 16);
+                @include s(height, 16);
+              }
+            }
+            .title {
+              text-transform: uppercase;
+              @include descr-m;
+            }
+            .contacts-list {
+              @include s(margin-top, 24);
+              display: flex;
+              flex-direction: column;
+              @include s(gap, 10);
+              a {
+                p {
+                  color: var(--violet-color);
+                }
+              }
+              .contacts-item {
+                display: flex;
+                align-items: flex-start;
+                @include s(gap, 16);
+                img {
+                  @include s(margin-top, 4);
+                  @include s(width, 16);
+                  @include s(height, 16);
+                }
+                p {
+                  @include body-l;
+                  display: flex;
+                  flex-direction: column;
+                  @include s(gap, 2);
+                  span {
+                    @include body-sb;
+                    color: var(--gray-light-color);
+                  }
+                }
+              }
+            }
+            .btns {
+              @include s(margin-top, 24);
+              display: grid;
+              @include gtc(175, 1fr);
+              align-items: center;
+              @include s(gap, 10);
+              .btn {
+                @include padding(0, 12);
+                width: 100%;
+                @include s(gap, 12);
+                svg {
+                  @include s(width, 16);
+                  @include s(height, 16);
+                }
+                p {
+                  @include descr-xs;
+                  text-transform: uppercase;
+                }
+              }
+            }
+            .socials-wrapper {
+              @include s(margin-top, 48);
+              .title {
+                text-transform: uppercase;
+                @include descr-m;
+              }
+              .socials {
+                display: flex;
+                align-items: center;
+                @include s(gap, 12);
+                @include s(margin-top, 12);
+
+                a {
+                  @include s(width, 44);
+                  @include s(height, 44);
+                  @include borr(6);
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  svg {
+                    @include s(width, 20);
+                    @include s(height, 20);
+                  }
+                  &.tg {
+                    background: #528df0;
+                  }
+                  &.wa {
+                    background: #50b550;
+                  }
+                }
+              }
+            }
+          }
         }
       }
       .header-bottom {

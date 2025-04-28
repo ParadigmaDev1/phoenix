@@ -13,12 +13,14 @@ export const swiper = () => {
   const homeHeroObj = document.querySelector(".home-hero");
   if (homeHeroObj) {
     const total = homeHeroObj.querySelector(".total");
+    const current = homeHeroObj.querySelector(".current");
     const homeHeroSwiper = new Swiper(".home-hero-swiper", {
       modules: [Pagination, Navigation, EffectFade, Controller, Autoplay],
       slidesPerView: 1,
       spaceBetween: 0,
       allowTouchMove: false,
       effect: "fade",
+      speed: 1500,
       autoplay: {
         delay: 2000,
         disableOnInteraction: false,
@@ -29,14 +31,21 @@ export const swiper = () => {
       },
       pagination: {
         el: ".home-hero-pagination ",
-        type: "progressbar",
+        // type: "progressbar",
       },
       on: {
         init(swiper) {
+          console.log(swiper);
           total.innerHTML =
             swiper.slides.length < 10
               ? `0${swiper.slides.length}`
               : swiper.slides.length;
+        },
+        slideChange(swiper) {
+          current.innerHTML =
+            swiper.activeIndex + 1 < 10
+              ? `0${swiper.activeIndex + 1}`
+              : swiper.activeIndex + 1;
         },
       },
     });

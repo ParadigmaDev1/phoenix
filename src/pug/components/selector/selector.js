@@ -30,6 +30,12 @@ export const selector = () => {
     selectors.forEach((selector) => {
       const selectorBtn = selector.querySelector(".selector-btn");
       const selectorInputs = selector.querySelectorAll("label");
+      const closeBtn = selector.querySelector(".close-btn");
+      if (closeBtn) {
+        closeBtn.addEventListener("click", () => {
+          selector.classList.remove("active");
+        });
+      }
       if (selectorBtn) {
         selectorBtn.addEventListener("click", (e) => {
           if (selector.className.includes("active")) {

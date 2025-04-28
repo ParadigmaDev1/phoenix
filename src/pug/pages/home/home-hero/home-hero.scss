@@ -200,8 +200,34 @@
           }
           .home-hero-pagination {
             @include s(width, 380);
+            position: relative;
+            background: none;
+            top: 0;
+            bottom: 0;
             @media (max-width: $tab-sm) {
               @include s(width, 266);
+            }
+            .progress-line {
+              background: var(--white-color);
+              width: 80%;
+              position: absolute;
+              top: 0;
+              left: 0;
+            }
+            .swiper-pagination-bullet {
+              position: absolute;
+              left: 0;
+              top: 0;
+              right: 0;
+              bottom: 0;
+              background: none;
+              background: rgba(255, 255, 255, 0.3);
+              width: 100%;
+              height: 1px;
+              &.swiper-pagination-bullet-active {
+                animation: slidein 3500ms linear 0ms infinite;
+                background: var(--white-color);
+              }
             }
           }
         }
