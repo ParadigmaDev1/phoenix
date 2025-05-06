@@ -3,6 +3,10 @@
 .contacts {
   @include s(margin-top, 28);
   @include s(padding-bottom, 156);
+  @media (max-width: $tab-sm) {
+    @include s(padding-bottom, 64);
+    @include s(margin-top, 16);
+  }
   .contacts-inner {
     h1 {
       @include h1;
@@ -12,10 +16,25 @@
       display: flex;
       align-items: center;
       @include s(gap, 4);
+      @media (max-width: $tab-sm) {
+        justify-content: flex-start;
+        @include s(margin-top, 20);
+        @include s(margin-left, -20);
+        @include s(margin-right, -20);
+        @include s(padding-left, 20);
+        @include s(padding-right, 20);
+        overflow-x: auto;
+        .tab {
+          white-space: nowrap;
+        }
+      }
     }
     .tab-content {
       display: grid;
       @include s(margin-top, 28);
+      @media (max-width: $tab-sm) {
+        @include s(margin-top, 20);
+      }
     }
   }
 }

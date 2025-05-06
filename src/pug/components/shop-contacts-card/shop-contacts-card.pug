@@ -4,15 +4,30 @@ mixin shop-contacts-card(data)
             .main-content
                 p.title #{data.title}
                 .address 
-                    img(src="./img/icons/pin-dark.svg", alt="pin")
+                    img(load='lazy' src="./img/icons/pin-dark.svg", alt="pin")
                     p г. Екатеринбург, ул. Свободы д. 178
                 a(href="tel:+7 (906) 483-12-48").tel
-                    img(src="./img/icons/phone-dark.svg", alt="pin")
+                    img(load='lazy' src="./img/icons/phone-dark.svg", alt="pin")
                     p +7 (906) 483-12-48
-            a(href="#" target='_blank').btn.outline.violet.l
-                p на карте 
-                <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M1 13L7 7L0.999999 1" stroke="#343176" stroke-linecap="square" stroke-linejoin="round"/>
-                </svg> 
+            if !data.withoutBtn
+                a(href="#" target='_blank').btn.outline.violet.l
+                    p на карте 
+                    <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 13L7 7L0.999999 1" stroke="#343176" stroke-linecap="square" stroke-linejoin="round"/>
+                    </svg> 
         .image-wrapper 
-            img(src=data.img || './img/shop-contacts-card/default-img.svg' , alt="contacts-img")
+            img(load='lazy' src=data.img || './img/shop-contacts-card/default-img.svg' , alt="contacts-img")
+        if data.editBtn
+            button.edit-btn(data-modal-target='edit-shop-modal') 
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_8487_128922)">
+                    <path d="M18.6516 5.64192L5.18758 19.106L0.964966 19.1053V14.8847L14.4297 1.42L18.6516 5.64192Z" stroke="#343176"/>
+                    <path d="M11.3672 4L16.1795 8.60957" stroke="#343176"/>
+                    <path d="M2.36719 13L7.17954 17.6096" stroke="#343176"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_8487_128922">
+                    <rect width="20" height="20" fill="white"/>
+                    </clipPath>
+                    </defs>
+                </svg>

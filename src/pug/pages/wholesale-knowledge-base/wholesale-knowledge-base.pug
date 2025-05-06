@@ -1,0 +1,13 @@
+mixin wholesale-knowledge-base()
+    .wholesale-knowledge-base
+        .wholesale-knowledge-base-inner.container.tabs-wrapper
+            .content 
+                h1 база знаний
+                .knowledge-base-list 
+                    +info-card({img: './img/home/ideas/2.jpg', descr: 'Особенности продукции бренда', title: 'Escalada', btnTitle: 'подробнее'})
+                    +info-card({img: './img/home/ideas/2.jpg', descr: 'Узнаете на что обращают внимание покупатели', title: 'школа', btnTitle: 'подробнее'})
+                    +info-card({img: './img/home/ideas/2.jpg', descr: 'Особенности продукции бренда', title: 'Гайд по выбору продукции', btnTitle: 'подробнее'})
+                   
+            .menu-block 
+                .sticky-block
+                    +profile-wholesale-menu()

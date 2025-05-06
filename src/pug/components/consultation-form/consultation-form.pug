@@ -1,0 +1,15 @@
+mixin consultation-form()
+    form.form.consultation-form
+        h4 Получить консультацию
+        .inputs 
+            .input__row.gray
+                input(type="text" placeholder="Ваше имя").custom-input.input.form__input-value.input__valid-name
+                .input__item-small
+            .input__row.gray
+                input(type="tel" placeholder="+7 (").custom-input.input.form__input-value.input__valid-phone
+                .input__item-small
+            textarea(placeholder="Текст")
+        p.policy Нажимая кнопку, я даю согласие 
+            a(href="#" target="_blank") на обработку персональных данных в соответствии с Политикой конфиденциальности
+        button.btn.primary.m 
+            p отправить

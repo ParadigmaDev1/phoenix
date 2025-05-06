@@ -1,0 +1,15 @@
+mixin notification-card(data)
+    .notification-card&attributes(attributes)
+        .image-wrapper 
+            img(load='lazy' src="./img/home/ideas/1.jpg", alt="notification")
+        .content 
+            p.date 
+                img(load='lazy' src="./img/icons/clock-dark.svg", alt="clock")
+                | 3 января 2025
+            p.title Специальное предложение для оптовых клиентов
+            p.descr Специальное предложение для оптовых клиентов Феникс+: при заказе на сумму от 100 000 ₽ получите дополнительную скидку до 10% и удвоенные бонусные баллы на всю продукцию!
+            a(href="#").btn.outline.violet.m
+                p подробнее
+                <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 13L7 7L0.999999 1" stroke="#343176" stroke-linecap="square" stroke-linejoin="round"/>
+                </svg>

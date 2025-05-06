@@ -3,6 +3,10 @@
 .documents {
   @include s(margin-top, 28);
   @include s(padding-bottom, 156);
+  @media (max-width: $tab-sm) {
+    @include s(padding-bottom, 64);
+    @include s(margin-top, 16);
+  }
   .documents-inner {
     h1 {
       @include h1;
@@ -13,6 +17,11 @@
       grid-template-columns: repeat(3, 1fr);
       @include s(gap, 24);
       @include s(margin-top, 28);
+      @media (max-width: $tab-sm) {
+        grid-template-columns: repeat(1, 1fr);
+        @include s(gap, 12);
+        @include s(margin-top, 20);
+      }
     }
   }
 }

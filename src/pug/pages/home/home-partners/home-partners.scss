@@ -33,7 +33,7 @@
           align-items: center;
           @include s(gap, 24);
           @include s(height, 136);
-          animation: slide 30s linear infinite;
+          animation: slide 80s linear infinite;
           @media (max-width: $tab-sm) {
             @include s(height, 62);
             @include s(gap, 10);

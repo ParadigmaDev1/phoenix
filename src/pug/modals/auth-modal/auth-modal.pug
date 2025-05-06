@@ -1,0 +1,58 @@
+mixin auth-modal()
+    .auth-modal.modal
+        .close-modal-wrapper.mob
+            button.btn.close-modal 
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.05026 14.9497L14.9498 5.05025" stroke="#343176"/>
+                    <path d="M14.9498 14.9497L5.05026 5.05025" stroke="#343176"/>
+                </svg>
+        .modal-content-wrapper
+            .close-modal-wrapper
+                button.btn.close-modal 
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5.05026 14.9497L14.9498 5.05025" stroke="#343176"/>
+                        <path d="M14.9498 14.9497L5.05026 5.05025" stroke="#343176"/>
+                    </svg>
+            .modal-content.tabs-wrapper 
+                .tabs 
+                    button.btn.tab.m.active(data-tab='0') Войти
+                    button.btn.tab.m(data-tab='1') Зарегистрироваться
+                form.form.tab-content(data-tab='0')
+                    p.title войти <br>в личный кабинет
+                    .inputs 
+                        .input__row.gray
+                            input(type="text" placeholder="E-mail").custom-input.input.form__input-value.input__valid-email
+                            .input__item-small
+                        .input__row.password-input-row.gray
+                            input(type="password" placeholder="Пароль").custom-input.input.form__input-value.input__valid-password
+                            button(type='button').show-password
+                                <svg width="31" height="28" viewBox="0 0 31 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_8288_112990)">
+                                    <path d="M27.8597 11.6917C26.6291 14.0573 24.77 16.0377 22.4868 17.4153C20.2037 18.7928 17.5848 19.5141 14.9183 19.4998C12.2518 19.4855 9.6409 18.7362 7.37264 17.3342C5.10438 15.9323 3.26664 13.932 2.06148 11.5533" stroke="#A8A9B0"/>
+                                    <path d="M14.9961 19L14.9961 23" stroke="#A8A9B0"/>
+                                    <path d="M20.7148 18.1152L22.5101 21.6898" stroke="#A8A9B0"/>
+                                    <path d="M24.875 15.1123L27.6937 17.9505" stroke="#A8A9B0"/>
+                                    <path d="M4.8125 15.1123L1.99383 17.9505" stroke="#A8A9B0"/>
+                                    <path d="M9.625 18.1763L7.60472 21.6286" stroke="#A8A9B0"/>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0_8288_112990">
+                                    <rect width="30.1538" height="28" fill="white" transform="translate(-0.00390625)"/>
+                                    </clipPath>
+                                    </defs>
+                                </svg>
+                            .input__item-small
+                    button(type='button' data-modal-target='recover-password-modal').forgot-password-btn Забыли пароль?
+                    button.btn.primary.m.submit-btn
+                        p войти
+                form.form.tab-content(data-tab='1')
+                    p.title выберите<br>тип пользователя:
+                    .inputs 
+                        label
+                            input(type="radio" name='type')
+                            p Оптовый бизнес-партнер
+                        label
+                            input(type="radio" name='type')
+                            p Розничный клиент
+                    button.btn.primary.m.submit-btn
+                        p продолжить

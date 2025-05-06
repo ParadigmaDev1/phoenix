@@ -1,0 +1,49 @@
+mixin edit-shop-modal()
+    .edit-shop-modal.modal
+        .modal-content-wrapper
+            .close-modal-wrapper
+                button.btn.close-modal 
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5.05026 14.9497L14.9498 5.05025" stroke="#343176"/>
+                        <path d="M14.9498 14.9497L5.05026 5.05025" stroke="#343176"/>
+                    </svg>
+            .modal-content
+                form.form
+                    p.title редактировать  магазин
+                    .inputs 
+                        .input-wrapper 
+                            p Название
+                            .input__row.password-input-row.gray
+                                input(type="text" placeholder="Введите").custom-input.input.form__input-value.input__valid-title
+                                .input__item-small
+                        .input-wrapper 
+                            p Телефон
+                            .input__row.password-input-row.gray
+                                input(type="tel" placeholder="Введите").custom-input.input.form__input-value.input__valid-phone
+                                .input__item-small
+                        .input-wrapper 
+                            p Адрес
+                            .input__row.password-input-row.gray
+                                input(type="text" placeholder="Введите").custom-input.input.form__input-value.input__valid-address
+                                .input__item-small
+                        .logo-wrapper 
+                            .image-wrapper 
+                                img(load='lazy' src="./img/shop-contacts-card/img.png", alt="")
+                            .logo-wrapper-content 
+                                button.btn.outline.violet.m(type="button")
+                                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0.506836 7.5H14.5068" stroke="#333435"/>
+                                        <path d="M7.50684 14.5L7.50684 0.5" stroke="#333435"/>
+                                    </svg>
+                                    p прикрепить файл
+                                    input(type="file")   
+                                p.hint Допустимые форматы PNG, Jpeg, максимальный размер файла 2050 мб.
+                    p.descr После модерации изменения будут опубликованы на сайте
+                    .btns 
+                        button.btn.primary.m.submit-btn
+                            p сохранить
+                        button.btn.outline.gray.m.close-modal 
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 15L15 1M15 15L1 1" stroke="#A8A9B0"/>
+                            </svg>
+                            p удалить адрес

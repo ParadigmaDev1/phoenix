@@ -3,14 +3,23 @@
 .career-work {
   overflow: hidden;
   @include s(margin-top, 116);
+  @media (max-width: $tab-sm) {
+    @include s(margin-top, 64);
+  }
   .career-work-inner {
     h3 {
       @include h2;
       text-align: center;
+      @media (max-width: $tab-sm) {
+        text-align: left;
+      }
     }
     .career-work-swiper {
       @include s(margin-top, 36);
       position: relative;
+      @media (max-width: $tab-sm) {
+        @include s(margin-top, 20);
+      }
       .navigation {
         position: absolute;
         @include s(top, 223);
@@ -23,6 +32,11 @@
         @include s(margin-top, 63);
       }
       .swiper-slide {
+        opacity: 0;
+        transition: opacity var(--trs-cubic-300);
+        &.visible-slide {
+          opacity: 1;
+        }
         .image-wrapper {
           height: auto;
           img {
@@ -36,16 +50,27 @@
           display: flex;
           flex-direction: column;
           align-items: center;
+          @media (max-width: $tab-sm) {
+            align-items: flex-start;
+          }
           .title {
             @include h5;
             text-transform: uppercase;
             text-align: center;
+            @media (max-width: $tab-sm) {
+              text-align: left;
+            }
           }
           .descr {
             @include s(margin-top, 12);
             @include s(max-width, 626);
             text-align: center;
             @include body-l;
+            @media (max-width: $tab-sm) {
+              text-align: left;
+              @include s(margin-top, 8);
+              @include body-m;
+            }
           }
         }
       }

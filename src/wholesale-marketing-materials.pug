@@ -1,0 +1,17 @@
+extends ./pug/templates/template.pug
+
+block head 
+  +head(["header", "wholesale-marketing-materials", "info-card", "profile-wholesale-menu", "crumbs", "selector", "footer", "mobile-menu", "accordion-item", "catalog-menu", "mobile-sidebar", "ask-manager-modal", "profile-menu"])
+block header 
+  +header({isAuth: true}).dark
+  +mobile-menu()
+  +catalog-menu()
+  +mobile-sidebar({isAuth: true})
+  +profile-menu()
+block content
+  +crumbs({items: [{title: 'Профиль', href: '#'}]})
+  +wholesale-marketing-materials()
+block footer 
+  +footer()
+block modals 
+  +ask-manager-modal()

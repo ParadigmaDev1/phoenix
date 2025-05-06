@@ -18,14 +18,19 @@
   &.nested-inner {
     & > .accordion-title {
       justify-content: flex-start;
-      // @include padding(0);
+      @media (max-width: $tab-sm) {
+        @include padding(4, 0);
+      }
 
       .title {
         @include body-xl;
+        text-align: left;
       }
       .icon {
-        @include s(width, 28);
-        @include s(height, 28);
+        @include s(min-width, 28);
+        @include s(min-height, 28);
+        @include s(max-width, 28);
+        @include s(max-height, 28);
         border: 1px solid var(--line-color);
         @include borr(6);
         svg {
@@ -35,18 +40,30 @@
       }
     }
   }
+  &.nested-inner {
+    .collapse {
+      @media (max-width: $tab-sm) {
+        @include s(padding-left, 48);
+      }
+    }
+  }
   &.nested {
     & > .accordion-title {
       justify-content: flex-start;
       @include padding(36, 0);
-
+      @media (max-width: $tab-sm) {
+        @include padding(20, 0);
+      }
       .title {
         @include h6;
         text-transform: uppercase;
+        text-align: left;
       }
       .icon {
-        @include s(width, 28);
-        @include s(height, 28);
+        @include s(min-width, 28);
+        @include s(min-height, 28);
+        @include s(max-width, 28);
+        @include s(max-height, 28);
         border: 1px solid var(--line-color);
         @include borr(6);
         svg {
@@ -97,6 +114,9 @@
     align-items: flex-start;
     @include s(padding-left, 30);
     @include s(padding-bottom, 30);
+    @media (max-width: $tab-sm) {
+      padding-left: 0;
+    }
     .links {
       display: flex;
       flex-direction: column;

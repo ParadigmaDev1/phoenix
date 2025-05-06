@@ -1,0 +1,82 @@
+@use "src/scss/common/files/mixins" as *;
+
+.wholesale-marketing-materials-banners {
+  @include s(padding-bottom, 156);
+  @media (max-width: $tab-sm) {
+    @include s(padding-bottom, 64);
+    @include s(margin-top, 16);
+  }
+  .wholesale-marketing-materials-banners-inner {
+    display: grid;
+    @include gtc(1fr, 294);
+    @include s(gap, 48);
+    @include s(margin-top, 36);
+    @media (max-width: $tab-sm) {
+      grid-template-columns: 1fr;
+      @include s(margin-top, 20);
+      @include s(row-gap, 36);
+    }
+    h1 {
+      @include h1;
+    }
+
+    .content {
+      .top {
+        display: flex;
+        justify-content: space-between;
+
+        .btn {
+          @include s(gap, 12);
+          @include s(height, 36);
+          @include padding(0, 16);
+          @media (max-width: $tab-sm) {
+            display: none;
+          }
+          p {
+            text-transform: uppercase;
+            @include descr-s;
+          }
+        }
+      }
+      .download-btn-wrapper {
+        @media (max-width: $tab-sm) {
+          position: fixed;
+          @include s(bottom, 59);
+          right: 0;
+          left: 0;
+          background: var(--white-color);
+          z-index: 90;
+          @include padding(12, 20);
+          box-shadow: var(--shadow);
+        }
+        .download-btn {
+          width: fit-content;
+          @include s(margin-top, 28);
+          @include padding(0, 24);
+          @include s(gap, 10);
+          @media (max-width: $tab-sm) {
+            margin-top: 0;
+            width: 100%;
+          }
+          svg {
+            @include s(height, 17);
+            @include s(width, 17);
+          }
+        }
+      }
+
+      .marketing-materials-list {
+        @include s(margin-top, 24);
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        @include s(gap, 24);
+        @media (max-width: $tab-sm) {
+          grid-template-columns: 1fr;
+          @include s(gap, 12);
+        }
+      }
+    }
+    .menu-block {
+    }
+  }
+}

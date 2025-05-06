@@ -1,15 +1,17 @@
 extends ./pug/templates/template.pug
 
 block head 
-  +head(["header", "contacts", "contacts-main", "contacts-sallers", "contacts-card", "crumbs", "selector", "footer", "mobile-menu", "accordion-item", "catalog-menu","map"])
+  +head(["header", "contacts", "contacts-main", "contacts-sallers", "contacts-production", "contacts-other", "contacts-regions", "contacts-distributors", "contacts-card", "person-contacts-card", "crumbs", "selector", "footer", "mobile-menu", "accordion-item", "catalog-menu","map", "mobile-sidebar", "auth-modal", "recover-password-modal"])
 block header 
   +header().dark
   +mobile-menu()
   +catalog-menu()
+  +mobile-sidebar()
 block content
   +crumbs({items: [{title: 'Каталог', href: 'about.html'}, {title: 'акции', href: '#'}]})
   +contacts()
 block footer 
   +footer()
 block modals 
-  
+  +auth-modal()
+  +recover-password-modal()

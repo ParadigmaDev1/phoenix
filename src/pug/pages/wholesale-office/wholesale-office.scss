@@ -1,0 +1,238 @@
+@use "src/scss/common/files/mixins" as *;
+
+.wholesale-office {
+  @include s(padding-bottom, 156);
+  @media (max-width: $tab-sm) {
+    @include s(padding-bottom, 64);
+    @include s(margin-top, 16);
+  }
+  .wholesale-office-inner {
+    display: grid;
+    @include gtc(1fr, 294);
+    @include s(gap, 48);
+    @include s(margin-top, 36);
+    @media (max-width: $tab-sm) {
+      grid-template-columns: 1fr;
+      gap: 0;
+      @include s(margin-top, 22);
+    }
+    h1 {
+      @include h1;
+    }
+    .content {
+      h5 {
+        @include h5;
+        text-transform: uppercase;
+      }
+      .payment-schedule {
+        @include s(margin-top, 36);
+        @media (max-width: $tab-sm) {
+          @include s(margin-top, 20);
+        }
+        .info {
+          display: flex;
+          justify-content: space-between;
+          @include s(margin-top, 16);
+          @media (max-width: $tab-sm) {
+            flex-direction: column;
+            @include s(margin-top, 20);
+            @include s(gap, 8);
+          }
+          .alert,
+          .date {
+            display: flex;
+            align-items: center;
+            @include s(gap, 12);
+            @include body-xs;
+            img {
+              @include s(width, 16);
+              @include s(height, 16);
+            }
+          }
+          .alert {
+            color: var(--red-color);
+          }
+          .date {
+            color: var(--gray-light-color);
+          }
+        }
+        .paylent-list {
+          @include s(margin-top, 12);
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          @include s(gap, 24);
+          @media (max-width: $tab-sm) {
+            grid-template-columns: 1fr;
+            @include s(gap, 12);
+          }
+        }
+      }
+      .carts {
+        @include s(margin-top, 64);
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        @include s(gap, 24);
+        @media (max-width: $tab-sm) {
+          grid-template-columns: 1fr;
+          @include s(gap, 64);
+        }
+        .carts-list {
+          @include s(margin-top, 16);
+          display: flex;
+          flex-direction: column;
+          @include s(gap, 16);
+        }
+      }
+      .special-offers {
+        position: relative;
+        @include s(margin-top, 64);
+
+        .navigation {
+          position: absolute;
+          @include s(top, 120);
+          @include s(left, -23);
+          @include s(right, -23);
+          justify-content: space-between;
+          z-index: 2;
+        }
+        .double-swiper {
+          @include s(margin-top, 16);
+          padding-bottom: 38%;
+          position: relative;
+          overflow: hidden;
+
+          @media (max-width: $tab-sm) {
+            @include s(margin-top, 28);
+            padding-bottom: 100%;
+          }
+          .swiper-wrapper {
+            position: absolute;
+            top: 0;
+            left: 0;
+          }
+          .swiper-slide {
+            opacity: 0;
+            transition: opacity var(--trs-cubic-300);
+            &.visible-slide {
+              opacity: 1;
+            }
+            &:hover {
+              .title {
+                color: var(--violet-color);
+              }
+            }
+            .title {
+              cursor: pointer;
+            }
+          }
+
+          //   .image-wrapper {
+          //     position: relative;
+          //     @include s(height, 276);
+          //     @include borr(12);
+          //     overflow: hidden;
+          //     @media (max-width: $tab-sm) {
+          //       @include s(height, 180);
+          //     }
+          //     img {
+          //       width: 100%;
+          //       height: 100%;
+          //       object-fit: cover;
+          //       position: absolute;
+          //     }
+          //   }
+          .content {
+            align-items: flex-start;
+            .title {
+              @include descr-m;
+              transition: var(--trs-cubic-300);
+              text-transform: uppercase;
+              text-align: left;
+            }
+            .btn {
+              @include s(height, 36);
+              @include padding(0, 16);
+              @include s(margin-top, 20);
+
+              p {
+                @include descr-s;
+              }
+            }
+          }
+        }
+      }
+      .loyalty-program {
+        @include s(margin-top, 64);
+        background: var(--violet-back-color);
+        @include borr(12);
+        @include padding(48);
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        @include s(gap, 24);
+        align-items: center;
+        @media (max-width: $tab-sm) {
+          grid-template-columns: 1fr;
+          @include padding(28);
+          @include s(gap, 28);
+        }
+        .loyalty-program-content {
+          ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            @include s(gap, 8);
+            @include s(margin-top, 12);
+            @media (max-width: $tab-sm) {
+              @include s(margin-top, 8);
+            }
+            li {
+              position: relative;
+              @include s(padding-left, 30);
+              @include body-m;
+              &:before {
+                content: "";
+                position: absolute;
+                @include s(width, 6);
+                @include s(height, 6);
+                border-radius: 9999px;
+                background: var(--violet-color);
+                @include s(top, 10);
+                left: 0;
+              }
+            }
+          }
+          .btn {
+            @include s(height, 36);
+            @include padding(0, 16);
+            @include s(margin-top, 20);
+            @include s(gap, 12);
+            p {
+              @include descr-s;
+              text-transform: uppercase;
+            }
+          }
+        }
+        .image-block {
+          border: 6px solid var(--gray-color);
+          @include s(height, 256);
+          @include borr(24);
+          position: relative;
+          overflow: hidden;
+          @media (max-width: $tab-sm) {
+            border-width: 3px;
+            @include s(height, 153);
+            @include borr(12);
+          }
+          img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+      }
+    }
+    .menu-block {
+    }
+  }
+}

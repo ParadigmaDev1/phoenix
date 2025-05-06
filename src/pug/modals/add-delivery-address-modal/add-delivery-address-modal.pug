@@ -1,0 +1,45 @@
+mixin add-delivery-address-modal()
+    .add-delivery-address-modal.modal
+        .modal-content-wrapper
+            .close-modal-wrapper
+                button.btn.close-modal 
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5.05026 14.9497L14.9498 5.05025" stroke="#343176"/>
+                        <path d="M14.9498 14.9497L5.05026 5.05025" stroke="#343176"/>
+                    </svg>
+            .modal-content
+                form.form
+                    p.title добавить адрес
+                    .inputs 
+                        .input-wrapper 
+                            p Адрес доставки
+                            .input__row.password-input-row.gray
+                                input(type="text" placeholder="Введите").custom-input.input.form__input-value.input__valid-address
+                                .input__item-small
+                        .row 
+                            .input-wrapper 
+                                p Квартиры
+                                .input__row.password-input-row.gray
+                                    input(type="text" placeholder="№").custom-input.input.form__input-value.input__valid-number
+                                    .input__item-small
+                            .input-wrapper 
+                                p Подъезд
+                                .input__row.password-input-row.gray
+                                    input(type="text" placeholder="№").custom-input.input.form__input-value.input__valid-number
+                                    .input__item-small
+                            .input-wrapper 
+                                p Этаж
+                                .input__row.password-input-row.gray
+                                    input(type="text" placeholder="№").custom-input.input.form__input-value.input__valid-number
+                                    .input__item-small
+                        .input-wrapper 
+                            p Телефон грузополучателя
+                            .input__row.password-input-row.gray
+                                input(type="tel" placeholder="Введите").custom-input.input.form__input-value.input__valid-phone
+                                .input__item-small
+                        .input-wrapper 
+                            p Телефон грузополучателя
+                            textarea(placeholder="Текст")
+                            p.hint Максисмум 300 символов
+                    button.btn.primary.m.submit-btn
+                        p сохранить

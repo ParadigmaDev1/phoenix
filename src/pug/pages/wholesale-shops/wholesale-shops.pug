@@ -1,0 +1,19 @@
+mixin wholesale-shops()
+    .wholesale-shops
+        .wholesale-shops-inner.container.tabs-wrapper
+            .content 
+                h1 мои магазины
+                p.descr Дополнительный описательный текст — добавьте ваш магазин и пользователя увидят его в списке. Дополнительный описательный текст — добавьте ваш магазин и пользователя увидят его в списке. 
+                button.btn.outline.violet.m.add-btn(data-modal-target='add-shop-modal') 
+                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0.506836 7.5H14.5068" stroke="#343176"/>
+                        <path d="M7.50684 14.5L7.50684 0.5" stroke="#343176"/>
+                    </svg>
+                    p добавить магазин
+                .wholesale-shops-list 
+                    +shop-contacts-card({title: 'читай-город', withoutBtn: true, editBtn: true})
+                    +shop-contacts-card({title: 'канцелярский магазин', img: './img/shop-contacts-card/img.png',  withoutBtn: true, editBtn: true})
+                    +shop-contacts-card({title: 'Тц «Успенский» мир тетрадей', img: './img/shop-contacts-card/img.png',  withoutBtn: true, editBtn: true})
+            .menu-block 
+                .sticky-block
+                    +profile-wholesale-menu()

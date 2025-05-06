@@ -1,0 +1,61 @@
+mixin order-modal()
+    .order-modal.modal
+        .modal-content-wrapper
+            .close-modal-wrapper
+                button.btn.close-modal 
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5.05026 14.9497L14.9498 5.05025" stroke="#343176"/>
+                        <path d="M14.9498 14.9497L5.05026 5.05025" stroke="#343176"/>
+                    </svg>
+            .modal-content
+                p.title Заказ №19060
+                p.date от 18.10.2024
+                p.status.gray ожидает обработки
+                .features-list
+                    a(href="#" download)
+                        <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 9.78748L1 14.5875M19 9.78748V14.5875M1 13.9875C1 14.4602 1.09312 14.9284 1.27403 15.3651C1.45495 15.8019 1.72012 16.1988 2.05442 16.5331C2.38871 16.8673 2.78557 17.1325 3.22234 17.3134C3.65911 17.4944 4.12724 17.5875 4.6 17.5875H15.4C15.8728 17.5875 16.3409 17.4944 16.7777 17.3134C17.2144 17.1325 17.6113 16.8673 17.9456 16.5331C18.2799 16.1988 18.5451 15.8019 18.726 15.3651C18.9069 14.9284 19 14.4602 19 13.9875M15.625 6.78748L10 12.7875L4.825 6.78748M10 0.412476L10 12.1875" stroke="#343176"/>
+                        </svg>
+                        | Скачать счёт
+                    a(href="#" download)
+                        <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 9.78748L1 14.5875M19 9.78748V14.5875M1 13.9875C1 14.4602 1.09312 14.9284 1.27403 15.3651C1.45495 15.8019 1.72012 16.1988 2.05442 16.5331C2.38871 16.8673 2.78557 17.1325 3.22234 17.3134C3.65911 17.4944 4.12724 17.5875 4.6 17.5875H15.4C15.8728 17.5875 16.3409 17.4944 16.7777 17.3134C17.2144 17.1325 17.6113 16.8673 17.9456 16.5331C18.2799 16.1988 18.5451 15.8019 18.726 15.3651C18.9069 14.9284 19 14.4602 19 13.9875M15.625 6.78748L10 12.7875L4.825 6.78748M10 0.412476L10 12.1875" stroke="#343176"/>
+                        </svg>
+                        | Выгрузить
+                    button.btn.text.contact-btn
+                        <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="0.5" y="0.5" width="19" height="15" rx="2.5" stroke="#343176"/>
+                            <path d="M4 4.5L10 8.5L13 6.5L16 4.5" stroke="#343176"/>
+                        </svg>
+                        | Связаться с менеджером
+                .info-list
+                    .info-item 
+                        p.label Юр. лицо / грузополучатель
+                        p.value ИП Винничек Андрей Борисович
+                    .info-item 
+                        p.label Адрес доставки
+                        p.value г. Москва, ул. Садовая-Кудринская, д. 25, оф. 124
+                    .info-item 
+                        p.label Телефон
+                        p.value +7 (999) 999-99-99
+                    .info-item 
+                        p.label Комментарий
+                        p.value звоните минимум за 30 минут
+                .info-list.main
+                    .info-item 
+                        p.label Наименований
+                        p.value 5
+                    .info-item 
+                        p.label На сумму
+                        p.value 975 124,87 ₽
+                .order-list 
+                    +order-card({img: './img/wholesale-orders/1.png',title: 'Ежедневник датированный 2025 ESCALADA, #ИЛОН МАСК', status: 'ожидается'})
+                    +order-card({img: './img/wholesale-orders/2.png',title: 'Еженедельник датированный 2025 ESCALADA, формат А6+, 96 л., мягкий переплёт, запаянный край, искусственная кожа "Буйвол", тиснение фольгой, блинтовое тиснение', status: 'ожидается'})
+                    +order-card({img: './img/wholesale-orders/3.png',title: 'Ежедневник датированный 2025 ESCALADA, #ИЛОН МАСК'})
+                    +order-card({img: './img/wholesale-orders/4.png',title: 'Еженедельник датированный 2025 ESCALADA, формат А6+, 96 л., мягкий переплёт, запаянный край, искусственная кожа "Буйвол", тиснение фольгой, блинтовое тиснение'})
+                    +order-card({img: './img/wholesale-orders/5.png',title: 'Ежедневник датированный 2025 ESCALADA, #ИЛОН МАСК'})
+                    +order-card({img: './img/wholesale-orders/1.png',title: 'Ежедневник датированный 2025 ESCALADA, #ИЛОН МАСК', status: 'ожидается'})
+                    +order-card({img: './img/wholesale-orders/2.png',title: 'Еженедельник датированный 2025 ESCALADA, формат А6+, 96 л., мягкий переплёт, запаянный край, искусственная кожа "Буйвол", тиснение фольгой, блинтовое тиснение', status: 'ожидается'})
+                    +order-card({img: './img/wholesale-orders/3.png',title: 'Ежедневник датированный 2025 ESCALADA, #ИЛОН МАСК'})
+                    +order-card({img: './img/wholesale-orders/4.png',title: 'Еженедельник датированный 2025 ESCALADA, формат А6+, 96 л., мягкий переплёт, запаянный край, искусственная кожа "Буйвол", тиснение фольгой, блинтовое тиснение'})
+                    +order-card({img: './img/wholesale-orders/5.png',title: 'Ежедневник датированный 2025 ESCALADA, #ИЛОН МАСК'})

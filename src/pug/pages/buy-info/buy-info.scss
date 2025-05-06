@@ -3,6 +3,10 @@
 .buy-info {
   @include s(margin-top, 28);
   @include s(padding-bottom, 156);
+  @media (max-width: $tab-sm) {
+    @include s(padding-bottom, 64);
+    @include s(margin-top, 16);
+  }
   .buy-info-inner {
     h1 {
       @include h1;
@@ -12,12 +16,29 @@
       display: flex;
       align-items: center;
       @include s(gap, 4);
+      @media (max-width: $tab-sm) {
+        justify-content: flex-start;
+        @include s(margin-top, 20);
+        @include s(margin-left, -20);
+        @include s(margin-right, -20);
+        @include s(padding-left, 20);
+        @include s(padding-right, 20);
+        overflow-x: auto;
+        .tab {
+          white-space: nowrap;
+        }
+      }
     }
     .selector-wrapper {
       @include s(margin-top, 28);
       display: flex;
       @include s(gap, 20);
       align-items: center;
+      @media (max-width: $tab-sm) {
+        flex-direction: column;
+        @include s(gap, 12);
+        align-items: flex-start;
+      }
       .title {
         @include descr-m;
         text-transform: uppercase;
@@ -32,6 +53,17 @@
       grid-template-columns: repeat(3, 1fr);
       @include s(gap, 24);
       @include s(margin-top, 28);
+      @media (max-width: $tab-sm) {
+        grid-template-columns: repeat(1, 1fr);
+        @include s(gap, 20);
+        @include s(margin-top, 20);
+      }
+      &.double-row {
+        @media (max-width: $tab-sm) {
+          grid-template-columns: repeat(2, 1fr);
+          @include s(gap, 20);
+        }
+      }
     }
     .pagination {
       margin-top: 48px;
@@ -43,6 +75,11 @@
       width: fit-content;
       @include s(gap, 14);
       @include s(margin-top, 28);
+      @media (max-width: $tab-sm) {
+        width: 100%;
+        @include s(margin-top, 20);
+        justify-content: center;
+      }
       p {
         text-transform: uppercase;
         @include descr-m;
@@ -52,6 +89,12 @@
           path {
             stroke: var(--white-color);
           }
+        }
+      }
+      svg {
+        @media (max-width: $tab-sm) {
+          @include s(width, 14);
+          @include s(height, 14);
         }
       }
     }

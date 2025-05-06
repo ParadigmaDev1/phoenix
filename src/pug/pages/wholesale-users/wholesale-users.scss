@@ -1,0 +1,172 @@
+@use "src/scss/common/files/mixins" as *;
+
+.wholesale-users {
+  @include s(padding-bottom, 156);
+  @media (max-width: $tab-sm) {
+    @include s(padding-bottom, 64);
+    @include s(margin-top, 16);
+  }
+  .wholesale-users-inner {
+    display: grid;
+    @include gtc(1fr, 294);
+    @include s(gap, 48);
+    @include s(margin-top, 36);
+    @media (max-width: $tab-sm) {
+      grid-template-columns: 1fr;
+      gap: 0;
+      @include s(margin-top, 22);
+    }
+    h1 {
+      @include h1;
+    }
+    .content {
+      h5 {
+        @include h5;
+        text-transform: uppercase;
+      }
+      .top {
+        display: flex;
+        justify-content: space-between;
+
+        .back-btn {
+          @include s(gap, 12);
+          @include s(height, 36);
+          @include padding(0, 16);
+          @media (max-width: $tab-sm) {
+            display: none;
+          }
+          p {
+            text-transform: uppercase;
+            @include descr-s;
+          }
+        }
+      }
+      .descr {
+        @include s(max-width, 513);
+        @include s(margin-top, 36);
+        @include body-l;
+        @media (max-width: $tab-sm) {
+          display: none;
+        }
+      }
+      .accordion {
+        @include s(margin-top, 48);
+        @media (max-width: $tab-sm) {
+          @include s(margin-top, 36);
+        }
+        .accordion-item {
+          border-top: 1px solid var(--line-color);
+          &:last-child {
+            border-bottom: 1px solid var(--line-color);
+          }
+          .accordion-title {
+            justify-content: space-between;
+            @include padding(26, 0);
+            @media (max-width: $tab-sm) {
+              @include padding(16, 0);
+            }
+            .title-wrapper {
+              .title {
+                @include h6;
+                text-align: left;
+                text-transform: uppercase;
+                // @media (max-width: $tab-sm) {
+                //   @include body-lb;
+                // }
+              }
+            }
+          }
+          &.active {
+            .accordion-title {
+              svg {
+                transform: rotate(180deg);
+              }
+            }
+          }
+          .icon {
+            @include s(min-width, 28);
+            @include s(min-height, 28);
+            @include s(max-width, 28);
+            @include s(max-height, 28);
+            border: 1px solid var(--line-color);
+            @include borr(6);
+            svg {
+              @include s(width, 12);
+              @include s(height, 6);
+            }
+          }
+          .accordion-body {
+            padding-left: 0;
+            .inputs {
+              display: flex;
+              flex-direction: column;
+              @include s(gap, 24);
+
+              .input-wrapper {
+                display: grid;
+                @include gtc(205, 1fr);
+                align-items: center;
+                @include s(gap, 24);
+                @media (max-width: $tab-sm) {
+                  grid-template-columns: 1fr;
+                  @include s(gap, 8);
+                }
+                p {
+                  font-weight: 400;
+                  @include s(font-size, 16);
+                  line-height: 120%;
+                }
+                .textarea__row {
+                  display: flex;
+                  flex-direction: column;
+                  @include s(gap, 8);
+                  textarea {
+                    @include s(height, 104);
+                  }
+                  .descr {
+                    @include body-s;
+                    color: var(--gray-light-color);
+                  }
+                }
+              }
+            }
+            .btns {
+              @include s(margin-top, 24);
+              @include s(margin-left, 229);
+              display: flex;
+              @include s(gap, 12);
+              @media (max-width: $tab-sm) {
+                margin-left: 0;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                @include s(margin-top, 20);
+              }
+              .btn {
+                @include padding(0, 36);
+                @include s(gap, 10);
+                @media (max-width: $tab-sm) {
+                  @include padding(0, 16);
+                }
+                p {
+                  @include descr-m;
+                  text-transform: uppercase;
+                }
+              }
+            }
+          }
+        }
+      }
+      .add-btn {
+        @include s(gap, 14);
+        @include s(margin-top, 24);
+        @include padding(0, 24);
+        p {
+          text-transform: uppercase;
+          @include descr-m;
+        }
+      }
+    }
+    .menu-block {
+    }
+  }
+}

@@ -1,7 +1,7 @@
 mixin pagination()
     .pagination
         button.btn.circle.l.pagination-prev
-            img(src="./img/icons/nav-prev.svg", alt="pagination-btn")
+            img(load='lazy' src="./img/icons/nav-prev.svg", alt="pagination-btn")
         .pagination-pages 
             button.circle.l.active 1
             button.circle.l 2
@@ -11,5 +11,5 @@ mixin pagination()
             .dots ...
             button.circle.l 186
         button.btn.circle.l.pagination-next
-            img(src="./img/icons/nav-next.svg", alt="pagination-btn")
+            img(load='lazy' src="./img/icons/nav-next.svg", alt="pagination-btn")
 

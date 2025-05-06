@@ -6,7 +6,7 @@
   @include s(gap, 8);
   @include s(margin-top, 137);
   @media (max-width: $tab-sm) {
-    @include s(margin-top, 80);
+    @include s(margin-top, 112);
     flex-wrap: wrap;
   }
   &.top-sm {

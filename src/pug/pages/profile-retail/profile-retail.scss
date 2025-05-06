@@ -1,0 +1,134 @@
+@use "src/scss/common/files/mixins" as *;
+
+.profile-retail {
+  @include s(margin-top, 28);
+  @include s(padding-bottom, 156);
+  @media (max-width: $tab-sm) {
+    @include s(padding-bottom, 64);
+    @include s(margin-top, 16);
+  }
+  .profile-retail-inner {
+    h1 {
+      @include h1;
+    }
+    .content {
+      display: grid;
+      @include gtc(661, 294);
+      @include s(gap, 390);
+      @media (max-width: $tab-sm) {
+        grid-template-columns: 1fr;
+        gap: 0;
+      }
+      .form {
+        @include s(margin-top, 36);
+        @media (max-width: $tab-sm) {
+          @include s(margin-top, 28);
+        }
+        h6 {
+          @include h6;
+          text-transform: uppercase;
+        }
+        .inputs-wrapper {
+          @include s(margin-top, 48);
+          @media (max-width: $tab-sm) {
+            @include s(margin-top, 28);
+          }
+        }
+        .address-wrapper {
+          @include s(margin-top, 24);
+          display: grid;
+          @include gtc(205, 1fr);
+          @include s(gap, 24);
+          @media (max-width: $tab-sm) {
+            grid-template-columns: 1fr;
+            @include s(gap, 8);
+            @include s(margin-top, 20);
+          }
+          & > p {
+            @media (max-width: $tab-sm) {
+              display: none;
+            }
+          }
+          .address {
+            display: grid;
+            @include gtc(16, 1fr, 20);
+            @include s(gap, 20);
+            @include s(padding-top, 20);
+            @include s(padding-bottom, 20);
+            border-bottom: 1px solid var(--line-color);
+            &:first-child {
+              padding-top: 0;
+            }
+            &:last-child {
+              padding-bottom: 0 !important;
+              border-bottom: none !important;
+            }
+            img {
+              @include s(width, 16);
+              @include s(height, 16);
+              @include s(margin-top, 4);
+            }
+            p {
+              @include body-m;
+            }
+          }
+          .add-btn {
+            @include s(margin-top, 24);
+            @include s(gap, 14);
+            @include padding(0, 24);
+            @media (max-width: $tab-sm) {
+              width: 100%;
+            }
+            p {
+              @include descr-m;
+              text-transform: uppercase;
+            }
+          }
+        }
+        .save-btn {
+          @include padding(0, 48);
+          @include s(margin-top, 48);
+          justify-content: center;
+          @media (max-width: $tab-sm) {
+            width: 100%;
+          }
+          p {
+            text-transform: uppercase;
+            @include descr-m;
+          }
+        }
+      }
+      .inputs {
+        display: flex;
+        flex-direction: column;
+        @include s(gap, 24);
+        @include s(margin-top, 24);
+
+        .input-wrapper {
+          display: grid;
+          @include gtc(205, 1fr);
+          align-items: center;
+          @include s(gap, 24);
+          @media (max-width: $tab-sm) {
+            grid-template-columns: 1fr;
+            @include s(gap, 8);
+          }
+          p {
+            font-weight: 400;
+            @include s(font-size, 16);
+            line-height: 120%;
+          }
+        }
+        .submit-btn {
+          @include padding(0, 48);
+          @include s(margin-left, 230);
+          justify-content: center;
+          p {
+            text-transform: uppercase;
+            @include descr-m;
+          }
+        }
+      }
+    }
+  }
+}

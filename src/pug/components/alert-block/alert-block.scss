@@ -2,19 +2,31 @@
 
 .alert-block {
   @include s(margin-top, 96);
+  @media (max-width: $tab-sm) {
+    @include s(margin-top, 64);
+  }
   &.to-top {
     @include s(margin-top, -20);
     position: relative;
     z-index: 2;
+    @media (max-width: $tab-sm) {
+      @include s(margin-top, 64);
+    }
   }
   &.top-m {
     @include s(margin-top, 64);
   }
   &.top-sm {
     @include s(margin-top, 48);
+    @media (max-width: $tab-sm) {
+      @include s(margin-top, 64);
+    }
   }
   &.top-xs {
     @include s(margin-top, 24);
+    @media (max-width: $tab-sm) {
+      @include s(margin-top, 64);
+    }
   }
   .alert-block-inner {
     .alert-block-container {
@@ -24,6 +36,9 @@
       flex-direction: column;
       align-items: center;
       @include padding(80);
+      @media (max-width: $tab-sm) {
+        @include padding(48, 24);
+      }
       img {
         @include s(width, 70);
         @include s(height, 64);
@@ -33,12 +48,20 @@
         text-transform: uppercase;
         color: var(--violet-color);
         @include s(margin-top, 36);
+        text-align: center;
+        @media (max-width: $tab-sm) {
+          @include s(margin-top, 28);
+        }
       }
       .descr {
         @include body-xl;
         @include s(max-width, 888);
         text-align: center;
         @include s(margin-top, 28);
+        @media (max-width: $tab-sm) {
+          @include s(margin-top, 8);
+          @include body-lb;
+        }
       }
     }
   }

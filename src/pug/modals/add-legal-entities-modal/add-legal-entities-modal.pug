@@ -1,0 +1,46 @@
+mixin add-legal-entities-modal()
+    .add-legal-entities-modal.modal
+        .modal-content-wrapper
+            .close-modal-wrapper
+                button.btn.close-modal 
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5.05026 14.9497L14.9498 5.05025" stroke="#343176"/>
+                        <path d="M14.9498 14.9497L5.05026 5.05025" stroke="#343176"/>
+                    </svg>
+            .modal-content
+                form.form
+                    p.title добавить юр. лицо
+                    .inputs 
+                        .input-wrapper 
+                            p Наименование
+                            .input__row.gray
+                                input(type="text" placeholder="Введите").custom-input.input.form__input-value.input__valid-title
+                                .input__item-small
+                        .input-wrapper 
+                            p Брендовое название
+                            .input__row.gray
+                                input(type="text" placeholder="Введите").custom-input.input.form__input-value.input__valid-title
+                                .input__item-small
+                        .row 
+                            .input-wrapper 
+                                p ИНН
+                                .input__row.gray
+                                    input(type="text" placeholder="Введите").custom-input.input.form__input-value.input__valid-inn
+                                    .input__item-small
+                            .input-wrapper 
+                                p КПП
+                                .input__row.gray
+                                    input(type="text" placeholder="Введите").custom-input.input.form__input-value.input__valid-kpp
+                                    .input__item-small
+                        .input-wrapper 
+                            p ОГРН
+                            .input__row.gray
+                                input(type="text" placeholder="Введите").custom-input.input.form__input-value.input__valid-ogrn
+                                .input__item-small
+                        .input-wrapper 
+                            p Юридический адрес
+                            .input__row.gray
+                                input(type="text" placeholder="Введите").custom-input.input.form__input-value.input__valid-address
+                                .input__item-small
+                    button.btn.primary.m.submit-btn
+                        p сохранить

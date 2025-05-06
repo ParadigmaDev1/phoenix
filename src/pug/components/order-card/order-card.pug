@@ -1,0 +1,24 @@
+mixin order-card(data)
+    .order-card
+        .image-wrapper 
+            img(load='lazy' src=data.img, alt="order")
+        .content 
+            .title-wrapper 
+                if data.status
+                    p.status #{data.status}
+                p.title #{data.title}
+            .order-card-properties 
+                p.label Артикул
+                p.value 68012
+            .order-card-properties 
+                p.label Штрихкод
+                p.value 54606008612533
+            .order-card-properties 
+                p.label Цена (шт.)
+                p.value 414,40 ₽
+            .order-card-properties 
+                p.label Количество
+                p.value 65 шт.
+            .order-card-properties 
+                p.label Сумма
+                p.value 124 963,80 ₽

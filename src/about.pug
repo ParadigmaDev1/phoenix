@@ -1,15 +1,16 @@
 extends ./pug/templates/template.pug
 
 block head 
-  +head(["header", "content-hero", "about-features", "content-info", "about-values", "about-figures", "about-brands", "about-groups", "about-partner", "image-block", "about-geography", "alert-block", "about-map", "about-charity", "about-press", "about-gallery", "brands-list", "values-block", "crumbs", "selector", "footer-alert", "footer", "mobile-menu", "accordion-item", "catalog-menu", "map"])
+  +head(["header", "content-hero", "about-features", "content-info", "about-values", "about-figures", "about-brands", "about-groups", "about-partner", "image-block", "about-geography", "alert-block", "about-map", "about-charity", "about-press", "about-gallery", "brands-list", "values-block", "crumbs", "selector", "footer-alert", "footer", "mobile-menu", "accordion-item", "catalog-menu", "map", "charity-modal", "figure-modal", "mobile-sidebar", "auth-modal", "recover-password-modal"])
 block header 
   +header().dark
   +mobile-menu()
   +catalog-menu()
+  +mobile-sidebar()
 block content
   +crumbs({items: [{title: 'О компании', href: '#'}]})
   +about-hero()
-  +about-features()
+  +about-features() 
   +about-info()
   +alert-block({title: 'Наша миссия ', descr: 'Создавать качественные и доступные решения для бизнеса и образовательного сектора, обеспечивая клиентов товарами, которые делают их работу более продуктивной и эффективной. Мы стремимся быть надёжным партнёром для наших дистрибьюторов, розничных клиентов и корпоративных заказчиков, предлагая только проверенные продукты и высокие стандарты обслуживания.'})
   +about-values()
@@ -30,4 +31,7 @@ block content
 block footer 
   +footer()
 block modals 
-  
+  +charity-modal()
+  +figure-modal()
+  +auth-modal()
+  +recover-password-modal()

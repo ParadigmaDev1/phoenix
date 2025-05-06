@@ -2,11 +2,16 @@
 
 .about-geography {
   @include s(margin-top, 116);
-
+  @media (max-width: $tab-sm) {
+    @include s(margin-top, 64);
+  }
   .about-geography-inner {
     h3 {
       text-align: center;
       @include h2;
+      @media (max-width: $tab-sm) {
+        text-align: left;
+      }
     }
     .image-wrapper {
       @include s(width, 1061);
@@ -14,6 +19,11 @@
       @include s(margin-top, 36);
       margin-left: auto;
       margin-right: auto;
+      @media (max-width: $tab-sm) {
+        @include s(width, 320);
+        @include s(height, 150);
+        @include s(margin-top, 24);
+      }
       img {
         width: 100%;
         height: 100%;
@@ -28,7 +38,11 @@
       margin-left: auto;
       margin-right: auto;
       @include s(margin-top, -116);
-
+      @media (max-width: $tab-sm) {
+        grid-template-columns: repeat(1, 1fr);
+        @include s(gap, 28);
+        @include s(margin-top, 28);
+      }
       .col {
         display: flex;
         flex-direction: column;
@@ -39,12 +53,21 @@
           @include s(font-size, 96);
           @include s(letter-spacing, -3);
           line-height: 80%;
+          @media (max-width: $tab-sm) {
+            font-weight: 300;
+            @include s(font-size, 56);
+            @include s(letter-spacing, -1);
+          }
         }
         .descr {
           text-transform: uppercase;
           @include h6;
           text-align: center;
           @include s(margin-top, 24);
+          @media (max-width: $tab-sm) {
+            @include s(margin-top, 12);
+            @include descr-m;
+          }
         }
       }
     }

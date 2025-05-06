@@ -2,22 +2,35 @@
 
 .about-partner {
   @include s(margin-top, 116);
-
+  @media (max-width: $tab-sm) {
+    @include s(margin-top, 64);
+    overflow: hidden;
+  }
   .about-partner-inner {
     h3 {
       @include h2;
       text-align: center;
+      @media (max-width: $tab-sm) {
+        text-align: left;
+      }
     }
     .content {
       display: grid;
       @include gtc(318, 1fr, 318);
       @include s(gap, 24);
       @include s(margin-top, 42);
-
+      @media (max-width: $tab-sm) {
+        display: flex;
+        justify-content: center;
+        @include s(margin-top, 28);
+      }
       .col {
         display: flex;
         flex-direction: column;
         @include s(gap, 75);
+        @media (max-width: $tab-sm) {
+          display: none;
+        }
         .title {
           color: var(--violet-color);
           text-transform: uppercase;
@@ -29,11 +42,36 @@
       }
       .image-wrapper {
         @include s(height, 564);
-
+        @media (max-width: $tab-sm) {
+          @include s(height, 295);
+        }
         img {
           width: 100%;
           height: 100%;
           object-fit: cover;
+        }
+      }
+    }
+    .partners-swiper {
+      display: none;
+      @include s(margin-top, 35);
+      @media (max-width: $tab-sm) {
+        display: block;
+      }
+      .swiper-slide {
+        opacity: 0;
+        transition: opacity var(--trs-cubic-300);
+        &.visible-slide {
+          opacity: 1;
+        }
+        .title {
+          color: var(--violet-color);
+          text-transform: uppercase;
+          @include h5;
+        }
+        .descr {
+          @include body-m;
+          @include s(margin-top, 8);
         }
       }
     }

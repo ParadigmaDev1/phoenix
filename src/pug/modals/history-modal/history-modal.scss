@@ -1,0 +1,197 @@
+@use "src/scss/common/files/mixins" as *;
+
+.history-modal {
+  .modal-content {
+    display: grid;
+    @include gtc(318, 1fr);
+    @include s(gap, 48);
+    @media (max-width: $tab-sm) {
+      grid-template-columns: 1fr;
+      @include s(gap, 64);
+    }
+    .image-block-wrapper {
+      .sticky-block {
+        top: 0;
+      }
+      .image-wrapper {
+        @include s(height, 394);
+        @include borr(12);
+        position: relative;
+        overflow: hidden;
+        @media (max-width: $tab-sm) {
+          @include s(height, 397);
+        }
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          position: absolute;
+        }
+      }
+      .name {
+        @include s(margin-top, 24);
+        text-transform: uppercase;
+        @include h6;
+      }
+      .post {
+        @include s(margin-top, 12);
+        text-transform: uppercase;
+        color: var(--violet-color);
+        @include descr-m;
+      }
+    }
+    .single-swiper-wrapper {
+      //   @include s(height, 310);
+      position: relative;
+      .sticky-block {
+        top: 0;
+      }
+      .single-swiper {
+        overflow: hidden;
+        @include s(height, 310);
+        @include borr(12);
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      .navigation {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        @include s(left, -23);
+        @include s(right, -23);
+        justify-content: space-between;
+        z-index: 2;
+      }
+    }
+    .content-wrapper {
+      h3 {
+        @include h2;
+      }
+      .subtitle {
+        @include body-xl;
+        @include s(margin-top, 28);
+        @media (max-width: $tab-sm) {
+          @include body-lb;
+        }
+      }
+      .content {
+        display: flex;
+        flex-direction: column;
+        @include s(gap, 64);
+        @include s(margin-top, 28);
+        @include s(padding-top, 28);
+        border-top: 1px solid var(--line-color);
+        @media (max-width: $tab-sm) {
+          @include s(gap, 36);
+        }
+        .quote {
+          display: flex;
+          @include s(gap, 44);
+          @media (max-width: $tab-sm) {
+            @include s(gap, 20);
+          }
+          img {
+            @include s(width, 48);
+            @include s(height, 64);
+            @media (max-width: $tab-sm) {
+              @include s(width, 28);
+              @include s(height, 37);
+            }
+          }
+          p {
+            @include body-xl;
+            color: var(--violet-color);
+            @media (max-width: $tab-sm) {
+              @include body-lb;
+            }
+          }
+        }
+        .text-wrapper {
+          h4 {
+            @include h3;
+            @include s(margin-bottom, 16);
+          }
+          .interview-block {
+            display: flex;
+            flex-direction: column;
+            @include s(gap, 24);
+            .interview-item {
+              display: flex;
+              flex-direction: column;
+              @include s(gap, 12);
+              .interview-item-content {
+                display: flex;
+
+                @include s(gap, 28);
+                img {
+                  @include s(width, 20);
+                  @include s(height, 26);
+                }
+                p {
+                  @include body-l;
+                }
+              }
+            }
+            .title {
+              @include body-xl;
+            }
+          }
+          .image-wrapper {
+            @include s(height, 529);
+            @include borr(12);
+            overflow: hidden;
+            @include s(margin-bottom, 32);
+            @include s(margin-top, 32);
+            @media (max-width: $tab-sm) {
+              @include s(height, 180);
+            }
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+          }
+
+          ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            @include s(gap, 8);
+            @include s(margin-top, 16);
+
+            li {
+              position: relative;
+              @include s(padding-left, 30);
+              @include body-l;
+              &:before {
+                content: "";
+                position: absolute;
+                @include s(width, 6);
+                @include s(height, 6);
+                border-radius: 9999px;
+                background: var(--violet-color);
+                @include s(top, 10);
+                left: 0;
+              }
+            }
+          }
+        }
+        .text {
+          display: flex;
+          flex-direction: column;
+          @include s(gap, 10);
+          @include s(margin-top, 16);
+
+          p {
+            @include body-l;
+          }
+        }
+      }
+    }
+  }
+}

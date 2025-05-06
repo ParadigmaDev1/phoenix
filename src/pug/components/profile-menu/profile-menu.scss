@@ -1,0 +1,190 @@
+@use "src/scss/common/files/mixins" as *;
+
+.profile-menu {
+  z-index: 110;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: var(--white-color);
+  @include padding(16, 20, 95, 20);
+  overflow: auto;
+  transition: var(--trs-cubic-300);
+  pointer-events: none;
+  opacity: 0;
+  transform: translateY(-20%);
+  &.active {
+    opacity: 1;
+    pointer-events: all;
+    transform: translateY(0);
+  }
+  .top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .title {
+      @include body-lb;
+    }
+    .close-btn {
+      @include s(width, 17);
+      @include s(height, 17);
+    }
+  }
+  .profile-wholesale-menu {
+    display: flex;
+    flex-direction: column;
+    @include s(margin-top, 10);
+
+    a {
+      display: flex;
+      align-items: center;
+      @include s(gap, 12);
+      @include s(padding-top, 16);
+      @include s(padding-bottom, 16);
+      border-top: 1px solid var(--line-color);
+
+      svg {
+        @include s(width, 17);
+        @include s(height, 17);
+      }
+      p {
+        @include body-m;
+      }
+    }
+    .exit-btn {
+      display: flex;
+      align-items: center;
+      @include s(gap, 12);
+      border-top: 1px solid var(--line-color);
+      @include s(padding-top, 16);
+
+      svg {
+        @include s(width, 17);
+        @include s(height, 17);
+      }
+      p {
+        @include body-m;
+        color: var(--gray-light-color);
+      }
+    }
+  }
+  .profile-menu-swiper-wrapper {
+    @include s(margin-top, 36);
+    @include s(margin-left, -20);
+    @include s(margin-right, -20);
+    @include s(padding-left, 20);
+    @include s(padding-right, 20);
+    overflow: hidden;
+
+    .swiper-slide {
+      .notification-card {
+        background: var(--back-color);
+        position: relative;
+        @include borr(6);
+        @include padding(20);
+        &.no-check {
+          &::before {
+            content: "";
+            @include s(height, 6);
+            @include s(width, 6);
+            @include s(right, 10);
+            @include s(bottom, 10);
+            background: var(--green-color);
+            position: absolute;
+            border-radius: 999px;
+          }
+        }
+        .notification-card-top {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          .date {
+            display: flex;
+            align-items: center;
+            @include s(gap, 6);
+            @include body-xs;
+            text-transform: uppercase;
+            color: var(--gray-light-color);
+            img {
+              @include s(width, 10);
+              @include s(height, 10);
+            }
+          }
+          .delete-btn {
+            @include s(width, 17);
+            @include s(height, 15);
+            padding: 0;
+            svg {
+              width: 100%;
+              height: 100%;
+            }
+          }
+        }
+        .title {
+          @include s(margin-top, 10);
+          @include body-s;
+        }
+      }
+    }
+    .profile-menu-swiper-pagination-wrapper {
+      @include s(margin-top, 12);
+    }
+  }
+  .profile-wholesale-menu-ask-person {
+    @include s(margin-top, 36);
+
+    .image-wrapper {
+      @include s(width, 84);
+      @include s(height, 104);
+      @include borr(6);
+      overflow: hidden;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    .content {
+      @include s(margin-top, 20);
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      .name {
+        @include body-l;
+      }
+      .post {
+        color: var(--gray-light-color);
+        @include s(margin-top, 6);
+        @include body-xs;
+      }
+      .date {
+        @include s(margin-top, 20);
+        display: flex;
+        align-items: center;
+        @include s(gap, 16);
+        @include body-sb;
+        img {
+          @include s(width, 16);
+          @include s(height, 16);
+        }
+      }
+      .tel {
+        @include s(margin-top, 10);
+        display: flex;
+        align-items: center;
+        @include s(gap, 16);
+        @include body-sb;
+        color: var(--violet-color);
+        img {
+          @include s(width, 14);
+          @include s(height, 14);
+        }
+      }
+      .btn {
+        @include s(margin-top, 20);
+        width: 100%;
+      }
+    }
+  }
+}

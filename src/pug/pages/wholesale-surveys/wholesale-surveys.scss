@@ -1,0 +1,106 @@
+@use "src/scss/common/files/mixins" as *;
+
+.wholesale-surveys {
+  @include s(padding-bottom, 156);
+  @media (max-width: $tab-sm) {
+    @include s(padding-bottom, 64);
+    @include s(margin-top, 16);
+  }
+  .wholesale-surveys-inner {
+    display: grid;
+    @include gtc(1fr, 294);
+    @include s(gap, 48);
+    @include s(margin-top, 36);
+    @media (max-width: $tab-sm) {
+      grid-template-columns: 1fr;
+      gap: 0;
+      @include s(margin-top, 22);
+    }
+    h1 {
+      @include h1;
+    }
+    .content {
+      .descr {
+        @include s(margin-top, 36);
+        @include body-l;
+        @media (max-width: $tab-sm) {
+          @include s(margin-top, 20);
+          @include body-m;
+        }
+      }
+      .wholesale-surveys-list {
+        display: flex;
+        flex-direction: column;
+        @include s(gap, 12);
+        @include s(margin-top, 28);
+        @media (max-width: $tab-sm) {
+          @include s(margin-top, 20);
+        }
+        .wholesale-surveys-item {
+          @include borr(12);
+          @include padding(28);
+          display: grid;
+          @include gtc(1fr, 174);
+          @include s(gap, 56);
+          background: var(--back-color);
+          cursor: pointer;
+          @media (max-width: $tab-sm) {
+            grid-template-columns: 1fr;
+            @include padding(20);
+            @include s(gap, 20);
+          }
+          &:hover {
+            .title {
+              color: var(--violet-color);
+            }
+            .btn {
+              background: var(--violet-color);
+              p {
+                color: var(--white-color);
+              }
+              svg {
+                path {
+                  stroke: var(--white-color);
+                }
+              }
+            }
+          }
+          .text {
+            display: flex;
+            flex-direction: column;
+            @include s(gap, 6);
+            .title {
+              @include h5;
+              text-transform: uppercase;
+              transition: var(--trs-cubic-300);
+            }
+            .descr {
+              margin-top: 0;
+              @include body-m;
+              @media (max-width: $tab-sm) {
+                @include body-s;
+              }
+            }
+          }
+          .btn {
+            @include padding(0, 16);
+            @include s(gap, 12);
+            @include s(height, 36);
+            @media (max-width: $tab-sm) {
+              width: fit-content;
+            }
+            p {
+              @include descr-s;
+            }
+            svg {
+              @include s(width, 8);
+              @include s(height, 14);
+            }
+          }
+        }
+      }
+    }
+    .menu-block {
+    }
+  }
+}

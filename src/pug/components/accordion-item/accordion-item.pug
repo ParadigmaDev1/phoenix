@@ -8,13 +8,13 @@ mixin accordion-item(data)
                     </svg>
                 .title-wrapper
                     if data.icon
-                        img(src=data.icon, alt="icon")
+                        img(load='lazy' src=data.icon, alt="icon")
                     p.title #{data.title}
         else 
             button(type='button').accordion-title 
                 .title-wrapper
                     if data.icon
-                        img(src=data.icon, alt="icon")
+                        img(load='lazy' src=data.icon, alt="icon")
                     p.title #{data.title}
                 .icon 
                     <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">

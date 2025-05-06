@@ -1,0 +1,13 @@
+mixin wholesale-marketing-materials()
+    .wholesale-marketing-materials
+        .wholesale-marketing-materials-inner.container.tabs-wrapper
+            .content 
+                h1 маркетинговые материалы
+                .marketing-materials-list 
+                    +info-card({img: './img/home/ideas/2.jpg', descr: 'описание', title: 'баннеры для директа', btnTitle: 'подробнее'})
+                    +info-card({img: './img/home/ideas/2.jpg', descr: 'описание', title: 'презентации', btnTitle: 'подробнее'})
+                    +info-card({img: './img/home/ideas/2.jpg', descr: 'описание', title: 'видеоролики', btnTitle: 'подробнее'})
+                    +info-card({img: './img/home/ideas/2.jpg', descr: 'описание', title: 'фото товаров', btnTitle: 'подробнее'})
+            .menu-block 
+                .sticky-block
+                    +profile-wholesale-menu()

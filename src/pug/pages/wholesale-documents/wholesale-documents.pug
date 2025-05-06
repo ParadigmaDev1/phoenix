@@ -1,0 +1,47 @@
+mixin wholesale-documents()
+    .wholesale-documents
+        .wholesale-documents-inner.container.tabs-wrapper
+            .content 
+                h1 документы
+                button.btn.outline.violet.m.add-btn
+                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0.506836 7.5H14.5068" stroke="#343176"/>
+                        <path d="M7.50684 14.5L7.50684 0.5" stroke="#343176"/>
+                    </svg>
+                    p добавить документ
+                .filters 
+                    +selector({title: 'Все документы', name: 'doc-type', items: [{title: 'Все документы'},{title: 'Word'},{title: 'Excel'}]})
+                    +selector({title: 'По дате изменения', name: 'sort-type', items: [{title: 'По дате изменения'},{title: 'По названию'}]})
+                    +selector({title: 'По: 20', name: 'count', items: [{title: 'По: 20'},{title: 'По: 10'}]})
+                .filters-features 
+                    p.total-documents-select.hidden Выбрано: 
+                    label.select-all
+                        input(type="checkbox").custom-checkbox
+                        p Выбрать все
+                    button.remove-all-btn.hidden
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10.8492 10.8492L0.949747 0.949728M0.949747 10.8492L10.8492 0.949728" stroke="#343176"/>
+                        </svg>
+                        p Удалить выбранные
+                .documents-list-wrapper 
+                    .documents-list 
+                        +document-card({img: './img/icons/word.png', title: 'Договор №45332189.doc', company: 'Ваш', comment: 'Договор для *какое-то описание'})
+                        +document-card({img: './img/icons/excel.png', title: 'Договор №45332189.xls', company: 'Феникс+'})
+                        +document-card({img: './img/icons/word.png', title: 'Договор №45332189 пример очень длинного заголовка документа.doc', company: 'Ваш',comment: 'Программа лояльности также позволяет использовать накопленные баллы для оплаты следующих заказов, делая каждую покупку еще выгоднее.'})
+                        +document-card({img: './img/icons/excel.png', title: 'Договор №45332189.xls', company: 'Ваш',})
+                        +document-card({img: './img/icons/excel.png', title: 'Договор №45332189.xls', company: 'Ваш',})
+                        +document-card({img: './img/icons/excel.png', title: 'Договор №45332189.xls', company: 'Ваш',})
+                        +document-card({img: './img/icons/excel.png', title: 'Договор №45332189.xls', company: 'Ваш',})
+                        +document-card({img: './img/icons/excel.png', title: 'Договор №45332189.xls', company: 'Ваш',})
+                        +document-card({img: './img/icons/excel.png', title: 'Договор №45332189.xls', company: 'Ваш',})
+                        +document-card({img: './img/icons/excel.png', title: 'Договор №45332189.xls', company: 'Ваш',})
+                    +pagination()
+                    button.btn.outline.violet.m.more-btn
+                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.506836 7.5H14.5068" stroke="#343176"/>
+                            <path d="M7.50684 14.5L7.50684 0.5" stroke="#343176"/>
+                        </svg>
+                        p загрузить ещё
+            .menu-block 
+                .sticky-block
+                    +profile-wholesale-menu()

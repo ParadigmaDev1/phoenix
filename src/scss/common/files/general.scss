@@ -66,18 +66,18 @@ body {
     display: flex;
     flex-direction: column;
     .input__item-small {
-      color: #f34040;
-      font-family: Inter, sans-serif;
-      font-size: 12px;
-      font-style: normal;
-      font-weight: 300;
-      line-height: 125%; /* 15px */
-      letter-spacing: 0.24px;
+      background: var(--pink-color);
+      color: var(--red-color);
+      @include body-xs;
+      @include padding(8, 12);
+      @include borr(6);
+      @include s(margin-top, 10);
+      display: none;
     }
   }
   .input__row.error {
-    input:placeholder-shown {
-      color: #f34040;
+    input {
+      border: 1px solid #f34040;
     }
   }
 }
@@ -137,20 +137,40 @@ svg {
     }
   }
 }
-.pagination-progress {
-  position: relative;
-  height: 1px !important;
-  background: rgba(255, 255, 255, 0.2);
+.pagination-progress-wrapper {
+  @include s(margin-top, 24);
+  align-items: center;
+  @include s(gap, 17);
+  display: none;
   @media (max-width: $tab-sm) {
-    background: var(--gray-light-color);
+    display: flex;
   }
-  .swiper-pagination-progressbar-fill {
-    background: var(--white-color);
+
+  .pagination-progress {
+    position: relative;
+    height: 1px !important;
+    background: rgba(255, 255, 255, 0.2);
     @media (max-width: $tab-sm) {
-      background: var(--gray-color);
+      background: var(--gray-light-color);
+    }
+    .swiper-pagination-progressbar-fill {
+      background: var(--white-color);
+      @media (max-width: $tab-sm) {
+        background: var(--gray-color);
+      }
     }
   }
+  .current,
+  .total {
+    font-weight: 500;
+    @include s(font-size, 10);
+    line-height: 128%;
+  }
+  .total {
+    color: var(--gray-light-color);
+  }
 }
+
 .pagination {
   display: flex;
   align-items: center;
@@ -173,8 +193,10 @@ svg {
   height: fit-content;
   @include s(margin-top, 36);
   @include s(gap, 6);
-
   justify-content: center;
+  @media (max-width: $tab) {
+    display: none;
+  }
   .swiper-pagination-bullet {
     @include s(width, 48);
     @include s(height, 48);
@@ -193,6 +215,29 @@ svg {
       background: none;
       border-color: var(--violet-color);
       color: var(--violet-color);
+    }
+  }
+}
+.video-block {
+  @include borr(12);
+  overflow: hidden;
+  position: relative;
+  video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .play-btn {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    @media (max-width: $tab-sm) {
+      img {
+        @include s(width, 48);
+        @include s(height, 48);
+      }
     }
   }
 }

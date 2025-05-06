@@ -1,0 +1,281 @@
+@use "src/scss/common/files/mixins" as *;
+
+.wholesale-loyalty-program-about {
+  @include s(padding-bottom, 156);
+  @media (max-width: $tab-sm) {
+    @include s(padding-bottom, 64);
+    @include s(margin-top, 16);
+  }
+  .wholesale-loyalty-program-about-inner {
+    display: grid;
+    @include gtc(1fr, 294);
+    @include s(gap, 48);
+    @include s(margin-top, 36);
+    @media (max-width: $tab-sm) {
+      grid-template-columns: 1fr;
+      gap: 0;
+      @include s(margin-top, 22);
+    }
+    h1 {
+      @include h1;
+    }
+    .content {
+      .top {
+        display: flex;
+        justify-content: space-between;
+        @include s(margin-bottom, 36);
+        align-items: center;
+        @media (max-width: $tab-sm) {
+          @include s(margin-bottom, 20);
+        }
+        .btn {
+          @include s(gap, 12);
+          @include s(height, 36);
+          @include padding(0, 16);
+          @media (max-width: $tab-sm) {
+            display: none;
+          }
+          p {
+            text-transform: uppercase;
+            @include descr-s;
+          }
+        }
+      }
+      .alert-block {
+        background: var(--violet-back-color);
+        @include padding(48);
+        @include borr(12);
+        @include s(margin-bottom, 64);
+        @media (max-width: $tab-sm) {
+          @include padding(24);
+          @include s(margin-bottom, 36);
+        }
+        p {
+          @include body-l;
+          @media (max-width: $tab-sm) {
+            @include body-m;
+          }
+        }
+        .btn {
+          width: fit-content;
+          @include s(gap, 12);
+          @include s(height, 48);
+          @include padding(0, 24);
+          @include s(margin-top, 20);
+          @media (max-width: $tab-sm) {
+            @include padding(0, 14);
+            @include s(height, 36);
+            @include s(margin-top, 16);
+          }
+          p {
+            text-transform: uppercase;
+            @include descr-m;
+            @media (max-width: $tab-sm) {
+              @include descr-s;
+            }
+          }
+        }
+      }
+      .text-block {
+        display: grid;
+        @include gtc(318, 1fr);
+        @include s(gap, 23);
+        @include s(margin-bottom, 64);
+        @media (max-width: $tab-sm) {
+          grid-template-columns: 1fr;
+          @include s(gap, 16);
+          @include s(margin-bottom, 36);
+        }
+        .title {
+          text-transform: uppercase;
+          @include h4;
+        }
+        .text {
+          & > p {
+            @include body-l;
+            b {
+              @include body-lb;
+            }
+          }
+          ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            @include s(gap, 8);
+            @include s(margin-top, 16);
+            @include s(margin-bottom, 48);
+
+            li {
+              position: relative;
+              @include s(padding-left, 30);
+              @include body-l;
+              @media (max-width: $tab-sm) {
+                @include body-m;
+              }
+              &:before {
+                content: "";
+                position: absolute;
+                @include s(width, 6);
+                @include s(height, 6);
+                border-radius: 9999px;
+                background: var(--violet-color);
+                @include s(top, 10);
+                left: 0;
+              }
+            }
+          }
+          .info {
+            display: flex;
+            flex-direction: column;
+            @include s(margin-bottom, 36);
+
+            .info-item {
+              display: flex;
+              justify-content: space-between;
+              @include s(padding-top, 16);
+              @include s(padding-bottom, 16);
+              border-top: 1px solid var(--line-color);
+              @media (max-width: $tab-sm) {
+                flex-direction: column;
+                @include s(padding-top, 12);
+                @include s(padding-bottom, 12);
+              }
+              &:last-child {
+                border-bottom: 1px solid var(--line-color);
+              }
+              .label {
+                @include body-l;
+                b {
+                  @include body-lb;
+                }
+              }
+              .value {
+                color: var(--red-color);
+                @include body-l;
+              }
+            }
+          }
+          .image-wrapper {
+            border: 6px solid var(--gray-color);
+            @include borr(24);
+            overflow: hidden;
+            @include s(height, 384);
+            @include s(margin-top, 28);
+            @media (max-width: $tab-sm) {
+              @include s(height, 186);
+              border-width: 3px;
+            }
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+          }
+        }
+      }
+      .accordion-wrapper {
+        @include s(margin-top, 96);
+
+        h4 {
+          @include h4;
+          text-transform: uppercase;
+        }
+        .accordion {
+          @include s(margin-top, 29);
+
+          .accordion-item.nested {
+            border-top: 1px solid var(--line-color);
+            &:last-child {
+              border-bottom: 1px solid var(--line-color);
+            }
+            & > .accordion-title {
+              justify-content: flex-start;
+              @include padding(36, 0);
+              @media (max-width: $tab-sm) {
+                @include padding(16, 0);
+              }
+              .title-wrapper {
+                .title {
+                  @include body-xl;
+                }
+              }
+            }
+
+            &.active {
+              .accordion-title {
+                svg {
+                  transform: rotate(180deg);
+                }
+              }
+              .icon {
+                @include s(min-width, 28);
+                @include s(min-height, 28);
+                @include s(max-width, 28);
+                @include s(max-height, 28);
+                border: 1px solid var(--line-color);
+                @include borr(6);
+                svg {
+                  @include s(width, 12);
+                  @include s(height, 6);
+                }
+              }
+              .accordion-body {
+                ul {
+                  list-style: none;
+                  display: flex;
+                  flex-direction: column;
+                  @include s(gap, 8);
+                  li {
+                    position: relative;
+                    @include s(padding-left, 30);
+                    @include body-l;
+                    @media (max-width: $tab-sm) {
+                      @include body-m;
+                    }
+                    &:before {
+                      content: "";
+                      position: absolute;
+                      @include s(width, 6);
+                      @include s(height, 6);
+                      border-radius: 9999px;
+                      background: var(--violet-color);
+                      @include s(top, 10);
+                      left: 0;
+                    }
+                  }
+                }
+                .text {
+                  @include s(margin-top, 16);
+                  display: flex;
+                  flex-direction: column;
+                  @include s(gap, 10);
+                  p {
+                    @include body-l;
+                    @media (max-width: $tab-sm) {
+                      @include body-m;
+                    }
+                  }
+                }
+                .subtitle {
+                  @include body-xl;
+                  @include s(margin-top, 16);
+                  @include s(margin-bottom, 16);
+                }
+                .btn {
+                  @include padding(0, 24);
+                  @include s(gap, 4);
+                  @include s(margin-top, 24);
+
+                  p {
+                    text-transform: uppercase;
+                    @include descr-m;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

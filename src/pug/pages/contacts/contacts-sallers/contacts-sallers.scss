@@ -5,5 +5,11 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     @include s(gap, 24);
+    @include s(margin-top, 36);
+    @media (max-width: $tab-sm) {
+      grid-template-columns: repeat(1, 1fr);
+      @include s(gap, 12);
+      @include s(margin-top, 36);
+    }
   }
 }

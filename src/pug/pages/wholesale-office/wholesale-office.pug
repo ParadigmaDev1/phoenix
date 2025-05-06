@@ -1,0 +1,69 @@
+mixin wholesale-office()
+    .wholesale-office
+        .wholesale-office-inner.container.tabs-wrapper 
+            .content 
+                h1 мой кабинет
+                .payment-schedule
+                    h5 График платежей
+                    .info
+                        p.alert 
+                            img(load='lazy' src="./img/icons/info.svg", alt="info")
+                            | У вас имеется просроченный долг на сумму 28 093, 78 ₽
+                        p.date 
+                            img(load='lazy' src="./img/icons/clock.svg", alt="info")
+                            | Обновлено 03.11.24 22:32 
+                    .paylent-list 
+                        +schedule-card({title: 'Текущая задолженность', sum: '145 000 ₽'})
+                        +schedule-card({title: 'Ожидаемая оплата в этом месяце', sum: '33 803.48 ₽'})
+                .carts 
+                    .col 
+                        h5 Мои корзины
+                        .carts-list     
+                            +cart-item({title: 'Основная корзина', names: '23', sum: '975 124,87 ₽'})
+                            +cart-item({title: 'на кудринскую', names: '8', sum: '975 124,87 ₽'})
+                            +cart-item({title: 'на нарвинскую'})
+                    .col 
+                        h5 избранное
+                        .carts-list     
+                            +cart-item({names: '34', sum: '975 124,87 ₽'})
+                .special-offers 
+                    h5 Спецпредложения
+                    .double-swiper 
+                        .swiper-wrapper 
+                            .swiper-slide 
+                                +info-card({img: './img/home/ideas/2.jpg', title: 'Осенняя распродажа товаров для офиса -50%', btnTitle: 'подробнее'})
+                            .swiper-slide 
+                                +info-card({img: './img/home/ideas/2.jpg', title: 'Осенняя распродажа товаров для офиса -50%', btnTitle: 'подробнее'})
+                            .swiper-slide 
+                                +info-card({img: './img/home/ideas/2.jpg', title: 'школьная коллекция', btnTitle: 'подробнее'})
+                            .swiper-slide 
+                                +info-card({img: './img/home/ideas/2.jpg', title: 'школьная коллекция', btnTitle: 'подробнее'})
+                    .navigation
+                        button.btn.circle.l.double-swiper-prev
+                            <svg width="10" height="14" viewBox="0 0 10 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9 13L1 7L9 1" stroke="white" stroke-linecap="square" stroke-linejoin="round"/>
+                            </svg>
+                        button.btn.circle.l.double-swiper-next
+                            <svg width="10" height="14" viewBox="0 0 10 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 13L9 7L0.999999 1" stroke="white" stroke-linecap="square" stroke-linejoin="round"/>
+                            </svg>
+                    .double-swiper-pagination-wrapper.pagination-progress-wrapper
+                        p.current 01
+                        .double-swiper-pagination.pagination-progress
+                        p.total
+                .loyalty-program
+                    .loyalty-program-content
+                        h5 Программа лояльности
+                        ul 
+                            li На старте вы получаете бронзовый статус.
+                            li Для перехода на следующий уровень необходимо выполнить два критерия: минимальное количество SKU и объем закупок.
+                        button.btn.outline.m.violet 
+                            p подробнее
+                            <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 13L7 7L0.999999 1" stroke="#343176" stroke-linecap="square" stroke-linejoin="round"/>
+                            </svg>
+                    .image-block 
+                        img(load='lazy' src="./img/wholesale-office/loyalty.jpg", alt="loyalty")
+            .menu-block 
+                .sticky-block
+                    +profile-wholesale-menu()

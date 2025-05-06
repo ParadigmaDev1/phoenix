@@ -1,0 +1,20 @@
+mixin become-partner-card(data)
+    .become-partner-card&attributes(attributes)
+        if data.img
+            .image-wrapper 
+                img(load='lazy' src=data.img, alt="become-partner")
+        else
+            .video-block
+                video(src='./files/video.mp4' type='video/mp4' preload="auto" poster="./img/about/info/preview.jpg")
+                button.btn.play-btn 
+                    img(load='lazy' src="./img/icons/play.svg", alt="play") 
+        .content(class=data.moreBtn ? 'row' : '') 
+            .text 
+                p.title #{data.title}
+                p.descr #{data.descr}
+            if data.moreBtn
+                button.btn.outline.violet.l 
+                    p подробнее
+                    <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 13L7 7L0.999999 1" stroke="#343176" stroke-linecap="square" stroke-linejoin="round"/>
+                    </svg>

@@ -1,0 +1,123 @@
+@use "src/scss/common/files/mixins" as *;
+
+.order-modal {
+  display: none;
+  @media (max-width: $tab-sm) {
+    display: block;
+  }
+
+  .modal-content-wrapper {
+    // @include s(max-width, 432);
+    // @include borr(12);
+    @include padding(28, 20);
+    // padding: 0;
+    position: relative;
+    overflow: auto;
+
+    .title {
+      @include h2;
+      text-transform: uppercase;
+    }
+    .date {
+      @include body-s;
+      color: var(--gray-light-color);
+      @include s(margin-top, 8);
+    }
+    .status {
+      @include s(height, 19);
+      @include padding(0, 10);
+      @include descr-xs;
+      text-transform: uppercase;
+      width: fit-content;
+      @include borr(4);
+      display: flex;
+      align-items: center;
+      @include s(margin-top, 28);
+
+      &.gray {
+        border: 1px solid var(--gray-light-color);
+        color: var(--gray-light-color);
+      }
+      &.orange {
+        border: 1px solid var(--orange-color);
+        color: var(--orange-color);
+      }
+      &.violet {
+        border: 1px solid var(--violet-color);
+        color: var(--violet-color);
+      }
+      &.green {
+        border: 1px solid var(--green-color);
+        color: var(--green-color);
+      }
+      &.red {
+        border: 1px solid var(--alert-color);
+        color: var(--alert-color);
+      }
+    }
+    .features-list {
+      display: flex;
+      flex-direction: column;
+      @include s(gap, 6);
+      @include s(margin-top, 12);
+      .btn,
+      a {
+        width: fit-content;
+        display: flex;
+        align-items: center;
+        @include s(gap, 12);
+        color: var(--violet-color);
+        @include body-m;
+        text-align: left;
+        padding: 0;
+        svg {
+          @include s(width, 20);
+          @include s(height, 20);
+        }
+      }
+    }
+    .info-list {
+      @include s(margin-top, 28);
+      display: flex;
+      flex-direction: column;
+      @include s(gap, 16);
+      .info-item {
+        display: flex;
+        flex-direction: column;
+        @include s(gap, 4);
+        .label {
+          @include body-m;
+          color: var(--gray-light-color);
+        }
+        .value {
+          @include body-m;
+        }
+      }
+      &.main {
+        @include padding(28, 0);
+        border-top: 1px solid var(--line-color);
+        border-bottom: 1px solid var(--line-color);
+        .info-item {
+          display: flex;
+          justify-content: space-between;
+          flex-direction: row;
+          .value {
+            @include body-mb;
+          }
+        }
+      }
+    }
+    .order-list {
+      @include s(margin-top, 28);
+      display: flex;
+      flex-direction: column;
+      @include s(gap, 28);
+      .order-card {
+        &:first-child {
+          border-top: none;
+          padding-top: 0;
+        }
+      }
+    }
+  }
+}

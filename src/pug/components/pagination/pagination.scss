@@ -9,6 +9,15 @@
     display: flex;
     align-items: center;
     @include s(gap, 5);
+    @media (max-width: $tab-sm) {
+      button {
+        &:nth-child(3),
+        &:nth-child(4),
+        &:nth-child(5) {
+          display: none;
+        }
+      }
+    }
     .dots {
       pointer-events: none;
     }

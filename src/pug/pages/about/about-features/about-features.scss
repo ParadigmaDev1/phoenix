@@ -2,10 +2,17 @@
 
 .about-features {
   @include s(margin-top, 96);
+  @media (max-width: $tab-sm) {
+    @include s(margin-top, 64);
+  }
   .about-features-inner {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     @include s(gap, 24);
+    @media (max-width: $tab-sm) {
+      grid-template-columns: repeat(2, 1fr);
+      @include s(gap, 20);
+    }
     .about-feature-item {
       @include s(height, 318);
       display: flex;
@@ -14,21 +21,38 @@
       background: var(--back-color);
       @include padding(48);
       @include borr(12);
+      @media (max-width: $tab-sm) {
+        @include s(height, 172);
+        width: 100%;
+        @include padding(28, 0);
+      }
       img {
         @include s(height, 80);
         @include s(width, 80);
+        @media (max-width: $tab-sm) {
+          @include s(height, 45);
+          @include s(width, 45);
+        }
       }
       .title {
         text-align: center;
         @include s(margin-top, 44);
         color: var(--violet-color);
         @include h1;
+        @media (max-width: $tab-sm) {
+          @include s(margin-top, 12);
+          @include h4;
+        }
       }
       .descr {
         @include s(margin-top, 16);
         @include descr-m;
         text-align: center;
         text-transform: uppercase;
+        @media (max-width: $tab-sm) {
+          @include s(margin-top, 4);
+          @include descr-s;
+        }
       }
     }
   }

@@ -1,7 +1,7 @@
 mixin vacancy-card(data)
     a(href="#").vacancy-card&attributes(attributes)
         .image-wrapper 
-            img(src="./img/career/vacancy/person.svg", alt="person")
+            img(load='lazy' src="./img/career/vacancy/person.svg", alt="person")
         .content 
             p.title #{data.title}
             p.descr #{data.descr}

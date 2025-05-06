@@ -1,0 +1,237 @@
+@use "src/scss/common/files/mixins" as *;
+
+.wholesale-knowledge-base-article {
+  @include s(padding-bottom, 156);
+  @media (max-width: $tab-sm) {
+    @include s(padding-bottom, 64);
+    @include s(margin-top, 16);
+  }
+  .wholesale-knowledge-base-article-inner {
+    display: grid;
+    @include gtc(1fr, 294);
+    @include s(gap, 48);
+    @include s(margin-top, 36);
+    @media (max-width: $tab-sm) {
+      @include s(margin-top, 20);
+      grid-template-columns: 1fr;
+      gap: 0;
+      @include s(margin-top, 22);
+    }
+    h1 {
+      @include h1;
+    }
+    .content {
+      .top {
+        display: flex;
+        justify-content: space-between;
+        @include s(margin-bottom, 36);
+        align-items: center;
+        @media (max-width: $tab-sm) {
+          @include s(margin-bottom, 20);
+        }
+        .btn {
+          @include s(gap, 12);
+          @include s(height, 36);
+          @include padding(0, 16);
+          @media (max-width: $tab-sm) {
+            display: none;
+          }
+          p {
+            text-transform: uppercase;
+            @include descr-s;
+          }
+        }
+      }
+      .text-block-wrapper {
+        display: grid;
+        @include gtc(294, 1fr);
+        @include s(gap, 48);
+        @media (max-width: $tab-sm) {
+          grid-template-columns: 1fr;
+          gap: 0;
+        }
+        .navigation-block {
+          @media (max-width: $tab-sm) {
+            display: none;
+          }
+          .sticky-block {
+            @include s(padding-top, 28);
+            border-top: 1px solid var(--line-color);
+            .nav-list {
+              display: flex;
+              flex-direction: column;
+              @include s(gap, 12);
+              button {
+                text-align: left;
+                display: flex;
+                align-items: baseline;
+                transition: var(--trs-cubic-300);
+                @include body-m;
+                @include s(gap, 8);
+                &:hover {
+                  color: var(--violet-color);
+                  span {
+                    color: var(--violet-color);
+                  }
+                }
+                span {
+                  @include body-m;
+                  color: var(--gray-light-color);
+                  transition: var(--trs-cubic-300);
+                }
+                &.active {
+                  color: var(--violet-color);
+                  @include body-mb;
+
+                  span {
+                    color: var(--violet-color);
+                  }
+                }
+              }
+            }
+            .accept-btn {
+              width: 100%;
+              @include s(margin-top, 28);
+            }
+            .features {
+              @include s(margin-top, 28);
+
+              display: flex;
+              align-items: center;
+              @include s(gap, 6);
+              .btn {
+                background: var(--white-color);
+                border: 1px solid var(--gray-color);
+                &:hover {
+                  background: var(--violet-color);
+                  svg {
+                    rect,
+                    path {
+                      stroke: var(--white-color);
+                    }
+                  }
+                }
+                svg {
+                  @include s(width, 18);
+                  @include s(height, 18);
+                }
+              }
+            }
+          }
+        }
+      }
+      .text-block {
+        ul {
+          list-style: none;
+          display: flex;
+          flex-direction: column;
+          @include s(gap, 8);
+          @include s(margin-top, 16);
+
+          li {
+            position: relative;
+            @include s(padding-left, 30);
+            @include body-l;
+            @media (max-width: $tab-sm) {
+              @include body-m;
+            }
+            &:before {
+              content: "";
+              position: absolute;
+              @include s(width, 6);
+              @include s(height, 6);
+              border-radius: 9999px;
+              background: var(--violet-color);
+              @include s(top, 10);
+              left: 0;
+            }
+          }
+        }
+        h3 {
+          @include h3;
+          @include s(margin-top, 48);
+          @include s(margin-bottom, 16);
+          text-transform: uppercase;
+          &:first-child {
+            margin-top: 0;
+          }
+        }
+        ol {
+          list-style-type: none;
+          counter-reset: section;
+          @include s(margin-top, 16);
+          @include s(gap, 8);
+          display: flex;
+          flex-direction: column;
+          > li {
+            counter-increment: section;
+            @include body-l;
+            padding-left: 34px;
+            position: relative;
+            &::before {
+              content: counter(section, decimal-leading-zero) ". ";
+              font-weight: bold;
+              color: var(--violet-color);
+              position: absolute;
+              left: 0;
+              top: 3px;
+              @include body-m;
+            }
+
+            ol {
+              list-style-type: none;
+              counter-reset: subsection;
+              margin-top: 8px;
+              > li {
+                counter-increment: subsection;
+                // @include txt-xs;
+                &::before {
+                  content: counter(section) "." counter(subsection) " ";
+                  font-weight: bold;
+                  color: var(--violet-color);
+                }
+              }
+            }
+          }
+        }
+        .video-block {
+          @include s(margin-top, 32);
+        }
+        .quote-block {
+          display: flex;
+          flex-direction: column;
+          @include s(gap, 12);
+          .title {
+            @include body-xl;
+            margin-top: 0;
+          }
+          .text {
+            display: flex;
+            @include s(gap, 28);
+            img {
+              @include s(width, 20);
+              @include s(height, 26);
+            }
+            p {
+              margin-top: 0;
+              @include body-l;
+            }
+          }
+        }
+        .target {
+          background: var(--violet-back-color);
+          @include borr(12);
+          @include s(margin-top, 16);
+          @include padding(20, 28);
+        }
+        p {
+          @include s(margin-top, 10);
+          @include body-l;
+        }
+        b {
+          @include body-lb;
+        }
+      }
+    }
+  }
+}

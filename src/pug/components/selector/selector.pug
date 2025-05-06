@@ -34,7 +34,7 @@ mixin selector(data)
         .selector(class=data.class)&attributes(attributes)
             button(type='button').selector-btn
                 .selector-title
-                    .text-content.default-value
+                    .text-content
                         input(type="radio" name=data.name class=data.defaultRequired ? 'req' : '')
                         p #{data.title}
                 .icon

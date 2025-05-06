@@ -3,12 +3,18 @@
 .about-press {
   @include s(margin-top, 116);
   overflow: hidden;
+  @media (max-width: $tab-sm) {
+    @include s(margin-top, 64);
+  }
   .about-press-inner {
     .top {
       position: relative;
       h3 {
         text-align: center;
         @include h2;
+        @media (max-width: $tab-sm) {
+          text-align: left;
+        }
       }
       .btn {
         position: absolute;
@@ -16,6 +22,9 @@
         right: 0;
         @include padding(0, 24);
         @include s(gap, 12);
+        @media (max-width: $tab-sm) {
+          display: none;
+        }
         p {
           text-transform: uppercase;
           @include descr-m;
@@ -28,6 +37,10 @@
       align-items: center;
       @include s(gap, 4);
       justify-content: center;
+      @media (max-width: $tab-sm) {
+        justify-content: flex-start;
+        @include s(margin-top, 28);
+      }
     }
     .tab-content {
       @include s(margin-top, 28);
@@ -43,23 +56,38 @@
             @include s(height, 244);
             @include borr(12);
             overflow: hidden;
+            @media (max-width: $tab-sm) {
+              @include s(height, 180);
+            }
           }
           .content {
             @include s(margin-top, 28);
+            @media (max-width: $tab-sm) {
+              @include s(margin-top, 20);
+            }
             .date {
               display: flex;
               align-items: center;
               @include s(gap, 16);
+              @media (max-width: $tab-sm) {
+                @include s(gap, 10);
+              }
               p {
                 @include descr-m;
                 color: var(--gray-light-color);
                 text-transform: uppercase;
+                @media (max-width: $tab-sm) {
+                  @include descr-s;
+                }
               }
             }
             .title {
               @include s(margin-top, 16);
               @include h6;
               text-transform: uppercase;
+              @media (max-width: $tab-sm) {
+                @include s(margin-top, 12);
+              }
             }
           }
         }
@@ -73,6 +101,20 @@
           justify-content: space-between;
           z-index: 2;
         }
+      }
+    }
+    .btn.mob {
+      display: none;
+      @include padding(0, 24);
+      @include s(gap, 12);
+      @include s(margin-top, 36);
+      width: fit-content;
+      p {
+        text-transform: uppercase;
+        @include descr-s;
+      }
+      @media (max-width: $tab-sm) {
+        display: flex;
       }
     }
   }

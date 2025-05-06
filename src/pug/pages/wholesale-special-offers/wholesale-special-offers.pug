@@ -1,0 +1,23 @@
+mixin wholesale-special-offers()
+    .wholesale-special-offers
+        .wholesale-special-offers-inner.container.tabs-wrapper
+            .content 
+                h1 спецпредложения
+                .tabs 
+                    button.btn.tab.m.active(data-tab='0') Акции
+                    button.btn.tab.m(data-tab='1') Распродажи
+                .tab-content(data-tab='0')
+                    +info-card({img: './img/home/ideas/2.jpg', title: 'Осенняя распродажа товаров для офиса -50%', btnTitle: 'подробнее', modal: 'special-offers-modal'})
+                    +info-card({img: './img/home/ideas/2.jpg', title: 'Осенняя распродажа товаров для офиса -50%', btnTitle: 'подробнее', modal: 'special-offers-modal'})
+                    +info-card({img: './img/home/ideas/2.jpg', title: 'Осенняя распродажа товаров для офиса -50%', btnTitle: 'подробнее', modal: 'special-offers-modal'})
+                    +info-card({img: './img/home/ideas/2.jpg', title: 'Осенняя распродажа товаров для офиса -50%', btnTitle: 'подробнее', modal: 'special-offers-modal'})
+                    +info-card({img: './img/home/ideas/2.jpg', title: 'Осенняя распродажа товаров для офиса -50%', btnTitle: 'подробнее', modal: 'special-offers-modal'})
+                .tab-content(data-tab='1')
+                    +info-card({img: './img/home/ideas/3.jpg', title: 'Осенняя распродажа товаров для офиса -50%', btnTitle: 'подробнее', modal: 'special-offers-modal'})
+                    +info-card({img: './img/home/ideas/1.jpg', title: 'Осенняя распродажа товаров для офиса -50%', btnTitle: 'подробнее', modal: 'special-offers-modal'})
+                    +info-card({img: './img/home/ideas/2.jpg', title: 'Осенняя распродажа товаров для офиса -50%', btnTitle: 'подробнее', modal: 'special-offers-modal'})
+                    +info-card({img: './img/home/ideas/2.jpg', title: 'Осенняя распродажа товаров для офиса -50%', btnTitle: 'подробнее', modal: 'special-offers-modal'})
+                    +info-card({img: './img/home/ideas/2.jpg', title: 'Осенняя распродажа товаров для офиса -50%', btnTitle: 'подробнее', modal: 'special-offers-modal'})
+            .menu-block 
+                .sticky-block
+                    +profile-wholesale-menu()

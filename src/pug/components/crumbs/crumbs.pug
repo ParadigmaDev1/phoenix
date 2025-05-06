@@ -4,8 +4,8 @@ mixin crumbs(data)
             <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M0.5 5.93675C0.5 5.49158 0.697735 5.06941 1.03972 4.78442L5.03972 1.45108C5.59599 0.987526 6.40401 0.987527 6.96028 1.45108L10.9603 4.78442C11.3023 5.06941 11.5 5.49158 11.5 5.93675V10C11.5 10.8284 10.8284 11.5 10 11.5H2C1.17157 11.5 0.5 10.8284 0.5 10V5.93675Z" fill="white" stroke="#A0A0A0"/>
             </svg>
-        img(src="./img/icons/crumbs-arrow.svg", alt="arrow")
+        img(load='lazy' src="./img/icons/crumbs-arrow.svg", alt="arrow")
         each item in data.items
             a(href=item.href) #{item.title} 
-            img(src="./img/icons/crumbs-arrow.svg", alt="arrow")
+            img(load='lazy' src="./img/icons/crumbs-arrow.svg", alt="arrow")
             

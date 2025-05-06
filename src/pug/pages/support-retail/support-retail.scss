@@ -1,0 +1,230 @@
+@use "src/scss/common/files/mixins" as *;
+
+.support-retail {
+  @include s(padding-bottom, 156);
+  @media (max-width: $tab-sm) {
+    @include s(padding-bottom, 64);
+    @include s(margin-top, 16);
+  }
+  .support-retail-inner {
+    h1 {
+      @include h1;
+    }
+    .content {
+      display: grid;
+      @include gtc(1fr, 294);
+      @include s(gap, 48);
+      @include s(margin-top, 36);
+      @media (max-width: $tab-sm) {
+        grid-template-columns: 1fr;
+        gap: 0;
+        @include s(margin-top, 22);
+      }
+      .questions {
+        h4 {
+          @include h4;
+          text-transform: uppercase;
+        }
+        .descr {
+          @include s(margin-top, 36);
+          @media (max-width: $tab-sm) {
+            @include s(margin-top, 20);
+          }
+          p {
+            @include s(margin-top, 10);
+            @include body-m;
+          }
+        }
+        .question-search {
+          @include s(margin-top, 48);
+          display: flex;
+          flex-direction: column;
+          @include s(gap, 20);
+          .search-wrapper {
+            position: relative;
+            @include s(gap, 29);
+            @include s(height, 48);
+            flex: 1;
+            @media (max-width: $tab-sm) {
+              @include s(height, 44);
+            }
+            input {
+              background: var(--back-color);
+              color: var(--gray-color);
+              &:placeholder-shown {
+                color: var(--gray-light-color);
+              }
+            }
+            .search-btn {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              position: absolute;
+              top: 0;
+              bottom: 0;
+              right: 0;
+              @include s(width, 48);
+              @include s(height, 48);
+              @media (max-width: $tab-sm) {
+                background: none;
+                @include s(width, 44);
+                @include s(height, 44);
+              }
+              //   &:hover {
+              //     background: var(--violet-color);
+              //   }
+              svg {
+                @include s(width, 18);
+                @include s(height, 18);
+                circle,
+                path {
+                  stroke: var(--gray-color);
+                }
+                @media (max-width: $tab-sm) {
+                  @include s(width, 22);
+                  @include s(height, 22);
+                }
+              }
+            }
+          }
+        }
+        .accordion {
+          @include s(margin-top, 28);
+
+          .accordion-item.nested {
+            border-top: 1px solid var(--line-color);
+
+            &:last-child {
+              border-bottom: 1px solid var(--line-color);
+            }
+            & > .accordion-title {
+              justify-content: flex-start;
+              @include padding(36, 0);
+              @media (max-width: $tab-sm) {
+                @include padding(16, 0);
+              }
+              .title-wrapper {
+                .title {
+                  @include body-xl;
+                  @media (max-width: $tab-sm) {
+                    @include h6;
+                  }
+                }
+              }
+            }
+
+            &.active {
+              .accordion-title {
+                svg {
+                  transform: rotate(180deg);
+                }
+              }
+              .icon {
+                @include s(min-width, 28);
+                @include s(min-height, 28);
+                @include s(max-width, 28);
+                @include s(max-height, 28);
+                border: 1px solid var(--line-color);
+                @include borr(6);
+                svg {
+                  @include s(width, 12);
+                  @include s(height, 6);
+                }
+              }
+              .accordion-body {
+                ul {
+                  list-style: none;
+                  display: flex;
+                  flex-direction: column;
+                  @include s(gap, 8);
+                  li {
+                    position: relative;
+                    @include s(padding-left, 30);
+                    @include body-l;
+                    @media (max-width: $tab-sm) {
+                      @include body-m;
+                    }
+                    &:before {
+                      content: "";
+                      position: absolute;
+                      @include s(width, 6);
+                      @include s(height, 6);
+                      border-radius: 9999px;
+                      background: var(--violet-color);
+                      @include s(top, 10);
+                      left: 0;
+                    }
+                  }
+                }
+                .text-wrapper {
+                  p {
+                    @include body-l;
+                    @include s(margin-top, 10);
+
+                    @media (max-width: $tab-sm) {
+                      @include body-m;
+                    }
+                  }
+                }
+
+                .subtitle {
+                  @include body-xl;
+                  @include s(margin-top, 16);
+                  @include s(margin-bottom, 16);
+                }
+                .btn {
+                  @include padding(0, 24);
+                  @include s(gap, 4);
+                  @include s(margin-top, 24);
+
+                  p {
+                    text-transform: uppercase;
+                    @include descr-m;
+                  }
+                }
+              }
+            }
+            .accordion {
+              margin-top: 0;
+            }
+          }
+        }
+        .ask-question {
+          background: var(--white-color);
+          @include borr(12);
+          box-shadow: var(--shadow);
+          @include padding(48);
+          @include s(margin-top, 48);
+          h4 {
+            color: var(--violet-color);
+          }
+          @media (max-width: $tab-sm) {
+            padding: 0;
+            box-shadow: none;
+            @include s(margin-top, 64);
+            border-radius: 0;
+          }
+          .descr {
+            @include s(margin-top, 12);
+            @include body-m;
+          }
+          .inputs {
+            display: flex;
+            flex-direction: column;
+            @include s(gap, 20);
+            @include s(margin-top, 28);
+            textarea {
+              @include s(height, 138);
+            }
+          }
+          .btn {
+            @include padding(0, 48);
+            @include s(margin-top, 28);
+          }
+        }
+      }
+      .menu-block {
+      }
+    }
+  }
+}

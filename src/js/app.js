@@ -5,34 +5,50 @@ import { map } from "./modules/map.js";
 import { modals } from "./modules/modals.js";
 import { validateForm } from "./modules/validate.js";
 import { fancy } from "./modules/fancy.js";
-import IMask from "imask";
+import { marquee } from "./modules/marquee.js";
+import { inputsMask } from "./modules/inputs-mask.js";
+import { video } from "./modules/video.js";
+import { header } from "../pug/components/header/header.js";
+import { selector } from "../pug/components/selector/selector.js";
+import { mapComponent } from "../pug/components/map/map.js";
+import { quizModal } from "../pug/modals/quiz-modal/quiz-modal.js";
+import { documentCard } from "../pug/components/document-card/document-card.js";
+import { brandsList } from "../pug/components/brands-list/brands-list.js";
+import { profileMenu } from "../pug/components/profile-menu/profile-menu.js";
+import { mobileMenu } from "../pug/components/mobile-menu/mobile-menu.js";
+import { productCards } from "../pug/components/product-card/product-card.js";
+import { catalogMenu } from "../pug/components/catalog-menu/catalog-menu.js";
+import { valuesBlock } from "../pug/components/values-block/values-block.js";
+import { homeCollections } from "../pug/pages/home/home-collections/home-collections.js";
+import { homeIdeas } from "../pug/pages/home/home-ideas/home-ideas.js";
+import { wholesaleLoyaltyProgramConditions } from "../pug/pages/wholesale-loyalty-program-conditions/wholesale-loyalty-program-conditions.js";
+import { wholesaleKnowledgeBaseArticle } from "../pug/pages/wholesale-knowledge-base-article/wholesale-knowledge-base-article.js";
 
-accordionFunc();
-tabs();
-modals();
-swiper();
-map();
-modals();
-validateForm();
-fancy();
-
-import "../pug/components/selector/selector.js";
-import "../pug/components/header/header.js";
-import "../pug/components/map/map.js";
-import "../pug/components/brands-list/brands-list.js";
-import "../pug/components/mobile-menu/mobile-menu.js";
-import "../pug/components/product-card/product-card.js";
-import "../pug/components/catalog-menu/catalog-menu.js";
-import "../pug/components/values-block/values-block.js";
-import "../pug/pages/home/home-collections/home-collections.js";
-import "../pug/pages/home/home-ideas/home-ideas.js";
-import "../pug/pages/catalog/catalog.js";
-
-document.addEventListener("DOMContentLoaded", function () {
-  const wrappers = document.querySelectorAll(".marquee__group");
-  if (wrappers.length) {
-    wrappers.forEach((wrapper) => {
-      wrapper.innerHTML += wrapper.innerHTML;
-    });
-  }
+document.addEventListener("DOMContentLoaded", () => {
+  header();
+  selector();
+  mapComponent();
+  quizModal();
+  documentCard();
+  brandsList();
+  profileMenu();
+  mobileMenu();
+  productCards();
+  catalogMenu();
+  valuesBlock();
+  homeCollections();
+  homeIdeas();
+  wholesaleLoyaltyProgramConditions();
+  wholesaleKnowledgeBaseArticle();
+  accordionFunc();
+  tabs();
+  modals();
+  swiper();
+  map();
+  modals();
+  validateForm();
+  fancy();
+  marquee();
+  inputsMask();
+  video();
 });

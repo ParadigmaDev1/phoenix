@@ -4,7 +4,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-  background: rgba(238, 238, 238, 0.8);
+  background: rgba(73, 69, 76, 0.8);
   backdrop-filter: blur(15px);
   display: flex;
   align-items: center;
@@ -13,6 +13,10 @@
   pointer-events: none;
   opacity: 0;
   transition: var(--trs-cubic-300);
+  @include padding(20);
+  @media (max-width: $tab-sm) {
+    padding: 0;
+  }
   &.active {
     pointer-events: all;
     opacity: 1;
@@ -20,6 +24,52 @@
       transform: translateY(0);
       opacity: 1;
       pointer-events: all;
+    }
+  }
+  .close-modal-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    position: sticky;
+    @include s(top, 0);
+    @include s(right, 0);
+    z-index: 10;
+    @media (max-width: $tab-sm) {
+      @include s(top, 34);
+    }
+    .close-modal {
+      position: absolute;
+      @include s(top, 19);
+      @include s(right, 20);
+      @include s(width, 36);
+      @include s(height, 36);
+      @include borr(6);
+      padding: 0;
+      @include s(margin-top, -20);
+      @include s(margin-right, -20);
+      background: var(--white-color);
+      border: 1px solid var(--line-color);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: var(--trs-cubic-300);
+      @media (max-width: $tab-sm) {
+        @include s(margin-right, 0);
+        @include s(top, -14);
+        @include s(right, 1);
+      }
+      &:hover {
+        background: var(--violet-color);
+        border-color: var(--violet-color);
+        svg {
+          path {
+            stroke: var(--white-color);
+          }
+        }
+      }
+      svg {
+        @include s(width, 18);
+        @include s(height, 18);
+      }
     }
   }
   .modal-content-wrapper {
@@ -30,32 +80,18 @@
     pointer-events: none;
     transition: var(--trs-cubic-300);
     background: var(--white-color);
-    @include padding(48);
-    @include border-radius(20);
-    @include size(height, 500);
+    @include padding(48, 76, 48, 26);
+    @include borr(20);
+    @include s(height, 500);
     max-height: calc(100vh - 106px);
     height: fit-content;
+    width: 100%;
     @media (max-width: $tab-sm) {
       @include padding(32, 24);
-    }
-    .close-modal-wrapper {
-      display: flex;
-      justify-content: flex-end;
-      position: sticky;
-      @include size(top, 0);
-      @include size(right, 0);
-      z-index: 10;
-      @media (max-width: $tab-sm) {
-        @include size(top, 34);
-      }
-      .close-modal {
-        padding: 0;
-        @include size(margin-top, -20);
-        @include size(margin-right, -20);
-        @media (max-width: $tab-sm) {
-          @include size(margin-right, 0);
-        }
-      }
+      max-height: 100%;
+      @include padding(20);
+      height: 100%;
+      border-radius: 0;
     }
   }
 }
