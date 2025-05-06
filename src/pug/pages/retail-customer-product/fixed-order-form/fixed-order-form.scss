@@ -1,0 +1,124 @@
+@use "src/scss/common/files/mixins" as *;
+
+.fixed-order-form {
+  position: fixed;
+  @include s(bottom, 60);
+  background: var(--white-color);
+  @include padding(12, 20);
+  right: 0;
+  left: 0;
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 90;
+  box-shadow: var(--shadow);
+  transition: var(--trs-cubic-600);
+  transform: translateY(100%);
+  opacity: 0;
+  @media (max-width: $tab-sm) {
+    display: flex;
+  }
+  &.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .price-wrapper {
+    display: flex;
+    align-items: baseline;
+    @include s(gap, 12);
+    .current-price {
+      @include body-l;
+    }
+    .old-price {
+      @include body-s;
+      text-decoration: line-through;
+      color: var(--gray-light-color);
+    }
+  }
+  .cart-btn-wrapper {
+    @include s(width, 150);
+    &.in-cart {
+      .counter {
+        width: 50%;
+        @media (max-width: $tab-sm) {
+          @include s(width, 150);
+
+          z-index: 3;
+        }
+      }
+      .cart-btn {
+        width: 50%;
+        @include s(padding-right, 15);
+        @media (max-width: $tab-sm) {
+          @include s(padding-right, 0);
+        }
+        svg {
+          opacity: 1;
+          @media (max-width: $tab-sm) {
+            opacity: 0;
+          }
+        }
+      }
+    }
+    .counter {
+      width: 20%;
+      background: var(--back-color);
+      @include s(height, 44);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      @include borr(6);
+      @include padding(0, 10);
+      position: absolute;
+      transition: var(--trs-cubic-600);
+      @media (max-width: $tab-sm) {
+        @include s(height, 36);
+      }
+      .btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include s(height, 28);
+        @include s(width, 28);
+        padding: 0;
+        &:hover {
+          svg {
+            path {
+              stroke: var(--violet-color);
+            }
+          }
+        }
+      }
+      .current-count {
+        display: flex;
+        align-items: center;
+        @include body-m;
+      }
+    }
+    .cart-btn {
+      width: 100%;
+      justify-content: center;
+      z-index: 2;
+      position: relative;
+      margin-left: auto;
+      @media (max-width: $tab-sm) {
+        @include s(height, 36);
+      }
+      p {
+        text-transform: uppercase;
+        @include descr-m;
+        @media (max-width: $tab-sm) {
+          @include descr-s;
+        }
+      }
+      svg {
+        position: absolute;
+        opacity: 0;
+        @include s(right, 26);
+        @include s(width, 8);
+        @include s(height, 16);
+        transition: var(--trs-cubic-300);
+      }
+    }
+  }
+}

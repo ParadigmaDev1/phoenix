@@ -1,20 +1,36 @@
 @use "src/scss/common/files/mixins" as *;
 
 .retail-customer-product-info {
+  @media (max-width: $tab-sm) {
+    overflow: hidden;
+  }
   .retail-customer-product-info-inner {
     display: grid;
     @include gtc(1fr, 294);
     @include s(gap, 48);
     @include s(margin-top, 28);
+    @media (max-width: $tab-sm) {
+      grid-template-columns: 1fr;
+      @include s(margin-top, 10);
+      gap: 0;
+    }
     .content {
       .content-hero {
         display: grid;
         @include gtc(522, 432);
         @include s(gap, 48);
+        @media (max-width: $tab-sm) {
+          grid-template-columns: 1fr;
+          @include s(gap, 28);
+        }
         .retail-customer-product-swiper-wrapper {
           display: grid;
           @include gtc(64, 1fr);
           @include s(gap, 10);
+          @media (max-width: $tab-sm) {
+            grid-template-columns: 1fr;
+            gap: 0;
+          }
           .retail-customer-product-swiper {
             overflow: hidden;
             position: relative;
@@ -22,6 +38,10 @@
             @include s(height, 448);
             background: var(--back-color);
             @include borr(12);
+            @media (max-width: $tab-sm) {
+              @include s(width, 320);
+              @include s(height, 320);
+            }
             .retail-customer-product-swiper-features {
               position: absolute;
               width: 100%;
@@ -63,14 +83,19 @@
                   @include descr-s;
                   color: var(--violet-color);
                   text-transform: uppercase;
+                  @media (max-width: $tab-sm) {
+                    display: none;
+                  }
                 }
               }
               .another-btn {
                 @include s(gap, 8);
                 position: absolute;
                 @include s(bottom, 10);
+                @include s(height, 36);
                 @include s(right, 10);
                 @include padding(0, 16);
+                pointer-events: all;
                 svg {
                   @include s(width, 18);
                   @include s(height, 18);
@@ -109,6 +134,9 @@
             @include s(width, 64);
             @include s(height, 448);
             overflow: hidden;
+            @media (max-width: $tab-sm) {
+              display: none;
+            }
             .swiper-wrapper {
               position: absolute;
               top: 0;
@@ -136,6 +164,12 @@
               }
             }
           }
+          .pagination {
+            @include s(margin-top, 12);
+            @include s(gap, 6);
+            justify-content: center;
+            @include padding(0, 20);
+          }
         }
         .retail-customer-product-property {
           h6 {
@@ -146,25 +180,40 @@
             @include s(margin-top, 24);
             display: flex;
             flex-direction: column;
+            @media (max-width: $tab-sm) {
+              @include s(margin-top, 20);
+            }
             li {
               display: flex;
               justify-content: space-between;
               border-top: 1px solid var(--line-color);
               @include padding(8, 0);
+              @media (max-width: $tab-sm) {
+                @include padding(10, 0);
+              }
               &:last-child {
                 border-bottom: 1px solid var(--line-color);
               }
               .label {
                 @include body-m;
                 color: var(--gray-light-color);
+                @media (max-width: $tab-sm) {
+                  @include body-s;
+                }
               }
               .value {
                 @include body-m;
+                @media (max-width: $tab-sm) {
+                  @include body-s;
+                }
               }
             }
           }
           .color-list-wrapper {
             @include s(margin-top, 24);
+            @media (max-width: $tab-sm) {
+              @include s(margin-top, 20);
+            }
             .title {
               @include descr-s;
               text-transform: uppercase;
@@ -174,6 +223,9 @@
               display: flex;
               flex-wrap: wrap;
               @include s(gap, 16);
+              @media (max-width: $tab-sm) {
+                @include s(gap, 12);
+              }
               label {
                 @include s(width, 48);
                 @include s(height, 48);
@@ -218,8 +270,177 @@
           }
         }
       }
+      .order-mobile {
+        display: none;
+        flex-direction: column;
+        @include s(margin-top, 36);
+
+        @media (max-width: $tab-sm) {
+          display: flex;
+        }
+        .price-wrapper {
+          display: flex;
+          @include s(gap, 16);
+          .current-price {
+            @include h4;
+          }
+          .old-price {
+            @include h4;
+            text-decoration: line-through;
+            color: var(--gray-light-color);
+          }
+        }
+        .price-info {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          @include s(margin-top, 4);
+
+          .descr {
+            @include body-s;
+            color: var(--gray-light-color);
+          }
+          .btn {
+            display: flex;
+            align-items: center;
+            @include s(gap, 8);
+            p {
+              @include body-s;
+              color: var(--violet-color);
+            }
+            svg {
+              @include s(width, 18);
+              @include s(height, 18);
+            }
+          }
+        }
+        .count {
+          text-transform: uppercase;
+          @include descr-s;
+          @include s(padding-left, 22);
+          @include s(margin-top, 22);
+
+          position: relative;
+          &.orange {
+            &:before {
+              background: #ffa977;
+            }
+          }
+          &.green {
+            &:before {
+              background: #4db6a5;
+            }
+          }
+          &.gray {
+            &:before {
+              background: #a8a9b0;
+            }
+          }
+          &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            margin: auto;
+            @include s(width, 12);
+            @include s(height, 12);
+            border-radius: 999px;
+          }
+        }
+        .cart-btn-wrapper {
+          @include s(margin-top, 20);
+          @media (max-width: $tab-sm) {
+            @include s(margin-top, 12);
+          }
+          &.in-cart {
+            .counter {
+              width: 50%;
+              @media (max-width: $tab-sm) {
+                @include s(width, 320);
+
+                z-index: 3;
+              }
+            }
+            .cart-btn {
+              width: 50%;
+              @include s(padding-right, 15);
+              @media (max-width: $tab-sm) {
+                @include s(padding-right, 0);
+              }
+              svg {
+                opacity: 1;
+                @media (max-width: $tab-sm) {
+                  opacity: 0;
+                }
+              }
+            }
+          }
+          .counter {
+            width: 20%;
+            background: var(--back-color);
+            @include s(height, 44);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            @include borr(6);
+            @include padding(0, 10);
+            position: absolute;
+            transition: var(--trs-cubic-600);
+            @media (max-width: $tab-sm) {
+              @include s(height, 36);
+            }
+            .btn {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              @include s(height, 28);
+              @include s(width, 28);
+              padding: 0;
+              &:hover {
+                svg {
+                  path {
+                    stroke: var(--violet-color);
+                  }
+                }
+              }
+            }
+            .current-count {
+              display: flex;
+              align-items: center;
+              @include body-m;
+            }
+          }
+          .cart-btn {
+            width: 100%;
+            justify-content: center;
+            z-index: 2;
+            position: relative;
+            margin-left: auto;
+            @media (max-width: $tab-sm) {
+              @include s(height, 36);
+            }
+            p {
+              text-transform: uppercase;
+              @include descr-m;
+              @media (max-width: $tab-sm) {
+                @include descr-s;
+              }
+            }
+            svg {
+              position: absolute;
+              opacity: 0;
+              @include s(right, 26);
+              @include s(width, 8);
+              @include s(height, 16);
+              transition: var(--trs-cubic-300);
+            }
+          }
+        }
+      }
       .collections {
         @include s(margin-top, 36);
+
         .title {
           text-transform: uppercase;
           @include descr-m;
@@ -230,6 +451,15 @@
           flex-wrap: wrap;
           @include s(margin-top, 12);
           @include s(gap, 12);
+          @media (max-width: $tab-sm) {
+            flex-wrap: nowrap;
+            overflow: auto;
+            @include s(width, 360);
+            @include s(margin-left, -20);
+            @include s(margin-right, -20);
+            @include s(padding-left, 20);
+            @include s(padding-right, 20);
+          }
           .image-wrapper {
             @include borr(12);
             background: var(--back-color);
@@ -238,6 +468,14 @@
             justify-content: center;
             @include s(width, 133);
             @include s(height, 133);
+            @media (max-width: $tab-sm) {
+              @include s(width, 93);
+              @include s(height, 93);
+              @include s(min-width, 93);
+              @include s(max-width, 93);
+              @include s(min-height, 93);
+              @include s(max-height, 93);
+            }
             img {
               width: 80%;
               height: 80%;
@@ -248,10 +486,26 @@
       }
       .specifications {
         @include s(margin-top, 64);
+        @media (max-width: $tab-sm) {
+          @include s(margin-top, 36);
+        }
         .tabs {
           display: flex;
           align-items: center;
           @include s(gap, 4);
+          @media (max-width: $tab-sm) {
+            overflow: auto;
+            @include s(width, 360);
+            @include s(margin-left, -20);
+            @include s(margin-right, -20);
+            @include s(padding-left, 20);
+            @include s(padding-right, 20);
+          }
+          button {
+            @media (max-width: $tab-sm) {
+              white-space: nowrap;
+            }
+          }
         }
         .tab-content {
           @include s(margin-top, 28);
@@ -263,15 +517,27 @@
               justify-content: space-between;
               border-top: 1px solid var(--line-color);
               @include padding(8, 0);
+              @media (max-width: $tab-sm) {
+                display: grid;
+                @include gtc(150, 1fr);
+                @include s(gap, 20);
+              }
               &:last-child {
                 border-bottom: 1px solid var(--line-color);
               }
               .label {
                 @include body-m;
                 color: var(--gray-light-color);
+                @media (max-width: $tab-sm) {
+                  @include body-s;
+                }
               }
               .value {
                 @include body-m;
+                @media (max-width: $tab-sm) {
+                  text-align: right;
+                  @include body-s;
+                }
               }
             }
           }
@@ -280,6 +546,10 @@
               display: grid;
               grid-template-columns: repeat(2, 1fr);
               @include s(gap, 48);
+              @media (max-width: $tab-sm) {
+                grid-template-columns: 1fr;
+                gap: 0;
+              }
             }
             &.text-content {
               p {
@@ -293,13 +563,23 @@
           }
           .hidden-content {
             display: none;
+            &.active {
+              &.list-content {
+                display: grid;
+              }
+              display: block;
+            }
           }
           .show-btn {
             display: flex;
             align-items: center;
             @include s(gap, 12);
             @include s(margin-top, 28);
-
+            &.active {
+              svg {
+                transform: rotate(180deg);
+              }
+            }
             p {
               color: var(--violet-color);
               text-transform: uppercase;
@@ -316,6 +596,9 @@
     .order-block {
       display: flex;
       flex-direction: column;
+      @media (max-width: $tab-sm) {
+        display: none;
+      }
       .features {
         display: flex;
         align-items: center;

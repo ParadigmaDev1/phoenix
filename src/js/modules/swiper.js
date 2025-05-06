@@ -626,7 +626,9 @@ export const swiper = () => {
       modules: [Pagination, Navigation, Thumbs],
       slidesPerView: 1,
       spaceBetween: 269,
-
+      pagination: {
+        el: ".retail-customer-product-pagination",
+      },
       thumbs: {
         swiper: retailCustomerProductSwiperThumbs,
       },

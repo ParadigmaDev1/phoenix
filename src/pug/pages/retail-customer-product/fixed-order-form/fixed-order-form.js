@@ -1,21 +1,17 @@
-export const retailCustomerProductInfo = () => {
+export const fixedOrderForm = () => {
+  const header = document.querySelector(".header");
+  const fixedOrderForm = document.querySelector(".fixed-order-form");
   const retailCustomerProductInfo = document.querySelector(
     ".retail-customer-product-info"
   );
-  if (retailCustomerProductInfo) {
-    const cartBtn = retailCustomerProductInfo.querySelector(".cart-btn");
-    const cartBtnWrapper =
-      retailCustomerProductInfo.querySelector(".cart-btn-wrapper");
+  if (fixedOrderForm && retailCustomerProductInfo) {
+    const cartBtn = fixedOrderForm.querySelector(".cart-btn");
+    const cartBtnWrapper = fixedOrderForm.querySelector(".cart-btn-wrapper");
     const cartBtnText = cartBtn.querySelector("p");
-    const counter = retailCustomerProductInfo.querySelector(".counter");
+    const counter = fixedOrderForm.querySelector(".counter");
     const currentCount = counter.querySelector(".current-count");
     const decBtn = counter.querySelector(".dec");
     const incBtn = counter.querySelector(".inc");
-
-    const specifications =
-      retailCustomerProductInfo.querySelector(".specifications");
-    const specificationsTabContentList =
-      specifications.querySelectorAll(".tab-content");
 
     cartBtnWrapper.addEventListener("click", (e) => {
       e.preventDefault();
@@ -45,22 +41,12 @@ export const retailCustomerProductInfo = () => {
       currentCount.textContent = +currentCount.textContent + 1;
     });
 
-    specificationsTabContentList.forEach((tabContent) => {
-      const hiddenContent = tabContent.querySelector(".hidden-content");
-      const showBtn = tabContent.querySelector(".show-btn");
-      showBtn.addEventListener("click", () => {
-        if (showBtn.className.includes("active")) {
-          hiddenContent.classList.remove("active");
-          showBtn.querySelector("p").textContent = "развернуть все";
-
-          showBtn.classList.remove("active");
-        } else {
-          hiddenContent.classList.add("active");
-          showBtn.querySelector("p").textContent = "Свернуть";
-
-          showBtn.classList.add("active");
-        }
-      });
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > fixedOrderForm.offsetTop + header.offsetHeight) {
+        fixedOrderForm.classList.add("active");
+      } else {
+        fixedOrderForm.classList.remove("active");
+      }
     });
   }
 };
