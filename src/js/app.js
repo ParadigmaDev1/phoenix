@@ -23,7 +23,7 @@ import { homeCollections } from "../pug/pages/home/home-collections/home-collect
 import { homeIdeas } from "../pug/pages/home/home-ideas/home-ideas.js";
 import { wholesaleLoyaltyProgramConditions } from "../pug/pages/wholesale-loyalty-program-conditions/wholesale-loyalty-program-conditions.js";
 import { wholesaleKnowledgeBaseArticle } from "../pug/pages/wholesale-knowledge-base-article/wholesale-knowledge-base-article.js";
-
+import "../pug/pages/catalog/catalog.js";
 document.addEventListener("DOMContentLoaded", () => {
   header();
   selector();
