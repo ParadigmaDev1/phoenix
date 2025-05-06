@@ -110,6 +110,10 @@
         @include s(gap, 24);
         @include s(margin-top, 24);
         @include s(margin-bottom, 24);
+        @media (max-width: $tab-sm) {
+          grid-template-columns: 1fr;
+          @include s(gap, 12);
+        }
         label {
           @include borr(6);
           border: 1px solid var(--line-color);
@@ -175,12 +179,20 @@
         @include s(gap, 12);
         p {
           @include body-xs;
+          a {
+            color: var(--violet-color);
+          }
         }
       }
       .inputs-col {
         display: flex;
         flex-direction: column;
         @include s(gap, 24);
+        @media (max-width: $tab-sm) {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          @include s(gap, 12);
+        }
       }
       .inputs {
         display: flex;
@@ -202,6 +214,9 @@
       }
     }
     .back-btn-wrapper {
+      @media (max-width: $tab-sm) {
+        display: none;
+      }
       .back-btn {
         width: fit-content;
         @include s(gap, 12);
