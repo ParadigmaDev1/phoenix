@@ -1,0 +1,220 @@
+@use "src/scss/common/files/mixins" as *;
+
+.retail-customer-making-order {
+  @include s(padding-bottom, 156);
+  @media (max-width: $tab-sm) {
+    @include s(padding-bottom, 64);
+    @include s(margin-top, 16);
+  }
+  .retail-customer-making-order-inner {
+    display: grid;
+    @include gtc(1fr, 225);
+    @include s(gap, 475);
+    @include s(margin-top, 36);
+    @media (max-width: $tab-sm) {
+      grid-template-columns: 1fr;
+      gap: 0;
+      @include s(margin-top, 22);
+    }
+    h1 {
+      @include h1;
+    }
+    .content {
+      h5 {
+        @include h5;
+        text-transform: uppercase;
+      }
+      .top {
+        display: flex;
+        justify-content: space-between;
+        .btn {
+          @include s(gap, 12);
+          @include s(height, 36);
+          @include padding(0, 16);
+          @media (max-width: $tab-sm) {
+            display: none;
+          }
+          p {
+            text-transform: uppercase;
+            @include descr-s;
+          }
+        }
+      }
+
+      h6 {
+        @include h6;
+        text-transform: uppercase;
+        @include s(margin-top, 48);
+        @include s(margin-bottom, 24);
+
+        @media (max-width: $tab-sm) {
+          @include s(margin-top, 36);
+          @include s(margin-bottom, 20);
+        }
+        &:first-child {
+          @include s(margin-top, 28);
+          @media (max-width: $tab-sm) {
+            @include s(margin-top, 36);
+          }
+        }
+      }
+      .form {
+        @include s(width, 661);
+        @media (max-width: $tab-sm) {
+          width: 100%;
+        }
+      }
+      .submit-btn {
+        @include padding(0, 48);
+        justify-content: center;
+        @include s(margin-top, 48);
+        @media (max-width: $tab-sm) {
+          width: 100%;
+          @include s(margin-top, 36);
+        }
+        p {
+          text-transform: uppercase;
+          @include descr-m;
+        }
+      }
+      .input-wrapper {
+        display: grid;
+        @include gtc(205, 1fr);
+        align-items: center;
+        @include s(gap, 24);
+        @media (max-width: $tab-sm) {
+          grid-template-columns: 1fr;
+          @include s(gap, 8);
+        }
+        p {
+          font-weight: 400;
+          @include s(font-size, 16);
+          line-height: 120%;
+          text-transform: none;
+          a {
+            color: var(--violet-color);
+          }
+        }
+      }
+      .pickup-delivery {
+        display: flex;
+        flex-direction: column;
+        @include s(gap, 24);
+        @media (max-width: $tab-sm) {
+          @include s(gap, 20);
+        }
+      }
+      .radio-wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        @include s(gap, 24);
+        @include s(margin-top, 24);
+        @include s(margin-bottom, 24);
+        label {
+          @include borr(6);
+          border: 1px solid var(--line-color);
+          @include padding(20);
+          position: relative;
+          @include s(height, 128);
+          cursor: pointer;
+          input {
+            position: absolute;
+            @include s(top, 20);
+            @include s(right, 20);
+            &:checked ~ .text {
+              &:before {
+                border-color: var(--violet-color);
+              }
+            }
+          }
+          .text {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+            &:before {
+              content: "";
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              top: 0;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              border: 1px solid rgba(0, 0, 0, 0);
+              @include borr(6);
+              transition: var(--trs-cubic-300);
+            }
+            img {
+              @include s(width, 116);
+              @include s(height, 32);
+              object-fit: contain;
+            }
+            p {
+              @include body-m;
+            }
+          }
+        }
+      }
+      .price {
+        @include s(margin-top, 48);
+        display: flex;
+        align-items: baseline;
+        @include s(gap, 16);
+        .label {
+          @include body-m;
+        }
+        .value {
+          @include body-xl;
+        }
+      }
+      .policy {
+        @include s(margin-top, 24);
+        display: flex;
+        align-items: center;
+        @include s(gap, 12);
+        p {
+          @include body-xs;
+        }
+      }
+      .inputs-col {
+        display: flex;
+        flex-direction: column;
+        @include s(gap, 24);
+      }
+      .inputs {
+        display: flex;
+        flex-direction: column;
+        @include s(gap, 24);
+        @media (max-width: $tab-sm) {
+          @include s(gap, 20);
+        }
+
+        .submit-btn {
+          @include padding(0, 48);
+          @include s(margin-left, 230);
+          justify-content: center;
+          p {
+            text-transform: uppercase;
+            @include descr-m;
+          }
+        }
+      }
+    }
+    .back-btn-wrapper {
+      .back-btn {
+        width: fit-content;
+        @include s(gap, 12);
+        @include padding(0, 24);
+        svg {
+          @include s(width, 8);
+          @include s(height, 16);
+        }
+        p {
+          text-transform: uppercase;
+          @include descr-m;
+        }
+      }
+    }
+  }
+}

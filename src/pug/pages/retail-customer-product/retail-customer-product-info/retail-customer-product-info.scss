@@ -1,0 +1,441 @@
+@use "src/scss/common/files/mixins" as *;
+
+.retail-customer-product-info {
+  .retail-customer-product-info-inner {
+    display: grid;
+    @include gtc(1fr, 294);
+    @include s(gap, 48);
+    @include s(margin-top, 28);
+    .content {
+      .content-hero {
+        display: grid;
+        @include gtc(522, 432);
+        @include s(gap, 48);
+        .retail-customer-product-swiper-wrapper {
+          display: grid;
+          @include gtc(64, 1fr);
+          @include s(gap, 10);
+          .retail-customer-product-swiper {
+            overflow: hidden;
+            position: relative;
+            @include s(width, 448);
+            @include s(height, 448);
+            background: var(--back-color);
+            @include borr(12);
+            .retail-customer-product-swiper-features {
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              top: 0;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              z-index: 2;
+              pointer-events: none;
+              .badge {
+                position: absolute;
+                @include s(top, 10);
+                @include s(right, 10);
+                pointer-events: all;
+              }
+              .video-btn {
+                display: flex;
+                align-items: center;
+                @include s(gap, 10);
+                position: absolute;
+                @include s(bottom, 10);
+                @include s(left, 10);
+                pointer-events: all;
+                .icon {
+                  background: var(--white-color);
+                  @include borr(6);
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  @include s(width, 36);
+                  @include s(height, 36);
+                  svg {
+                    @include s(width, 22);
+                    @include s(height, 17);
+                  }
+                }
+                p {
+                  @include descr-s;
+                  color: var(--violet-color);
+                  text-transform: uppercase;
+                }
+              }
+              .another-btn {
+                @include s(gap, 8);
+                position: absolute;
+                @include s(bottom, 10);
+                @include s(right, 10);
+                @include padding(0, 16);
+                svg {
+                  @include s(width, 18);
+                  @include s(height, 18);
+                }
+              }
+            }
+            .swiper-wrapper {
+              position: absolute;
+              top: 0;
+              left: 0;
+              right: 0;
+              bottom: 0;
+            }
+            .swiper-slide {
+              position: relative;
+
+              .image-wrapper {
+                position: absolute;
+                width: 80%;
+                height: 80%;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                margin: auto;
+                img {
+                  width: 100%;
+                  height: 100%;
+                  object-fit: contain;
+                }
+              }
+            }
+          }
+          .retail-customer-product-swiper-thumbs {
+            position: relative;
+            @include s(width, 64);
+            @include s(height, 448);
+            overflow: hidden;
+            .swiper-wrapper {
+              position: absolute;
+              top: 0;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              .swiper-slide {
+                @include s(width, 64);
+                background: var(--back-color);
+                @include borr(12);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: 1px solid rgba(0, 0, 0, 0);
+                transition: var(--trs-cubic-300);
+                cursor: pointer;
+                &.swiper-slide-thumb-active {
+                  border-color: var(--violet-color);
+                }
+                img {
+                  width: 80%;
+                  height: 80%;
+                  object-fit: contain;
+                }
+              }
+            }
+          }
+        }
+        .retail-customer-product-property {
+          h6 {
+            @include h6;
+            text-transform: uppercase;
+          }
+          ul {
+            @include s(margin-top, 24);
+            display: flex;
+            flex-direction: column;
+            li {
+              display: flex;
+              justify-content: space-between;
+              border-top: 1px solid var(--line-color);
+              @include padding(8, 0);
+              &:last-child {
+                border-bottom: 1px solid var(--line-color);
+              }
+              .label {
+                @include body-m;
+                color: var(--gray-light-color);
+              }
+              .value {
+                @include body-m;
+              }
+            }
+          }
+          .color-list-wrapper {
+            @include s(margin-top, 24);
+            .title {
+              @include descr-s;
+              text-transform: uppercase;
+            }
+            .color-list {
+              @include s(margin-top, 16);
+              display: flex;
+              flex-wrap: wrap;
+              @include s(gap, 16);
+              label {
+                @include s(width, 48);
+                @include s(height, 48);
+                @include borr(6);
+                position: relative;
+                overflow: hidden;
+                cursor: pointer;
+                .color {
+                  width: 100%;
+                  height: 100%;
+                  border: 1px solid rgba(0, 0, 0, 0);
+                  @include borr(6);
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  transition: var(--trs-cubic-300);
+                  img {
+                    @include s(width, 16);
+                    @include s(height, 16);
+                    transition: var(--trs-cubic-300);
+                    opacity: 0;
+                  }
+                }
+                input {
+                  position: absolute;
+                  opacity: 0;
+                  top: 0;
+                  left: 0;
+                  bottom: 0;
+                  right: 0;
+                  cursor: pointer;
+                  z-index: 2;
+                  &:checked ~ .color {
+                    border-color: var(--violet-color);
+                    img {
+                      opacity: 1;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .collections {
+        @include s(margin-top, 36);
+        .title {
+          text-transform: uppercase;
+          @include descr-m;
+        }
+        .collections-list {
+          display: flex;
+          align-items: center;
+          flex-wrap: wrap;
+          @include s(margin-top, 12);
+          @include s(gap, 12);
+          .image-wrapper {
+            @include borr(12);
+            background: var(--back-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            @include s(width, 133);
+            @include s(height, 133);
+            img {
+              width: 80%;
+              height: 80%;
+              object-fit: contain;
+            }
+          }
+        }
+      }
+      .specifications {
+        @include s(margin-top, 64);
+        .tabs {
+          display: flex;
+          align-items: center;
+          @include s(gap, 4);
+        }
+        .tab-content {
+          @include s(margin-top, 28);
+          ul {
+            display: flex;
+            flex-direction: column;
+            li {
+              display: flex;
+              justify-content: space-between;
+              border-top: 1px solid var(--line-color);
+              @include padding(8, 0);
+              &:last-child {
+                border-bottom: 1px solid var(--line-color);
+              }
+              .label {
+                @include body-m;
+                color: var(--gray-light-color);
+              }
+              .value {
+                @include body-m;
+              }
+            }
+          }
+          .visible-content {
+            &.list-content {
+              display: grid;
+              grid-template-columns: repeat(2, 1fr);
+              @include s(gap, 48);
+            }
+            &.text-content {
+              p {
+                @include body-m;
+                @include s(margin-top, 10);
+                &:first-child {
+                  margin-top: 0;
+                }
+              }
+            }
+          }
+          .hidden-content {
+            display: none;
+          }
+          .show-btn {
+            display: flex;
+            align-items: center;
+            @include s(gap, 12);
+            @include s(margin-top, 28);
+
+            p {
+              color: var(--violet-color);
+              text-transform: uppercase;
+              @include descr-m;
+            }
+            svg {
+              @include s(width, 12);
+              @include s(height, 6);
+            }
+          }
+        }
+      }
+    }
+    .order-block {
+      display: flex;
+      flex-direction: column;
+      .features {
+        display: flex;
+        align-items: center;
+        @include s(gap, 27);
+        svg {
+          @include s(width, 28);
+          @include s(height, 28);
+        }
+      }
+      .order-form {
+        @include s(margin-top, 33);
+        background: var(--white-color);
+        @include borr(12);
+        box-shadow: var(--shadow2);
+        @include padding(20, 28, 28);
+        .price {
+          @include h4;
+        }
+        .descr {
+          @include s(margin-top, 2);
+          @include body-xs;
+          color: var(--gray-light-color);
+        }
+        .count {
+          text-transform: uppercase;
+          @include descr-s;
+          @include s(padding-left, 22);
+          @include s(margin-top, 28);
+
+          position: relative;
+          &.orange {
+            &:before {
+              background: #ffa977;
+            }
+          }
+          &.green {
+            &:before {
+              background: #4db6a5;
+            }
+          }
+          &.gray {
+            &:before {
+              background: #a8a9b0;
+            }
+          }
+          &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            margin: auto;
+            @include s(width, 12);
+            @include s(height, 12);
+            border-radius: 999px;
+          }
+        }
+        .counter {
+          background: var(--back-color);
+          @include borr(6);
+          @include padding(8, 10);
+          display: flex;
+          align-items: center;
+          @include s(gap, 15);
+          @include s(margin-top, 12);
+
+          input {
+            background: none;
+            outline: none;
+            @include body-m;
+            text-align: center;
+          }
+          .btn {
+            @include s(width, 28);
+            @include s(height, 28);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            svg {
+              @include s(width, 14);
+              @include s(height, 14);
+            }
+          }
+        }
+        .btn.primary {
+          width: 100%;
+        }
+        .total {
+          @include s(margin-top, 12);
+
+          display: flex;
+          align-items: baseline;
+          justify-content: space-between;
+          .label {
+            @include body-sb;
+            color: var(--gray-light-color);
+          }
+          .value {
+            font-weight: 500;
+            @include s(font-size, 20);
+            line-height: 96%;
+            color: var(--violet-color);
+          }
+        }
+      }
+      .btn.outline {
+        @include s(margin-top, 28);
+        display: flex;
+        align-items: center;
+        @include s(gap, 8);
+        @include padding(0, 16);
+        p {
+          text-transform: uppercase;
+          @include descr-s;
+        }
+        svg {
+          @include s(width, 18);
+          @include s(height, 18);
+        }
+      }
+    }
+  }
+}

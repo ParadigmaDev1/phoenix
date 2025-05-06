@@ -9,6 +9,7 @@ import {
   Mousewheel,
 } from "swiper/modules";
 import { updateVisibleSlides } from "../helpers/updateVisibleSlides.js";
+
 export const swiper = () => {
   const homeHeroObj = document.querySelector(".home-hero");
   if (homeHeroObj) {
@@ -609,4 +610,26 @@ export const swiper = () => {
       },
     },
   });
+  const retailCustomerProductSwiperThumbs = new Swiper(
+    ".retail-customer-product-swiper-thumbs",
+    {
+      modules: [Pagination, Navigation, Thumbs, Mousewheel],
+      slidesPerView: 6.2,
+      spaceBetween: 10,
+      direction: "vertical",
+      mousewheel: true,
+    }
+  );
+  const retailCustomerProductSwiper = new Swiper(
+    ".retail-customer-product-swiper",
+    {
+      modules: [Pagination, Navigation, Thumbs],
+      slidesPerView: 1,
+      spaceBetween: 269,
+
+      thumbs: {
+        swiper: retailCustomerProductSwiperThumbs,
+      },
+    }
+  );
 };
