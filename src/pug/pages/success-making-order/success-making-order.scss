@@ -1,0 +1,70 @@
+@use "src/scss/common/files/mixins" as *;
+
+.success-making-order {
+  @include s(margin-top, 28);
+  @include s(padding-bottom, 156);
+  @media (max-width: $tab-sm) {
+    @include s(padding-bottom, 64);
+    @include s(margin-top, 16);
+  }
+  .success-making-order-inner {
+    h1 {
+      @include h1;
+    }
+    .content {
+      @include s(margin-top, 36);
+      display: grid;
+      @include gtc(661, 636);
+      @include s(gap, 48);
+      @media (max-width: $tab-sm) {
+        grid-template-columns: 1fr;
+        @include s(margin-top, 22);
+        @include s(gap, 36);
+      }
+      .text-block {
+        .descr {
+          @include s(margin-top, 36);
+          @include body-l;
+          @media (max-width: $tab-sm) {
+            @include s(margin-top, 16);
+            @include body-m;
+          }
+        }
+        .btns {
+          display: flex;
+          align-items: center;
+          @include s(gap, 12);
+          .btn.primary {
+            background: var(--violet-color);
+          }
+        }
+        .btn {
+          @include padding(0, 23);
+          @include s(gap, 13);
+          width: fit-content;
+          @include s(margin-top, 28);
+          @media (max-width: $tab-sm) {
+            @include s(margin-top, 16);
+          }
+          p {
+            @include descr-m;
+            text-transform: uppercase;
+          }
+        }
+      }
+      .image-block {
+        @include borr(12);
+        overflow: hidden;
+        @include s(height, 435);
+        @media (max-width: $tab-sm) {
+          @include s(height, 220);
+        }
+        img {
+          object-fit: cover;
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+}
