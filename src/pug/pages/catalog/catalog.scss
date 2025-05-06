@@ -1,0 +1,430 @@
+@use "src/scss/common/files/mixins" as *;
+
+.catalog {
+  @include s(margin-bottom, 150);
+  h1 {
+    @include h1;
+    @include s(margin-top, 28);
+    @include s(margin-bottom, 28);
+  }
+}
+
+.catalog__inner {
+  display: flex;
+  justify-content: space-between;
+}
+.catalog__sidebar {
+  @include s(width, 297);
+  flex-shrink: 0;
+
+  .accordion-item.nested {
+    .accordion-body {
+      @include s(padding-left, 20);
+    }
+    & > .accordion-title {
+      border-top: 1px solid #dcdde1;
+      text-transform: uppercase;
+    }
+    &.active {
+      & > .accordion-title .title {
+        color: #343176;
+      }
+    }
+    .accordion-title {
+      padding: calc(16 / var(--screensize) * 100vw)
+        calc(0 / var(--screensize) * 100vw);
+      .title-wrapper {
+        justify-content: space-between;
+        width: 100%;
+
+        .icon {
+          border: none;
+        }
+      }
+      .title {
+        @include body-sb;
+        color: #333435;
+        text-align: left;
+      }
+
+      .icon {
+        svg {
+          @include s(width, 12);
+          @include s(height, 12);
+        }
+      }
+    }
+  }
+
+  .accordion-item.nested-inner {
+    & > .accordion-title {
+      @include s(padding-bottom, 3);
+      // padding-bottom: 0;
+      .title {
+        color: #343176;
+        @include s(font-size, 16);
+        font-weight: 400;
+      }
+      padding-top: 0;
+    }
+
+    .accordion-body li {
+      @include s(margin-bottom, 5);
+      &::marker {
+        color: #343176;
+      }
+      a {
+        @include s(font-size, 16);
+        span {
+          color: #a8a9b0;
+        }
+      }
+    }
+  }
+}
+
+.catalog__content {
+  @include s(width, 1004);
+  flex-shrink: 0;
+}
+
+.catalog__content__head {
+  display: flex;
+  align-items: center;
+  @include s(margin-bottom, 28);
+  position: relative;
+  .filter-btn {
+    color: #fff;
+    text-transform: uppercase;
+    @include s(font-size, 12);
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    line-height: 128%;
+    @include s(padding-top, 9);
+    @include s(padding-bottom, 9);
+    @include s(padding-left, 20);
+    @include s(padding-right, 20);
+    @include s(gap, 8);
+    svg {
+      @include s(width, 18);
+      @include s(height, 18);
+    }
+
+    span {
+      color: #fff;
+    }
+  }
+}
+
+.catalog__content__head__total {
+  @include s(font-size, 12);
+  line-height: 116%;
+  color: #a8a9b0;
+  @include s(margin-left, 24);
+  display: block;
+}
+
+.catalog__content__head__right {
+  width: 100%;
+  @include s(max-width, 512);
+  display: flex;
+  @include s(gap, 6);
+  margin-left: auto;
+
+  .selector {
+    width: 100%;
+    @include s(max-width, 186);
+    @include s(font-size, 15);
+
+    .selector-btn {
+      @include s(height, 36);
+    }
+
+    .selector-title {
+      max-width: unset !important;
+    }
+  }
+}
+
+.catalog__content__head__view {
+  @include s(margin-left, 50);
+  display: flex;
+  @include s(gap, 6);
+
+  button {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    svg {
+      @include s(width, 36);
+      @include s(height, 36);
+    }
+  }
+}
+
+.catalog__content__body {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  @include s(row-gap, 80);
+  @include s(column-gap, 24);
+}
+
+.catalog {
+  .product-card .product-info .cart-btn-wrapper {
+    position: relative;
+  }
+}
+
+.catalog__sidebar__filters {
+  @include s(margin-top, 36);
+  h6 {
+    @include h6;
+    @include s(margin-bottom, 16);
+    text-transform: uppercase;
+  }
+
+  .accordion {
+
+    .accordion-item {
+      border-bottom: 1px solid #DCDDE1;
+    }
+    .accordion-body {
+      padding-left: 0;
+    }
+  }
+
+  .filter-search {
+    position: relative;
+    display: block;
+    @include s(margin-top, 16);
+    svg {
+      position: absolute;
+      @include s(width, 48);
+      @include s(height, 48);
+      top: 0;
+      right: 0;
+    }
+    input {
+      background: #f4f4f4;
+      @include body-sb;
+      color: #a8a9b0;
+      @include s(padding-top, 15);
+      @include s(padding-bottom, 15);
+      @include s(padding-left, 22);
+      @include s(padding-right, 22);
+      @include s(border-radius, 6);
+      &::placeholder {
+        color: #a8a9b0;
+      }
+    }
+  }
+
+
+  .accordion-item .accordion-title {
+
+    .title-wrapper {
+      width: 100%;
+      justify-content: space-between;
+    }
+    .title {
+      @include body-m;
+    }
+
+    .icon {
+      @include s(width, 12);
+      @include s(height, 12);
+      svg {
+        @include s(width, 12);
+        @include s(height, 12);
+      }
+    }
+  }
+}
+
+
+
+.catalog__sidebar__filters__buttons {
+  display: flex;
+  @include s(gap, 12);
+  @include s(margin-top, 20);
+  .btn {
+    text-transform: uppercase;
+    @include s(height, 36);
+    flex: 1;
+    justify-content: center;
+    @include s(gap, 8);
+    span {
+      @include s(font-size, 12);
+      font-weight: 500;
+    }
+    svg {
+      @include s(width, 18);
+      @include s(height, 18);
+    }
+    &.primary {
+      span {
+        color: #fff;
+      }
+    }
+  }
+}
+
+.catalog__content__bottom {
+  @include s(margin-top, 36);
+}
+
+.catalog__pagination {
+  display: flex;
+  justify-content: space-between;
+
+  .catalog__pagination__arrow {
+    display: block;
+    svg {
+      @include s(width, 46);
+      @include s(height, 46);
+    }
+  }
+
+  nav {
+    display: flex;
+    @include s(gap, 6);
+    a, span {
+      @include s(font-size, 14);
+      line-height: 128%;
+      font-weight: 500;
+      @include s(width, 48);
+      @include s(height, 48);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid #DCDDE1;
+      @include s(border-radius, 6);
+
+      &.active {
+        border-color: #343176;
+        color: #343176;
+      }
+    }
+  }
+}
+
+.catalog__content__bottom__more {
+  text-transform: uppercase;
+  @include padding(10, 24, 10, 24);
+  display: flex;
+  align-items: center;
+  @include s(gap, 8);
+  @include s(margin-top, 28);
+  margin-left: auto;
+  margin-right: auto;
+
+  svg {
+    @include s(width, 28);
+    @include s(height, 28);
+  }
+  p {
+    @include s(font-size, 14);
+  }
+}
+
+
+.seo-block {
+  @include s(margin-top, 96);
+  h2 {
+    @include h2;
+    @include s(margin-bottom, 24);
+  }
+
+  p {
+    @include body-m;
+    @include s(margin-bottom, 10);
+  }
+
+  ul {
+    @include s(margin-left, 20);
+    @include s(margin-bottom, 24);
+    li {
+      @include body-m;
+      @include s(margin-bottom, 8);
+      &::marker {
+        color: #343176;
+      }
+    }
+  }
+}
+
+.recently-viewed {
+  background: var(--back-color);
+  @include padding(96, 0, 128, 0);
+
+  .product-card .product-card-swiper-wrapper {
+    background: #fff;
+  }
+}
+
+.checkbox {
+  vertical-align: top;
+  margin: 0 3px 0 0;
+  width: 17px;
+  height: 17px;
+}
+.checkbox:not(checked) { position: absolute; opacity: 0;}
+.checkbox:not(checked) + label.ios-switch {
+  position: relative; 
+  @include s(padding-left, 52);
+      display: block;
+    @include s(height, 21);
+    @include body-m;
+}
+.checkbox:not(checked) + label.ios-switch:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  left: 0;
+  @include s(width, 36);
+  @include s(height, 20);
+  border-radius: 13px;
+  border: 1px solid;
+  border-color: #DCDDE1;
+  transition: border 0.4s, box-shadow 0.4s;
+  background-color: #fff;
+}
+.checkbox:not(checked) + label.ios-switch:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  @include s(left, 4.5);
+  @include s(width, 12);
+  @include s(height, 12);
+  border-radius: 50%;
+  background: var(--txt-gray-color);
+  transition: all .2s;
+}
+.checkbox:checked + label.ios-switch:before {
+  box-shadow: var(--violet-color) 0px 0px 0px 16px inset;
+  transition: border 0.4s, box-shadow 0.4s, background-color 1.2s;
+  background-color: var(--violet-color);
+  border-color: var(--violet-color);
+}
+.checkbox:checked + label.ios-switch:after { 
+  @include s(left, 19.5);
+  background-color: #fff;
+}
+
+.checkbox-wrapper {
+  @include s(margin-bottom, 8);
+}
+
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+  @include s(gap, 16);
+
+  .custom-checkbox-wrapper {
+    p {
+      color: #333435;
+    }
+  }
+}

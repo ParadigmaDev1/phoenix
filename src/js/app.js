@@ -26,6 +26,7 @@ import "../pug/components/catalog-menu/catalog-menu.js";
 import "../pug/components/values-block/values-block.js";
 import "../pug/pages/home/home-collections/home-collections.js";
 import "../pug/pages/home/home-ideas/home-ideas.js";
+import "../pug/pages/catalog/catalog.js";
 
 document.addEventListener("DOMContentLoaded", function () {
   const wrappers = document.querySelectorAll(".marquee__group");
