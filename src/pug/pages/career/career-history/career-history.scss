@@ -28,6 +28,13 @@
           .title {
             color: var(--violet-color);
           }
+          .play-btn {
+            svg {
+              circle {
+                fill: var(--violet-color);
+              }
+            }
+          }
         }
         &.visible-slide {
           opacity: 1;
@@ -56,7 +63,7 @@
             position: absolute;
             top: 0;
             left: 0;
-            img {
+            svg {
               @include s(height, 72);
               @include s(width, 72);
               @media (max-width: $tab-sm) {

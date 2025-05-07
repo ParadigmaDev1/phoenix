@@ -60,7 +60,7 @@
         top: 0;
         left: 0;
         @media (max-width: $tab-sm) {
-          img {
+          svg {
             @include s(width, 48);
             @include s(height, 48);
           }
