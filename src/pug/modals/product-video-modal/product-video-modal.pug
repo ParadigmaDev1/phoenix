@@ -1,0 +1,14 @@
+mixin product-video-modal()
+    .product-video-modal.modal
+        .modal-content-wrapper
+            .close-modal-wrapper
+                button.btn.close-modal 
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5.05026 14.9497L14.9498 5.05025" stroke="#343176"/>
+                        <path d="M14.9498 14.9497L5.05026 5.05025" stroke="#343176"/>
+                    </svg>
+            .modal-content
+                .video-block
+                    video(src='./files/video.mp4' type='video/mp4' preload="auto" poster="./img/about/info/preview.jpg")
+                    button.btn.play-btn 
+                        img(load='lazy' src="./img/icons/play.svg", alt="play") 

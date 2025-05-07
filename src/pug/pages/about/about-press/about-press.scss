@@ -49,6 +49,12 @@
         .swiper-slide {
           opacity: 0;
           transition: opacity var(--trs-cubic-300);
+          cursor: pointer;
+          &:hover {
+            .title {
+              color: var(--violet-color);
+            }
+          }
           &.visible-slide {
             opacity: 1;
           }
@@ -85,6 +91,8 @@
               @include s(margin-top, 16);
               @include h6;
               text-transform: uppercase;
+              transition: var(--trs-cubic-300);
+
               @media (max-width: $tab-sm) {
                 @include s(margin-top, 12);
               }

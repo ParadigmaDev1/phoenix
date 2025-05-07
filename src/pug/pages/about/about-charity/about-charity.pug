@@ -4,39 +4,39 @@ mixin about-charity()
             h3 Феникс+ для людей
             .double-swiper 
                 .swiper-wrapper 
-                    .swiper-slide 
-                        .video-block 
-                            video(src='./files/video.mp4' type='video/mp4' preload="auto" poster="./img/about/charity/1.jpg")
+                    .swiper-slide(data-modal-target='video-modal') 
+                        .image-wrapper  
+                            img(load='lazy' src="./img/about/charity/1.jpg", alt="charity")
                             button.btn.play-btn 
                                 img(load='lazy' src="./img/icons/play.svg", alt="play") 
-                        p.title(data-modal-target='charity-modal') Отправляем гуманитарную помощь <br>в трудные моменты
+                        p.title Отправляем гуманитарную помощь <br>в трудные моменты
                         
-                    .swiper-slide 
+                    .swiper-slide(data-modal-target='charity-modal') 
                         .image-wrapper 
                             img(load='lazy' src="./img/about/charity/2.jpg", alt="charity")
-                        p.title(data-modal-target='charity-modal') Поддерживаем благотворительные проекты
-                    .swiper-slide 
-                        .video-block 
-                            video(src='./files/video.mp4' type='video/mp4' preload="auto" poster="./img/about/charity/1.jpg")
+                        p.title Поддерживаем благотворительные проекты
+                    .swiper-slide(data-modal-target='video-modal') 
+                        .image-wrapper  
+                            img(load='lazy' src="./img/about/charity/1.jpg", alt="charity")
                             button.btn.play-btn 
-                                img(load='lazy' src="./img/icons/play.svg", alt="play") 
-                        p.title(data-modal-target='charity-modal') Отправляем гуманитарную помощь <br>в трудные моменты
+                                img(load='lazy' src="./img/icons/play.svg", alt="play")  
+                        p.title Отправляем гуманитарную помощь <br>в трудные моменты
                         
-                    .swiper-slide 
+                    .swiper-slide(data-modal-target='charity-modal') 
                         .image-wrapper 
                             img(load='lazy' src="./img/about/charity/2.jpg", alt="charity")
-                        p.title(data-modal-target='charity-modal') Поддерживаем благотворительные проекты
-                    .swiper-slide 
-                        .video-block 
-                            video(src='./files/video.mp4' type='video/mp4' preload="auto" poster="./img/about/charity/1.jpg")
+                        p.title Поддерживаем благотворительные проекты
+                    .swiper-slide(data-modal-target='video-modal') 
+                        .image-wrapper 
+                            img(load='lazy' src="./img/about/charity/1.jpg", alt="charity")
                             button.btn.play-btn 
-                                img(load='lazy' src="./img/icons/play.svg", alt="play") 
-                        p.title(data-modal-target='charity-modal') Отправляем гуманитарную помощь <br>в трудные моменты
+                                img(load='lazy' src="./img/icons/play.svg", alt="play")
+                        p.title Отправляем гуманитарную помощь <br>в трудные моменты
                         
-                    .swiper-slide 
+                    .swiper-slide(data-modal-target='charity-modal') 
                         .image-wrapper 
                             img(load='lazy' src="./img/about/charity/2.jpg", alt="charity")
-                        p.title(data-modal-target='charity-modal') Поддерживаем благотворительные проекты
+                        p.title Поддерживаем благотворительные проекты
                 .navigation
                     button.btn.circle.l.double-swiper-prev
                         <svg width="10" height="14" viewBox="0 0 10 14" fill="none" xmlns="http://www.w3.org/2000/svg">

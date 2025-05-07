@@ -82,6 +82,32 @@
     .hidden-content {
       opacity: 1 !important;
     }
+    .badge {
+      @include borr(4);
+      @include s(height, 19);
+      @include padding(0, 10);
+      @include descr-xs;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-transform: uppercase;
+      &.success {
+        background: var(--green-color);
+        color: var(--white-color);
+      }
+      &.blue {
+        background: var(--blue-color);
+        color: var(--white-color);
+      }
+      &.warn {
+        background: var(--warn-color);
+        color: var(--white-color);
+      }
+      &.alert {
+        background: var(--alert-color);
+        color: var(--white-color);
+      }
+    }
   }
   .product-card-swiper-wrapper {
     @include s(height, 318);
@@ -139,6 +165,15 @@
           justify-content: center;
           @media (max-width: $tab-sm) {
             pointer-events: all;
+          }
+
+          &:hover {
+            svg {
+              path {
+                // fill: var(--violet-color);
+                stroke: var(--violet-color);
+              }
+            }
           }
           svg {
             @include s(width, 19);

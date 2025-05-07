@@ -111,8 +111,13 @@
             @include s(margin-top, 6);
             color: var(--white-color);
             @include h4;
+
+            @media (max-width: $desktop-sm) {
+              @include h5;
+            }
             @media (max-width: $tab-sm) {
               @include s(margin-top, 4);
+              @include h4;
             }
           }
           .row {

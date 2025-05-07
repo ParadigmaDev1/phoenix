@@ -7,6 +7,7 @@
   align-items: center;
   justify-content: center;
   text-transform: uppercase;
+  transition: var(--trs-cubic-300);
   &.success {
     border: 1px solid var(--green-color);
     color: var(--green-color);

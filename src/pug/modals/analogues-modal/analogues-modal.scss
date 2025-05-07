@@ -1,0 +1,54 @@
+@use "src/scss/common/files/mixins" as *;
+
+.analogues-modal {
+  .close-modal-wrapper {
+    @media (max-width: $tab-sm) {
+      top: 0 !important;
+    }
+    .close-modal {
+      //   margin-top: calc(-50 / var(--screensize) * 100vw) !important;
+      //   margin-right: calc(-50 / var(--screensize) * 100vw) !important;
+      @media (max-width: $tab-sm) {
+        margin: 0 !important;
+        @include s(top, 0);
+        @include s(right, 0);
+      }
+    }
+  }
+  .modal-content-wrapper {
+    @include s(max-width, 1400);
+    // @include borr(12);
+    @include padding(28);
+    // padding: 0;
+    position: relative;
+    overflow: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--gray-light-color) #ffffff;
+    &::-webkit-scrollbar {
+      width: 10px;
+    }
+    @media (max-width: $tab-sm) {
+      @include padding(20);
+    }
+    .modal-content {
+      .title {
+        @include h2;
+        text-transform: uppercase;
+      }
+      .analogues-list {
+        @include s(margin-top, 36);
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        @include s(column-gap, 24);
+        @include s(row-gap, 64);
+        @media (max-width: $tab-sm) {
+          @include s(margin-top, 24);
+
+          grid-template-columns: repeat(2, 1fr);
+          @include s(column-gap, 20);
+          @include s(row-gap, 48);
+        }
+      }
+    }
+  }
+}

@@ -7,7 +7,7 @@ mixin about-info()
                 .bottom 
                     p Канцелярских товаров и школьного текстиля. 
                     p Компания входит в группу компаний «Феникс» и уже более 20 лет предлагает своим клиентам широкий ассортимент, включая бумажную продукцию, школьный текстиль и товары для офиса. 
-            .video-block 
+            .video-wrapper(data-modal-target='video-modal')  
                 video(src='./files/video.mp4' type='video/mp4' preload="auto" poster="./img/about/info/preview.jpg")
                 button.btn.play-btn 
                     img(load='lazy' src="./img/icons/play.svg", alt="play") 

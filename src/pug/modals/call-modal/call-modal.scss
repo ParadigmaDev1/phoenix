@@ -1,0 +1,78 @@
+@use "src/scss/common/files/mixins" as *;
+
+.call-modal {
+  .close-modal-wrapper {
+    @media (max-width: $tab-sm) {
+      top: 0 !important;
+    }
+    .close-modal {
+      margin-top: calc(-50 / var(--screensize) * 100vw) !important;
+      margin-right: calc(-50 / var(--screensize) * 100vw) !important;
+      @media (max-width: $tab-sm) {
+        margin: 0 !important;
+        @include s(top, 0);
+        @include s(right, 0);
+      }
+    }
+  }
+  .modal-content-wrapper {
+    @include s(max-width, 440);
+    // @include borr(12);
+    @include padding(48);
+    // padding: 0;
+    position: relative;
+    overflow: auto;
+    @media (max-width: $tab-sm) {
+      @include padding(20);
+    }
+    .modal-content {
+      @media (max-width: $tab-sm) {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+    }
+    .title {
+      @include h4;
+      text-transform: uppercase;
+      color: var(--violet-color);
+    }
+    .form {
+      .inputs {
+        display: flex;
+        flex-direction: column;
+        @include s(gap, 20);
+        @include s(margin-top, 20);
+
+        .row {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          @include s(gap, 20);
+        }
+      }
+    }
+    .policy {
+      @include s(margin-top, 28);
+      @include body-xs;
+      color: var(--gray-light-color);
+      a {
+        text-decoration: underline;
+        color: var(--gray-light-color);
+      }
+    }
+    .submit-btn {
+      justify-content: center;
+      @include s(margin-top, 16);
+      @include padding(0, 48);
+      width: 100%;
+      @media (max-width: $tab-sm) {
+        @include s(margin-top, 20);
+      }
+      p {
+        text-transform: uppercase;
+        @include descr-m;
+      }
+    }
+  }
+}

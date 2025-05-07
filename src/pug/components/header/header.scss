@@ -57,6 +57,11 @@
             p {
               color: var(--gray-color) !important;
             }
+            svg {
+              path {
+                stroke: var(--gray-color) !important;
+              }
+            }
           }
         }
         a {
@@ -69,7 +74,10 @@
             background: var(--back-color);
             color: var(--gray-color);
             &:placeholder-shown {
-              color: var(--gray-light-color);
+              color: var(--gray-light-color) !important;
+            }
+            &::placeholder {
+              color: var(--gray-light-color) !important;
             }
           }
         }
@@ -149,6 +157,11 @@
             p {
               color: var(--gray-color) !important;
             }
+            svg {
+              path {
+                stroke: var(--gray-color) !important;
+              }
+            }
           }
         }
         a {
@@ -161,7 +174,12 @@
             background: var(--back-color);
             color: var(--gray-color);
             &:placeholder-shown {
-              color: var(--gray-light-color);
+              color: var(--gray-light-color) !important;
+              opacity: 1 !important;
+            }
+            &::placeholder {
+              color: var(--gray-light-color) !important;
+              opacity: 1 !important;
             }
           }
         }
@@ -180,7 +198,7 @@
         .header-features {
           svg {
             path {
-              stroke: var(--violet-color);
+              stroke: var(--gray-color);
             }
           }
           .count {
@@ -265,6 +283,11 @@
           display: flex;
           align-items: center;
           @include s(gap, 48);
+          svg {
+            path {
+              stroke: var(--white-color);
+            }
+          }
         }
         a {
           @include body-m;
@@ -280,6 +303,8 @@
             p {
               color: var(--white-color);
               transition: var(--trs-cubic-300);
+              @include body-m;
+              letter-spacing: 0;
             }
             .icon {
               @include s(width, 12);
@@ -287,6 +312,9 @@
               svg {
                 @include s(width, 12);
                 @include s(height, 12);
+                path {
+                  stroke: var(--white-color);
+                }
               }
             }
           }
@@ -506,6 +534,11 @@
           flex: 1;
           @media (max-width: $tab-sm) {
             @include s(height, 44);
+          }
+          input {
+            &::placeholder {
+              color: var(--white-color);
+            }
           }
           .search-btn {
             display: flex;
@@ -776,6 +809,13 @@
             position: relative;
             @include s(width, 24);
             @include s(height, 24);
+            &:hover {
+              svg {
+                path {
+                  stroke: var(--violet-color) !important;
+                }
+              }
+            }
             .icon {
               width: 100%;
               height: 100%;
