@@ -1,0 +1,19 @@
+extends ./pug/templates/template.pug
+
+block head 
+  +head(["header", "policy",  "crumbs", "selector", "footer", "mobile-menu", "accordion-item", "catalog-menu", "mobile-sidebar", "auth-modal", "recover-password-modal", "feedback-modal", "call-modal"])
+block header 
+  +header().dark
+  +mobile-menu()
+  +catalog-menu()
+  +mobile-sidebar()
+block content
+  +crumbs({items: [{title: 'Пресс-центр', href: '#'}]})
+  +user-agreement()
+block footer 
+  +footer()
+block modals 
+  +auth-modal()
+  +recover-password-modal()
+  +feedback-modal()
+  +call-modal()

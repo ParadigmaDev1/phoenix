@@ -42,6 +42,31 @@
     &:nth-child(3) {
       @include s(width, 432);
       @include s(height, 500);
+      &:hover {
+        .title {
+          color: var(--white-color);
+        }
+        .image-wrapper {
+          img {
+            &.hover {
+              transform: translateY(0);
+            }
+          }
+        }
+      }
+      .image-wrapper {
+        img {
+          &.hover {
+            @include s(width, 432);
+            @include s(height, 309);
+            transition: var(--trs-cubic-300);
+            transform: translateY(100%);
+            bottom: 0;
+            top: auto;
+            position: absolute;
+          }
+        }
+      }
       .content {
         .text {
           position: absolute;
@@ -52,6 +77,31 @@
     &:nth-child(5) {
       @include s(width, 660);
       @include s(height, 350);
+      &:hover {
+        .title {
+          color: var(--white-color);
+        }
+        .image-wrapper {
+          img {
+            &.hover {
+              transform: translateX(0);
+            }
+          }
+        }
+      }
+      .image-wrapper {
+        img {
+          &.hover {
+            @include s(width, 391);
+            @include s(height, 350);
+            transition: var(--trs-cubic-300);
+            transform: translateX(-100%);
+            bottom: 0;
+            top: auto;
+            position: absolute;
+          }
+        }
+      }
     }
     .image-wrapper {
       position: absolute;

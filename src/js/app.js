@@ -20,6 +20,7 @@ import { productCards } from "../pug/components/product-card/product-card.js";
 import { catalogMenu } from "../pug/components/catalog-menu/catalog-menu.js";
 import { valuesBlock } from "../pug/components/values-block/values-block.js";
 import { homeCollections } from "../pug/pages/home/home-collections/home-collections.js";
+import { wholesaleOrders } from "../pug/pages/wholesale-orders/wholesale-orders.js";
 import { homeIdeas } from "../pug/pages/home/home-ideas/home-ideas.js";
 import { wholesaleLoyaltyProgramConditions } from "../pug/pages/wholesale-loyalty-program-conditions/wholesale-loyalty-program-conditions.js";
 import { wholesaleKnowledgeBaseArticle } from "../pug/pages/wholesale-knowledge-base-article/wholesale-knowledge-base-article.js";
@@ -28,6 +29,7 @@ import { wholesaleMakingOrder } from "../pug/pages/wholesale-making-order/wholes
 import { retailCustomerProductInfo } from "../pug/pages/retail-customer-product/retail-customer-product-info/retail-customer-product-info.js";
 import { fixedOrderForm } from "../pug/pages/retail-customer-product/fixed-order-form/fixed-order-form.js";
 import "../pug/pages/catalog/catalog.js";
+
 document.addEventListener("DOMContentLoaded", () => {
   header();
   selector();
@@ -58,5 +60,6 @@ document.addEventListener("DOMContentLoaded", () => {
   retailCustomerMakingOrder();
   retailCustomerProductInfo();
   fixedOrderForm();
+  wholesaleOrders();
   wholesaleMakingOrder();
 });

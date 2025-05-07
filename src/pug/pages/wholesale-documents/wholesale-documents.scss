@@ -67,6 +67,11 @@
         }
         .selector-content {
           min-width: 100%;
+          .selector-list {
+            p {
+              @include body-s;
+            }
+          }
         }
       }
       .filters-features {

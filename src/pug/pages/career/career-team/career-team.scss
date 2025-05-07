@@ -17,17 +17,24 @@
     }
   }
   .career-team-list {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    @include s(gap, 253);
+    // display: grid;
+    // grid-template-columns: repeat(2, 1fr);
+
     @include s(padding-top, 441);
-    // @include s(height, 841);
     position: relative;
     @media (max-width: $tab-sm) {
-      // @include s(margin-top, -88);
       @include s(padding-top, 36);
 
       @include s(gap, 80);
+    }
+    .rows {
+      display: flex;
+      justify-content: center;
+      @include s(gap, 253);
+      overflow: hidden;
+      @media (max-width: $tab-sm) {
+        @include s(gap, 80);
+      }
     }
     .row {
       display: grid;
@@ -39,9 +46,9 @@
         @include s(gap, 4);
         grid-template-columns: repeat(2, 1fr);
       }
-      &:last-child {
-        margin-left: auto;
-      }
+      // &:last-child {
+      //   margin-left: auto;
+      // }
       .image-wrapper {
         @include s(width, 204);
         @include s(height, 273);

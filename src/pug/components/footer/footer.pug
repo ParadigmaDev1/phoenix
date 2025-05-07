@@ -33,11 +33,11 @@ mixin footer()
                         .row 
                             a(href="tel:+7 863 261 89 62") +7 863 261 89 62
                             .socials 
-                                a(href="#" target="_blank")
+                                a(href="#" target="_blank").tg
                                     <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd" clip-rule="evenodd" d="M18.0145 1.67152C17.2268 1.89053 8.33064 4.4644 1.08704 6.54534C0.510457 6.72796 0.093898 7.19505 0.0121594 7.70843C-0.0695792 8.22182 0.270902 8.66241 0.729434 8.7914C1.121 8.91113 5.0469 10.0443 5.0469 10.0443L5.16355 16.619L9.22352 14.2273L6.0196 9.52289L14 6.67045L7.28847 11.0101L9.22352 13.9011C9.33702 14.0479 11.7056 17.6548 11.8758 17.875C12.1596 18.2422 12.5931 18.958 12.861 18.9951C13.3297 19.0599 13.9007 18.483 14.2548 17.5481C14.5987 16.6775 16.9291 10.6379 19.9212 2.59103C20.2652 1.72039 19.4559 1.21497 18.0145 1.67152Z" fill="#528DF0"/>
                                     </svg>
-                                a(href="#" target="_blank")
+                                a(href="#" target="_blank").wa
                                     <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd" clip-rule="evenodd" d="M10 0.5C4.47271 0.5 0 4.97022 0 10.5C0 12.5854 0.635965 14.5144 1.76563 16.1719C1.80767 16.2342 1.83513 16.3052 1.84595 16.3796C1.85677 16.454 1.85068 16.5299 1.82813 16.6016L0.8125 20L4.14062 18.8516C4.21177 18.8279 4.28732 18.8205 4.3617 18.83C4.43608 18.8394 4.50737 18.8655 4.57031 18.9062C6.1292 19.9177 7.99539 20.5 10 20.5C15.5299 20.5 20 16.0299 20 10.5C20 4.97007 15.5299 0.5 10 0.5ZM5.90625 4.85938L7.72656 7.8672L6.96875 8.6172C6.8916 8.69505 6.84216 8.79608 6.82804 8.90477C6.81393 9.01346 6.83592 9.12378 6.89062 9.21875C8.04708 11.2214 9.4173 12.7794 11.3359 13.625C11.4279 13.6658 11.53 13.678 11.629 13.6599C11.7279 13.6418 11.8191 13.5942 11.8906 13.5235L12.6953 12.7188L15.6328 14.5547C15.3075 15.2868 14.8835 15.7226 14.3984 15.9766C13.8366 16.2708 13.1503 16.3265 12.3672 16.1641C10.8009 15.8393 8.90897 14.6083 7.36719 13.0312C5.82541 11.4542 4.63229 9.53657 4.32812 7.97655C4.17604 7.19655 4.24323 6.5248 4.53125 5.9922C4.77924 5.53363 5.20049 5.14103 5.90625 4.85938Z" fill="#50B550"/>
                                     </svg>
@@ -81,7 +81,6 @@ mixin footer()
                         a(href="#") Сотрудничество
                         a(href="#") Истории успеха
                         a(href="#") Нормативные документы
-                        a(href="#") Бренды
                         a(href="#") Рекламные материалы
                         a(href="#") Вакансии
                         a(href="#") Сертификаты
@@ -90,21 +89,26 @@ mixin footer()
                         a(href="#") Контакты
         .footer-inner-socials
             .footer-inner-socials-content.container
-                a(href="#" target="_blank") 
-                    img(load='lazy' src="./img/footer/socials/1.png", alt="social").kanz
+                a(href="#" target="_blank").kanz 
+                    img(load='lazy' src="./img/footer/socials/1.png", alt="social")
                 .socials 
                     a(href="#" target="_blank")
                         img(load='lazy' src="./img/footer/socials/2.svg", alt="social")
+                        img(load='lazy' src="./img/footer/socials/2-hover.svg", alt="social").hidden
                     a(href="#" target="_blank")
                         img(load='lazy' src="./img/footer/socials/3.svg", alt="social")
+                        img(load='lazy' src="./img/footer/socials/3-hover.svg", alt="social").hidden
                     a(href="#" target="_blank")
                         img(load='lazy' src="./img/footer/socials/4.svg", alt="social")
+                        img(load='lazy' src="./img/footer/socials/4-hover.svg", alt="social").hidden
                     a(href="#" target="_blank")
                         img(load='lazy' src="./img/footer/socials/5.svg", alt="social")
+                        img(load='lazy' src="./img/footer/socials/5-hover.svg", alt="social").hidden
                     a(href="#" target="_blank")
                         img(load='lazy' src="./img/footer/socials/6.svg", alt="social")
-                a(href="#" target="_blank") 
-                    img(load='lazy' src="./img/footer/socials/7.png", alt="social").oboz
+                        img(load='lazy' src="./img/footer/socials/6-hover.svg", alt="social").hidden
+                a(href="#" target="_blank").oboz 
+                    img(load='lazy' src="./img/footer/socials/7.png", alt="social")
         .footer-inner-bottom
             .footer-inner-bottom-inner.container
                 .left 
@@ -117,7 +121,8 @@ mixin footer()
                         </svg>
                         p Разработка сайта – Paradigma
                 .center 
-                    img(load='lazy' src="./img/footer/yandex.png", alt="yandex")
+                    a(href="#") 
+                        img(load='lazy' src="./img/footer/yandex.png", alt="yandex")
                 .right 
                     a(href="#" target="_blank") Политика конфиденциальности 
                     a(href="#" target="_blank") Пользовательское соглашение 

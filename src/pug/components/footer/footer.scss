@@ -131,6 +131,26 @@
               display: flex;
               align-items: center;
               @include s(gap, 24);
+              a {
+                &.tg {
+                  &:hover {
+                    svg {
+                      path {
+                        fill: #77aaff;
+                      }
+                    }
+                  }
+                }
+                &.wa {
+                  &:hover {
+                    svg {
+                      path {
+                        fill: #56db56;
+                      }
+                    }
+                  }
+                }
+              }
               svg {
                 @media (max-width: $tab-sm) {
                   @include s(width, 20);
@@ -245,27 +265,84 @@
         @include s(gap, 50);
       }
       .kanz {
-        @include s(width, 264);
-        @include s(height, 30);
+        transition: var(--trs-cubic-300);
+        @include s(width, 318);
+        @include s(height, 105);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include borr(12);
+        &:hover {
+          background: var(--gray-color);
+        }
         @media (max-width: $tab-sm) {
           grid-area: kanz;
-          @include s(width, 125);
-          @include s(height, 16);
+          @include s(width, 119);
+          @include s(height, 19);
+        }
+        img {
+          @include s(width, 264);
+          @include s(height, 30);
+          @media (max-width: $tab-sm) {
+            grid-area: kanz;
+            @include s(width, 125);
+            @include s(height, 16);
+          }
         }
       }
       .oboz {
-        @include s(width, 254);
-        @include s(height, 41);
+        transition: var(--trs-cubic-300);
+        @include s(width, 318);
+        @include s(height, 105);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include borr(12);
+        &:hover {
+          background: var(--gray-color);
+        }
         @media (max-width: $tab-sm) {
           grid-area: oboz;
           @include s(width, 119);
           @include s(height, 19);
+        }
+        img {
+          @include s(width, 254);
+          @include s(height, 41);
+          @media (max-width: $tab-sm) {
+            @include s(width, 119);
+            @include s(height, 19);
+          }
         }
       }
       .socials {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        a {
+          position: relative;
+          @include s(width, 36);
+          @include s(height, 36);
+          &:hover {
+            img {
+              opacity: 0 !important;
+              &.hidden {
+                opacity: 1 !important;
+              }
+            }
+          }
+        }
+        img {
+          @include s(width, 36);
+          @include s(height, 36);
+          position: absolute;
+          transition: var(--trs-cubic-300);
+
+          &.hidden {
+            display: block !important;
+            opacity: 0;
+          }
+        }
         @media (max-width: $tab-sm) {
           grid-area: socials;
           img {
@@ -331,6 +408,18 @@
 
           grid-area: center;
           @include s(margin-bottom, 12);
+        }
+        a {
+          transition: var(--trs-cubic-300);
+          @include s(width, 318);
+          @include s(height, 105);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          @include borr(12);
+          &:hover {
+            background: var(--gray-color);
+          }
         }
         img {
           @include s(width, 241);

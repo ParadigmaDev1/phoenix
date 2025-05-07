@@ -1,0 +1,677 @@
+mixin search()
+  section.catalog
+    .container
+      h1 результаты поиска: ежедневник
+      .catalog__inner
+        .catalog__sidebar.accordion
+          .catalog__sidebar__filters
+            h6 Фильтр
+            .checkbox-wrapper 
+              input(type="checkbox" value="Акции").checkbox#checkbox-1
+              label(for="checkbox-1").ios-switch Акции
+            .checkbox-wrapper 
+              input(type="checkbox" value="Распродажи").checkbox#checkbox-2
+              label(for="checkbox-2").ios-switch Распродажи
+            .checkbox-wrapper 
+              input(type="checkbox" value="Только товары в наличии").checkbox#checkbox-3
+              label(for="checkbox-3").ios-switch Только товары в наличии
+            label.filter-search 
+              input(type="text" placeholder="Поиск по фильтрам")
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="23.2286" cy="23.2286" r="7.72857" stroke="#333435"/>
+                <path d="M28.7148 28.7144L33.0006 33.0001" stroke="#333435"/>
+              </svg>
+          .accordion-item.nested 
+            button(type="button").accordion-title
+              .title-wrapper 
+                p.title Товары для офиса
+                .icon 
+                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2 5L6 9L10 5" stroke="#343176" stroke-linecap="square" stroke-linejoin="round"/>
+                  </svg>
+            .accordion-body.collapse 
+              .accordion 
+                .accordion-item.nested-inner
+                  button(type="button").accordion-title
+                    .title-wrapper 
+                      p.title Деловое планирование 
+                      .icon 
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M2 5L6 9L10 5" stroke="#343176" stroke-linecap="square" stroke-linejoin="round"/>
+                        </svg>
+                  .accordion-body.collapse 
+                    ul 
+                      li 
+                        a(href="#") Ежедневники 
+                          span (215) 
+                      li 
+                        a(href="#") Планинги (еженедельники) 
+                          span (74) 
+                      li 
+                        a(href="#") Записные книжки 
+                          span (44) 
+                      li 
+                        a(href="#") Визитницы, органайзерфы для документов 
+                          span (12) 
+          .accordion-item.nested 
+            button(type="button").accordion-title
+              .title-wrapper 
+                p.title Товары для школьников и студентов
+                .icon 
+                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2 5L6 9L10 5" stroke="#343176" stroke-linecap="square" stroke-linejoin="round"/>
+                  </svg>
+            .accordion-body.collapse 
+              .accordion 
+                .accordion-item.nested-inner
+                  button(type="button").accordion-title
+                    .title-wrapper 
+                      p.title Деловое планирование 
+                      .icon 
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M2 5L6 9L10 5" stroke="#343176" stroke-linecap="square" stroke-linejoin="round"/>
+                        </svg>
+                  .accordion-body.collapse 
+                    ul 
+                      li 
+                        a(href="#") Ежедневники 
+                          span (215) 
+                      li 
+                        a(href="#") Планинги (еженедельники) 
+                          span (74) 
+                      li 
+                        a(href="#") Записные книжки 
+                          span (44) 
+                      li 
+                        a(href="#") Визитницы, органайзерфы для документов 
+                          span (12)
+          .accordion-item.nested 
+            button(type="button").accordion-title
+              .title-wrapper 
+                p.title Тематическая продукция
+                .icon 
+                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2 5L6 9L10 5" stroke="#343176" stroke-linecap="square" stroke-linejoin="round"/>
+                  </svg>
+            .accordion-body.collapse 
+              .accordion 
+                .accordion-item.nested-inner
+                  button(type="button").accordion-title
+                    .title-wrapper 
+                      p.title Деловое планирование 
+                      .icon 
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M2 5L6 9L10 5" stroke="#343176" stroke-linecap="square" stroke-linejoin="round"/>
+                        </svg>
+                  .accordion-body.collapse 
+                    ul 
+                      li 
+                        a(href="#") Ежедневники 
+                          span (215) 
+                      li 
+                        a(href="#") Планинги (еженедельники) 
+                          span (74) 
+                      li 
+                        a(href="#") Записные книжки 
+                          span (44) 
+                      li 
+                        a(href="#") Визитницы, органайзерфы для документов 
+                          span (12)
+          .accordion-item.nested 
+            button(type="button").accordion-title
+              .title-wrapper 
+                p.title Хобби и творчество
+                .icon 
+                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2 5L6 9L10 5" stroke="#343176" stroke-linecap="square" stroke-linejoin="round"/>
+                  </svg>
+            .accordion-body.collapse 
+              .accordion 
+                .accordion-item.nested-inner
+                  button(type="button").accordion-title
+                    .title-wrapper 
+                      p.title Деловое планирование 
+                      .icon 
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M2 5L6 9L10 5" stroke="#343176" stroke-linecap="square" stroke-linejoin="round"/>
+                        </svg>
+                  .accordion-body.collapse 
+                    ul 
+                      li 
+                        a(href="#") Ежедневники 
+                          span (215) 
+                      li 
+                        a(href="#") Планинги (еженедельники) 
+                          span (74) 
+                      li 
+                        a(href="#") Записные книжки 
+                          span (44) 
+                      li 
+                        a(href="#") Визитницы, органайзерфы для документов 
+                          span (12)
+          .accordion-item.nested 
+            button(type="button").accordion-title
+              .title-wrapper 
+                p.title Развивающая продукция для детей
+                .icon 
+                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2 5L6 9L10 5" stroke="#343176" stroke-linecap="square" stroke-linejoin="round"/>
+                  </svg>
+            .accordion-body.collapse 
+              .accordion 
+                .accordion-item.nested-inner
+                  button(type="button").accordion-title
+                    .title-wrapper 
+                      p.title Деловое планирование 
+                      .icon 
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M2 5L6 9L10 5" stroke="#343176" stroke-linecap="square" stroke-linejoin="round"/>
+                        </svg>
+                  .accordion-body.collapse 
+                    ul 
+                      li 
+                        a(href="#") Ежедневники 
+                          span (215) 
+                      li 
+                        a(href="#") Планинги (еженедельники) 
+                          span (74) 
+                      li 
+                        a(href="#") Записные книжки 
+                          span (44) 
+                      li 
+                        a(href="#") Визитницы, органайзерфы для документов 
+                          span (12)
+          .accordion-item.nested 
+            button(type="button").accordion-title
+              .title-wrapper 
+                p.title Пишущие принадлежности
+                .icon 
+                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2 5L6 9L10 5" stroke="#343176" stroke-linecap="square" stroke-linejoin="round"/>
+                  </svg>
+            .accordion-body.collapse 
+              .accordion 
+                .accordion-item.nested-inner
+                  button(type="button").accordion-title
+                    .title-wrapper 
+                      p.title Деловое планирование 
+                      .icon 
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M2 5L6 9L10 5" stroke="#343176" stroke-linecap="square" stroke-linejoin="round"/>
+                        </svg>
+                  .accordion-body.collapse 
+                    ul 
+                      li 
+                        a(href="#") Ежедневники 
+                          span (215) 
+                      li 
+                        a(href="#") Планинги (еженедельники) 
+                          span (74) 
+                      li 
+                        a(href="#") Записные книжки 
+                          span (44) 
+                      li 
+                        a(href="#") Визитницы, органайзерфы для документов 
+                          span (12)
+                .accordion-item.nested-inner
+                  button(type="button").accordion-title
+                    .title-wrapper 
+                      p.title Ежедневники 
+                      .icon 
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M2 5L6 9L10 5" stroke="#343176" stroke-linecap="square" stroke-linejoin="round"/>
+                        </svg>
+                  .accordion-body.collapse 
+                    ul 
+                      li 
+                        a(href="#") Ежедневники 
+                          span (215) 
+                      li 
+                        a(href="#") Планинги (еженедельники) 
+                          span (74) 
+                      li 
+                        a(href="#") Записные книжки 
+                          span (44) 
+                      li 
+                        a(href="#") Визитницы, органайзерфы для документов 
+                          span (12)
+          
+          
+            
+            .accordion 
+              .accordion-item
+                button(type="button").accordion-title
+                  .title-wrapper 
+                    p.title Цвет
+                    .icon 
+                      <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2 5L6 9L10 5" stroke="#343176" stroke-linecap="square" stroke-linejoin="round"/>
+                      </svg>
+                .accordion-body.collapse 
+                  .colors-pick-wrapper 
+                    label.color-picker
+                      input(type="checkbox" name="color")
+                      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="0.333008" y="0.333252" width="21.3333" height="21.3333" rx="4" fill="white"/>
+                        <path d="M6.24219 10.5151L9.83577 14.3333L16.424 7.33325" stroke="#343176" stroke-linecap="square" stroke-linejoin="round"/>
+                      </svg>
+                      span(style="background-color:#991E34")
+                    label.color-picker
+                      input(type="checkbox" name="color")
+                      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="0.333008" y="0.333252" width="21.3333" height="21.3333" rx="4" fill="white"/>
+                        <path d="M6.24219 10.5151L9.83577 14.3333L16.424 7.33325" stroke="#343176" stroke-linecap="square" stroke-linejoin="round"/>
+                      </svg>
+                      span(style="background-color:#E1E3E7")
+                    label.color-picker
+                      input(type="checkbox" name="color")
+                      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="0.333008" y="0.333252" width="21.3333" height="21.3333" rx="4" fill="white"/>
+                        <path d="M6.24219 10.5151L9.83577 14.3333L16.424 7.33325" stroke="#343176" stroke-linecap="square" stroke-linejoin="round"/>
+                      </svg>
+                      span(style="background-color:#2160F6")
+                    label.color-picker
+                      input(type="checkbox" name="color")
+                      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="0.333008" y="0.333252" width="21.3333" height="21.3333" rx="4" fill="white"/>
+                        <path d="M6.24219 10.5151L9.83577 14.3333L16.424 7.33325" stroke="#343176" stroke-linecap="square" stroke-linejoin="round"/>
+                      </svg>
+                      span(style="background-color:#4D1E99")
+                    label.color-picker
+                      input(type="checkbox" name="color")
+                      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="0.333008" y="0.333252" width="21.3333" height="21.3333" rx="4" fill="white"/>
+                        <path d="M6.24219 10.5151L9.83577 14.3333L16.424 7.33325" stroke="#343176" stroke-linecap="square" stroke-linejoin="round"/>
+                      </svg>
+                      span(style="background-color:#DEC0C0")
+                    label.color-picker
+                      input(type="checkbox" name="color")
+                      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="0.333008" y="0.333252" width="21.3333" height="21.3333" rx="4" fill="white"/>
+                        <path d="M6.24219 10.5151L9.83577 14.3333L16.424 7.33325" stroke="#343176" stroke-linecap="square" stroke-linejoin="round"/>
+                      </svg>
+                      span(style="background-color:#9747FF")
+                    label.color-picker
+                      input(type="checkbox" name="color")
+                      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="0.333008" y="0.333252" width="21.3333" height="21.3333" rx="4" fill="white"/>
+                        <path d="M6.24219 10.5151L9.83577 14.3333L16.424 7.33325" stroke="#343176" stroke-linecap="square" stroke-linejoin="round"/>
+                      </svg>
+                      span(style="background-color:#C9C9E4")
+                    label.color-picker
+                      input(type="checkbox" name="color")
+                      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="0.333008" y="0.333252" width="21.3333" height="21.3333" rx="4" fill="white"/>
+                        <path d="M6.24219 10.5151L9.83577 14.3333L16.424 7.33325" stroke="#343176" stroke-linecap="square" stroke-linejoin="round"/>
+                      </svg>
+                      span(style="background-color:#333")
+                    label.color-picker
+                      input(type="checkbox" name="color")
+                      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="0.333008" y="0.333252" width="21.3333" height="21.3333" rx="4" fill="white"/>
+                        <path d="M6.24219 10.5151L9.83577 14.3333L16.424 7.33325" stroke="#343176" stroke-linecap="square" stroke-linejoin="round"/>
+                      </svg>
+                      span(style="background-color:#E1E3E7")
+
+              .accordion-item
+                button(type="button").accordion-title
+                  .title-wrapper 
+                    p.title Размер
+                    .icon 
+                      <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2 5L6 9L10 5" stroke="#343176" stroke-linecap="square" stroke-linejoin="round"/>
+                      </svg>
+                .accordion-body.collapse 
+                  .checkbox-group 
+                    label.custom-checkbox-wrapper
+                      input(type="checkbox").custom-checkbox
+                      p S
+                    label.custom-checkbox-wrapper
+                      input(type="checkbox").custom-checkbox
+                      p M
+                    label.custom-checkbox-wrapper
+                      input(type="checkbox").custom-checkbox
+                      p L
+                    label.custom-checkbox-wrapper
+                      input(type="checkbox").custom-checkbox
+                      p XL
+              .accordion-item
+                button(type="button").accordion-title
+                  .title-wrapper 
+                    p.title Материал
+                    .icon 
+                      <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2 5L6 9L10 5" stroke="#343176" stroke-linecap="square" stroke-linejoin="round"/>
+                      </svg>
+                .accordion-body.collapse 
+                  .checkbox-group 
+                    label.custom-checkbox-wrapper
+                      input(type="checkbox").custom-checkbox
+                      p Экокожа
+                    label.custom-checkbox-wrapper
+                      input(type="checkbox").custom-checkbox
+                      p Бумага
+                    label.custom-checkbox-wrapper
+                      input(type="checkbox").custom-checkbox
+                      p Картон
+                    label.custom-checkbox-wrapper
+                      input(type="checkbox").custom-checkbox
+                      p XL
+              .accordion-item
+                button(type="button").accordion-title
+                  .title-wrapper 
+                    p.title Количество листов
+                    .icon 
+                      <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2 5L6 9L10 5" stroke="#343176" stroke-linecap="square" stroke-linejoin="round"/>
+                      </svg>
+                .accordion-body.collapse 
+                  p text
+            .catalog__sidebar__filters__buttons 
+              button(type="button").btn.outline.gray
+                <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M2.25 16L16.25 2M16.25 16L2.25 2" stroke="#A8A9B0"/>
+                </svg>
+                span очистить
+              button(type="button").btn.primary
+                <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_10733_971)">
+                  <path d="M1.25 9L6.89706 15L17.25 4" stroke="white" stroke-linecap="square" stroke-linejoin="round"/>
+                  </g>
+                  <defs>
+                  <clipPath id="clip0_10733_971">
+                  <rect width="18" height="18" fill="white" transform="translate(0.25)"/>
+                  </clipPath>
+                  </defs>
+                </svg>
+                span применить
+        .catalog__content 
+          .catalog__content__head 
+            .catalog__content__head__left
+              button(type="button").btn.primary.filter-btn
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_10710_9779)">
+                    <path d="M1 0.800122H17L10.6 10.0001V14.4001L7.4 16.8001V10.0001L1 0.800122Z" stroke="white"/>
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_10710_9779">
+                      <rect width="18" height="18" fill="white"/>
+                    </clipPath>
+                  </defs>
+                </svg>
+                span Фильтры
+              span.catalog__content__head__total Найдено: 342 товара
+            .catalog__content__head__right 
+              +selector({
+                title: 'Популярные', 
+                items: [
+                    {
+                        title: 'Популярные', 
+                        value: 0
+                    },
+                    {
+                        title: 'По цене', 
+                        value: 1
+                    },
+                    {
+                        title: 'По рейтингу', 
+                        value: 2
+                    },
+                    ],
+                    name: 'filter-by',
+                    required: true,
+                    defaultRequired: true
+                },)
+              +selector({
+                title: 'По: 15', 
+                items: [
+                    {
+                        title: 'Показывать по: 15', 
+                        value: 0
+                    },
+                    {
+                        title: 'Показывать по: 20', 
+                        value: 1
+                    },
+                    {
+                        title: 'Показывать по: 30', 
+                        value: 2
+                    },
+                    ],
+                    name: 'filter-by',
+                    required: true,
+                    defaultRequired: true
+                },)
+              .catalog__content__head__view 
+                button(type="button" data-view="cards").active 
+                  <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="0.5" y="0.5" width="35" height="35" rx="5.5" stroke="#333435"/>
+                    <g clip-path="url(#clip0_10758_28453)">
+                    <rect x="10.5" y="10.5" width="6" height="6" rx="1.5" stroke="#333435"/>
+                    <rect x="10.5" y="19.5" width="6" height="6" rx="1.5" stroke="#333435"/>
+                    <rect x="19.5" y="10.5" width="6" height="6" rx="1.5" stroke="#333435"/>
+                    <rect x="19.5" y="19.5" width="6" height="6" rx="1.5" stroke="#333435"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_10758_28453">
+                    <rect width="16" height="16" fill="white" transform="translate(10 10)"/>
+                    </clipPath>
+                    </defs>
+                  </svg>
+
+                button(type="button" data-view="horizontal") 
+                  <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="0.5" y="0.5" width="35" height="35" rx="5.5" stroke="#333435"/>
+                  <g clip-path="url(#clip0_10710_9802)">
+                  <rect x="10.5" y="10.5" width="15" height="3" rx="1.5" stroke="#333435"/>
+                  <rect x="10.5" y="16.5" width="15" height="3" rx="1.5" stroke="#333435"/>
+                  <rect x="10.5" y="22.5" width="15" height="3" rx="1.5" stroke="#333435"/>
+                  </g>
+                  <defs>
+                  <clipPath id="clip0_10710_9802">
+                  <rect width="16" height="16" fill="white" transform="translate(10 10)"/>
+                  </clipPath>
+                  </defs>
+                  </svg>
+          .catalog__content__body 
+            +product-card({
+                            imgs: 
+                            [
+                                './img/products/1.jpg',
+                                './img/products/2.jpg',
+                                './img/products/3.jpg',
+                                './img/products/1.jpg',
+                                './img/products/2.jpg'
+                            ],
+                            art: 'Арт 68012',
+                            barcode: 'Штрихкод 1423423423', 
+                            count: 'many', 
+                            price: '116 ₽', 
+                            descr: 'Набор для выращивания кристаллов, Фиолетовая змейка, Змейки, картонная коробка, 10+, Lori', 
+                            badgeTitle: 'хит', 
+                            badgeClass: 'warn'
+                        })
+            +product-card({
+                            imgs: 
+                            [
+                                './img/products/1.jpg',
+                                './img/products/2.jpg',
+                                './img/products/3.jpg',
+                                './img/products/1.jpg',
+                                './img/products/2.jpg'
+                            ],
+                            art: 'Арт 68012', 
+                            count: 'many', 
+                            price: '116 ₽', 
+                            descr: 'Набор для выращивания кристаллов, Фиолетовая змейка, Змейки, картонная коробка, 10+, Lori', 
+                            badgeTitle: 'хит', 
+                            badgeClass: 'warn'
+                        })
+            +product-card({
+                            imgs: 
+                            [
+                                './img/products/1.jpg',
+                                './img/products/2.jpg',
+                                './img/products/3.jpg',
+                                './img/products/1.jpg',
+                                './img/products/2.jpg'
+                            ],
+                            art: 'Арт 68012', 
+                            count: 'many', 
+                            price: '116 ₽', 
+                            descr: 'Набор для выращивания кристаллов, Фиолетовая змейка, Змейки, картонная коробка, 10+, Lori', 
+                            badgeTitle: 'хит', 
+                            badgeClass: 'warn'
+                        })
+            +product-card({
+                            imgs: 
+                            [
+                                './img/products/1.jpg',
+                                './img/products/2.jpg',
+                                './img/products/3.jpg',
+                                './img/products/1.jpg',
+                                './img/products/2.jpg'
+                            ],
+                            art: 'Арт 68012', 
+                            count: 'many', 
+                            price: '116 ₽', 
+                            descr: 'Набор для выращивания кристаллов, Фиолетовая змейка, Змейки, картонная коробка, 10+, Lori', 
+                            badgeTitle: 'хит', 
+                            badgeClass: 'warn'
+                        })
+            +product-card({
+                            imgs: 
+                            [
+                                './img/products/1.jpg',
+                                './img/products/2.jpg',
+                                './img/products/3.jpg',
+                                './img/products/1.jpg',
+                                './img/products/2.jpg'
+                            ],
+                            art: 'Арт 68012', 
+                            count: 'many', 
+                            price: '116 ₽', 
+                            descr: 'Набор для выращивания кристаллов, Фиолетовая змейка, Змейки, картонная коробка, 10+, Lori', 
+                            badgeTitle: 'хит', 
+                            badgeClass: 'warn'
+                        })
+            +product-card({
+                            imgs: 
+                            [
+                                './img/products/1.jpg',
+                                './img/products/2.jpg',
+                                './img/products/3.jpg',
+                                './img/products/1.jpg',
+                                './img/products/2.jpg'
+                            ],
+                            art: 'Арт 68012', 
+                            count: 'many', 
+                            price: '116 ₽', 
+                            descr: 'Набор для выращивания кристаллов, Фиолетовая змейка, Змейки, картонная коробка, 10+, Lori', 
+                            badgeTitle: 'хит', 
+                            badgeClass: 'warn'
+                        })
+            +product-card({
+                            imgs: 
+                            [
+                                './img/products/1.jpg',
+                                './img/products/2.jpg',
+                                './img/products/3.jpg',
+                                './img/products/1.jpg',
+                                './img/products/2.jpg'
+                            ],
+                            art: 'Арт 68012', 
+                            count: 'many', 
+                            price: '116 ₽', 
+                            descr: 'Набор для выращивания кристаллов, Фиолетовая змейка, Змейки, картонная коробка, 10+, Lori', 
+                            badgeTitle: 'хит', 
+                            badgeClass: 'warn'
+                        })
+            +product-card({
+                            imgs: 
+                            [
+                                './img/products/1.jpg',
+                                './img/products/2.jpg',
+                                './img/products/3.jpg',
+                                './img/products/1.jpg',
+                                './img/products/2.jpg'
+                            ],
+                            art: 'Арт 68012', 
+                            count: 'many', 
+                            price: '116 ₽', 
+                            descr: 'Набор для выращивания кристаллов, Фиолетовая змейка, Змейки, картонная коробка, 10+, Lori', 
+                            badgeTitle: 'хит', 
+                            badgeClass: 'warn'
+                        })
+            +product-card({
+                            imgs: 
+                            [
+                                './img/products/1.jpg',
+                                './img/products/2.jpg',
+                                './img/products/3.jpg',
+                                './img/products/1.jpg',
+                                './img/products/2.jpg'
+                            ],
+                            art: 'Арт 68012', 
+                            count: 'many', 
+                            price: '116 ₽', 
+                            descr: 'Набор для выращивания кристаллов, Фиолетовая змейка, Змейки, картонная коробка, 10+, Lori', 
+                            badgeTitle: 'хит', 
+                            badgeClass: 'warn'
+                        })
+            +product-card({
+                            imgs: 
+                            [
+                                './img/products/1.jpg',
+                                './img/products/2.jpg',
+                                './img/products/3.jpg',
+                                './img/products/1.jpg',
+                                './img/products/2.jpg'
+                            ],
+                            art: 'Арт 68012', 
+                            count: 'many', 
+                            price: '116 ₽', 
+                            descr: 'Набор для выращивания кристаллов, Фиолетовая змейка, Змейки, картонная коробка, 10+, Lori', 
+                            badgeTitle: 'хит', 
+                            badgeClass: 'warn'
+                        })
+            +product-card({
+                            imgs: 
+                            [
+                                './img/products/1.jpg',
+                                './img/products/2.jpg',
+                                './img/products/3.jpg',
+                                './img/products/1.jpg',
+                                './img/products/2.jpg'
+                            ],
+                            art: 'Арт 68012', 
+                            count: 'many', 
+                            price: '116 ₽', 
+                            descr: 'Набор для выращивания кристаллов, Фиолетовая змейка, Змейки, картонная коробка, 10+, Lori', 
+                            badgeTitle: 'хит', 
+                            badgeClass: 'warn'
+                        })
+            +product-card({
+                            imgs: 
+                            [
+                                './img/products/1.jpg',
+                                './img/products/2.jpg',
+                                './img/products/3.jpg',
+                                './img/products/1.jpg',
+                                './img/products/2.jpg'
+                            ],
+                            art: 'Арт 68012', 
+                            count: 'many', 
+                            price: '116 ₽', 
+                            descr: 'Набор для выращивания кристаллов, Фиолетовая змейка, Змейки, картонная коробка, 10+, Lori', 
+                            badgeTitle: 'хит', 
+                            badgeClass: 'warn'
+                        })
+          .catalog__content__bottom 
+            +pagination()
+            button(type="button").btn.outline-fill.catalog__content__bottom__more
+              <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.5 14.5H21.5" stroke="#343176"/>
+                <path d="M14.5 21.5L14.5 7.5" stroke="#343176"/>
+              </svg>
+              p загрузить ещё

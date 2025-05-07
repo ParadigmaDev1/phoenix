@@ -79,9 +79,15 @@
             @include borr(6);
             &.tg {
               background: #528df0;
+              &:hover {
+                background: #77aaff;
+              }
             }
             &.wa {
               background: #50b550;
+              &:hover {
+                background: #56db56;
+              }
             }
           }
         }

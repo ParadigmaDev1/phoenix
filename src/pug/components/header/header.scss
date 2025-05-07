@@ -283,6 +283,14 @@
           display: flex;
           align-items: center;
           @include s(gap, 48);
+
+          .selector-list {
+            a {
+              &:hover {
+                color: var(--violet-color) !important;
+              }
+            }
+          }
           svg {
             path {
               stroke: var(--white-color);
@@ -429,9 +437,15 @@
                   }
                   &.tg {
                     background: #528df0;
+                    &:hover {
+                      background: #77aaff;
+                    }
                   }
                   &.wa {
                     background: #50b550;
+                    &:hover {
+                      background: #56db56;
+                    }
                   }
                 }
               }
@@ -790,9 +804,17 @@
           @media (max-width: $tab-sm) {
             display: none;
           }
+          &:hover {
+            svg {
+              path {
+                stroke: none !important;
+                fill: var(--white-color) !important;
+              }
+            }
+          }
           svg {
-            @include s(width, 28);
-            @include s(height, 28);
+            @include s(width, 18);
+            @include s(height, 18);
           }
           p {
             @include body-sb;

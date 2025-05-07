@@ -84,11 +84,18 @@
                 @include s(width, 44);
                 @include s(height, 44);
                 @include borr(6);
+                transition: var(--trs-cubic-300);
                 &.tg {
                   background: #528df0;
+                  &:hover {
+                    background: #77aaff;
+                  }
                 }
                 &.wa {
                   background: #50b550;
+                  &:hover {
+                    background: #56db56;
+                  }
                 }
               }
             }
