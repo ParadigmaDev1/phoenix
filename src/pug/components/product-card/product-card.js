@@ -16,6 +16,11 @@ export const productCards = () => {
           e.preventDefault();
         });
       });
+      card.querySelectorAll(".product-card-opt-selector").forEach(el => {
+        el.addEventListener("click", function(e) {
+          e.preventDefault();
+        })
+      })
       cartBtnWrapper.addEventListener("click", (e) => {
         e.preventDefault();
       });

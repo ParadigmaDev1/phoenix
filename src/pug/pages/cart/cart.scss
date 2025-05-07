@@ -63,6 +63,8 @@
 	flex-direction: column;
 	box-shadow: 0px 4px 28px rgba(0, 0, 0, 0.1);
 	align-self: flex-start;
+	position: sticky;
+	@include s(top, 120);
 
 	.top {
 		display: flex;
@@ -102,10 +104,25 @@
 
 	.apply-scores {
 		display: flex;
+		align-items: center;
+
+		.checkbox-wrapper {
+			@include s(margin-left, 16);
+			.ios-switch {
+				@include body-xs;
+				display: flex;
+				align-items: center
+			}
+		}
 	}
 
 	.cart__total__promocode {
 		@include s(margin-bottom, 24);
+	}
+
+	.btn {
+		text-transform: uppercase;
+		width: 100%;
 	}
 
 	.error-msg {
@@ -114,6 +131,7 @@
 		@include body-xs;
 		@include padding(8, 12, 8, 12);
 		@include s(margin-top, 4);
+		@include s(border-radius, 6);
 	}
 }
 
@@ -177,4 +195,18 @@
 	display: flex;
 	flex-direction: column;
 	@include s(gap, 36);
+}
+
+.promocode-inner {
+	display: flex;
+	
+	.apply {
+		@include s(border-radius, 6);
+		@include s(width, 48);
+		@include s(height, 48);
+		flex-shrink:0;
+		&:disabled {
+			background: #9B9AB2;
+		}
+	}
 }

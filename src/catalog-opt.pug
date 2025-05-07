@@ -1,0 +1,16 @@
+extends ./pug/templates/template.pug
+
+block head 
+  +head(["header", "image-block", "crumbs", "catalog", "catalog-opt", "recently-viewed", "product-swiper", "selector", "footer-alert", "footer", "mobile-menu", "accordion-item", "catalog-menu", "product-card", "product-card-opt"])
+block header 
+  +header().dark
+  +mobile-menu()
+  +catalog-menu()
+block content
+  +crumbs({items: [{title: 'Каталог', href: '#'}, {title: 'Карьера', href: '#'}]})
+  +catalog-opt()
+  +recently-viewed()
+block footer 
+  +footer()
+block modals 
+  

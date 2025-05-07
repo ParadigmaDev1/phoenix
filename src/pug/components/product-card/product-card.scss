@@ -6,6 +6,31 @@
   &.absolute {
     position: absolute;
   }
+
+  .cart-btn.violet {
+    background: var(--violet-color) !important;
+  }
+  .presale {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include s(margin-top, 22);
+
+    .selector-btn {
+      margin-top: 0 !important;
+    }
+    .checkbox-wrapper {
+      display: flex;
+      align-items: center;
+      margin-bottom: 0;
+      .ios-switch {
+        @include s(font-size, 12);
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
   &.sm {
     background: var(--white-color);
     @include padding(10);
@@ -252,6 +277,13 @@
                 background: var(--warn-color);
               }
             }
+
+            &.presale {
+              margin-top: 0;
+              &:before {
+                background: var(--violet-color);
+              }
+            }
           }
         }
       }
@@ -373,6 +405,11 @@
   justify-content: space-between;
   border-top: 1px solid #DCDDE1;
   width: 100%;
+  .presale {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    @include s(row-gap, 10);
+  }
   .left-side {
     @include s(max-width, 418);
     width: 100%;
@@ -530,9 +567,7 @@
 .product-card-cart {
   flex-direction: row;
 
-  .hidden-content {
-    display: none;
-  }
+  
   &.no {
     .product-card-swiper-wrapper {
       opacity: .4;
@@ -554,6 +589,10 @@
     aspect-ratio: 1 / 1;
     @include s(min-height, 212);
     @include s(height, 212);
+
+    .hidden-content {
+      display: none;
+    }
 
     .product-card-features {
       bottom: 0;
@@ -593,4 +632,38 @@
       }
     }
   }
+}
+
+
+.product-card-opt-selector {
+  z-index: 3;
+  background: none;
+  .selector-btn {
+    padding: 0;
+    width: fit-content;
+    background: none;
+    height: auto;
+    @include s(margin-top, 22);
+
+    .icon {
+      @include s(margin-left, 10);
+    }
+
+    .selector-title {
+      display: flex;
+      text-transform: uppercase;
+      p {
+        @include s(font-size, 12);
+      }
+  
+      svg {
+        @include s(width, 16);
+        @include s(height, 16);
+        flex-shrink: 0;
+        @include s(margin-right, 15);
+      }
+    }
+  }
+
+  
 }
