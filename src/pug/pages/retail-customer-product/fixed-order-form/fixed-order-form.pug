@@ -1,0 +1,22 @@
+mixin fixed-order-form()
+    .fixed-order-form
+        .price-wrapper 
+            p.current-price 114 999 ₽
+            p.old-price 115 674 ₽
+        .cart-btn-wrapper 
+            .counter
+                button.btn.clear.dec
+                    <svg width="15" height="1" viewBox="0 0 15 1" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0.5 0.5H14.5" stroke="#333435"/>
+                    </svg>
+                .current-count 1
+                button.btn.clear.inc 
+                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0.506836 7.5H14.5068" stroke="#333435"/>
+                        <path d="M7.50684 14.5L7.50684 0.5" stroke="#333435"/>
+                    </svg>
+            button.btn.primary.m.cart-btn 
+                p в корзину
+                <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 13L7 7L0.999999 1" stroke="white" stroke-linecap="square" stroke-linejoin="round"/>
+                </svg>

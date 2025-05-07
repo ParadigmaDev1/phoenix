@@ -41,6 +41,9 @@ button {
     &.l {
       @include s(height, 48);
     }
+    &.purple {
+      background: var(--purple-color);
+    }
   }
   &.outline {
     @include borr(6);

@@ -1,0 +1,18 @@
+@use "src/scss/common/files/mixins" as *;
+
+.retail-customer-product-watch {
+  background: var(--back-color);
+  @include s(padding-bottom, 135);
+  @media (max-width: $tab-sm) {
+    background: var(--white-color);
+    @include s(padding-bottom, 64);
+  }
+  .product-card {
+    .product-card-swiper-wrapper {
+      background: var(--white-color);
+      @media (max-width: $tab-sm) {
+        background: var(--back-color);
+      }
+    }
+  }
+}

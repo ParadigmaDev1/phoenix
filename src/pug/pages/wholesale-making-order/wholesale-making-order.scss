@@ -1,0 +1,219 @@
+@use "src/scss/common/files/mixins" as *;
+
+.wholesale-making-order {
+  @include s(padding-bottom, 156);
+  @media (max-width: $tab-sm) {
+    @include s(padding-bottom, 64);
+    @include s(margin-top, 16);
+  }
+  .wholesale-making-order-inner {
+    display: grid;
+    @include gtc(1fr, 225);
+    @include s(gap, 475);
+    @include s(margin-top, 36);
+    @media (max-width: $tab-sm) {
+      grid-template-columns: 1fr;
+      gap: 0;
+      @include s(margin-top, 22);
+    }
+    h1 {
+      @include h1;
+    }
+    .content {
+      h5 {
+        @include h5;
+        text-transform: uppercase;
+      }
+      .top {
+        display: flex;
+        justify-content: space-between;
+        .btn {
+          @include s(gap, 12);
+          @include s(height, 36);
+          @include padding(0, 16);
+          @media (max-width: $tab-sm) {
+            display: none;
+          }
+          p {
+            text-transform: uppercase;
+            @include descr-s;
+          }
+        }
+      }
+
+      h6 {
+        @include h6;
+        text-transform: uppercase;
+        @include s(margin-top, 38);
+        @include s(margin-bottom, 24);
+
+        @media (max-width: $tab-sm) {
+          @include s(margin-top, 28);
+          @include s(margin-bottom, 20);
+          &:first-child {
+            @include s(margin-top, 36);
+          }
+        }
+      }
+      .form {
+        @include s(width, 661);
+        @media (max-width: $tab-sm) {
+          width: 100%;
+        }
+      }
+      .submit-btn {
+        @include padding(0, 48);
+        justify-content: center;
+        @include s(margin-top, 48);
+        @media (max-width: $tab-sm) {
+          width: 100%;
+          @include s(margin-top, 36);
+        }
+        p {
+          text-transform: uppercase;
+          @include descr-m;
+        }
+      }
+      .input-wrapper {
+        display: grid;
+        @include gtc(205, 1fr);
+        align-items: center;
+        @include s(gap, 24);
+        @media (max-width: $tab-sm) {
+          grid-template-columns: 1fr;
+          @include s(gap, 8);
+        }
+        p {
+          font-weight: 400;
+          @include s(font-size, 16);
+          line-height: 120%;
+          text-transform: none;
+          a {
+            color: var(--violet-color);
+          }
+        }
+      }
+
+      .radio-wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        @include s(gap, 24);
+        @include s(margin-top, 24);
+        @media (max-width: $tab-sm) {
+          grid-template-columns: 1fr;
+          @include s(gap, 12);
+        }
+        label {
+          @include borr(6);
+          border: 1px solid var(--line-color);
+          @include padding(20);
+          position: relative;
+          @include s(height, 96);
+          cursor: pointer;
+          display: flex;
+          align-items: flex-end;
+          @media (max-width: $tab-sm) {
+            @include s(height, 60);
+          }
+          input {
+            position: absolute;
+            @include s(top, 20);
+            @include s(right, 20);
+            &:checked ~ .text {
+              &:before {
+                border-color: var(--violet-color);
+              }
+            }
+          }
+          p {
+            @include body-m;
+          }
+        }
+      }
+      .pickup {
+        @include s(margin-top, 48);
+        @media (max-width: $tab-sm) {
+          @include s(margin-top, 36);
+        }
+        p {
+          @include body-l;
+        }
+      }
+      .delivery {
+        @include s(margin-top, 48);
+        display: flex;
+        flex-direction: column;
+        @include s(gap, 24);
+        @media (max-width: $tab-sm) {
+          @include s(gap, 16);
+        }
+        h6 {
+          margin-top: 0 !important;
+        }
+        .selector {
+          .selector-content {
+            .btn {
+              @include s(gap, 14);
+              width: fit-content;
+              @include padding(0, 48);
+              svg {
+                @include s(width, 14);
+                @include s(height, 14);
+              }
+              p {
+                text-transform: uppercase;
+                @include descr-m;
+              }
+            }
+          }
+        }
+      }
+      .inputs-col {
+        display: flex;
+        flex-direction: column;
+        @include s(gap, 24);
+        @media (max-width: $tab-sm) {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          @include s(gap, 12);
+        }
+      }
+      .inputs {
+        display: flex;
+        flex-direction: column;
+        @include s(gap, 24);
+        @media (max-width: $tab-sm) {
+          @include s(gap, 20);
+        }
+
+        .submit-btn {
+          @include padding(0, 48);
+          @include s(margin-left, 230);
+          justify-content: center;
+          p {
+            text-transform: uppercase;
+            @include descr-m;
+          }
+        }
+      }
+    }
+    .back-btn-wrapper {
+      @media (max-width: $tab-sm) {
+        display: none;
+      }
+      .back-btn {
+        width: fit-content;
+        @include s(gap, 12);
+        @include padding(0, 24);
+        svg {
+          @include s(width, 8);
+          @include s(height, 16);
+        }
+        p {
+          text-transform: uppercase;
+          @include descr-m;
+        }
+      }
+    }
+  }
+}

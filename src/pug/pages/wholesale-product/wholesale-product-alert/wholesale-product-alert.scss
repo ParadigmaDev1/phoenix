@@ -1,0 +1,48 @@
+@use "src/scss/common/files/mixins" as *;
+
+.wholesale-product-alert {
+  @include s(margin-top, 125);
+  @media (max-width: $tab-sm) {
+    @include s(margin-top, 112);
+  }
+  .content {
+    display: flex;
+    justify-content: space-between;
+    @include borr(6);
+    background: var(--violet-back-color);
+    align-items: center;
+    overflow: hidden;
+    @media (max-width: $tab-sm) {
+      @include s(gap, 14);
+    }
+    p {
+      color: rgba(52, 49, 118, 0.3);
+      @include descr-m;
+      text-transform: uppercase;
+      @include s(padding-left, 36);
+      @media (max-width: $tab-sm) {
+        @include descr-xs;
+        display: flex;
+        flex-direction: column;
+        @include s(padding-left, 20);
+      }
+      span {
+        @include descr-m;
+        color: var(--violet-color);
+        @media (max-width: $tab-sm) {
+          @include descr-xs;
+        }
+      }
+    }
+    img {
+      @include s(width, 375);
+      @include s(height, 88);
+      object-fit: contain;
+      @media (max-width: $tab-sm) {
+        @include s(width, 144);
+        @include s(height, 56);
+        object-fit: cover;
+      }
+    }
+  }
+}

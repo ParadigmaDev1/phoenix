@@ -32,6 +32,9 @@ export const productCards = () => {
       });
       decBtn.addEventListener("click", () => {
         if (+currentCount.textContent === 1) {
+          card.classList.remove("in-cart");
+          cartBtnText.innerHTML = "в корзину";
+          cartBtn.classList.remove("active");
           return;
         } else {
           currentCount.textContent = +currentCount.textContent - 1;

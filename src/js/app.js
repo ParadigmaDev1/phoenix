@@ -23,6 +23,10 @@ import { homeCollections } from "../pug/pages/home/home-collections/home-collect
 import { homeIdeas } from "../pug/pages/home/home-ideas/home-ideas.js";
 import { wholesaleLoyaltyProgramConditions } from "../pug/pages/wholesale-loyalty-program-conditions/wholesale-loyalty-program-conditions.js";
 import { wholesaleKnowledgeBaseArticle } from "../pug/pages/wholesale-knowledge-base-article/wholesale-knowledge-base-article.js";
+import { retailCustomerMakingOrder } from "../pug/pages/retail-customer-making-order/retail-customer-making-order.js";
+import { wholesaleMakingOrder } from "../pug/pages/wholesale-making-order/wholesale-making-order.js";
+import { retailCustomerProductInfo } from "../pug/pages/retail-customer-product/retail-customer-product-info/retail-customer-product-info.js";
+import { fixedOrderForm } from "../pug/pages/retail-customer-product/fixed-order-form/fixed-order-form.js";
 import "../pug/pages/catalog/catalog.js";
 document.addEventListener("DOMContentLoaded", () => {
   header();
@@ -51,4 +55,8 @@ document.addEventListener("DOMContentLoaded", () => {
   marquee();
   inputsMask();
   video();
+  retailCustomerMakingOrder();
+  retailCustomerProductInfo();
+  fixedOrderForm();
+  wholesaleMakingOrder();
 });

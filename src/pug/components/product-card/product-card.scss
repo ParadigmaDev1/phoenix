@@ -343,6 +343,9 @@
         z-index: 2;
         position: relative;
         margin-left: auto;
+        @media (max-width: $tab-sm) {
+          @include s(height, 36);
+        }
         p {
           text-transform: uppercase;
           @include descr-m;

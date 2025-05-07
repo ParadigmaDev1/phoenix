@@ -1,0 +1,94 @@
+mixin retail-customer-making-order()
+    .retail-customer-making-order
+        .retail-customer-making-order-inner.container
+            .content 
+                .top 
+                    h1 оформление заказа
+                form.form
+                    h6 Контактные данные получателя
+                    .inputs 
+                        .input-wrapper 
+                            p Фамилия, имя, отчество
+                            .input__row.gray
+                                input(type="text" placeholder="ИП Винничек Андрей Борисович").custom-input
+                        .input-wrapper 
+                            p Телефон 
+                            .input__row.gray
+                                input(type="tel" placeholder="+7 (").custom-input
+                        .input-wrapper 
+                            p Эл. почта *
+                            .input__row.gray
+                                input(type="text" placeholder="Введите").custom-input
+                        .input-wrapper 
+                            p ИНН 
+                            .input__row.gray
+                                input(type="text" placeholder="7721793895").custom-input
+                        .input-wrapper 
+                            p КПП  
+                            .input__row.gray
+                                input(type="text" placeholder="772201001").custom-input
+                        .input-wrapper 
+                            p Юридический адрес  
+                            .input__row.gray
+                                input(type="text" placeholder="111250, г. Москва, Вн. Тер. г. Муниципальный округ Лефортово, проед 3.д, оф. 502").custom-input
+                    h6 способ доставки
+                    .radio-wrapper 
+                        label
+                            input(type="radio" name='delivery' value='courier' checked)
+                            .text 
+                                img(src="./img/retail-customer-making-order/img.jpg", alt="delivery")
+                                p CDEK курьер
+                        label
+                            input(type="radio" name='delivery' value='pickup')
+                            .text 
+                                img(src="./img/retail-customer-making-order/img.jpg", alt="delivery")
+                                p CDEK самовывоз
+                    .courier-delivery
+                        .inputs
+                            .input-wrapper 
+                                p Адрес доставки 
+                                .input__row.gray
+                                    input(type="text" placeholder="111250, г. Москва, Вн. Тер. г. Муниципальный округ Лефортово, проед 3.д, оф. 502").custom-input
+                            .inputs-col
+                                .input-wrapper 
+                                    p Квартиры
+                                    .input__row.password-input-row.gray
+                                        input(type="text" placeholder="№").custom-input.input.form__input-value.input__valid-number
+                                        .input__item-small
+                                .input-wrapper 
+                                    p Подъезд
+                                    .input__row.password-input-row.gray
+                                        input(type="text" placeholder="№").custom-input.input.form__input-value.input__valid-number
+                                        .input__item-small
+                                .input-wrapper 
+                                    p Этаж
+                                    .input__row.password-input-row.gray
+                                        input(type="text" placeholder="№").custom-input.input.form__input-value.input__valid-number
+                                        .input__item-small
+                            .input-wrapper 
+                                p Комментарий
+                                textarea(placeholder="Введите")
+                    .pickup-delivery.hidden 
+                        .input-wrapper 
+                            p Регион
+                            +selector({title: 'Выберите', name: 'region', items: [{title: 'Москва'},{title: 'Ростов'},{title: 'Питер'}]})
+                        .input-wrapper 
+                            p Пункт выдачи
+                            +selector({title: 'Выберите', name: 'point', items: [{title: 'Москва'},{title: 'Ростов'},{title: 'Питер'}]})
+                    .price 
+                        p.label Стоимость доставки
+                        p.value 400 ₽
+                    label.policy
+                        input(type="checkbox").custom-checkbox
+                        p Я даю согласие на обработку персональных данных в соответствии с 
+                            a(href="#" target="_blank") Политикой конфиденциальности
+                    button.btn.primary.m.submit-btn
+                        p перейти к оплате
+            .back-btn-wrapper 
+                .sticky-block
+                    a(href="#").btn.outline.violet.m.back-btn
+                        <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 13L1 7L7 1" stroke="#343176" stroke-linecap="square" stroke-linejoin="round"/>
+                        </svg>
+                        p назад в корзину
+                
