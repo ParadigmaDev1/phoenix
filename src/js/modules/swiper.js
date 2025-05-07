@@ -610,28 +610,22 @@ export const swiper = () => {
       },
     },
   });
-  const retailCustomerProductSwiperThumbs = new Swiper(
-    ".retail-customer-product-swiper-thumbs",
-    {
-      modules: [Pagination, Navigation, Thumbs, Mousewheel],
-      slidesPerView: 6.2,
-      spaceBetween: 10,
-      direction: "vertical",
-      mousewheel: true,
-    }
-  );
-  const retailCustomerProductSwiper = new Swiper(
-    ".retail-customer-product-swiper",
-    {
-      modules: [Pagination, Navigation, Thumbs],
-      slidesPerView: 1,
-      spaceBetween: 269,
-      pagination: {
-        el: ".retail-customer-product-pagination",
-      },
-      thumbs: {
-        swiper: retailCustomerProductSwiperThumbs,
-      },
-    }
-  );
+  const productInfoSwiperThumbs = new Swiper(".product-info-swiper-thumbs ", {
+    modules: [Pagination, Navigation, Thumbs, Mousewheel],
+    slidesPerView: 6.2,
+    spaceBetween: 10,
+    direction: "vertical",
+    mousewheel: true,
+  });
+  const productInfoSwiper = new Swiper(".product-info-swiper", {
+    modules: [Pagination, Navigation, Thumbs],
+    slidesPerView: 1,
+    spaceBetween: 269,
+    pagination: {
+      el: ".product-info-pagination",
+    },
+    thumbs: {
+      swiper: productInfoSwiperThumbs,
+    },
+  });
 };

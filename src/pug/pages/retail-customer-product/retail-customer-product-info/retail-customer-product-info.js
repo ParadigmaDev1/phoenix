@@ -1,19 +1,15 @@
 export const retailCustomerProductInfo = () => {
-  const retailCustomerProductInfo = document.querySelector(
-    ".retail-customer-product-info"
-  );
-  if (retailCustomerProductInfo) {
-    const cartBtn = retailCustomerProductInfo.querySelector(".cart-btn");
-    const cartBtnWrapper =
-      retailCustomerProductInfo.querySelector(".cart-btn-wrapper");
+  const producIitemInner = document.querySelector(".product-item-inner");
+  if (producIitemInner) {
+    const cartBtn = producIitemInner.querySelector(".cart-btn");
+    const cartBtnWrapper = producIitemInner.querySelector(".cart-btn-wrapper");
     const cartBtnText = cartBtn.querySelector("p");
-    const counter = retailCustomerProductInfo.querySelector(".counter");
+    const counter = producIitemInner.querySelector(".counter");
     const currentCount = counter.querySelector(".current-count");
     const decBtn = counter.querySelector(".dec");
     const incBtn = counter.querySelector(".inc");
 
-    const specifications =
-      retailCustomerProductInfo.querySelector(".specifications");
+    const specifications = producIitemInner.querySelector(".specifications");
     const specificationsTabContentList =
       specifications.querySelectorAll(".tab-content");
 
@@ -25,17 +21,30 @@ export const retailCustomerProductInfo = () => {
         cartBtnWrapper.classList.remove("in-cart");
         cartBtnText.innerHTML = "в корзину";
         cartBtn.classList.remove("active");
+        if (cartBtnWrapper.className.includes("pre-order")) {
+          cartBtnText.innerHTML = "в предзаказ";
+        } else {
+          cartBtnText.innerHTML = "в корзину";
+        }
       } else {
         cartBtnWrapper.classList.add("in-cart");
-        cartBtnText.innerHTML = "в корзине";
         cartBtn.classList.add("active");
+        if (cartBtnWrapper.className.includes("pre-order")) {
+          cartBtnText.innerHTML = "в предзаказе";
+        } else {
+          cartBtnText.innerHTML = "в корзине";
+        }
       }
     });
     decBtn.addEventListener("click", () => {
       if (+currentCount.textContent === 1) {
         cartBtnWrapper.classList.remove("in-cart");
-        cartBtnText.innerHTML = "в корзину";
         cartBtn.classList.remove("active");
+        if (cartBtnWrapper.className.includes("pre-order")) {
+          cartBtnText.innerHTML = "в предзаказ";
+        } else {
+          cartBtnText.innerHTML = "в корзину";
+        }
         return;
       } else {
         currentCount.textContent = +currentCount.textContent - 1;

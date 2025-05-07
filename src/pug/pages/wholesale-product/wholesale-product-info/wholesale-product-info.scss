@@ -319,7 +319,7 @@
           @include descr-s;
           @include s(padding-left, 22);
           @include s(margin-top, 22);
-
+          color: var(--gray-light-color);
           position: relative;
           &.orange {
             &:before {
@@ -439,6 +439,52 @@
               @include s(width, 8);
               @include s(height, 16);
               transition: var(--trs-cubic-300);
+            }
+          }
+        }
+        .type {
+          display: flex;
+          align-items: center;
+          @include s(gap, 12);
+          text-transform: uppercase;
+          @include descr-s;
+          @include s(margin-top, 12);
+          svg {
+            @include s(width, 16);
+            @include s(height, 17);
+          }
+        }
+        .person-ask {
+          display: grid;
+          @include gtc(84, 1fr);
+          @include s(gap, 24);
+          @include s(margin-top, 22);
+
+          img {
+            @include s(width, 84);
+            @include s(height, 104);
+            @include borr(6);
+          }
+          .person-ask-content {
+            display: flex;
+            flex-direction: column;
+            .name {
+              @include body-m;
+            }
+            .post {
+              @include body-xs;
+              color: var(--gray-light-color);
+              @include s(margin-top, 4);
+            }
+            .btn {
+              @include s(margin-top, 14);
+              width: fit-content;
+              @include padding(0, 16);
+              @include s(height, 36);
+              p {
+                text-transform: uppercase;
+                @include descr-s;
+              }
             }
           }
         }
@@ -568,23 +614,6 @@
           }
           .hidden-content {
             display: none;
-            &.list-content {
-              grid-template-columns: repeat(2, 1fr);
-              @include s(gap, 48);
-              @media (max-width: $tab-sm) {
-                grid-template-columns: 1fr;
-                gap: 0;
-              }
-            }
-            &.text-content {
-              p {
-                @include body-m;
-                @include s(margin-top, 10);
-                &:first-child {
-                  margin-top: 0;
-                }
-              }
-            }
             &.active {
               &.list-content {
                 display: grid;
@@ -730,20 +759,46 @@
             color: var(--violet-color);
           }
         }
-      }
-      .btn.outline {
-        @include s(margin-top, 28);
-        display: flex;
-        align-items: center;
-        @include s(gap, 8);
-        @include padding(0, 16);
-        p {
+        .type {
+          display: flex;
+          align-items: center;
+          @include s(gap, 12);
           text-transform: uppercase;
           @include descr-s;
+          @include s(margin-top, 12);
+          @include s(padding-bottom, 12);
+          border-bottom: 1px solid var(--line-color);
+          svg {
+            @include s(width, 16);
+            @include s(height, 17);
+          }
         }
-        svg {
-          @include s(width, 18);
-          @include s(height, 18);
+      }
+      .person-ask {
+        display: grid;
+        @include gtc(84, 1fr);
+        @include s(gap, 24);
+        @include s(margin-top, 22);
+
+        img {
+          @include s(width, 84);
+          @include s(height, 104);
+          @include borr(6);
+        }
+        .person-ask-content {
+          display: flex;
+          flex-direction: column;
+          .name {
+            @include body-m;
+          }
+          .post {
+            @include body-xs;
+            color: var(--gray-light-color);
+            @include s(margin-top, 4);
+          }
+          .btn {
+            @include s(margin-top, 14);
+          }
         }
       }
     }
