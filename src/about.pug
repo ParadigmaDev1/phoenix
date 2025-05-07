@@ -1,7 +1,7 @@
 extends ./pug/templates/template.pug
 
 block head 
-  +head(["header", "content-hero", "about-features", "content-info", "about-values", "about-figures", "about-brands", "about-groups", "about-partner", "image-block", "about-geography", "alert-block", "about-map", "about-charity", "about-press", "about-gallery", "brands-list", "values-block", "crumbs", "selector", "footer-alert", "footer", "mobile-menu", "accordion-item", "catalog-menu", "map", "charity-modal", "figure-modal", "mobile-sidebar", "auth-modal", "recover-password-modal"])
+  +head(["header", "content-hero", "about-features", "content-info", "about-values", "about-figures", "about-brands", "about-groups", "about-partner", "image-block", "about-geography", "alert-block", "about-map", "about-charity", "about-press", "about-gallery", "brands-list", "values-block", "crumbs", "selector", "footer-alert", "footer", "mobile-menu", "accordion-item", "catalog-menu", "map", "charity-modal", "figure-modal", "mobile-sidebar", "auth-modal", "recover-password-modal", "feedback-modal", "call-modal", "video-modal"])
 block header 
   +header().dark
   +mobile-menu()
@@ -35,3 +35,6 @@ block modals
   +figure-modal()
   +auth-modal()
   +recover-password-modal()
+  +feedback-modal()
+  +call-modal()
+  +video-modal()

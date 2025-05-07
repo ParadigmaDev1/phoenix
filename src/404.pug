@@ -1,7 +1,7 @@
 extends ./pug/templates/template.pug
 
 block head 
-  +head(["header", "404", "selector", "footer", "mobile-menu", "accordion-item", "catalog-menu", "mobile-sidebar", "auth-modal", "recover-password-modal"])
+  +head(["header", "404", "selector", "footer", "mobile-menu", "accordion-item", "catalog-menu", "mobile-sidebar", "auth-modal", "recover-password-modal", "feedback-modal", "call-modal"])
 block header 
   +header().dark
   +mobile-menu()
@@ -14,3 +14,5 @@ block footer
 block modals 
   +auth-modal()
   +recover-password-modal()
+  +feedback-modal()
+  +call-modal()

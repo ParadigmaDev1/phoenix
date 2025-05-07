@@ -1,7 +1,7 @@
 extends ./pug/templates/template.pug
 
 block head 
-  +head(["header", "home-hero", "home-advards", "home-categories", "home-collections", "home-brands", "home-ideas", "home-partners", "brands-list", "product-swiper", "product-card", "category-card", "selector", "footer-alert", "footer", "mobile-menu", "accordion-item", "catalog-menu", "mobile-sidebar", "auth-modal", "recover-password-modal", "send-mail-modal"])
+  +head(["header", "home-hero", "home-advards", "home-categories", "home-collections", "home-brands", "home-ideas", "home-partners", "brands-list", "product-swiper", "product-card", "category-card", "selector", "footer-alert", "footer", "mobile-menu", "accordion-item", "catalog-menu", "mobile-sidebar", "auth-modal", "recover-password-modal", "send-mail-modal", "call-modal", "feedback-modal", "quick-view-modal"])
 block header 
   +header()
   +mobile-menu()
@@ -23,5 +23,8 @@ block footer
   +footer()
 block modals 
   +auth-modal()
+  +feedback-modal()
+  +call-modal()
   +recover-password-modal()
   +send-mail-modal()
+  +quick-view-modal()

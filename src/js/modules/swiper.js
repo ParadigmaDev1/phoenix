@@ -610,7 +610,7 @@ export const swiper = () => {
       },
     },
   });
-  const productInfoSwiperThumbs = new Swiper(".product-info-swiper-thumbs ", {
+  const productInfoSwiperThumbs = new Swiper(".product-info-swiper-thumbs", {
     modules: [Pagination, Navigation, Thumbs, Mousewheel],
     slidesPerView: 6.2,
     spaceBetween: 10,
@@ -626,6 +626,27 @@ export const swiper = () => {
     },
     thumbs: {
       swiper: productInfoSwiperThumbs,
+    },
+  });
+  const productInfoModalSwiperThumbs = new Swiper(
+    ".product-info-modal-swiper-thumbs",
+    {
+      modules: [Pagination, Navigation, Thumbs, Mousewheel],
+      slidesPerView: 6.2,
+      spaceBetween: 10,
+      direction: "vertical",
+      mousewheel: true,
+    }
+  );
+  const productInfoModalSwiper = new Swiper(".product-info-modal-swiper", {
+    modules: [Pagination, Navigation, Thumbs],
+    slidesPerView: 1,
+    spaceBetween: 269,
+    pagination: {
+      el: ".product-info-modal-pagination",
+    },
+    thumbs: {
+      swiper: productInfoModalSwiperThumbs,
     },
   });
 };

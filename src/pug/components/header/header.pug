@@ -86,12 +86,12 @@ mixin header(data = {})
                                     img(src="./img/icons/clock-dark.svg", alt="clock")
                                     p Время работы с 9.00 до 18.00
                             .btns 
-                                a(href="#").btn.outline.violet.m
+                                button(data-modal-target='call-modal').btn.outline.violet.m
                                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M5.5327 12.6822C9.2006 16.3501 12.0197 17.2708 15.3425 13.948C15.8625 13.414 16.3489 12.7393 15.6588 12.0494L12.9691 9.99255C12.1202 9.53585 11.7887 9.86066 11.3869 10.3089C9.9185 11.948 8.3343 11.404 7.27337 10.3089L5.69116 8.72672C4.59611 7.66568 4.05214 6.08131 5.69116 4.61318C6.1396 4.21142 6.46425 3.87978 6.00754 3.03098L3.95069 0.341257C3.26064 -0.348795 2.58593 0.13757 2.05195 0.657634C-1.27069 3.98027 -0.350126 6.79937 3.31778 10.4674L5.5327 12.6822Z" fill="#343176"/>
                                     </svg>
                                     p заказать звонок 
-                                a(href="#").btn.outline.violet.m
+                                button(data-modal-target='feedback-modal').btn.outline.violet.m
                                     p обратная связь
                             .socials-wrapper 
                                 p.title пишите нам в мессенджеры

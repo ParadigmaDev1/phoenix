@@ -2,7 +2,7 @@
 
 .career-team {
   @include s(margin-top, 116);
-  overflow: hidden;
+  // overflow: hidden;
   @media (max-width: $tab-sm) {
     @include s(margin-top, 64);
     @include s(padding-bottom, 20);
@@ -15,57 +15,17 @@
         text-align: left;
       }
     }
-    .person {
-      @include s(width, 204);
-      @include s(height, 273);
-      @include padding(51, 40, 41);
-      @include s(margin-top, 35);
-
-      margin-right: auto;
-      margin-left: auto;
-      @include borr(12);
-      background: var(--violet-color);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      @include s(gap, 49);
-      @media (max-width: $tab-sm) {
-        @include s(width, 72);
-        @include s(height, 95);
-        @include padding(15, 8);
-        @include s(gap, 15);
-      }
-      .image-wrapper {
-        @include s(width, 96);
-        @include s(height, 96);
-        @media (max-width: $tab-sm) {
-          @include s(width, 36);
-          @include s(height, 34);
-        }
-        img {
-          width: 100%;
-          height: 100%;
-        }
-      }
-      .title {
-        color: var(--white-color);
-        text-align: center;
-        @include descr-m;
-        text-transform: uppercase;
-        @media (max-width: $tab-sm) {
-          @include s(font-size, 7);
-          line-height: 96%;
-        }
-      }
-    }
   }
   .career-team-list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     @include s(gap, 253);
-    @include s(margin-top, 133);
+    @include s(padding-top, 441);
+    // @include s(height, 841);
+    position: relative;
     @media (max-width: $tab-sm) {
-      @include s(margin-top, -88);
+      // @include s(margin-top, -88);
+      @include s(padding-top, 36);
 
       @include s(gap, 80);
     }
@@ -75,7 +35,7 @@
       @include s(gap, 24);
       //   @include s(max-width, 756);
       width: fit-content;
-      @media (max-width: $tab-sm) {
+      @media (max-width: $tab) {
         @include s(gap, 4);
         grid-template-columns: repeat(2, 1fr);
       }
@@ -87,16 +47,71 @@
         @include s(height, 273);
         @include borr(12);
         overflow: hidden;
-        @media (max-width: $tab-sm) {
-          @include s(width, 58);
-          @include s(height, 77);
+        @media (max-width: $tab) {
           &:first-child {
             display: none;
           }
         }
+        @media (max-width: $tab-sm) {
+          @include s(width, 58);
+          @include s(height, 77);
+        }
         img {
           width: 100%;
           height: 100%;
+        }
+      }
+    }
+    .person-container {
+      position: absolute;
+      right: 0;
+      left: 0;
+      top: 0;
+      margin: auto;
+      height: 100%;
+      // @include s(height, 673);
+      bottom: 0;
+      .person {
+        @include s(width, 204);
+        @include s(height, 273);
+        @include padding(51, 40, 41);
+        @include s(margin-top, 35);
+
+        margin-right: auto;
+        margin-left: auto;
+        @include borr(12);
+        background: var(--violet-color);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @include s(gap, 49);
+        @media (max-width: $tab-sm) {
+          @include s(width, 72);
+          @include s(height, 95);
+          @include padding(15, 8);
+          @include s(gap, 15);
+        }
+        .image-wrapper {
+          @include s(width, 96);
+          @include s(height, 96);
+          @media (max-width: $tab-sm) {
+            @include s(width, 36);
+            @include s(height, 34);
+          }
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+        .title {
+          color: var(--white-color);
+          text-align: center;
+          @include descr-m;
+          text-transform: uppercase;
+          @media (max-width: $tab-sm) {
+            @include s(font-size, 7);
+            line-height: 96%;
+          }
         }
       }
     }

@@ -9,6 +9,8 @@ export const retailCustomerProductInfo = () => {
     const decBtn = counter.querySelector(".dec");
     const incBtn = counter.querySelector(".inc");
 
+    const orderFrom = counter.querySelector(".order-form");
+
     const specifications = producIitemInner.querySelector(".specifications");
     const specificationsTabContentList =
       specifications.querySelectorAll(".tab-content");

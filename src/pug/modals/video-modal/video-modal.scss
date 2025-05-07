@@ -1,0 +1,53 @@
+@use "src/scss/common/files/mixins" as *;
+
+.video-modal {
+  .close-modal-wrapper {
+    @media (max-width: $tab-sm) {
+      top: 0 !important;
+    }
+    .close-modal {
+      margin-top: calc(-40 / var(--screensize) * 100vw) !important;
+      margin-right: calc(-40 / var(--screensize) * 100vw) !important;
+      @media (max-width: $tab-sm) {
+        margin: 0 !important;
+        @include s(top, 0);
+        @include s(right, 0);
+      }
+    }
+  }
+  .modal-content-wrapper {
+    @include s(max-width, 1116);
+    // @include s(height, 632);
+    // @include borr(12);
+    @include padding(48);
+    max-height: 100%;
+    // padding: 0;
+    position: relative;
+    overflow: visible;
+    background: none;
+
+    @media (max-width: $tab-sm) {
+      @include padding(20);
+      height: auto;
+    }
+    .modal-content {
+      background: none;
+      @media (max-width: $tab-sm) {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .video-block {
+        @include s(max-width, 1116);
+        // @include s(height, 632);
+        height: 100%;
+
+        video {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+}

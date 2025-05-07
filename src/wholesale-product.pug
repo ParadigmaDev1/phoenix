@@ -1,7 +1,7 @@
 extends ./pug/templates/template.pug
 
 block head 
-    +head(["header", "wholesale-product-info", "wholesale-customer-product-watch", "wholesale-customer-product-addittional", "wholesale-product-alert", "fixed-order-form", "ask-manager-modal", "product-swiper", "product-card", "selector", "footer-alert", "footer", "mobile-menu", "crumbs", "accordion-item", "catalog-menu", "mobile-sidebar", "auth-modal", "recover-password-modal", "send-mail-modal"])
+    +head(["header", "wholesale-product-info", "wholesale-customer-product-watch", "wholesale-customer-product-addittional", "wholesale-product-alert", "fixed-order-form", "ask-manager-modal", "product-swiper", "product-card", "selector", "footer-alert", "footer", "mobile-menu", "crumbs", "accordion-item", "catalog-menu", "mobile-sidebar", "auth-modal", "recover-password-modal", "send-mail-modal", "feedback-modal", "call-modal", "quick-view-modal", "analogues-modal", "product-video-modal"])
 block header 
     +header().dark
     +mobile-menu()
@@ -21,3 +21,8 @@ block modals
     +recover-password-modal()
     +send-mail-modal()
     +ask-manager-modal()
+    +feedback-modal()
+    +call-modal()
+    +quick-view-modal()
+    +analogues-modal()
+    +product-video-modal()

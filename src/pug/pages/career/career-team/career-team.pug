@@ -2,10 +2,6 @@ mixin career-team()
     .career-team
         .career-team-inner.container 
             h3 Стань частью команды профессионалов
-            .person 
-                .image-wrapper 
-                    img(load='lazy' src="./img/career/team/person.svg", alt="person")
-                p.title тут можете <br>быть вы
         .career-team-list 
             .row 
                 .image-wrapper 
@@ -14,6 +10,12 @@ mixin career-team()
                     img(load='lazy' src="./img/career/team/2.jpg", alt="team")
                 .image-wrapper 
                     img(load='lazy' src="./img/career/team/3.jpg", alt="team")
+            .person-container
+                .sticky-block
+                    .person 
+                        .image-wrapper 
+                            img(load='lazy' src="./img/career/team/person.svg", alt="person")
+                        p.title тут можете <br>быть вы
             .row 
                 .image-wrapper 
                     img(load='lazy' src="./img/career/team/1.jpg", alt="team")

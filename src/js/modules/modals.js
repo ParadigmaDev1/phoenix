@@ -4,7 +4,10 @@ export const modals = () => {
   const scrollBarWidth = window.innerWidth - document.body.offsetWidth;
 
   const openModal = (modal) => {
-    modal.classList.add("active");
+    modal.style.display = "flex";
+    setTimeout(() => {
+      modal.classList.add("active");
+    }, 100);
     document.body.style.overflow = "hidden";
     document.body.style.paddingRight = `${scrollBarWidth}px`;
     if (header) header.style.paddingRight = `${scrollBarWidth}px`;
@@ -12,10 +15,20 @@ export const modals = () => {
 
   const closeModal = (modal) => {
     modal.classList.remove("active");
+    const video = modal.querySelector("video");
+    const btn = modal.querySelector(".play-btn");
+
+    if (video) {
+      video.pause();
+      if (btn) {
+        btn.style.opacity = "1";
+      }
+    }
     setTimeout(() => {
       document.body.style.overflow = originalOverflow;
       document.body.style.paddingRight = "0px";
       if (header) header.style.paddingRight = "0px";
+      modal.style.display = "none";
     }, 300);
   };
 
