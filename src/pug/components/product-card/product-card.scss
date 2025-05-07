@@ -362,3 +362,232 @@
     }
   }
 }
+
+.product-info-hor {
+  display: none;
+  @include s(padding-top, 28);
+  @include s(margin-left, 28);
+  justify-content: space-between;
+  border-top: 1px solid #DCDDE1;
+  width: 100%;
+  .left-side {
+    @include s(max-width, 418);
+    width: 100%;
+
+    .descr {
+      @include body-sb;
+      @include s(margin-top, 6);
+      @include s(margin-bottom, 12);
+      @media (max-width: $tab-sm) {
+        @include s(margin-top, 8);
+
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        text-overflow: ellipsis;
+      }
+    }
+
+    .top {
+      @include s(margin-bottom, 20);
+      display: flex;
+      @include s(gap, 28);
+      span {
+        color: var(--gray-light-color);
+        text-transform: uppercase;
+        @include descr-s;
+      }
+    }
+
+    .info {
+      p {
+        @include s(font-size, 14);
+        color: #A8A9B0;
+
+        span {
+          color: #333435;
+        }
+      }
+
+      @media (max-width: $tab-sm) {
+        display: none;
+      }
+    }
+  }
+
+
+  .right-side {
+    @include s(max-width, 204);
+    width: 100%;
+    .count {
+      position: relative;
+      @include descr-s;
+      text-transform: uppercase;
+      color: var(--gray-light-color);
+      @include s(padding-left, 22);
+      @media (max-width: $tab-sm) {
+        display: none;
+      }
+      &:before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -50%);
+        bottom: 0;
+        left: 0;
+        border-radius: 999px;
+        @include s(width, 12);
+        @include s(height, 12);
+      }
+      &.many {
+        &:before {
+          background: var(--green-color);
+        }
+      }
+      &.few {
+        &:before {
+          background: var(--warn-color);
+        }
+      }
+
+      &.no {
+        color: #E14142;
+        &:before {
+          background:#E14142;
+        }
+      }
+    }
+
+
+    .price-wrapper {
+      display: flex;
+      align-items: baseline;
+      @include s(margin-bottom, 12);
+      @include s(margin-top, 12);
+      @include s(gap, 12);
+      @media (max-width: $tab-sm) {
+        @include s(gap, 8);
+      }
+      .price {
+        @include body-xl;
+        @media (max-width: $tab-sm) {
+          @include body-sb;
+        }
+      }
+      .oldPrice {
+        font-weight: 600;
+        @include s(font-size, 14);
+        line-height: 130%;
+        color: #b2b3ba;
+        text-decoration: line-through;
+      }
+    }
+
+    .btn.primary {
+      width: 100%;
+    }
+    .counter {
+      width: 100%;
+      background: var(--back-color);
+      @include s(height, 44);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      @include borr(6);
+      @include padding(0, 10);
+      transition: var(--trs-cubic-600);
+      @media (max-width: $tab-sm) {
+        @include s(height, 36);
+      }
+      .btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include s(height, 28);
+        @include s(width, 28);
+        padding: 0;
+        &:hover {
+          svg {
+            path {
+              stroke: var(--violet-color);
+            }
+          }
+        }
+      }
+      .current-count {
+        display: flex;
+        align-items: center;
+        @include body-m;
+      }
+    }
+  }
+}
+
+.product-card-cart {
+  flex-direction: row;
+
+  .hidden-content {
+    display: none;
+  }
+  &.no {
+    .product-card-swiper-wrapper {
+      opacity: .4;
+    }
+
+    .left-side {
+      opacity: .4;
+    }
+
+    .price-wrapper {
+      opacity: .4;
+    }
+  }
+
+  .counter {
+    @include s(margin-top, 10);
+  }
+  .product-card-swiper-wrapper {
+    aspect-ratio: 1 / 1;
+    @include s(min-height, 212);
+    @include s(height, 212);
+
+    .product-card-features {
+      bottom: 0;
+      .badge {
+        top: unset;
+        left: unset;
+        @include s(right, 10);
+        @include s(bottom, 10);
+        z-index: 10;
+      }
+
+      .custom-checkbox-wrapper {
+        position: absolute;
+        @include s(top, 13);
+        @include s(left, 13);
+      }
+    }
+  }
+
+  .product-info-hor {
+    display: flex;
+
+    .price-wrapper {
+      margin-top: 0;
+      .price, .oldPrice {
+        @include body-sb;
+      }
+    }
+
+    .btn.outline {
+      border-color: var(--violet-color);
+      @include s(margin-top, 10);
+      width: 100%;
+      p {
+        color: var(--violet-color);
+        @include descr-s;
+      }
+    }
+  }
+}

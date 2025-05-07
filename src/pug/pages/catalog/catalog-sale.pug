@@ -1,7 +1,22 @@
-mixin catalog()
+mixin catalog-sale()
   section.catalog
     .container
-      h1 Товары для офиса
+      h1 Акция «3 по цене 2» на школьные товары
+
+      .catalog__sale 
+        .date 
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="0.5" y="0.5" width="31" height="31" rx="15.5" stroke="#343176"/>
+          <path d="M15.5 9L15.5 17L23.5 17" stroke="#343176"/>
+          </svg>
+          span 3 декабря — 16 декабря
+        img(src="./img/catalog/sale.png", alt="")
+        .text 
+          p Приобретайте товары из подборки выгодно — 3 по цене 2!
+          p Для этого выбирайте 3 штуки одного и того же артикула из подборки (или любое количество, кратное трём), а оплачивайте только 2 из 3.
+          p На акционных товарах вы найдёте соответствующую пометку.
+
+
       .catalog__inner
         .catalog__sidebar.accordion
           .accordion-item.nested 

@@ -93,6 +93,7 @@
   align-items: center;
   @include s(margin-bottom, 28);
   position: relative;
+  z-index: 9;
   .filter-btn {
     color: #fff;
     text-transform: uppercase;
@@ -159,6 +160,18 @@
       @include s(width, 36);
       @include s(height, 36);
     }
+
+    &.active {
+      svg > rect {
+        fill: var(--violet-color);
+        stroke: var(--violet-color);
+      }
+
+      svg g rect {
+        stroke: #fff;
+      }
+    }
+
   }
 }
 
@@ -167,6 +180,26 @@
   grid-template-columns: 1fr 1fr 1fr;
   @include s(row-gap, 80);
   @include s(column-gap, 24);
+
+  &.horizontal {
+    grid-template-columns: 1fr;
+    @include s(row-gap, 36);
+    .product-card {
+      flex-direction: row;
+
+      .product-card-swiper-wrapper {
+        aspect-ratio: 1 / 1;
+      }
+
+      .product-info {
+        display: none;
+      }
+
+      .product-info-hor {
+        display: flex;
+      }
+    }
+  }
 }
 
 .catalog {
@@ -427,4 +460,97 @@
       color: #333435;
     }
   }
+}
+
+.colors-pick-wrapper {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  @include s(gap, 6);
+  width: 100%;
+
+  .color-picker {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+   
+  }
+}
+
+.catalog__sale { 
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr;
+  @include s(gap, 25);
+  @include s(padding-bottom, 48);
+  border-bottom: 1px solid #DCDDE1;
+  @include s(margin-bottom, 36);
+
+  img {
+    width: 100%;
+    @include s(height, 178);
+    object-fit: cover;
+  }
+
+  .date {
+    color: var(--violet-color);
+    @include descr-m;
+    display: flex;
+    align-items: center;
+    align-self: flex-start;
+    @include s(gap, 16);
+    text-transform: uppercase;
+    span {
+      color: var(--violet-color);
+      text-transform: uppercase
+    }
+
+    svg {
+      @include s(width, 32);
+      @include s(height, 32);
+    }
+  }
+
+  .text {
+    p {
+      @include body-m;
+      margin-bottom: 1lh;
+    }
+  }
+}
+
+.catalog__favorites {
+  display: flex;
+  @include s(gap, 10);
+  @include s(padding-bottom, 48);
+  @include s(margin-bottom, 28);
+  border-bottom: 1px solid #DCDDE1;
+  
+  a {
+    border: 1px solid #DCDDE1;
+    @include body-m;
+    display: flex;
+    align-items: center;
+    @include padding(10, 10, 10, 20);
+    @include s(border-radius, 6);
+    @include s(gap, 10);
+
+    span {
+      @include s(width, 20);
+      @include s(height, 20);
+      background: var(--violet-color);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      border-radius: 50%;
+      @include s(font-size, 10);
+    }
+
+    &.active {
+      color: var(--violet-color);
+      border-color: var(--violet-color);
+    }
+  }
+
+
 }

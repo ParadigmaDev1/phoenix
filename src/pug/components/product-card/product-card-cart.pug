@@ -1,7 +1,10 @@
-mixin product-card(data)
-    a(href='#').product-card&attributes(attributes)
+mixin product-card-cart(data)
+    a(href='#').product-card.product-card-cart&attributes(attributes)
         .product-card-swiper-wrapper 
             .product-card-features 
+                label.custom-checkbox-wrapper
+                    input(type="checkbox").custom-checkbox
+                    p
                 if data.badgeTitle
                     .badge(class=data.badgeClass) #{data.badgeTitle}
                 .features-list 
@@ -26,7 +29,8 @@ mixin product-card(data)
             .hidden-content 
                 button.btn.outline-fill.violet.m быстрый просмотр
                 .pagination
-        .product-info 
+
+        .product-info(style="display:none") 
             .main-info
                 .top 
                     .left-block 
@@ -60,6 +64,8 @@ mixin product-card(data)
                     <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M1 13L7 7L0.999999 1" stroke="white" stroke-linecap="square" stroke-linejoin="round"/>
                     </svg>
+
+
         .product-info-hor 
             .left-side 
                 .top 
@@ -80,23 +86,41 @@ mixin product-card(data)
                     p Белизна CIE:&nbsp;
                         span нет
             .right-side
-                if data.count === 'many'
-                    p.count.many Много
-                else 
-                    p.count.few Мало
+                .right-side
                 .price-wrapper 
                     p.price #{data.price}
                     p.oldPrice #{data.oldPrice}
-                .counter
-                    button.btn.clear.dec
-                        <svg width="15" height="1" viewBox="0 0 15 1" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M0.5 0.5H14.5" stroke="#333435"/>
-                        </svg>
-                    .current-count 1
-                    button.btn.clear.inc 
-                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M0.506836 7.5H14.5068" stroke="#333435"/>
-                            <path d="M7.50684 14.5L7.50684 0.5" stroke="#333435"/>
-                        </svg>
-                button.btn.primary.m.cart-btn 
-                    p в корзину
+                
+                if data.count === 'many'
+                    p.count.many Много
+                    .counter
+                        button.btn.clear.dec
+                            <svg width="15" height="1" viewBox="0 0 15 1" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.5 0.5H14.5" stroke="#333435"/>
+                            </svg>
+                        .current-count 1
+                        button.btn.clear.inc 
+                            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.506836 7.5H14.5068" stroke="#333435"/>
+                                <path d="M7.50684 14.5L7.50684 0.5" stroke="#333435"/>
+                            </svg>
+                else if data.count === 'no'
+                    p.count.no Нет в наличии
+                    button.btn.outline.account-btn.l
+                        p выберите аналог
+                else 
+                    p.count.few Мало
+                    .counter
+                        button.btn.clear.dec
+                            <svg width="15" height="1" viewBox="0 0 15 1" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.5 0.5H14.5" stroke="#333435"/>
+                            </svg>
+                        .current-count 1
+                        button.btn.clear.inc 
+                            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.506836 7.5H14.5068" stroke="#333435"/>
+                                <path d="M7.50684 14.5L7.50684 0.5" stroke="#333435"/>
+                            </svg>
+                
+        
+                
