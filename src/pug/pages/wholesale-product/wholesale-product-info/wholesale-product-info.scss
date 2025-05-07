@@ -741,6 +741,9 @@
         }
         .btn.primary {
           width: 100%;
+          &.active {
+            background: #4db6a5;
+          }
         }
         .total {
           @include s(margin-top, 12);
