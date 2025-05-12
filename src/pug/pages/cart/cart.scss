@@ -37,21 +37,35 @@
 			color: var(--gray-color);
 		}
 	}
+
+	&.sticky {
+		position: fixed;
+		@include s(left, 48);
+		@include s(right, 48);
+		@include s(bottom, 12);
+		@include s(border-radius, 12);
+		@include padding(12, 24, 12, 24);
+		background: #FFFFFF;
+		box-shadow: 0px 4px 28px rgba(0, 0, 0, 0.1);
+		display: none;
+
+	}
 }
 
 .cart__inner {
 	display: grid;
 	grid-template-columns: calc(1002 / var(--screensize) * 100vw) 1fr;
 	@include s(gap, 48);
-	h1 {
-		@include h1;
-		@include s(margin-bottom, 28);
-	}
 }
 
 .cart-page {
 	@include s(margin-top, 28);
 	@include s(margin-bottom, 116);
+
+	h1 {
+		@include h1;
+		@include s(margin-bottom, 28);
+	}
 }
 
 .cart__total {
@@ -66,10 +80,34 @@
 	position: sticky;
 	@include s(top, 120);
 
+
+	.info {
+		.info__row {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			@include s(padding-top, 6);
+			@include s(padding-bottom, 6);
+			border-top: 1px solid #DCDDE1;
+			&:last-child {
+				border-bottom: 1px solid #DCDDE1;
+			}
+			p, span {
+				@include body-xs;
+				font-weight: 400;
+			}
+
+			p {
+				color: #A8A9B0;
+			}
+		}
+	}
+
 	.top {
 		display: flex;
 		justify-content: space-between;
 		align-items: flex-end;
+		flex-wrap: wrap;
 		span {
 			color: #DCDDE1;
 			@include body-m;
@@ -77,6 +115,18 @@
 
 		p {
 			@include h4;
+		}
+
+		.nds {
+			@include body-xs;
+			color: #A8A9B0;
+			@include s(margin-top, 2);
+			flex: 1;
+			width: 100%;
+			flex-shrink: 0;
+			font-weight: 400;
+			margin-right: 10px;
+			white-space: nowrap;
 		}
 	}
 
@@ -117,7 +167,12 @@
 	}
 
 	.cart__total__promocode {
-		@include s(margin-bottom, 24);
+		span {
+			@include body-xs;
+			color: #A8A9B0;
+			font-weight: 400;
+		}
+	
 	}
 
 	.btn {
@@ -209,4 +264,167 @@
 			background: #9B9AB2;
 		}
 	}
+}
+
+
+.cart__list {
+	@include s(margin-bottom, 36);
+	display: flex;
+	@include s(gap, 24);
+}
+.cart__list__item {
+	@include padding(28, 28, 28, 28);
+	@include s(border-radius, 12);
+	border: 1px solid var(--violet-color);
+	@include s(max-width, 318);
+	width: 100%;
+
+	h5 {
+		@include descr-m;
+		color: var(--violet-color);
+		text-transform: uppercase;
+	}
+
+	.top {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		@include s(margin-bottom, 10);
+
+		button {
+			padding: 0;
+			svg {
+				@include s(width, 20);
+				@include s(height, 20);
+			}
+		}
+	}
+}
+
+.cart__list__item__row {
+	@include body-xs;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	@include s(margin-bottom, 6);
+
+	p {
+		color: #A8A9B0;
+		font-weight: 400;
+	}
+}
+
+.cart__list__item.add-new-cart {
+	@include s(border-radius, 12);
+	background: #F1F0FA;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	@include s(gap, 12);
+	max-width: fit-content;
+
+	svg {
+		@include s(width, 48);
+		@include s(height, 46);
+	}
+}
+
+.cart-opt__actions__buttons {
+	display: flex;
+	align-items: center;
+	@include s(gap, 48);
+
+	.remove-all {
+		padding: 0;
+		display: flex;
+		align-items: center;
+		@include s(gap, 8);
+		@include body-m;
+		color: var(--violet-color);
+		svg {
+			@include s(width, 28);
+			@include s(height, 28);
+		}
+
+		span {
+			color: var(--violet-color);
+			@include body-m;
+		}
+	}
+}
+
+.cart-opt__actions {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	@include s(margin-bottom, 28);
+}
+
+.cart-opt__actions__icons {
+	display: flex;
+	@include s(gap, 6);
+	a {
+		display: block;
+		svg {
+			@include s(width, 36);
+			@include s(height, 36);
+		}
+	}
+}
+
+.catalog__pagination {
+  display: flex;
+  justify-content: space-between;
+  @include s(margin-top, 48);
+
+  .catalog__pagination__arrow {
+    display: block;
+    svg {
+      @include s(width, 46);
+      @include s(height, 46);
+    }
+  }
+
+  nav {
+    display: flex;
+    @include s(gap, 6);
+    a, span {
+      @include s(font-size, 14);
+      line-height: 128%;
+      font-weight: 500;
+      @include s(width, 48);
+      @include s(height, 48);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid #DCDDE1;
+      @include s(border-radius, 6);
+
+      &.active {
+        border-color: #343176;
+        color: #343176;
+      }
+    }
+  }
+}
+
+.catalog__content__bottom__more {
+  text-transform: uppercase;
+  @include padding(10, 24, 10, 24);
+  display: flex;
+  align-items: center;
+  @include s(gap, 8);
+  @include s(margin-top, 28);
+  margin-left: auto;
+  margin-right: auto;
+
+  svg {
+    @include s(width, 28);
+    @include s(height, 28);
+  }
+  p {
+    @include s(font-size, 14);
+  }
 }

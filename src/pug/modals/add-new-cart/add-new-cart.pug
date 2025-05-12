@@ -1,0 +1,20 @@
+mixin add-new-cart()
+    .add-new-cart.modal
+        .modal-content-wrapper
+            .close-modal-wrapper
+                button.btn.close-modal 
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5.05026 14.9497L14.9498 5.05025" stroke="#343176"/>
+                        <path d="M14.9498 14.9497L5.05026 5.05025" stroke="#343176"/>
+                    </svg>
+            .modal-content
+                form.form
+                    p.title добавить новую корзину
+                    .inputs 
+                        .input-wrapper
+                            p Название корзины
+                            .input__row.password-input-row.gray
+                                input(type="text" placeholder="Например: Основная").custom-input.input.form__input-value.input__valid-address
+                                .input__item-small
+                    button.btn.primary.m.submit-btn
+                        p Сохранить

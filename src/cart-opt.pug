@@ -1,0 +1,17 @@
+extends ./pug/templates/template.pug
+
+block head 
+  +head(["header", "image-block", "crumbs", "cart", "cart-opt", "product-swiper", "selector", "footer-alert", "footer", "mobile-menu", "accordion-item", "catalog-menu", "product-card", "product-card-cart", "add-product-by-article", "add-new-cart"])
+block header 
+  +header().dark
+  +mobile-menu()
+  +catalog-menu()
+block content
+  +crumbs({items: [{title: 'Корзина', href: '#'}]})
+  +cart-opt()
+block footer 
+  +footer()
+block modals
+  +add-product-by-article()
+  +add-new-cart()
+  

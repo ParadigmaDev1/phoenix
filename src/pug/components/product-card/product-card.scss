@@ -446,6 +446,15 @@
     align-items: flex-start;
     @include s(row-gap, 10);
   }
+
+  .remove-btn {
+    padding: 0;
+    margin-left: auto;
+    svg {
+      @include s(width, 20);
+      @include s(height, 20);
+    }
+  }
   .left-side {
     @include s(max-width, 418);
     width: 100%;
@@ -533,6 +542,31 @@
         }
       }
     }
+
+    .error-msg {
+      color: #E14142;
+      background: #FFE8E8;
+      @include body-xs;
+      @include padding(8, 12, 8, 12);
+      @include s(margin-top, 4);
+      @include s(border-radius, 6);
+    }
+
+    .nds {
+      @include s(margin-top, 10);
+      p {
+        @include body-xl;
+        font-weight: 400;
+      }
+
+      span {
+        @include body-xs;
+        color: #A8A9B0;
+        font-weight: 400;
+        display: block;
+      }
+    }
+
 
     .price-wrapper {
       display: flex;
