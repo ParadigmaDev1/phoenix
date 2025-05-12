@@ -90,6 +90,15 @@ mixin product-card-cart(data)
                 .price-wrapper 
                     p.price #{data.price}
                     p.oldPrice #{data.oldPrice}
+                    button(type="button").remove-btn
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16.3025 2.99548L15.5242 14.6703C15.4367 15.9835 14.3461 17.0042 13.03 17.0043H6.96948C5.7356 17.0042 4.69943 16.1076 4.50269 14.9135L4.47534 14.6703L3.69702 2.99548H16.3025Z" stroke="#A8A9B0"/>
+                            <path d="M1.21484 2.97907L18.9648 2.97907" stroke="#A8A9B0"/>
+                            <line x1="10.0315" y1="7.0816" x2="10.0315" y2="12.9185" stroke="#A8A9B0"/>
+                            <line x1="12.6885" y1="7.08154" x2="12.6885" y2="12.9184" stroke="#A8A9B0"/>
+                            <line x1="7.42578" y1="7.08154" x2="7.42578" y2="12.9184" stroke="#A8A9B0"/>
+                        </svg>
+ 
                 
                 if data.count === 'many'
                     p.count.many Много
@@ -104,6 +113,10 @@ mixin product-card-cart(data)
                                 <path d="M0.506836 7.5H14.5068" stroke="#333435"/>
                                 <path d="M7.50684 14.5L7.50684 0.5" stroke="#333435"/>
                             </svg>
+                    .nds
+                        p 62 000 ₽
+                        span В том числе НДС 20%
+                        span 1 короб, 1 мини упаковка и 5 шт
                 else if data.count === 'no'
                     p.count.no Нет в наличии
                     button.btn.outline.account-btn.l
@@ -115,12 +128,19 @@ mixin product-card-cart(data)
                             <svg width="15" height="1" viewBox="0 0 15 1" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M0.5 0.5H14.5" stroke="#333435"/>
                             </svg>
-                        .current-count 1
+                        .current-count 62
                         button.btn.clear.inc 
                             <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M0.506836 7.5H14.5068" stroke="#333435"/>
                                 <path d="M7.50684 14.5L7.50684 0.5" stroke="#333435"/>
                             </svg>
+                    if data.errorMsg 
+                        button.btn.outline.account-btn.l
+                            p выберите аналог
+                        p.error-msg На складе не достаточно товаров! Измените кол-во и/или замените аналогом
+                    .nds
+                        p 1 100 ₽
+                        span В том числе НДС 20%
                 
         
                 
