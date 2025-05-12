@@ -704,6 +704,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
+
             svg {
               @include s(width, 14);
               @include s(height, 14);

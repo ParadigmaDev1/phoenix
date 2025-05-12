@@ -31,6 +31,8 @@
       @include padding(20);
     }
     .modal-content {
+      overflow: hidden;
+
       .title {
         @include h2;
         text-transform: uppercase;
@@ -41,6 +43,7 @@
         grid-template-columns: repeat(4, 1fr);
         @include s(column-gap, 24);
         @include s(row-gap, 64);
+        overflow: hidden;
         @media (max-width: $tab-sm) {
           @include s(margin-top, 24);
 
