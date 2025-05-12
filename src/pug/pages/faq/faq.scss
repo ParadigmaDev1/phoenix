@@ -67,7 +67,7 @@
           }
 
           &.active {
-            .accordion-title {
+            & > .accordion-title {
               svg {
                 transform: rotate(180deg);
               }
