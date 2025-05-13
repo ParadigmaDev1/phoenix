@@ -216,6 +216,12 @@
             textarea {
               @include s(height, 138);
             }
+            .second-textarea {
+              @include s(height, 48);
+              @media (max-width: $tab-sm) {
+                @include s(height, 84);
+              }
+            }
           }
           .btn {
             @include padding(0, 48);

@@ -16,6 +16,20 @@ export const swiper = () => {
   if (homeHeroObj) {
     const total = homeHeroObj.querySelector(".total");
     const current = homeHeroObj.querySelector(".current");
+    const homeHeroDescrSwiper = new Swiper(".home-hero-descr-swiper", {
+      modules: [EffectFade, Controller],
+      slidesPerView: 1,
+      spaceBetween: 0,
+      allowTouchMove: false,
+      effect: "fade",
+    });
+    const homeHeroСontentSwiper = new Swiper(".home-hero-content-swiper", {
+      modules: [EffectFade, Controller],
+      slidesPerView: 1,
+      spaceBetween: 0,
+      allowTouchMove: false,
+      effect: "fade",
+    });
     const homeHeroSwiper = new Swiper(".home-hero-swiper", {
       modules: [
         Pagination,
@@ -29,6 +43,7 @@ export const swiper = () => {
       spaceBetween: 0,
       allowTouchMove: false,
       speed: 1500,
+      loop: true,
       autoplay: {
         delay: 2000,
         disableOnInteraction: false,
@@ -53,10 +68,12 @@ export const swiper = () => {
           setInitialTransforms(swiper);
         },
         slideChange(swiper) {
+          homeHeroDescrSwiper.slideTo(swiper.realIndex);
+          homeHeroСontentSwiper.slideTo(swiper.realIndex);
           current.innerHTML =
-            swiper.activeIndex + 1 < 10
-              ? `0${swiper.activeIndex + 1}`
-              : swiper.activeIndex + 1;
+            swiper.realIndex + 1 < 10
+              ? `0${swiper.realIndex + 1}`
+              : swiper.realIndex + 1;
           setInitialTransforms(swiper);
         },
         slideChangeTransitionStart(swiper) {
@@ -68,24 +85,10 @@ export const swiper = () => {
       },
     });
 
-    const homeHeroСontentSwiper = new Swiper(".home-hero-content-swiper", {
-      modules: [EffectFade, Controller],
-      slidesPerView: 1,
-      spaceBetween: 0,
-      allowTouchMove: false,
-      effect: "fade",
-    });
-    const homeHeroDescrSwiper = new Swiper(".home-hero-descr-swiper", {
-      modules: [EffectFade, Controller],
-      slidesPerView: 1,
-      spaceBetween: 0,
-      allowTouchMove: false,
-      effect: "fade",
-    });
-    homeHeroSwiper.controller.control = [
-      homeHeroСontentSwiper,
-      homeHeroDescrSwiper,
-    ];
+    // homeHeroSwiper.controller.control = [
+    //   // homeHeroСontentSwiper,
+    //   homeHeroDescrSwiper,
+    // ];
   }
   const productsSwiper = new Swiper(".products-swiper", {
     modules: [Pagination, Navigation],

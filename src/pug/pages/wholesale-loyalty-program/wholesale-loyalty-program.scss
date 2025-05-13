@@ -179,7 +179,7 @@
                   &.chash-back {
                     display: none;
                     @media (max-width: $tab-sm) {
-                      display: flex;
+                      display: grid;
                     }
                     .value,
                     .label {
