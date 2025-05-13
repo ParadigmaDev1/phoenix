@@ -323,12 +323,19 @@ export const swiper = () => {
   });
 
   const productSwiper = new Swiper(".product-swiper", {
-    modules: [Pagination, EffectFade],
+    modules: [Pagination, EffectFade, Autoplay],
     slidesPerView: 1,
     spaceBetween: 0,
     allowTouchMove: false,
     nested: true,
     effect: "fade",
+    autoplay: {
+      delay: 2000,
+      disableOnInteraction: false,
+    },
+    // fadeEffect: {
+    //   crossFade: true, // помогает с анимацией
+    // },
     pagination: {
       el: ".pagination",
     },
@@ -374,6 +381,14 @@ export const swiper = () => {
             );
           });
         });
+      },
+    },
+    breakpoints: {
+      767: {
+        autoplay: {
+          delay: 2000000,
+          disableOnInteraction: false,
+        },
       },
     },
   });
