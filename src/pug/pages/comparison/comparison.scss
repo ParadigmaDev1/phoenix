@@ -1,0 +1,228 @@
+@use "src/scss/common/files/mixins" as *;
+
+.comparison-page {
+  overflow: hidden;
+  @include s(margin-bottom, 96);
+  @media (max-width: $tab-sm) {
+    margin-bottom: 0;
+  }
+  .comparison-inner {
+    @include s(margin-top, 28);
+    @media (max-width: $tab-sm) {
+      @include s(margin-top, 12);
+    }
+    .top {
+      display: flex;
+      justify-content: space-between;
+      @media (max-width: $tab-sm) {
+        flex-direction: column;
+        @include s(gap, 20);
+        align-items: flex-start;
+      }
+      h1 {
+        @include h3;
+      }
+      .btn {
+        display: flex;
+        align-items: center;
+        @include s(gap, 21);
+        @media (max-width: $tab-sm) {
+          @include s(gap, 12);
+        }
+        svg {
+          @include s(width, 14);
+          @include s(height, 14);
+          @media (max-width: $tab-sm) {
+            @include s(width, 12);
+            @include s(height, 12);
+          }
+        }
+        p {
+          text-transform: uppercase;
+          @include descr-m;
+          color: var(--violet-color);
+          @media (max-width: $tab-sm) {
+            @include descr-s;
+          }
+        }
+      }
+    }
+    .tabs-wrapper {
+      @include s(margin-top, 28);
+      .tabs {
+        display: flex;
+        align-items: center;
+        @include s(gap, 10);
+        overflow: auto;
+        @include padding(0, 20);
+        @include s(margin-left, -20);
+        @include s(margin-right, -20);
+        .tab {
+          display: flex;
+          align-items: center;
+          @include s(gap, 10);
+          white-space: nowrap;
+          span {
+            @include s(min-width, 20);
+            @include s(min-height, 20);
+            @include s(max-width, 20);
+            @include s(max-height, 20);
+            background: var(--violet-color);
+            color: var(--white-color);
+            border-radius: 999px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            @include s(font-size, 10);
+            font-weight: 400;
+            line-height: 120%;
+          }
+        }
+      }
+      .tab-content {
+        .comparison-products-swiper {
+          @include s(margin-top, 24);
+          position: relative;
+          .navigation {
+            position: absolute;
+            @include s(top, 166);
+            @include s(left, -24);
+            @include s(right, -24);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            z-index: 2;
+            pointer-events: none;
+            .btn {
+              pointer-events: all;
+            }
+          }
+          .swiper-slide {
+            height: auto;
+            opacity: 0;
+            transition: opacity var(--trs-cubic-300);
+            &.visible-slide {
+              opacity: 1;
+            }
+            .product-card {
+              height: 100%;
+            }
+          }
+          .comparison-products-pagination {
+            position: relative;
+            @include s(margin-top, 16);
+            display: none;
+            @media (max-width: $tab-sm) {
+              display: flex;
+            }
+            .swiper-pagination-progressbar-fill {
+              background: var(--gray-color);
+            }
+          }
+        }
+        .comparison-type {
+          @include s(margin-top, 36);
+          @include s(margin-bottom, 36);
+          @include s(padding-top, 16);
+          @include s(padding-bottom, 16);
+          border-top: 1px solid var(--line-color);
+          border-bottom: 1px solid var(--line-color);
+          .switch-wrapper {
+            cursor: pointer;
+            label {
+              cursor: pointer;
+
+              text-transform: uppercase;
+              @include descr-m;
+              @media (max-width: $tab-sm) {
+                @include descr-s;
+              }
+            }
+          }
+        }
+        .accordion {
+          .accordion-item {
+            border-bottom: 1px solid var(--line-color);
+            &.active {
+              .icon {
+                svg {
+                  transform: rotate(180deg);
+                }
+              }
+            }
+            &:first-child {
+              .accordion-title {
+                padding-top: 0;
+              }
+            }
+            .accordion-title {
+              @include s(padding-top, 28);
+              @include s(padding-bottom, 28);
+              .title {
+                text-align: left;
+              }
+              .icon {
+                @include s(width, 28);
+                @include s(height, 28);
+                @include borr(6);
+                border: 1px solid var(--line-color);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                svg {
+                  @include s(width, 12);
+                  @include s(height, 6);
+                }
+              }
+            }
+            .accordion-body {
+              display: flex;
+              flex-direction: column;
+              @include s(gap, 24);
+              padding-left: 0;
+              .comparison-specification-swiper-wrapper {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                @include s(gap, 8);
+                .title {
+                  @include body-sb;
+                  color: var(--gray-light-color);
+                }
+                .comparison-specification-swiper {
+                  position: relative;
+                  width: 100%;
+                  @include s(height, 20);
+                  .swiper-wrapper {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                  }
+                  .swiper-slide {
+                    @include body-m;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.comparison-watch {
+  background: var(--back-color);
+  @include s(padding-bottom, 135);
+  @media (max-width: $tab-sm) {
+    background: var(--white-color);
+    @include s(padding-bottom, 64);
+  }
+  .product-card {
+    .product-card-swiper-wrapper {
+      background: var(--white-color);
+      @media (max-width: $tab-sm) {
+        background: var(--back-color);
+      }
+    }
+  }
+}

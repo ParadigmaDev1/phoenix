@@ -37,6 +37,7 @@ export const swiper = () => {
       on: {
         init(swiper) {
           console.log(swiper);
+
           total.innerHTML =
             swiper.slides.length < 10
               ? `0${swiper.slides.length}`
@@ -96,11 +97,12 @@ export const swiper = () => {
         updateVisibleSlides(this);
 
         const total = swiper.el.querySelector(".total");
-
-        total.innerHTML =
-          swiper.slides.length < 10
-            ? `0${swiper.slides.length}`
-            : swiper.slides.length;
+        if (total) {
+          total.innerHTML =
+            swiper.slides.length < 10
+              ? `0${swiper.slides.length}`
+              : swiper.slides.length;
+        }
       },
 
       slideChange: function () {
@@ -111,6 +113,147 @@ export const swiper = () => {
       },
     },
   });
+
+  const comparisonPage = document.querySelector(".comparison-page");
+  if (comparisonPage) {
+    const tabContentList = comparisonPage.querySelectorAll(".tab-content");
+    tabContentList.forEach((content) => {
+      const comparisonProductsSwipers = content.querySelector(
+        ".comparison-products-swiper"
+      );
+      const comparisonFixedSwipers = content.querySelector(
+        ".comparison-fixed-swiper"
+      );
+      const comparisonProductsSwiper = new Swiper(comparisonProductsSwipers, {
+        modules: [Pagination, Navigation, Controller],
+        slidesPerView: 4,
+        spaceBetween: 24,
+        navigation: {
+          prevEl: ".products-prev",
+          nextEl: ".products-next",
+        },
+        pagination: {
+          el: ".comparison-products-pagination",
+          type: "progressbar",
+        },
+        breakpoints: {
+          0: {
+            slidesPerView: 2.1,
+            spaceBetween: 20,
+          },
+          767: {
+            slidesPerView: 4,
+            spaceBetween: 24,
+          },
+        },
+        on: {
+          init(swiper) {
+            updateVisibleSlides(this);
+
+            const total = swiper.el.querySelector(".total");
+            if (total) {
+              total.innerHTML =
+                swiper.slides.length < 10
+                  ? `0${swiper.slides.length}`
+                  : swiper.slides.length;
+            }
+          },
+
+          slideChange: function () {
+            updateVisibleSlides(this);
+          },
+          resize: function () {
+            updateVisibleSlides(this);
+          },
+        },
+      });
+      const comparisonFixedSwiper = new Swiper(comparisonFixedSwipers, {
+        modules: [Pagination, Navigation, Controller],
+        slidesPerView: 4,
+        spaceBetween: 24,
+        navigation: {
+          prevEl: ".comparison-fixed-prev",
+          nextEl: ".comparison-fixed-next",
+        },
+        breakpoints: {
+          0: {
+            slidesPerView: 2.1,
+            spaceBetween: 20,
+          },
+          767: {
+            slidesPerView: 4,
+            spaceBetween: 24,
+          },
+        },
+        on: {
+          init: function () {
+            updateVisibleSlides(this);
+          },
+          slideChange: function () {
+            updateVisibleSlides(this);
+          },
+          resize: function () {
+            updateVisibleSlides(this);
+          },
+        },
+      });
+      let comparisonSpecificationSwipersList = [];
+      const comparisonSpecificationSwipers = content.querySelectorAll(
+        ".comparison-specification-swiper"
+      );
+      if (comparisonSpecificationSwipers.length) {
+        comparisonSpecificationSwipers.forEach((swiper) => {
+          const swiperObj = new Swiper(swiper, {
+            modules: [Controller],
+            slidesPerView: 4,
+            spaceBetween: 24,
+            allowTouchMove: false,
+
+            breakpoints: {
+              0: {
+                slidesPerView: 2.2,
+                spaceBetween: 20,
+              },
+              767: {
+                slidesPerView: 4,
+                spaceBetween: 24,
+              },
+            },
+            on: {
+              init(swiper) {
+                updateVisibleSlides(this);
+
+                const total = swiper.el.querySelector(".total");
+                if (total) {
+                  total.innerHTML =
+                    swiper.slides.length < 10
+                      ? `0${swiper.slides.length}`
+                      : swiper.slides.length;
+                }
+              },
+
+              slideChange: function () {
+                updateVisibleSlides(this);
+              },
+              resize: function () {
+                updateVisibleSlides(this);
+              },
+            },
+          });
+          comparisonSpecificationSwipersList.push(swiperObj);
+        });
+        comparisonProductsSwiper.controller.control = [
+          ...comparisonSpecificationSwipersList,
+          comparisonFixedSwiper,
+        ];
+        comparisonFixedSwiper.controller.control = [
+          ...comparisonSpecificationSwipersList,
+          comparisonProductsSwiper,
+        ];
+      }
+    });
+  }
+
   const homeCollectionsSwiper = new Swiper(".home-collections-swiper", {
     modules: [Navigation, Pagination],
     slidesPerView: 4,

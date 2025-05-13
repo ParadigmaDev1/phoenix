@@ -163,6 +163,7 @@
           @include s(right, 4);
           justify-content: space-between;
         }
+
         .btn {
           @include s(width, 36);
           @include s(height, 36);
@@ -185,6 +186,12 @@
           svg {
             @include s(width, 19);
             @include s(height, 19);
+          }
+        }
+        .remove-btn {
+          svg {
+            @include s(width, 14);
+            @include s(height, 14);
           }
         }
       }
@@ -393,7 +400,7 @@
         @include borr(6);
         @include padding(0, 10);
         position: absolute;
-        transition: var(--trs-cubic-600);
+        transition: var(--trs-cubic-300);
         @media (max-width: $tab-sm) {
           @include s(height, 36);
         }
@@ -682,8 +689,8 @@
     }
 
     .error-msg {
-      color: #E14142;
-      background: #FFE8E8;
+      color: #e14142;
+      background: #ffe8e8;
       @include body-xs;
       @include padding(8, 12, 8, 12);
       @include s(margin-top, 4);
@@ -699,12 +706,11 @@
 
       span {
         @include body-xs;
-        color: #A8A9B0;
+        color: #a8a9b0;
         font-weight: 400;
         display: block;
       }
     }
-
 
     .price-wrapper {
       display: flex;
