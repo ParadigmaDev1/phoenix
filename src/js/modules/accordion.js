@@ -60,6 +60,21 @@ export const accordionFunc = () => {
       });
     }
 
+    // Дополнительная логика для auto-close элементов
+    if (item.classList.contains("auto-close")) {
+      // Находим все auto-close элементы на том же уровне
+      const allAutoCloseItems = document.querySelectorAll(
+        ".accordion-item.auto-close"
+      );
+      allAutoCloseItems.forEach((autoCloseItem) => {
+        if (autoCloseItem !== item) {
+          autoCloseItem.classList.remove("active");
+          updateMaxHeight(autoCloseItem);
+          closeAllChildren(autoCloseItem);
+        }
+      });
+    }
+
     item.classList.toggle("active");
 
     // Если родительский аккордеон закрывается, закрываем все дочерние
