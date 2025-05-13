@@ -46,7 +46,7 @@ mixin cart-opt()
 								<path d="M14.5 21.5L14.5 7.5" stroke="#343176"/>
 							</svg>
 							p Добавить ещё
-				button(type="button").cart__choose-mob-edit
+				button(type="button" data-modal-target="edit-current-cart").cart__choose-mob-edit
 					<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<g clip-path="url(#clip0_9089_166897)">
 						<path d="M18.6516 5.64192L5.18758 19.106L0.964966 19.1053V14.8847L14.4297 1.42L18.6516 5.64192Z" stroke="#343176"/>
@@ -64,7 +64,7 @@ mixin cart-opt()
 				.cart__list__item
 					.top 
 						h5 Основная корзина
-						button(type="button") 
+						button(type="button" data-modal-target="edit-current-cart") 
 							<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<g clip-path="url(#clip0_7956_94047)">
 									<path d="M18.6516 5.64192L5.18758 19.106L0.964966 19.1053V14.8847L14.4297 1.42L18.6516 5.64192Z" stroke="#343176"/>
