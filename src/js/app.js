@@ -30,8 +30,8 @@ import { retailCustomerProductInfo } from "../pug/pages/retail-customer-product/
 import { fixedOrderForm } from "../pug/pages/retail-customer-product/fixed-order-form/fixed-order-form.js";
 import { comparison } from "../pug/pages/comparison/comparison.js";
 import { wholesaleDocuments } from "../pug/pages/wholesale-documents/wholesale-documents.js";
+import { cart } from "../pug/pages/cart/cart.js";
 import "../pug/pages/catalog/catalog.js";
-import "../pug/pages/cart/cart.js";
 document.addEventListener("DOMContentLoaded", () => {
   header();
   selector();
@@ -66,4 +66,5 @@ document.addEventListener("DOMContentLoaded", () => {
   wholesaleMakingOrder();
   comparison();
   wholesaleDocuments();
+  cart();
 });
