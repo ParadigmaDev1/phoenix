@@ -1,0 +1,20 @@
+extends ./pug/templates/template.pug
+
+block head 
+  +head(["header", "comparison", "product-swiper", "comparison-fixed", "product-card", "crumbs", "selector", "footer", "mobile-menu", "accordion-item", "catalog-menu", "mobile-sidebar", "auth-modal", "recover-password-modal", "feedback-modal", "call-modal"])
+block header 
+  +header().dark
+  +mobile-menu()
+  +catalog-menu()
+  +mobile-sidebar()         
+block content
+  +crumbs({items: [{title: 'Каталог', href: 'about.html'}, {title: 'коллекции', href: '#'}]})
+  +comparison()   
+  +comparison-watch() 
+block footer 
+  +footer()
+block modals  
+  +auth-modal()
+  +recover-password-modal()                   
+  +feedback-modal()   
+  +call-modal()

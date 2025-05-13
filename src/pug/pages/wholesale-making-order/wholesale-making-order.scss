@@ -150,6 +150,15 @@
         h6 {
           margin-top: 0 !important;
         }
+        .selector-btn {
+          .selector-title {
+            .text-content {
+              p {
+                color: var(--gray-light-color);
+              }
+            }
+          }
+        }
         .selector {
           .selector-content {
             .btn {

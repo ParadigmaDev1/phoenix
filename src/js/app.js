@@ -28,6 +28,7 @@ import { retailCustomerMakingOrder } from "../pug/pages/retail-customer-making-o
 import { wholesaleMakingOrder } from "../pug/pages/wholesale-making-order/wholesale-making-order.js";
 import { retailCustomerProductInfo } from "../pug/pages/retail-customer-product/retail-customer-product-info/retail-customer-product-info.js";
 import { fixedOrderForm } from "../pug/pages/retail-customer-product/fixed-order-form/fixed-order-form.js";
+import { comparison } from "../pug/pages/comparison/comparison.js";
 import "../pug/pages/catalog/catalog.js";
 import "../pug/pages/cart/cart.js";
 document.addEventListener("DOMContentLoaded", () => {
@@ -62,4 +63,5 @@ document.addEventListener("DOMContentLoaded", () => {
   fixedOrderForm();
   wholesaleOrders();
   wholesaleMakingOrder();
+  comparison();
 });

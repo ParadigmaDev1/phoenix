@@ -1,87 +1,144 @@
 import gulp from "gulp";
-
-import { path } from "./gulp/config/path.js";
-
+import { path as configPath } from "./gulp/config/path.js";
 import { plugins } from "./gulp/config/plugins.js";
-import pug from "gulp-pug";
-import plumber from "gulp-plumber";
-import notify from "gulp-notify";
 import browserSync from "browser-sync";
-// Импорт задач
-import { copy } from "./gulp/tasks/copy.js";
-import { html } from "./gulp/tasks/html.js";
-// import { pug } from "./gulp/tasks/pug.js";
+import fs from "fs";
+import path from "path";
+
+// Импорт всех задач
 import { reset } from "./gulp/tasks/reset.js";
-import { server } from "./gulp/tasks/server.js";
+import { copy } from "./gulp/tasks/copy.js";
 import { scss } from "./gulp/tasks/scss.js";
 import { js } from "./gulp/tasks/js.js";
 import { images } from "./gulp/tasks/images.js";
 import { otfToTtf, ttfToWoff, fontsStyle } from "./gulp/tasks/fonts.js";
 
-const pugTask = () => {
-  return gulp
-    .src("./src/*.pug") // Укажите путь к Pug-файлам
-    .pipe(
-      plumber(
-        notify.onError({
-          title: "PUG",
-          message: "Error: <%= error.message %>",
-        })
-      )
-    )
-    .pipe(
-      pug({
-        pretty: true, // Форматировать HTML для чтения
-      })
-    )
-    .pipe(gulp.dest("./dist")) // Укажите выходную папку
-    .pipe(browserSync.stream());
-};
+// Глобальная переменная для текущей страницы
+let currentPage = "";
 
+// Инициализация глобального объекта
 global.app = {
-  path: path,
+  path: configPath,
   gulp: gulp,
-  plugins: plugins,
+  plugins: {
+    ...plugins,
+    browserSync,
+  },
   isBuild: process.argv.includes("--build"),
   isDev: !process.argv.includes("--build"),
 };
 
-function watcher() {
-  gulp.watch(path.watch.files, copy);
-  // gulp.watch(path.watch.html, html);
-  gulp.watch(path.watch.pug, pugTask);
-  gulp.watch(path.watch.scss, scss);
-  gulp.watch(path.watch.js, js);
-  gulp.watch(path.watch.images, images);
+// Функция для поиска зависимых страниц
+function getDependentPages(componentPath) {
+  const componentName = path.basename(componentPath, ".pug");
+  const pages = [];
+
+  const walkSync = (dir, filelist = []) => {
+    fs.readdirSync(dir).forEach((file) => {
+      const dirPath = path.join(dir, file);
+      if (fs.statSync(dirPath).isDirectory()) {
+        filelist = walkSync(dirPath, filelist);
+      } else if (path.extname(file) === ".pug") {
+        filelist.push(dirPath);
+      }
+    });
+    return filelist;
+  };
+
+  const allPugFiles = walkSync("src");
+
+  allPugFiles.forEach((pugFile) => {
+    const content = fs.readFileSync(pugFile, "utf8");
+    if (content.includes(`+${componentName}(`)) {
+      pages.push(pugFile);
+    }
+  });
+
+  return pages;
 }
 
-// Последовательная обработка шрифтов
-const fonts = gulp.series(otfToTtf, ttfToWoff, fontsStyle);
-//const fonts = gulp.series(otfToTtf);
+// Обработка Pug файлов
+const processPug = (filePath) => {
+  return app.gulp
+    .src(filePath, { base: "src" })
+    .pipe(app.plugins.plumber())
+    .pipe(
+      app.plugins.pug({
+        pretty: app.isDev,
+        basedir: path.resolve("src/pug"),
+      })
+    )
+    .pipe(app.gulp.dest("dist"))
+    .pipe(app.plugins.browserSync.stream());
+};
+
+// Полная сборка Pug
+const pugAll = () => processPug(app.path.src.pug);
+
+// Инициализация сервера
+const server = () => {
+  app.plugins.browserSync.init({
+    server: {
+      baseDir: "./dist",
+    },
+    middleware: (req, res, next) => {
+      if (req.url.endsWith(".html")) {
+        currentPage = req.url.replace(/^\//, "");
+      }
+      next();
+    },
+  });
+};
+
+// Вотчер для Pug
+const watchPug = () => {
+  app.gulp.watch(app.path.watch.pug).on("change", async (filePath) => {
+    console.log(`Изменен файл: ${filePath}`);
+
+    if (filePath.includes("components")) {
+      console.log("Изменен глобальный компонент - пересборка всех страниц");
+      return pugAll();
+    } else if (filePath.includes("pages")) {
+      const componentName = path.basename(filePath, ".pug");
+      const dependentPages = getDependentPages(filePath);
+
+      if (dependentPages.length > 0) {
+        console.log(
+          `Пересборка зависимых страниц: ${dependentPages.join(", ")}`
+        );
+        return Promise.all(dependentPages.map((page) => processPug(page)));
+      }
+    }
+
+    console.log(`Обработка отдельного файла: ${filePath}`);
+    return processPug(filePath);
+  });
+};
+
+// Вотчеры для других типов файлов
+const watchOther = () => {
+  app.gulp.watch(app.path.watch.files, copy);
+  app.gulp.watch(app.path.watch.scss, scss);
+  app.gulp.watch(app.path.watch.js, js);
+  app.gulp.watch(app.path.watch.images, images);
+};
 
 // Основные задачи
 const mainTasks = gulp.series(
-  fonts,
-  gulp.parallel(fonts, copy, pugTask, scss, js, images)
+  fontsStyle,
+  gulp.parallel(copy, pugAll, scss, js, images)
 );
 
-// Постороение сценариев выполнения задач
-const dev = gulp.series(reset, mainTasks, gulp.parallel(watcher, server));
-const build = gulp.series(reset, mainTasks);
+// Сценарии
+const dev = gulp.series(
+  reset,
+  otfToTtf,
+  ttfToWoff,
+  mainTasks,
+  gulp.parallel(watchPug, watchOther, server)
+);
 
-// экспорт сценариев
-export { dev };
-export { build };
+const build = gulp.series(reset, otfToTtf, ttfToWoff, mainTasks);
 
-// Выполнение сценарий по умолчанию
-gulp.task("default", dev);
-
-// spawn('gulp', [], { stdio: 'inherit'});
-// process.exit();
-
-process.on("SIGINT", function () {
-  setTimeout(function () {
-    gutil.log(gutil.colors.red("Successfully closed " + process.pid));
-    process.exit(1);
-  }, 500);
-});
+export { dev, build };
+export default dev;

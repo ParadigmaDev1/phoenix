@@ -1,0 +1,1576 @@
+mixin comparison()
+    .comparison-page
+        .comparison-inner.container
+            .top 
+                h1 сравнение
+                button.btn 
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 13L7 7M7 7L1 1M7 7L13 13M7 7L13 1" stroke="#343176" stroke-linecap="square" stroke-linejoin="round"/>
+                    </svg>
+                    p удалить все
+            .tabs-wrapper
+                .tabs 
+                    button.btn.tab.m.active(data-tab='0') Ежедневники
+                        span 5
+                    button.btn.tab.m(data-tab='1') Записные книжки
+                        span 8
+                    button.btn.tab.m(data-tab='2') Органайзеры, блоки для записей
+                        span 28
+                    button.btn.tab.m(data-tab='3') Деловое планирование и бизнес-блокноты
+                        span 3
+                .tab-content(data-tab='0')
+                    +comparison-fixed() 
+                    .comparison-products-swiper
+                        .navigation 
+                            button.btn.circle.l.products-prev
+                                <svg width="10" height="14" viewBox="0 0 10 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9 13L1 7L9 1" stroke="white" stroke-linecap="square" stroke-linejoin="round"/>
+                                </svg>
+                            button.btn.circle.l.products-next
+                                <svg width="10" height="14" viewBox="0 0 10 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 13L9 7L0.999999 1" stroke="white" stroke-linecap="square" stroke-linejoin="round"/>
+                                </svg>
+                        .swiper-wrapper 
+                            .swiper-slide 
+                                +product-card({
+                                    imgs: 
+                                    [
+                                        './img/products/1.jpg',
+                                        './img/products/2.jpg',
+                                        './img/products/3.jpg',
+                                        './img/products/1.jpg',
+                                        './img/products/2.jpg'
+                                    ],
+                                    art: 'Арт 68012', 
+                                    count: 'many', 
+                                    price: '116 ₽', 
+                                    descr: 'Набор для выращивания кристаллов, Фиолетовая змейка, Змейки, картонная коробка, 10+, Lori', 
+                                    badgeTitle: 'хит', 
+                                    badgeClass: 'warn',
+                                    comparison: true
+                                })
+                            .swiper-slide 
+                                +product-card({
+                                    imgs: 
+                                    [
+                                        './img/products/2.jpg',
+                                        './img/products/1.jpg',
+                                        './img/products/3.jpg',
+                                        './img/products/1.jpg',
+                                        './img/products/2.jpg'
+                                    ],
+                                    art: 'Арт 68012', 
+                                    count: 'many', 
+                                    price: '985 ₽', 
+                                    descr: 'Набор для выращивания кристаллов, Фиолетовая змейка, Змейки, картонная коробка, 10+, Lori', 
+                                    badgeTitle: 'хит', 
+                                    badgeClass: 'warn',
+                                    comparison: true
+                                })
+                            .swiper-slide 
+                                +product-card({
+                                    imgs: 
+                                    [
+                                        './img/products/1.jpg',
+                                        './img/products/2.jpg',
+                                        './img/products/3.jpg',
+                                        './img/products/1.jpg',
+                                        './img/products/2.jpg'
+                                    ],
+                                    art: 'Арт 68012', 
+                                    price: '158 ₽', 
+                                    descr: 'Набор для выращивания кристаллов, Фиолетовая змейка, Lori', 
+                                    badgeTitle: 'хит', 
+                                    badgeClass: 'warn',
+                                    comparison: true
+                                })
+                            .swiper-slide 
+                                +product-card({
+                                    imgs: 
+                                    [
+                                        './img/products/3.jpg',
+                                        './img/products/2.jpg',
+                                        './img/products/3.jpg',
+                                        './img/products/1.jpg',
+                                        './img/products/2.jpg'
+                                    ],
+                                    art: 'Арт 68012', 
+                                    count: 'many', 
+                                    price: '582 ₽', 
+                                    descr: 'Ежедневник датированный 2025 ESCALADA, #ИЛОН МАСК, формат А6+, 176 л., твёрдый переплёт, запаянный край, искусственная кожа "Тиволи глосс", блинтовое тиснение', 
+                                    badgeTitle: 'хит', 
+                                    badgeClass: 'warn',
+                                    comparison: true
+                                })
+                            .swiper-slide 
+                                +product-card({
+                                    imgs: 
+                                    [
+                                        './img/products/1.jpg',
+                                        './img/products/2.jpg',
+                                        './img/products/3.jpg',
+                                        './img/products/1.jpg',
+                                        './img/products/2.jpg'
+                                    ],
+                                    art: 'Арт 68012', 
+                                    count: 'many', 
+                                    price: '116 ₽', 
+                                    descr: 'Набор для выращивания кристаллов, Фиолетовая змейка, Змейки, картонная коробка, 10+, Lori', 
+                                    badgeTitle: 'хит', 
+                                    badgeClass: 'warn',
+                                    comparison: true
+                                })
+                            .swiper-slide 
+                                +product-card({
+                                    imgs: 
+                                    [
+                                        './img/products/2.jpg',
+                                        './img/products/1.jpg',
+                                        './img/products/3.jpg',
+                                        './img/products/1.jpg',
+                                        './img/products/2.jpg'
+                                    ],
+                                    art: 'Арт 68012', 
+                                    count: 'many', 
+                                    price: '985 ₽', 
+                                    descr: 'Набор для выращивания кристаллов, Фиолетовая змейка, Змейки, картонная коробка, 10+, Lori', 
+                                    badgeTitle: 'хит', 
+                                    badgeClass: 'warn',
+                                    comparison: true
+                                })
+                            .swiper-slide 
+                                +product-card({
+                                    imgs: 
+                                    [
+                                        './img/products/1.jpg',
+                                        './img/products/2.jpg',
+                                        './img/products/3.jpg',
+                                        './img/products/1.jpg',
+                                        './img/products/2.jpg'
+                                    ],
+                                    art: 'Арт 68012', 
+                                    price: '158 ₽', 
+                                    descr: 'Набор для выращивания кристаллов, Фиолетовая змейка, Lori', 
+                                    badgeTitle: 'хит', 
+                                    badgeClass: 'warn',
+                                    comparison: true
+                                })
+                            .swiper-slide 
+                                +product-card({
+                                    imgs: 
+                                    [
+                                        './img/products/3.jpg',
+                                        './img/products/2.jpg',
+                                        './img/products/3.jpg',
+                                        './img/products/1.jpg',
+                                        './img/products/2.jpg'
+                                    ],
+                                    art: 'Арт 68012', 
+                                    count: 'many', 
+                                    price: '582 ₽', 
+                                    descr: 'Ежедневник датированный 2025 ESCALADA, #ИЛОН МАСК, формат А6+, 176 л., твёрдый переплёт, запаянный край, искусственная кожа "Тиволи глосс", блинтовое тиснение', 
+                                    badgeTitle: 'хит', 
+                                    badgeClass: 'warn',
+                                    comparison: true
+                                })
+                        .comparison-products-pagination
+                    .comparison-type 
+                        .switch-wrapper
+                            input(type="checkbox" value="Предзаказ").checkbox-switch#checkbox-1
+                            label(for="checkbox-1").ios-switch Показывать только различия
+                    .accordion 
+                        .accordion-item
+                            button(type='button').accordion-title 
+                                .title-wrapper
+                                    p.title Технические характеристики
+                                .icon 
+                                    <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1 1L7 7L13 1" stroke="#333435" stroke-linecap="square" stroke-linejoin="round"/>
+                                    </svg>
+                            .collapse.accordion-body
+                                .comparison-specification-swiper-wrapper 
+                                    p.title Формат
+                                    .comparison-specification-swiper 
+                                        .swiper-wrapper 
+                                            .swiper-slide А6+
+                                            .swiper-slide А5
+                                            .swiper-slide А6
+                                            .swiper-slide А5
+                                            .swiper-slide А6+
+                                            .swiper-slide А5
+                                            .swiper-slide А6
+                                            .swiper-slide А5
+                                .comparison-specification-swiper-wrapper 
+                                    p.title Размер
+                                    .comparison-specification-swiper 
+                                        .swiper-wrapper 
+                                            .swiper-slide 126х174 мм
+                                            .swiper-slide 126х174 мм
+                                            .swiper-slide 126х174 мм
+                                            .swiper-slide 126х174 мм
+                                            .swiper-slide 126х174 мм
+                                            .swiper-slide 126х174 мм
+                                            .swiper-slide 126х174 мм
+                                            .swiper-slide 126х174 мм
+                                .comparison-specification-swiper-wrapper 
+                                    p.title Количество листов
+                                    .comparison-specification-swiper 
+                                        .swiper-wrapper 
+                                            .swiper-slide 90
+                                            .swiper-slide 180
+                                            .swiper-slide 160
+                                            .swiper-slide 180
+                                            .swiper-slide 90
+                                            .swiper-slide 180
+                                            .swiper-slide 160
+                                            .swiper-slide 180
+                                .comparison-specification-swiper-wrapper 
+                                    p.title Тип обложки
+                                    .comparison-specification-swiper 
+                                        .swiper-wrapper 
+                                            .swiper-slide Мягкий переплёт
+                                            .swiper-slide Твердый переплёт
+                                            .swiper-slide Мягкий переплёт
+                                            .swiper-slide Твердый переплёт
+                                            .swiper-slide Мягкий переплёт
+                                            .swiper-slide Твердый переплёт
+                                            .swiper-slide Мягкий переплёт
+                                            .swiper-slide Твердый переплёт
+                        .accordion-item
+                            button(type='button').accordion-title 
+                                .title-wrapper
+                                    p.title Материалы
+                                .icon 
+                                    <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1 1L7 7L13 1" stroke="#333435" stroke-linecap="square" stroke-linejoin="round"/>
+                                    </svg>
+                            .collapse.accordion-body
+                                .comparison-specification-swiper-wrapper 
+                                    p.title Обложка
+                                    .comparison-specification-swiper 
+                                        .swiper-wrapper 
+                                            .swiper-slide Искусственная кожа
+                                            .swiper-slide Прессованная бумага
+                                            .swiper-slide Натуральная кожа
+                                            .swiper-slide Прессованная бумага
+                                            .swiper-slide Искусственная кожа
+                                            .swiper-slide Прессованная бумага
+                                            .swiper-slide Натуральная кожа
+                                            .swiper-slide Прессованная бумага
+                                .comparison-specification-swiper-wrapper 
+                                    p.title Плотность бумаги
+                                    .comparison-specification-swiper 
+                                        .swiper-wrapper 
+                                            .swiper-slide 70 г/м²
+                                            .swiper-slide 80 г/м²
+                                            .swiper-slide 60 г/м²
+                                            .swiper-slide 80 г/м²
+                                            .swiper-slide 70 г/м²
+                                            .swiper-slide 80 г/м²
+                                            .swiper-slide 60 г/м²
+                                            .swiper-slide 80 г/м²
+                                .comparison-specification-swiper-wrapper 
+                                    p.title Количество листов
+                                    .comparison-specification-swiper 
+                                        .swiper-wrapper 
+                                            .swiper-slide 90
+                                            .swiper-slide 180
+                                            .swiper-slide 160
+                                            .swiper-slide 180
+                                            .swiper-slide 90
+                                            .swiper-slide 180
+                                            .swiper-slide 160
+                                            .swiper-slide 180
+                                .comparison-specification-swiper-wrapper 
+                                    p.title Тип обложки
+                                    .comparison-specification-swiper 
+                                        .swiper-wrapper 
+                                            .swiper-slide Мягкий переплёт
+                                            .swiper-slide Твердый переплёт
+                                            .swiper-slide Мягкий переплёт
+                                            .swiper-slide Твердый переплёт
+                                            .swiper-slide Мягкий переплёт
+                                            .swiper-slide Твердый переплёт
+                                            .swiper-slide Мягкий переплёт
+                                            .swiper-slide Твердый переплёт
+                        .accordion-item
+                            button(type='button').accordion-title 
+                                .title-wrapper
+                                    p.title Дизайн
+                                .icon 
+                                    <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1 1L7 7L13 1" stroke="#333435" stroke-linecap="square" stroke-linejoin="round"/>
+                                    </svg>
+                            .collapse.accordion-body
+                                .comparison-specification-swiper-wrapper 
+                                    p.title Формат
+                                    .comparison-specification-swiper 
+                                        .swiper-wrapper 
+                                            .swiper-slide А6+
+                                            .swiper-slide А5
+                                            .swiper-slide А6
+                                            .swiper-slide А5
+                                            .swiper-slide А6+
+                                            .swiper-slide А5
+                                            .swiper-slide А6
+                                            .swiper-slide А5
+                                .comparison-specification-swiper-wrapper 
+                                    p.title Размер
+                                    .comparison-specification-swiper 
+                                        .swiper-wrapper 
+                                            .swiper-slide 126х174 мм
+                                            .swiper-slide 126х174 мм
+                                            .swiper-slide 126х174 мм
+                                            .swiper-slide 126х174 мм
+                                            .swiper-slide 126х174 мм
+                                            .swiper-slide 126х174 мм
+                                            .swiper-slide 126х174 мм
+                                            .swiper-slide 126х174 мм
+                                .comparison-specification-swiper-wrapper 
+                                    p.title Количество листов
+                                    .comparison-specification-swiper 
+                                        .swiper-wrapper 
+                                            .swiper-slide 90
+                                            .swiper-slide 180
+                                            .swiper-slide 160
+                                            .swiper-slide 180
+                                            .swiper-slide 90
+                                            .swiper-slide 180
+                                            .swiper-slide 160
+                                            .swiper-slide 180
+                                .comparison-specification-swiper-wrapper 
+                                    p.title Тип обложки
+                                    .comparison-specification-swiper 
+                                        .swiper-wrapper 
+                                            .swiper-slide Мягкий переплёт
+                                            .swiper-slide Твердый переплёт
+                                            .swiper-slide Мягкий переплёт
+                                            .swiper-slide Твердый переплёт
+                                            .swiper-slide Мягкий переплёт
+                                            .swiper-slide Твердый переплёт
+                                            .swiper-slide Мягкий переплёт
+                                            .swiper-slide Твердый переплёт
+                        .accordion-item
+                            button(type='button').accordion-title 
+                                .title-wrapper
+                                    p.title Название ещё одной группы характеристик
+                                .icon 
+                                    <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1 1L7 7L13 1" stroke="#333435" stroke-linecap="square" stroke-linejoin="round"/>
+                                    </svg>
+                            .collapse.accordion-body
+                                .comparison-specification-swiper-wrapper 
+                                    p.title Обложка
+                                    .comparison-specification-swiper 
+                                        .swiper-wrapper 
+                                            .swiper-slide Искусственная кожа
+                                            .swiper-slide Прессованная бумага
+                                            .swiper-slide Натуральная кожа
+                                            .swiper-slide Прессованная бумага
+                                            .swiper-slide Искусственная кожа
+                                            .swiper-slide Прессованная бумага
+                                            .swiper-slide Натуральная кожа
+                                            .swiper-slide Прессованная бумага
+                                .comparison-specification-swiper-wrapper 
+                                    p.title Плотность бумаги
+                                    .comparison-specification-swiper 
+                                        .swiper-wrapper 
+                                            .swiper-slide 70 г/м²
+                                            .swiper-slide 80 г/м²
+                                            .swiper-slide 60 г/м²
+                                            .swiper-slide 80 г/м²
+                                            .swiper-slide 70 г/м²
+                                            .swiper-slide 80 г/м²
+                                            .swiper-slide 60 г/м²
+                                            .swiper-slide 80 г/м²
+                                .comparison-specification-swiper-wrapper 
+                                    p.title Количество листов
+                                    .comparison-specification-swiper 
+                                        .swiper-wrapper 
+                                            .swiper-slide 90
+                                            .swiper-slide 180
+                                            .swiper-slide 160
+                                            .swiper-slide 180
+                                            .swiper-slide 90
+                                            .swiper-slide 180
+                                            .swiper-slide 160
+                                            .swiper-slide 180
+                                .comparison-specification-swiper-wrapper 
+                                    p.title Тип обложки
+                                    .comparison-specification-swiper 
+                                        .swiper-wrapper 
+                                            .swiper-slide Мягкий переплёт
+                                            .swiper-slide Твердый переплёт
+                                            .swiper-slide Мягкий переплёт
+                                            .swiper-slide Твердый переплёт
+                                            .swiper-slide Мягкий переплёт
+                                            .swiper-slide Твердый переплёт
+                                            .swiper-slide Мягкий переплёт
+                                            .swiper-slide Твердый переплёт
+                .tab-content(data-tab='1')
+                    +comparison-fixed() 
+                    .comparison-products-swiper
+                        .navigation 
+                            button.btn.circle.l.products-prev
+                                <svg width="10" height="14" viewBox="0 0 10 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9 13L1 7L9 1" stroke="white" stroke-linecap="square" stroke-linejoin="round"/>
+                                </svg>
+                            button.btn.circle.l.products-next
+                                <svg width="10" height="14" viewBox="0 0 10 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 13L9 7L0.999999 1" stroke="white" stroke-linecap="square" stroke-linejoin="round"/>
+                                </svg>
+                        .swiper-wrapper 
+                            .swiper-slide 
+                                +product-card({
+                                    imgs: 
+                                    [
+                                        './img/products/1.jpg',
+                                        './img/products/2.jpg',
+                                        './img/products/3.jpg',
+                                        './img/products/1.jpg',
+                                        './img/products/2.jpg'
+                                    ],
+                                    art: 'Арт 68012', 
+                                    count: 'many', 
+                                    price: '116 ₽', 
+                                    descr: 'Набор для выращивания кристаллов, Фиолетовая змейка, Змейки, картонная коробка, 10+, Lori', 
+                                    badgeTitle: 'хит', 
+                                    badgeClass: 'warn',
+                                    comparison: true
+                                })
+                            .swiper-slide 
+                                +product-card({
+                                    imgs: 
+                                    [
+                                        './img/products/2.jpg',
+                                        './img/products/1.jpg',
+                                        './img/products/3.jpg',
+                                        './img/products/1.jpg',
+                                        './img/products/2.jpg'
+                                    ],
+                                    art: 'Арт 68012', 
+                                    count: 'many', 
+                                    price: '985 ₽', 
+                                    descr: 'Набор для выращивания кристаллов, Фиолетовая змейка, Змейки, картонная коробка, 10+, Lori', 
+                                    badgeTitle: 'хит', 
+                                    badgeClass: 'warn',
+                                    comparison: true
+                                })
+                            .swiper-slide 
+                                +product-card({
+                                    imgs: 
+                                    [
+                                        './img/products/1.jpg',
+                                        './img/products/2.jpg',
+                                        './img/products/3.jpg',
+                                        './img/products/1.jpg',
+                                        './img/products/2.jpg'
+                                    ],
+                                    art: 'Арт 68012', 
+                                    price: '158 ₽', 
+                                    descr: 'Набор для выращивания кристаллов, Фиолетовая змейка, Lori', 
+                                    badgeTitle: 'хит', 
+                                    badgeClass: 'warn',
+                                    comparison: true
+                                })
+                            .swiper-slide 
+                                +product-card({
+                                    imgs: 
+                                    [
+                                        './img/products/3.jpg',
+                                        './img/products/2.jpg',
+                                        './img/products/3.jpg',
+                                        './img/products/1.jpg',
+                                        './img/products/2.jpg'
+                                    ],
+                                    art: 'Арт 68012', 
+                                    count: 'many', 
+                                    price: '582 ₽', 
+                                    descr: 'Ежедневник датированный 2025 ESCALADA, #ИЛОН МАСК, формат А6+, 176 л., твёрдый переплёт, запаянный край, искусственная кожа "Тиволи глосс", блинтовое тиснение', 
+                                    badgeTitle: 'хит', 
+                                    badgeClass: 'warn',
+                                    comparison: true
+                                })
+                            .swiper-slide 
+                                +product-card({
+                                    imgs: 
+                                    [
+                                        './img/products/1.jpg',
+                                        './img/products/2.jpg',
+                                        './img/products/3.jpg',
+                                        './img/products/1.jpg',
+                                        './img/products/2.jpg'
+                                    ],
+                                    art: 'Арт 68012', 
+                                    count: 'many', 
+                                    price: '116 ₽', 
+                                    descr: 'Набор для выращивания кристаллов, Фиолетовая змейка, Змейки, картонная коробка, 10+, Lori', 
+                                    badgeTitle: 'хит', 
+                                    badgeClass: 'warn',
+                                    comparison: true
+                                })
+                            .swiper-slide 
+                                +product-card({
+                                    imgs: 
+                                    [
+                                        './img/products/2.jpg',
+                                        './img/products/1.jpg',
+                                        './img/products/3.jpg',
+                                        './img/products/1.jpg',
+                                        './img/products/2.jpg'
+                                    ],
+                                    art: 'Арт 68012', 
+                                    count: 'many', 
+                                    price: '985 ₽', 
+                                    descr: 'Набор для выращивания кристаллов, Фиолетовая змейка, Змейки, картонная коробка, 10+, Lori', 
+                                    badgeTitle: 'хит', 
+                                    badgeClass: 'warn',
+                                    comparison: true
+                                })
+                            .swiper-slide 
+                                +product-card({
+                                    imgs: 
+                                    [
+                                        './img/products/1.jpg',
+                                        './img/products/2.jpg',
+                                        './img/products/3.jpg',
+                                        './img/products/1.jpg',
+                                        './img/products/2.jpg'
+                                    ],
+                                    art: 'Арт 68012', 
+                                    price: '158 ₽', 
+                                    descr: 'Набор для выращивания кристаллов, Фиолетовая змейка, Lori', 
+                                    badgeTitle: 'хит', 
+                                    badgeClass: 'warn',
+                                    comparison: true
+                                })
+                            .swiper-slide 
+                                +product-card({
+                                    imgs: 
+                                    [
+                                        './img/products/3.jpg',
+                                        './img/products/2.jpg',
+                                        './img/products/3.jpg',
+                                        './img/products/1.jpg',
+                                        './img/products/2.jpg'
+                                    ],
+                                    art: 'Арт 68012', 
+                                    count: 'many', 
+                                    price: '582 ₽', 
+                                    descr: 'Ежедневник датированный 2025 ESCALADA, #ИЛОН МАСК, формат А6+, 176 л., твёрдый переплёт, запаянный край, искусственная кожа "Тиволи глосс", блинтовое тиснение', 
+                                    badgeTitle: 'хит', 
+                                    badgeClass: 'warn',
+                                    comparison: true
+                                })
+                        .comparison-products-pagination
+                    .comparison-type 
+                        .switch-wrapper
+                            input(type="checkbox" value="Предзаказ").checkbox-switch#checkbox-1
+                            label(for="checkbox-1").ios-switch Показывать только различия
+                    .accordion 
+                        .accordion-item
+                            button(type='button').accordion-title 
+                                .title-wrapper
+                                    p.title Технические характеристики
+                                .icon 
+                                    <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1 1L7 7L13 1" stroke="#333435" stroke-linecap="square" stroke-linejoin="round"/>
+                                    </svg>
+                            .collapse.accordion-body
+                                .comparison-specification-swiper-wrapper 
+                                    p.title Формат
+                                    .comparison-specification-swiper 
+                                        .swiper-wrapper 
+                                            .swiper-slide А6+
+                                            .swiper-slide А5
+                                            .swiper-slide А6
+                                            .swiper-slide А5
+                                            .swiper-slide А6+
+                                            .swiper-slide А5
+                                            .swiper-slide А6
+                                            .swiper-slide А5
+                                .comparison-specification-swiper-wrapper 
+                                    p.title Размер
+                                    .comparison-specification-swiper 
+                                        .swiper-wrapper 
+                                            .swiper-slide 126х174 мм
+                                            .swiper-slide 126х174 мм
+                                            .swiper-slide 126х174 мм
+                                            .swiper-slide 126х174 мм
+                                            .swiper-slide 126х174 мм
+                                            .swiper-slide 126х174 мм
+                                            .swiper-slide 126х174 мм
+                                            .swiper-slide 126х174 мм
+                                .comparison-specification-swiper-wrapper 
+                                    p.title Количество листов
+                                    .comparison-specification-swiper 
+                                        .swiper-wrapper 
+                                            .swiper-slide 90
+                                            .swiper-slide 180
+                                            .swiper-slide 160
+                                            .swiper-slide 180
+                                            .swiper-slide 90
+                                            .swiper-slide 180
+                                            .swiper-slide 160
+                                            .swiper-slide 180
+                                .comparison-specification-swiper-wrapper 
+                                    p.title Тип обложки
+                                    .comparison-specification-swiper 
+                                        .swiper-wrapper 
+                                            .swiper-slide Мягкий переплёт
+                                            .swiper-slide Твердый переплёт
+                                            .swiper-slide Мягкий переплёт
+                                            .swiper-slide Твердый переплёт
+                                            .swiper-slide Мягкий переплёт
+                                            .swiper-slide Твердый переплёт
+                                            .swiper-slide Мягкий переплёт
+                                            .swiper-slide Твердый переплёт
+                        .accordion-item
+                            button(type='button').accordion-title 
+                                .title-wrapper
+                                    p.title Материалы
+                                .icon 
+                                    <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1 1L7 7L13 1" stroke="#333435" stroke-linecap="square" stroke-linejoin="round"/>
+                                    </svg>
+                            .collapse.accordion-body
+                                .comparison-specification-swiper-wrapper 
+                                    p.title Обложка
+                                    .comparison-specification-swiper 
+                                        .swiper-wrapper 
+                                            .swiper-slide Искусственная кожа
+                                            .swiper-slide Прессованная бумага
+                                            .swiper-slide Натуральная кожа
+                                            .swiper-slide Прессованная бумага
+                                            .swiper-slide Искусственная кожа
+                                            .swiper-slide Прессованная бумага
+                                            .swiper-slide Натуральная кожа
+                                            .swiper-slide Прессованная бумага
+                                .comparison-specification-swiper-wrapper 
+                                    p.title Плотность бумаги
+                                    .comparison-specification-swiper 
+                                        .swiper-wrapper 
+                                            .swiper-slide 70 г/м²
+                                            .swiper-slide 80 г/м²
+                                            .swiper-slide 60 г/м²
+                                            .swiper-slide 80 г/м²
+                                            .swiper-slide 70 г/м²
+                                            .swiper-slide 80 г/м²
+                                            .swiper-slide 60 г/м²
+                                            .swiper-slide 80 г/м²
+                                .comparison-specification-swiper-wrapper 
+                                    p.title Количество листов
+                                    .comparison-specification-swiper 
+                                        .swiper-wrapper 
+                                            .swiper-slide 90
+                                            .swiper-slide 180
+                                            .swiper-slide 160
+                                            .swiper-slide 180
+                                            .swiper-slide 90
+                                            .swiper-slide 180
+                                            .swiper-slide 160
+                                            .swiper-slide 180
+                                .comparison-specification-swiper-wrapper 
+                                    p.title Тип обложки
+                                    .comparison-specification-swiper 
+                                        .swiper-wrapper 
+                                            .swiper-slide Мягкий переплёт
+                                            .swiper-slide Твердый переплёт
+                                            .swiper-slide Мягкий переплёт
+                                            .swiper-slide Твердый переплёт
+                                            .swiper-slide Мягкий переплёт
+                                            .swiper-slide Твердый переплёт
+                                            .swiper-slide Мягкий переплёт
+                                            .swiper-slide Твердый переплёт
+                        .accordion-item
+                            button(type='button').accordion-title 
+                                .title-wrapper
+                                    p.title Дизайн
+                                .icon 
+                                    <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1 1L7 7L13 1" stroke="#333435" stroke-linecap="square" stroke-linejoin="round"/>
+                                    </svg>
+                            .collapse.accordion-body
+                                .comparison-specification-swiper-wrapper 
+                                    p.title Формат
+                                    .comparison-specification-swiper 
+                                        .swiper-wrapper 
+                                            .swiper-slide А6+
+                                            .swiper-slide А5
+                                            .swiper-slide А6
+                                            .swiper-slide А5
+                                            .swiper-slide А6+
+                                            .swiper-slide А5
+                                            .swiper-slide А6
+                                            .swiper-slide А5
+                                .comparison-specification-swiper-wrapper 
+                                    p.title Размер
+                                    .comparison-specification-swiper 
+                                        .swiper-wrapper 
+                                            .swiper-slide 126х174 мм
+                                            .swiper-slide 126х174 мм
+                                            .swiper-slide 126х174 мм
+                                            .swiper-slide 126х174 мм
+                                            .swiper-slide 126х174 мм
+                                            .swiper-slide 126х174 мм
+                                            .swiper-slide 126х174 мм
+                                            .swiper-slide 126х174 мм
+                                .comparison-specification-swiper-wrapper 
+                                    p.title Количество листов
+                                    .comparison-specification-swiper 
+                                        .swiper-wrapper 
+                                            .swiper-slide 90
+                                            .swiper-slide 180
+                                            .swiper-slide 160
+                                            .swiper-slide 180
+                                            .swiper-slide 90
+                                            .swiper-slide 180
+                                            .swiper-slide 160
+                                            .swiper-slide 180
+                                .comparison-specification-swiper-wrapper 
+                                    p.title Тип обложки
+                                    .comparison-specification-swiper 
+                                        .swiper-wrapper 
+                                            .swiper-slide Мягкий переплёт
+                                            .swiper-slide Твердый переплёт
+                                            .swiper-slide Мягкий переплёт
+                                            .swiper-slide Твердый переплёт
+                                            .swiper-slide Мягкий переплёт
+                                            .swiper-slide Твердый переплёт
+                                            .swiper-slide Мягкий переплёт
+                                            .swiper-slide Твердый переплёт
+                        .accordion-item
+                            button(type='button').accordion-title 
+                                .title-wrapper
+                                    p.title Название ещё одной группы характеристик
+                                .icon 
+                                    <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1 1L7 7L13 1" stroke="#333435" stroke-linecap="square" stroke-linejoin="round"/>
+                                    </svg>
+                            .collapse.accordion-body
+                                .comparison-specification-swiper-wrapper 
+                                    p.title Обложка
+                                    .comparison-specification-swiper 
+                                        .swiper-wrapper 
+                                            .swiper-slide Искусственная кожа
+                                            .swiper-slide Прессованная бумага
+                                            .swiper-slide Натуральная кожа
+                                            .swiper-slide Прессованная бумага
+                                            .swiper-slide Искусственная кожа
+                                            .swiper-slide Прессованная бумага
+                                            .swiper-slide Натуральная кожа
+                                            .swiper-slide Прессованная бумага
+                                .comparison-specification-swiper-wrapper 
+                                    p.title Плотность бумаги
+                                    .comparison-specification-swiper 
+                                        .swiper-wrapper 
+                                            .swiper-slide 70 г/м²
+                                            .swiper-slide 80 г/м²
+                                            .swiper-slide 60 г/м²
+                                            .swiper-slide 80 г/м²
+                                            .swiper-slide 70 г/м²
+                                            .swiper-slide 80 г/м²
+                                            .swiper-slide 60 г/м²
+                                            .swiper-slide 80 г/м²
+                                .comparison-specification-swiper-wrapper 
+                                    p.title Количество листов
+                                    .comparison-specification-swiper 
+                                        .swiper-wrapper 
+                                            .swiper-slide 90
+                                            .swiper-slide 180
+                                            .swiper-slide 160
+                                            .swiper-slide 180
+                                            .swiper-slide 90
+                                            .swiper-slide 180
+                                            .swiper-slide 160
+                                            .swiper-slide 180
+                                .comparison-specification-swiper-wrapper 
+                                    p.title Тип обложки
+                                    .comparison-specification-swiper 
+                                        .swiper-wrapper 
+                                            .swiper-slide Мягкий переплёт
+                                            .swiper-slide Твердый переплёт
+                                            .swiper-slide Мягкий переплёт
+                                            .swiper-slide Твердый переплёт
+                                            .swiper-slide Мягкий переплёт
+                                            .swiper-slide Твердый переплёт
+                                            .swiper-slide Мягкий переплёт
+                                            .swiper-slide Твердый переплёт
+                .tab-content(data-tab='2')
+                    +comparison-fixed() 
+                    .comparison-products-swiper
+                        .navigation 
+                            button.btn.circle.l.products-prev
+                                <svg width="10" height="14" viewBox="0 0 10 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9 13L1 7L9 1" stroke="white" stroke-linecap="square" stroke-linejoin="round"/>
+                                </svg>
+                            button.btn.circle.l.products-next
+                                <svg width="10" height="14" viewBox="0 0 10 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 13L9 7L0.999999 1" stroke="white" stroke-linecap="square" stroke-linejoin="round"/>
+                                </svg>
+                        .swiper-wrapper 
+                            .swiper-slide 
+                                +product-card({
+                                    imgs: 
+                                    [
+                                        './img/products/1.jpg',
+                                        './img/products/2.jpg',
+                                        './img/products/3.jpg',
+                                        './img/products/1.jpg',
+                                        './img/products/2.jpg'
+                                    ],
+                                    art: 'Арт 68012', 
+                                    count: 'many', 
+                                    price: '116 ₽', 
+                                    descr: 'Набор для выращивания кристаллов, Фиолетовая змейка, Змейки, картонная коробка, 10+, Lori', 
+                                    badgeTitle: 'хит', 
+                                    badgeClass: 'warn',
+                                    comparison: true
+                                })
+                            .swiper-slide 
+                                +product-card({
+                                    imgs: 
+                                    [
+                                        './img/products/2.jpg',
+                                        './img/products/1.jpg',
+                                        './img/products/3.jpg',
+                                        './img/products/1.jpg',
+                                        './img/products/2.jpg'
+                                    ],
+                                    art: 'Арт 68012', 
+                                    count: 'many', 
+                                    price: '985 ₽', 
+                                    descr: 'Набор для выращивания кристаллов, Фиолетовая змейка, Змейки, картонная коробка, 10+, Lori', 
+                                    badgeTitle: 'хит', 
+                                    badgeClass: 'warn',
+                                    comparison: true
+                                })
+                            .swiper-slide 
+                                +product-card({
+                                    imgs: 
+                                    [
+                                        './img/products/1.jpg',
+                                        './img/products/2.jpg',
+                                        './img/products/3.jpg',
+                                        './img/products/1.jpg',
+                                        './img/products/2.jpg'
+                                    ],
+                                    art: 'Арт 68012', 
+                                    price: '158 ₽', 
+                                    descr: 'Набор для выращивания кристаллов, Фиолетовая змейка, Lori', 
+                                    badgeTitle: 'хит', 
+                                    badgeClass: 'warn',
+                                    comparison: true
+                                })
+                            .swiper-slide 
+                                +product-card({
+                                    imgs: 
+                                    [
+                                        './img/products/3.jpg',
+                                        './img/products/2.jpg',
+                                        './img/products/3.jpg',
+                                        './img/products/1.jpg',
+                                        './img/products/2.jpg'
+                                    ],
+                                    art: 'Арт 68012', 
+                                    count: 'many', 
+                                    price: '582 ₽', 
+                                    descr: 'Ежедневник датированный 2025 ESCALADA, #ИЛОН МАСК, формат А6+, 176 л., твёрдый переплёт, запаянный край, искусственная кожа "Тиволи глосс", блинтовое тиснение', 
+                                    badgeTitle: 'хит', 
+                                    badgeClass: 'warn',
+                                    comparison: true
+                                })
+                            .swiper-slide 
+                                +product-card({
+                                    imgs: 
+                                    [
+                                        './img/products/1.jpg',
+                                        './img/products/2.jpg',
+                                        './img/products/3.jpg',
+                                        './img/products/1.jpg',
+                                        './img/products/2.jpg'
+                                    ],
+                                    art: 'Арт 68012', 
+                                    count: 'many', 
+                                    price: '116 ₽', 
+                                    descr: 'Набор для выращивания кристаллов, Фиолетовая змейка, Змейки, картонная коробка, 10+, Lori', 
+                                    badgeTitle: 'хит', 
+                                    badgeClass: 'warn',
+                                    comparison: true
+                                })
+                            .swiper-slide 
+                                +product-card({
+                                    imgs: 
+                                    [
+                                        './img/products/2.jpg',
+                                        './img/products/1.jpg',
+                                        './img/products/3.jpg',
+                                        './img/products/1.jpg',
+                                        './img/products/2.jpg'
+                                    ],
+                                    art: 'Арт 68012', 
+                                    count: 'many', 
+                                    price: '985 ₽', 
+                                    descr: 'Набор для выращивания кристаллов, Фиолетовая змейка, Змейки, картонная коробка, 10+, Lori', 
+                                    badgeTitle: 'хит', 
+                                    badgeClass: 'warn',
+                                    comparison: true
+                                })
+                            .swiper-slide 
+                                +product-card({
+                                    imgs: 
+                                    [
+                                        './img/products/1.jpg',
+                                        './img/products/2.jpg',
+                                        './img/products/3.jpg',
+                                        './img/products/1.jpg',
+                                        './img/products/2.jpg'
+                                    ],
+                                    art: 'Арт 68012', 
+                                    price: '158 ₽', 
+                                    descr: 'Набор для выращивания кристаллов, Фиолетовая змейка, Lori', 
+                                    badgeTitle: 'хит', 
+                                    badgeClass: 'warn',
+                                    comparison: true
+                                })
+                            .swiper-slide 
+                                +product-card({
+                                    imgs: 
+                                    [
+                                        './img/products/3.jpg',
+                                        './img/products/2.jpg',
+                                        './img/products/3.jpg',
+                                        './img/products/1.jpg',
+                                        './img/products/2.jpg'
+                                    ],
+                                    art: 'Арт 68012', 
+                                    count: 'many', 
+                                    price: '582 ₽', 
+                                    descr: 'Ежедневник датированный 2025 ESCALADA, #ИЛОН МАСК, формат А6+, 176 л., твёрдый переплёт, запаянный край, искусственная кожа "Тиволи глосс", блинтовое тиснение', 
+                                    badgeTitle: 'хит', 
+                                    badgeClass: 'warn',
+                                    comparison: true
+                                })
+                        .comparison-products-pagination
+                    .comparison-type 
+                        .switch-wrapper
+                            input(type="checkbox" value="Предзаказ").checkbox-switch#checkbox-1
+                            label(for="checkbox-1").ios-switch Показывать только различия
+                    .accordion 
+                        .accordion-item
+                            button(type='button').accordion-title 
+                                .title-wrapper
+                                    p.title Технические характеристики
+                                .icon 
+                                    <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1 1L7 7L13 1" stroke="#333435" stroke-linecap="square" stroke-linejoin="round"/>
+                                    </svg>
+                            .collapse.accordion-body
+                                .comparison-specification-swiper-wrapper 
+                                    p.title Формат
+                                    .comparison-specification-swiper 
+                                        .swiper-wrapper 
+                                            .swiper-slide А6+
+                                            .swiper-slide А5
+                                            .swiper-slide А6
+                                            .swiper-slide А5
+                                            .swiper-slide А6+
+                                            .swiper-slide А5
+                                            .swiper-slide А6
+                                            .swiper-slide А5
+                                .comparison-specification-swiper-wrapper 
+                                    p.title Размер
+                                    .comparison-specification-swiper 
+                                        .swiper-wrapper 
+                                            .swiper-slide 126х174 мм
+                                            .swiper-slide 126х174 мм
+                                            .swiper-slide 126х174 мм
+                                            .swiper-slide 126х174 мм
+                                            .swiper-slide 126х174 мм
+                                            .swiper-slide 126х174 мм
+                                            .swiper-slide 126х174 мм
+                                            .swiper-slide 126х174 мм
+                                .comparison-specification-swiper-wrapper 
+                                    p.title Количество листов
+                                    .comparison-specification-swiper 
+                                        .swiper-wrapper 
+                                            .swiper-slide 90
+                                            .swiper-slide 180
+                                            .swiper-slide 160
+                                            .swiper-slide 180
+                                            .swiper-slide 90
+                                            .swiper-slide 180
+                                            .swiper-slide 160
+                                            .swiper-slide 180
+                                .comparison-specification-swiper-wrapper 
+                                    p.title Тип обложки
+                                    .comparison-specification-swiper 
+                                        .swiper-wrapper 
+                                            .swiper-slide Мягкий переплёт
+                                            .swiper-slide Твердый переплёт
+                                            .swiper-slide Мягкий переплёт
+                                            .swiper-slide Твердый переплёт
+                                            .swiper-slide Мягкий переплёт
+                                            .swiper-slide Твердый переплёт
+                                            .swiper-slide Мягкий переплёт
+                                            .swiper-slide Твердый переплёт
+                        .accordion-item
+                            button(type='button').accordion-title 
+                                .title-wrapper
+                                    p.title Материалы
+                                .icon 
+                                    <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1 1L7 7L13 1" stroke="#333435" stroke-linecap="square" stroke-linejoin="round"/>
+                                    </svg>
+                            .collapse.accordion-body
+                                .comparison-specification-swiper-wrapper 
+                                    p.title Обложка
+                                    .comparison-specification-swiper 
+                                        .swiper-wrapper 
+                                            .swiper-slide Искусственная кожа
+                                            .swiper-slide Прессованная бумага
+                                            .swiper-slide Натуральная кожа
+                                            .swiper-slide Прессованная бумага
+                                            .swiper-slide Искусственная кожа
+                                            .swiper-slide Прессованная бумага
+                                            .swiper-slide Натуральная кожа
+                                            .swiper-slide Прессованная бумага
+                                .comparison-specification-swiper-wrapper 
+                                    p.title Плотность бумаги
+                                    .comparison-specification-swiper 
+                                        .swiper-wrapper 
+                                            .swiper-slide 70 г/м²
+                                            .swiper-slide 80 г/м²
+                                            .swiper-slide 60 г/м²
+                                            .swiper-slide 80 г/м²
+                                            .swiper-slide 70 г/м²
+                                            .swiper-slide 80 г/м²
+                                            .swiper-slide 60 г/м²
+                                            .swiper-slide 80 г/м²
+                                .comparison-specification-swiper-wrapper 
+                                    p.title Количество листов
+                                    .comparison-specification-swiper 
+                                        .swiper-wrapper 
+                                            .swiper-slide 90
+                                            .swiper-slide 180
+                                            .swiper-slide 160
+                                            .swiper-slide 180
+                                            .swiper-slide 90
+                                            .swiper-slide 180
+                                            .swiper-slide 160
+                                            .swiper-slide 180
+                                .comparison-specification-swiper-wrapper 
+                                    p.title Тип обложки
+                                    .comparison-specification-swiper 
+                                        .swiper-wrapper 
+                                            .swiper-slide Мягкий переплёт
+                                            .swiper-slide Твердый переплёт
+                                            .swiper-slide Мягкий переплёт
+                                            .swiper-slide Твердый переплёт
+                                            .swiper-slide Мягкий переплёт
+                                            .swiper-slide Твердый переплёт
+                                            .swiper-slide Мягкий переплёт
+                                            .swiper-slide Твердый переплёт
+                        .accordion-item
+                            button(type='button').accordion-title 
+                                .title-wrapper
+                                    p.title Дизайн
+                                .icon 
+                                    <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1 1L7 7L13 1" stroke="#333435" stroke-linecap="square" stroke-linejoin="round"/>
+                                    </svg>
+                            .collapse.accordion-body
+                                .comparison-specification-swiper-wrapper 
+                                    p.title Формат
+                                    .comparison-specification-swiper 
+                                        .swiper-wrapper 
+                                            .swiper-slide А6+
+                                            .swiper-slide А5
+                                            .swiper-slide А6
+                                            .swiper-slide А5
+                                            .swiper-slide А6+
+                                            .swiper-slide А5
+                                            .swiper-slide А6
+                                            .swiper-slide А5
+                                .comparison-specification-swiper-wrapper 
+                                    p.title Размер
+                                    .comparison-specification-swiper 
+                                        .swiper-wrapper 
+                                            .swiper-slide 126х174 мм
+                                            .swiper-slide 126х174 мм
+                                            .swiper-slide 126х174 мм
+                                            .swiper-slide 126х174 мм
+                                            .swiper-slide 126х174 мм
+                                            .swiper-slide 126х174 мм
+                                            .swiper-slide 126х174 мм
+                                            .swiper-slide 126х174 мм
+                                .comparison-specification-swiper-wrapper 
+                                    p.title Количество листов
+                                    .comparison-specification-swiper 
+                                        .swiper-wrapper 
+                                            .swiper-slide 90
+                                            .swiper-slide 180
+                                            .swiper-slide 160
+                                            .swiper-slide 180
+                                            .swiper-slide 90
+                                            .swiper-slide 180
+                                            .swiper-slide 160
+                                            .swiper-slide 180
+                                .comparison-specification-swiper-wrapper 
+                                    p.title Тип обложки
+                                    .comparison-specification-swiper 
+                                        .swiper-wrapper 
+                                            .swiper-slide Мягкий переплёт
+                                            .swiper-slide Твердый переплёт
+                                            .swiper-slide Мягкий переплёт
+                                            .swiper-slide Твердый переплёт
+                                            .swiper-slide Мягкий переплёт
+                                            .swiper-slide Твердый переплёт
+                                            .swiper-slide Мягкий переплёт
+                                            .swiper-slide Твердый переплёт
+                        .accordion-item
+                            button(type='button').accordion-title 
+                                .title-wrapper
+                                    p.title Название ещё одной группы характеристик
+                                .icon 
+                                    <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1 1L7 7L13 1" stroke="#333435" stroke-linecap="square" stroke-linejoin="round"/>
+                                    </svg>
+                            .collapse.accordion-body
+                                .comparison-specification-swiper-wrapper 
+                                    p.title Обложка
+                                    .comparison-specification-swiper 
+                                        .swiper-wrapper 
+                                            .swiper-slide Искусственная кожа
+                                            .swiper-slide Прессованная бумага
+                                            .swiper-slide Натуральная кожа
+                                            .swiper-slide Прессованная бумага
+                                            .swiper-slide Искусственная кожа
+                                            .swiper-slide Прессованная бумага
+                                            .swiper-slide Натуральная кожа
+                                            .swiper-slide Прессованная бумага
+                                .comparison-specification-swiper-wrapper 
+                                    p.title Плотность бумаги
+                                    .comparison-specification-swiper 
+                                        .swiper-wrapper 
+                                            .swiper-slide 70 г/м²
+                                            .swiper-slide 80 г/м²
+                                            .swiper-slide 60 г/м²
+                                            .swiper-slide 80 г/м²
+                                            .swiper-slide 70 г/м²
+                                            .swiper-slide 80 г/м²
+                                            .swiper-slide 60 г/м²
+                                            .swiper-slide 80 г/м²
+                                .comparison-specification-swiper-wrapper 
+                                    p.title Количество листов
+                                    .comparison-specification-swiper 
+                                        .swiper-wrapper 
+                                            .swiper-slide 90
+                                            .swiper-slide 180
+                                            .swiper-slide 160
+                                            .swiper-slide 180
+                                            .swiper-slide 90
+                                            .swiper-slide 180
+                                            .swiper-slide 160
+                                            .swiper-slide 180
+                                .comparison-specification-swiper-wrapper 
+                                    p.title Тип обложки
+                                    .comparison-specification-swiper 
+                                        .swiper-wrapper 
+                                            .swiper-slide Мягкий переплёт
+                                            .swiper-slide Твердый переплёт
+                                            .swiper-slide Мягкий переплёт
+                                            .swiper-slide Твердый переплёт
+                                            .swiper-slide Мягкий переплёт
+                                            .swiper-slide Твердый переплёт
+                                            .swiper-slide Мягкий переплёт
+                                            .swiper-slide Твердый переплёт
+                .tab-content(data-tab='3')
+                    +comparison-fixed() 
+                    .comparison-products-swiper
+                        .navigation 
+                            button.btn.circle.l.products-prev
+                                <svg width="10" height="14" viewBox="0 0 10 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9 13L1 7L9 1" stroke="white" stroke-linecap="square" stroke-linejoin="round"/>
+                                </svg>
+                            button.btn.circle.l.products-next
+                                <svg width="10" height="14" viewBox="0 0 10 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 13L9 7L0.999999 1" stroke="white" stroke-linecap="square" stroke-linejoin="round"/>
+                                </svg>
+                        .swiper-wrapper 
+                            .swiper-slide 
+                                +product-card({
+                                    imgs: 
+                                    [
+                                        './img/products/1.jpg',
+                                        './img/products/2.jpg',
+                                        './img/products/3.jpg',
+                                        './img/products/1.jpg',
+                                        './img/products/2.jpg'
+                                    ],
+                                    art: 'Арт 68012', 
+                                    count: 'many', 
+                                    price: '116 ₽', 
+                                    descr: 'Набор для выращивания кристаллов, Фиолетовая змейка, Змейки, картонная коробка, 10+, Lori', 
+                                    badgeTitle: 'хит', 
+                                    badgeClass: 'warn',
+                                    comparison: true
+                                })
+                            .swiper-slide 
+                                +product-card({
+                                    imgs: 
+                                    [
+                                        './img/products/2.jpg',
+                                        './img/products/1.jpg',
+                                        './img/products/3.jpg',
+                                        './img/products/1.jpg',
+                                        './img/products/2.jpg'
+                                    ],
+                                    art: 'Арт 68012', 
+                                    count: 'many', 
+                                    price: '985 ₽', 
+                                    descr: 'Набор для выращивания кристаллов, Фиолетовая змейка, Змейки, картонная коробка, 10+, Lori', 
+                                    badgeTitle: 'хит', 
+                                    badgeClass: 'warn',
+                                    comparison: true
+                                })
+                            .swiper-slide 
+                                +product-card({
+                                    imgs: 
+                                    [
+                                        './img/products/1.jpg',
+                                        './img/products/2.jpg',
+                                        './img/products/3.jpg',
+                                        './img/products/1.jpg',
+                                        './img/products/2.jpg'
+                                    ],
+                                    art: 'Арт 68012', 
+                                    price: '158 ₽', 
+                                    descr: 'Набор для выращивания кристаллов, Фиолетовая змейка, Lori', 
+                                    badgeTitle: 'хит', 
+                                    badgeClass: 'warn',
+                                    comparison: true
+                                })
+                            .swiper-slide 
+                                +product-card({
+                                    imgs: 
+                                    [
+                                        './img/products/3.jpg',
+                                        './img/products/2.jpg',
+                                        './img/products/3.jpg',
+                                        './img/products/1.jpg',
+                                        './img/products/2.jpg'
+                                    ],
+                                    art: 'Арт 68012', 
+                                    count: 'many', 
+                                    price: '582 ₽', 
+                                    descr: 'Ежедневник датированный 2025 ESCALADA, #ИЛОН МАСК, формат А6+, 176 л., твёрдый переплёт, запаянный край, искусственная кожа "Тиволи глосс", блинтовое тиснение', 
+                                    badgeTitle: 'хит', 
+                                    badgeClass: 'warn',
+                                    comparison: true
+                                })
+                            .swiper-slide 
+                                +product-card({
+                                    imgs: 
+                                    [
+                                        './img/products/1.jpg',
+                                        './img/products/2.jpg',
+                                        './img/products/3.jpg',
+                                        './img/products/1.jpg',
+                                        './img/products/2.jpg'
+                                    ],
+                                    art: 'Арт 68012', 
+                                    count: 'many', 
+                                    price: '116 ₽', 
+                                    descr: 'Набор для выращивания кристаллов, Фиолетовая змейка, Змейки, картонная коробка, 10+, Lori', 
+                                    badgeTitle: 'хит', 
+                                    badgeClass: 'warn',
+                                    comparison: true
+                                })
+                            .swiper-slide 
+                                +product-card({
+                                    imgs: 
+                                    [
+                                        './img/products/2.jpg',
+                                        './img/products/1.jpg',
+                                        './img/products/3.jpg',
+                                        './img/products/1.jpg',
+                                        './img/products/2.jpg'
+                                    ],
+                                    art: 'Арт 68012', 
+                                    count: 'many', 
+                                    price: '985 ₽', 
+                                    descr: 'Набор для выращивания кристаллов, Фиолетовая змейка, Змейки, картонная коробка, 10+, Lori', 
+                                    badgeTitle: 'хит', 
+                                    badgeClass: 'warn',
+                                    comparison: true
+                                })
+                            .swiper-slide 
+                                +product-card({
+                                    imgs: 
+                                    [
+                                        './img/products/1.jpg',
+                                        './img/products/2.jpg',
+                                        './img/products/3.jpg',
+                                        './img/products/1.jpg',
+                                        './img/products/2.jpg'
+                                    ],
+                                    art: 'Арт 68012', 
+                                    price: '158 ₽', 
+                                    descr: 'Набор для выращивания кристаллов, Фиолетовая змейка, Lori', 
+                                    badgeTitle: 'хит', 
+                                    badgeClass: 'warn',
+                                    comparison: true
+                                })
+                            .swiper-slide 
+                                +product-card({
+                                    imgs: 
+                                    [
+                                        './img/products/3.jpg',
+                                        './img/products/2.jpg',
+                                        './img/products/3.jpg',
+                                        './img/products/1.jpg',
+                                        './img/products/2.jpg'
+                                    ],
+                                    art: 'Арт 68012', 
+                                    count: 'many', 
+                                    price: '582 ₽', 
+                                    descr: 'Ежедневник датированный 2025 ESCALADA, #ИЛОН МАСК, формат А6+, 176 л., твёрдый переплёт, запаянный край, искусственная кожа "Тиволи глосс", блинтовое тиснение', 
+                                    badgeTitle: 'хит', 
+                                    badgeClass: 'warn',
+                                    comparison: true
+                                })
+                        .comparison-products-pagination
+                    .comparison-type 
+                        .switch-wrapper
+                            input(type="checkbox" value="Предзаказ").checkbox-switch#checkbox-1
+                            label(for="checkbox-1").ios-switch Показывать только различия
+                    .accordion 
+                        .accordion-item
+                            button(type='button').accordion-title 
+                                .title-wrapper
+                                    p.title Технические характеристики
+                                .icon 
+                                    <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1 1L7 7L13 1" stroke="#333435" stroke-linecap="square" stroke-linejoin="round"/>
+                                    </svg>
+                            .collapse.accordion-body
+                                .comparison-specification-swiper-wrapper 
+                                    p.title Формат
+                                    .comparison-specification-swiper 
+                                        .swiper-wrapper 
+                                            .swiper-slide А6+
+                                            .swiper-slide А5
+                                            .swiper-slide А6
+                                            .swiper-slide А5
+                                            .swiper-slide А6+
+                                            .swiper-slide А5
+                                            .swiper-slide А6
+                                            .swiper-slide А5
+                                .comparison-specification-swiper-wrapper 
+                                    p.title Размер
+                                    .comparison-specification-swiper 
+                                        .swiper-wrapper 
+                                            .swiper-slide 126х174 мм
+                                            .swiper-slide 126х174 мм
+                                            .swiper-slide 126х174 мм
+                                            .swiper-slide 126х174 мм
+                                            .swiper-slide 126х174 мм
+                                            .swiper-slide 126х174 мм
+                                            .swiper-slide 126х174 мм
+                                            .swiper-slide 126х174 мм
+                                .comparison-specification-swiper-wrapper 
+                                    p.title Количество листов
+                                    .comparison-specification-swiper 
+                                        .swiper-wrapper 
+                                            .swiper-slide 90
+                                            .swiper-slide 180
+                                            .swiper-slide 160
+                                            .swiper-slide 180
+                                            .swiper-slide 90
+                                            .swiper-slide 180
+                                            .swiper-slide 160
+                                            .swiper-slide 180
+                                .comparison-specification-swiper-wrapper 
+                                    p.title Тип обложки
+                                    .comparison-specification-swiper 
+                                        .swiper-wrapper 
+                                            .swiper-slide Мягкий переплёт
+                                            .swiper-slide Твердый переплёт
+                                            .swiper-slide Мягкий переплёт
+                                            .swiper-slide Твердый переплёт
+                                            .swiper-slide Мягкий переплёт
+                                            .swiper-slide Твердый переплёт
+                                            .swiper-slide Мягкий переплёт
+                                            .swiper-slide Твердый переплёт
+                        .accordion-item
+                            button(type='button').accordion-title 
+                                .title-wrapper
+                                    p.title Материалы
+                                .icon 
+                                    <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1 1L7 7L13 1" stroke="#333435" stroke-linecap="square" stroke-linejoin="round"/>
+                                    </svg>
+                            .collapse.accordion-body
+                                .comparison-specification-swiper-wrapper 
+                                    p.title Обложка
+                                    .comparison-specification-swiper 
+                                        .swiper-wrapper 
+                                            .swiper-slide Искусственная кожа
+                                            .swiper-slide Прессованная бумага
+                                            .swiper-slide Натуральная кожа
+                                            .swiper-slide Прессованная бумага
+                                            .swiper-slide Искусственная кожа
+                                            .swiper-slide Прессованная бумага
+                                            .swiper-slide Натуральная кожа
+                                            .swiper-slide Прессованная бумага
+                                .comparison-specification-swiper-wrapper 
+                                    p.title Плотность бумаги
+                                    .comparison-specification-swiper 
+                                        .swiper-wrapper 
+                                            .swiper-slide 70 г/м²
+                                            .swiper-slide 80 г/м²
+                                            .swiper-slide 60 г/м²
+                                            .swiper-slide 80 г/м²
+                                            .swiper-slide 70 г/м²
+                                            .swiper-slide 80 г/м²
+                                            .swiper-slide 60 г/м²
+                                            .swiper-slide 80 г/м²
+                                .comparison-specification-swiper-wrapper 
+                                    p.title Количество листов
+                                    .comparison-specification-swiper 
+                                        .swiper-wrapper 
+                                            .swiper-slide 90
+                                            .swiper-slide 180
+                                            .swiper-slide 160
+                                            .swiper-slide 180
+                                            .swiper-slide 90
+                                            .swiper-slide 180
+                                            .swiper-slide 160
+                                            .swiper-slide 180
+                                .comparison-specification-swiper-wrapper 
+                                    p.title Тип обложки
+                                    .comparison-specification-swiper 
+                                        .swiper-wrapper 
+                                            .swiper-slide Мягкий переплёт
+                                            .swiper-slide Твердый переплёт
+                                            .swiper-slide Мягкий переплёт
+                                            .swiper-slide Твердый переплёт
+                                            .swiper-slide Мягкий переплёт
+                                            .swiper-slide Твердый переплёт
+                                            .swiper-slide Мягкий переплёт
+                                            .swiper-slide Твердый переплёт
+                        .accordion-item
+                            button(type='button').accordion-title 
+                                .title-wrapper
+                                    p.title Дизайн
+                                .icon 
+                                    <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1 1L7 7L13 1" stroke="#333435" stroke-linecap="square" stroke-linejoin="round"/>
+                                    </svg>
+                            .collapse.accordion-body
+                                .comparison-specification-swiper-wrapper 
+                                    p.title Формат
+                                    .comparison-specification-swiper 
+                                        .swiper-wrapper 
+                                            .swiper-slide А6+
+                                            .swiper-slide А5
+                                            .swiper-slide А6
+                                            .swiper-slide А5
+                                            .swiper-slide А6+
+                                            .swiper-slide А5
+                                            .swiper-slide А6
+                                            .swiper-slide А5
+                                .comparison-specification-swiper-wrapper 
+                                    p.title Размер
+                                    .comparison-specification-swiper 
+                                        .swiper-wrapper 
+                                            .swiper-slide 126х174 мм
+                                            .swiper-slide 126х174 мм
+                                            .swiper-slide 126х174 мм
+                                            .swiper-slide 126х174 мм
+                                            .swiper-slide 126х174 мм
+                                            .swiper-slide 126х174 мм
+                                            .swiper-slide 126х174 мм
+                                            .swiper-slide 126х174 мм
+                                .comparison-specification-swiper-wrapper 
+                                    p.title Количество листов
+                                    .comparison-specification-swiper 
+                                        .swiper-wrapper 
+                                            .swiper-slide 90
+                                            .swiper-slide 180
+                                            .swiper-slide 160
+                                            .swiper-slide 180
+                                            .swiper-slide 90
+                                            .swiper-slide 180
+                                            .swiper-slide 160
+                                            .swiper-slide 180
+                                .comparison-specification-swiper-wrapper 
+                                    p.title Тип обложки
+                                    .comparison-specification-swiper 
+                                        .swiper-wrapper 
+                                            .swiper-slide Мягкий переплёт
+                                            .swiper-slide Твердый переплёт
+                                            .swiper-slide Мягкий переплёт
+                                            .swiper-slide Твердый переплёт
+                                            .swiper-slide Мягкий переплёт
+                                            .swiper-slide Твердый переплёт
+                                            .swiper-slide Мягкий переплёт
+                                            .swiper-slide Твердый переплёт
+                        .accordion-item
+                            button(type='button').accordion-title 
+                                .title-wrapper
+                                    p.title Название ещё одной группы характеристик
+                                .icon 
+                                    <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1 1L7 7L13 1" stroke="#333435" stroke-linecap="square" stroke-linejoin="round"/>
+                                    </svg>
+                            .collapse.accordion-body
+                                .comparison-specification-swiper-wrapper 
+                                    p.title Обложка
+                                    .comparison-specification-swiper 
+                                        .swiper-wrapper 
+                                            .swiper-slide Искусственная кожа
+                                            .swiper-slide Прессованная бумага
+                                            .swiper-slide Натуральная кожа
+                                            .swiper-slide Прессованная бумага
+                                            .swiper-slide Искусственная кожа
+                                            .swiper-slide Прессованная бумага
+                                            .swiper-slide Натуральная кожа
+                                            .swiper-slide Прессованная бумага
+                                .comparison-specification-swiper-wrapper 
+                                    p.title Плотность бумаги
+                                    .comparison-specification-swiper 
+                                        .swiper-wrapper 
+                                            .swiper-slide 70 г/м²
+                                            .swiper-slide 80 г/м²
+                                            .swiper-slide 60 г/м²
+                                            .swiper-slide 80 г/м²
+                                            .swiper-slide 70 г/м²
+                                            .swiper-slide 80 г/м²
+                                            .swiper-slide 60 г/м²
+                                            .swiper-slide 80 г/м²
+                                .comparison-specification-swiper-wrapper 
+                                    p.title Количество листов
+                                    .comparison-specification-swiper 
+                                        .swiper-wrapper 
+                                            .swiper-slide 90
+                                            .swiper-slide 180
+                                            .swiper-slide 160
+                                            .swiper-slide 180
+                                            .swiper-slide 90
+                                            .swiper-slide 180
+                                            .swiper-slide 160
+                                            .swiper-slide 180
+                                .comparison-specification-swiper-wrapper 
+                                    p.title Тип обложки
+                                    .comparison-specification-swiper 
+                                        .swiper-wrapper 
+                                            .swiper-slide Мягкий переплёт
+                                            .swiper-slide Твердый переплёт
+                                            .swiper-slide Мягкий переплёт
+                                            .swiper-slide Твердый переплёт
+                                            .swiper-slide Мягкий переплёт
+                                            .swiper-slide Твердый переплёт
+                                            .swiper-slide Мягкий переплёт
+                                            .swiper-slide Твердый переплёт

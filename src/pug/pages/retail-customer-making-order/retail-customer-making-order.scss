@@ -103,6 +103,15 @@
         @media (max-width: $tab-sm) {
           @include s(gap, 20);
         }
+        .selector-btn {
+          .selector-title {
+            .text-content {
+              p {
+                color: var(--gray-light-color);
+              }
+            }
+          }
+        }
       }
       .radio-wrapper {
         display: grid;
