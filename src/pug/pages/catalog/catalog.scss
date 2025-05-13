@@ -384,6 +384,12 @@
         color: #fff;
       }
     }
+
+    &.outline:hover {
+      span {
+        color: #fff;
+      }
+    }
   }
 }
 
@@ -637,6 +643,13 @@
       margin-bottom: 1lh;
     }
   }
+
+  @media (max-width: $mob) {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 0;
+    border-bottom: unset;
+  }
 }
 
 .catalog__favorites {
@@ -645,6 +658,7 @@
   @include s(padding-bottom, 48);
   @include s(margin-bottom, 28);
   border-bottom: 1px solid #dcdde1;
+  
 
   a {
     border: 1px solid #dcdde1;
@@ -671,6 +685,17 @@
     &.active {
       color: var(--violet-color);
       border-color: var(--violet-color);
+    }
+  }
+
+  @media (max-width: $mob) {
+    overflow-x: scroll;
+    padding-bottom: 0;
+    border-bottom: unset;
+    width: calc(100% + calc(20 / var(--screensize) *100vw));
+
+    a {
+      flex-shrink: 0;
     }
   }
 }

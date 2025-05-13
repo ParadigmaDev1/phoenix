@@ -21,7 +21,7 @@
   .modal-content-wrapper {
     max-height: unset;
     height: 100vh;
-    @include s(max-width, 546);
+    @include s(max-width, 391);
     // @include borr(12);
     @include padding(48);
     // padding: 0;
@@ -87,8 +87,10 @@
       text-transform: none;
     }
     .accordion-item {
+      border-bottom: 1px solid #DCDDE1;
       .title-wrapper {
         justify-content: space-between;
+        width: 100%;
 
         svg {
           @include s(width, 24);
