@@ -32,7 +32,9 @@
         @include s(padding-left, 30);
         @include s(padding-right, 25);
         @include s(gap, 10);
-        margin-top: 0;
+        @media (max-width: $mob) {
+          margin-top: 0;
+        }
       }
     }
   }

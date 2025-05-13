@@ -18,6 +18,9 @@
     }
   }
 
+  .catalog__sidebar__filters__buttons {
+    @include s(padding-bottom, 40);
+  }
   .modal-content-wrapper {
     max-height: unset;
     height: 100vh;
@@ -35,7 +38,7 @@
         height: 100%;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-start;
       }
     }
     .title {
