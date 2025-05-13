@@ -1,0 +1,103 @@
+@use "src/scss/common/files/mixins" as *;
+
+.edit-current-cart {
+  .close-modal-wrapper {
+    @media (max-width: $tab-sm) {
+      top: 0 !important;
+    }
+    .close-modal {
+      margin-top: calc(-50 / var(--screensize) * 100vw) !important;
+      margin-right: calc(-50 / var(--screensize) * 100vw) !important;
+      @media (max-width: $tab-sm) {
+        margin: 0 !important;
+        @include s(top, 0);
+        @include s(right, 0);
+      }
+    }
+  }
+
+  .btns {
+    display: flex;
+    @include s(gap, 12);
+
+    @media (max-width: $mob) {
+      flex-direction: column;
+    }
+
+    .btn {
+      width: fit-content;
+      @include s(min-width, 191);
+
+      &.submit-btn.outline.gray {
+        @include s(padding-left, 30);
+        @include s(padding-right, 25);
+        @include s(gap, 10);
+        margin-top: 0;
+      }
+    }
+  }
+  .modal-content-wrapper {
+    @include s(max-width, 546);
+    // @include borr(12);
+    @include padding(48);
+    // padding: 0;
+    position: relative;
+    overflow: auto;
+    @media (max-width: $tab-sm) {
+      @include padding(20);
+    }
+    .modal-content {
+      @media (max-width: $tab-sm) {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+    }
+    .title {
+      @include h6;
+      text-transform: uppercase;
+    }
+    .form {
+      .inputs {
+        display: flex;
+        flex-direction: column;
+        @include s(gap, 20);
+        @include s(margin-top, 20);
+        @media (max-width: $tab-sm) {
+          @include s(gap, 12);
+        }
+        .input-wrapper {
+          display: flex;
+          flex-direction: column;
+          @include s(gap, 12);
+          p {
+            font-weight: 400;
+            @include s(font-size, 16);
+            line-height: 120%;
+            color: var(--gray-light-color);
+          }
+        }
+        .row {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          @include s(gap, 20);
+        }
+      }
+    }
+    .submit-btn {
+      width: fit-content;
+      justify-content: center;
+      @include s(margin-top, 28);
+      @include padding(0, 48);
+      @media (max-width: $tab-sm) {
+        width: 100%;
+        @include s(margin-top, 20);
+      }
+      p {
+        text-transform: uppercase;
+        @include descr-m;
+      }
+    }
+  }
+}

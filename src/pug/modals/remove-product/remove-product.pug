@@ -1,0 +1,18 @@
+mixin remove-product()
+    .remove-product.modal
+        .modal-content-wrapper
+            .close-modal-wrapper
+                button.btn.close-modal 
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5.05026 14.9497L14.9498 5.05025" stroke="#343176"/>
+                        <path d="M14.9498 14.9497L5.05026 5.05025" stroke="#343176"/>
+                    </svg>
+            .modal-content
+                form.form
+                    p.title вы действительно хотите удалить все товары из корзины?
+                    p.descr Это действие будет невозможно отменить.
+                    .remove-product__btns 
+                        button.btn.outline.m
+                            p Отменить
+                        button.btn.primary.m
+                            p Удалить
