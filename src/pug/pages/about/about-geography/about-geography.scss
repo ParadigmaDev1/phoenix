@@ -20,14 +20,25 @@
       margin-left: auto;
       margin-right: auto;
       @media (max-width: $tab-sm) {
-        @include s(width, 320);
-        @include s(height, 150);
-        @include s(margin-top, 24);
+        @include s(width, 360);
+        @include s(height, 231);
+        @include s(margin-left, -20);
+        @include s(margin-right, -20);
+        margin-top: 0;
       }
       img {
         width: 100%;
         height: 100%;
         object-fit: cover;
+        @media (max-width: $tab-sm) {
+          display: none;
+        }
+        &.mob {
+          display: none;
+          @media (max-width: $tab-sm) {
+            display: block;
+          }
+        }
       }
     }
     .content {
@@ -41,7 +52,7 @@
       @media (max-width: $tab-sm) {
         grid-template-columns: repeat(1, 1fr);
         @include s(gap, 28);
-        @include s(margin-top, 28);
+        @include s(margin-top, -48);
       }
       .col {
         display: flex;
