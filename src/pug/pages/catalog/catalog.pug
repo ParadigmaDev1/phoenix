@@ -397,10 +397,9 @@ mixin catalog()
                 span применить
 
 
-
         .catalog__content 
           .catalog__content__head 
-            button(type="button").btn.primary.filter-btn
+            button(type="button" data-modal-target="filter-modal" id="filterBtn").btn.primary.filter-btn
               <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g clip-path="url(#clip0_10710_9779)">
                   <path d="M1 0.800122H17L10.6 10.0001V14.4001L7.4 16.8001V10.0001L1 0.800122Z" stroke="white"/>

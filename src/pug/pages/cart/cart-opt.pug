@@ -2,6 +2,64 @@ mixin cart-opt()
 	section.cart-page 
 		.container 
 			h1 Корзина
+
+			.cart__choose-mob
+				.selector.tabs-selector.product-card-opt-selector
+					button(type='button').selector-btn
+						.selector-title
+							<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M15.4287 15.5L13.8486 3.73727H2.15137L0.571289 15.5H15.4287Z" fill="white" stroke="#333435"/>
+								<path d="M4.74414 3.95697C4.74414 3.50022 4.83051 3.04838 4.99787 2.62743C5.16522 2.20651 5.41 1.82534 5.71727 1.5052C6.02451 1.18511 6.38814 0.932338 6.78683 0.760283C7.18546 0.58825 7.61196 0.5 8.04214 0.5C8.47233 0.5 8.89882 0.58825 9.29746 0.760282C9.69615 0.932338 10.0598 1.18511 10.367 1.5052C10.6743 1.82534 10.9191 2.20651 11.0864 2.62743C11.2538 3.04838 11.3401 3.50022 11.3401 3.95697" stroke="#333435"/>
+								<path d="M11.5176 3.74188L11.5176 6.19349" stroke="#333435"/>
+								<path d="M4.58008 3.70004L4.58008 6.15165" stroke="#333435"/>
+							</svg>
+							.text-content
+								input(type="radio" name="cart" )
+								p Основная
+						.icon
+							<svg width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M1 1L10 11L19 1" stroke="#333435"/>
+							</svg>
+					.selector-content
+						.selector-list
+							label.radio-item
+								<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M15.4287 15.5L13.8486 3.73727H2.15137L0.571289 15.5H15.4287Z" fill="white" stroke="#333435"/>
+									<path d="M4.74414 3.95697C4.74414 3.50022 4.83051 3.04838 4.99787 2.62743C5.16522 2.20651 5.41 1.82534 5.71727 1.5052C6.02451 1.18511 6.38814 0.932338 6.78683 0.760283C7.18546 0.58825 7.61196 0.5 8.04214 0.5C8.47233 0.5 8.89882 0.58825 9.29746 0.760282C9.69615 0.932338 10.0598 1.18511 10.367 1.5052C10.6743 1.82534 10.9191 2.20651 11.0864 2.62743C11.2538 3.04838 11.3401 3.50022 11.3401 3.95697" stroke="#333435"/>
+									<path d="M11.5176 3.74188L11.5176 6.19349" stroke="#333435"/>
+									<path d="M4.58008 3.70004L4.58008 6.15165" stroke="#333435"/>
+								</svg>
+								input(type='radio' name="cart" value="Основная")
+								p Основная
+							label.radio-item
+								<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M15.4287 15.5L13.8486 3.73727H2.15137L0.571289 15.5H15.4287Z" fill="white" stroke="#333435"/>
+									<path d="M4.74414 3.95697C4.74414 3.50022 4.83051 3.04838 4.99787 2.62743C5.16522 2.20651 5.41 1.82534 5.71727 1.5052C6.02451 1.18511 6.38814 0.932338 6.78683 0.760283C7.18546 0.58825 7.61196 0.5 8.04214 0.5C8.47233 0.5 8.89882 0.58825 9.29746 0.760282C9.69615 0.932338 10.0598 1.18511 10.367 1.5052C10.6743 1.82534 10.9191 2.20651 11.0864 2.62743C11.2538 3.04838 11.3401 3.50022 11.3401 3.95697" stroke="#333435"/>
+									<path d="M11.5176 3.74188L11.5176 6.19349" stroke="#333435"/>
+									<path d="M4.58008 3.70004L4.58008 6.15165" stroke="#333435"/>
+								</svg>
+								input(type='radio' name="cart" value="Предзаказ")
+								p На Кудринскую
+						button(type="button" data-modal-target="add-new-cart").btn.outline-fill.catalog__content__bottom__more
+							<svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M7.5 14.5H21.5" stroke="#343176"/>
+								<path d="M14.5 21.5L14.5 7.5" stroke="#343176"/>
+							</svg>
+							p Добавить ещё
+				button(type="button").cart__choose-mob-edit
+					<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<g clip-path="url(#clip0_9089_166897)">
+						<path d="M18.6516 5.64192L5.18758 19.106L0.964966 19.1053V14.8847L14.4297 1.42L18.6516 5.64192Z" stroke="#343176"/>
+						<path d="M11.3701 4L16.1825 8.60957" stroke="#343176"/>
+						<path d="M2.37012 13L7.18246 17.6096" stroke="#343176"/>
+						</g>
+						<defs>
+						<clipPath id="clip0_9089_166897">
+						<rect width="20" height="20" fill="white"/>
+						</clipPath>
+						</defs>
+					</svg>
+
 			.cart__list 
 				.cart__list__item
 					.top 
@@ -25,7 +83,7 @@ mixin cart-opt()
 					.cart__list__item__row 
 						p К оплате
 						span 975 124,87 ₽
-				.cart__list__item.add-new-cart(data-modal-target="add-new-cart")
+				button.cart__list__item.add-new-cart(type="button" data-modal-target="add-new-cart")
 					<svg width="48" height="47" viewBox="0 0 48 47" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<path d="M13.2324 11.394C13.2324 9.96339 13.5142 8.54677 14.0617 7.22505C14.6092 5.90333 15.4116 4.70238 16.4232 3.69078C17.4348 2.67918 18.6358 1.87673 19.9575 1.32926C21.2792 0.781782 22.6958 0.5 24.1264 0.5C25.5571 0.5 26.9737 0.781782 28.2954 1.32926C29.6171 1.87673 30.8181 2.67918 31.8297 3.69078C32.8413 4.70238 33.6437 5.90333 34.1912 7.22505C34.7387 8.54677 35.0204 9.96339 35.0204 11.394" stroke="#343176"/>
 						<path d="M35.022 10.7293L35.022 15.125" stroke="#343176"/>

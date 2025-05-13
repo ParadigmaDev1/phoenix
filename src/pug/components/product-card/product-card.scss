@@ -778,9 +778,10 @@
 
 .product-card-cart {
   flex-direction: row;
-  flex-wrap: wrap;
+
 
   @media (max-width: $mob) {
+    flex-wrap: wrap;
     @include s(padding-bottom, 28);
     border-bottom: 1px solid #DCDDE1;
     .product-info-hor {

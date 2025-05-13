@@ -111,4 +111,18 @@ export const accordionFunc = () => {
       document.querySelectorAll(".accordion-item").forEach(updateMaxHeight);
     }, 100);
   });
+
+  const filterButton = document.getElementById("filterBtn");
+  if (filterButton) {
+    let resizeTimeout;
+    filterButton.addEventListener("click", function() {
+      clearTimeout(resizeTimeout);
+      resizeTimeout = setTimeout(() => {
+        document.querySelectorAll(".accordion-item").forEach(function (el) {
+          el.style.maxHeight = el.querySelector(".accordion-title").scrollHeight + 'px';
+        });
+        console.log('updated')
+      }, 100);
+    })
+  }
 };
