@@ -45,8 +45,10 @@
   "dependencies": {
     "@fancyapps/ui": "^5.0.22",
     "air-datepicker": "^3.5.3",
+    "gulp-cached": "^1.1.1",
     "gulp-htmlmin": "^5.0.1",
     "gulp-pug": "^5.0.0",
+    "gulp-remember": "^1.0.1",
     "gulp-style-aliases": "^1.1.11",
     "gulp-version-number": "^0.2.4",
     "imask": "^7.1.3",
