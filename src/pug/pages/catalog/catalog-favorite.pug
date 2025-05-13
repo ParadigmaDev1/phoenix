@@ -237,7 +237,27 @@ mixin catalog-favorite()
                     name: 'filter-by',
                     required: true,
                     defaultRequired: true
-                },)
+                },).--only-desk
+              +selector({
+                title: 'По: 15', 
+                items: [
+                    {
+                        title: 'По: 15', 
+                        value: 0
+                    },
+                    {
+                        title: 'По: 20', 
+                        value: 1
+                    },
+                    {
+                        title: 'По: 30', 
+                        value: 2
+                    },
+                    ],
+                    name: 'filter-by-mob',
+                    required: true,
+                    defaultRequired: true
+                },).--only-mob
               .catalog__content__head__view 
                 button(type="button" data-view="cards").active 
                   <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
