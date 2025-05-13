@@ -11,14 +11,14 @@ mixin filter-modal()
                     .catalog__sidebar__filters
                         h6 Фильтр
                         .checkbox-wrapper 
-                            input(type="checkbox" value="Акции").checkbox#checkbox-1
-                            label(for="checkbox-1").ios-switch Акции
+                            input(type="checkbox" value="Акции").checkbox#checkbox-10
+                            label(for="checkbox-10").ios-switch Акции
                         .checkbox-wrapper 
-                            input(type="checkbox" value="Распродажи").checkbox#checkbox-2
-                            label(for="checkbox-2").ios-switch Распродажи
+                            input(type="checkbox" value="Распродажи").checkbox#checkbox-11
+                            label(for="checkbox-11").ios-switch Распродажи
                         .checkbox-wrapper 
-                            input(type="checkbox" value="Только товары в наличии").checkbox#checkbox-3
-                            label(for="checkbox-3").ios-switch Только товары в наличии
+                            input(type="checkbox" value="Только товары в наличии").checkbox#checkbox-12
+                            label(for="checkbox-12").ios-switch Только товары в наличии
                         label.filter-search 
                             input(type="text" placeholder="Поиск по фильтрам")
                             <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -99,3 +99,110 @@ mixin filter-modal()
                                             <path d="M6.24219 10.5151L9.83577 14.3333L16.424 7.33325" stroke="#343176" stroke-linecap="square" stroke-linejoin="round"/>
                                         </svg>
                                         span(style="background-color:#E1E3E7")
+
+                        .accordion-item
+                            button(type="button").accordion-title
+                                .title-wrapper 
+                                    p.title Количество листов
+                                    .icon 
+                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M2 5L6 9L10 5" stroke="#343176" stroke-linecap="square" stroke-linejoin="round"/>
+                                        </svg>
+                            .accordion-body.collapse 
+                                .checkbox-group 
+                                    label.catalog-radio-wrap
+                                        input(type="radio")
+                                        p 24
+                                    label.catalog-radio-wrap
+                                        input(type="radio")
+                                        p 48
+                                    label.catalog-radio-wrap
+                                        input(type="radio")
+                                        p 64
+                                    label.catalog-radio-wrap
+                                        input(type="radio")
+                                        p 128
+                        .accordion-item
+                            button(type="button").accordion-title
+                                .title-wrapper 
+                                    p.title Количество листов
+                                    .icon 
+                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M2 5L6 9L10 5" stroke="#343176" stroke-linecap="square" stroke-linejoin="round"/>
+                                        </svg>
+                            .accordion-body.collapse 
+                                .checkbox-group 
+                                    label.catalog-radio-wrap
+                                        input(type="radio")
+                                        p 24
+                                    label.catalog-radio-wrap
+                                        input(type="radio")
+                                        p 48
+                                    label.catalog-radio-wrap
+                                        input(type="radio")
+                                        p 64
+                                    label.catalog-radio-wrap
+                                        input(type="radio")
+                                        p 128
+                        .accordion-item
+                            button(type="button").accordion-title
+                                .title-wrapper 
+                                    p.title Размер
+                                    .icon 
+                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M2 5L6 9L10 5" stroke="#343176" stroke-linecap="square" stroke-linejoin="round"/>
+                                        </svg>
+                            .accordion-body.collapse 
+                                .checkbox-group 
+                                    label.catalog-radio-wrap
+                                        input(type="radio")
+                                        p 24
+                                    label.catalog-radio-wrap
+                                        input(type="radio")
+                                        p 48
+                                    label.catalog-radio-wrap
+                                        input(type="radio")
+                                        p 64
+                                    label.catalog-radio-wrap
+                                        input(type="radio")
+                                        p 128
+                        .accordion-item
+                            button(type="button").accordion-title
+                                .title-wrapper 
+                                    p.title Материал
+                                    .icon 
+                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M2 5L6 9L10 5" stroke="#343176" stroke-linecap="square" stroke-linejoin="round"/>
+                                        </svg>
+                            .accordion-body.collapse 
+                                .checkbox-group 
+                                    label.catalog-radio-wrap
+                                        input(type="radio")
+                                        p 24
+                                    label.catalog-radio-wrap
+                                        input(type="radio")
+                                        p 48
+                                    label.catalog-radio-wrap
+                                        input(type="radio")
+                                        p 64
+                                    label.catalog-radio-wrap
+                                        input(type="radio")
+                                        p 128
+                    .catalog__sidebar__filters__buttons 
+                        button(type="button").btn.outline.gray
+                            <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2.25 16L16.25 2M16.25 16L2.25 2" stroke="#A8A9B0"/>
+                            </svg>
+                            span очистить
+                        button(type="button").btn.primary
+                            <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_10733_971)">
+                            <path d="M1.25 9L6.89706 15L17.25 4" stroke="white" stroke-linecap="square" stroke-linejoin="round"/>
+                            </g>
+                            <defs>
+                            <clipPath id="clip0_10733_971">
+                            <rect width="18" height="18" fill="white" transform="translate(0.25)"/>
+                            </clipPath>
+                            </defs>
+                            </svg>
+                            span применить
