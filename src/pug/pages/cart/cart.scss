@@ -193,7 +193,7 @@
 	box-shadow: 0px 4px 28px rgba(0, 0, 0, 0.1);
 	align-self: flex-start;
 	position: sticky;
-	@include s(top, 120);
+	@include s(top, 140);
 
 	@media (max-width: $mob) {
 		padding: 0;
