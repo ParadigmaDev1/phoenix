@@ -1,5 +1,30 @@
 mixin product-card-cart(data)
     a(href='#').product-card.product-card-cart&attributes(attributes)
+        .product-card-cart__handlers
+            label.custom-checkbox-wrapper
+                input(type="checkbox").custom-checkbox
+                p
+            .features-list
+                button.btn
+                    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14 25.4666V1.99997" stroke="#333435" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M9.59844 25.4663L18.3984 25.4663" stroke="#333435" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M3 4.19997L25 4.19997" stroke="#333435" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M17.5046 14.207L21.5 5.22967L25.4954 14.2069C25.4512 14.6687 25.0906 15.2138 24.3836 15.6797C23.6457 16.1659 22.6169 16.5 21.5 16.5C20.3705 16.5 19.3421 16.1655 18.6081 15.6801C17.9056 15.2155 17.5483 14.6705 17.5046 14.207Z" stroke="#333435"/>
+                        <path d="M2.50458 14.207L6.5 5.22967L10.4954 14.2069C10.4512 14.6687 10.0906 15.2138 9.38362 15.6797C8.64572 16.1659 7.61691 16.5 6.5 16.5C5.37047 16.5 4.34212 16.1655 3.60814 15.6801C2.90558 15.2155 2.54827 14.6705 2.50458 14.207Z" stroke="#333435"/>
+                    </svg>
+                button.btn
+                    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3.73738 5.74745C1.41975 8.07668 1.422 11.8248 3.73738 14.1563L13.9938 24.488C17.4165 21.048 20.8395 17.6079 24.2618 14.1678C26.5794 11.8386 26.5794 8.08839 24.2618 5.75895C21.9441 3.4295 18.2126 3.42971 15.8952 5.75895L14.0055 7.65804L12.104 5.74693C9.78635 3.41769 6.05486 3.41769 3.73743 5.74693L3.73738 5.74745Z" stroke="#333435"/>
+                    </svg>
+            button(type="button").remove-btn
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M16.3025 2.99548L15.5242 14.6703C15.4367 15.9835 14.3461 17.0042 13.03 17.0043H6.96948C5.7356 17.0042 4.69943 16.1076 4.50269 14.9135L4.47534 14.6703L3.69702 2.99548H16.3025Z" stroke="#A8A9B0"/>
+                    <path d="M1.21484 2.97907L18.9648 2.97907" stroke="#A8A9B0"/>
+                    <line x1="10.0315" y1="7.0816" x2="10.0315" y2="12.9185" stroke="#A8A9B0"/>
+                    <line x1="12.6885" y1="7.08154" x2="12.6885" y2="12.9184" stroke="#A8A9B0"/>
+                    <line x1="7.42578" y1="7.08154" x2="7.42578" y2="12.9184" stroke="#A8A9B0"/>
+                </svg>
         .product-card-swiper-wrapper 
             .product-card-features 
                 label.custom-checkbox-wrapper
@@ -71,7 +96,25 @@ mixin product-card-cart(data)
                 .top 
                     span Арт 68012
                     span штрихкод 4606008612533
+                    if data.count === 'many'
+                        p.count.many Много
+                    else if data.count === 'no'
+                        p.count.no Нет в наличии
+                    else 
+                        p.count.few Мало
                 p.descr #{data.descr}
+
+                .price-wrapper 
+                    p.price #{data.price}
+                    p.oldPrice #{data.oldPrice}
+                    button(type="button").remove-btn
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16.3025 2.99548L15.5242 14.6703C15.4367 15.9835 14.3461 17.0042 13.03 17.0043H6.96948C5.7356 17.0042 4.69943 16.1076 4.50269 14.9135L4.47534 14.6703L3.69702 2.99548H16.3025Z" stroke="#A8A9B0"/>
+                            <path d="M1.21484 2.97907L18.9648 2.97907" stroke="#A8A9B0"/>
+                            <line x1="10.0315" y1="7.0816" x2="10.0315" y2="12.9185" stroke="#A8A9B0"/>
+                            <line x1="12.6885" y1="7.08154" x2="12.6885" y2="12.9184" stroke="#A8A9B0"/>
+                            <line x1="7.42578" y1="7.08154" x2="7.42578" y2="12.9184" stroke="#A8A9B0"/>
+                        </svg>
                 .info 
                     p Дизайн:&nbsp; 
                         span Киберпанк
@@ -119,7 +162,7 @@ mixin product-card-cart(data)
                         span 1 короб, 1 мини упаковка и 5 шт
                 else if data.count === 'no'
                     p.count.no Нет в наличии
-                    button.btn.outline.account-btn.l
+                    button.btn.outline.account-btn.l(data-modal-target="analogues-modal")
                         p выберите аналог
                 else 
                     p.count.few Мало
@@ -135,7 +178,7 @@ mixin product-card-cart(data)
                                 <path d="M7.50684 14.5L7.50684 0.5" stroke="#333435"/>
                             </svg>
                     if data.errorMsg 
-                        button.btn.outline.account-btn.l
+                        button.btn.outline.account-btn.l(data-modal-target="analogues-modal")
                             p выберите аналог
                         p.error-msg На складе не достаточно товаров! Измените кол-во и/или замените аналогом
                     .nds

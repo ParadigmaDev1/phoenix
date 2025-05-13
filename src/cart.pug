@@ -1,7 +1,7 @@
 extends ./pug/templates/template.pug
 
 block head 
-  +head(["header", "image-block", "crumbs", "cart", "product-swiper", "selector", "footer-alert", "footer", "mobile-menu", "accordion-item", "catalog-menu", "product-card", "product-card-cart"])
+  +head(["header", "image-block", "crumbs", "cart", "product-swiper", "selector", "footer-alert", "footer", "mobile-menu", "accordion-item", "catalog-menu", "product-card", "product-card-cart", "analogues-modal"])
 block header 
   +header().dark
   +mobile-menu()
@@ -11,5 +11,6 @@ block content
   +cart()
 block footer 
   +footer()
-block modals 
+block modals
+  +analogues-modal()
   

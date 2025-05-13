@@ -772,6 +772,34 @@
 
 .product-card-cart {
   flex-direction: row;
+  flex-wrap: wrap;
+
+  @media (max-width: $mob) {
+    @include s(padding-bottom, 28);
+    border-bottom: 1px solid #DCDDE1;
+    .product-info-hor {
+      @include s(max-width, 207);
+    }
+
+    .product-card-swiper-wrapper {
+      height: calc(93 / var(--screensize) * 100vw);
+      min-height: calc(93 / var(--screensize) * 100vw);
+
+      .product-card-features {
+        display: none;
+      }
+    }
+
+    .price-wrapper {
+      .remove-btn {
+        display: none;
+      }
+    }
+
+    .product-info-hor .right-side .counter {
+      display: flex;
+    }
+  }
 
   &.no {
     .product-card-swiper-wrapper {
@@ -878,6 +906,28 @@
         @include s(height, 16);
         flex-shrink: 0;
         @include s(margin-right, 15);
+      }
+    }
+  }
+}
+
+
+.product-card-cart__handlers {
+  display: none;
+
+  @media (max-width: $mob) {
+    display: flex;
+    justify-content: space-between;
+    @include s(width, 320);
+    flex-shrink: 0;
+    @include s(margin-bottom, 16);
+
+    .features-list {
+      .btn {
+        svg {
+          @include s(width, 19);
+          @include s(height, 19);
+        }
       }
     }
   }

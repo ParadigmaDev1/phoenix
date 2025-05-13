@@ -29,7 +29,7 @@ import { wholesaleMakingOrder } from "../pug/pages/wholesale-making-order/wholes
 import { retailCustomerProductInfo } from "../pug/pages/retail-customer-product/retail-customer-product-info/retail-customer-product-info.js";
 import { fixedOrderForm } from "../pug/pages/retail-customer-product/fixed-order-form/fixed-order-form.js";
 import "../pug/pages/catalog/catalog.js";
-
+import "../pug/pages/cart/cart.js";
 document.addEventListener("DOMContentLoaded", () => {
   header();
   selector();
