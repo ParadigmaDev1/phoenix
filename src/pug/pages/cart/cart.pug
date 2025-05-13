@@ -6,17 +6,16 @@ mixin cart()
 					h1 Корзина
 					.cart__actions 
 						.cart__choose 
-							p.choose-num Выбрано товаров:&nbsp;
+							p.choose-num.hidden Выбрано товаров:&nbsp;
 								span 2
-							label.custom-checkbox-wrapper
+							label.custom-checkbox-wrapper.select-all
 								input(type="checkbox").custom-checkbox
 								p Выбрать все
-							button(type="button").remove-all 
+							button(type="button").remove-all.hidden 
 								<svg width="20" height="22" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path d="M14.8492 16.8492L4.94975 6.94973M4.94975 16.8492L14.8492 6.94973" stroke="#343176"/>
 								</svg>
 								span Удалить выбранные
-								span Удалить
 						button(type="button").remove-all
 							<svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path d="M16.9004 3.89496L16.1221 15.5698C16.0346 16.883 14.944 17.9036 13.6279 17.9037H7.56738C6.3335 17.9037 5.29733 17.0071 5.10059 15.8129L5.07324 15.5698L4.29492 3.89496H16.9004Z" stroke="#343176"/>
