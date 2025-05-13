@@ -121,6 +121,27 @@
             height: 100%;
             object-fit: cover;
           }
+          .btn {
+            position: absolute;
+            @include s(bottom, 20);
+            @include s(right, 20);
+            background: var(--white-color);
+            @include s(height, 36);
+            @include s(gap, 12);
+            @include padding(0, 16);
+            display: none;
+            @media (max-width: $tab-sm) {
+              display: flex;
+            }
+            p {
+              text-transform: uppercase;
+              @include descr-s;
+            }
+            svg {
+              @include s(height, 12);
+              @include s(width, 6);
+            }
+          }
         }
         .pins {
           position: absolute;

@@ -10,6 +10,7 @@
   @media (max-width: $tab-sm) {
     @include s(height, 640);
     @include s(margin-top, 64);
+    background-image: url("../img/footer/alert-mob.webp");
   }
   .footer-alert-inner {
     display: flex;
