@@ -30,6 +30,13 @@
         align-items: center;
       }
     }
+
+    @media (max-width: $mob) {
+      order: -1;
+      .checkbox-wrapper {
+        display: none;
+      }
+    }
   }
   &.sm {
     background: var(--white-color);
@@ -260,6 +267,12 @@
     display: flex;
     flex-direction: column;
     height: 100%;
+
+    .product-card-opt-selector {
+      @media (max-width: $mob) {
+        display: none;
+      }
+    }
     .main-info {
       @include s(margin-top, 16);
       flex: 1;
@@ -441,6 +454,13 @@
   justify-content: space-between;
   border-top: 1px solid #dcdde1;
   width: 100%;
+
+  @media (max-width: $mob) {
+    padding-top: 0;
+    border-top: none;
+    @include s(margin-left, 20);
+    flex-direction: column;
+  }
   .presale {
     flex-direction: column-reverse;
     align-items: flex-start;
@@ -459,6 +479,14 @@
     @include s(max-width, 418);
     width: 100%;
 
+    .price-wrapper {
+      display: none;
+
+      @media (max-width: $mob) {
+        display: flex;
+      }
+    }
+
     .descr {
       @include body-sb;
       @include s(margin-top, 6);
@@ -472,6 +500,7 @@
         -webkit-box-orient: vertical;
         text-overflow: ellipsis;
       }
+
     }
 
     .top {
@@ -482,6 +511,10 @@
         color: var(--gray-light-color);
         text-transform: uppercase;
         @include descr-s;
+      }
+
+      .count {
+        display: none;
       }
     }
 
@@ -499,11 +532,116 @@
         display: none;
       }
     }
+
+    @media (max-width: $mob) {
+      display: flex;
+      flex-direction: column-reverse;
+
+      .top {
+        flex-direction: column;
+        @include s(gap, 6);
+        span {
+          @include descr-xs;
+        }
+
+        .count {
+          display: flex;
+          align-items: center;
+          @include descr-xs;
+          position: relative;
+          text-transform: uppercase;
+          color: var(--gray-light-color);
+          font-weight: 400;
+          @include s(padding-left, 22);
+          &:before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            transform: translate(0, -50%);
+            bottom: 0;
+            left: 0;
+            border-radius: 999px;
+            @include s(width, 12);
+            @include s(height, 12);
+          }
+          &.many {
+            &:before {
+              background: var(--green-color);
+            }
+          }
+          &.few {
+            &:before {
+              background: var(--warn-color);
+            }
+          }
+
+          &.no {
+            color: #e14142;
+            &:before {
+              background: #e14142;
+            }
+          }
+        }
+      }
+    }
   }
 
   .right-side {
     @include s(max-width, 204);
     width: 100%;
+
+    .features-list {
+      display: none;
+
+      @media (max-width: $mob) {
+        display: flex;
+        @include s(gap, 20);
+        @include s(margin-bottom, 16);
+
+        .btn {
+          svg {
+            @include s(width, 19);
+            @include s(height, 19);
+          }
+        }
+      }
+    }
+
+    @media (max-width: $mob) {
+      display: flex;
+      flex-direction: column;
+      .price-wrapper {
+        display: none;
+      }
+
+      .product-info {
+        display: block !important;
+      }
+
+      .product-card-opt-selector {
+        order: -1;
+      }
+
+      .counter {
+        display: none;
+      }
+    }
+
+    .--only-desk {
+      @media (max-width: $mob) {
+        display: none;
+      }
+    }
+    .cart-btn-wrapper {
+      display: none;
+
+      @media (max-width: $mob) {
+        display: block;
+        .counter {
+          display: flex;
+        }
+      }
+    }
     .count {
       position: relative;
       @include descr-s;
@@ -705,12 +843,24 @@
 .product-card-opt-selector {
   z-index: 3;
   background: none;
+
+  @media (max-width: $mob) {
+    .selector-content {
+        @include s(left, -100);
+      }
+  }
   .selector-btn {
     padding: 0;
     width: fit-content;
     background: none;
     height: auto;
     @include s(margin-top, 22);
+
+    @media (max-width: $mob) {
+      margin-top: 0;
+      @include s(margin-bottom, 16);
+
+    }
 
     .icon {
       @include s(margin-left, 10);

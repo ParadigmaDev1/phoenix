@@ -364,7 +364,19 @@ mixin catalog()
                         <path d="M2 5L6 9L10 5" stroke="#343176" stroke-linecap="square" stroke-linejoin="round"/>
                       </svg>
                 .accordion-body.collapse 
-                  p text
+                  .checkbox-group 
+                    label.catalog-radio-wrap
+                      input(type="radio")
+                      p 24
+                    label.catalog-radio-wrap
+                      input(type="radio")
+                      p 48
+                    label.catalog-radio-wrap
+                      input(type="radio")
+                      p 64
+                    label.catalog-radio-wrap
+                      input(type="radio")
+                      p 128
             .catalog__sidebar__filters__buttons 
               button(type="button").btn.outline.gray
                 <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -441,7 +453,27 @@ mixin catalog()
                     name: 'filter-by',
                     required: true,
                     defaultRequired: true
-                },)
+                },).--only-desk
+              +selector({
+                title: 'По: 15', 
+                items: [
+                    {
+                        title: 'По: 15', 
+                        value: 0
+                    },
+                    {
+                        title: 'По: 20', 
+                        value: 1
+                    },
+                    {
+                        title: 'По: 30', 
+                        value: 2
+                    },
+                    ],
+                    name: 'filter-by-mob',
+                    required: true,
+                    defaultRequired: true
+                },).--only-mob
               .catalog__content__head__view 
                 button(type="button" data-view="cards").active 
                   <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
