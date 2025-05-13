@@ -7,6 +7,7 @@ import {
   Controller,
   Autoplay,
   Mousewheel,
+  EffectCreative,
 } from "swiper/modules";
 import { updateVisibleSlides } from "../helpers/updateVisibleSlides.js";
 
@@ -16,11 +17,17 @@ export const swiper = () => {
     const total = homeHeroObj.querySelector(".total");
     const current = homeHeroObj.querySelector(".current");
     const homeHeroSwiper = new Swiper(".home-hero-swiper", {
-      modules: [Pagination, Navigation, EffectFade, Controller, Autoplay],
+      modules: [
+        Pagination,
+        Navigation,
+        EffectFade,
+        EffectCreative,
+        Controller,
+        Autoplay,
+      ],
       slidesPerView: 1,
       spaceBetween: 0,
       allowTouchMove: false,
-      effect: "fade",
       speed: 1500,
       autoplay: {
         delay: 2000,
@@ -36,21 +43,31 @@ export const swiper = () => {
       },
       on: {
         init(swiper) {
-          console.log(swiper);
-
           total.innerHTML =
             swiper.slides.length < 10
               ? `0${swiper.slides.length}`
               : swiper.slides.length;
+
+          // Инициализируем параллакс-эффект
+          initParallax(swiper);
+          setInitialTransforms(swiper);
         },
         slideChange(swiper) {
           current.innerHTML =
             swiper.activeIndex + 1 < 10
               ? `0${swiper.activeIndex + 1}`
               : swiper.activeIndex + 1;
+          setInitialTransforms(swiper);
+        },
+        slideChangeTransitionStart(swiper) {
+          updateParallax(swiper);
+        },
+        setTransition(swiper, duration) {
+          setParallaxTransition(swiper, duration - 50);
         },
       },
     });
+
     const homeHeroСontentSwiper = new Swiper(".home-hero-content-swiper", {
       modules: [EffectFade, Controller],
       slidesPerView: 1,
@@ -138,8 +155,9 @@ export const swiper = () => {
         },
         breakpoints: {
           0: {
-            slidesPerView: 2.1,
+            slidesPerView: 2,
             spaceBetween: 20,
+            allowTouchMove: true,
           },
           767: {
             slidesPerView: 4,
@@ -177,12 +195,14 @@ export const swiper = () => {
         },
         breakpoints: {
           0: {
-            slidesPerView: 2.1,
+            slidesPerView: 2,
             spaceBetween: 20,
+            allowTouchMove: true,
           },
           767: {
             slidesPerView: 4,
             spaceBetween: 24,
+            allowTouchMove: false,
           },
         },
         on: {
@@ -211,7 +231,7 @@ export const swiper = () => {
 
             breakpoints: {
               0: {
-                slidesPerView: 2.2,
+                slidesPerView: 2,
                 spaceBetween: 20,
               },
               767: {
@@ -373,8 +393,9 @@ export const swiper = () => {
     slidesPerView: 1,
     spaceBetween: 0,
     allowTouchMove: false,
-    effect: "fade",
+    // effect: "fade",
     // mousewheel: true,
+    speed: 1500,
     navigation: {
       prevEl: ".home-ideas-prev",
       nextEl: ".home-ideas-next",
@@ -383,6 +404,16 @@ export const swiper = () => {
       swiper: homeIdeasThumbsSwiper,
     },
     on: {
+      init(swiper) {
+        initParallax(swiper);
+        setInitialTransforms(swiper);
+      },
+      slideChangeTransitionStart(swiper) {
+        updateParallax(swiper);
+      },
+      setTransition(swiper, duration) {
+        setParallaxTransition(swiper, duration - 50);
+      },
       slideChange(swiper) {
         const homeIdeas = document.querySelector(".home-ideas");
         if (homeIdeas) {
@@ -394,6 +425,7 @@ export const swiper = () => {
             card.classList.remove("active");
           });
         }
+        setInitialTransforms(swiper);
       },
     },
   });
@@ -792,4 +824,69 @@ export const swiper = () => {
       swiper: productInfoModalSwiperThumbs,
     },
   });
+
+  // Устанавливаем начальное смещение для всех изображений
+  function setInitialTransforms(swiper) {
+    swiper.slides.forEach((slide, index) => {
+      const img = slide.querySelector("img");
+      if (!img) return;
+
+      // Если слайд не активный, смещаем его влево или вправо
+      if (index < swiper.activeIndex) {
+        img.style.transform = "translateX(40%)";
+      } else if (index > swiper.activeIndex) {
+        img.style.transform = "translateX(-40%)";
+      } else {
+        img.style.transform = "translateX(0)";
+      }
+    });
+  }
+  // Функции для параллакс-эффекта
+  function initParallax(swiper) {
+    swiper.slides.forEach((slide) => {
+      const img = slide.querySelector("img");
+      if (img) {
+        img.style.transition = "transform 1500ms ease-out";
+        img.style.willChange = "transform";
+        img.style.transform = "translateX(0)";
+      }
+    });
+  }
+
+  function updateParallax(swiper) {
+    if (!swiper || swiper.destroyed) return;
+
+    const speed = swiper.params.speed;
+    const isNext = swiper.activeIndex > swiper.previousIndex;
+    const direction = isNext ? 1 : -1;
+
+    // Текущий слайд (активный после перехода)
+    const currentSlide = swiper.slides[swiper.activeIndex];
+    const currentImg = currentSlide.querySelector("img");
+
+    // Предыдущий слайд (уходящий)
+    const prevSlide = swiper.slides[swiper.previousIndex];
+    const prevImg = prevSlide?.querySelector("img");
+
+    // Параллакс-эффект
+    if (currentImg) {
+      currentImg.style.transform = `translateX(${40 * direction}%)`;
+      requestAnimationFrame(() => {
+        currentImg.style.transform = "translateX(0)";
+      });
+    }
+
+    if (prevImg) {
+      prevImg.style.transform = `translateX(${40 * direction}%)`;
+    }
+  }
+
+  function setParallaxTransition(swiper, duration) {
+    swiper.slides.forEach((slide) => {
+      const img = slide.querySelector("img");
+      if (img) {
+        img.style.transitionDuration = `${duration}ms`;
+      }
+    });
+  }
 };

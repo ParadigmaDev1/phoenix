@@ -2,6 +2,7 @@
 
 .home-ideas {
   @include s(padding-top, 122);
+  overflow: hidden;
   @media (max-width: $tab-sm) {
     @include s(padding-top, 79);
   }
@@ -110,6 +111,7 @@
       .swiper-slide {
         position: relative;
         height: 100%;
+        overflow: hidden;
         width: 100%;
         .bg {
           width: 100%;

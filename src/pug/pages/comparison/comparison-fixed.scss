@@ -130,8 +130,11 @@
         display: flex;
         justify-content: space-between;
         width: 100%;
+        @include s(margin-left, 29);
+
         @media (max-width: $tab-sm) {
           @include s(margin-top, 16);
+          margin-left: 0;
         }
       }
       .remove-mob-btn {

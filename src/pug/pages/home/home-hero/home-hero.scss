@@ -53,6 +53,8 @@
     }
 
     .swiper-slide {
+      overflow: hidden;
+
       img {
         position: absolute;
         width: 100%;
