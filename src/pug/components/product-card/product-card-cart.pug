@@ -97,11 +97,17 @@ mixin product-card-cart(data)
                     span Арт 68012
                     span штрихкод 4606008612533
                     if data.count === 'many'
-                        p.count.many Много
+                        if data.opt 
+                            p.count.many остаток: 344шт.
+                        else
+                            p.count.many много
                     else if data.count === 'no'
                         p.count.no Нет в наличии
                     else 
-                        p.count.few Мало
+                        if data.opt
+                            p.count.few остаток: 18шт.
+                        else
+                            p.count.few мало
                 p.descr #{data.descr}
 
                 .price-wrapper 
@@ -144,7 +150,10 @@ mixin product-card-cart(data)
  
                 
                 if data.count === 'many'
-                    p.count.many Много
+                    if data.opt
+                        p.count.many остаток: 344шт.
+                    else
+                        p.count.many много
                     .counter
                         button.btn.clear.dec
                             <svg width="15" height="1" viewBox="0 0 15 1" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -164,8 +173,11 @@ mixin product-card-cart(data)
                     p.count.no Нет в наличии
                     button.btn.outline.account-btn.l(data-modal-target="analogues-modal")
                         p выберите аналог
-                else 
-                    p.count.few Мало
+                else
+                    if data.opt
+                        p.count.few остаток: 18шт.
+                    else
+                        p.count.few мало
                     .counter
                         button.btn.clear.dec
                             <svg width="15" height="1" viewBox="0 0 15 1" fill="none" xmlns="http://www.w3.org/2000/svg">

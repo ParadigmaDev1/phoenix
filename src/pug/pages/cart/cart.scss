@@ -463,7 +463,7 @@
   }
 }
 
-.cart__list__item.add-new-cart {
+.cart__list__item.add-new-cart-btn {
   @include s(border-radius, 12);
   background: #f1f0fa;
   text-align: center;
@@ -473,10 +473,35 @@
   flex-direction: column;
   @include s(gap, 12);
   max-width: fit-content;
+  border-color: transparent;
+  transition: .3s ease;
 
   svg {
     @include s(width, 48);
     @include s(height, 46);
+
+    path {
+      transition: .3s ease;
+    }
+  }
+
+  h5 {
+    transition: .3s ease;
+  }
+
+  &:hover {
+    background: var(--violet-color);
+    transition: .3s ease;
+
+    svg path {
+      stroke: #fff;
+      transition: .3s ease;
+    }
+
+    h5 {
+      color: #fff;
+      transition: .3s ease;
+    }
   }
 }
 
@@ -544,6 +569,39 @@
     svg {
       @include s(width, 36);
       @include s(height, 36);
+      rect,path {
+        transition: .3s ease;
+      }
+    }
+
+    &:hover {
+      svg {
+        rect:first-child {
+          fill: var(--violet-color);
+          transition: .3s ease;
+        }
+
+        rect:nth-child(2) {
+          stroke: var(--violet-color);
+          transition: .3s ease;
+        }
+
+        rect:nth-child(3) {
+          stroke: #fff;
+          transition: .3s ease;
+        }
+
+        rect:nth-child(4) {
+          fill: var(--violet-color);
+          transition: .3s ease;
+          stroke: #fff;
+        }
+
+        path {
+          stroke: #fff;
+          transition: .3s ease;
+        }
+      }
     }
   }
 

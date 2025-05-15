@@ -83,7 +83,7 @@ mixin cart-opt()
 					.cart__list__item__row 
 						p К оплате
 						span 975 124,87 ₽
-				button.cart__list__item.add-new-cart(type="button" data-modal-target="add-new-cart")
+				button.cart__list__item.add-new-cart-btn(type="button" data-modal-target="add-new-cart")
 					<svg width="48" height="47" viewBox="0 0 48 47" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<path d="M13.2324 11.394C13.2324 9.96339 13.5142 8.54677 14.0617 7.22505C14.6092 5.90333 15.4116 4.70238 16.4232 3.69078C17.4348 2.67918 18.6358 1.87673 19.9575 1.32926C21.2792 0.781782 22.6958 0.5 24.1264 0.5C25.5571 0.5 26.9737 0.781782 28.2954 1.32926C29.6171 1.87673 30.8181 2.67918 31.8297 3.69078C32.8413 4.70238 33.6437 5.90333 34.1912 7.22505C34.7387 8.54677 35.0204 9.96339 35.0204 11.394" stroke="#343176"/>
 						<path d="M35.022 10.7293L35.022 15.125" stroke="#343176"/>
@@ -140,7 +140,7 @@ mixin cart-opt()
 						.cart__choose 
 							p.choose-num Выбрано товаров:&nbsp;
 								span 2
-							label.custom-checkbox-wrapper
+							label.custom-checkbox-wrapper.select-all
 								input(type="checkbox").custom-checkbox
 								p Выбрать все
 							button(type="button").remove-all 
@@ -227,7 +227,8 @@ mixin cart-opt()
                             count: 'many', 
                             price: '615 ₽', 
                             descr: 'Ежедневник датированный 2025 ESCALADA, #ИЛОН МАСК',
-                            badgeClass: 'warn'
+                            badgeClass: 'warn',
+							opt: 'true'
                         })
 
 						+product-card-cart({
@@ -243,7 +244,8 @@ mixin cart-opt()
                             count: 'many', 
                             price: '615 ₽', 
                             descr: 'Ежедневник датированный 2025 ESCALADA, #ИЛОН МАСК', 
-                            badgeClass: 'warn'
+                            badgeClass: 'warn',
+							opt: 'true'
                         })
 
 						+product-card-cart({
@@ -260,7 +262,8 @@ mixin cart-opt()
                             count: 'few', 
                             price: '615 ₽', 
                             descr: 'Ежедневник датированный 2025 ESCALADA, #ИЛОН МАСК',  
-                            badgeClass: 'warn'
+                            badgeClass: 'warn',
+							opt: 'true'
                         })
 
 						+product-card-cart({
@@ -276,7 +279,8 @@ mixin cart-opt()
                             count: 'many', 
                             price: '615 ₽', 
                             descr: 'Ежедневник датированный 2025 ESCALADA, #ИЛОН МАСК',  
-                            badgeClass: 'warn'
+                            badgeClass: 'warn',
+							opt: 'true'
                         })
  
 					.catalog__pagination 
