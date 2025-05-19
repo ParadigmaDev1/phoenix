@@ -2,7 +2,9 @@
 
 .career-vacancy {
   @include s(margin-top, 80);
-
+  @media (max-width: $tab-sm) {
+    @include s(margin-top, 45);
+  }
   .career-vacancy-inner {
     .tabs {
       display: flex;

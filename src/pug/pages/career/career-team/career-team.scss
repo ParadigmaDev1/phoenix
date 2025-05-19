@@ -23,7 +23,7 @@
     @include s(padding-top, 441);
     position: relative;
     @media (max-width: $tab-sm) {
-      @include s(padding-top, 36);
+      @include s(padding-top, 45);
 
       @include s(gap, 80);
     }
