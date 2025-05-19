@@ -98,14 +98,14 @@ mixin product-card-cart(data)
                     span штрихкод 4606008612533
                     if data.count === 'many'
                         if data.opt 
-                            p.count.many остаток: 344шт.
+                            p.count.many 344шт.
                         else
                             p.count.many много
                     else if data.count === 'no'
                         p.count.no Нет в наличии
                     else 
                         if data.opt
-                            p.count.few остаток: 18шт.
+                            p.count.few 18шт.
                         else
                             p.count.few мало
                 p.descr #{data.descr}
@@ -151,7 +151,7 @@ mixin product-card-cart(data)
                 
                 if data.count === 'many'
                     if data.opt
-                        p.count.many остаток: 344шт.
+                        p.count.many 344шт.
                     else
                         p.count.many много
                     .counter
@@ -175,7 +175,7 @@ mixin product-card-cart(data)
                         p выберите аналог
                 else
                     if data.opt
-                        p.count.few остаток: 18шт.
+                        p.count.few 18шт.
                     else
                         p.count.few мало
                     .counter
