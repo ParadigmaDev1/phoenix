@@ -14,15 +14,24 @@ export const productCards = () => {
       });
       cartBtnWrapper.forEach((wrapper) => {
         const cartBtn = wrapper.querySelector(".cart-btn");
+        const cartBtnText = cartBtn.querySelector("p");
         if (cartBtn) {
           cartBtn.addEventListener("click", () => {
             if (card.className.includes("in-cart")) {
               card.classList.remove("in-cart");
-              cartBtnText.innerHTML = "в корзину";
+              if(cartBtnText.classList.contains("presale-text")) {
+                cartBtnText.innerHTML = "в предзаказ";
+              } else {
+                cartBtnText.innerHTML = "в корзину";
+              }
               cartBtn.classList.remove("active");
             } else {
               card.classList.add("in-cart");
-              cartBtnText.innerHTML = "в корзине";
+              if(cartBtnText.classList.contains("presale-text")) {
+                cartBtnText.innerHTML = "в предзаказе";
+              } else {
+                cartBtnText.innerHTML = "в корзине";
+              }
               cartBtn.classList.add("active");
             }
           });

@@ -714,3 +714,48 @@
     }
   }
 }
+
+
+.cart-opt__fixed {
+  position: fixed;
+  @include s(left, 48);
+  @include s(right, 48);
+  @include s(bottom, 16);
+  box-shadow: 0px 4px 28px rgba(0, 0, 0, 0.1);
+  @include s(border-radius, 12);
+  background: #fff;
+  z-index: 5;
+  @include padding(12, 24, 12, 24);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (max-width: $mob) {
+    display: none;
+  }
+
+  .custom-checkbox-wrapper p {
+    color: var(--gray-color);
+  }
+
+  .cart__choose {
+    @include s(gap, 36);
+  }
+
+  .remove-all {
+    @include body-m;
+    display: flex;
+    align-items: center;
+
+    span {
+      color: var(--violet-color);
+    }
+
+    svg {
+      @include s(width, 20);
+      @include s(height, 20);
+      flex-shrink: 0;
+      @include s(margin-right, 12);
+    }
+  }
+}

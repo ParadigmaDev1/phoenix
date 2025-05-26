@@ -619,6 +619,24 @@
         }
       }
     }
+    .cart-btn {
+      position: relative;
+      @include s(gap, 12);
+
+      svg {
+        @include s(width, 8);
+        @include s(height, 14);
+        opacity: 0;
+        position: absolute;
+      }
+
+      &.active {
+        svg {
+          opacity: 1;
+          position: relative;
+        }
+      }
+    }
 
     @media (max-width: $mob) {
       display: flex;
@@ -646,7 +664,7 @@
       }
     }
     .cart-btn-wrapper {
-      display: none;
+     
 
       @media (max-width: $mob) {
         display: block;
