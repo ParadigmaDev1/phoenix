@@ -1,6 +1,6 @@
 mixin category-card(data) 
     a(href="#").category-card
         .image-wrapper
-            img( src=data.img, alt="category" loading='lazy' width="204" height="362")
+            img( src=data.img, alt="category"  srcset=`${data.imgMob} 767w, ${data.img} 1440w` loading='lazy' width="204" height="362")
         p.title #{data.title}
     

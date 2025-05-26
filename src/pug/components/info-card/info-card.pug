@@ -4,7 +4,7 @@ mixin info-card(data = {})
             if data.type
                 p.type #{data.type}
             .image-wrapper 
-                img( src=data.img, alt="info" loading='lazy' width=data.width height=data.height)
+                img(src=data.img, srcset=`./img/info-card/mob.jpg 440w, ./img/info-card/tablet.jpg 720w, ${data.img} 1440w` alt="info" loading='lazy' width=data.width height=data.height)
             .content 
                 if data.date
                     .date 
@@ -34,7 +34,7 @@ mixin info-card(data = {})
             if data.type
                 p.type #{data.type}
             .image-wrapper 
-                img( src=data.img, alt="info")
+                img(src=data.img, srcset=`./img/info-card/mob.jpg 440w, ./img/info-card/tablet.jpg 720w, ${data.img} 1440w` alt="info" loading='lazy' width=data.width height=data.height)
             .content 
                 if data.date
                     .date 

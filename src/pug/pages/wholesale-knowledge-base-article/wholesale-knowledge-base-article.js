@@ -1,42 +1,93 @@
 export const wholesaleKnowledgeBaseArticle = () => {
-  const wholesaleKnowledgeBaseArticle = document.querySelector(
-    ".wholesale-knowledge-base-article"
-  );
-  if (wholesaleKnowledgeBaseArticle) {
-    const links = wholesaleKnowledgeBaseArticle.querySelectorAll(".link");
-    const h3 = wholesaleKnowledgeBaseArticle.querySelectorAll("h3");
-    const header = document.querySelector(".header");
+  const article = document.querySelector(".wholesale-knowledge-base-article");
+  if (!article) return;
 
-    window.addEventListener("scroll", () => {
-      const headerHeight = header.offsetHeight;
-      const threshold = headerHeight + 80;
-      let activeIndex = -1;
+  const links = article.querySelectorAll(".link");
+  const h3Elements = article.querySelectorAll("h3");
+  const header = document.querySelector(".header");
 
-      h3.forEach((tag, index) => {
-        const tagTop = tag.getBoundingClientRect().top;
-        if (tagTop <= threshold) {
-          activeIndex = index;
-        }
-      });
+  if (!links.length || !h3Elements.length || !header) return;
 
-      links.forEach((link) => link.classList.remove("active"));
-      if (activeIndex !== -1) {
-        links[activeIndex].classList.add("active");
+  let isScrolling = false;
+  let isUpdating = false;
+  let headerHeight = header.offsetHeight;
+  let positions = [];
+  let activeIndex = -1;
+
+  const updatePositions = () => {
+    headerHeight = header.offsetHeight;
+    positions = Array.from(h3Elements).map(
+      (el) =>
+        el.getBoundingClientRect().top + window.scrollY - headerHeight - 50
+    );
+  };
+
+  const handleScroll = () => {
+    const scrollPosition = window.scrollY + headerHeight + 80;
+
+    let low = 0,
+      high = positions.length;
+    while (low < high) {
+      const mid = Math.floor((low + high) / 2);
+      if (positions[mid] <= scrollPosition) {
+        low = mid + 1;
+      } else {
+        high = mid;
       }
-    });
+    }
+    activeIndex = low - 1;
 
-    links.forEach((link, index) => {
-      link.addEventListener("click", (e) => {
-        e.preventDefault();
-        const currentH3 = h3[index];
-        if (currentH3) {
-          const targetPosition = currentH3.offsetTop - header.offsetHeight - 50;
-          window.scrollTo({
-            top: targetPosition,
-            behavior: "smooth",
-          });
-        }
+    links.forEach((link) => link.classList.remove("active"));
+    if (activeIndex >= 0 && links[activeIndex]) {
+      links[activeIndex].classList.add("active");
+    }
+  };
+
+  const scrollHandler = () => {
+    if (!isUpdating) {
+      isUpdating = true;
+      requestAnimationFrame(() => {
+        handleScroll();
+        isUpdating = false;
       });
-    });
-  }
+    }
+  };
+
+  const clickHandler = (index) => (e) => {
+    e.preventDefault();
+    if (h3Elements[index]) {
+      isScrolling = true;
+      const targetPosition = positions[index];
+
+      window.scrollTo({
+        top: targetPosition,
+        behavior: "smooth",
+      });
+
+      setTimeout(() => (isScrolling = false), 1000);
+    }
+  };
+
+  let resizeTimer;
+  const resizeHandler = () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => {
+      updatePositions();
+      handleScroll();
+    }, 100);
+  };
+
+  updatePositions();
+  window.addEventListener("scroll", scrollHandler);
+  window.addEventListener("resize", resizeHandler);
+
+  links.forEach((link, index) => {
+    link.addEventListener("click", clickHandler(index));
+  });
+
+  return () => {
+    window.removeEventListener("scroll", scrollHandler);
+    window.removeEventListener("resize", resizeHandler);
+    links.forEach((link) => link.removeEventListener("click", clickHandler));
+  };
 };
