@@ -6,9 +6,9 @@ mixin contacts()
                 button.btn.tab.m.active(data-tab='0') Основные
                 button.btn.tab.m(data-tab='1') Отдел продаж
                 button.btn.tab.m(data-tab='2') Производственный отдел
-                button.btn.tab.m(data-tab='3') Иные отделы
-                button.btn.tab.m(data-tab='4') Региональные представители
-                button.btn.tab.m(data-tab='5') Дистрибьюторы
+                button.btn.tab.m(data-tab='3') Региональные представители
+                button.btn.tab.m(data-tab='4') Дистрибьюторы
+                button.btn.tab.m(data-tab='5') Структурные подразделения
             .tab-content(data-tab='0')
                 +contacts-main()
             .tab-content(data-tab='1')
@@ -16,8 +16,8 @@ mixin contacts()
             .tab-content(data-tab='2')
                 +contacts-production()
             .tab-content(data-tab='3')
-                +contacts-other()
-            .tab-content(data-tab='4')
                 +contacts-regions()
-            .tab-content(data-tab='5')
+            .tab-content(data-tab='4')
                 +contacts-distributors()
+            .tab-content(data-tab='5')
+                +contacts-other()

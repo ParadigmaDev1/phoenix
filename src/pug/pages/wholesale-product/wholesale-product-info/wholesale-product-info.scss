@@ -801,6 +801,9 @@
           }
           .btn {
             @include s(margin-top, 14);
+            p {
+              @include descr-s;
+            }
           }
         }
       }
