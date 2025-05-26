@@ -5,7 +5,7 @@
   &:hover {
     .btn {
       background: var(--violet-color);
-      p {
+      span {
         color: var(--white-color);
       }
       svg {
@@ -78,7 +78,7 @@
           }
         }
       }
-      p {
+      span {
         @include descr-m;
         text-transform: uppercase;
       }

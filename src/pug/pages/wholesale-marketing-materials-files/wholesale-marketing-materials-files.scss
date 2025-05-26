@@ -52,7 +52,7 @@
             @media (max-width: $tab-sm) {
               @include s(margin-top, 16);
             }
-            p {
+            span {
               @include descr-s;
             }
           }

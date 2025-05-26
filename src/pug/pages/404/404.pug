@@ -1,11 +1,11 @@
 mixin 404()
     .not-found
         .not-found-inner.container
-            img(load='lazy' src="./img/404/404.svg", alt="404")
+            img( src="./img/404/404.webp", fetchpriority="high" alt="404" loading="eager" width="443" height="171")
             h1 страница не найдена
             p.descr Страница не существует или была удалена
             a(href="home.html").btn.primary.l
-                p на главную
+                span на главную
                 <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M1 13L7 7L0.999999 1" stroke="white" stroke-linecap="square" stroke-linejoin="round"/>
                 </svg>

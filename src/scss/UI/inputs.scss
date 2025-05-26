@@ -3,7 +3,7 @@
   align-items: center;
   @include s(gap, 12);
   cursor: pointer;
-  p {
+  span {
     @include body-m;
     color: var(--white-color);
   }

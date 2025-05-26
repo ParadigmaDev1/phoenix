@@ -133,7 +133,7 @@
             @media (max-width: $tab-sm) {
               display: flex;
             }
-            p {
+            span {
               text-transform: uppercase;
               @include descr-s;
             }

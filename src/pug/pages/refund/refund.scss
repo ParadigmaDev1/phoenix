@@ -109,7 +109,7 @@
               @include s(gap, 4);
               @include s(margin-top, 24);
 
-              p {
+              span {
                 text-transform: uppercase;
                 @include descr-m;
               }
@@ -142,11 +142,11 @@
               .btn {
                 justify-content: center;
                 @include s(gap, 16);
-                p {
+                span {
                   @include body-m;
                 }
               }
-              & > p {
+              & > span {
                 text-transform: uppercase;
                 @include descr-m;
               }

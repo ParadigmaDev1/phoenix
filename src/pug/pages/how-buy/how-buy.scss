@@ -167,7 +167,7 @@
             .btn {
               justify-content: center;
               @include s(gap, 16);
-              p {
+              span {
                 @include body-m;
               }
             }

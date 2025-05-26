@@ -58,7 +58,7 @@
             @include padding(0, 16);
             @include s(margin-top, 20);
 
-            p {
+            span {
               @include descr-s;
             }
           }

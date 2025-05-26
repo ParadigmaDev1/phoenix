@@ -85,7 +85,7 @@ export const accordionFunc = () => {
     updateMaxHeight(item);
 
     // Обновляем текст кнопки
-    const titleShow = item.querySelector(".accordion-title-show p");
+    const titleShow = item.querySelector(".accordion-title-show span");
     if (titleShow) {
       titleShow.textContent = item.classList.contains("active")
         ? "Свернуть"
@@ -115,14 +115,15 @@ export const accordionFunc = () => {
   const filterButton = document.getElementById("filterBtn");
   if (filterButton) {
     let resizeTimeout;
-    filterButton.addEventListener("click", function() {
+    filterButton.addEventListener("click", function () {
       clearTimeout(resizeTimeout);
       resizeTimeout = setTimeout(() => {
         document.querySelectorAll(".accordion-item").forEach(function (el) {
-          el.style.maxHeight = el.querySelector(".accordion-title").scrollHeight + 'px';
+          el.style.maxHeight =
+            el.querySelector(".accordion-title").scrollHeight + "px";
         });
-        console.log('updated')
+        console.log("updated");
       }, 100);
-    })
+    });
   }
 };

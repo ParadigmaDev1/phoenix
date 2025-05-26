@@ -25,7 +25,7 @@
         @media (max-width: $tab-sm) {
           display: none;
         }
-        p {
+        span {
           text-transform: uppercase;
           @include descr-m;
         }
@@ -117,7 +117,7 @@
       @include s(gap, 12);
       @include s(margin-top, 36);
       width: fit-content;
-      p {
+      span {
         text-transform: uppercase;
         @include descr-s;
       }

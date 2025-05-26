@@ -87,7 +87,7 @@
             @media (max-width: $tab-sm) {
               @include s(height, 48);
             }
-            p {
+            span {
               @include descr-m;
               text-transform: uppercase;
             }

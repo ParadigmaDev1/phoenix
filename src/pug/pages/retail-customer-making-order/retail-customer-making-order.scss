@@ -34,7 +34,7 @@
           @media (max-width: $tab-sm) {
             display: none;
           }
-          p {
+          span {
             text-transform: uppercase;
             @include descr-s;
           }
@@ -163,7 +163,7 @@
               @include s(height, 32);
               object-fit: contain;
             }
-            p {
+            span {
               @include body-m;
             }
           }
@@ -186,7 +186,7 @@
         display: flex;
         align-items: center;
         @include s(gap, 12);
-        p {
+        span {
           @include body-xs;
           a {
             color: var(--violet-color);

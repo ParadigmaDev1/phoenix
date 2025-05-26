@@ -49,6 +49,7 @@
 
       .title {
         @include body-lb;
+        text-align: left;
       }
       .close-catalog-btn {
         svg {
@@ -154,7 +155,14 @@
       overflow-x: hidden;
       scrollbar-width: thin;
       scrollbar-color: var(--violet-color) #ffffff;
-
+      @media (max-width: $tab-sm) {
+        max-height: calc(100vh - 160px);
+      }
+      &:nth-child(1) {
+        @media (max-width: $tab-sm) {
+          max-height: calc(100vh - 210px);
+        }
+      }
       &::-webkit-scrollbar {
         width: 10px;
       }
@@ -199,7 +207,7 @@
             border: 1px solid var(--violet-color);
             display: flex;
             align-items: center;
-            justify-content: center;
+
             transition: var(--trs-cubic-300);
             &:hover {
               background: var(--violet-color);
@@ -270,7 +278,7 @@
         @include s(gap, 16);
 
         &:hover {
-          p {
+          span {
             color: var(--violet-color);
           }
           svg {
@@ -283,7 +291,7 @@
           @include s(width, 10);
           @include s(height, 12);
         }
-        p {
+        span {
           text-align: left;
           @include s(max-width, 226);
           @include s(width, 226);
@@ -313,9 +321,10 @@
               position: absolute;
               top: -20%;
               right: 2%;
+              width: fit-content;
             }
           }
-          p {
+          & > span {
             @include body-m;
           }
           &.active {
@@ -326,7 +335,7 @@
         }
         &.menu {
           @include padding(10, 18, 10, 10);
-
+          justify-content: space-between;
           @include borr(12);
           @media (max-width: $tab-sm) {
             padding: 0;
@@ -351,11 +360,12 @@
           .text {
             display: flex;
             align-items: center;
-            justify-content: space-between;
+            justify-content: flex-start;
             @include s(gap, 15);
-            p {
+            span {
               @include descr-m;
               text-transform: uppercase;
+              text-align: left;
             }
           }
         }

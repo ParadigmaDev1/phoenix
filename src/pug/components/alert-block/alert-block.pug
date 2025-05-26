@@ -2,7 +2,7 @@ mixin alert-block(data)
     .alert-block&attributes(attributes)
         .alert-block-inner.container 
             .alert-block-container 
-                img(load='lazy' src="./img/about/features/3.svg", alt="alert")
+                img( src="./img/about/features/3.svg", alt="alert" loading='lazy' width='70' height='64')
                 if data.title
                     p.title #{data.title}
                 p.descr #{data.descr}

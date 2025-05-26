@@ -27,7 +27,7 @@
         }
       }
       .burger-btn {
-        p {
+        span {
           color: var(--gray-color) !important;
         }
         svg {
@@ -42,19 +42,19 @@
       .header-top {
         .link-selector {
           .link-selector-btn {
-            p {
-              color: var(--gray-color);
+            span {
+              color: var(--gray-color) !important;
             }
             svg {
               path {
-                stroke: var(--gray-color);
+                stroke: var(--gray-color) !important;
               }
             }
           }
         }
         .contact-selector {
           .selector-btn {
-            p {
+            span {
               color: var(--gray-color) !important;
             }
             svg {
@@ -84,7 +84,7 @@
         .outline {
           border-color: var(--violet-color);
 
-          p {
+          span {
             color: var(--violet-color);
           }
           svg {
@@ -127,7 +127,7 @@
         }
       }
       .burger-btn {
-        p {
+        span {
           color: var(--gray-color) !important;
         }
         svg {
@@ -142,19 +142,19 @@
       .header-top {
         .link-selector {
           .link-selector-btn {
-            p {
-              color: var(--gray-color);
+            span {
+              color: var(--gray-color) !important;
             }
             svg {
               path {
-                stroke: var(--gray-color);
+                stroke: var(--gray-color) !important;
               }
             }
           }
         }
         .contact-selector {
           .selector-btn {
-            p {
+            span {
               color: var(--gray-color) !important;
             }
             svg {
@@ -186,7 +186,7 @@
         .outline {
           border-color: var(--violet-color);
 
-          p {
+          span {
             color: var(--violet-color);
           }
           svg {
@@ -255,7 +255,7 @@
           align-items: center;
           @include s(gap, 12);
         }
-        p {
+        span {
           @include descr-s;
           color: var(--white-color);
           text-transform: uppercase;
@@ -273,11 +273,24 @@
       flex-direction: column;
       @include s(gap, 16);
       width: 100%;
+
       .header-top {
         display: flex;
         justify-content: space-between;
         @media (max-width: $tab-sm) {
           display: none;
+        }
+        .link-selector {
+          .link-selector-btn {
+            span {
+              color: var(--white-color);
+            }
+            svg {
+              path {
+                stroke: var(--white-color);
+              }
+            }
+          }
         }
         nav {
           display: flex;
@@ -308,7 +321,7 @@
             background: none;
             height: auto;
             @include s(gap, 16);
-            p {
+            span {
               color: var(--white-color);
               transition: var(--trs-cubic-300);
               @include body-m;
@@ -406,7 +419,7 @@
                   @include s(width, 16);
                   @include s(height, 16);
                 }
-                p {
+                span {
                   @include descr-xs;
                   text-transform: uppercase;
                 }
@@ -533,7 +546,7 @@
               }
             }
           }
-          p {
+          .text {
             @include descr-m;
             text-transform: uppercase;
             @media (max-width: $tab-sm) {

@@ -4,10 +4,10 @@ mixin shop-contacts-card(data)
             .main-content
                 p.title #{data.title}
                 .address 
-                    img(load='lazy' src="./img/icons/pin-dark.svg", alt="pin")
+                    img( src="./img/icons/pin-dark.svg", alt="pin")
                     p г. Екатеринбург, ул. Свободы д. 178
-                a(href="tel:+7 (906) 483-12-48").tel
-                    img(load='lazy' src="./img/icons/phone-dark.svg", alt="pin")
+                a(href="tel:+79064831248").tel
+                    img( src="./img/icons/phone-dark.svg", alt="pin")
                     p +7 (906) 483-12-48
             if !data.withoutBtn
                 a(href="#" target='_blank').btn.outline.violet.l
@@ -16,7 +16,7 @@ mixin shop-contacts-card(data)
                         <path d="M1 13L7 7L0.999999 1" stroke="#343176" stroke-linecap="square" stroke-linejoin="round"/>
                     </svg> 
         .image-wrapper 
-            img(load='lazy' src=data.img || './img/shop-contacts-card/default-img.svg' , alt="contacts-img")
+            img( src=data.img || './img/shop-contacts-card/default-img.svg' , alt="contacts-img")
         if data.editBtn
             button.edit-btn(data-modal-target='edit-shop-modal') 
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">

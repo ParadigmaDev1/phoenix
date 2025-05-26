@@ -23,14 +23,14 @@ mixin retail-customer-making-order()
                     .radio-wrapper 
                         label
                             input(type="radio" name='delivery' value='courier' checked)
-                            .text 
-                                img(src="./img/retail-customer-making-order/img.jpg", alt="delivery")
-                                p CDEK курьер
+                            span.text 
+                                img(src="./img/retail-customer-making-order/img.jpg", alt="delivery"  width='116' height='32')
+                                span CDEK курьер
                         label
                             input(type="radio" name='delivery' value='pickup')
-                            .text 
-                                img(src="./img/retail-customer-making-order/img.jpg", alt="delivery")
-                                p CDEK самовывоз
+                            span.text 
+                                img(src="./img/retail-customer-making-order/img.jpg", alt="delivery"  width='116' height='32')
+                                span CDEK самовывоз
                     .courier-delivery
                         .inputs
                             .input-wrapper 
@@ -68,15 +68,15 @@ mixin retail-customer-making-order()
                         p.value 400 ₽
                     label.policy
                         input(type="checkbox").custom-checkbox
-                        p Я даю согласие на обработку персональных данных в соответствии с 
+                        span Я даю согласие на обработку персональных данных в соответствии с 
                             a(href="#" target="_blank") Политикой конфиденциальности
                     button.btn.primary.m.submit-btn
-                        p перейти к оплате
+                        span перейти к оплате
             .back-btn-wrapper 
                 .sticky-block
                     a(href="#").btn.outline.violet.m.back-btn
                         <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M7 13L1 7L7 1" stroke="#343176" stroke-linecap="square" stroke-linejoin="round"/>
                         </svg>
-                        p назад в корзину
+                        span назад в корзину
                 

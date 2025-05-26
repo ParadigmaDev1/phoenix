@@ -156,7 +156,7 @@
             align-items: center;
             @include s(gap, 16);
             cursor: pointer;
-            p {
+            span {
               @include body-l;
             }
           }
@@ -202,7 +202,7 @@
             @include s(height, 14);
             @include s(width, 8);
           }
-          p {
+          span {
             @include descr-s;
             text-transform: uppercase;
           }

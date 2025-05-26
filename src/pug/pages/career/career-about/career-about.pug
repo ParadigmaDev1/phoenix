@@ -8,10 +8,10 @@ mixin career-about()
             .values-block 
                 .value-item
                     .image-wrapper
-                        img(load='lazy' src="./img/about/values/1.jpg", alt="value")
-                        img(load='lazy' src="./img/about/values/hover1.svg", alt="hover").hover
+                        img( src="./img/about/values/1.jpg", alt="value" loading='lazy' width='432' height='500')
+                        img( src="./img/about/values/hover1.svg", alt="hover").hover
                     .bg 
-                        img(load='lazy' src="./img/about/values/bg.jpg", alt="bg")
+                        img( src="./img/about/values/bg.jpg", alt="bg" loading='lazy' width='432' height='500')
                     .content 
                         .text
                             p.title поддержка <br>и наставничество
@@ -23,10 +23,10 @@ mixin career-about()
                             </svg>
                 .value-item
                     .image-wrapper
-                        img(load='lazy' src="./img/about/values/1.jpg", alt="value")
-                        img(load='lazy' src="./img/about/values/hover1.svg", alt="hover").hover
+                        img( src="./img/about/values/1.jpg", alt="value" loading='lazy' width='432' height='500')
+                        img( src="./img/about/values/hover1.svg", alt="hover").hover
                     .bg 
-                        img(load='lazy' src="./img/about/values/bg.jpg", alt="bg")
+                        img( src="./img/about/values/bg.jpg", alt="bg" loading='lazy' width='432' height='500')
                     .content 
                         .text
                             p.title Структурированная система категорий
@@ -38,10 +38,10 @@ mixin career-about()
                             </svg>
                 .value-item
                     .image-wrapper
-                        img(load='lazy' src="./img/about/values/2.jpg", alt="value")
-                        img(load='lazy' src="./img/about/values/hover1.svg", alt="hover").hover
+                        img( src="./img/about/values/2.jpg", alt="value" loading='lazy' width='432' height='500')
+                        img( src="./img/about/values/hover1.svg", alt="hover").hover
                     .bg 
-                        img(load='lazy' src="./img/about/values/bg.jpg", alt="bg")
+                        img( src="./img/about/values/bg.jpg", alt="bg" loading='lazy' width='432' height='500')
                     .content 
                         .text
                             p.title Карьерные возможности и признание 
@@ -53,10 +53,10 @@ mixin career-about()
                             </svg>
                 .value-item
                     .image-wrapper
-                        img(load='lazy' src="./img/about/values/3.jpg", alt="value")
-                        img(load='lazy' src="./img/about/values/hover2.svg", alt="hover").hover
+                        img( src="./img/about/values/3.jpg", alt="value" loading='lazy' width='660' height='350')
+                        img( src="./img/about/values/hover2.svg", alt="hover").hover
                     .bg 
-                        img(load='lazy' src="./img/about/values/bg.jpg", alt="bg")
+                        img( src="./img/about/values/bg.jpg", alt="bg" loading='lazy' width='660' height='350')
                     .content 
                         .text
                             p.title Награждение лучших сотрудников
@@ -68,10 +68,10 @@ mixin career-about()
                             </svg>
                 .value-item
                     .image-wrapper
-                        img(load='lazy' src="./img/about/values/4.jpg", alt="value")
-                        img(load='lazy' src="./img/about/values/hover2.svg", alt="hover").hover
+                        img( src="./img/about/values/4.jpg", alt="value" loading='lazy' width='660' height='350')
+                        img( src="./img/about/values/hover2.svg", alt="hover").hover
                     .bg 
-                        img(load='lazy' src="./img/about/values/bg.jpg", alt="bg")
+                        img( src="./img/about/values/bg.jpg", alt="bg" loading='lazy' width='660' height='350')
                     .content 
                         .text
                             p.title Мотивация <br>за выслугу лет
@@ -84,9 +84,9 @@ mixin career-about()
             .accordion 
                 .accordion-item
                     button(type='button').accordion-title 
-                        .title-wrapper
-                            p.title поддержка <br>и наставничество
-                        .icon 
+                        span.title-wrapper
+                            span.title поддержка <br>и наставничество
+                        span.icon 
                             <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M0 7.41162H14" stroke="white"/>
                                 <path d="M7 14.4116L7 0.411621" stroke="white"/>
@@ -94,12 +94,12 @@ mixin career-about()
                     .collapse.accordion-body
                         p.descr Каждый сотрудник может рассчитывать на поддержку опытных наставников, которые помогают адаптироваться, развиваться и достигать поставленных целей. Мы гордимся нашей дружелюбной и поддерживающей атмосферой, где каждый сотрудник чувствует себя частью команды и может свободно делиться идеями и инициативами.
                         .image-wrapper
-                            img(load='lazy' src="./img/about/values/1.jpg", alt="value")
+                            img( src="./img/about/values/1.jpg", alt="value")
                 .accordion-item
                     button(type='button').accordion-title 
-                        .title-wrapper
-                            p.title Структурирован-ная система категорий
-                        .icon 
+                        span.title-wrapper
+                            span.title Структурирован-ная система категорий
+                        span.icon 
                             <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M0 7.41162H14" stroke="white"/>
                                 <path d="M7 14.4116L7 0.411621" stroke="white"/>
@@ -107,12 +107,12 @@ mixin career-about()
                     .collapse.accordion-body
                         p.descr Каждый сотрудник может рассчитывать на поддержку опытных наставников, которые помогают адаптироваться, развиваться и достигать поставленных целей. Мы гордимся нашей дружелюбной и поддерживающей атмосферой, где каждый сотрудник чувствует себя частью команды и может свободно делиться идеями и инициативами.
                         .image-wrapper
-                            img(load='lazy' src="./img/about/values/1.jpg", alt="value")
+                            img( src="./img/about/values/1.jpg", alt="value")
                 .accordion-item
                     button(type='button').accordion-title 
-                        .title-wrapper
-                            p.title Карьерные возможности и признание 
-                        .icon 
+                        span.title-wrapper
+                            span.title Карьерные возможности и признание 
+                        span.icon 
                             <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M0 7.41162H14" stroke="white"/>
                                 <path d="M7 14.4116L7 0.411621" stroke="white"/>
@@ -120,12 +120,12 @@ mixin career-about()
                     .collapse.accordion-body
                         p.descr Мы придерживаемся высоких стандартов во всем, что мы делаем, обеспечивая наших клиентов продукцией и услугами самого высокого качества.
                         .image-wrapper
-                            img(load='lazy' src="./img/about/values/2.jpg", alt="value")
+                            img( src="./img/about/values/2.jpg", alt="value")
                 .accordion-item
                     button(type='button').accordion-title 
-                        .title-wrapper
-                            p.title Награждение лучших сотрудников
-                        .icon 
+                        span.title-wrapper
+                            span.title Награждение лучших сотрудников
+                        span.icon 
                             <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M0 7.41162H14" stroke="white"/>
                                 <path d="M7 14.4116L7 0.411621" stroke="white"/>
@@ -133,13 +133,13 @@ mixin career-about()
                     .collapse.accordion-body
                         p.descr Мы придерживаемся высоких стандартов во всем, что мы делаем, обеспечивая наших клиентов продукцией и услугами самого высокого качества.
                         .image-wrapper
-                            img(load='lazy' src="./img/about/values/3.jpg", alt="value")
+                            img( src="./img/about/values/3.jpg", alt="value")
                         
                 .accordion-item
                     button(type='button').accordion-title 
-                        .title-wrapper
-                            p.title Мотивация <br>за выслугу лет
-                        .icon 
+                        span.title-wrapper
+                            span.title Мотивация <br>за выслугу лет
+                        span.icon 
                             <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M0 7.41162H14" stroke="white"/>
                                 <path d="M7 14.4116L7 0.411621" stroke="white"/>
@@ -147,4 +147,4 @@ mixin career-about()
                     .collapse.accordion-body
                         p.descr Мы придерживаемся высоких стандартов во всем, что мы делаем, обеспечивая наших клиентов продукцией и услугами самого высокого качества.
                         .image-wrapper
-                            img(load='lazy' src="./img/about/values/4.jpg", alt="value")
+                            img( src="./img/about/values/4.jpg", alt="value")

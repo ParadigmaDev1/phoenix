@@ -6,13 +6,13 @@ mixin how-buy()
                 .accordion 
                     .accordion-item
                         button(type='button').accordion-title 
-                            .icon 
+                            span.icon 
                                 <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M1 1L7 7L13 1" stroke="#333435" stroke-linecap="square" stroke-linejoin="round"/>
                                 </svg>
-                            .title-wrapper
-                                p.title Процедура регистрации
-                                p.descr Вам необходимо пройти процедуру регистрации, для этого щёлкните на ссылку «регистрация» в верхнем правом углу сайта. Корректно заполните контактные данные. На указанный Вами электронный ящик придет письмо для подтверждения.
+                            span.title-wrapper
+                                span.title Процедура регистрации
+                                span.descr Вам необходимо пройти процедуру регистрации, для этого щёлкните на ссылку «регистрация» в верхнем правом углу сайта. Корректно заполните контактные данные. На указанный Вами электронный ящик придет письмо для подтверждения.
                         .collapse.accordion-body
                             .video-wrapper(data-modal-target='video-modal')
                                 img(src="./img/about/charity/1.jpg", alt="")
@@ -23,13 +23,13 @@ mixin how-buy()
                                     </svg>
                     .accordion-item
                         button(type='button').accordion-title 
-                            .icon 
+                            span.icon 
                                 <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M1 1L7 7L13 1" stroke="#333435" stroke-linecap="square" stroke-linejoin="round"/>
                                 </svg>
-                            .title-wrapper
-                                p.title Авторизация
-                                p.descr Перейдя по ссылке или нажав кнопку "Вход" в верхнем правом углу авторизуйтесь в личном кабинете.
+                            span.title-wrapper
+                                span.title Авторизация
+                                span.descr Перейдя по ссылке или нажав кнопку "Вход" в верхнем правом углу авторизуйтесь в личном кабинете.
                         .collapse.accordion-body
                             .video-wrapper(data-modal-target='video-modal')
                                 img(src="./img/about/charity/1.jpg", alt="")
@@ -40,13 +40,13 @@ mixin how-buy()
                                     </svg>
                     .accordion-item
                         button(type='button').accordion-title 
-                            .icon 
+                            span.icon 
                                 <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M1 1L7 7L13 1" stroke="#333435" stroke-linecap="square" stroke-linejoin="round"/>
                                 </svg>
-                            .title-wrapper
-                                p.title Уточнение деталей с менеджером
-                                p.descr Получив заявку, менеджер свяжется с Вами для уточнения деталей сотрудничества и запроса необходимых документов.
+                            span.title-wrapper
+                                span.title Уточнение деталей с менеджером
+                                span.descr Получив заявку, менеджер свяжется с Вами для уточнения деталей сотрудничества и запроса необходимых документов.
                         .collapse.accordion-body
                             .video-wrapper(data-modal-target='video-modal')
                                 img(src="./img/about/charity/1.jpg", alt="")
@@ -57,13 +57,13 @@ mixin how-buy()
                                     </svg> 
                     .accordion-item
                         button(type='button').accordion-title 
-                            .icon 
+                            span.icon 
                                 <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M1 1L7 7L13 1" stroke="#333435" stroke-linecap="square" stroke-linejoin="round"/>
                                 </svg>
-                            .title-wrapper
-                                p.title Подтверждение регистрации
-                                p.descr После утверждения заявки менеджером Вам на e-mail, указанный при регистрации, придёт соответствующее письмо, после чего Вы сможете размещать Заказы зайдя в личный кабинет на сайте.
+                            span.title-wrapper
+                                span.title Подтверждение регистрации
+                                span.descr После утверждения заявки менеджером Вам на e-mail, указанный при регистрации, придёт соответствующее письмо, после чего Вы сможете размещать Заказы зайдя в личный кабинет на сайте.
                         .collapse.accordion-body
                             .video-wrapper(data-modal-target='video-modal')
                                 img(src="./img/about/charity/1.jpg", alt="")
@@ -77,10 +77,10 @@ mixin how-buy()
                         h4 свяжитесь с нами
                         .form-info
                             .date 
-                                img(load='lazy' src="./img/icons/clock-dark.svg", alt="clock")
+                                img( src="./img/icons/clock-dark.svg", alt="clock")
                                 p пн-пн с 8:00 до 20:00
                             .btn-wrapper
-                                a(href="tel:+7 863 261 89 62").btn.outline.violet.l
+                                a(href="tel:+78632618962").btn.outline.violet.l
                                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <g clip-path="url(#clip0_7956_74267)">
                                         <path d="M5.84111 12.0969C9.05052 15.3063 11.5172 16.1119 14.4247 13.2045C14.8797 12.7373 15.3053 12.1469 14.7015 11.5432L12.348 9.74348C11.6052 9.34387 11.3151 9.62808 10.9635 10.0203C9.67869 11.4545 8.29251 10.9785 7.3642 10.0203L5.97977 8.63588C5.0216 7.70747 4.54562 6.32115 5.97977 5.03654C6.37215 4.68499 6.65621 4.39481 6.2566 3.65211L4.45685 1.2986C3.85306 0.694804 3.26269 1.12037 2.79546 1.57543C-0.111852 4.48274 0.69364 6.94945 3.90305 10.159L5.84111 12.0969Z" stroke="#343176"/>
@@ -94,7 +94,7 @@ mixin how-buy()
                                     p +7 863 261 89 62
                                 .socials    
                                     a(href="#" target="_blank").tg
-                                        img(load='lazy' src="./img/icons/tg-white.svg", alt="tg")
+                                        img( src="./img/icons/tg-white.svg", alt="tg")
                                     a(href="#" target="_blank").wa
-                                        img(load='lazy' src="./img/icons/wa-white.svg", alt="wa")
+                                        img( src="./img/icons/wa-white.svg", alt="wa")
                         +consultation-form()

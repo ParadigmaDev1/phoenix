@@ -32,7 +32,7 @@
           @media (max-width: $tab-sm) {
             display: none;
           }
-          p {
+          span {
             text-transform: uppercase;
             @include descr-s;
           }

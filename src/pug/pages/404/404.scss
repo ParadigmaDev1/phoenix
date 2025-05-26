@@ -46,7 +46,7 @@
         width: 100%;
         @include s(margin-top, 24);
       }
-      p {
+      span {
         text-transform: uppercase;
         @include descr-m;
       }

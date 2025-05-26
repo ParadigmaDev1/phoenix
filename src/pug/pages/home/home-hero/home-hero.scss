@@ -85,12 +85,18 @@
         display: flex;
         flex-direction: column;
         @include s(gap, 24);
-        opacity: 0 !important;
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+        pointer-events: none;
         @media (max-width: $tab-sm) {
           @include s(gap, 10);
         }
         &.swiper-slide-active {
-          opacity: 1 !important;
+          position: relative;
+          opacity: 1;
+          visibility: visible;
+          pointer-events: auto;
         }
         .title {
           @include s(max-width, 660);
@@ -127,7 +133,7 @@
             @include padding(0, 16);
             @include s(margin-top, 14);
           }
-          p {
+          span {
             text-transform: uppercase;
             font-weight: 500px;
             @include s(font-size, 12);

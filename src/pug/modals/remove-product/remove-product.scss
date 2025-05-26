@@ -62,8 +62,8 @@
         &.outline {
           border-color: var(--violet-color);
           text-transform: uppercase;
-          
-          p {
+
+          span {
             color: var(--violet-color);
             @include descr-m;
           }

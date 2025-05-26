@@ -12,23 +12,23 @@ mixin ask-manager-modal()
                     p.title вопрос менеджеру
                     .manager 
                         .image-wrapper 
-                            img(load='lazy' src="./img/contacts/person.jpg", alt="person")
+                            img( src="./img/contacts/person.jpg", alt="person")
                         .content 
                             p.name Александра Константинопольская
                             p.post Персональный менеджер
                             p.date
-                                img(load='lazy' src="./img/icons/clock-dark.svg", alt="clock")
+                                img( src="./img/icons/clock-dark.svg", alt="clock")
                                 | ПН-ПТ с 8:00 до 20:00
-                            a(href="tel:+7 (863) 261-89-64").tel
-                                img(load='lazy' src="./img/icons/phone-violet.svg", alt="phone")
+                            a(href="tel:+78632618964").tel
+                                img( src="./img/icons/phone-violet.svg", alt="phone")
                                 | +7 (863) 261-89-64, доб.140  
                     textarea(placeholder="Ваш вопрос *")
-                    button.btn.outline.violet.m(type="button")
+                    .btn.outline.violet.m
                         <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M0.506836 7.5H14.5068" stroke="#333435"/>
                             <path d="M7.50684 14.5L7.50684 0.5" stroke="#333435"/>
                         </svg>
-                        p прикрепить файл
+                        span прикрепить файл
                         input(type="file")
                     button.btn.primary.m.submit-btn
-                        p отправить
+                        span отправить

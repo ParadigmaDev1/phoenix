@@ -70,7 +70,7 @@
     justify-content: center;
     @include s(margin-top, 16);
 
-    p {
+    span {
       text-transform: uppercase;
       @include descr-m;
     }

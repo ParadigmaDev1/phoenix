@@ -10,7 +10,7 @@ mixin cart()
 								span 2
 							label.custom-checkbox-wrapper.select-all
 								input(type="checkbox").custom-checkbox
-								p Выбрать все
+								span Выбрать все
 							button(type="button").remove-all.hidden 
 								<svg width="20" height="22" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path d="M14.8492 16.8492L4.94975 6.94973M4.94975 16.8492L14.8492 6.94973" stroke="#343176"/>
@@ -89,5 +89,5 @@ mixin cart()
 								</svg>
 					div 
 						button(type="button").btn.primary.m.submit-btn 
-							p оформить заказ
+							span оформить заказ
 						p.error-msg Вкорзине недоступные товары, замените или удалите их, чтобы продолжить оформление!

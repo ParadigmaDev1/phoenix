@@ -9,10 +9,10 @@ mixin wholesale-making-order()
                     .radio-wrapper 
                         label
                             input(type="radio" name='delivery' value='pickup' checked)
-                            p Самовывоз
+                            span Самовывоз
                         label
                             input(type="radio" name='delivery' value='delivery')
-                            p Доставка
+                            span Доставка
                     .pickup 
                         p Адрес самовывоза и информация по самовывозу
                     .delivery.hidden 
@@ -21,10 +21,10 @@ mixin wholesale-making-order()
                             p Грузополучатель
                             .selector
                                 button(type='button').selector-btn
-                                    .selector-title
-                                        .text-content
-                                            p Выберите
-                                    .icon
+                                    span.selector-title
+                                        span.text-content
+                                            span Выберите
+                                    span.icon
                                         <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M1 1L5 5L9 1" stroke="#333435" stroke-linecap="square" stroke-linejoin="round"/>
                                         </svg>
@@ -32,27 +32,27 @@ mixin wholesale-making-order()
                                     .selector-list
                                         label.radio-item
                                             input(type="radio" name='recipient')
-                                            p ИП Константинопольский Александр Александрович
+                                            span ИП Константинопольский Александр Александрович
                                         label.radio-item
                                             input(type="radio" name='recipient')
-                                            p ООО «Вселенная канцелярских товаров»
+                                            span ООО «Вселенная канцелярских товаров»
                                         label.radio-item
                                             input(type="radio" name='recipient')
-                                            p ИП Иванов Иван Иванович
+                                            span ИП Иванов Иван Иванович
                                         button.btn.violet.outline.m(data-modal-target='add-legal-entities-modal') 
                                             <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M0.506836 7.5H14.5068" stroke="#333435"/>
                                                 <path d="M7.50684 14.5L7.50684 0.5" stroke="#333435"/>
                                             </svg>
-                                            p добавить
+                                            span добавить
                         .input-wrapper 
                             p Адрес из вашего списка
                             .selector
                                 button(type='button').selector-btn
-                                    .selector-title
-                                        .text-content
-                                            p Выберите
-                                    .icon
+                                    span.selector-title
+                                        span.text-content
+                                            span Выберите
+                                    span.icon
                                         <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M1 1L5 5L9 1" stroke="#333435" stroke-linecap="square" stroke-linejoin="round"/>
                                         </svg>
@@ -60,29 +60,29 @@ mixin wholesale-making-order()
                                     .selector-list
                                         label.radio-item
                                             input(type="radio" name='address')
-                                            p Москва, ул. Садовая-Кудринская, 25
+                                            span Москва, ул. Садовая-Кудринская, 25
                                         label.radio-item
                                             input(type="radio" name='address')
-                                            p Москва, ул. Нагорная, 134
+                                            span Москва, ул. Нагорная, 134
                                         label.radio-item
                                             input(type="radio" name='address')
-                                            p Москва, ул. Николо-Ямская, 7
+                                            span Москва, ул. Николо-Ямская, 7
                                         label.radio-item
                                             input(type="radio" name='address')
-                                            p Москва, Щелковское шоссе, 19
+                                            span Москва, Щелковское шоссе, 19
                                         button.btn.violet.outline.m(data-modal-target='add-delivery-address-modal') 
                                             <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M0.506836 7.5H14.5068" stroke="#333435"/>
                                                 <path d="M7.50684 14.5L7.50684 0.5" stroke="#333435"/>
                                             </svg>
-                                            p добавить
+                                            span добавить
                     button.btn.primary.m.submit-btn
-                        p оформить заказ
+                        span оформить заказ
             .back-btn-wrapper 
                 .sticky-block
                     a(href="#").btn.outline.violet.m.back-btn
                         <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M7 13L1 7L7 1" stroke="#343176" stroke-linecap="square" stroke-linejoin="round"/>
                         </svg>
-                        p назад в корзину
+                        span назад в корзину
                 

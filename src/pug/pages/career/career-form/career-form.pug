@@ -1,7 +1,7 @@
 mixin career-form()
     .career-form
         .bg 
-            img(load='lazy' src="./img/career/form/bg.jpg", alt="")
+            img( src="./img/career/form/bg.jpg", alt="")
         .career-form-inner.container    
             .content 
                 .top 
@@ -9,7 +9,7 @@ mixin career-form()
                 .bottom 
                     p.descr Если вы хотите стать частью Феникс+ и развивать свою карьеру в профессиональной среде, заполните форму. Мы рассмотрим вашу заявку и свяжемся с вами для дальнейшего общения.
             button.btn.primary.resume-btn.m 
-                p отправить резюме
+                span отправить резюме
             form
                 .inputs 
                     .inputs-container 
@@ -86,12 +86,12 @@ mixin career-form()
                                     input(type="text" placeholder='Ссылка на резюме').custom-input.input.form__input-value.input__valid-name
                                     .input__item-small
                                 p или
-                                button(type='button').btn.outline.violet.l.file-btn
+                                .btn.outline.violet.l.file-btn
                                     <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M0.506836 7.5H14.5068" stroke="#343176"/>
                                         <path d="M7.50684 14.5L7.50684 0.5" stroke="#343176"/>
                                     </svg>
-                                    p прикрепить резюме
+                                    span прикрепить резюме
                                     input(type="file")
                 .submit-form 
                     p.policy Нажимая кнопку, я даю согласие на 

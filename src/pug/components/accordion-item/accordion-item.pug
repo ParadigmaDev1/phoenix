@@ -2,21 +2,21 @@ mixin accordion-item(data)
     .accordion-item(class=data.class)&attributes(attributes)
         if data.nested || data.class === 'nested-inner'
             button(type='button').accordion-title 
-                .icon 
+                span.icon 
                     <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M1 1L7 7L13 1" stroke="#333435" stroke-linecap="square" stroke-linejoin="round"/>
                     </svg>
-                .title-wrapper
+                span.title-wrapper
                     if data.icon
-                        img(load='lazy' src=data.icon, alt="icon")
-                    p.title #{data.title}
+                        img( src=data.icon, alt="icon")
+                    span.title #{data.title}
         else 
             button(type='button').accordion-title 
-                .title-wrapper
+                span.title-wrapper
                     if data.icon
-                        img(load='lazy' src=data.icon, alt="icon")
-                    p.title #{data.title}
-                .icon 
+                        img( src=data.icon, alt="icon")
+                    span.title #{data.title}
+                span.icon 
                     <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M1 1L5 5L9 1" stroke="#333435" stroke-linecap="square" stroke-linejoin="round"/>
                     </svg>

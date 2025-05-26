@@ -875,7 +875,7 @@
       border-color: var(--violet-color);
       @include s(margin-top, 10);
       width: 100%;
-      p {
+      span {
         color: var(--violet-color);
         @include descr-s;
       }

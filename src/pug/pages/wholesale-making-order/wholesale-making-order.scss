@@ -34,7 +34,7 @@
           @media (max-width: $tab-sm) {
             display: none;
           }
-          p {
+          span {
             text-transform: uppercase;
             @include descr-s;
           }
@@ -125,7 +125,7 @@
               }
             }
           }
-          p {
+          span {
             @include body-m;
           }
         }
@@ -169,7 +169,7 @@
                 @include s(width, 14);
                 @include s(height, 14);
               }
-              p {
+              span {
                 text-transform: uppercase;
                 @include descr-m;
               }

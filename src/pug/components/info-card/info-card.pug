@@ -4,7 +4,7 @@ mixin info-card(data = {})
             if data.type
                 p.type #{data.type}
             .image-wrapper 
-                img(load='lazy' src=data.img, alt="info")
+                img( src=data.img, alt="info" loading='lazy' width=data.width height=data.height)
             .content 
                 if data.date
                     .date 
@@ -22,10 +22,10 @@ mixin info-card(data = {})
                             <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M1.13965 9.18765L1.13965 13.3798M16.8602 9.18765V13.3798M1.13965 12.8558C1.13965 13.2687 1.22097 13.6775 1.37898 14.059C1.53699 14.4404 1.76858 14.787 2.06054 15.079C2.35249 15.3709 2.6991 15.6025 3.08056 15.7605C3.46202 15.9186 3.87086 15.9999 4.28375 15.9999H13.7161C14.129 15.9999 14.5378 15.9186 14.9193 15.7605C15.3007 15.6025 15.6473 15.3709 15.9393 15.079C16.2312 14.787 16.4628 14.4404 16.6208 14.059C16.7788 13.6775 16.8602 13.2687 16.8602 12.8558M13.9126 6.56756L8.99991 11.8077L4.48026 6.56756M8.99991 0.999878L8.99991 11.2837" stroke="white"/>
                             </svg>
-                            p #{data.btnTitle}
+                            span #{data.btnTitle}
                     else
                         button.btn.outline.l.violet 
-                            p #{data.btnTitle}
+                            span #{data.btnTitle}
                             <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M1 13L7 7L0.999999 1" stroke="#343176" stroke-linecap="square" stroke-linejoin="round"/>
                             </svg>
@@ -34,7 +34,7 @@ mixin info-card(data = {})
             if data.type
                 p.type #{data.type}
             .image-wrapper 
-                img(load='lazy' src=data.img, alt="info")
+                img( src=data.img, alt="info")
             .content 
                 if data.date
                     .date 
@@ -48,14 +48,14 @@ mixin info-card(data = {})
                     p.descr #{data.descr}
                 if data.btnTitle
                     if data.download
-                        button.btn.primary.l 
+                        .btn.primary.l
                             <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M1.13965 9.18765L1.13965 13.3798M16.8602 9.18765V13.3798M1.13965 12.8558C1.13965 13.2687 1.22097 13.6775 1.37898 14.059C1.53699 14.4404 1.76858 14.787 2.06054 15.079C2.35249 15.3709 2.6991 15.6025 3.08056 15.7605C3.46202 15.9186 3.87086 15.9999 4.28375 15.9999H13.7161C14.129 15.9999 14.5378 15.9186 14.9193 15.7605C15.3007 15.6025 15.6473 15.3709 15.9393 15.079C16.2312 14.787 16.4628 14.4404 16.6208 14.059C16.7788 13.6775 16.8602 13.2687 16.8602 12.8558M13.9126 6.56756L8.99991 11.8077L4.48026 6.56756M8.99991 0.999878L8.99991 11.2837" stroke="white"/>
                             </svg>
-                            p #{data.btnTitle}
+                            span #{data.btnTitle}
                     else
-                        button.btn.outline.l.violet 
-                            p #{data.btnTitle}
+                        .btn.outline.l.violet
+                            span #{data.btnTitle}
                             <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M1 13L7 7L0.999999 1" stroke="#343176" stroke-linecap="square" stroke-linejoin="round"/>
                             </svg>

@@ -65,7 +65,7 @@
           @media (max-width: $tab-sm) {
             @include s(margin-top, 36);
           }
-          p {
+          span {
             @include body-xs;
             a {
               color: var(--violet-color);
@@ -201,7 +201,7 @@
             .btn {
               justify-content: center;
               @include s(gap, 16);
-              p {
+              span {
                 @include body-m;
               }
             }

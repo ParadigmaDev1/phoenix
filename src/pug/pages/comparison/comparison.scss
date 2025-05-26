@@ -37,7 +37,7 @@
             @include s(height, 12);
           }
         }
-        p {
+        span {
           text-transform: uppercase;
           @include descr-m;
           color: var(--violet-color);

@@ -16,7 +16,7 @@
   &:hover {
     .btn {
       background: var(--violet-color);
-      p {
+      span {
         color: var(--white-color);
       }
       svg {
@@ -42,7 +42,7 @@
     @media (max-width: $tab-sm) {
       @include padding(0, 16);
     }
-    p {
+    span {
       text-transform: uppercase;
       @include descr-m;
       @media (max-width: $tab-sm) {

@@ -7,10 +7,10 @@ mixin wholesale-office()
                     h5 График платежей
                     .info
                         p.alert 
-                            img(load='lazy' src="./img/icons/info.svg", alt="info")
+                            img( src="./img/icons/info.svg", alt="info")
                             | У вас имеется просроченный долг на сумму 28 093, 78 ₽
                         p.date 
-                            img(load='lazy' src="./img/icons/clock.svg", alt="info")
+                            img( src="./img/icons/clock.svg", alt="info")
                             | Обновлено 03.11.24 22:32 
                     .paylent-list 
                         +schedule-card({title: 'Текущая задолженность', sum: '145 000 ₽'})
@@ -31,13 +31,13 @@ mixin wholesale-office()
                     .double-swiper 
                         .swiper-wrapper 
                             .swiper-slide 
-                                +info-card({img: './img/home/ideas/2.jpg', title: 'Осенняя распродажа товаров для офиса -50%', btnTitle: 'подробнее'})
+                                +info-card({img: './img/home/ideas/2.jpg', title: 'Осенняя распродажа товаров для офиса -50%', btnTitle: 'подробнее', width: '489', height: '276'})
                             .swiper-slide 
-                                +info-card({img: './img/home/ideas/2.jpg', title: 'Осенняя распродажа товаров для офиса -50%', btnTitle: 'подробнее'})
+                                +info-card({img: './img/home/ideas/2.jpg', title: 'Осенняя распродажа товаров для офиса -50%', btnTitle: 'подробнее', width: '489', height: '276'})
                             .swiper-slide 
-                                +info-card({img: './img/home/ideas/2.jpg', title: 'школьная коллекция', btnTitle: 'подробнее'})
+                                +info-card({img: './img/home/ideas/2.jpg', title: 'школьная коллекция', btnTitle: 'подробнее', width: '489', height: '276'})
                             .swiper-slide 
-                                +info-card({img: './img/home/ideas/2.jpg', title: 'школьная коллекция', btnTitle: 'подробнее'})
+                                +info-card({img: './img/home/ideas/2.jpg', title: 'школьная коллекция', btnTitle: 'подробнее', width: '489', height: '276'})
                     .navigation
                         button.btn.circle.l.double-swiper-prev
                             <svg width="10" height="14" viewBox="0 0 10 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -58,12 +58,12 @@ mixin wholesale-office()
                             li На старте вы получаете бронзовый статус.
                             li Для перехода на следующий уровень необходимо выполнить два критерия: минимальное количество SKU и объем закупок.
                         button.btn.outline.m.violet 
-                            p подробнее
+                            span подробнее
                             <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M1 13L7 7L0.999999 1" stroke="#343176" stroke-linecap="square" stroke-linejoin="round"/>
                             </svg>
                     .image-block 
-                        img(load='lazy' src="./img/wholesale-office/loyalty.jpg", alt="loyalty")
+                        img( src="./img/wholesale-office/loyalty.jpg", alt="loyalty" loading='lazy' width='441' height='256')
             .menu-block 
                 .sticky-block
                     +profile-wholesale-menu()

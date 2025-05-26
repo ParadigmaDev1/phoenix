@@ -53,7 +53,7 @@
           @media (max-width: $tab-sm) {
             margin-top: 0;
           }
-          p {
+          span {
             @include descr-m;
             text-transform: uppercase;
           }

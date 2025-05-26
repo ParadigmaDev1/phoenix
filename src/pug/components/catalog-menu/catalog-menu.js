@@ -122,7 +122,9 @@ export const catalogMenu = () => {
             menu.classList.add("active");
             col.classList.add("hidden");
             catalogTopMenu.classList.add("active");
-            navigationHistory.push(menu.querySelector(".text p").textContent);
+            navigationHistory.push(
+              menu.querySelector(".text span").textContent
+            );
             updateTitle();
             catalogMenuList.forEach((item) => item.classList.add("hidden"));
             catalogMenuLinksWrapper.forEach((item) => {
@@ -164,7 +166,7 @@ export const catalogMenu = () => {
         } else {
           item.addEventListener("click", () => {
             navigationHistory.push(
-              item.querySelector(".title-wrapper p").textContent
+              item.querySelector(".title-wrapper span").textContent
             );
             updateTitle();
             const currentLinksWrapper = catalogMenu.querySelector(

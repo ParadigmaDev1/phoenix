@@ -31,7 +31,7 @@
           @media (max-width: $tab-sm) {
             display: none;
           }
-          p {
+          span {
             text-transform: uppercase;
             @include descr-s;
           }
@@ -94,7 +94,7 @@
             @media (max-width: $tab-sm) {
               width: fit-content;
             }
-            p {
+            span {
               @include descr-s;
             }
             svg {

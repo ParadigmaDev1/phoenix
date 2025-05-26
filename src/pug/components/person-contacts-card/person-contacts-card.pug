@@ -4,7 +4,7 @@ mixin person-contacts-card(data)
         .person-contacts-card-content 
             .image-wrapper(class=data.img ? '' : 'empty')
                 if data.img
-                    img(load='lazy' src=data.img, alt="person")
+                    img( src=data.img, alt="person" width='203' height='252')
                 else 
                     <svg width="30" height="28" viewBox="0 0 30 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M19.2057 12.7182L19.1065 12.8499L19.1964 12.7181V0.103588C19.1964 0.103588 14.8286 -0.367981 12.5616 0.701181C10.5716 1.64025 10.6468 4.13632 10.6468 4.13632V4.64313L10.6561 4.65629V24.0625V25.2636V27.8734C10.6561 27.8734 14.9289 28.3897 17.1564 27.3368C19.1978 26.3734 19.2057 23.8366 19.2057 23.8366V12.7182ZM21.3122 4.9006C21.3122 4.9006 25.68 4.4331 27.947 5.50226C28.8744 5.94241 29.3412 6.71146 29.5879 7.411L29.5892 7.40907C29.8701 8.20993 29.8676 8.94118 29.8676 8.94118V20.8524C29.8676 20.8524 25.5947 21.3687 23.3673 20.3158C22.6615 19.9799 22.1538 19.3426 21.8455 18.7916L21.8344 18.8078C21.3201 17.82 21.3122 16.8118 21.3122 16.8118V4.9006ZM0.0190837 10.294V20.8486C0.0190837 20.8486 4.60844 21.4015 6.75278 20.1901C6.75476 20.184 6.75575 20.1799 6.75674 20.1758C6.75773 20.1718 6.75872 20.1677 6.7607 20.1616L6.75474 20.1516C8.51444 19.1022 8.54589 16.8159 8.54589 16.8159V5.81715L8.55003 5.81108V4.90453C8.55003 4.90453 4.18223 4.43296 1.91524 5.50619C-0.0747997 6.44119 0.000370869 8.93726 0.000370869 8.93726V10.2666L0.0190837 10.294Z" fill="#ffffff"/>
@@ -19,7 +19,7 @@ mixin person-contacts-card(data)
                     if data.address
                         .address-block 
                             p.address 
-                                img(load='lazy' src="./img/icons/pin-dark.svg", alt="pin")
+                                img( src="./img/icons/pin-dark.svg", alt="pin"  width='16' height='16')
                                 | #{data.address}
                             if data.routes
                                 .routes 
@@ -27,8 +27,8 @@ mixin person-contacts-card(data)
                                         p.route #{route}
                     each phone in data.phones
                         a(href=`tel:${phone.phone}`) 
-                            img(load='lazy' src="./img/icons/phone-violet.svg", alt="phone")
+                            img( src="./img/icons/phone-violet.svg", alt="phone" width='16' height='16')
                             p #{phone.title} 
                     a(href=`mailto:o.protasova@phoenix-plus.ru `) 
-                        img(load='lazy' src="./img/icons/mail.svg", alt="mail")
+                        img( src="./img/icons/mail.svg", alt="mail" width='16' height='16')
                         p o.protasova@phoenix-plus.ru  

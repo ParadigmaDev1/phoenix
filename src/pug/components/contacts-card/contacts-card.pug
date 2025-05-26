@@ -5,8 +5,8 @@ mixin contacts-card(data)
         .info 
             each phone in data.phones
                 a(href=`tel:${phone.phone}`) 
-                    img(load='lazy' src="./img/icons/phone-violet.svg", alt="phone")
+                    img( src="./img/icons/phone-violet.svg", alt="phone")
                     p #{phone.title} 
             a(href=`mailto:o.protasova@phoenix-plus.ru `) 
-                img(load='lazy' src="./img/icons/mail.svg", alt="mail")
+                img( src="./img/icons/mail.svg", alt="mail")
                 p o.protasova@phoenix-plus.ru  

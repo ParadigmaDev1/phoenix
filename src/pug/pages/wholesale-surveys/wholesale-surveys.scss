@@ -55,7 +55,7 @@
             }
             .btn {
               background: var(--violet-color);
-              p {
+              span {
                 color: var(--white-color);
               }
               svg {
@@ -89,7 +89,7 @@
             @media (max-width: $tab-sm) {
               width: fit-content;
             }
-            p {
+            span {
               @include descr-s;
             }
             svg {

@@ -147,7 +147,7 @@
                 @media (max-width: $tab-sm) {
                   @include padding(0, 16);
                 }
-                p {
+                span {
                   @include descr-m;
                   text-transform: uppercase;
                 }
