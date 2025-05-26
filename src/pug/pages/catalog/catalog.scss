@@ -8,7 +8,7 @@
     @include s(margin-bottom, 28);
   }
 
-  @media (max-width: $mob) {
+  @media (max-width: $tab-sm) {
     @include s(margin-bottom, 64);
   }
 }
@@ -86,7 +86,7 @@
     }
   }
 
-  @media (max-width: $mob) {
+  @media (max-width: $tab-sm) {
     display: none;
   }
 }
@@ -95,7 +95,7 @@
   @include s(width, 1004);
   flex-shrink: 0;
 
-  @media (max-width: $mob) {
+  @media (max-width: $tab-sm) {
     width: 100%;
   }
 }
@@ -130,7 +130,7 @@
 
   .selector {
     &.--only-desk {
-      @media (max-width: $mob) {
+      @media (max-width: $tab-sm) {
         display: none;
       }
     }
@@ -138,12 +138,12 @@
     &.--only-mob {
       display: none;
 
-      @media (max-width: $mob) {
+      @media (max-width: $tab-sm) {
         display: block;
       }
     }
   }
-  @media (max-width: $mob) {
+  @media (max-width: $tab-sm) {
     display: grid;
     grid-template-columns: 1fr 1fr;
     @include s(row-gap, 20);
@@ -177,7 +177,7 @@
   @include s(margin-left, 24);
   display: block;
 
-  @media (max-width: $mob) {
+  @media (max-width: $tab-sm) {
     text-align: right;
     @include s(font-size, 14);
   }
@@ -204,7 +204,7 @@
     }
   }
 
-  @media (max-width: $mob) {
+  @media (max-width: $tab-sm) {
     grid-column-start: 1;
     grid-column-end: 3;
   }
@@ -236,7 +236,7 @@
     }
   }
 
-  @media (max-width: $mob) {
+  @media (max-width: $tab-sm) {
     margin-left: 0;
   }
 }
@@ -247,7 +247,7 @@
   @include s(row-gap, 80);
   @include s(column-gap, 24);
 
-  @media (max-width: $mob) {
+  @media (max-width: $tab-sm) {
     grid-template-columns: 1fr 1fr;
     @include s(row-gap, 48);
     @include s(column-gap, 20);
@@ -272,7 +272,7 @@
       }
     }
 
-    @media (max-width: $mob) {
+    @media (max-width: $tab-sm) {
       .product-card {
         .product-card-swiper-wrapper {
           height: calc(93 / var(--screensize) * 100vw);
@@ -427,7 +427,7 @@
     }
   }
 
-  @media (max-width: $mob) {
+  @media (max-width: $tab-sm) {
     nav {
       a {
         &:nth-child(3),
@@ -469,7 +469,7 @@
     @include s(font-size, 14);
   }
 
-  @media (max-width: $mob) {
+  @media (max-width: $tab-sm) {
     width: 100%;
     justify-content: center;
   }
@@ -508,7 +508,7 @@
     background: #fff;
   }
 
-  @media (max-width: $mob) {
+  @media (max-width: $tab-sm) {
     background: transparent;
     padding-top: 0;
 
@@ -641,7 +641,7 @@
     }
   }
 
-  @media (max-width: $mob) {
+  @media (max-width: $tab-sm) {
     display: flex;
     flex-direction: column;
     padding-bottom: 0;
@@ -684,7 +684,7 @@
     }
   }
 
-  @media (max-width: $mob) {
+  @media (max-width: $tab-sm) {
     overflow-x: scroll;
     padding-bottom: 0;
     border-bottom: unset;

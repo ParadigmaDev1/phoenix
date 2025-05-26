@@ -31,7 +31,7 @@
       }
     }
 
-    @media (max-width: $mob) {
+    @media (max-width: $tab-sm) {
       order: -1;
       .checkbox-wrapper {
         display: none;
@@ -283,7 +283,7 @@
     height: 100%;
 
     .product-card-opt-selector {
-      @media (max-width: $mob) {
+      @media (max-width: $tab-sm) {
         display: none;
       }
     }
@@ -469,7 +469,7 @@
   border-top: 1px solid #dcdde1;
   width: 100%;
 
-  @media (max-width: $mob) {
+  @media (max-width: $tab-sm) {
     padding-top: 0;
     border-top: none;
     @include s(margin-left, 20);
@@ -496,7 +496,7 @@
     .price-wrapper {
       display: none;
 
-      @media (max-width: $mob) {
+      @media (max-width: $tab-sm) {
         display: flex;
       }
     }
@@ -546,7 +546,7 @@
       }
     }
 
-    @media (max-width: $mob) {
+    @media (max-width: $tab-sm) {
       display: flex;
       flex-direction: column-reverse;
 
@@ -606,7 +606,7 @@
     .features-list {
       display: none;
 
-      @media (max-width: $mob) {
+      @media (max-width: $tab-sm) {
         display: flex;
         @include s(gap, 20);
         @include s(margin-bottom, 16);
@@ -619,8 +619,26 @@
         }
       }
     }
+    .cart-btn {
+      position: relative;
+      @include s(gap, 12);
 
-    @media (max-width: $mob) {
+      svg {
+        @include s(width, 8);
+        @include s(height, 14);
+        opacity: 0;
+        position: absolute;
+      }
+
+      &.active {
+        svg {
+          opacity: 1;
+          position: relative;
+        }
+      }
+    }
+
+    @media (max-width: $tab-sm) {
       display: flex;
       flex-direction: column;
       .price-wrapper {
@@ -641,14 +659,14 @@
     }
 
     .--only-desk {
-      @media (max-width: $mob) {
+      @media (max-width: $tab-sm) {
         display: none;
       }
     }
     .cart-btn-wrapper {
-      display: none;
+     
 
-      @media (max-width: $mob) {
+      @media (max-width: $tab-sm) {
         display: block;
         .counter {
           display: flex;
@@ -788,7 +806,7 @@
   .product-card-swiper-wrapper .product-card-features .features-list {
     top: calc(3 / var(--screensize) * 100vw);
   }
-  @media (max-width: $mob) {
+  @media (max-width: $tab-sm) {
     flex-wrap: wrap;
     @include s(padding-bottom, 28);
     border-bottom: 1px solid #dcdde1;
@@ -887,7 +905,7 @@
   z-index: 3;
   background: none;
 
-  @media (max-width: $mob) {
+  @media (max-width: $tab-sm) {
     .selector-content {
       @include s(left, -100);
     }
@@ -899,7 +917,7 @@
     height: auto;
     @include s(margin-top, 22);
 
-    @media (max-width: $mob) {
+    @media (max-width: $tab-sm) {
       margin-top: 0;
       @include s(margin-bottom, 16);
     }
@@ -928,7 +946,7 @@
 .product-card-cart__handlers {
   display: none;
 
-  @media (max-width: $mob) {
+  @media (max-width: $tab-sm) {
     display: flex;
     justify-content: space-between;
     @include s(width, 320);

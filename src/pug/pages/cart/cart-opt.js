@@ -1,9 +1,9 @@
-export const cart = () => {
+export const cartOpt = () => {
   const cartPage = document.querySelector(".cart-page");
   if (cartPage) {
     const btn = document.querySelector(".cart__actions .more-actions");
     const plate = document.querySelector(".cart__actions .more-actions-hidden");
-	  const fixedPlate = document.querySelector(".cart-opt__fixed");
+	const fixedPlate = document.querySelector(".cart-opt__fixed");
     const selectAll = document.querySelector(".select-all input");
     const removeAllBtn = document.querySelector(".cart__choose .remove-all");
     const total = document.querySelector(".cart__choose .choose-num");
