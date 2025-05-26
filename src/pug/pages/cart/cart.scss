@@ -15,7 +15,7 @@
     // }
   }
 
-  @media (max-width: $mob) {
+  @media (max-width: $tab-sm) {
     width: 100%;
     justify-content: space-between;
     .choose-num {
@@ -83,7 +83,7 @@
     display: none;
   }
 
-  @media (max-width: $mob) {
+  @media (max-width: $tab-sm) {
     &.sticky {
       display: flex;
       flex-wrap: wrap;
@@ -165,7 +165,7 @@
   grid-template-columns: calc(1002 / var(--screensize) * 100vw) 1fr;
   @include s(gap, 48);
 
-  @media (max-width: $mob) {
+  @media (max-width: $tab-sm) {
     display: flex;
     flex-direction: column-reverse;
   }
@@ -193,7 +193,7 @@
   position: sticky;
   @include s(top, 140);
 
-  @media (max-width: $mob) {
+  @media (max-width: $tab-sm) {
     padding: 0;
     box-shadow: unset;
     position: relative;
@@ -249,7 +249,7 @@
       white-space: nowrap;
     }
 
-    @media (max-width: $mob) {
+    @media (max-width: $tab-sm) {
       span {
         color: var(--gray-color);
       }
@@ -283,7 +283,7 @@
       }
     }
 
-    @media (max-width: $mob) {
+    @media (max-width: $tab-sm) {
       p {
         font-weight: 400;
       }
@@ -325,7 +325,7 @@
     @include s(margin-top, 4);
     @include s(border-radius, 6);
 
-    @media (max-width: $mob) {
+    @media (max-width: $tab-sm) {
       @include padding(15, 12, 15, 12);
       text-align: center;
       font-weight: 400;
@@ -417,7 +417,7 @@
   display: flex;
   @include s(gap, 24);
 
-  @media (max-width: $mob) {
+  @media (max-width: $tab-sm) {
     display: none;
   }
 }
@@ -528,7 +528,7 @@
     }
   }
 
-  @media (max-width: $mob) {
+  @media (max-width: $tab-sm) {
     flex-direction: column;
     @include s(gap, 6);
     align-items: flex-start;
@@ -552,7 +552,7 @@
   justify-content: space-between;
   @include s(margin-bottom, 28);
 
-  @media (max-width: $mob) {
+  @media (max-width: $tab-sm) {
     flex-direction: column;
     align-items: flex-start;
     @include s(margin-bottom, 16);
@@ -605,7 +605,7 @@
     }
   }
 
-  @media (max-width: $mob) {
+  @media (max-width: $tab-sm) {
     @include s(margin-top, 16);
   }
 }
@@ -671,7 +671,7 @@
     @include s(font-size, 14);
   }
 
-  @media (max-width: $mob) {
+  @media (max-width: $tab-sm) {
     width: 100%;
     justify-content: center;
   }
@@ -680,7 +680,7 @@
 .cart__choose-mob {
   display: none;
 
-  @media (max-width: $mob) {
+  @media (max-width: $tab-sm) {
     @include s(margin-bottom, 28);
     display: flex;
     justify-content: space-between;
@@ -730,7 +730,7 @@
   justify-content: space-between;
   align-items: center;
 
-  @media (max-width: $mob) {
+  @media (max-width: $tab-sm) {
     display: none;
   }
 

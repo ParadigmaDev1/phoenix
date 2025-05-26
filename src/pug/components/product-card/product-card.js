@@ -14,8 +14,8 @@ export const productCards = () => {
       });
       cartBtnWrapper.forEach((wrapper) => {
         const cartBtn = wrapper.querySelector(".cart-btn");
-        const cartBtnText = cartBtn.querySelector("p");
         if (cartBtn) {
+          const cartBtnText = cartBtn.querySelector("p");
           cartBtn.addEventListener("click", () => {
             if (card.className.includes("in-cart")) {
               card.classList.remove("in-cart");
