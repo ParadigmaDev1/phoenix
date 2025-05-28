@@ -66,11 +66,23 @@ mixin product-card-cart(data)
                             p.count.many Много
                         else 
                             p.count.few Мало
-                .bottom 
-                    .price-wrapper 
-                        p.price #{data.price}
-                        p.oldPrice #{data.oldPrice}
-                    p.descr #{data.descr}
+                .price-wrapper 
+                    p.price #{data.price}
+                    p.oldPrice #{data.oldPrice}
+                p.descr #{data.descr}
+                .info 
+                    p Дизайн:&nbsp; 
+                        span Киберпанк
+                    p Формат:&nbsp; 
+                        span А4
+                    p Плотность бумаги: 
+                        span 80 +- 3 г/м2
+                    p Кол-во листов:&nbsp; 
+                        span 500
+                    p Класс бумаги:&nbsp; 
+                        span Сэ
+                    p Белизна CIE:&nbsp;
+                        span нет
             .cart-btn-wrapper 
                 .counter
                     .btn.clear.dec

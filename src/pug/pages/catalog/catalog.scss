@@ -253,6 +253,14 @@
     @include s(column-gap, 20);
   }
 
+  .product-card {
+    @media (max-width: $tab-sm) {
+      .presale {
+        display: none;
+      }
+    }
+  }
+
   &.horizontal {
     grid-template-columns: 1fr;
     @include s(row-gap, 36);
@@ -264,11 +272,170 @@
       }
 
       .product-info {
-        display: none;
+        // display: none;
+
+        .info {
+          display: block;
+        }
+
+        .price-wrapper {
+          .price {
+            font-size: calc(20 / var(--screensize) * 100vw);
+            font-weight: 600;
+            line-height: 140%;
+
+            @media (max-width: $tab-sm) {
+              font-size: calc(16 / var(--screensize) * 100vw);
+              font-weight: 400;
+            }
+          }
+        }
+
+        .descr {
+            font-size: calc(14 / var(--screensize) * 100vw);
+            font-weight: 500;
+            line-height: 128%;
+            margin-top: calc(6 / var(--screensize) * 100vw);
+            margin-bottom: calc(12 / var(--screensize) * 100vw);
+        }
+
+        .cart-btn-wrapper {
+          margin-top: 0;
+          .counter {
+            position: relative;
+            width: 100%;
+          }
+
+          @media (max-width: $tab-sm) {
+            .counter {
+              position: absolute;
+              width: 100%;
+            }
+          }
+        }
+        .main-info {
+          display: grid;
+          grid-template-areas: "top top" "title price" "list button" "list presale";
+          grid-template-columns: 1fr calc(204 / var(--screensize) * 100vw);
+          grid-template-rows: 0.1fr 0.2fr 0.4fr;
+          padding-top: calc(28 / var(--screensize) * 100vw);
+          margin-left: calc(28 / var(--screensize) * 100vw);
+          margin-top: 0;
+          border-top: 1px solid #dcdde1;
+
+          .presale {
+            grid-area: presale;
+            flex-direction: column-reverse;
+            margin-top: 0;
+            align-items: flex-start;
+            justify-content: flex-end;
+            @include s(gap, 12);
+            @include s(margin-top, 10);
+          }
+          .features-list {
+            display: none;
+          }
+          @media (max-width: $tab-sm) {
+            grid-template-areas: "price" "title" "top" "presale" "features" "button";
+            grid-template-columns: 1fr;
+            margin-left: calc(20 / var(--screensize) * 100vw);
+            padding-top: 0;
+            border-top: unset;
+
+            .presale {
+              display: flex;
+            }
+
+            .info {
+              display: none;
+            }
+
+            .features-list {
+              display: flex;
+              grid-area: features;
+              @include s(gap, 14);
+              @include s(margin-bottom, 16);
+
+              .btn {
+                svg {
+                    width: calc(19 / var(--screensize) * 100vw);
+                    height: calc(19 / var(--screensize) * 100vw);
+                }
+              }
+            }
+          }
+          .top {
+            grid-area: top;
+            display: flex;
+            @include s(gap, 28);
+
+            @media (max-width: $tab-sm) {
+              flex-direction: column;
+              @include s(gap, 6);
+              margin-bottom: calc(20 / var(--screensize) * 100vw);
+            }
+
+            .left-block {
+              flex-direction: row;
+              @include s(gap, 28);
+
+              @media (max-width: $tab-sm) {
+                flex-direction: column;
+                @include s(gap, 6);
+
+                p {
+                  font-size: calc(10 / var(--screensize) * 100vw);
+                  font-weight: 400;
+                  line-height: 96%;
+                  letter-spacing: calc(1 / var(--screensize) * 100vw);
+                }
+              }
+            }
+
+            .right-block {
+              @media (max-width: $tab-sm) {
+                .count {
+                  display: flex;
+                  align-items: center;
+                  font-size: calc(10 / var(--screensize) * 100vw);
+                }
+              }
+            }
+          }
+
+          .descr {
+            grid-area: title;
+
+            @media (max-width: $tab-sm) {
+              margin-top: calc(8 / var(--screensize) * 100vw);
+              overflow: hidden;
+              display: -webkit-box;
+              -webkit-line-clamp: 3;
+              -webkit-box-orient: vertical;
+              -o-text-overflow: ellipsis;
+              text-overflow: ellipsis;
+              height: calc(55 / var(--screensize) * 100vw);
+            }
+          }
+
+          .price-wrapper {
+            grid-area: price;
+          }
+
+          .info {
+            grid-area: list;
+          }
+
+          .cart-btn-wrapper {
+            grid-area: button;
+          }
+        }
+
+        
       }
 
       .product-info-hor {
-        display: flex;
+        // display: flex;
       }
     }
 
