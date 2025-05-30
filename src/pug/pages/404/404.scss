@@ -3,7 +3,7 @@
 .not-found {
   @include s(padding-top, 231);
   @include s(padding-bottom, 142);
-  @media (max-width: $tab-sm) {
+  @media (max-width: $tab) {
     @include s(padding-top, 251);
     @include s(padding-bottom, 150);
   }
@@ -14,7 +14,7 @@
     img {
       @include s(width, 443);
       @include s(height, 171);
-      @media (max-width: $tab-sm) {
+      @media (max-width: $tab) {
         @include s(width, 320);
         @include s(height, 131);
       }
@@ -23,7 +23,7 @@
       @include s(margin-top, 48);
       text-transform: uppercase;
       @include h1;
-      @media (max-width: $tab-sm) {
+      @media (max-width: $tab) {
         @include s(margin-top, 24);
         text-align: center;
       }
@@ -31,7 +31,7 @@
     .descr {
       @include s(margin-top, 10);
       @include body-l;
-      @media (max-width: $tab-sm) {
+      @media (max-width: $tab) {
         @include s(margin-top, 6);
         @include body-m;
         text-align: center;
@@ -42,7 +42,7 @@
       @include s(width, 201);
       justify-content: center;
       @include s(gap, 17);
-      @media (max-width: $tab-sm) {
+      @media (max-width: $tab) {
         width: 100%;
         @include s(margin-top, 24);
       }

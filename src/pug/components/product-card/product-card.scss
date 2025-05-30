@@ -31,7 +31,7 @@
       }
     }
 
-    @media (max-width: $tab-sm) {
+    @media (max-width: $tab) {
       order: -1;
       .checkbox-wrapper {
         display: none;
@@ -64,7 +64,7 @@
       .cart-btn-wrapper {
         .counter {
           width: 50%;
-          @media (max-width: $tab-sm) {
+          @media (max-width: $tab) {
             width: 100%;
             z-index: 3;
           }
@@ -72,12 +72,12 @@
         .cart-btn {
           width: 50%;
           @include s(padding-right, 15);
-          @media (max-width: $tab-sm) {
+          @media (max-width: $tab) {
             @include s(padding-right, 0);
           }
           svg {
             opacity: 1;
-            @media (max-width: $tab-sm) {
+            @media (max-width: $tab) {
               opacity: 0;
             }
           }
@@ -122,10 +122,16 @@
     @include borr(12);
     background: var(--back-color);
     position: relative;
+    @media (max-width: $tab) {
+      @include s(height, 250);
+      @include s(min-height, 250);
+    }
+
     @media (max-width: $tab-sm) {
       @include s(height, 150);
       @include s(min-height, 150);
     }
+
     .product-card-features {
       position: absolute;
       top: 0;
@@ -136,7 +142,7 @@
       justify-content: space-between;
       z-index: 3;
       position: absolute;
-      @media (max-width: $tab-sm) {
+      @media (max-width: $tab) {
         bottom: 0;
         pointer-events: none;
       }
@@ -144,7 +150,7 @@
         position: absolute;
         @include s(top, 18);
         @include s(left, 20);
-        @media (max-width: $tab-sm) {
+        @media (max-width: $tab) {
           top: auto;
           @include s(left, 10);
           @include s(bottom, 10);
@@ -157,7 +163,7 @@
         position: absolute;
         @include s(top, 10);
         @include s(right, 10);
-        @media (max-width: $tab-sm) {
+        @media (max-width: $tab) {
           @include s(left, 4);
           @include s(top, 4);
           @include s(right, 4);
@@ -171,7 +177,7 @@
           display: flex;
           align-items: center;
           justify-content: center;
-          @media (max-width: $tab-sm) {
+          @media (max-width: $tab) {
             pointer-events: all;
           }
 
@@ -209,7 +215,7 @@
         top: 0;
         left: 0;
         bottom: 0;
-        @media (max-width: $tab-sm) {
+        @media (max-width: $tab) {
           position: absolute;
           width: 100%;
           height: 100%;
@@ -242,7 +248,7 @@
         bottom: 0;
         display: flex;
         z-index: 2;
-        @media (max-width: $tab-sm) {
+        @media (max-width: $tab) {
           display: none;
         }
         span {
@@ -262,7 +268,7 @@
       @include s(gap, 20);
       opacity: 0;
       transition: var(--trs-cubic-300);
-      @media (max-width: $tab-sm) {
+      @media (max-width: $tab) {
         opacity: 1;
         @include s(bottom, -6);
         @include s(right, 9);
@@ -271,7 +277,7 @@
       .btn {
         text-transform: uppercase;
         @include descr-m;
-        @media (max-width: $tab-sm) {
+        @media (max-width: $tab) {
           display: none;
         }
       }
@@ -296,31 +302,32 @@
         }
       }
 
-      @media (max-width: $tab-sm) {
+      @media (max-width: $tab) {
         display: none;
       }
     }
 
     .product-card-opt-selector {
-      @media (max-width: $tab-sm) {
+      @media (max-width: $tab) {
         // display: none;
       }
     }
     .main-info {
       @include s(margin-top, 16);
       flex: 1;
-
+      display: flex;
+      flex-direction: column;
       .features-list {
         display: none;
       }
-      @media (max-width: $tab-sm) {
+      @media (max-width: $tab) {
         @include s(margin-top, 26);
       }
       .top {
         display: flex;
         align-items: flex-start;
         justify-content: space-between;
-        @media (max-width: $tab-sm) {
+        @media (max-width: $tab) {
           display: none;
         }
         .left-block {
@@ -339,7 +346,7 @@
             text-transform: uppercase;
             color: var(--gray-light-color);
             @include s(padding-left, 22);
-            @media (max-width: $tab-sm) {
+            @media (max-width: $tab) {
               display: none;
             }
             &:before {
@@ -374,52 +381,56 @@
       }
 
       .descr {
-          @include body-sb;
-          @include s(margin-top, 6);
-          @media (max-width: $tab-sm) {
-            @include s(margin-top, 8);
+        @include body-sb;
+        @include s(margin-top, 6);
+        flex: 1;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+        text-overflow: ellipsis;
+        @media (max-width: $tab) {
+          @include s(margin-top, 8);
 
-            overflow: hidden;
-            display: -webkit-box;
-            -webkit-line-clamp: 3;
-            -webkit-box-orient: vertical;
-            text-overflow: ellipsis;
+          overflow: hidden;
+          display: -webkit-box;
+          -webkit-line-clamp: 3;
+          -webkit-box-orient: vertical;
+          text-overflow: ellipsis;
+        }
+      }
+      .price-wrapper {
+        display: flex;
+        align-items: baseline;
+        @include s(gap, 12);
+        @media (max-width: $tab) {
+          @include s(gap, 8);
+        }
+        .price {
+          @include body-xl;
+          @media (max-width: $tab) {
+            @include body-sb;
           }
+        }
+        .oldPrice {
+          font-weight: 600;
+          @include s(font-size, 14);
+          line-height: 130%;
+          color: #b2b3ba;
+          text-decoration: line-through;
+        }
       }
       .bottom {
         @include s(margin-top, 16);
-        @media (max-width: $tab-sm) {
+        @media (max-width: $tab) {
           margin-top: 0;
         }
-        .price-wrapper {
-          display: flex;
-          align-items: baseline;
-          @include s(gap, 12);
-          @media (max-width: $tab-sm) {
-            @include s(gap, 8);
-          }
-          .price {
-            @include body-xl;
-            @media (max-width: $tab-sm) {
-              @include body-sb;
-            }
-          }
-          .oldPrice {
-            font-weight: 600;
-            @include s(font-size, 14);
-            line-height: 130%;
-            color: #b2b3ba;
-            text-decoration: line-through;
-          }
-        }
-
-        
       }
     }
     .cart-btn-wrapper {
       @include s(margin-top, 20);
       position: relative;
-      @media (max-width: $tab-sm) {
+      @media (max-width: $tab) {
         @include s(margin-top, 12);
       }
       .counter {
@@ -433,7 +444,7 @@
         @include padding(0, 10);
         position: absolute;
         transition: var(--trs-cubic-300);
-        @media (max-width: $tab-sm) {
+        @media (max-width: $tab) {
           @include s(height, 36);
         }
         .btn {
@@ -463,13 +474,13 @@
         z-index: 2;
         position: relative;
         margin-left: auto;
-        @media (max-width: $tab-sm) {
+        @media (max-width: $tab) {
           @include s(height, 36);
         }
         p {
           text-transform: uppercase;
           @include descr-m;
-          @media (max-width: $tab-sm) {
+          @media (max-width: $tab) {
             @include descr-s;
           }
         }
@@ -494,7 +505,7 @@
   border-top: 1px solid #dcdde1;
   width: 100%;
 
-  @media (max-width: $tab-sm) {
+  @media (max-width: $tab) {
     padding-top: 0;
     border-top: none;
     @include s(margin-left, 20);
@@ -521,7 +532,7 @@
     .price-wrapper {
       display: none;
 
-      @media (max-width: $tab-sm) {
+      @media (max-width: $tab) {
         display: flex;
       }
     }
@@ -530,7 +541,7 @@
       @include body-sb;
       @include s(margin-top, 6);
       @include s(margin-bottom, 12);
-      @media (max-width: $tab-sm) {
+      @media (max-width: $tab) {
         @include s(margin-top, 8);
 
         overflow: hidden;
@@ -566,12 +577,12 @@
         }
       }
 
-      @media (max-width: $tab-sm) {
+      @media (max-width: $tab) {
         display: none;
       }
     }
 
-    @media (max-width: $tab-sm) {
+    @media (max-width: $tab) {
       display: flex;
       flex-direction: column-reverse;
 
@@ -631,7 +642,7 @@
     .features-list {
       display: none;
 
-      @media (max-width: $tab-sm) {
+      @media (max-width: $tab) {
         display: flex;
         @include s(gap, 20);
         @include s(margin-bottom, 16);
@@ -663,7 +674,7 @@
       }
     }
 
-    @media (max-width: $tab-sm) {
+    @media (max-width: $tab) {
       display: flex;
       flex-direction: column;
       .price-wrapper {
@@ -684,14 +695,12 @@
     }
 
     .--only-desk {
-      @media (max-width: $tab-sm) {
+      @media (max-width: $tab) {
         display: none;
       }
     }
     .cart-btn-wrapper {
-     
-
-      @media (max-width: $tab-sm) {
+      @media (max-width: $tab) {
         display: block;
         .counter {
           display: flex;
@@ -704,7 +713,7 @@
       text-transform: uppercase;
       color: var(--gray-light-color);
       @include s(padding-left, 22);
-      @media (max-width: $tab-sm) {
+      @media (max-width: $tab) {
         display: none;
       }
       &:before {
@@ -767,12 +776,12 @@
       @include s(margin-bottom, 12);
       @include s(margin-top, 12);
       @include s(gap, 12);
-      @media (max-width: $tab-sm) {
+      @media (max-width: $tab) {
         @include s(gap, 8);
       }
       .price {
         @include body-xl;
-        @media (max-width: $tab-sm) {
+        @media (max-width: $tab) {
           @include body-sb;
         }
       }
@@ -798,7 +807,7 @@
       @include borr(6);
       @include padding(0, 10);
       transition: var(--trs-cubic-600);
-      @media (max-width: $tab-sm) {
+      @media (max-width: $tab) {
         @include s(height, 36);
       }
       .btn {
@@ -831,7 +840,7 @@
   .product-card-swiper-wrapper .product-card-features .features-list {
     top: calc(3 / var(--screensize) * 100vw);
   }
-  @media (max-width: $tab-sm) {
+  @media (max-width: $tab) {
     flex-wrap: wrap;
     @include s(padding-bottom, 28);
     border-bottom: 1px solid #dcdde1;
@@ -930,7 +939,7 @@
   z-index: 3;
   background: none;
 
-  @media (max-width: $tab-sm) {
+  @media (max-width: $tab) {
     .selector-content {
       @include s(left, -100);
     }
@@ -942,7 +951,7 @@
     height: auto;
     @include s(margin-top, 22);
 
-    @media (max-width: $tab-sm) {
+    @media (max-width: $tab) {
       margin-top: 0;
       @include s(margin-bottom, 16);
     }
@@ -971,7 +980,7 @@
 .product-card-cart__handlers {
   display: none;
 
-  @media (max-width: $tab-sm) {
+  @media (max-width: $tab) {
     display: flex;
     justify-content: space-between;
     @include s(width, 320);

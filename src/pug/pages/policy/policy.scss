@@ -3,7 +3,7 @@
 .policy-page {
   @include s(margin-top, 28);
   @include s(padding-bottom, 142);
-  @media (max-width: $tab-sm) {
+  @media (max-width: $tab) {
     @include s(padding-bottom, 64);
     @include s(margin-top, 16);
   }
@@ -11,7 +11,7 @@
     display: grid;
     @include gtc(1fr, 432);
     @include s(gap, 42);
-    @media (max-width: $tab-sm) {
+    @media (max-width: $tab) {
       @include s(gap, 42);
 
       grid-template-columns: 1fr;
@@ -28,7 +28,7 @@
         @include s(margin-bottom, 36);
         border-bottom: 1px solid var(--line-color);
         @include s(margin-top, 36);
-        @media (max-width: $tab-sm) {
+        @media (max-width: $tab) {
           @include s(margin-bottom, 20);
           @include s(padding-bottom, 12);
           @include s(margin-top, 20);
@@ -51,7 +51,7 @@
         display: flex;
         flex-direction: column;
         // @include s(gap, 48);
-        // @media (max-width: $tab-sm) {
+        // @media (max-width: $tab) {
         //   @include s(margin-top, 36);
         //   @include s(gap, 36);
         // }
@@ -60,7 +60,7 @@
           text-transform: uppercase;
           @include s(margin-bottom, 16);
           @include s(margin-top, 48);
-          @media (max-width: $tab-sm) {
+          @media (max-width: $tab) {
             @include s(margin-top, 36);
           }
         }
@@ -84,7 +84,7 @@
       }
     }
     .image-block {
-      @media (max-width: $tab-sm) {
+      @media (max-width: $tab) {
         display: none;
       }
       .image-wrapper {

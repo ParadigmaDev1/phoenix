@@ -3,7 +3,7 @@
 .register {
   @include s(margin-top, 28);
   @include s(padding-bottom, 156);
-  @media (max-width: $tab-sm) {
+  @media (max-width: $tab) {
     @include s(padding-bottom, 64);
     @include s(margin-top, 16);
   }
@@ -13,14 +13,14 @@
     }
     .content {
       @include s(margin-top, 36);
-      @media (max-width: $tab-sm) {
+      @media (max-width: $tab) {
         @include s(margin-top, 20);
       }
       .tab-content {
         display: grid;
         @include gtc(661, 432);
         @include s(gap, 252);
-        @media (max-width: $tab-sm) {
+        @media (max-width: $tab) {
           grid-template-columns: 1fr;
           @include s(gap, 64);
         }
@@ -30,7 +30,7 @@
           display: flex;
           align-items: center;
           @include s(gap, 4);
-          @media (max-width: $tab-sm) {
+          @media (max-width: $tab) {
             overflow: auto;
             @include s(margin-left, -20);
             @include s(margin-right, -20);
@@ -45,13 +45,13 @@
           text-transform: uppercase;
           @include s(margin-top, 48);
           @include s(margin-bottom, 24);
-          @media (max-width: $tab-sm) {
+          @media (max-width: $tab) {
             @include s(margin-top, 36);
             @include s(margin-bottom, 20);
           }
           &:first-child {
             @include s(margin-top, 28);
-            @media (max-width: $tab-sm) {
+            @media (max-width: $tab) {
               @include s(margin-top, 36);
             }
           }
@@ -62,7 +62,7 @@
           @include s(gap, 12);
           @include s(margin-top, 48);
           cursor: pointer;
-          @media (max-width: $tab-sm) {
+          @media (max-width: $tab) {
             @include s(margin-top, 36);
           }
           span {
@@ -86,7 +86,7 @@
           display: flex;
           flex-direction: column;
           @include s(gap, 24);
-          @media (max-width: $tab-sm) {
+          @media (max-width: $tab) {
             @include s(gap, 20);
           }
           .input-wrapper {
@@ -94,7 +94,7 @@
             @include gtc(205, 1fr);
             align-items: center;
             @include s(gap, 24);
-            @media (max-width: $tab-sm) {
+            @media (max-width: $tab) {
               @include s(gap, 8);
               grid-template-columns: 1fr;
             }
@@ -129,7 +129,7 @@
           @include s(gap, 8);
           @include s(margin-top, 16);
           @include s(margin-bottom, 48);
-          @media (max-width: $tab-sm) {
+          @media (max-width: $tab) {
             @include s(margin-bottom, 36);
             @include s(margin-top, 12);
           }
@@ -137,7 +137,7 @@
             position: relative;
             @include s(padding-left, 30);
             @include body-l;
-            @media (max-width: $tab-sm) {
+            @media (max-width: $tab) {
               @include body-m;
             }
             &:before {
@@ -194,7 +194,7 @@
             @include s(gap, 20);
             align-items: center;
             @include s(margin-top, 28);
-            @media (max-width: $tab-sm) {
+            @media (max-width: $tab) {
               @include s(gap, 12);
               @include gtc(208, 1fr);
             }

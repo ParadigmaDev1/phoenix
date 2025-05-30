@@ -9,7 +9,7 @@
     display: grid;
     @include gtc(546, 1fr);
     @include s(gap, 48);
-    @media (max-width: $tab-sm) {
+    @media (max-width: $tab) {
       grid-template-columns: 1fr;
       @include s(gap, 36);
     }
@@ -23,7 +23,7 @@
         overflow: hidden;
         @include s(height, 310);
         @include borr(12);
-        @media (max-width: $tab-sm) {
+        @media (max-width: $tab) {
           position: relative;
           @include s(height, 180);
           .swiper-wrapper {
@@ -58,7 +58,7 @@
         flex-direction: column;
         @include s(gap, 64);
         @include s(margin-top, 28);
-        @media (max-width: $tab-sm) {
+        @media (max-width: $tab) {
           @include s(margin-top, 10);
           @include s(gap, 36);
         }
@@ -68,7 +68,7 @@
           }
           .subtitle {
             @include body-xl;
-            @media (max-width: $tab-sm) {
+            @media (max-width: $tab) {
               @include body-lb;
             }
           }

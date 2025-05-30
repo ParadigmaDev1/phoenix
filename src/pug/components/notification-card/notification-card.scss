@@ -8,7 +8,7 @@
   @include gtc(164, 1fr);
   @include s(gap, 28);
   position: relative;
-  @media (max-width: $tab-sm) {
+  @media (max-width: $tab) {
     grid-template-columns: 1fr;
     @include s(gap, 16);
     @include padding(20);
@@ -64,7 +64,7 @@
       width: fit-content;
       @include s(gap, 12);
       @include padding(0, 16);
-      @media (max-width: $tab-sm) {
+      @media (max-width: $tab) {
         @include s(margin-top, 16);
       }
       span {

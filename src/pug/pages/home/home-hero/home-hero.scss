@@ -6,7 +6,7 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  @media (max-width: $tab-sm) {
+  @media (max-width: $tab) {
     min-height: auto;
   }
   &:before {
@@ -22,7 +22,7 @@
       rgba(0, 0, 0, 0) 0%,
       rgba(0, 0, 0, 1) 100%
     );
-    @media (max-width: $tab-sm) {
+    @media (max-width: $tab) {
       @include s(height, 116);
     }
   }
@@ -39,7 +39,7 @@
       rgba(0, 0, 0, 0) 0%,
       rgba(0, 0, 0, 1) 100%
     );
-    @media (max-width: $tab-sm) {
+    @media (max-width: $tab) {
       display: none;
     }
   }
@@ -47,7 +47,11 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    @media (max-width: $tab-sm) {
+    @media (max-width: $tab) {
+      position: relative;
+      @include s(height, 420);
+    }
+    @media (max-width: $mob) {
       position: relative;
       @include s(height, 318);
     }
@@ -71,14 +75,14 @@
     height: 100%;
     @include s(padding-bottom, 48);
     flex: 1;
-    @media (max-width: $tab-sm) {
+    @media (max-width: $tab) {
       @include s(padding-bottom, 38);
       border-bottom: 1px solid var(--line-color);
     }
     .home-hero-content-swiper {
       @include s(padding-top, 204);
       flex: 1;
-      @media (max-width: $tab-sm) {
+      @media (max-width: $tab) {
         @include s(padding-top, 28);
       }
       .swiper-slide {
@@ -89,7 +93,7 @@
         visibility: hidden;
         position: absolute;
         pointer-events: none;
-        @media (max-width: $tab-sm) {
+        @media (max-width: $tab) {
           @include s(gap, 10);
         }
         &.swiper-slide-active {
@@ -105,7 +109,7 @@
           line-height: 108%;
           color: var(--white-color);
           text-transform: uppercase;
-          @media (max-width: $tab-sm) {
+          @media (max-width: $tab) {
             color: var(--gray-color);
             @include s(font-size, 28);
             line-height: 115%;
@@ -117,7 +121,7 @@
           font-weight: 400;
           line-height: 150%;
           color: var(--white-color);
-          @media (max-width: $tab-sm) {
+          @media (max-width: $tab) {
             color: var(--gray-color);
             @include s(font-size, 14);
             line-height: 128%;
@@ -127,7 +131,7 @@
           width: fit-content;
           @include padding(0, 24);
           @include s(gap, 24);
-          @media (max-width: $tab-sm) {
+          @media (max-width: $tab) {
             border-color: var(--violet-color);
             @include s(gap, 12);
             @include padding(0, 16);
@@ -138,13 +142,13 @@
             font-weight: 500px;
             @include s(font-size, 12);
             line-height: 100%;
-            @media (max-width: $tab-sm) {
+            @media (max-width: $tab) {
               color: var(--violet-color);
               line-height: 128%;
             }
           }
           svg {
-            @media (max-width: $tab-sm) {
+            @media (max-width: $tab) {
               @include s(width, 6);
               @include s(height, 12);
               path {
@@ -160,17 +164,20 @@
       align-items: center;
       justify-content: space-between;
       @include s(margin-top, 24);
-
+      @media (max-width: $tab) {
+        justify-content: center;
+      }
       .left-block {
         display: flex;
         flex-direction: column;
         @include s(gap, 20);
-        @media (max-width: $tab-sm) {
+        @media (max-width: $tab) {
           @include s(gap, 16);
+          width: 100%;
         }
         .home-hero-descr-swiper {
           position: relative;
-          @media (max-width: $tab-sm) {
+          @media (max-width: $tab) {
             display: none;
           }
           .swiper-wrapper {
@@ -198,12 +205,12 @@
             font-weight: 500;
             @include s(font-size, 10);
             line-height: 128%;
-            @media (max-width: $tab-sm) {
+            @media (max-width: $tab) {
               color: var(--gray-color);
             }
           }
           .total {
-            @media (max-width: $tab-sm) {
+            @media (max-width: $tab) {
               color: var(--gray-light-color);
             }
           }
@@ -213,8 +220,9 @@
             background: none;
             top: 0;
             bottom: 0;
-            @media (max-width: $tab-sm) {
-              @include s(width, 266);
+            @media (max-width: $tab) {
+              // @include s(width, 266);
+              width: 100%;
             }
             .progress-line {
               background: var(--white-color);
@@ -233,13 +241,13 @@
               width: 100%;
               height: 1px;
               border-radius: 0;
-              @media (max-width: $tab-sm) {
+              @media (max-width: $tab) {
                 background: var(--line-color);
               }
               &.swiper-pagination-bullet-active {
                 animation: slidein 3500ms linear 0ms infinite;
                 background: var(--white-color);
-                @media (max-width: $tab-sm) {
+                @media (max-width: $tab) {
                   background: var(--gray-color);
                   opacity: 1;
                   z-index: 2;

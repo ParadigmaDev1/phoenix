@@ -3,21 +3,21 @@
 .career-work {
   overflow: hidden;
   @include s(margin-top, 116);
-  @media (max-width: $tab-sm) {
+  @media (max-width: $tab) {
     @include s(margin-top, 64);
   }
   .career-work-inner {
     h3 {
       @include h2;
       text-align: center;
-      @media (max-width: $tab-sm) {
+      @media (max-width: $tab) {
         text-align: left;
       }
     }
     .career-work-swiper {
       @include s(margin-top, 36);
       position: relative;
-      @media (max-width: $tab-sm) {
+      @media (max-width: $tab) {
         @include s(margin-top, 20);
       }
       .navigation {
@@ -50,14 +50,14 @@
           display: flex;
           flex-direction: column;
           align-items: center;
-          @media (max-width: $tab-sm) {
+          @media (max-width: $tab) {
             align-items: flex-start;
           }
           .title {
             @include h5;
             text-transform: uppercase;
             text-align: center;
-            @media (max-width: $tab-sm) {
+            @media (max-width: $tab) {
               text-align: left;
             }
           }
@@ -66,7 +66,7 @@
             @include s(max-width, 626);
             text-align: center;
             @include body-l;
-            @media (max-width: $tab-sm) {
+            @media (max-width: $tab) {
               text-align: left;
               @include s(margin-top, 8);
               @include body-m;

@@ -3,14 +3,14 @@
 .about-gallery {
   @include s(margin-top, 144);
   overflow: hidden;
-  @media (max-width: $tab-sm) {
+  @media (max-width: $tab) {
     @include s(margin-top, 64);
   }
   .about-gallery-inner {
     h3 {
       text-align: center;
       @include h2;
-      @media (max-width: $tab-sm) {
+      @media (max-width: $tab) {
         text-align: left;
       }
     }
@@ -20,7 +20,7 @@
       align-items: center;
       @include s(gap, 4);
       justify-content: center;
-      @media (max-width: $tab-sm) {
+      @media (max-width: $tab) {
         justify-content: flex-start;
         @include s(margin-top, 20);
         @include s(margin-left, -20);
@@ -35,7 +35,7 @@
     }
     .tab-content {
       @include s(margin-top, 28);
-      @media (max-width: $tab-sm) {
+      @media (max-width: $tab) {
         @include s(margin-top, 20);
       }
       .double-swiper {
@@ -46,11 +46,14 @@
           overflow: hidden;
           opacity: 0;
           transition: opacity var(--trs-cubic-300);
-          @media (max-width: $tab-sm) {
+          @media (max-width: $tab) {
             @include s(height, 180);
           }
           &.visible-slide {
             opacity: 1;
+          }
+          .image-wrapper {
+            height: 100%;
           }
           img {
             width: 100%;

@@ -3,7 +3,7 @@
 .home-brands {
   @include s(padding-top, 116);
   overflow: hidden;
-  @media (max-width: $tab-sm) {
+  @media (max-width: $tab) {
     @include s(padding-top, 64);
   }
   .home-brands-inner {

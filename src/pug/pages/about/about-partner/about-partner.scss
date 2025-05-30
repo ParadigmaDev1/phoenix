@@ -2,7 +2,7 @@
 
 .about-partner {
   @include s(margin-top, 116);
-  @media (max-width: $tab-sm) {
+  @media (max-width: $tab) {
     @include s(margin-top, 64);
     overflow: hidden;
   }
@@ -10,7 +10,7 @@
     h3 {
       @include h2;
       text-align: center;
-      @media (max-width: $tab-sm) {
+      @media (max-width: $tab) {
         text-align: left;
       }
     }
@@ -19,7 +19,7 @@
       @include gtc(318, 1fr, 318);
       @include s(gap, 24);
       @include s(margin-top, 42);
-      @media (max-width: $tab-sm) {
+      @media (max-width: $tab) {
         display: flex;
         justify-content: center;
         @include s(margin-top, 28);
@@ -28,7 +28,7 @@
         display: flex;
         flex-direction: column;
         @include s(gap, 75);
-        @media (max-width: $tab-sm) {
+        @media (max-width: $tab) {
           display: none;
         }
         .title {
@@ -42,7 +42,7 @@
       }
       .image-wrapper {
         @include s(height, 564);
-        @media (max-width: $tab-sm) {
+        @media (max-width: $tab) {
           @include s(height, 295);
         }
         img {
@@ -55,7 +55,7 @@
     .partners-swiper {
       display: none;
       @include s(margin-top, 35);
-      @media (max-width: $tab-sm) {
+      @media (max-width: $tab) {
         display: block;
       }
       .swiper-slide {

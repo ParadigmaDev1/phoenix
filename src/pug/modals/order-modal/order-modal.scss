@@ -2,7 +2,7 @@
 
 .order-modal {
   display: none;
-  @media (max-width: $tab-sm) {
+  @media (max-width: $tab) {
     display: block;
   }
 

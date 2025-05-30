@@ -2,7 +2,7 @@
 
 .wholesale-customer-product-addittional {
   @include s(padding-bottom, 96);
-  @media (max-width: $tab-sm) {
+  @media (max-width: $tab) {
     padding-bottom: 0;
   }
 }

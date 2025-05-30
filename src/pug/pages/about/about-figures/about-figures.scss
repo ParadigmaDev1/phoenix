@@ -3,7 +3,7 @@
 .about-figures {
   @include s(margin-top, 116);
   overflow: hidden;
-  @media (max-width: $tab-sm) {
+  @media (max-width: $tab) {
     @include s(margin-top, 64);
   }
   .about-figures-inner {
@@ -13,7 +13,7 @@
     .double-swiper {
       @include s(margin-top, 36);
       position: relative;
-      @media (max-width: $tab-sm) {
+      @media (max-width: $tab) {
         @include s(margin-top, 28);
       }
       .swiper-slide {
@@ -22,7 +22,7 @@
         opacity: 0;
         transition: opacity var(--trs-cubic-300);
         cursor: pointer;
-        @media (max-width: $tab-sm) {
+        @media (max-width: $tab) {
           @include s(gap, 20);
         }
         &.visible-slide {
@@ -45,7 +45,7 @@
           @include borr(20);
           position: relative;
           overflow: hidden;
-          @media (max-width: $tab-sm) {
+          @media (max-width: $tab) {
             @include s(max-width, 93);
             @include s(max-height, 93);
             @include s(min-width, 93);
@@ -63,7 +63,7 @@
           @include s(padding-top, 28);
           border-top: 1px solid var(--line-color);
           transition: var(--trs-cubic-300);
-          @media (max-width: $tab-sm) {
+          @media (max-width: $tab) {
             border-top: none;
             width: 100%;
             @include s(padding-top, 0);
@@ -72,7 +72,7 @@
             @include descr-m;
             color: var(--gray-light-color);
             transition: var(--trs-cubic-300);
-            @media (max-width: $tab-sm) {
+            @media (max-width: $tab) {
               @include descr-s;
             }
           }
@@ -81,14 +81,14 @@
             @include h6;
             text-transform: uppercase;
             transition: var(--trs-cubic-300);
-            @media (max-width: $tab-sm) {
+            @media (max-width: $tab) {
               @include s(margin-top, 6);
             }
           }
           .descr {
             @include s(margin-top, 16);
             @include body-m;
-            @media (max-width: $tab-sm) {
+            @media (max-width: $tab) {
               @include s(margin-top, 10);
             }
           }

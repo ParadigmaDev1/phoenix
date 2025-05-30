@@ -3,7 +3,7 @@
 .delivery {
   @include s(margin-top, 28);
   @include s(padding-bottom, 156);
-  @media (max-width: $tab-sm) {
+  @media (max-width: $tab) {
     @include s(padding-bottom, 64);
     @include s(margin-top, 16);
   }
@@ -16,7 +16,7 @@
       display: flex;
       align-items: center;
       @include s(gap, 4);
-      @media (max-width: $tab-sm) {
+      @media (max-width: $tab) {
         justify-content: flex-start;
         @include s(margin-top, 20);
         @include s(margin-left, -20);
@@ -33,7 +33,7 @@
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       @include s(margin-top, 36);
-      @media (max-width: $tab-sm) {
+      @media (max-width: $tab) {
         grid-template-columns: 1fr;
         @include s(margin-top, 20);
         @include s(gap, 64);
@@ -42,14 +42,14 @@
         &:first-child {
           @include s(padding-right, 48);
           border-right: 1px solid var(--line-color);
-          @media (max-width: $tab-sm) {
+          @media (max-width: $tab) {
             padding-right: 0;
             border-right: none;
           }
         }
         &:last-child {
           @include s(padding-left, 48);
-          @media (max-width: $tab-sm) {
+          @media (max-width: $tab) {
             padding-left: 0;
           }
         }
@@ -72,7 +72,7 @@
         }
         .content {
           @include s(margin-top, 36);
-          @media (max-width: $tab-sm) {
+          @media (max-width: $tab) {
             @include s(margin-top, 20);
           }
           h3 {
@@ -83,7 +83,7 @@
             display: flex;
             flex-direction: column;
             @include s(gap, 10);
-            @media (max-width: $tab-sm) {
+            @media (max-width: $tab) {
               @include s(margin-top, 8);
             }
             p {
@@ -95,7 +95,7 @@
             background: var(--back-color);
             @include padding(24, 28);
             @include borr(12);
-            @media (max-width: $tab-sm) {
+            @media (max-width: $tab) {
               @include s(margin-top, 20);
               @include padding(20);
             }
@@ -107,7 +107,7 @@
             .descr {
               @include s(margin-top, 10);
               @include body-xl;
-              @media (max-width: $tab-sm) {
+              @media (max-width: $tab) {
                 @include body-mb;
                 @include s(margin-top, 6);
               }

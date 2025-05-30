@@ -92,6 +92,12 @@
   font-weight: 400;
   line-height: 115%;
 }
+@mixin descr-m2 {
+  @include s(font-size, 13);
+  font-weight: 500;
+  line-height: 128%;
+  @include s(letter-spacing, 1);
+}
 @mixin descr-m {
   @include s(font-size, 14);
   font-weight: 500;
@@ -116,7 +122,7 @@
   line-height: 115%;
   @include s(letter-spacing, 1);
   text-transform: uppercase;
-  @media (max-width: $tab-sm) {
+  @media (max-width: $tab) {
     @include s(font-size, 28);
     font-weight: 400;
   }
@@ -127,7 +133,7 @@
   line-height: 115%;
   @include s(letter-spacing, 1);
   text-transform: uppercase;
-  @media (max-width: $tab-sm) {
+  @media (max-width: $tab) {
     @include s(font-size, 26);
     letter-spacing: 0;
   }
@@ -138,7 +144,7 @@
   line-height: 115%;
   @include s(letter-spacing, 1);
   text-transform: uppercase;
-  @media (max-width: $tab-sm) {
+  @media (max-width: $tab) {
     @include s(font-size, 24);
     letter-spacing: 0;
   }
@@ -147,7 +153,7 @@
   @include s(font-size, 28);
   font-weight: 400;
   line-height: 128%;
-  @media (max-width: $tab-sm) {
+  @media (max-width: $tab) {
     @include s(font-size, 22);
     line-height: 115%;
   }
@@ -156,7 +162,7 @@
   @include s(font-size, 24);
   font-weight: 500;
   line-height: 128%;
-  @media (max-width: $tab-sm) {
+  @media (max-width: $tab) {
     @include s(font-size, 20);
     line-height: 115%;
   }
@@ -165,7 +171,7 @@
   @include s(font-size, 20);
   font-weight: 500;
   line-height: 128%;
-  @media (max-width: $tab-sm) {
+  @media (max-width: $tab) {
     @include s(font-size, 18);
     line-height: 115%;
   }

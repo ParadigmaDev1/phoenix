@@ -2,7 +2,7 @@
 
 .home-categories {
   @include s(padding-top, 80);
-  @media (max-width: $tab-sm) {
+  @media (max-width: $tab) {
     @include s(padding-top, 64);
   }
   .home-categories-inner {
@@ -15,6 +15,9 @@
       display: grid;
       grid-template-columns: repeat(6, 1fr);
       @include s(gap, 24);
+      @media (max-width: $tab) {
+        grid-template-columns: repeat(3, 1fr);
+      }
       @media (max-width: $tab-sm) {
         @include s(margin-top, 20);
         @include s(column-gap, 20);

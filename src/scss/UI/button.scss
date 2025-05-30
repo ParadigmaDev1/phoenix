@@ -30,7 +30,7 @@ button {
     }
     &.m {
       @include s(height, 44);
-      // @media (max-width: $tab-sm) {
+      // @media (max-width: $tab) {
       //   @include s(height, 36);
       // }
       span {

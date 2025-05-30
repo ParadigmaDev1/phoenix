@@ -2,7 +2,7 @@
 
 .career-about {
   @include s(margin-top, 116);
-  @media (max-width: $tab-sm) {
+  @media (max-width: $tab) {
     @include s(margin-top, 64);
   }
   .career-about-inner {
@@ -25,14 +25,14 @@
       }
     }
     .values-block {
-      @media (max-width: $tab-sm) {
+      @media (max-width: $tab) {
         display: none;
       }
     }
     .accordion {
       display: none;
       @include s(margin-top, 20);
-      @media (max-width: $tab-sm) {
+      @media (max-width: $tab) {
         display: block;
       }
       .accordion-item {

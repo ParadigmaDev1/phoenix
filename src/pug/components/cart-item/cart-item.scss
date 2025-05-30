@@ -9,7 +9,7 @@
   @include s(gap, 48);
   cursor: pointer;
   transition: var(--trs-cubic-300);
-  @media (max-width: $tab-sm) {
+  @media (max-width: $tab) {
     @include padding(20);
     @include gtc(1fr, 6);
     @include s(gap, 31);
@@ -18,14 +18,14 @@
     border-color: var(--violet-color);
     .btn {
       background: var(--violet-color) !important;
-      @media (max-width: $tab-sm) {
+      @media (max-width: $tab) {
         background: none !important;
       }
       svg {
         path {
           stroke: var(--white-color) !important;
 
-          @media (max-width: $tab-sm) {
+          @media (max-width: $tab) {
             stroke: var(--gray-color) !important;
           }
         }
@@ -49,14 +49,14 @@
         .label {
           @include body-m;
           color: var(--gray-light-color);
-          @media (max-width: $tab-sm) {
+          @media (max-width: $tab) {
             @include body-s;
           }
         }
         .value {
           text-align: right;
           @include body-m;
-          @media (max-width: $tab-sm) {
+          @media (max-width: $tab) {
             @include body-s;
           }
         }
@@ -70,7 +70,7 @@
   .btn {
     background: none !important;
     border: 1px solid var(--violet-color);
-    @media (max-width: $tab-sm) {
+    @media (max-width: $tab) {
       border: none;
       width: auto !important;
       height: auto !important;

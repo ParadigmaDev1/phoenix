@@ -2,13 +2,13 @@
 
 .quick-view-modal {
   .close-modal-wrapper {
-    @media (max-width: $tab-sm) {
+    @media (max-width: $tab) {
       top: 0 !important;
     }
     .close-modal {
       //   margin-top: calc(-50 / var(--screensize) * 100vw) !important;
       //   margin-right: calc(-50 / var(--screensize) * 100vw) !important;
-      @media (max-width: $tab-sm) {
+      @media (max-width: $tab) {
         margin: 0 !important;
         @include s(top, 0);
         @include s(right, 0);
@@ -27,7 +27,7 @@
     &::-webkit-scrollbar {
       width: 10px;
     }
-    @media (max-width: $tab-sm) {
+    @media (max-width: $tab) {
       @include padding(20);
     }
     .modal-content {
@@ -49,7 +49,7 @@
         @include gtc(1fr, 294);
         @include s(gap, 48);
         @include s(margin-top, 28);
-        @media (max-width: $tab-sm) {
+        @media (max-width: $tab) {
           grid-template-columns: 1fr;
           @include s(margin-top, 10);
           gap: 0;
@@ -59,7 +59,7 @@
             display: grid;
             @include gtc(522, 432);
             @include s(gap, 48);
-            @media (max-width: $tab-sm) {
+            @media (max-width: $tab) {
               grid-template-columns: 1fr;
               @include s(gap, 28);
             }
@@ -67,7 +67,7 @@
               display: grid;
               @include gtc(64, 1fr);
               @include s(gap, 10);
-              @media (max-width: $tab-sm) {
+              @media (max-width: $tab) {
                 grid-template-columns: 1fr;
                 gap: 0;
               }
@@ -78,7 +78,7 @@
                 @include s(height, 448);
                 background: var(--back-color);
                 @include borr(12);
-                @media (max-width: $tab-sm) {
+                @media (max-width: $tab) {
                   @include s(width, 320);
                   @include s(height, 320);
                 }
@@ -123,7 +123,7 @@
                       @include descr-s;
                       color: var(--violet-color);
                       text-transform: uppercase;
-                      @media (max-width: $tab-sm) {
+                      @media (max-width: $tab) {
                         display: none;
                       }
                     }
@@ -174,7 +174,7 @@
                 @include s(width, 64);
                 @include s(height, 448);
                 overflow: hidden;
-                @media (max-width: $tab-sm) {
+                @media (max-width: $tab) {
                   display: none;
                 }
                 .swiper-wrapper {
@@ -220,7 +220,7 @@
                 @include s(margin-top, 24);
                 display: flex;
                 flex-direction: column;
-                @media (max-width: $tab-sm) {
+                @media (max-width: $tab) {
                   @include s(margin-top, 20);
                 }
                 li {
@@ -228,7 +228,7 @@
                   justify-content: space-between;
                   border-top: 1px solid var(--line-color);
                   @include padding(8, 0);
-                  @media (max-width: $tab-sm) {
+                  @media (max-width: $tab) {
                     @include padding(10, 0);
                   }
                   &:last-child {
@@ -237,13 +237,13 @@
                   .label {
                     @include body-m;
                     color: var(--gray-light-color);
-                    @media (max-width: $tab-sm) {
+                    @media (max-width: $tab) {
                       @include body-s;
                     }
                   }
                   .value {
                     @include body-m;
-                    @media (max-width: $tab-sm) {
+                    @media (max-width: $tab) {
                       @include body-s;
                     }
                   }
@@ -251,7 +251,7 @@
               }
               .color-list-wrapper {
                 @include s(margin-top, 24);
-                @media (max-width: $tab-sm) {
+                @media (max-width: $tab) {
                   @include s(margin-top, 20);
                 }
                 .title {
@@ -263,7 +263,7 @@
                   display: flex;
                   flex-wrap: wrap;
                   @include s(gap, 16);
-                  @media (max-width: $tab-sm) {
+                  @media (max-width: $tab) {
                     @include s(gap, 12);
                   }
                   label {
@@ -315,7 +315,7 @@
             flex-direction: column;
             @include s(margin-top, 36);
 
-            @media (max-width: $tab-sm) {
+            @media (max-width: $tab) {
               display: flex;
             }
             .price-wrapper {
@@ -395,13 +395,13 @@
             }
             .cart-btn-wrapper {
               @include s(margin-top, 20);
-              @media (max-width: $tab-sm) {
+              @media (max-width: $tab) {
                 @include s(margin-top, 12);
               }
               &.in-cart {
                 .counter {
                   width: 50%;
-                  @media (max-width: $tab-sm) {
+                  @media (max-width: $tab) {
                     @include s(width, 320);
 
                     z-index: 3;
@@ -410,12 +410,12 @@
                 .cart-btn {
                   width: 50%;
                   @include s(padding-right, 15);
-                  @media (max-width: $tab-sm) {
+                  @media (max-width: $tab) {
                     @include s(padding-right, 0);
                   }
                   svg {
                     opacity: 1;
-                    @media (max-width: $tab-sm) {
+                    @media (max-width: $tab) {
                       opacity: 0;
                     }
                   }
@@ -432,7 +432,7 @@
                 @include padding(0, 10);
                 position: absolute;
                 transition: var(--trs-cubic-600);
-                @media (max-width: $tab-sm) {
+                @media (max-width: $tab) {
                   @include s(height, 36);
                 }
                 .btn {
@@ -462,13 +462,13 @@
                 z-index: 2;
                 position: relative;
                 margin-left: auto;
-                @media (max-width: $tab-sm) {
+                @media (max-width: $tab) {
                   @include s(height, 36);
                 }
                 p {
                   text-transform: uppercase;
                   @include descr-m;
-                  @media (max-width: $tab-sm) {
+                  @media (max-width: $tab) {
                     @include descr-s;
                   }
                 }
@@ -496,7 +496,7 @@
               flex-wrap: wrap;
               @include s(margin-top, 12);
               @include s(gap, 12);
-              @media (max-width: $tab-sm) {
+              @media (max-width: $tab) {
                 flex-wrap: nowrap;
                 overflow: auto;
                 @include s(width, 360);
@@ -513,7 +513,7 @@
                 justify-content: center;
                 @include s(width, 133);
                 @include s(height, 133);
-                @media (max-width: $tab-sm) {
+                @media (max-width: $tab) {
                   @include s(width, 93);
                   @include s(height, 93);
                   @include s(min-width, 93);
@@ -531,14 +531,14 @@
           }
           .specifications {
             @include s(margin-top, 64);
-            @media (max-width: $tab-sm) {
+            @media (max-width: $tab) {
               @include s(margin-top, 36);
             }
             .tabs {
               display: flex;
               align-items: center;
               @include s(gap, 4);
-              @media (max-width: $tab-sm) {
+              @media (max-width: $tab) {
                 overflow: auto;
                 @include s(width, 360);
                 @include s(margin-left, -20);
@@ -547,7 +547,7 @@
                 @include s(padding-right, 20);
               }
               button {
-                @media (max-width: $tab-sm) {
+                @media (max-width: $tab) {
                   white-space: nowrap;
                 }
               }
@@ -562,7 +562,7 @@
                   justify-content: space-between;
                   border-top: 1px solid var(--line-color);
                   @include padding(8, 0);
-                  @media (max-width: $tab-sm) {
+                  @media (max-width: $tab) {
                     display: grid;
                     @include gtc(150, 1fr);
                     @include s(gap, 20);
@@ -573,13 +573,13 @@
                   .label {
                     @include body-m;
                     color: var(--gray-light-color);
-                    @media (max-width: $tab-sm) {
+                    @media (max-width: $tab) {
                       @include body-s;
                     }
                   }
                   .value {
                     @include body-m;
-                    @media (max-width: $tab-sm) {
+                    @media (max-width: $tab) {
                       text-align: right;
                       @include body-s;
                     }
@@ -591,7 +591,7 @@
                   display: grid;
                   grid-template-columns: repeat(2, 1fr);
                   @include s(gap, 48);
-                  @media (max-width: $tab-sm) {
+                  @media (max-width: $tab) {
                     grid-template-columns: 1fr;
                     gap: 0;
                   }
@@ -611,7 +611,7 @@
                 &.list-content {
                   grid-template-columns: repeat(2, 1fr);
                   @include s(gap, 48);
-                  @media (max-width: $tab-sm) {
+                  @media (max-width: $tab) {
                     grid-template-columns: 1fr;
                     gap: 0;
                   }
@@ -658,7 +658,7 @@
         .order-block {
           display: flex;
           flex-direction: column;
-          @media (max-width: $tab-sm) {
+          @media (max-width: $tab) {
             display: none;
           }
           .features {

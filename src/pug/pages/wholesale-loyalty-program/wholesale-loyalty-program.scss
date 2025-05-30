@@ -2,7 +2,7 @@
 
 .wholesale-loyalty-program {
   @include s(padding-bottom, 156);
-  @media (max-width: $tab-sm) {
+  @media (max-width: $tab) {
     @include s(padding-bottom, 64);
     @include s(margin-top, 16);
   }
@@ -11,7 +11,7 @@
     @include gtc(1fr, 294);
     @include s(gap, 48);
     @include s(margin-top, 36);
-    @media (max-width: $tab-sm) {
+    @media (max-width: $tab) {
       grid-template-columns: 1fr;
       gap: 0;
       @include s(margin-top, 22);
@@ -22,13 +22,13 @@
     .content {
       .loyalty-program-block {
         @include s(margin-top, 44);
-        @media (max-width: $tab-sm) {
+        @media (max-width: $tab) {
           @include s(margin-top, 20);
         }
         .loyalty-program-top {
           display: flex;
           justify-content: space-between;
-          @media (max-width: $tab-sm) {
+          @media (max-width: $tab) {
             flex-direction: column;
             @include s(gap, 12);
           }
@@ -41,7 +41,7 @@
             display: flex;
             align-items: center;
             @include s(gap, 36);
-            @media (max-width: $tab-sm) {
+            @media (max-width: $tab) {
               flex-direction: column;
               @include s(gap, 8);
               align-items: flex-start;
@@ -68,7 +68,7 @@
         }
         .loyalty-program-list {
           @include s(margin-top, 12);
-          @media (max-width: $tab-sm) {
+          @media (max-width: $tab) {
             @include s(margin-top, 20);
           }
           .loyalty-program-card {
@@ -80,7 +80,7 @@
             @include s(gap, 24);
             @include s(padding-top, 20);
             @include s(padding-bottom, 64);
-            @media (max-width: $tab-sm) {
+            @media (max-width: $tab) {
               @include gtc(90, 1fr);
               @include s(padding-top, 28);
               @include s(padding-bottom, 28);
@@ -93,7 +93,7 @@
             &.active {
               opacity: 1;
               @include s(padding-top, 24);
-              @media (max-width: $tab-sm) {
+              @media (max-width: $tab) {
                 @include s(padding-top, 28);
               }
               .image-wrapper {
@@ -126,7 +126,7 @@
               @include borr(12);
               position: relative;
               grid-area: image;
-              @media (max-width: $tab-sm) {
+              @media (max-width: $tab) {
                 @include s(width, 64);
                 @include s(height, 64);
               }
@@ -142,7 +142,7 @@
               @include s(gap, 23);
               grid-area: title;
 
-              @media (max-width: $tab-sm) {
+              @media (max-width: $tab) {
                 @include s(gap, 12);
               }
               .title {
@@ -157,7 +157,7 @@
                 display: flex;
                 align-items: baseline;
                 @include s(gap, 10);
-                @media (max-width: $tab-sm) {
+                @media (max-width: $tab) {
                   display: none;
                 }
                 span {
@@ -178,7 +178,7 @@
                   @include s(gap, 24);
                   &.chash-back {
                     display: none;
-                    @media (max-width: $tab-sm) {
+                    @media (max-width: $tab) {
                       display: grid;
                     }
                     .value,
@@ -189,13 +189,13 @@
                   .label {
                     color: var(--gray-light-color);
                     @include body-l;
-                    @media (max-width: $tab-sm) {
+                    @media (max-width: $tab) {
                       @include body-m;
                     }
                   }
                   .value {
                     @include body-l;
-                    @media (max-width: $tab-sm) {
+                    @media (max-width: $tab) {
                       @include body-m;
                     }
                   }
@@ -206,7 +206,7 @@
                 @include s(margin-top, 16);
                 @include s(margin-bottom, 10);
                 color: var(--gray-light-color);
-                @media (max-width: $tab-sm) {
+                @media (max-width: $tab) {
                   @include s(margin-top, 12);
                   @include s(margin-bottom, 4);
                 }
@@ -219,13 +219,13 @@
               display: flex;
               flex-direction: column;
               grid-area: points;
-              @media (max-width: $tab-sm) {
+              @media (max-width: $tab) {
                 @include padding(16, 20);
               }
               .title {
                 @include body-s;
                 color: var(--gray-color) !important;
-                @media (max-width: $tab-sm) {
+                @media (max-width: $tab) {
                   @include body-xs;
                 }
               }
@@ -235,7 +235,7 @@
               .date {
                 @include s(margin-top, 16);
                 @include body-s;
-                @media (max-width: $tab-sm) {
+                @media (max-width: $tab) {
                   @include s(margin-top, 12);
                   @include body-xs;
                 }
@@ -245,7 +245,7 @@
                 font-weight: 400;
                 @include s(font-size, 16);
                 line-height: 140%;
-                @media (max-width: $tab-sm) {
+                @media (max-width: $tab) {
                   @include body-s;
                 }
               }
@@ -261,7 +261,7 @@
       }
       .history-block {
         @include s(margin-top, 96);
-        @media (max-width: $tab-sm) {
+        @media (max-width: $tab) {
           @include s(margin-top, 64);
         }
         h3 {
@@ -272,7 +272,7 @@
           @include gtc(488, 398);
           @include s(gap, 116);
           @include s(margin-top, 28);
-          @media (max-width: $tab-sm) {
+          @media (max-width: $tab) {
             grid-template-columns: 1fr;
             @include s(gap, 20);
           }
@@ -280,18 +280,18 @@
             display: flex;
             @include s(gap, 8);
             align-items: center;
-            @media (max-width: $tab-sm) {
+            @media (max-width: $tab) {
               flex-direction: column;
               @include s(gap, 10);
             }
             .separator {
-              @media (max-width: $tab-sm) {
+              @media (max-width: $tab) {
                 display: none;
               }
             }
             .date-picker-wrapper {
               position: relative;
-              @media (max-width: $tab-sm) {
+              @media (max-width: $tab) {
                 width: 100%;
               }
               .date-picker {
@@ -334,7 +334,7 @@
             display: grid;
             @include gtc(90, 1fr, 148, 148);
             @include s(gap, 24);
-            @media (max-width: $tab-sm) {
+            @media (max-width: $tab) {
               display: none;
             }
             button {
@@ -373,7 +373,7 @@
               @include padding(16, 0);
               border-top: 1px solid var(--line-color);
               grid-template-areas: "date title info";
-              @media (max-width: $tab-sm) {
+              @media (max-width: $tab) {
                 grid-template-columns: 1fr;
                 @include s(gap, 4);
                 grid-template-areas: "date" "title" "info";
@@ -395,14 +395,14 @@
                 grid-template-columns: repeat(2, 1fr);
                 @include s(gap, 24);
                 grid-area: info;
-                @media (max-width: $tab-sm) {
+                @media (max-width: $tab) {
                   @include s(margin-top, 12);
                 }
                 .label {
                   display: none;
                   @include body-xs;
                   color: var(--gray-light-color);
-                  @media (max-width: $tab-sm) {
+                  @media (max-width: $tab) {
                     display: block;
                   }
                 }
@@ -411,7 +411,7 @@
                 }
                 .points,
                 .sum {
-                  @media (max-width: $tab-sm) {
+                  @media (max-width: $tab) {
                     display: flex;
                     flex-direction: column;
                     @include s(gap, 4);

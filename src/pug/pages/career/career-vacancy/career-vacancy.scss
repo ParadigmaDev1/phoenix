@@ -2,7 +2,7 @@
 
 .career-vacancy {
   @include s(margin-top, 80);
-  @media (max-width: $tab-sm) {
+  @media (max-width: $tab) {
     @include s(margin-top, 45);
   }
   .career-vacancy-inner {
@@ -11,13 +11,13 @@
       align-items: center;
       flex-wrap: wrap;
       @include s(gap, 4);
-      @media (max-width: $tab-sm) {
+      @media (max-width: $tab) {
         display: none;
       }
     }
     .tabs-selector {
       display: none;
-      @media (max-width: $tab-sm) {
+      @media (max-width: $tab) {
         display: block;
       }
     }
@@ -26,7 +26,7 @@
       display: grid;
       @include gtc(1fr, 318);
       @include s(gap, 24);
-      @media (max-width: $tab-sm) {
+      @media (max-width: $tab) {
         grid-template-columns: 1fr;
         @include s(gap, 28);
         @include s(margin-top, 24);
@@ -39,7 +39,7 @@
           display: flex;
           flex-direction: column;
           @include s(gap, 24);
-          @media (max-width: $tab-sm) {
+          @media (max-width: $tab) {
             @include s(gap, 12);
           }
         }
@@ -48,7 +48,7 @@
           justify-content: center;
           @include padding(0, 22);
           width: fit-content;
-          @media (max-width: $tab-sm) {
+          @media (max-width: $tab) {
             width: 100%;
             @include s(height, 48);
           }
@@ -68,14 +68,14 @@
           flex-direction: column;
           align-items: center;
           @include s(gap, 28);
-          @media (max-width: $tab-sm) {
+          @media (max-width: $tab) {
             @include padding(28, 48);
             @include s(gap, 16);
           }
           img {
             @include s(width, 96);
             @include s(height, 96);
-            @media (max-width: $tab-sm) {
+            @media (max-width: $tab) {
               @include s(width, 64);
               @include s(height, 64);
             }
@@ -84,7 +84,7 @@
             @include s(gap, 12);
             justify-content: center;
             @include padding(0, 22);
-            @media (max-width: $tab-sm) {
+            @media (max-width: $tab) {
               @include s(height, 48);
             }
             span {

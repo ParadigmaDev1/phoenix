@@ -3,7 +3,7 @@
 .product-swiper-wrapper {
   @include s(padding-top, 122);
   overflow: hidden;
-  @media (max-width: $tab-sm) {
+  @media (max-width: $tab) {
     @include s(padding-top, 69);
   }
   .product-swiper-wrapper-inner {
@@ -18,7 +18,7 @@
         width: fit-content;
         @include padding(0, 24);
         @include s(gap, 12);
-        @media (max-width: $tab-sm) {
+        @media (max-width: $tab) {
           display: none;
         }
         &:hover {
@@ -64,7 +64,7 @@
       align-items: center;
       @include s(gap, 17);
       display: none;
-      @media (max-width: $tab-sm) {
+      @media (max-width: $tab) {
         display: flex;
       }
       .products-pagination {
@@ -93,7 +93,7 @@
         @include s(width, 6);
         @include s(height, 12);
       }
-      @media (max-width: $tab-sm) {
+      @media (max-width: $tab) {
         display: flex;
       }
     }

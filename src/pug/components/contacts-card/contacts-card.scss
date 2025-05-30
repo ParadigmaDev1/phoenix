@@ -4,12 +4,12 @@
   background: var(--back-color);
   @include borr(12);
   @include padding(28);
-  @media (max-width: $tab-sm) {
+  @media (max-width: $tab) {
     @include padding(20);
   }
   .name {
     @include body-xl;
-    @media (max-width: $tab-sm) {
+    @media (max-width: $tab) {
       @include body-mb;
     }
   }
@@ -17,7 +17,7 @@
     @include s(margin-top, 8);
     color: var(--gray-light-color);
     @include body-m;
-    @media (max-width: $tab-sm) {
+    @media (max-width: $tab) {
       @include s(margin-top, 6);
       @include body-s;
     }
@@ -27,7 +27,7 @@
     display: flex;
     flex-direction: column;
     @include s(gap, 12);
-    @media (max-width: $tab-sm) {
+    @media (max-width: $tab) {
       @include s(margin-top, 16);
       @include s(gap, 10);
     }
@@ -38,7 +38,7 @@
       p {
         color: var(--violet-color);
         @include body-m;
-        @media (max-width: $tab-sm) {
+        @media (max-width: $tab) {
           @include body-s;
         }
       }

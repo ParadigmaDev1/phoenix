@@ -3,7 +3,7 @@
 .stock {
   @include s(margin-top, 28);
   @include s(padding-bottom, 156);
-  @media (max-width: $tab-sm) {
+  @media (max-width: $tab) {
     @include s(padding-bottom, 64);
     @include s(margin-top, 16);
   }
@@ -17,12 +17,17 @@
       flex-wrap: wrap;
       @include s(column-gap, 24);
       @include s(row-gap, 80);
-      @media (max-width: $tab-sm) {
+      @media (max-width: $tab) {
         @include s(margin-top, 20);
         @include s(row-gap, 36);
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+      }
+      @media (max-width: $tab-sm) {
+        grid-template-columns: repeat(1, 1fr);
       }
       .info-card {
-        @media (min-width: $tab-sm) {
+        @media (min-width: $tab) {
           &:nth-child(1),
           &:nth-child(2) {
             @include s(width, 660);
@@ -30,7 +35,7 @@
         }
 
         @include s(width, 432);
-        @media (max-width: $tab-sm) {
+        @media (max-width: $tab) {
           width: 100%;
         }
       }

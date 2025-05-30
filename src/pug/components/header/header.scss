@@ -11,7 +11,7 @@
   transition: border-color var(--trs-cubic-300),
     padding-top var(--trs-cubic-300), padding-bottom var(--trs-cubic-300),
     background var(--trs-cubic-300), box-shadow var(--trs-cubic-300);
-  @media (max-width: $tab-sm) {
+  @media (max-width: $tab) {
     @include padding(10, 0, 0);
   }
   border-bottom: 1px solid rgba(0, 0, 0, 0);
@@ -114,7 +114,7 @@
   &.active {
     background: var(--white-color);
     box-shadow: var(--shadow);
-    @media (max-width: $tab-sm) {
+    @media (max-width: $tab) {
       @include padding(10, 0);
     }
     .logo-wrapper {
@@ -213,7 +213,7 @@
     display: flex;
     align-items: center;
     @include s(gap, 43);
-    @media (max-width: $tab-sm) {
+    @media (max-width: $tab) {
       flex-direction: column;
       align-items: flex-start;
 
@@ -222,7 +222,7 @@
     .logo-wrapper {
       display: flex;
       align-items: center;
-      @media (max-width: $tab-sm) {
+      @media (max-width: $tab) {
         justify-content: space-between;
         width: 100%;
       }
@@ -230,6 +230,10 @@
       .logo {
         @include s(width, 80);
         @include s(height, 80);
+        @media (max-width: $tab) {
+          @include s(width, 146);
+          @include s(height, 46);
+        }
         @media (max-width: $tab-sm) {
           @include s(width, 126);
           @include s(height, 36);
@@ -237,12 +241,12 @@
         svg {
           width: 100%;
           height: 100%;
-          @media (max-width: $tab-sm) {
+          @media (max-width: $tab) {
             display: none;
           }
           &.mob {
             display: none;
-            @media (max-width: $tab-sm) {
+            @media (max-width: $tab) {
               display: block;
             }
           }
@@ -250,20 +254,27 @@
       }
       .burger-btn {
         display: none;
-        @media (max-width: $tab-sm) {
+        @media (max-width: $tab) {
           display: flex;
           align-items: center;
           @include s(gap, 12);
         }
         span {
-          @include descr-s;
+          @include descr-m;
           color: var(--white-color);
           text-transform: uppercase;
           transition: var(--trs-cubic-300);
+          @media (max-width: $tab) {
+            @include descr-m2;
+          }
         }
         svg {
           @include s(width, 20);
           @include s(height, 12);
+          @media (max-width: $tab) {
+            @include s(width, 25);
+            @include s(height, 20);
+          }
         }
       }
     }
@@ -277,7 +288,7 @@
       .header-top {
         display: flex;
         justify-content: space-between;
-        @media (max-width: $tab-sm) {
+        @media (max-width: $tab) {
           display: none;
         }
         .link-selector {
@@ -471,7 +482,7 @@
         align-items: center;
         justify-content: space-between;
         @include s(gap, 24);
-        @media (max-width: $tab-sm) {
+        @media (max-width: $tab) {
           @include s(gap, 6);
         }
         .catalog-btn {
@@ -518,11 +529,11 @@
                 bottom: 0;
               }
             }
-            @media (max-width: $tab-sm) {
+            @media (max-width: $tab) {
               display: none;
             }
           }
-          @media (max-width: $tab-sm) {
+          @media (max-width: $tab) {
             @include padding(0);
             @include s(min-width, 44);
             @include s(min-height, 44);
@@ -534,14 +545,14 @@
           svg {
             @include s(width, 24);
             @include s(height, 12);
-            @media (max-width: $tab-sm) {
+            @media (max-width: $tab) {
               @include s(width, 22);
               @include s(height, 16);
               display: none;
             }
             &.mob {
               display: none;
-              @media (max-width: $tab-sm) {
+              @media (max-width: $tab) {
                 display: block;
               }
             }
@@ -549,7 +560,7 @@
           .text {
             @include descr-m;
             text-transform: uppercase;
-            @media (max-width: $tab-sm) {
+            @media (max-width: $tab) {
               display: none;
             }
           }
@@ -559,12 +570,12 @@
           @include s(gap, 29);
           @include s(height, 48);
           flex: 1;
-          @media (max-width: $tab-sm) {
+          @media (max-width: $tab) {
             @include s(height, 44);
           }
           input {
             &::placeholder {
-              color: var(--white-color);
+              color: var(--txt-gray-color);
             }
           }
           .search-btn {
@@ -579,7 +590,7 @@
             @include s(height, 48);
             @include borr(6);
             background: var(--grapfit-color);
-            @media (max-width: $tab-sm) {
+            @media (max-width: $tab) {
               background: none;
               @include s(width, 44);
               @include s(height, 44);
@@ -590,7 +601,7 @@
             svg {
               @include s(width, 18);
               @include s(height, 18);
-              @media (max-width: $tab-sm) {
+              @media (max-width: $tab) {
                 @include s(width, 22);
                 @include s(height, 22);
                 circle,
@@ -603,7 +614,7 @@
         }
         .auth-selector {
           @include s(width, 237);
-          @media (max-width: $tab-sm) {
+          @media (max-width: $tab) {
             display: none;
           }
           &:hover {
@@ -814,7 +825,7 @@
         .account-btn {
           @include padding(0, 22, 0, 18);
           @include s(gap, 12);
-          @media (max-width: $tab-sm) {
+          @media (max-width: $tab) {
             display: none;
           }
           &:hover {
@@ -837,7 +848,7 @@
           display: flex;
           align-items: center;
           @include s(gap, 36);
-          @media (max-width: $tab-sm) {
+          @media (max-width: $tab) {
             display: none;
           }
           .feature-item {

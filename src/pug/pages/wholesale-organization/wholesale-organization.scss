@@ -2,7 +2,7 @@
 
 .wholesale-organization {
   @include s(padding-bottom, 156);
-  @media (max-width: $tab-sm) {
+  @media (max-width: $tab) {
     @include s(padding-bottom, 64);
     @include s(margin-top, 16);
   }
@@ -11,7 +11,7 @@
     @include gtc(1fr, 294);
     @include s(gap, 48);
     @include s(margin-top, 36);
-    @media (max-width: $tab-sm) {
+    @media (max-width: $tab) {
       grid-template-columns: 1fr;
       gap: 0;
       @include s(margin-top, 22);
@@ -31,7 +31,7 @@
           @include s(gap, 12);
           @include s(height, 36);
           @include padding(0, 16);
-          @media (max-width: $tab-sm) {
+          @media (max-width: $tab) {
             display: none;
           }
           span {
@@ -47,20 +47,20 @@
         @include s(margin-top, 48);
         @include s(margin-bottom, 24);
 
-        @media (max-width: $tab-sm) {
+        @media (max-width: $tab) {
           @include s(margin-top, 36);
           @include s(margin-bottom, 20);
         }
         &:first-child {
           @include s(margin-top, 28);
-          @media (max-width: $tab-sm) {
+          @media (max-width: $tab) {
             @include s(margin-top, 36);
           }
         }
       }
       .form {
         @include s(width, 661);
-        @media (max-width: $tab-sm) {
+        @media (max-width: $tab) {
           width: 100%;
         }
       }
@@ -68,7 +68,7 @@
         @include padding(0, 48);
         justify-content: center;
         @include s(margin-top, 48);
-        @media (max-width: $tab-sm) {
+        @media (max-width: $tab) {
           width: 100%;
           @include s(margin-top, 36);
         }
@@ -81,7 +81,7 @@
         display: flex;
         flex-direction: column;
         @include s(gap, 24);
-        @media (max-width: $tab-sm) {
+        @media (max-width: $tab) {
           @include s(gap, 20);
         }
         .input-wrapper {
@@ -89,7 +89,7 @@
           @include gtc(205, 1fr);
           align-items: center;
           @include s(gap, 24);
-          @media (max-width: $tab-sm) {
+          @media (max-width: $tab) {
             grid-template-columns: 1fr;
             @include s(gap, 8);
           }
@@ -114,7 +114,7 @@
           @include s(gap, 16);
           @include s(margin-left, 229);
           width: fit-content;
-          @media (max-width: $tab-sm) {
+          @media (max-width: $tab) {
             margin-left: 0;
           }
           p {

@@ -15,7 +15,7 @@
   transition: var(--trs-cubic-600);
   transform: translateY(100%);
   opacity: 0;
-  @media (max-width: $tab-sm) {
+  @media (max-width: $tab) {
     display: flex;
   }
   &.active {
@@ -40,7 +40,7 @@
     &.in-cart {
       .counter {
         width: 50%;
-        @media (max-width: $tab-sm) {
+        @media (max-width: $tab) {
           @include s(width, 150);
 
           z-index: 3;
@@ -49,12 +49,12 @@
       .cart-btn {
         width: 50%;
         @include s(padding-right, 15);
-        @media (max-width: $tab-sm) {
+        @media (max-width: $tab) {
           @include s(padding-right, 0);
         }
         svg {
           opacity: 1;
-          @media (max-width: $tab-sm) {
+          @media (max-width: $tab) {
             opacity: 0;
           }
         }
@@ -71,7 +71,7 @@
       @include padding(0, 10);
       position: absolute;
       transition: var(--trs-cubic-600);
-      @media (max-width: $tab-sm) {
+      @media (max-width: $tab) {
         @include s(height, 36);
       }
       .btn {
@@ -101,13 +101,13 @@
       z-index: 2;
       position: relative;
       margin-left: auto;
-      @media (max-width: $tab-sm) {
+      @media (max-width: $tab) {
         @include s(height, 36);
       }
       p {
         text-transform: uppercase;
         @include descr-m;
-        @media (max-width: $tab-sm) {
+        @media (max-width: $tab) {
           @include descr-s;
         }
       }

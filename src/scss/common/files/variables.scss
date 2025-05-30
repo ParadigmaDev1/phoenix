@@ -39,6 +39,9 @@
   // @media (max-width: 1024px) {
   //   --screensize: 1280;
   // }
+  @media (max-width: 992px) {
+    --screensize: 767;
+  }
   @media (max-width: 767px) {
     --screensize: 360;
   }
@@ -49,7 +52,7 @@ $desktop-lg: 1920px;
 $desktop-md: 1440px;
 $desktop-md-2: 1400px;
 $desktop-sm: 1280px;
-$tab: 1024px;
+$tab: 992px;
 $tab-sm: 767px;
 $pre-mob: 630px;
 $mob: 500px;

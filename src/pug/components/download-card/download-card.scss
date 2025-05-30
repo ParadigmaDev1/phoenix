@@ -7,7 +7,7 @@
   display: grid;
   @include gtc(1fr, 56);
   @include s(gap, 30);
-  @media (max-width: $tab-sm) {
+  @media (max-width: $tab) {
     @include padding(20);
     @include gtc(1fr, 48);
     @include s(gap, 20);
@@ -30,7 +30,7 @@
     flex-direction: column;
     @include s(gap, 24);
     justify-content: space-between;
-    @media (max-width: $tab-sm) {
+    @media (max-width: $tab) {
       @include s(gap, 12);
     }
     .title {
@@ -41,7 +41,7 @@
       @include padding(0, 24);
       @include s(gap, 12);
       width: fit-content;
-      @media (max-width: $tab-sm) {
+      @media (max-width: $tab) {
         @include padding(0, 16);
       }
       svg {
@@ -53,7 +53,7 @@
   img {
     @include s(width, 56);
     @include s(height, 72);
-    @media (max-width: $tab-sm) {
+    @media (max-width: $tab) {
       @include s(width, 48);
       @include s(height, 62);
     }

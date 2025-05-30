@@ -8,7 +8,7 @@
     @include s(margin-bottom, 28);
   }
 
-  @media (max-width: $tab-sm) {
+  @media (max-width: $tab) {
     @include s(margin-bottom, 64);
   }
 }
@@ -86,7 +86,7 @@
     }
   }
 
-  @media (max-width: $tab-sm) {
+  @media (max-width: $tab) {
     display: none;
   }
 }
@@ -95,7 +95,7 @@
   @include s(width, 1004);
   flex-shrink: 0;
 
-  @media (max-width: $tab-sm) {
+  @media (max-width: $tab) {
     width: 100%;
   }
 }
@@ -130,7 +130,7 @@
 
   .selector {
     &.--only-desk {
-      @media (max-width: $tab-sm) {
+      @media (max-width: $tab) {
         display: none;
       }
     }
@@ -138,12 +138,12 @@
     &.--only-mob {
       display: none;
 
-      @media (max-width: $tab-sm) {
+      @media (max-width: $tab) {
         display: block;
       }
     }
   }
-  @media (max-width: $tab-sm) {
+  @media (max-width: $tab) {
     display: grid;
     grid-template-columns: 1fr 1fr;
     @include s(row-gap, 20);
@@ -177,7 +177,7 @@
   @include s(margin-left, 24);
   display: block;
 
-  @media (max-width: $tab-sm) {
+  @media (max-width: $tab) {
     text-align: right;
     @include s(font-size, 14);
   }
@@ -189,7 +189,9 @@
   display: flex;
   @include s(gap, 6);
   margin-left: auto;
-
+  @media (max-width: $tab) {
+    max-width: 100%;
+  }
   .selector {
     width: 100%;
     @include s(max-width, 186);
@@ -204,7 +206,7 @@
     }
   }
 
-  @media (max-width: $tab-sm) {
+  @media (max-width: $tab) {
     grid-column-start: 1;
     grid-column-end: 3;
   }
@@ -236,7 +238,7 @@
     }
   }
 
-  @media (max-width: $tab-sm) {
+  @media (max-width: $tab) {
     margin-left: 0;
   }
 }
@@ -247,14 +249,14 @@
   @include s(row-gap, 80);
   @include s(column-gap, 24);
 
-  @media (max-width: $tab-sm) {
+  @media (max-width: $tab) {
     grid-template-columns: 1fr 1fr;
     @include s(row-gap, 48);
     @include s(column-gap, 20);
   }
 
   .product-card {
-    @media (max-width: $tab-sm) {
+    @media (max-width: $tab) {
       .presale {
         display: none;
       }
@@ -284,7 +286,7 @@
             font-weight: 600;
             line-height: 140%;
 
-            @media (max-width: $tab-sm) {
+            @media (max-width: $tab) {
               font-size: calc(16 / var(--screensize) * 100vw);
               font-weight: 400;
             }
@@ -292,11 +294,11 @@
         }
 
         .descr {
-            font-size: calc(14 / var(--screensize) * 100vw);
-            font-weight: 500;
-            line-height: 128%;
-            margin-top: calc(6 / var(--screensize) * 100vw);
-            margin-bottom: calc(12 / var(--screensize) * 100vw);
+          font-size: calc(14 / var(--screensize) * 100vw);
+          font-weight: 500;
+          line-height: 128%;
+          margin-top: calc(6 / var(--screensize) * 100vw);
+          margin-bottom: calc(12 / var(--screensize) * 100vw);
         }
 
         .cart-btn-wrapper {
@@ -306,7 +308,7 @@
             width: 100%;
           }
 
-          @media (max-width: $tab-sm) {
+          @media (max-width: $tab) {
             .counter {
               position: absolute;
               width: 100%;
@@ -335,7 +337,7 @@
           .features-list {
             display: none;
           }
-          @media (max-width: $tab-sm) {
+          @media (max-width: $tab) {
             grid-template-areas: "price" "title" "top" "presale" "features" "button";
             grid-template-columns: 1fr;
             margin-left: calc(20 / var(--screensize) * 100vw);
@@ -358,8 +360,8 @@
 
               .btn {
                 svg {
-                    width: calc(19 / var(--screensize) * 100vw);
-                    height: calc(19 / var(--screensize) * 100vw);
+                  width: calc(19 / var(--screensize) * 100vw);
+                  height: calc(19 / var(--screensize) * 100vw);
                 }
               }
             }
@@ -369,7 +371,7 @@
             display: flex;
             @include s(gap, 28);
 
-            @media (max-width: $tab-sm) {
+            @media (max-width: $tab) {
               flex-direction: column;
               @include s(gap, 6);
               margin-bottom: calc(20 / var(--screensize) * 100vw);
@@ -379,7 +381,7 @@
               flex-direction: row;
               @include s(gap, 28);
 
-              @media (max-width: $tab-sm) {
+              @media (max-width: $tab) {
                 flex-direction: column;
                 @include s(gap, 6);
 
@@ -393,7 +395,7 @@
             }
 
             .right-block {
-              @media (max-width: $tab-sm) {
+              @media (max-width: $tab) {
                 .count {
                   display: flex;
                   align-items: center;
@@ -406,7 +408,7 @@
           .descr {
             grid-area: title;
 
-            @media (max-width: $tab-sm) {
+            @media (max-width: $tab) {
               margin-top: calc(8 / var(--screensize) * 100vw);
               overflow: hidden;
               display: -webkit-box;
@@ -430,8 +432,6 @@
             grid-area: button;
           }
         }
-
-        
       }
 
       .product-info-hor {
@@ -439,7 +439,7 @@
       }
     }
 
-    @media (max-width: $tab-sm) {
+    @media (max-width: $tab) {
       .product-card {
         .product-card-swiper-wrapper {
           height: calc(93 / var(--screensize) * 100vw);
@@ -594,7 +594,7 @@
     }
   }
 
-  @media (max-width: $tab-sm) {
+  @media (max-width: $tab) {
     nav {
       a {
         &:nth-child(3),
@@ -636,7 +636,7 @@
     @include s(font-size, 14);
   }
 
-  @media (max-width: $tab-sm) {
+  @media (max-width: $tab) {
     width: 100%;
     justify-content: center;
   }
@@ -675,7 +675,7 @@
     background: #fff;
   }
 
-  @media (max-width: $tab-sm) {
+  @media (max-width: $tab) {
     background: transparent;
     padding-top: 0;
 
@@ -808,7 +808,7 @@
     }
   }
 
-  @media (max-width: $tab-sm) {
+  @media (max-width: $tab) {
     display: flex;
     flex-direction: column;
     padding-bottom: 0;
@@ -851,7 +851,7 @@
     }
   }
 
-  @media (max-width: $tab-sm) {
+  @media (max-width: $tab) {
     overflow-x: scroll;
     padding-bottom: 0;
     border-bottom: unset;

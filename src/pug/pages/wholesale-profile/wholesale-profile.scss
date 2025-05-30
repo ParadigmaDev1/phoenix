@@ -2,7 +2,7 @@
 
 .wholesale-profile {
   @include s(padding-bottom, 156);
-  @media (max-width: $tab-sm) {
+  @media (max-width: $tab) {
     @include s(padding-bottom, 64);
     @include s(margin-top, 16);
   }
@@ -11,7 +11,7 @@
     @include gtc(1fr, 294);
     @include s(gap, 48);
     @include s(margin-top, 36);
-    @media (max-width: $tab-sm) {
+    @media (max-width: $tab) {
       grid-template-columns: 1fr;
       gap: 0;
       @include s(margin-top, 22);
@@ -33,7 +33,7 @@
         @include s(margin-top, 36);
         @include borr(12);
         cursor: pointer;
-        @media (max-width: $tab-sm) {
+        @media (max-width: $tab) {
           @include s(margin-top, 28);
 
           @include padding(20);
@@ -48,14 +48,14 @@
           }
           .btn {
             background: var(--violet-color) !important;
-            @media (max-width: $tab-sm) {
+            @media (max-width: $tab) {
               background: none !important;
             }
             svg {
               path {
                 stroke: var(--white-color) !important;
 
-                @media (max-width: $tab-sm) {
+                @media (max-width: $tab) {
                   stroke: var(--gray-color) !important;
                 }
               }
@@ -67,7 +67,7 @@
           flex-direction: column;
           @include s(gap, 12);
           @include padding(11, 0, 11, 23);
-          @media (max-width: $tab-sm) {
+          @media (max-width: $tab) {
             padding: 0;
           }
           .title {
@@ -78,7 +78,7 @@
           .descr {
             color: var(--gray-light-color);
             @include body-m;
-            @media (max-width: $tab-sm) {
+            @media (max-width: $tab) {
               @include body-s;
             }
           }
@@ -86,7 +86,7 @@
         .btn {
           background: none !important;
           border: 1px solid var(--violet-color);
-          @media (max-width: $tab-sm) {
+          @media (max-width: $tab) {
             border: none;
             width: auto !important;
             height: auto !important;
@@ -103,7 +103,7 @@
         grid-template-columns: repeat(3, 1fr);
         @include s(gap, 24);
         @include s(margin-top, 24);
-        @media (max-width: $tab-sm) {
+        @media (max-width: $tab) {
           grid-template-columns: 1fr;
           @include s(gap, 12);
           @include s(margin-top, 12);
@@ -116,21 +116,21 @@
           @include gtc(1fr, 36);
           transition: var(--trs-cubic-300);
           align-items: center;
-          @media (max-width: $tab-sm) {
+          @media (max-width: $tab) {
             @include padding(20);
           }
           &:hover {
             border-color: var(--violet-color);
             .btn {
               background: var(--violet-color) !important;
-              @media (max-width: $tab-sm) {
+              @media (max-width: $tab) {
                 background: none !important;
               }
               svg {
                 path {
                   stroke: var(--white-color) !important;
 
-                  @media (max-width: $tab-sm) {
+                  @media (max-width: $tab) {
                     stroke: var(--gray-color) !important;
                   }
                 }
@@ -144,7 +144,7 @@
           .btn {
             background: none !important;
             border: 1px solid var(--violet-color);
-            @media (max-width: $tab-sm) {
+            @media (max-width: $tab) {
               border: none;
               width: auto !important;
               height: auto !important;

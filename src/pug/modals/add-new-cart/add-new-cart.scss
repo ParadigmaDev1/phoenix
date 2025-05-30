@@ -2,13 +2,13 @@
 
 .add-new-cart {
   .close-modal-wrapper {
-    @media (max-width: $tab-sm) {
+    @media (max-width: $tab) {
       top: 0 !important;
     }
     .close-modal {
       margin-top: calc(-50 / var(--screensize) * 100vw) !important;
       margin-right: calc(-50 / var(--screensize) * 100vw) !important;
-      @media (max-width: $tab-sm) {
+      @media (max-width: $tab) {
         margin: 0 !important;
         @include s(top, 0);
         @include s(right, 0);
@@ -22,11 +22,11 @@
     // padding: 0;
     position: relative;
     overflow: auto;
-    @media (max-width: $tab-sm) {
+    @media (max-width: $tab) {
       @include padding(20);
     }
     .modal-content {
-      @media (max-width: $tab-sm) {
+      @media (max-width: $tab) {
         height: 100%;
         display: flex;
         flex-direction: column;
@@ -43,7 +43,7 @@
         flex-direction: column;
         @include s(gap, 20);
         @include s(margin-top, 20);
-        @media (max-width: $tab-sm) {
+        @media (max-width: $tab) {
           @include s(gap, 12);
         }
         .input-wrapper {
@@ -69,7 +69,7 @@
       justify-content: center;
       @include s(margin-top, 28);
       @include padding(0, 48);
-      @media (max-width: $tab-sm) {
+      @media (max-width: $tab) {
         width: 100%;
         @include s(margin-top, 20);
       }

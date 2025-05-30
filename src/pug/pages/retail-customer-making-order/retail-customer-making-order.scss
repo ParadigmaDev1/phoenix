@@ -2,7 +2,7 @@
 
 .retail-customer-making-order {
   @include s(padding-bottom, 156);
-  @media (max-width: $tab-sm) {
+  @media (max-width: $tab) {
     @include s(padding-bottom, 64);
     @include s(margin-top, 16);
   }
@@ -11,7 +11,7 @@
     @include gtc(1fr, 225);
     @include s(gap, 475);
     @include s(margin-top, 36);
-    @media (max-width: $tab-sm) {
+    @media (max-width: $tab) {
       grid-template-columns: 1fr;
       gap: 0;
       @include s(margin-top, 22);
@@ -31,7 +31,7 @@
           @include s(gap, 12);
           @include s(height, 36);
           @include padding(0, 16);
-          @media (max-width: $tab-sm) {
+          @media (max-width: $tab) {
             display: none;
           }
           span {
@@ -47,20 +47,20 @@
         @include s(margin-top, 48);
         @include s(margin-bottom, 24);
 
-        @media (max-width: $tab-sm) {
+        @media (max-width: $tab) {
           @include s(margin-top, 36);
           @include s(margin-bottom, 20);
         }
         &:first-child {
           @include s(margin-top, 28);
-          @media (max-width: $tab-sm) {
+          @media (max-width: $tab) {
             @include s(margin-top, 36);
           }
         }
       }
       .form {
         @include s(width, 661);
-        @media (max-width: $tab-sm) {
+        @media (max-width: $tab) {
           width: 100%;
         }
       }
@@ -68,7 +68,7 @@
         @include padding(0, 48);
         justify-content: center;
         @include s(margin-top, 48);
-        @media (max-width: $tab-sm) {
+        @media (max-width: $tab) {
           width: 100%;
           @include s(margin-top, 36);
         }
@@ -82,7 +82,7 @@
         @include gtc(205, 1fr);
         align-items: center;
         @include s(gap, 24);
-        @media (max-width: $tab-sm) {
+        @media (max-width: $tab) {
           grid-template-columns: 1fr;
           @include s(gap, 8);
         }
@@ -100,7 +100,7 @@
         display: flex;
         flex-direction: column;
         @include s(gap, 24);
-        @media (max-width: $tab-sm) {
+        @media (max-width: $tab) {
           @include s(gap, 20);
         }
         .selector-btn {
@@ -119,7 +119,7 @@
         @include s(gap, 24);
         @include s(margin-top, 24);
         @include s(margin-bottom, 24);
-        @media (max-width: $tab-sm) {
+        @media (max-width: $tab) {
           grid-template-columns: 1fr;
           @include s(gap, 12);
         }
@@ -197,7 +197,7 @@
         display: flex;
         flex-direction: column;
         @include s(gap, 24);
-        @media (max-width: $tab-sm) {
+        @media (max-width: $tab) {
           display: grid;
           grid-template-columns: repeat(3, 1fr);
           @include s(gap, 12);
@@ -207,7 +207,7 @@
         display: flex;
         flex-direction: column;
         @include s(gap, 24);
-        @media (max-width: $tab-sm) {
+        @media (max-width: $tab) {
           @include s(gap, 20);
         }
 
@@ -223,7 +223,7 @@
       }
     }
     .back-btn-wrapper {
-      @media (max-width: $tab-sm) {
+      @media (max-width: $tab) {
         display: none;
       }
       .back-btn {

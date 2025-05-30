@@ -3,7 +3,7 @@
 .register-gartitude-wholesale {
   @include s(margin-top, 28);
   @include s(padding-bottom, 156);
-  @media (max-width: $tab-sm) {
+  @media (max-width: $tab) {
     @include s(padding-bottom, 64);
     @include s(margin-top, 16);
   }
@@ -16,7 +16,7 @@
       display: grid;
       @include gtc(661, 636);
       @include s(gap, 48);
-      @media (max-width: $tab-sm) {
+      @media (max-width: $tab) {
         grid-template-columns: 1fr;
         @include s(margin-top, 22);
         @include s(gap, 36);
@@ -30,7 +30,7 @@
           @include s(gap, 20);
           @include borr(12);
           @include s(margin-top, 36);
-          @media (max-width: $tab-sm) {
+          @media (max-width: $tab) {
             @include padding(20);
             @include s(gap, 16);
             @include s(margin-top, 16);
@@ -39,21 +39,21 @@
           img {
             @include s(width, 56);
             @include s(height, 56);
-            @media (max-width: $tab-sm) {
+            @media (max-width: $tab) {
               @include s(width, 36);
               @include s(height, 36);
             }
           }
           p {
             @include body-l;
-            @media (max-width: $tab-sm) {
+            @media (max-width: $tab) {
               @include body-m;
             }
           }
         }
         .info-block {
           @include s(margin-top, 48);
-          @media (max-width: $tab-sm) {
+          @media (max-width: $tab) {
             @include s(margin-top, 36);
           }
           h4 {
@@ -68,7 +68,7 @@
             @include s(gap, 8);
             @include s(margin-top, 16);
             @include s(margin-bottom, 48);
-            @media (max-width: $tab-sm) {
+            @media (max-width: $tab) {
               @include s(margin-top, 12);
               @include s(margin-bottom, 36);
             }
@@ -76,7 +76,7 @@
               position: relative;
               @include s(padding-left, 30);
               @include body-l;
-              @media (max-width: $tab-sm) {
+              @media (max-width: $tab) {
                 @include body-m;
               }
               &:before {
@@ -133,7 +133,7 @@
               @include s(gap, 20);
               align-items: center;
               @include s(margin-top, 28);
-              @media (max-width: $tab-sm) {
+              @media (max-width: $tab) {
                 @include s(gap, 12);
                 @include gtc(208, 1fr);
               }
@@ -156,7 +156,7 @@
         @include borr(12);
         overflow: hidden;
         @include s(height, 435);
-        @media (max-width: $tab-sm) {
+        @media (max-width: $tab) {
           @include s(height, 220);
         }
         img {

@@ -10,7 +10,7 @@ input {
     @include body-m;
     color: var(--white-color);
     transition: var(--trs-cubic-300);
-    @media (max-width: $tab-sm) {
+    @media (max-width: $tab) {
       @include s(height, 44);
       @include padding(0, 16);
       @include body-s;
@@ -21,7 +21,7 @@ input {
       @include body-m;
       color: var(--white-color);
       transition: var(--trs-cubic-300);
-      @media (max-width: $tab-sm) {
+      @media (max-width: $tab) {
         @include body-s;
         color: var(--gray-light-color);
       }

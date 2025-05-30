@@ -9,7 +9,7 @@
   @include s(gap, 24);
   align-items: flex-start;
   position: relative;
-  @media (max-width: $tab-sm) {
+  @media (max-width: $tab) {
     @include gtc(1fr, 83);
     @include padding(20);
   }
@@ -34,7 +34,7 @@
       align-items: center;
       @include s(gap, 16);
       @include s(margin-top, 16);
-      @media (max-width: $tab-sm) {
+      @media (max-width: $tab) {
         @include s(gap, 10);
       }
       p {
@@ -47,7 +47,7 @@
       @include padding(0, 24);
       justify-content: center;
       width: fit-content;
-      @media (max-width: $tab-sm) {
+      @media (max-width: $tab) {
         @include s(margin-top, 16);
         @include padding(0, 16);
       }
@@ -63,7 +63,7 @@
     @include borr(6);
     @include s(height, 85);
     @include s(width, 128);
-    @media (max-width: $tab-sm) {
+    @media (max-width: $tab) {
       @include s(height, 56);
       @include s(width, 83);
     }

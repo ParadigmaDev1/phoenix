@@ -5,6 +5,10 @@
   align-items: center;
   @include s(gap, 8);
   @include s(margin-top, 137);
+  @media (max-width: $tab) {
+    @include s(margin-top, 122);
+    flex-wrap: wrap;
+  }
   @media (max-width: $tab-sm) {
     @include s(margin-top, 112);
     flex-wrap: wrap;

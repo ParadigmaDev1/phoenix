@@ -9,7 +9,7 @@
       @include gtc(300, 885);
       @include s(gap, 159);
       align-items: center;
-      @media (max-width: $tab-sm) {
+      @media (max-width: $tab) {
         grid-template-columns: repeat(1, 1fr);
         @include s(padding-top, 64);
         @include s(padding-bottom, 64);
@@ -18,7 +18,7 @@
         @include s(width, 300);
         @include s(height, 328);
         @include s(margin-top, -40);
-        @media (max-width: $tab-sm) {
+        @media (max-width: $tab) {
           display: none;
         }
       }
@@ -33,7 +33,7 @@
           @include gtc(190, 654);
           @include s(gap, 60);
           @include s(margin-top, 33);
-          @media (max-width: $tab-sm) {
+          @media (max-width: $tab) {
             grid-template-columns: repeat(1, 1fr);
             @include s(gap, 28);
             @include s(margin-top, 28);
@@ -47,14 +47,14 @@
             display: grid;
             @include gtc(386, 258);
             @include s(gap, 10);
-            @media (max-width: $tab-sm) {
+            @media (max-width: $tab) {
               grid-template-columns: repeat(1, 1fr);
             }
             .btn {
               justify-content: center;
               text-transform: uppercase;
               @include descr-m;
-              @media (max-width: $tab-sm) {
+              @media (max-width: $tab) {
                 @include s(height, 48);
               }
             }
@@ -77,7 +77,7 @@
     @include s(margin-top, 94);
     @include s(padding-bottom, 84);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    @media (max-width: $tab-sm) {
+    @media (max-width: $tab) {
       @include s(margin-top, 48);
       @include s(padding-bottom, 56);
     }
@@ -85,11 +85,11 @@
       display: grid;
       @include gtc(318, 204, 204, 204);
       @include s(gap, 138);
-      @media (max-width: $tab-sm) {
+      @media (max-width: $tab) {
         grid-template-columns: repeat(1, 1fr);
       }
       .col {
-        @media (max-width: $tab-sm) {
+        @media (max-width: $tab) {
           display: none;
           &:first-child {
             display: block;
@@ -103,7 +103,7 @@
           p {
             color: #737373;
             @include body-sb;
-            @media (max-width: $tab-sm) {
+            @media (max-width: $tab) {
               @include body-xsb;
             }
           }
@@ -115,7 +115,7 @@
             @media (max-width: $desktop-sm) {
               @include h5;
             }
-            @media (max-width: $tab-sm) {
+            @media (max-width: $tab) {
               @include s(margin-top, 4);
               @include h4;
             }
@@ -124,7 +124,7 @@
             display: flex;
             align-items: center;
             @include s(gap, 20);
-            @media (max-width: $tab-sm) {
+            @media (max-width: $tab) {
               justify-content: space-between;
             }
             .socials {
@@ -152,7 +152,7 @@
                 }
               }
               svg {
-                @media (max-width: $tab-sm) {
+                @media (max-width: $tab) {
                   @include s(width, 20);
                   @include s(height, 17);
                 }
@@ -166,7 +166,7 @@
           justify-content: center;
           @include s(gap, 24);
           text-transform: uppercase;
-          @media (max-width: $tab-sm) {
+          @media (max-width: $tab) {
             width: 100%;
             @include s(margin-top, 16);
           }
@@ -179,7 +179,7 @@
           @include s(margin-top, 48);
           @include body-sb;
           color: #737373;
-          @media (max-width: $tab-sm) {
+          @media (max-width: $tab) {
             @include s(margin-top, 36);
             @include body-xsb;
           }
@@ -188,7 +188,7 @@
           color: var(--white-color);
           @include s(margin-top, 16);
           @include body-xl;
-          @media (max-width: $tab-sm) {
+          @media (max-width: $tab) {
             @include s(margin-top, 10);
             @include body-lb;
           }
@@ -199,7 +199,7 @@
           @include body-xl;
           display: block;
           text-decoration: underline;
-          @media (max-width: $tab-sm) {
+          @media (max-width: $tab) {
             @include s(margin-top, 10);
             @include body-lb;
           }
@@ -210,7 +210,7 @@
           justify-content: center;
           @include s(gap, 24);
           text-transform: uppercase;
-          @media (max-width: $tab-sm) {
+          @media (max-width: $tab) {
             justify-content: space-between;
             width: 100%;
           }
@@ -219,7 +219,7 @@
             @include descr-xs;
           }
           svg {
-            @media (max-width: $tab-sm) {
+            @media (max-width: $tab) {
               @include s(width, 6);
               @include s(height, 12);
             }
@@ -257,8 +257,7 @@
       display: grid;
       @include gtc(318, 372, 318);
       align-items: center;
-      @media (max-width: $tab-sm) {
-        @include s(padding-bottom, 28);
+      @media (max-width: $tab) {
         @include s(padding-top, 45);
         grid-template-areas: "socials socials" "kanz oboz";
         grid-template-columns: repeat(2, 1fr);
@@ -275,7 +274,7 @@
         &:hover {
           background: var(--gray-color);
         }
-        @media (max-width: $tab-sm) {
+        @media (max-width: $tab) {
           grid-area: kanz;
           @include s(width, 119);
           @include s(height, 19);
@@ -283,7 +282,7 @@
         img {
           @include s(width, 264);
           @include s(height, 30);
-          @media (max-width: $tab-sm) {
+          @media (max-width: $tab) {
             grid-area: kanz;
             @include s(width, 125);
             @include s(height, 16);
@@ -301,7 +300,7 @@
         &:hover {
           background: var(--gray-color);
         }
-        @media (max-width: $tab-sm) {
+        @media (max-width: $tab) {
           grid-area: oboz;
           @include s(width, 119);
           @include s(height, 19);
@@ -309,7 +308,7 @@
         img {
           @include s(width, 254);
           @include s(height, 41);
-          @media (max-width: $tab-sm) {
+          @media (max-width: $tab) {
             @include s(width, 119);
             @include s(height, 19);
           }
@@ -343,7 +342,7 @@
             opacity: 0;
           }
         }
-        @media (max-width: $tab-sm) {
+        @media (max-width: $tab) {
           grid-area: socials;
           img {
             @include s(width, 36);
@@ -359,10 +358,10 @@
       grid-template-columns: repeat(3, 1fr);
       @include s(padding-top, 39);
       @include s(padding-bottom, 39);
-      @media (max-width: $tab-sm) {
+      @media (max-width: $tab) {
         grid-template-columns: repeat(1, 1fr);
         @include s(padding-top, 28);
-        @include s(padding-bottom, 28);
+        @include s(padding-bottom, 68);
         @include s(gap, 12);
         grid-template-areas: "center" "left" "right";
         justify-content: flex-start;
@@ -371,7 +370,7 @@
         display: flex;
         flex-direction: column;
         @include s(gap, 6);
-        @media (max-width: $tab-sm) {
+        @media (max-width: $tab) {
           grid-area: left;
         }
         .copy {
@@ -403,7 +402,7 @@
       .center {
         display: flex;
         justify-content: center;
-        @media (max-width: $tab-sm) {
+        @media (max-width: $tab) {
           justify-content: flex-start;
 
           grid-area: center;
@@ -431,7 +430,7 @@
         flex-direction: column;
         @include s(gap, 12);
         align-items: flex-end;
-        @media (max-width: $tab-sm) {
+        @media (max-width: $tab) {
           grid-area: right;
           align-items: flex-start;
         }

@@ -2,7 +2,7 @@
 
 .wholesale-knowledge-base-article {
   @include s(padding-bottom, 156);
-  @media (max-width: $tab-sm) {
+  @media (max-width: $tab) {
     @include s(padding-bottom, 64);
     @include s(margin-top, 16);
   }
@@ -11,7 +11,7 @@
     @include gtc(1fr, 294);
     @include s(gap, 48);
     @include s(margin-top, 36);
-    @media (max-width: $tab-sm) {
+    @media (max-width: $tab) {
       @include s(margin-top, 20);
       grid-template-columns: 1fr;
       gap: 0;
@@ -26,14 +26,14 @@
         justify-content: space-between;
         @include s(margin-bottom, 36);
         align-items: center;
-        @media (max-width: $tab-sm) {
+        @media (max-width: $tab) {
           @include s(margin-bottom, 20);
         }
         .btn {
           @include s(gap, 12);
           @include s(height, 36);
           @include padding(0, 16);
-          @media (max-width: $tab-sm) {
+          @media (max-width: $tab) {
             display: none;
           }
           span {
@@ -46,12 +46,12 @@
         display: grid;
         @include gtc(294, 1fr);
         @include s(gap, 48);
-        @media (max-width: $tab-sm) {
+        @media (max-width: $tab) {
           grid-template-columns: 1fr;
           gap: 0;
         }
         .navigation-block {
-          @media (max-width: $tab-sm) {
+          @media (max-width: $tab) {
             display: none;
           }
           .sticky-block {
@@ -132,7 +132,7 @@
             position: relative;
             @include s(padding-left, 30);
             @include body-l;
-            @media (max-width: $tab-sm) {
+            @media (max-width: $tab) {
               @include body-m;
             }
             &:before {
@@ -201,6 +201,9 @@
           position: relative;
           @include borr(6);
           overflow: hidden;
+          @media (max-width: $tab) {
+            width: 100%;
+          }
           @media (max-width: $tab-sm) {
             @include s(width, 320);
             @include s(height, 180);

@@ -5,7 +5,7 @@
     .close-modal {
       margin-top: calc(-50 / var(--screensize) * 100vw) !important;
       margin-right: calc(-50 / var(--screensize) * 100vw) !important;
-      @media (max-width: $tab-sm) {
+      @media (max-width: $tab) {
         margin: 0 !important;
         @include s(top, 0);
         @include s(right, 0);
@@ -19,7 +19,7 @@
     // padding: 0;
     position: relative;
     overflow: visible;
-    @media (max-width: $tab-sm) {
+    @media (max-width: $tab) {
       @include padding(20);
     }
     .modal-content {
@@ -40,7 +40,7 @@
         flex-direction: column;
         @include s(gap, 20);
         @include s(margin-top, 20);
-        @media (max-width: $tab-sm) {
+        @media (max-width: $tab) {
           @include s(gap, 12);
         }
         .input-wrapper {
@@ -67,7 +67,7 @@
       align-items: center;
       @include s(gap, 12);
       @include s(margin-top, 28);
-      @media (max-width: $tab-sm) {
+      @media (max-width: $tab) {
         grid-template-columns: 1fr;
         @include s(gap, 10);
         @include s(margin-top, 20);

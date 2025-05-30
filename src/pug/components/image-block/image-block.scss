@@ -3,6 +3,9 @@
 .image-block {
   @include s(height, 570);
   @include s(margin-top, 116);
+  @media (max-width: $tab) {
+    @include s(height, 400);
+  }
   @media (max-width: $tab-sm) {
     @include s(height, 228);
     @include s(margin-top, 64);

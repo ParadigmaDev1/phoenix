@@ -8,6 +8,12 @@
   @include padding(24, 0);
   border-top: 1px solid var(--line-color);
   align-items: flex-start;
+  @media (max-width: $tab) {
+    @include gtc(20, 1fr, 224);
+
+    @include s(gap, 12);
+    grid-template-areas: "checkbox title info" "comment comment comment";
+  }
   @media (max-width: $tab-sm) {
     @include gtc(20, 1fr);
     @include s(gap, 12);
