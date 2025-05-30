@@ -3,21 +3,21 @@
 .about-charity {
   @include s(margin-top, 116);
   overflow: hidden;
-  @media (max-width: $tab-sm) {
+  @media (max-width: $tab) {
     @include s(margin-top, 64);
   }
   .about-charity-inner {
     h3 {
       text-align: center;
       @include h2;
-      @media (max-width: $tab-sm) {
+      @media (max-width: $tab) {
         text-align: left;
       }
     }
     .double-swiper {
       @include s(margin-top, 36);
       position: relative;
-      @media (max-width: $tab-sm) {
+      @media (max-width: $tab) {
         @include s(margin-top, 28);
       }
       .swiper-slide {
@@ -49,7 +49,7 @@
         @include s(height, 372);
         @include borr(12);
         overflow: hidden;
-        @media (max-width: $tab-sm) {
+        @media (max-width: $tab) {
           @include s(height, 180);
         }
         .play-btn {
@@ -65,7 +65,7 @@
           svg {
             @include s(height, 72);
             @include s(width, 72);
-            @media (max-width: $tab-sm) {
+            @media (max-width: $tab) {
               @include s(height, 48);
               @include s(width, 48);
             }
@@ -84,7 +84,7 @@
         transition: var(--trs-cubic-300);
         text-align: center;
         text-transform: uppercase;
-        @media (max-width: $tab-sm) {
+        @media (max-width: $tab) {
           @include s(margin-top, 20);
           text-align: left;
         }

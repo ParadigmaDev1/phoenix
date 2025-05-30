@@ -2,13 +2,13 @@
 
 .video-modal {
   .close-modal-wrapper {
-    @media (max-width: $tab-sm) {
+    @media (max-width: $tab) {
       top: 0 !important;
     }
     .close-modal {
       margin-top: calc(-40 / var(--screensize) * 100vw) !important;
       margin-right: calc(-40 / var(--screensize) * 100vw) !important;
-      @media (max-width: $tab-sm) {
+      @media (max-width: $tab) {
         margin: 0 !important;
         @include s(top, 0);
         @include s(right, 0);
@@ -26,13 +26,13 @@
     overflow: visible;
     background: none;
 
-    @media (max-width: $tab-sm) {
+    @media (max-width: $tab) {
       @include padding(20);
       height: auto;
     }
     .modal-content {
       background: none;
-      @media (max-width: $tab-sm) {
+      @media (max-width: $tab) {
         height: 100%;
         display: flex;
         flex-direction: column;

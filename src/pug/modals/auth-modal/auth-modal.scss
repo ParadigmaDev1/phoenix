@@ -1,16 +1,16 @@
 @use "src/scss/common/files/mixins" as *;
 
 .auth-modal {
-  @media (max-width: $tab-sm) {
+  @media (max-width: $tab) {
     align-items: flex-end;
   }
   .close-modal-wrapper {
-    @media (max-width: $tab-sm) {
+    @media (max-width: $tab) {
       display: none;
     }
     &.mob {
       display: none;
-      @media (max-width: $tab-sm) {
+      @media (max-width: $tab) {
         display: flex;
         position: absolute;
         top: 0 !important;
@@ -30,7 +30,7 @@
     padding: 0;
     position: relative;
     overflow: visible;
-    @media (max-width: $tab-sm) {
+    @media (max-width: $tab) {
       width: 100%;
       height: auto;
       max-height: auto;
@@ -58,7 +58,7 @@
         @include s(padding-bottom, 20);
         @include s(height, 60);
         transition: var(--trs-cubic-300);
-        @media (max-width: $tab-sm) {
+        @media (max-width: $tab) {
           @include descr-s;
           @include s(height, 60);
         }
@@ -74,7 +74,7 @@
       @include padding(48);
       z-index: 2;
       background: var(--white-color);
-      @media (max-width: $tab-sm) {
+      @media (max-width: $tab) {
         @include padding(43, 20);
       }
       .title {
@@ -129,7 +129,7 @@
         width: 100%;
         justify-content: center;
         @include s(margin-top, 28);
-        @media (max-width: $tab-sm) {
+        @media (max-width: $tab) {
           @include s(margin-top, 20);
         }
         p {

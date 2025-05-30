@@ -3,7 +3,7 @@
 .collections {
   @include s(margin-top, 28);
   @include s(padding-bottom, 156);
-  @media (max-width: $tab-sm) {
+  @media (max-width: $tab) {
     @include s(padding-bottom, 64);
     @include s(margin-top, 16);
   }

@@ -14,7 +14,7 @@
   opacity: 0;
   transition: var(--trs-cubic-300);
   @include padding(20);
-  @media (max-width: $tab-sm) {
+  @media (max-width: $tab) {
     padding: 0;
   }
   &.active {
@@ -33,7 +33,7 @@
     @include s(top, 0);
     @include s(right, 0);
     z-index: 10;
-    @media (max-width: $tab-sm) {
+    @media (max-width: $tab) {
       @include s(top, 34);
     }
     .close-modal {
@@ -52,7 +52,7 @@
       align-items: center;
       justify-content: center;
       transition: var(--trs-cubic-300);
-      @media (max-width: $tab-sm) {
+      @media (max-width: $tab) {
         @include s(margin-right, 0);
         @include s(top, -14);
         @include s(right, 1);

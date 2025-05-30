@@ -1,7 +1,7 @@
 mixin selector(data)
     if data.isTabsSelector
         .selector.tabs-selector(class=data.class)&attributes(attributes)
-            button(type='button').selector-btn
+            .selector-btn
                 span.selector-title
                     span.text-content
                         input(type="radio" name=data.name )
@@ -18,7 +18,7 @@ mixin selector(data)
                             span #{item.title}
     else if data.isLinkSelector
         .selector.link-selector(class=data.class)&attributes(attributes)
-            button(type='button').link-selector-btn
+            .link-selector-btn
                 span.selector-title
                     span.text-content
                         span #{data.title}

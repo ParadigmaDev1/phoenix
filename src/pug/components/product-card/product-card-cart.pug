@@ -1,9 +1,8 @@
 mixin product-card-cart(data)
     a(href='#').product-card.product-card-cart&attributes(attributes)
         .product-card-cart__handlers
-            label.custom-checkbox-wrapper
+            .custom-checkbox-wrapper
                 input(type="checkbox").custom-checkbox
-                span
             .features-list
                 .btn
                     <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -26,9 +25,8 @@ mixin product-card-cart(data)
                 </svg>
         .product-card-swiper-wrapper 
             .product-card-features 
-                label.custom-checkbox-wrapper
+                .custom-checkbox-wrapper
                     input(type="checkbox").custom-checkbox
-                    span
                 if data.badgeTitle
                     .badge(class=data.badgeClass) #{data.badgeTitle}
                 .features-list 

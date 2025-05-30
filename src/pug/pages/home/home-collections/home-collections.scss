@@ -3,7 +3,7 @@
 .home-collections {
   @include s(padding-top, 115);
   overflow: hidden;
-  @media (max-width: $tab-sm) {
+  @media (max-width: $tab) {
     @include s(padding-top, 64);
   }
   .home-collections-inner {
@@ -18,7 +18,7 @@
         width: fit-content;
         @include padding(0, 24);
         @include s(gap, 12);
-        @media (max-width: $tab-sm) {
+        @media (max-width: $tab) {
           display: none;
         }
         &:hover {
@@ -34,7 +34,7 @@
       @include s(margin-top, 33);
       position: relative;
       @include s(height, 600);
-      @media (max-width: $tab-sm) {
+      @media (max-width: $tab) {
         @include s(margin-top, 19);
         height: auto;
       }
@@ -47,7 +47,7 @@
         position: absolute;
         top: 0;
         left: 0;
-        @media (max-width: $tab-sm) {
+        @media (max-width: $tab) {
           position: relative;
         }
       }
@@ -75,7 +75,7 @@
         transition: var(--trs-cubic-300);
         cursor: pointer;
         opacity: 0;
-        @media (max-width: $tab-sm) {
+        @media (max-width: $tab) {
           height: fit-content;
           cursor: default;
           @include borr(0);
@@ -96,7 +96,7 @@
             rgba(244, 244, 244, 0) 100%
           );
           z-index: 2;
-          @media (max-width: $tab-sm) {
+          @media (max-width: $tab) {
             display: none;
           }
         }
@@ -124,7 +124,7 @@
           position: relative;
           width: 100%;
           height: 100%;
-          @media (max-width: $tab-sm) {
+          @media (max-width: $tab) {
             @include s(height, 320);
             @include borr(12);
             overflow: hidden;
@@ -148,7 +148,7 @@
           font-weight: 500;
           transition: var(--trs-cubic-300);
           z-index: 3;
-          @media (max-width: $tab-sm) {
+          @media (max-width: $tab) {
             position: relative;
             bottom: auto;
             right: auto;
@@ -165,7 +165,7 @@
           @include s(left, 30);
           opacity: 0;
           transition: var(--trs-cubic-300);
-          @media (max-width: $tab-sm) {
+          @media (max-width: $tab) {
             display: none;
           }
         }
@@ -183,7 +183,7 @@
           transition-delay: 0ms;
           opacity: 0;
           z-index: 3;
-          @media (max-width: $tab-sm) {
+          @media (max-width: $tab) {
             display: none;
           }
           &:before {
@@ -244,7 +244,7 @@
       align-items: center;
       @include s(gap, 17);
       display: none;
-      @media (max-width: $tab-sm) {
+      @media (max-width: $tab) {
         display: flex;
       }
       .products-pagination {
@@ -273,7 +273,7 @@
         @include s(width, 6);
         @include s(height, 12);
       }
-      @media (max-width: $tab-sm) {
+      @media (max-width: $tab) {
         display: flex;
       }
     }

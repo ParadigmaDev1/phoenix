@@ -3,14 +3,14 @@
 .career-team-about {
   @include s(margin-top, 116);
   overflow: hidden;
-  @media (max-width: $tab-sm) {
+  @media (max-width: $tab) {
     @include s(margin-top, 64);
   }
   .career-team-about-inner {
     h3 {
       text-align: center;
       @include h2;
-      @media (max-width: $tab-sm) {
+      @media (max-width: $tab) {
         text-align: left;
       }
     }
@@ -21,7 +21,7 @@
       align-items: center;
       @include s(gap, 4);
       justify-content: center;
-      @media (max-width: $tab-sm) {
+      @media (max-width: $tab) {
         justify-content: flex-start;
         @include s(margin-top, 20);
         @include s(margin-left, -20);
@@ -36,7 +36,7 @@
     }
     .tab-content {
       @include s(margin-top, 28);
-      @media (max-width: $tab-sm) {
+      @media (max-width: $tab) {
         @include s(margin-top, 20);
       }
       .double-swiper {
@@ -48,7 +48,7 @@
           @include s(height, 372);
           @include borr(12);
           overflow: hidden;
-          @media (max-width: $tab-sm) {
+          @media (max-width: $tab) {
             @include s(height, 180);
           }
           &.visible-slide {

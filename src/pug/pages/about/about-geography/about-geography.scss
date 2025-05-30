@@ -2,14 +2,14 @@
 
 .about-geography {
   @include s(margin-top, 116);
-  @media (max-width: $tab-sm) {
+  @media (max-width: $tab) {
     @include s(margin-top, 64);
   }
   .about-geography-inner {
     h3 {
       text-align: center;
       @include h2;
-      @media (max-width: $tab-sm) {
+      @media (max-width: $tab) {
         text-align: left;
       }
     }
@@ -19,6 +19,9 @@
       @include s(margin-top, 36);
       margin-left: auto;
       margin-right: auto;
+      @media (max-width: $tab) {
+        width: 100%;
+      }
       @media (max-width: $tab-sm) {
         @include s(width, 360);
         @include s(height, 231);
@@ -30,12 +33,12 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
-        @media (max-width: $tab-sm) {
+        @media (max-width: $tab) {
           display: none;
         }
         &.mob {
           display: none;
-          @media (max-width: $tab-sm) {
+          @media (max-width: $tab) {
             display: block;
           }
         }
@@ -49,7 +52,7 @@
       margin-left: auto;
       margin-right: auto;
       @include s(margin-top, -116);
-      @media (max-width: $tab-sm) {
+      @media (max-width: $tab) {
         grid-template-columns: repeat(1, 1fr);
         @include s(gap, 28);
         @include s(margin-top, -48);
@@ -64,7 +67,7 @@
           @include s(font-size, 96);
           @include s(letter-spacing, -3);
           line-height: 80%;
-          @media (max-width: $tab-sm) {
+          @media (max-width: $tab) {
             font-weight: 300;
             @include s(font-size, 56);
             @include s(letter-spacing, -1);
@@ -75,7 +78,7 @@
           @include h6;
           text-align: center;
           @include s(margin-top, 24);
-          @media (max-width: $tab-sm) {
+          @media (max-width: $tab) {
             @include s(margin-top, 12);
             @include descr-m;
           }

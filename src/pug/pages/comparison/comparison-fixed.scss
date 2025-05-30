@@ -13,7 +13,7 @@
   transform: translateY(-100%);
   opacity: 0;
   pointer-events: none;
-  @media (max-width: $tab-sm) {
+  @media (max-width: $tab) {
     @include s(top, 110);
   }
   &.active {
@@ -30,7 +30,7 @@
       @include gtc(90, 128, 1fr);
       border-right: 1px solid var(--line-color);
       grid-template-areas: "img art art" "img price price" "img to-cart features";
-      @media (max-width: $tab-sm) {
+      @media (max-width: $tab) {
         @include gtc(48, 1fr);
         border-right: none;
         grid-template-areas: "img price" "features features" "to-cart to-cart";
@@ -49,7 +49,7 @@
         justify-content: center;
         position: relative;
         grid-area: img;
-        @media (max-width: $tab-sm) {
+        @media (max-width: $tab) {
           @include s(width, 48);
           @include s(height, 48);
         }
@@ -72,7 +72,7 @@
           justify-content: center;
           transition: var(--trs-cubic-300);
           background: var(--white-color);
-          @media (max-width: $tab-sm) {
+          @media (max-width: $tab) {
             display: none;
           }
           &:hover {
@@ -98,7 +98,7 @@
         color: var(--gray-light-color);
         grid-area: art;
         @include s(margin-left, 24);
-        @media (max-width: $tab-sm) {
+        @media (max-width: $tab) {
           display: none;
         }
       }
@@ -109,14 +109,14 @@
         @include s(gap, 12);
         grid-area: price;
         @include s(margin-left, 24);
-        @media (max-width: $tab-sm) {
+        @media (max-width: $tab) {
           flex-direction: column;
           @include s(gap, 2);
           @include s(margin-left, 10);
         }
         .current-price {
           @include body-xl;
-          @media (max-width: $tab-sm) {
+          @media (max-width: $tab) {
             @include body-sb;
           }
         }
@@ -132,14 +132,14 @@
         width: 100%;
         @include s(margin-left, 29);
 
-        @media (max-width: $tab-sm) {
+        @media (max-width: $tab) {
           @include s(margin-top, 16);
           margin-left: 0;
         }
       }
       .remove-mob-btn {
         display: none;
-        @media (max-width: $tab-sm) {
+        @media (max-width: $tab) {
           display: block;
           grid-area: remove;
           @include s(width, 14);
@@ -153,7 +153,7 @@
       }
       .favor-btn {
         grid-area: favor;
-        @media (max-width: $tab-sm) {
+        @media (max-width: $tab) {
           @include s(width, 16);
           @include s(height, 16);
         }
@@ -164,11 +164,11 @@
 
         @include s(height, 36);
         @include padding(0, 16);
-        @media (max-width: $tab-sm) {
+        @media (max-width: $tab) {
           margin-left: 0;
           @include s(margin-top, 16);
         }
-        p {
+        span {
           @include descr-s;
           text-transform: uppercase;
         }

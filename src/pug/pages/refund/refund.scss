@@ -3,7 +3,7 @@
 .refund {
   @include s(margin-top, 28);
   @include s(padding-bottom, 156);
-  @media (max-width: $tab-sm) {
+  @media (max-width: $tab) {
     @include s(padding-bottom, 64);
     @include s(margin-top, 16);
   }
@@ -16,7 +16,7 @@
       @include gtc(1fr, 408);
       @include s(gap, 48);
       @include s(margin-top, 36);
-      @media (max-width: $tab-sm) {
+      @media (max-width: $tab) {
         grid-template-columns: 1fr;
         @include s(gap, 64);
         @include s(margin-top, 20);
@@ -30,14 +30,14 @@
           .accordion-title {
             justify-content: flex-start;
             @include padding(36, 0);
-            @media (max-width: $tab-sm) {
+            @media (max-width: $tab) {
               @include padding(16, 0);
             }
             .title-wrapper {
               .title {
                 @include body-xl;
                 text-align: left;
-                @media (max-width: $tab-sm) {
+                @media (max-width: $tab) {
                   @include body-lb;
                 }
               }
@@ -72,7 +72,7 @@
                 position: relative;
                 @include s(padding-left, 30);
                 @include body-l;
-                @media (max-width: $tab-sm) {
+                @media (max-width: $tab) {
                   @include body-m;
                 }
                 &:before {
@@ -94,7 +94,7 @@
               @include s(gap, 10);
               p {
                 @include body-l;
-                @media (max-width: $tab-sm) {
+                @media (max-width: $tab) {
                   @include body-m;
                 }
               }
@@ -134,7 +134,7 @@
               @include gtc(208, 1fr);
               @include s(gap, 20);
               align-items: center;
-              @media (max-width: $tab-sm) {
+              @media (max-width: $tab) {
                 grid-template-columns: 1fr;
                 align-items: flex-start;
                 @include s(gap, 12);
@@ -155,7 +155,7 @@
           .descr {
             @include s(margin-top, 28);
             @include body-m;
-            @media (max-width: $tab-sm) {
+            @media (max-width: $tab) {
               @include s(margin-top, 20);
             }
           }

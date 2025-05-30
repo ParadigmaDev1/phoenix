@@ -2,7 +2,7 @@
 
 .wholesale-marketing-materials-banners {
   @include s(padding-bottom, 156);
-  @media (max-width: $tab-sm) {
+  @media (max-width: $tab) {
     @include s(padding-bottom, 64);
     @include s(margin-top, 16);
   }
@@ -11,7 +11,7 @@
     @include gtc(1fr, 294);
     @include s(gap, 48);
     @include s(margin-top, 36);
-    @media (max-width: $tab-sm) {
+    @media (max-width: $tab) {
       grid-template-columns: 1fr;
       @include s(margin-top, 20);
       @include s(row-gap, 36);
@@ -29,7 +29,7 @@
           @include s(gap, 12);
           @include s(height, 36);
           @include padding(0, 16);
-          @media (max-width: $tab-sm) {
+          @media (max-width: $tab) {
             display: none;
           }
           span {
@@ -39,7 +39,7 @@
         }
       }
       .download-btn-wrapper {
-        @media (max-width: $tab-sm) {
+        @media (max-width: $tab) {
           position: fixed;
           @include s(bottom, 59);
           right: 0;
@@ -54,7 +54,7 @@
           @include s(margin-top, 28);
           @include padding(0, 24);
           @include s(gap, 10);
-          @media (max-width: $tab-sm) {
+          @media (max-width: $tab) {
             margin-top: 0;
             width: 100%;
           }
@@ -70,6 +70,10 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         @include s(gap, 24);
+        @media (max-width: $tab) {
+          grid-template-columns: repeat(2, 1fr);
+          @include s(gap, 12);
+        }
         @media (max-width: $tab-sm) {
           grid-template-columns: 1fr;
           @include s(gap, 12);

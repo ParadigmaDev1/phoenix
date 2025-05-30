@@ -3,7 +3,7 @@
 .faq {
   @include s(margin-top, 28);
   @include s(padding-bottom, 156);
-  @media (max-width: $tab-sm) {
+  @media (max-width: $tab) {
     @include s(padding-bottom, 64);
     @include s(margin-top, 16);
     overflow: hidden;
@@ -17,7 +17,7 @@
       display: flex;
       align-items: center;
       @include s(gap, 4);
-      @media (max-width: $tab-sm) {
+      @media (max-width: $tab) {
         justify-content: flex-start;
         @include s(margin-top, 20);
         @include s(margin-left, -20);
@@ -34,18 +34,18 @@
       display: grid;
       @include gtc(1fr, 432);
       @include s(gap, 48);
-      @media (max-width: $tab-sm) {
+      @media (max-width: $tab) {
         grid-template-columns: 1fr;
         @include s(gap, 64);
       }
     }
     .tab-content-wrapper {
-      @media (max-width: $tab-sm) {
+      @media (max-width: $tab) {
         overflow: hidden;
       }
       .tab-content {
         @include s(margin-top, 28);
-        @media (max-width: $tab-sm) {
+        @media (max-width: $tab) {
           @include s(margin-top, 20);
         }
         .accordion-item.nested {
@@ -56,7 +56,7 @@
           & > .accordion-title {
             justify-content: flex-start;
             @include padding(36, 0);
-            @media (max-width: $tab-sm) {
+            @media (max-width: $tab) {
               @include padding(16, 0);
             }
             .title-wrapper {
@@ -94,7 +94,7 @@
                   position: relative;
                   @include s(padding-left, 30);
                   @include body-l;
-                  @media (max-width: $tab-sm) {
+                  @media (max-width: $tab) {
                     @include body-m;
                   }
                   &:before {
@@ -116,7 +116,7 @@
                 @include s(gap, 10);
                 p {
                   @include body-l;
-                  @media (max-width: $tab-sm) {
+                  @media (max-width: $tab) {
                     @include body-m;
                   }
                 }

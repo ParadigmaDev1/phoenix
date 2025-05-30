@@ -3,7 +3,7 @@
 .how-buy {
   @include s(margin-top, 28);
   @include s(padding-bottom, 156);
-  @media (max-width: $tab-sm) {
+  @media (max-width: $tab) {
     @include s(padding-bottom, 64);
     @include s(margin-top, 16);
   }
@@ -16,7 +16,7 @@
       @include gtc(1fr, 408);
       @include s(gap, 48);
       @include s(margin-top, 36);
-      @media (max-width: $tab-sm) {
+      @media (max-width: $tab) {
         grid-template-columns: 1fr;
         @include s(gap, 64);
         @include s(margin-top, 20);
@@ -31,7 +31,7 @@
             justify-content: flex-start;
             align-items: flex-start;
             @include padding(36, 0);
-            @media (max-width: $tab-sm) {
+            @media (max-width: $tab) {
               @include padding(16, 0);
             }
             .title-wrapper {
@@ -46,7 +46,7 @@
               .descr {
                 text-align: left;
                 @include body-l;
-                @media (max-width: $tab-sm) {
+                @media (max-width: $tab) {
                   @include body-m;
                 }
               }
@@ -82,7 +82,7 @@
               position: relative;
               @include borr(6);
               overflow: hidden;
-              @media (max-width: $tab-sm) {
+              @media (max-width: $tab) {
                 @include s(width, 320);
                 @include s(height, 180);
               }
@@ -160,7 +160,7 @@
             @include s(gap, 20);
             align-items: center;
             @include s(margin-top, 28);
-            @media (max-width: $tab-sm) {
+            @media (max-width: $tab) {
               @include s(gap, 12);
               @include gtc(208, 1fr);
             }

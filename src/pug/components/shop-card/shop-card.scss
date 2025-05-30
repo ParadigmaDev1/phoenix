@@ -9,7 +9,7 @@
   align-items: center;
   justify-content: center;
   @include s(gap, 33);
-  @media (max-width: $tab-sm) {
+  @media (max-width: $tab) {
     @include s(height, 148);
     @include s(gap, 22);
   }
@@ -30,7 +30,7 @@
     @include s(height, 76);
     object-fit: contain;
     width: 30%;
-    @media (max-width: $tab-sm) {
+    @media (max-width: $tab) {
       @include s(height, 46);
 
       width: 50%;
@@ -39,13 +39,13 @@
   .btn {
     @include padding(0, 24);
     @include s(gap, 12);
-    @media (max-width: $tab-sm) {
+    @media (max-width: $tab) {
       @include padding(0, 16);
     }
     span {
       text-transform: uppercase;
       @include descr-m;
-      @media (max-width: $tab-sm) {
+      @media (max-width: $tab) {
         @include descr-s;
       }
     }

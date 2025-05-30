@@ -2,7 +2,7 @@
 
 .wholesale-documents {
   @include s(padding-bottom, 156);
-  @media (max-width: $tab-sm) {
+  @media (max-width: $tab) {
     @include s(padding-bottom, 64);
     @include s(margin-top, 16);
   }
@@ -11,7 +11,7 @@
     @include gtc(1fr, 294);
     @include s(gap, 48);
     @include s(margin-top, 36);
-    @media (max-width: $tab-sm) {
+    @media (max-width: $tab) {
       grid-template-columns: 1fr;
       gap: 0;
       @include s(margin-top, 22);
@@ -30,7 +30,7 @@
         width: fit-content;
         @include s(gap, 14);
         @include padding(0, 24);
-        @media (max-width: $tab-sm) {
+        @media (max-width: $tab) {
           @include s(margin-top, 20);
         }
         p {
@@ -46,7 +46,7 @@
         @include s(width, 696);
         grid-template-areas: "selector1 selector2 selector3";
 
-        @media (max-width: $tab-sm) {
+        @media (max-width: $tab) {
           grid-template-areas: "selector1 selector1" "selector2 selector3";
           grid-template-columns: 1fr 0.5fr;
           width: 100%;
@@ -79,13 +79,13 @@
         display: flex;
         align-items: center;
         @include s(gap, 48);
-        @media (max-width: $tab-sm) {
+        @media (max-width: $tab) {
           justify-content: space-between;
         }
         .total-documents-select {
           @include body-m;
           color: var(--gray-light-color);
-          @media (max-width: $tab-sm) {
+          @media (max-width: $tab) {
             display: none;
           }
         }

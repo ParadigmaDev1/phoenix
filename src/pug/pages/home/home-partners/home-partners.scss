@@ -4,7 +4,7 @@
 .home-partners {
   @include s(margin-top, 115);
   overflow: hidden;
-  @media (max-width: $tab-sm) {
+  @media (max-width: $tab) {
     @include s(margin-top, 62);
   }
   .home-partners-inner {

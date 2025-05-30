@@ -3,14 +3,14 @@
 .career-adaptation {
   @include s(margin-top, 116);
   overflow: hidden;
-  @media (max-width: $tab-sm) {
+  @media (max-width: $tab) {
     @include s(margin-top, 64);
   }
   .career-adaptation-inner {
     h3 {
       text-align: center;
       @include h2;
-      @media (max-width: $tab-sm) {
+      @media (max-width: $tab) {
         text-align: left;
       }
     }
@@ -21,7 +21,7 @@
       text-align: center;
       margin-left: auto;
       margin-right: auto;
-      @media (max-width: $tab-sm) {
+      @media (max-width: $tab) {
         @include body-m;
         @include s(margin-top, 12);
         text-align: left;
@@ -30,7 +30,7 @@
     .career-adaptation-swiper {
       @include s(margin-top, 48);
       position: relative;
-      @media (max-width: $tab-sm) {
+      @media (max-width: $tab) {
         @include s(margin-top, 20);
       }
       .swiper-slide {
@@ -41,6 +41,10 @@
         @include padding(0, 114);
         opacity: 0;
         transition: opacity var(--trs-cubic-300);
+        @media (max-width: $tab) {
+          @include gtc(362, 1fr);
+          @include padding(0, 0, 50, 0);
+        }
         @media (max-width: $tab-sm) {
           padding: 0;
           grid-template-columns: 1fr;
@@ -66,6 +70,12 @@
             @include s(right, -147);
             @include s(width, 341);
             @include s(height, 101);
+            @media (max-width: $tab) {
+              @include s(width, 200);
+              @include s(height, 81);
+              @include s(top, -15);
+              @include s(right, -100);
+            }
             @media (max-width: $tab-sm) {
               display: none;
             }
@@ -95,7 +105,7 @@
             p {
               text-align: center;
               @include body-l;
-              @media (max-width: $tab-sm) {
+              @media (max-width: $tab) {
                 @include body-m;
                 text-align: left;
               }
@@ -105,9 +115,11 @@
         .image-wrapper {
           @include s(width, 660);
           @include s(height, 420);
-          @media (max-width: $tab-sm) {
+          @media (max-width: $tab) {
             @include s(width, 320);
             @include s(height, 204);
+          }
+          @media (max-width: $tab-sm) {
             order: 0;
           }
           img {

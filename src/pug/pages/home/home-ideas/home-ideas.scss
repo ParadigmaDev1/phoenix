@@ -3,7 +3,7 @@
 .home-ideas {
   @include s(padding-top, 122);
   overflow: hidden;
-  @media (max-width: $tab-sm) {
+  @media (max-width: $tab) {
     @include s(padding-top, 79);
   }
   .home-ideas-top {
@@ -15,7 +15,7 @@
     @include s(margin-top, 38);
     @include s(height, 705);
     position: relative;
-    @media (max-width: $tab-sm) {
+    @media (max-width: $tab) {
       height: fit-content;
       @include s(margin-top, 30);
     }
@@ -38,7 +38,7 @@
       width: 100%;
       height: 100%;
       position: relative;
-      @media (max-width: $tab-sm) {
+      @media (max-width: $tab) {
         overflow: auto;
         scrollbar-width: thin;
         scrollbar-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
@@ -56,7 +56,7 @@
       position: absolute;
       @include s(top, 48);
       left: 0;
-      @media (max-width: $tab-sm) {
+      @media (max-width: $tab) {
         position: relative;
         top: 0;
         right: 0;
@@ -104,6 +104,10 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
+      @media (max-width: $tab) {
+        position: relative;
+        @include s(height, 403);
+      }
       @media (max-width: $tab-sm) {
         position: relative;
         @include s(height, 203);
@@ -130,7 +134,7 @@
             @include s(gap, 12);
             @include padding(0, 16);
             display: none;
-            @media (max-width: $tab-sm) {
+            @media (max-width: $tab) {
               display: flex;
             }
             span {
@@ -150,7 +154,7 @@
           height: 100%;
           top: 0;
           left: 0;
-          @media (max-width: $tab-sm) {
+          @media (max-width: $tab) {
             display: none;
           }
           .pin-wrapper {

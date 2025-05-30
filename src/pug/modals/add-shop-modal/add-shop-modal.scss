@@ -2,13 +2,13 @@
 
 .add-shop-modal {
   .close-modal-wrapper {
-    @media (max-width: $tab-sm) {
+    @media (max-width: $tab) {
       top: 0 !important;
     }
     .close-modal {
       margin-top: calc(-50 / var(--screensize) * 100vw) !important;
       margin-right: calc(-50 / var(--screensize) * 100vw) !important;
-      @media (max-width: $tab-sm) {
+      @media (max-width: $tab) {
         margin: 0 !important;
         @include s(top, 0);
         @include s(right, 0);
@@ -22,7 +22,7 @@
     // padding: 0;
     position: relative;
     overflow: auto;
-    @media (max-width: $tab-sm) {
+    @media (max-width: $tab) {
       @include padding(20);
     }
     .title {
@@ -30,7 +30,7 @@
       text-transform: uppercase;
     }
     .modal-content {
-      @media (max-width: $tab-sm) {
+      @media (max-width: $tab) {
         height: 100%;
         display: flex;
         flex-direction: column;
@@ -66,7 +66,7 @@
       display: grid;
       @include gtc(128, 1fr);
       @include s(gap, 24);
-      @media (max-width: $tab-sm) {
+      @media (max-width: $tab) {
         grid-template-columns: 1fr;
         @include s(gap, 12);
       }

@@ -2,26 +2,26 @@
 
 .about-values {
   @include s(margin-top, 116);
-  @media (max-width: $tab-sm) {
+  @media (max-width: $tab) {
     @include s(margin-top, 64);
   }
   .about-values-inner {
     h3 {
       text-align: center;
       @include h2;
-      @media (max-width: $tab-sm) {
+      @media (max-width: $tab) {
         text-align: left;
       }
     }
     .values-block {
-      @media (max-width: $tab-sm) {
+      @media (max-width: $tab) {
         display: none;
       }
     }
     .accordion {
       display: none;
       @include s(margin-top, 20);
-      @media (max-width: $tab-sm) {
+      @media (max-width: $tab) {
         display: block;
       }
       .accordion-item {

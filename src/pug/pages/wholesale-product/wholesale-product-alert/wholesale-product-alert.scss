@@ -2,7 +2,7 @@
 
 .wholesale-product-alert {
   @include s(margin-top, 125);
-  @media (max-width: $tab-sm) {
+  @media (max-width: $tab) {
     @include s(margin-top, 112);
   }
   .content {
@@ -12,7 +12,7 @@
     background: var(--violet-back-color);
     align-items: center;
     overflow: hidden;
-    @media (max-width: $tab-sm) {
+    @media (max-width: $tab) {
       @include s(gap, 14);
     }
     p {
@@ -20,7 +20,7 @@
       @include descr-m;
       text-transform: uppercase;
       @include s(padding-left, 36);
-      @media (max-width: $tab-sm) {
+      @media (max-width: $tab) {
         @include descr-xs;
         display: flex;
         flex-direction: column;
@@ -29,7 +29,7 @@
       span {
         @include descr-m;
         color: var(--violet-color);
-        @media (max-width: $tab-sm) {
+        @media (max-width: $tab) {
           @include descr-xs;
         }
       }
@@ -38,7 +38,7 @@
       @include s(width, 375);
       @include s(height, 88);
       object-fit: contain;
-      @media (max-width: $tab-sm) {
+      @media (max-width: $tab) {
         @include s(width, 144);
         @include s(height, 56);
         object-fit: cover;

@@ -2,7 +2,7 @@
 
 .content-hero {
   @include s(margin-top, 28);
-  @media (max-width: $tab-sm) {
+  @media (max-width: $tab) {
     @include s(margin-top, 16);
   }
   h1 {
@@ -15,7 +15,7 @@
     @include s(margin-top, 36);
     display: flex;
     @include s(gap, 48);
-    @media (max-width: $tab-sm) {
+    @media (max-width: $tab) {
       flex-direction: column;
       @include s(gap, 28);
       @include s(margin-top, 28);
@@ -25,6 +25,10 @@
       @include s(height, 503);
       @include borr(12);
       overflow: hidden;
+      @media (max-width: $tab) {
+        width: 100%;
+        @include s(height, 403);
+      }
       @media (max-width: $tab-sm) {
         @include s(width, 320);
         @include s(height, 180);
@@ -39,6 +43,9 @@
       @include s(width, 408);
       display: flex;
       flex-direction: column;
+      @media (max-width: $tab) {
+        width: 100%;
+      }
       @media (max-width: $tab-sm) {
         @include s(width, 320);
       }
@@ -47,20 +54,20 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        @media (max-width: $tab-sm) {
+        @media (max-width: $tab) {
           @include s(gap, 20);
         }
         .awards {
           display: flex;
           align-items: center;
           @include s(gap, 24);
-          @media (max-width: $tab-sm) {
+          @media (max-width: $tab) {
             @include s(gap, 20);
           }
           img {
             @include s(width, 96);
             @include s(height, 85);
-            @media (max-width: $tab-sm) {
+            @media (max-width: $tab) {
               @include s(width, 56);
               @include s(height, 49);
             }
@@ -76,13 +83,13 @@
         @include s(margin-top, 36);
         @include s(padding-top, 36);
         border-top: 1px solid var(--line-color);
-        @media (max-width: $tab-sm) {
+        @media (max-width: $tab) {
           @include s(margin-top, 20);
           @include s(padding-top, 20);
         }
         .descr {
           @include body-l;
-          @media (max-width: $tab-sm) {
+          @media (max-width: $tab) {
             @include body-m;
           }
         }

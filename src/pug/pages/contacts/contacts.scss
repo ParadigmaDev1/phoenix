@@ -3,7 +3,7 @@
 .contacts {
   @include s(margin-top, 28);
   @include s(padding-bottom, 156);
-  @media (max-width: $tab-sm) {
+  @media (max-width: $tab) {
     @include s(padding-bottom, 64);
     @include s(margin-top, 16);
   }
@@ -16,7 +16,7 @@
       display: flex;
       align-items: center;
       @include s(gap, 4);
-      @media (max-width: $tab-sm) {
+      @media (max-width: $tab) {
         justify-content: flex-start;
         @include s(margin-top, 20);
         @include s(margin-left, -20);
@@ -32,7 +32,7 @@
     .tab-content {
       display: grid;
       @include s(margin-top, 28);
-      @media (max-width: $tab-sm) {
+      @media (max-width: $tab) {
         @include s(margin-top, 20);
       }
     }

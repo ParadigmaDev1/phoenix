@@ -2,7 +2,7 @@
 
 .wholesale-office {
   @include s(padding-bottom, 156);
-  @media (max-width: $tab-sm) {
+  @media (max-width: $tab) {
     @include s(padding-bottom, 64);
     @include s(margin-top, 16);
   }
@@ -11,7 +11,7 @@
     @include gtc(1fr, 294);
     @include s(gap, 48);
     @include s(margin-top, 36);
-    @media (max-width: $tab-sm) {
+    @media (max-width: $tab) {
       grid-template-columns: 1fr;
       gap: 0;
       @include s(margin-top, 22);
@@ -26,14 +26,14 @@
       }
       .payment-schedule {
         @include s(margin-top, 36);
-        @media (max-width: $tab-sm) {
+        @media (max-width: $tab) {
           @include s(margin-top, 20);
         }
         .info {
           display: flex;
           justify-content: space-between;
           @include s(margin-top, 16);
-          @media (max-width: $tab-sm) {
+          @media (max-width: $tab) {
             flex-direction: column;
             @include s(margin-top, 20);
             @include s(gap, 8);
@@ -61,7 +61,7 @@
           display: grid;
           grid-template-columns: repeat(2, 1fr);
           @include s(gap, 24);
-          @media (max-width: $tab-sm) {
+          @media (max-width: $tab) {
             grid-template-columns: 1fr;
             @include s(gap, 12);
           }
@@ -72,7 +72,7 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         @include s(gap, 24);
-        @media (max-width: $tab-sm) {
+        @media (max-width: $tab) {
           grid-template-columns: 1fr;
           @include s(gap, 64);
         }
@@ -101,6 +101,9 @@
           position: relative;
           overflow: hidden;
 
+          @media (max-width: $tab) {
+            padding-bottom: 43%;
+          }
           @media (max-width: $tab-sm) {
             @include s(margin-top, 28);
             padding-bottom: 100%;
@@ -131,7 +134,7 @@
           //     @include s(height, 276);
           //     @include borr(12);
           //     overflow: hidden;
-          //     @media (max-width: $tab-sm) {
+          //     @media (max-width: $tab) {
           //       @include s(height, 180);
           //     }
           //     img {
@@ -170,7 +173,7 @@
         grid-template-columns: repeat(2, 1fr);
         @include s(gap, 24);
         align-items: center;
-        @media (max-width: $tab-sm) {
+        @media (max-width: $tab) {
           grid-template-columns: 1fr;
           @include padding(28);
           @include s(gap, 28);
@@ -182,7 +185,7 @@
             flex-direction: column;
             @include s(gap, 8);
             @include s(margin-top, 12);
-            @media (max-width: $tab-sm) {
+            @media (max-width: $tab) {
               @include s(margin-top, 8);
             }
             li {

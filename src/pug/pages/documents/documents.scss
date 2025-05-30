@@ -3,7 +3,7 @@
 .documents {
   @include s(margin-top, 28);
   @include s(padding-bottom, 156);
-  @media (max-width: $tab-sm) {
+  @media (max-width: $tab) {
     @include s(padding-bottom, 64);
     @include s(margin-top, 16);
   }
@@ -17,6 +17,10 @@
       grid-template-columns: repeat(3, 1fr);
       @include s(gap, 24);
       @include s(margin-top, 28);
+      @media (max-width: $tab) {
+        grid-template-columns: repeat(2, 1fr);
+        @include s(gap, 12);
+      }
       @media (max-width: $tab-sm) {
         grid-template-columns: repeat(1, 1fr);
         @include s(gap, 12);

@@ -2,7 +2,7 @@
 
 .support-retail {
   @include s(padding-bottom, 156);
-  @media (max-width: $tab-sm) {
+  @media (max-width: $tab) {
     @include s(padding-bottom, 64);
     @include s(margin-top, 16);
   }
@@ -15,7 +15,7 @@
       @include gtc(1fr, 294);
       @include s(gap, 48);
       @include s(margin-top, 36);
-      @media (max-width: $tab-sm) {
+      @media (max-width: $tab) {
         grid-template-columns: 1fr;
         gap: 0;
         @include s(margin-top, 22);
@@ -27,7 +27,7 @@
         }
         .descr {
           @include s(margin-top, 36);
-          @media (max-width: $tab-sm) {
+          @media (max-width: $tab) {
             @include s(margin-top, 20);
           }
           p {
@@ -45,7 +45,7 @@
             @include s(gap, 29);
             @include s(height, 48);
             flex: 1;
-            @media (max-width: $tab-sm) {
+            @media (max-width: $tab) {
               @include s(height, 44);
             }
             input {
@@ -65,7 +65,7 @@
               right: 0;
               @include s(width, 48);
               @include s(height, 48);
-              @media (max-width: $tab-sm) {
+              @media (max-width: $tab) {
                 background: none;
                 @include s(width, 44);
                 @include s(height, 44);
@@ -80,7 +80,7 @@
                 path {
                   stroke: var(--gray-color);
                 }
-                @media (max-width: $tab-sm) {
+                @media (max-width: $tab) {
                   @include s(width, 22);
                   @include s(height, 22);
                 }
@@ -100,13 +100,13 @@
             & > .accordion-title {
               justify-content: flex-start;
               @include padding(36, 0);
-              @media (max-width: $tab-sm) {
+              @media (max-width: $tab) {
                 @include padding(16, 0);
               }
               .title-wrapper {
                 .title {
                   @include body-xl;
-                  @media (max-width: $tab-sm) {
+                  @media (max-width: $tab) {
                     @include h6;
                   }
                 }
@@ -141,7 +141,7 @@
                     position: relative;
                     @include s(padding-left, 30);
                     @include body-l;
-                    @media (max-width: $tab-sm) {
+                    @media (max-width: $tab) {
                       @include body-m;
                     }
                     &:before {
@@ -161,7 +161,7 @@
                     @include body-l;
                     @include s(margin-top, 10);
 
-                    @media (max-width: $tab-sm) {
+                    @media (max-width: $tab) {
                       @include body-m;
                     }
                   }
@@ -198,7 +198,7 @@
           h4 {
             color: var(--violet-color);
           }
-          @media (max-width: $tab-sm) {
+          @media (max-width: $tab) {
             padding: 0;
             box-shadow: none;
             @include s(margin-top, 64);

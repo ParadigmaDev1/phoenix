@@ -10,6 +10,9 @@
     display: grid;
     @include gtc(203, 429);
     @include s(gap, 28);
+    @media (max-width: $tab) {
+      @include gtc(203, 1fr);
+    }
     @media (max-width: $tab-sm) {
       @include gtc(93, 207);
       @include s(gap, 20);
@@ -21,7 +24,7 @@
       width: 100%;
       @include borr(12);
       overflow: hidden;
-      @media (max-width: $tab-sm) {
+      @media (max-width: $tab) {
         @include s(height, 116);
       }
       &.empty {
@@ -39,7 +42,7 @@
       svg {
         @include s(width, 51);
         @include s(height, 48);
-        @media (max-width: $tab-sm) {
+        @media (max-width: $tab) {
           @include s(width, 15);
           @include s(height, 15);
         }
@@ -51,12 +54,12 @@
         flex-direction: column;
         @include s(gap, 28);
         @include s(margin-bottom, 28);
-        @media (max-width: $tab-sm) {
+        @media (max-width: $tab) {
           @include s(margin-bottom, 16);
         }
         .name {
           @include body-xl;
-          @media (max-width: $tab-sm) {
+          @media (max-width: $tab) {
             @include body-mb;
           }
         }
@@ -64,7 +67,7 @@
           @include s(margin-top, 8);
           color: var(--gray-light-color);
           @include body-m;
-          @media (max-width: $tab-sm) {
+          @media (max-width: $tab) {
             @include body-s;
           }
         }
@@ -98,20 +101,20 @@
         display: flex;
         flex-direction: column;
         @include s(gap, 12);
-        @media (max-width: $tab-sm) {
+        @media (max-width: $tab) {
           @include s(gap, 10);
         }
         a {
           @include s(gap, 16);
           display: flex;
           align-items: center;
-          @media (max-width: $tab-sm) {
+          @media (max-width: $tab) {
             @include s(gap, 10);
           }
           p {
             color: var(--violet-color);
             @include body-m;
-            @media (max-width: $tab-sm) {
+            @media (max-width: $tab) {
               @include body-s;
             }
           }

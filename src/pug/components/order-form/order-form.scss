@@ -4,7 +4,7 @@
   @include padding(48);
   @include borr(12);
   box-shadow: var(--shadow);
-  @media (max-width: $tab-sm) {
+  @media (max-width: $tab) {
     padding: 0;
     box-shadow: none;
     border-radius: 0;

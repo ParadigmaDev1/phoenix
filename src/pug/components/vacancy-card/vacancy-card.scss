@@ -7,7 +7,7 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  @media (max-width: $tab-sm) {
+  @media (max-width: $tab) {
     @include padding(20);
     flex-direction: column;
     @include s(gap, 10);
@@ -21,7 +21,7 @@
     @include s(width, 24);
     @include s(height, 24);
     @include s(margin-right, 20);
-    @media (max-width: $tab-sm) {
+    @media (max-width: $tab) {
       margin-right: 0;
       @include s(width, 18);
       @include s(height, 18);
@@ -36,7 +36,7 @@
     @include gtc(348, 1fr);
     @include s(gap, 24);
     flex: 1;
-    @media (max-width: $tab-sm) {
+    @media (max-width: $tab) {
       grid-template-columns: 1fr;
       @include s(gap, 6);
     }
@@ -50,7 +50,7 @@
       @include s(max-width, 432);
       @include body-m;
 
-      @media (max-width: $tab-sm) {
+      @media (max-width: $tab) {
         @include body-s;
       }
     }

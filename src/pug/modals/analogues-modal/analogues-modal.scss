@@ -2,13 +2,13 @@
 
 .analogues-modal {
   .close-modal-wrapper {
-    @media (max-width: $tab-sm) {
+    @media (max-width: $tab) {
       top: 0 !important;
     }
     .close-modal {
       //   margin-top: calc(-50 / var(--screensize) * 100vw) !important;
       //   margin-right: calc(-50 / var(--screensize) * 100vw) !important;
-      @media (max-width: $tab-sm) {
+      @media (max-width: $tab) {
         margin: 0 !important;
         @include s(top, 0);
         @include s(right, 0);
@@ -27,7 +27,7 @@
     &::-webkit-scrollbar {
       width: 10px;
     }
-    @media (max-width: $tab-sm) {
+    @media (max-width: $tab) {
       @include padding(20);
     }
     .modal-content {
@@ -44,7 +44,7 @@
         @include s(column-gap, 24);
         @include s(row-gap, 64);
         overflow: hidden;
-        @media (max-width: $tab-sm) {
+        @media (max-width: $tab) {
           @include s(margin-top, 24);
 
           grid-template-columns: repeat(2, 1fr);

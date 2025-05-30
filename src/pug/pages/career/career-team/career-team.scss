@@ -3,7 +3,7 @@
 .career-team {
   @include s(margin-top, 116);
   // overflow: hidden;
-  @media (max-width: $tab-sm) {
+  @media (max-width: $tab) {
     @include s(margin-top, 64);
     @include s(padding-bottom, 20);
   }
@@ -11,7 +11,7 @@
     h3 {
       @include h2;
       text-align: center;
-      @media (max-width: $tab-sm) {
+      @media (max-width: $tab) {
         text-align: left;
       }
     }
@@ -42,7 +42,7 @@
       @include s(gap, 24);
       //   @include s(max-width, 756);
       width: fit-content;
-      @media (max-width: $tab) {
+      @media (max-width: $tab-sm) {
         @include s(gap, 4);
         grid-template-columns: repeat(2, 1fr);
       }
@@ -54,7 +54,7 @@
         @include s(height, 273);
         @include borr(12);
         overflow: hidden;
-        @media (max-width: $tab) {
+        @media (max-width: $tab-sm) {
           &:first-child {
             display: none;
           }

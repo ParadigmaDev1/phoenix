@@ -14,7 +14,12 @@
   "author": "Bogdan Ognistiy",
   "license": "ISC",
   "devDependencies": {
+    "@babel/core": "^7.27.3",
+    "@babel/plugin-proposal-class-properties": "^7.18.6",
+    "@babel/preset-env": "^7.27.2",
+    "babel-loader": "^10.0.0",
     "browser-sync": "^2.27.10",
+    "core-js": "^3.42.0",
     "del": "^6.1.1",
     "gh-pages": "^6.0.0",
     "gulp": "^4.0.2",
@@ -44,6 +49,7 @@
     "posthtml": "^0.16.6",
     "posthtml-webp": "^2.2.0",
     "sass": "^1.52.3",
+    "terser-webpack-plugin": "^5.3.14",
     "webp-converter": "2.2.3",
     "webpack": "^5.73.0",
     "webpack-stream": "^7.0.0"

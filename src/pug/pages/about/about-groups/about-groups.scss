@@ -2,14 +2,14 @@
 
 .about-groups {
   @include s(margin-top, 116);
-  @media (max-width: $tab-sm) {
+  @media (max-width: $tab) {
     @include s(margin-top, 64);
   }
   .about-groups-inner {
     display: grid;
     @include gtc(408, 1fr);
     @include s(gap, 48);
-    @media (max-width: $tab-sm) {
+    @media (max-width: $tab) {
       grid-template-columns: repeat(1, 1fr);
       @include s(gap, 20);
     }
@@ -29,7 +29,7 @@
         display: flex;
         align-items: center;
         @include s(gap, 24);
-        @media (max-width: $tab-sm) {
+        @media (max-width: $tab) {
           @include padding(20);
           @include s(gap, 20);
           align-items: flex-start;
@@ -37,7 +37,7 @@
         img {
           @include s(width, 80);
           @include s(height, 80);
-          @media (max-width: $tab-sm) {
+          @media (max-width: $tab) {
             @include s(width, 42);
             @include s(height, 48);
           }
@@ -46,18 +46,18 @@
           display: flex;
           flex-direction: column;
           @include s(gap, 8);
-          @media (max-width: $tab-sm) {
+          @media (max-width: $tab) {
             @include s(gap, 4);
           }
           .title {
             @include body-xl;
-            @media (max-width: $tab-sm) {
+            @media (max-width: $tab) {
               @include body-mb;
             }
           }
           .descr {
             @include body-m;
-            @media (max-width: $tab-sm) {
+            @media (max-width: $tab) {
               @include body-s;
             }
           }

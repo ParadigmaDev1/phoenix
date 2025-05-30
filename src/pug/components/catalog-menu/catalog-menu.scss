@@ -14,7 +14,7 @@
   opacity: 0;
   pointer-events: none;
   height: calc(100% - calc(118 / var(--screensize) * 100vw));
-  @media (max-width: $tab-sm) {
+  @media (max-width: $tab) {
     z-index: 110;
     top: 0;
     left: 0;
@@ -32,7 +32,7 @@
     flex-direction: column;
     @include s(gap, 10);
     @include s(margin-top, 16);
-    @media (max-width: $tab-sm) {
+    @media (max-width: $tab) {
       display: flex;
     }
     .back-btn {
@@ -63,7 +63,7 @@
       @include s(gap, 29);
       @include s(height, 48);
       flex: 1;
-      @media (max-width: $tab-sm) {
+      @media (max-width: $tab) {
         @include s(height, 44);
       }
       .search-btn {
@@ -78,7 +78,7 @@
         @include s(height, 48);
         @include borr(6);
         background: var(--grapfit-color);
-        @media (max-width: $tab-sm) {
+        @media (max-width: $tab) {
           background: none;
           @include s(width, 44);
           @include s(height, 44);
@@ -89,7 +89,7 @@
         svg {
           @include s(width, 18);
           @include s(height, 18);
-          @media (max-width: $tab-sm) {
+          @media (max-width: $tab) {
             @include s(width, 22);
             @include s(height, 22);
             circle,
@@ -117,7 +117,7 @@
     @include s(gap, 15);
     height: 100%;
     position: relative;
-    @media (max-width: $tab-sm) {
+    @media (max-width: $tab) {
       grid-template-columns: 1fr;
       height: 95%;
     }
@@ -133,7 +133,7 @@
       align-items: center;
       justify-content: center;
       transition: var(--trs-cubic-300);
-      @media (max-width: $tab-sm) {
+      @media (max-width: $tab) {
         display: none;
       }
       &:hover {
@@ -155,11 +155,11 @@
       overflow-x: hidden;
       scrollbar-width: thin;
       scrollbar-color: var(--violet-color) #ffffff;
-      @media (max-width: $tab-sm) {
+      @media (max-width: $tab) {
         max-height: calc(100vh - 160px);
       }
       &:nth-child(1) {
-        @media (max-width: $tab-sm) {
+        @media (max-width: $tab) {
           max-height: calc(100vh - 210px);
         }
       }
@@ -175,7 +175,7 @@
         position: relative;
         @include padding(20);
         display: flex;
-        @media (max-width: $tab-sm) {
+        @media (max-width: $tab) {
           @include s(height, 114);
           @include s(margin-top, 20);
         }
@@ -235,13 +235,13 @@
         @include s(padding-top, 36);
         display: flex;
         flex-direction: column;
-        @media (max-width: $tab-sm) {
+        @media (max-width: $tab) {
           @include s(padding-top, 20);
         }
       }
       .catalog-menu-links-wrapper {
         @include s(padding-top, 36);
-        @media (max-width: $tab-sm) {
+        @media (max-width: $tab) {
           @include s(padding-top, 20);
         }
         .catalog-menu-links {
@@ -299,7 +299,7 @@
         }
         &.active {
           background: var(--back-color);
-          @media (max-width: $tab-sm) {
+          @media (max-width: $tab) {
             background: none;
           }
           .image-wrapper {
@@ -309,7 +309,7 @@
         &.sub-menu {
           @include padding(13, 27);
           @include borr(6);
-          @media (max-width: $tab-sm) {
+          @media (max-width: $tab) {
             @include padding(13, 0);
             display: flex;
             justify-content: space-between;
@@ -328,7 +328,7 @@
             @include body-m;
           }
           &.active {
-            @media (max-width: $tab-sm) {
+            @media (max-width: $tab) {
               background: none;
             }
           }
@@ -337,7 +337,7 @@
           @include padding(10, 18, 10, 10);
           justify-content: space-between;
           @include borr(12);
-          @media (max-width: $tab-sm) {
+          @media (max-width: $tab) {
             padding: 0;
           }
           .image-wrapper {
@@ -373,7 +373,7 @@
     }
     .popular {
       @include s(margin-top, 36);
-      @media (max-width: $tab-sm) {
+      @media (max-width: $tab) {
         display: none;
       }
       .title {

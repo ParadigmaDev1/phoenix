@@ -10,7 +10,7 @@
     @include s(gap, 64);
     @include s(padding-top, 31);
     @include s(padding-bottom, 31);
-    @media (max-width: $tab-sm) {
+    @media (max-width: $tab) {
       @include s(gap, 28);
       @include s(padding-top, 12);
       @include s(padding-bottom, 12);
@@ -18,7 +18,7 @@
     img {
       @include s(width, 32);
       @include s(height, 64);
-      @media (max-width: $tab-sm) {
+      @media (max-width: $tab) {
         @include s(width, 20);
         @include s(height, 40);
       }
@@ -26,7 +26,7 @@
     p {
       @include h5;
       text-transform: uppercase;
-      @media (max-width: $tab-sm) {
+      @media (max-width: $tab) {
         @include descr-s;
         @include s(max-width, 120);
 

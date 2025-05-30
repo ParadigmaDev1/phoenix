@@ -3,7 +3,7 @@
 .about-brands {
   @include s(margin-top, 116);
   overflow: hidden;
-  @media (max-width: $tab-sm) {
+  @media (max-width: $tab) {
     @include s(margin-top, 64);
   }
   .about-brands-inner {
@@ -22,8 +22,9 @@
         @include body-l;
         @include s(max-width, 660);
         margin-left: auto;
-        @media (max-width: $tab-sm) {
+        @media (max-width: $tab) {
           @include s(margin-top, 16);
+          margin-left: 0;
         }
       }
     }

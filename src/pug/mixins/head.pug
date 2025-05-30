@@ -7,9 +7,32 @@ mixin head(styles = [])
     meta(name="description" content="template")
     meta(name="keywords" content="template")
     meta(name="robots" content="index, follow")
+    
+    //- Предварительное подключение к сервисам Google Fonts
     link(rel="preconnect" href="https://fonts.googleapis.com")
     link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+    
+    //- Подключение шрифтов с font-display: swap для немедленного отображения текста системным шрифтом
     link(href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet")
+    
+    //- Inline стиль с резервными шрифтами
+    style.
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+      }
+      .fonts-loaded body {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+      }
+    
+    //- Скрипт для проверки загрузки шрифтов
+    script.
+      document.addEventListener('DOMContentLoaded', function() {
+        // Проверяем загрузку шрифтов
+        document.fonts.ready.then(function() {
+          document.documentElement.classList.add('fonts-loaded');
+        });
+      });
+    
     //- Подключение стилей
     link(rel="stylesheet", href=`./css/style.css`)
     each style in styles

@@ -13,6 +13,9 @@
     overflow: hidden;
     transition: var(--trs-cubic-300);
     cursor: pointer;
+    @media (max-width: $tab) {
+      @include s(height, 400);
+    }
     @media (max-width: $tab-sm) {
       height: fit-content;
       cursor: default;
@@ -20,7 +23,9 @@
     }
     &.active {
       width: calc(888 / var(--screensize) * 100vw) !important;
-
+      @media (max-width: $tab) {
+        width: calc(468 / var(--screensize) * 100vw) !important;
+      }
       .content {
         transform: translateY(0);
         .logo {
@@ -38,6 +43,9 @@
     }
     &.collapsed {
       width: calc(224 / var(--screensize) * 100vw) !important;
+      @media (max-width: $tab) {
+        width: calc(124 / var(--screensize) * 100vw) !important;
+      }
       .content {
         opacity: 0;
       }
@@ -65,6 +73,11 @@
       align-items: center;
       flex-direction: column;
       transform: translateY(68%);
+      @media (max-width: $tab) {
+        @include s(bottom, 18);
+        @include s(left, 18);
+        @include s(right, 18);
+      }
       @media (max-width: $tab-sm) {
         transform: translateY(0);
         position: relative;
@@ -80,6 +93,10 @@
         position: relative;
         margin: auto;
         transition: var(--trs-cubic-300);
+        @media (max-width: $tab) {
+          @include s(width, 100);
+          @include s(height, 50);
+        }
         @media (max-width: $tab-sm) {
           margin: 0;
         }
@@ -99,6 +116,9 @@
         line-height: 120%;
         transition: var(--trs-cubic-300);
         @include s(max-width, 432);
+        @media (max-width: $tab) {
+          @include s(margin-top, 20);
+        }
         @media (max-width: $tab-sm) {
           @include s(margin-top, 20);
           @include s(font-size, 20);

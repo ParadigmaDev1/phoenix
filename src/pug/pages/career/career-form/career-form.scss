@@ -3,7 +3,7 @@
 .career-form {
   @include s(margin-top, 116);
   position: relative;
-  @media (max-width: $tab-sm) {
+  @media (max-width: $tab) {
     @include s(margin-top, 64);
     background: var(--back-color);
   }
@@ -11,7 +11,7 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    @media (max-width: $tab-sm) {
+    @media (max-width: $tab) {
       @include s(height, 228);
     }
     &:before {
@@ -27,7 +27,7 @@
         rgba(244, 244, 244, 0) 100%
       );
       display: none;
-      @media (max-width: $tab-sm) {
+      @media (max-width: $tab) {
         display: block;
       }
     }
@@ -45,7 +45,7 @@
     @include s(padding-bottom, 48);
     z-index: 2;
     position: relative;
-    @media (max-width: $tab-sm) {
+    @media (max-width: $tab) {
       grid-template-columns: 1fr;
       @include s(padding-top, 231);
       @include s(padding-bottom, 80);
@@ -55,7 +55,7 @@
       flex-direction: column;
       @include s(padding-top, 48);
       @include s(padding-bottom, 48);
-      @media (max-width: $tab-sm) {
+      @media (max-width: $tab) {
         padding-top: 0;
       }
       padding-bottom: 0;
@@ -69,13 +69,13 @@
       .bottom {
         @include s(padding-top, 48);
         border-top: 1px solid var(--violet-color);
-        @media (max-width: $tab-sm) {
+        @media (max-width: $tab) {
           @include s(padding-top, 20);
           @include s(margin-top, 20);
         }
         .descr {
           @include body-l;
-          @media (max-width: $tab-sm) {
+          @media (max-width: $tab) {
             @include body-m;
           }
         }
@@ -83,7 +83,7 @@
     }
     .resume-btn {
       display: none;
-      @media (max-width: $tab-sm) {
+      @media (max-width: $tab) {
         display: flex;
         justify-content: center;
         width: 100%;
@@ -97,7 +97,7 @@
       background: var(--white-color);
       @include borr(12);
       @include padding(48);
-      @media (max-width: $tab-sm) {
+      @media (max-width: $tab) {
         display: none;
       }
       .input__row {

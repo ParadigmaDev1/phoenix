@@ -2,7 +2,7 @@
 
 .wholesale-knowledge-base-files {
   @include s(padding-bottom, 156);
-  @media (max-width: $tab-sm) {
+  @media (max-width: $tab) {
     @include s(padding-bottom, 64);
     @include s(margin-top, 16);
   }
@@ -11,7 +11,7 @@
     @include gtc(1fr, 294);
     @include s(gap, 48);
     @include s(margin-top, 36);
-    @media (max-width: $tab-sm) {
+    @media (max-width: $tab) {
       @include s(margin-top, 20);
       grid-template-columns: 1fr;
       gap: 0;
@@ -29,7 +29,7 @@
           @include s(gap, 12);
           @include s(height, 36);
           @include padding(0, 16);
-          @media (max-width: $tab-sm) {
+          @media (max-width: $tab) {
             display: none;
           }
           span {
@@ -42,7 +42,7 @@
         @include s(margin-top, 28);
         display: flex;
         flex-direction: column;
-        @media (max-width: $tab-sm) {
+        @media (max-width: $tab) {
           @include s(margin-top, 20);
         }
         .info-card {
@@ -53,7 +53,7 @@
           @include s(padding-bottom, 48);
           border-top: 1px solid var(--line-color);
           align-items: flex-start;
-          @media (max-width: $tab-sm) {
+          @media (max-width: $tab) {
             @include s(padding-top, 28);
             @include s(padding-bottom, 28);
             grid-template-columns: 1fr;
@@ -75,7 +75,7 @@
             @include s(column-gap, 48);
             align-items: flex-start;
             margin-top: 0;
-            @media (max-width: $tab-sm) {
+            @media (max-width: $tab) {
               grid-template-columns: 1fr;
               grid-template-areas: "title" "descr" "btn";
             }
@@ -97,7 +97,7 @@
             @include s(height, 36);
             @include padding(0, 16);
             grid-area: btn;
-            @media (max-width: $tab-sm) {
+            @media (max-width: $tab) {
               width: fit-content;
             }
             span {

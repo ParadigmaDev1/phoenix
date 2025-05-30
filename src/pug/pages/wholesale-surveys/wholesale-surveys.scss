@@ -2,7 +2,7 @@
 
 .wholesale-surveys {
   @include s(padding-bottom, 156);
-  @media (max-width: $tab-sm) {
+  @media (max-width: $tab) {
     @include s(padding-bottom, 64);
     @include s(margin-top, 16);
   }
@@ -11,7 +11,7 @@
     @include gtc(1fr, 294);
     @include s(gap, 48);
     @include s(margin-top, 36);
-    @media (max-width: $tab-sm) {
+    @media (max-width: $tab) {
       grid-template-columns: 1fr;
       gap: 0;
       @include s(margin-top, 22);
@@ -23,7 +23,7 @@
       .descr {
         @include s(margin-top, 36);
         @include body-l;
-        @media (max-width: $tab-sm) {
+        @media (max-width: $tab) {
           @include s(margin-top, 20);
           @include body-m;
         }
@@ -33,7 +33,7 @@
         flex-direction: column;
         @include s(gap, 12);
         @include s(margin-top, 28);
-        @media (max-width: $tab-sm) {
+        @media (max-width: $tab) {
           @include s(margin-top, 20);
         }
         .wholesale-surveys-item {
@@ -44,7 +44,7 @@
           @include s(gap, 56);
           background: var(--back-color);
           cursor: pointer;
-          @media (max-width: $tab-sm) {
+          @media (max-width: $tab) {
             grid-template-columns: 1fr;
             @include padding(20);
             @include s(gap, 20);
@@ -77,7 +77,7 @@
             .descr {
               margin-top: 0;
               @include body-m;
-              @media (max-width: $tab-sm) {
+              @media (max-width: $tab) {
                 @include body-s;
               }
             }
@@ -86,7 +86,7 @@
             @include padding(0, 16);
             @include s(gap, 12);
             @include s(height, 36);
-            @media (max-width: $tab-sm) {
+            @media (max-width: $tab) {
               width: fit-content;
             }
             span {

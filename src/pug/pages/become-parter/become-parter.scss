@@ -3,7 +3,7 @@
 .become-parter {
   @include s(margin-top, 28);
   @include s(padding-bottom, 156);
-  @media (max-width: $tab-sm) {
+  @media (max-width: $tab) {
     @include s(padding-bottom, 64);
     @include s(margin-top, 16);
   }
@@ -15,7 +15,7 @@
       display: flex;
       align-items: center;
       @include s(gap, 4);
-      @media (max-width: $tab-sm) {
+      @media (max-width: $tab) {
         justify-content: flex-start;
         @include s(margin-top, 20);
         @include s(margin-left, -20);
@@ -33,30 +33,30 @@
       @include gtc(1fr, 408);
       @include s(gap, 48);
       @include s(margin-top, 28);
-      @media (max-width: $tab-sm) {
+      @media (max-width: $tab) {
         grid-template-columns: 1fr;
         @include s(gap, 64);
         @include s(margin-top, 20);
       }
       .tab-content-wrapper {
-        @media (max-width: $tab-sm) {
+        @media (max-width: $tab) {
           overflow: hidden;
         }
         .tab-content {
           @include s(margin-top, 36);
-          @media (max-width: $tab-sm) {
+          @media (max-width: $tab) {
             @include s(margin-top, 20);
           }
           .become-partners-list-wrapper {
             @include s(margin-top, 80);
-            @media (max-width: $tab-sm) {
+            @media (max-width: $tab) {
               @include s(margin-top, 64);
             }
             h3 {
               text-transform: uppercase;
               @include h2;
               @include s(margin-bottom, 36);
-              @media (max-width: $tab-sm) {
+              @media (max-width: $tab) {
                 @include s(margin-bottom, 20);
               }
             }
@@ -114,7 +114,7 @@
               @include gtc(226, 1fr);
               @include s(gap, 20);
               align-items: center;
-              @media (max-width: $tab-sm) {
+              @media (max-width: $tab) {
                 @include s(gap, 12);
                 @include gtc(208, 1fr);
               }
@@ -136,7 +136,7 @@
         }
         .form {
           @include s(margin-top, 100);
-          @media (max-width: $tab-sm) {
+          @media (max-width: $tab) {
             @include s(margin-top, 64);
           }
         }

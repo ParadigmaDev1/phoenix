@@ -2,7 +2,7 @@
 
 .wholesale-orders {
   @include s(padding-bottom, 156);
-  @media (max-width: $tab-sm) {
+  @media (max-width: $tab) {
     @include s(padding-bottom, 64);
     @include s(margin-top, 16);
   }
@@ -11,7 +11,7 @@
     @include gtc(1fr, 294);
     @include s(gap, 48);
     @include s(margin-top, 36);
-    @media (max-width: $tab-sm) {
+    @media (max-width: $tab) {
       grid-template-columns: 1fr;
       gap: 0;
       @include s(margin-top, 22);
@@ -29,7 +29,7 @@
         align-items: center;
         @include s(gap, 4);
         @include s(margin-top, 36);
-        @media (max-width: $tab-sm) {
+        @media (max-width: $tab) {
           @include s(margin-top, 20);
         }
         .tab {
@@ -56,7 +56,7 @@
         @include gtc(488, 432);
         @include s(gap, 82);
         @include s(margin-top, 36);
-        @media (max-width: $tab-sm) {
+        @media (max-width: $tab) {
           grid-template-columns: 1fr;
           @include s(gap, 10);
           @include s(margin-top, 28);
@@ -65,18 +65,18 @@
           display: flex;
           @include s(gap, 8);
           align-items: center;
-          @media (max-width: $tab-sm) {
+          @media (max-width: $tab) {
             flex-direction: column;
             @include s(gap, 10);
           }
           .separator {
-            @media (max-width: $tab-sm) {
+            @media (max-width: $tab) {
               display: none;
             }
           }
           .date-picker-wrapper {
             position: relative;
-            @media (max-width: $tab-sm) {
+            @media (max-width: $tab) {
               width: 100%;
             }
             .date-picker {
@@ -107,7 +107,7 @@
           @include s(gap, 29);
           @include s(height, 48);
           flex: 1;
-          @media (max-width: $tab-sm) {
+          @media (max-width: $tab) {
             @include s(height, 44);
           }
           input {
@@ -120,7 +120,7 @@
               -webkit-line-clamp: 1; /* Ограничиваем текст до 3 строк */
               -webkit-box-orient: vertical;
               text-overflow: ellipsis;
-              @media (max-width: $tab-sm) {
+              @media (max-width: $tab) {
                 @include s(padding-right, 57);
               }
             }
@@ -135,7 +135,7 @@
             right: 0;
             @include s(width, 48);
             @include s(height, 48);
-            @media (max-width: $tab-sm) {
+            @media (max-width: $tab) {
               background: none;
               @include s(width, 44);
               @include s(height, 44);
@@ -150,7 +150,7 @@
               path {
                 stroke: var(--gray-color);
               }
-              @media (max-width: $tab-sm) {
+              @media (max-width: $tab) {
                 @include s(width, 22);
                 @include s(height, 22);
               }
@@ -176,7 +176,7 @@
             @include s(gap, 16);
             align-items: flex-start;
             cursor: pointer;
-            // @media (max-width: $tab-sm) {
+            // @media (max-width: $tab) {
             //   @include padding(16, 0);
             // }
             .icon {
@@ -192,7 +192,7 @@
                   @include h6;
                   text-align: left;
                   text-transform: uppercase;
-                  // @media (max-width: $tab-sm) {
+                  // @media (max-width: $tab) {
                   //   @include body-lb;
                   // }
                 }
@@ -217,6 +217,9 @@
                   display: grid;
                   @include gtc(160, 404);
                   @include s(gap, 24);
+                  @media (max-width: $tab) {
+                    @include gtc(140, 204);
+                  }
                   .label {
                     @include body-m;
                     color: var(--gray-light-color);

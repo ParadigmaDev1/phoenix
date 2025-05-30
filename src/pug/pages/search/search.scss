@@ -2,7 +2,7 @@
 
 .catalog {
   @include s(margin-bottom, 150);
-  @media (max-width: $tab-sm) {
+  @media (max-width: $tab) {
     margin-bottom: 0;
     overflow: hidden;
   }
@@ -20,7 +20,7 @@
 .catalog__sidebar {
   @include s(width, 297);
   flex-shrink: 0;
-  @media (max-width: $tab-sm) {
+  @media (max-width: $tab) {
     display: none;
   }
   .accordion-item.nested {
@@ -92,7 +92,7 @@
 .catalog__content {
   @include s(width, 1004);
   flex-shrink: 0;
-  @media (max-width: $tab-sm) {
+  @media (max-width: $tab) {
     width: 100%;
   }
   .empty-block {
@@ -118,7 +118,7 @@
   @include s(margin-bottom, 28);
   position: relative;
   z-index: 9;
-  @media (max-width: $tab-sm) {
+  @media (max-width: $tab) {
     flex-direction: column;
     @include s(gap, 20);
   }
@@ -126,7 +126,7 @@
     display: flex;
     align-items: center;
     @include s(gap, 24);
-    @media (max-width: $tab-sm) {
+    @media (max-width: $tab) {
       justify-content: space-between;
       width: 100%;
     }
@@ -166,7 +166,9 @@
     display: flex;
     @include s(gap, 6);
     margin-left: auto;
-
+    @media (max-width: $tab) {
+      max-width: 100%;
+    }
     .selector {
       width: 100%;
       @include s(max-width, 186);
@@ -187,7 +189,7 @@
   @include s(margin-left, 50);
   display: flex;
   @include s(gap, 6);
-  @media (max-width: $tab-sm) {
+  @media (max-width: $tab) {
     margin-left: 0;
   }
   button {
@@ -217,7 +219,7 @@
   grid-template-columns: 1fr 1fr 1fr;
   @include s(row-gap, 80);
   @include s(column-gap, 24);
-  @media (max-width: $tab-sm) {
+  @media (max-width: $tab) {
     grid-template-columns: repeat(2, 1fr);
     @include s(column-gap, 20);
     @include s(row-gap, 48);
@@ -247,7 +249,7 @@
         display: flex;
       }
     }
-    @media (max-width: $tab-sm) {
+    @media (max-width: $tab) {
       .product-card {
         .product-card-swiper-wrapper {
           @include s(width, 93);
@@ -449,13 +451,13 @@
 .recently-viewed {
   background: var(--back-color);
   @include padding(96, 0, 128, 0);
-  @media (max-width: $tab-sm) {
+  @media (max-width: $tab) {
     background: var(--white-color);
     @include padding(64, 0, 64, 0);
   }
   .product-card .product-card-swiper-wrapper {
     background: #fff;
-    @media (max-width: $tab-sm) {
+    @media (max-width: $tab) {
       background: var(--back-color);
     }
   }

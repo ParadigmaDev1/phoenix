@@ -2,7 +2,7 @@
 
 .wholesale-legal-entities {
   @include s(padding-bottom, 156);
-  @media (max-width: $tab-sm) {
+  @media (max-width: $tab) {
     @include s(padding-bottom, 64);
     @include s(margin-top, 16);
   }
@@ -11,7 +11,7 @@
     @include gtc(1fr, 294);
     @include s(gap, 48);
     @include s(margin-top, 36);
-    @media (max-width: $tab-sm) {
+    @media (max-width: $tab) {
       grid-template-columns: 1fr;
       gap: 0;
       @include s(margin-top, 22);
@@ -27,14 +27,14 @@
       .top {
         display: flex;
         justify-content: space-between;
-        @media (max-width: $tab-sm) {
+        @media (max-width: $tab) {
           flex-direction: column;
         }
         .title-wrapper {
           position: relative;
           display: flex;
           @include s(gap, 5);
-          @media (max-width: $tab-sm) {
+          @media (max-width: $tab) {
             flex-direction: column;
             @include s(gap, 20);
           }
@@ -44,7 +44,7 @@
               @include s(width, 24);
               @include s(height, 24);
               cursor: pointer;
-              @media (max-width: $tab-sm) {
+              @media (max-width: $tab) {
                 display: none;
               }
               &:hover {
@@ -72,7 +72,7 @@
               transform: translateY(-20%);
               opacity: 0;
               pointer-events: none;
-              @media (max-width: $tab-sm) {
+              @media (max-width: $tab) {
                 width: 100%;
                 position: relative;
                 top: 0;
@@ -89,7 +89,7 @@
           @include s(gap, 12);
           @include s(height, 36);
           @include padding(0, 16);
-          @media (max-width: $tab-sm) {
+          @media (max-width: $tab) {
             display: none;
           }
           p {
@@ -109,7 +109,7 @@
           .accordion-title {
             justify-content: space-between;
             @include padding(26, 0);
-            @media (max-width: $tab-sm) {
+            @media (max-width: $tab) {
               @include padding(16, 0);
             }
             .title-wrapper {
@@ -117,7 +117,7 @@
                 @include h6;
                 text-transform: uppercase;
                 text-align: left;
-                // @media (max-width: $tab-sm) {
+                // @media (max-width: $tab) {
                 //   @include body-lb;
                 // }
               }
@@ -154,7 +154,7 @@
                 @include gtc(205, 1fr);
                 align-items: center;
                 @include s(gap, 24);
-                @media (max-width: $tab-sm) {
+                @media (max-width: $tab) {
                   grid-template-columns: 1fr;
                   @include s(gap, 8);
                 }
@@ -170,7 +170,7 @@
               @include s(margin-left, 229);
               display: flex;
               @include s(gap, 12);
-              @media (max-width: $tab-sm) {
+              @media (max-width: $tab) {
                 margin-left: 0;
                 display: grid;
                 grid-template-columns: repeat(2, 1fr);
@@ -179,7 +179,7 @@
               .btn {
                 @include padding(0, 36);
                 @include s(gap, 10);
-                @media (max-width: $tab-sm) {
+                @media (max-width: $tab) {
                   @include padding(0, 16);
                 }
                 span {
@@ -196,12 +196,12 @@
         @include s(margin-top, 48);
         @include padding(0, 24);
 
-        @media (max-width: $tab-sm) {
+        @media (max-width: $tab) {
           display: none;
         }
         &.mob {
           display: none;
-          @media (max-width: $tab-sm) {
+          @media (max-width: $tab) {
             display: flex;
             width: 100%;
             @include s(margin-top, 20);

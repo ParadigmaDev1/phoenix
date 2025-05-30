@@ -9,7 +9,7 @@
     display: flex;
     align-items: center;
     @include s(gap, 5);
-    @media (max-width: $tab-sm) {
+    @media (max-width: $tab) {
       button {
         &:nth-child(3),
         &:nth-child(4),

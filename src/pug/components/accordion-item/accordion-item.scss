@@ -18,7 +18,7 @@
   &.nested-inner {
     & > .accordion-title {
       justify-content: flex-start;
-      @media (max-width: $tab-sm) {
+      @media (max-width: $tab) {
         @include padding(4, 0);
       }
 
@@ -42,7 +42,7 @@
   }
   &.nested-inner {
     .collapse {
-      @media (max-width: $tab-sm) {
+      @media (max-width: $tab) {
         @include s(padding-left, 48);
       }
     }
@@ -51,7 +51,7 @@
     & > .accordion-title {
       justify-content: flex-start;
       @include padding(36, 0);
-      @media (max-width: $tab-sm) {
+      @media (max-width: $tab) {
         @include padding(20, 0);
       }
       .title {
@@ -114,7 +114,7 @@
     align-items: flex-start;
     @include s(padding-left, 30);
     @include s(padding-bottom, 30);
-    @media (max-width: $tab-sm) {
+    @media (max-width: $tab) {
       padding-left: 0;
     }
     .links {

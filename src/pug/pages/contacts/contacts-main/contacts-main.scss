@@ -5,7 +5,7 @@
     display: grid;
     @include gtc(318, 1fr);
     @include s(gap, 24);
-    @media (max-width: $tab-sm) {
+    @media (max-width: $tab) {
       grid-template-columns: 1fr;
       @include s(gap, 28);
     }
@@ -22,7 +22,7 @@
         }
         p {
           @include body-l;
-          @media (max-width: $tab-sm) {
+          @media (max-width: $tab) {
             @include body-m;
           }
         }
@@ -58,7 +58,7 @@
       }
       .socials-wrapper {
         @include s(margin-top, 48);
-        @media (max-width: $tab-sm) {
+        @media (max-width: $tab) {
           display: flex;
           justify-content: space-between;
           @include s(margin-top, 20);
@@ -94,7 +94,7 @@
       }
       .requisites-wrapper {
         @include s(margin-top, 48);
-        @media (max-width: $tab-sm) {
+        @media (max-width: $tab) {
           @include s(margin-top, 20);
         }
         .requisites {
@@ -118,7 +118,7 @@
     .map-wrapper {
       #map {
         @include s(height, 600);
-        @media (max-width: $tab-sm) {
+        @media (max-width: $tab) {
           @include s(height, 320);
         }
       }
@@ -149,7 +149,7 @@
         @include borr(20);
         position: relative;
         overflow: hidden;
-        @media (max-width: $tab-sm) {
+        @media (max-width: $tab) {
           @include s(width, 150);
           @include s(height, 150);
         }
@@ -168,7 +168,7 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        @media (max-width: $tab-sm) {
+        @media (max-width: $tab) {
           @include s(width, 150);
           @include s(padding-top, 20);
         }
@@ -176,7 +176,7 @@
           @include descr-m;
           color: var(--gray-light-color);
           transition: var(--trs-cubic-300);
-          @media (max-width: $tab-sm) {
+          @media (max-width: $tab) {
             @include descr-s;
           }
         }

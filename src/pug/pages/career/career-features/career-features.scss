@@ -2,7 +2,7 @@
 
 .career-features {
   @include s(margin-top, 48);
-  @media (max-width: $tab-sm) {
+  @media (max-width: $tab) {
     @include s(margin-top, 36);
   }
   .career-features-inner {
@@ -10,7 +10,7 @@
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       @include s(gap, 24);
-      @media (max-width: $tab-sm) {
+      @media (max-width: $tab) {
         grid-template-columns: repeat(1, 1fr);
         @include s(gap, 12);
       }
@@ -22,7 +22,7 @@
         background: var(--back-color);
         @include padding(48);
         @include borr(12);
-        @media (max-width: $tab-sm) {
+        @media (max-width: $tab) {
           @include s(height, 108);
           flex-direction: row;
           @include padding(30);
@@ -31,13 +31,13 @@
         img {
           @include s(height, 80);
           @include s(width, 80);
-          @media (max-width: $tab-sm) {
+          @media (max-width: $tab) {
             @include s(height, 48);
             @include s(width, 48);
           }
         }
         .content {
-          @media (max-width: $tab-sm) {
+          @media (max-width: $tab) {
             display: flex;
             flex-direction: column;
             @include s(gap, 4);
@@ -48,7 +48,7 @@
           @include s(margin-top, 44);
           color: var(--violet-color);
           @include h1;
-          @media (max-width: $tab-sm) {
+          @media (max-width: $tab) {
             margin-top: 0;
             @include h4;
             text-align: left;
@@ -59,7 +59,7 @@
           @include descr-m;
           text-align: center;
           text-transform: uppercase;
-          @media (max-width: $tab-sm) {
+          @media (max-width: $tab) {
             margin-top: 0;
             @include descr-s;
             text-align: left;
@@ -72,7 +72,7 @@
       @include s(margin-top, 48);
       @include body-l;
       margin-left: auto;
-      @media (max-width: $tab-sm) {
+      @media (max-width: $tab) {
         @include body-m;
         @include s(margin-top, 36);
       }

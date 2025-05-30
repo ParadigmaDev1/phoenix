@@ -5,7 +5,7 @@
     display: grid;
     @include gtc(318, 1fr);
     @include s(gap, 48);
-    @media (max-width: $tab-sm) {
+    @media (max-width: $tab) {
       grid-template-columns: 1fr;
       @include s(gap, 64);
     }
@@ -18,7 +18,7 @@
         @include borr(12);
         position: relative;
         overflow: hidden;
-        @media (max-width: $tab-sm) {
+        @media (max-width: $tab) {
           @include s(height, 397);
         }
         img {
@@ -75,7 +75,7 @@
       .subtitle {
         @include body-xl;
         @include s(margin-top, 28);
-        @media (max-width: $tab-sm) {
+        @media (max-width: $tab) {
           @include body-lb;
         }
       }
@@ -86,19 +86,19 @@
         @include s(margin-top, 28);
         @include s(padding-top, 28);
         border-top: 1px solid var(--line-color);
-        @media (max-width: $tab-sm) {
+        @media (max-width: $tab) {
           @include s(gap, 36);
         }
         .quote {
           display: flex;
           @include s(gap, 44);
-          @media (max-width: $tab-sm) {
+          @media (max-width: $tab) {
             @include s(gap, 20);
           }
           img {
             @include s(width, 48);
             @include s(height, 64);
-            @media (max-width: $tab-sm) {
+            @media (max-width: $tab) {
               @include s(width, 28);
               @include s(height, 37);
             }
@@ -106,7 +106,7 @@
           p {
             @include body-xl;
             color: var(--violet-color);
-            @media (max-width: $tab-sm) {
+            @media (max-width: $tab) {
               @include body-lb;
             }
           }
@@ -147,7 +147,7 @@
             overflow: hidden;
             @include s(margin-bottom, 32);
             @include s(margin-top, 32);
-            @media (max-width: $tab-sm) {
+            @media (max-width: $tab) {
               @include s(height, 180);
             }
             img {

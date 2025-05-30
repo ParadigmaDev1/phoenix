@@ -3,18 +3,18 @@
 .comparison-page {
   overflow: hidden;
   @include s(margin-bottom, 96);
-  @media (max-width: $tab-sm) {
+  @media (max-width: $tab) {
     margin-bottom: 0;
   }
   .comparison-inner {
     @include s(margin-top, 28);
-    @media (max-width: $tab-sm) {
+    @media (max-width: $tab) {
       @include s(margin-top, 12);
     }
     .top {
       display: flex;
       justify-content: space-between;
-      @media (max-width: $tab-sm) {
+      @media (max-width: $tab) {
         flex-direction: column;
         @include s(gap, 20);
         align-items: flex-start;
@@ -26,13 +26,13 @@
         display: flex;
         align-items: center;
         @include s(gap, 21);
-        @media (max-width: $tab-sm) {
+        @media (max-width: $tab) {
           @include s(gap, 12);
         }
         svg {
           @include s(width, 14);
           @include s(height, 14);
-          @media (max-width: $tab-sm) {
+          @media (max-width: $tab) {
             @include s(width, 12);
             @include s(height, 12);
           }
@@ -41,7 +41,7 @@
           text-transform: uppercase;
           @include descr-m;
           color: var(--violet-color);
-          @media (max-width: $tab-sm) {
+          @media (max-width: $tab) {
             @include descr-s;
           }
         }
@@ -112,7 +112,7 @@
             position: relative;
             @include s(margin-top, 16);
             display: none;
-            @media (max-width: $tab-sm) {
+            @media (max-width: $tab) {
               display: flex;
             }
             .swiper-pagination-progressbar-fill {
@@ -134,7 +134,7 @@
 
               text-transform: uppercase;
               @include descr-m;
-              @media (max-width: $tab-sm) {
+              @media (max-width: $tab) {
                 @include descr-s;
               }
             }
@@ -213,14 +213,14 @@
 .comparison-watch {
   background: var(--back-color);
   @include s(padding-bottom, 135);
-  @media (max-width: $tab-sm) {
+  @media (max-width: $tab) {
     background: var(--white-color);
     @include s(padding-bottom, 64);
   }
   .product-card {
     .product-card-swiper-wrapper {
       background: var(--white-color);
-      @media (max-width: $tab-sm) {
+      @media (max-width: $tab) {
         background: var(--back-color);
       }
     }
