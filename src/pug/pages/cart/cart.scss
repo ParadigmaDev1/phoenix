@@ -505,6 +505,14 @@
   }
 }
 
+.cart__items {
+  .product-card {
+    .product-info-hor {
+      display: flex !important;
+    }
+  }
+}
+
 .cart-opt__actions__buttons {
   display: flex;
   align-items: center;
