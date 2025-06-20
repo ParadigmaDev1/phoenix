@@ -5,6 +5,10 @@ if (productCards) {
     const btns = card.querySelectorAll(".btn");
     const cartBtnWrapper = card.querySelectorAll(".cart-btn-wrapper");
     const counterList = card.querySelectorAll(".counter");
+    const productLinks = card.querySelectorAll("a");
+    productLinks.forEach((link) => {
+      link.href = card.getAttribute("data-link");
+    });
 
     btns.forEach((btn) => {
       btn.addEventListener("click", (e) => {
@@ -65,8 +69,6 @@ if (productCards) {
         }
       });
       incBtn.addEventListener("click", () => {
-        console.log("dada");
-
         currentCount.textContent = +currentCount.textContent + 1;
       });
     });

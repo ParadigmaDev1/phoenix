@@ -24,7 +24,7 @@
       @media (max-width: $tab) {
         @include s(height, 172);
         width: 100%;
-        @include padding(28, 0);
+        @include padding(28, 5);
       }
       img {
         @include s(height, 80);

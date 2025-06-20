@@ -7,6 +7,9 @@
   .choose-num {
     @include body-m;
     color: var(--gray-light-color);
+    @media (max-width: $tab) {
+      display: none !important;
+    }
   }
 
   .remove-all {
@@ -15,7 +18,7 @@
     // }
   }
 
-  @media (max-width: $tab) {
+  @media (max-width: $tab-sm) {
     width: 100%;
     justify-content: space-between;
     .choose-num {
@@ -41,7 +44,11 @@
   justify-content: space-between;
   @include s(margin-bottom, 28);
   position: relative;
-
+  & > .remove-all {
+    @media (max-width: $tab) {
+      display: none;
+    }
+  }
   .remove-all {
     @include body-m;
     display: flex;
@@ -53,6 +60,7 @@
 
     span {
       color: var(--violet-color);
+      white-space: nowrap;
     }
 
     svg {
@@ -198,6 +206,7 @@
     box-shadow: unset;
     position: relative;
     top: 0;
+    width: 100%;
   }
 
   .info {
@@ -293,7 +302,11 @@
   .apply-scores {
     display: flex;
     align-items: center;
-
+    .input__row {
+      @media (max-width: $tab) {
+        width: 100%;
+      }
+    }
     .checkbox-wrapper {
       @include s(margin-left, 16);
       .ios-switch {
@@ -400,7 +413,11 @@
 
 .promocode-inner {
   display: flex;
-
+  .input__row {
+    @media (max-width: $tab) {
+      width: 100%;
+    }
+  }
   .apply {
     @include s(border-radius, 6);
     @include s(width, 48);
@@ -525,6 +542,7 @@
     @include s(gap, 8);
     @include body-m;
     color: var(--violet-color);
+    position: relative;
     svg {
       @include s(width, 28);
       @include s(height, 28);
@@ -732,7 +750,7 @@
   box-shadow: 0px 4px 28px rgba(0, 0, 0, 0.1);
   @include s(border-radius, 12);
   background: #fff;
-  z-index: 5;
+  z-index: 10;
   @include padding(12, 24, 12, 24);
   display: flex;
   justify-content: space-between;

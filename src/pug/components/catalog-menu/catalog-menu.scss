@@ -339,6 +339,7 @@
           @include borr(12);
           @media (max-width: $tab) {
             padding: 0;
+            justify-content: flex-start;
           }
           .image-wrapper {
             @include s(min-width, 40);

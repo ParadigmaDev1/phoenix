@@ -76,7 +76,6 @@ if (producIitemInner) {
   });
 
   if (orderFrom) {
-    console.log(orderFrom);
     const decBtn = orderFrom.querySelector(".dec");
     const incBtn = orderFrom.querySelector(".inc");
     const cartBtnText = orderFrom.querySelector(".to-cart-btn p");

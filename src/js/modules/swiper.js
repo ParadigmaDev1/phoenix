@@ -361,10 +361,10 @@ const productSwiper = new Swiper(".product-swiper", {
     init(swiper) {
       const linesWrapper = swiper.el.querySelector(".lines");
       swiper.slides.forEach((slide, index) => {
-        const span = document.createElement("span");
-        linesWrapper.appendChild(span);
+        const a = document.createElement("a");
+        linesWrapper.appendChild(a);
       });
-      const lines = linesWrapper.querySelectorAll("span");
+      const lines = linesWrapper.querySelectorAll("a");
       lines.forEach((line, index) => {
         line.addEventListener("mouseenter", () => {
           swiper.slideTo(index);
@@ -376,7 +376,12 @@ const productSwiper = new Swiper(".product-swiper", {
       const paginationWrapper =
         swiper.el.parentElement.querySelector(".pagination");
       const bullets = [];
-
+      const productEl = swiper.el.parentElement.parentElement;
+      const productLinks =
+        swiper.el.parentElement.parentElement.querySelectorAll("a");
+      productLinks.forEach((link) => {
+        link.href = productEl.getAttribute("data-link");
+      });
       swiper.slides.forEach((slide, index) => {
         const bullet = document.createElement("span");
         bullet.classList.add("swiper-pagination-bullet");

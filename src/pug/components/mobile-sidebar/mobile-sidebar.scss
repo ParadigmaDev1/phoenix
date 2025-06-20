@@ -28,6 +28,7 @@
         @include s(width, 28);
         @include s(height, 28);
       }
+      span,
       p {
         @include s(font-size, 10);
         line-height: 115%;

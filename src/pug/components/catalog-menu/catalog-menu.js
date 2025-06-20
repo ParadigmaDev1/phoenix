@@ -96,7 +96,7 @@ if (catalogMenu) {
 
   const menuItemsFn = () => {
     menuItems.forEach((menu, index) => {
-      if (window.innerWidth > 767) {
+      if (window.innerWidth > 992) {
         menu.addEventListener("mouseenter", () => {
           const activeMenu = catalogMenu.querySelector(".menu.active");
           activeMenu?.classList.remove("active");
@@ -144,7 +144,7 @@ if (catalogMenu) {
 
   const submenuItems = () => {
     subMenuItems.forEach((item, index) => {
-      if (window.innerWidth > 767) {
+      if (window.innerWidth > 992) {
         item.addEventListener("mouseenter", () => {
           const currentLinksWrapper = catalogMenu.querySelector(
             ".catalog-menu-links-wrapper.ready"

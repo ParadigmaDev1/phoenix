@@ -286,7 +286,7 @@
             font-weight: 600;
             line-height: 140%;
 
-            @media (max-width: $tab) {
+            @media (max-width: $tab-sm) {
               font-size: calc(16 / var(--screensize) * 100vw);
               font-weight: 400;
             }
@@ -308,7 +308,7 @@
             width: 100%;
           }
 
-          @media (max-width: $tab) {
+          @media (max-width: $tab-sm) {
             .counter {
               position: absolute;
               width: 100%;
@@ -337,7 +337,7 @@
           .features-list {
             display: none;
           }
-          @media (max-width: $tab) {
+          @media (max-width: $tab-sm) {
             grid-template-areas: "price" "title" "top" "presale" "features" "button";
             grid-template-columns: 1fr;
             margin-left: calc(20 / var(--screensize) * 100vw);
@@ -371,7 +371,7 @@
             display: flex;
             @include s(gap, 28);
 
-            @media (max-width: $tab) {
+            @media (max-width: $tab-sm) {
               flex-direction: column;
               @include s(gap, 6);
               margin-bottom: calc(20 / var(--screensize) * 100vw);
@@ -381,7 +381,7 @@
               flex-direction: row;
               @include s(gap, 28);
 
-              @media (max-width: $tab) {
+              @media (max-width: $tab-sm) {
                 flex-direction: column;
                 @include s(gap, 6);
 
@@ -395,7 +395,7 @@
             }
 
             .right-block {
-              @media (max-width: $tab) {
+              @media (max-width: $tab-sm) {
                 .count {
                   display: flex;
                   align-items: center;
@@ -439,7 +439,7 @@
       }
     }
 
-    @media (max-width: $tab) {
+    @media (max-width: $tab-sm) {
       .product-card {
         .product-card-swiper-wrapper {
           height: calc(93 / var(--screensize) * 100vw);
